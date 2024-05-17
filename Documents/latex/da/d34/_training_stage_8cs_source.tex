@@ -1,21 +1,21 @@
 \doxysection{Training\+Stage.\+cs}
 \hypertarget{_training_stage_8cs_source}{}\label{_training_stage_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/Dungeons/Stages/TrainingStage.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/Dungeons/Stages/TrainingStage.cs}}
-
+\mbox{\hyperlink{_training_stage_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00001}00001\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_dungeons_1_1_stages}{Challenge.Dungeons.Stages}}}
 \DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00002}00002\ \{}
-\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00003}00003\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TrainingStage\ :\ DungeonStage}
+\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00003}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_stages_1_1_training_stage}{00003}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_stages_1_1_training_stage}{TrainingStage}}\ :\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_stage}{DungeonStage}}}
 \DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00004}00004\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00005}00005\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ StageRoomType\ StageType\ =>\ StageRoomType.Training;}
+\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00005}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_stages_1_1_training_stage_a6285027b7426b1e721e80e7773b2bdef}{00005}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \mbox{\hyperlink{namespace_challenge_a8dbdb37c0302935fb71166728e059e60}{StageRoomType}}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_stages_1_1_training_stage_a6285027b7426b1e721e80e7773b2bdef}{StageType}}\ =>\ \mbox{\hyperlink{namespace_challenge_a8dbdb37c0302935fb71166728e059e60}{StageRoomType}}.Training;}
 \DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00006}00006\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(ChallengeDungeonDirector\ stageDirector)}
+\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00008}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_stages_1_1_training_stage_acd337f200fad760704632b66792b3683}{00008}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_stages_1_1_training_stage_acd337f200fad760704632b66792b3683}{Initialize}}(\mbox{\hyperlink{class_challenge_1_1_challenge_dungeon_director}{ChallengeDungeonDirector}}\ stageDirector)}
 \DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
+\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_stage_a71373af0f92a20abeaabceea1a624dd6}{Invoker}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}(Sections);}
 \DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ scenario.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_stage_a14998ccb36e12e8659f11a811fb36888}{scenario}}.\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_a5fa8aac0db161a55283d0b1b184ab896}{Initialize}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}OnStage"{}},\ scenario.ActiveInitialSection)}
+\DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}OnStage"{}},\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_stage_a14998ccb36e12e8659f11a811fb36888}{scenario}}.\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_a8db52325f85ce25ddd28e54c4ef74672}{ActiveInitialSection}})}
 \DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_training_stage_8cs_source_l00017}00017\ \ \ \ \ \}}

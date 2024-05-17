@@ -100,23 +100,23 @@ $(function(){initNavTree('d4/d97/_searching_utility_8cs_source.html','../../'); 
   <div class="headertitle"><div class="title">SearchingUtility.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<a href="../../d4/d97/_searching_utility_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Random = System.Random;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="../../d4/d97/_searching_utility_8cs.html#a24953b19d956caa76c403684c71b4e5b">    4</a></span><span class="keyword">using </span><a class="code hl_typedef" href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a> = System.Random;</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/dee/namespace_common.html">Common</a></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>SearchingUtility</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> Sort(<span class="keyword">this</span> List&lt;GameObject&gt; list, Vector3 pivot, SortingType sortingType)</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> Sort(<span class="keyword">this</span> List&lt;GameObject&gt; list, Vector3 pivot, <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9">SortingType</a> sortingType)</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            <span class="keywordflow">switch</span> (sortingType)</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                <span class="keywordflow">case</span> SortingType.None:               <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                <span class="keywordflow">case</span> SortingType.DistanceAscending:  SortByDistance(pivot, list); <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                <span class="keywordflow">case</span> SortingType.DistanceDescending: SortByDistance(pivot, list,<span class="keyword">true</span>); <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <span class="keywordflow">case</span> SortingType.Random:             SortByRandom(list); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                <span class="keywordflow">case</span> <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9">SortingType</a>.None:               <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                <span class="keywordflow">case</span> <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9">SortingType</a>.DistanceAscending:  SortByDistance(pivot, list); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                <span class="keywordflow">case</span> <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9">SortingType</a>.DistanceDescending: SortByDistance(pivot, list,<span class="keyword">true</span>); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <span class="keywordflow">case</span> <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9">SortingType</a>.Random:             SortByRandom(list); <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keywordflow">default</span>:</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                    <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentOutOfRangeException(nameof(sortingType), sortingType, <span class="keyword">null</span>);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            }</div>
@@ -162,7 +162,7 @@ $(function(){initNavTree('d4/d97/_searching_utility_8cs_source.html','../../'); 
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> SortByRandom(List&lt;GameObject&gt; original)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            var rnd = <span class="keyword">new</span> Random();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            var rnd = <span class="keyword">new</span> <a class="code hl_enumvalue" href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9a64663f4646781c9c0110838b905daa23">Random</a>();</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">for</span> (var i = original.Count - 1; i &gt; 0; i--)</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            {</div>
@@ -172,13 +172,16 @@ $(function(){initNavTree('d4/d97/_searching_utility_8cs_source.html','../../'); 
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+<div class="ttc" id="a_number_extension_8cs_html_a832e8f52fca5a678819ec96269dcb532"><div class="ttname"><a href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a></div><div class="ttdeci">UnityEngine.Random Random</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d1a/_number_extension_8cs_source.html#l00005">NumberExtension.cs:5</a></div></div>
 <div class="ttc" id="anamespace_common_html"><div class="ttname"><a href="../../d6/dee/namespace_common.html">Common</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/daf/_animation_player_8cs_source.html#l00010">AnimationPlayer.cs:11</a></div></div>
+<div class="ttc" id="anamespace_common_html_a8ca768b5259e0ae2f8baaae4fcb8c5f9"><div class="ttname"><a href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9">Common.SortingType</a></div><div class="ttdeci">SortingType</div><div class="ttdef"><b>Definition</b> <a href="../../de/d11/_sorting_type_8cs_source.html#l00003">SortingType.cs:4</a></div></div>
+<div class="ttc" id="anamespace_common_html_a8ca768b5259e0ae2f8baaae4fcb8c5f9a64663f4646781c9c0110838b905daa23"><div class="ttname"><a href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9a64663f4646781c9c0110838b905daa23">Common.SortingType.Random</a></div><div class="ttdeci">@ Random</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_322551f1fdb2361a8acf273ad02421ad.html">_Utility</a></li><li class="navelem"><b>SearchingUtility.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_322551f1fdb2361a8acf273ad02421ad.html">_Utility</a></li><li class="navelem"><a class="el" href="../../d4/d97/_searching_utility_8cs.html">SearchingUtility.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

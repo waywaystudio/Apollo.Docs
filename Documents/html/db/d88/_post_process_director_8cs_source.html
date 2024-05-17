@@ -100,7 +100,7 @@ $(function(){initNavTree('db/d88/_post_process_director_8cs_source.html','../../
   <div class="headertitle"><div class="title">PostProcessDirector.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<a href="../../db/d88/_post_process_director_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>DG.Tweening;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine.Rendering;</div>
@@ -110,28 +110,32 @@ $(function(){initNavTree('db/d88/_post_process_director_8cs_source.html','../../
 <div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../db/d07/namespace_post_process.html">    8</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../db/d07/namespace_post_process.html">PostProcess</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">public</span> <span class="keyword">class </span>PostProcessDirector : MonoBehaviour, IEditable</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../da/d80/class_post_process_1_1_post_process_director.html">   10</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../da/d80/class_post_process_1_1_post_process_director.html">PostProcessDirector</a> : MonoBehaviour, <a class="code hl_interface" href="../../d3/de8/interface_i_editable.html">IEditable</a></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [SerializeField] <span class="keyword">protected</span> PostProcessManager ppManager;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../da/d80/class_post_process_1_1_post_process_director.html#a464e3e1644da541f916ee3a0a2b6f70c">   12</a></span>        [SerializeField] <span class="keyword">protected</span> <a class="code hl_class" href="../../d7/d51/class_post_process_manager.html">PostProcessManager</a> <a class="code hl_variable" href="../../da/d80/class_post_process_1_1_post_process_director.html#a464e3e1644da541f916ee3a0a2b6f70c">ppManager</a>;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        [SerializeField] <span class="keyword">private</span> Volume mainVolume;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        [SerializeField] <span class="keyword">private</span> Volume uiVolume;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        [SerializeField] <span class="keyword">protected</span> Table&lt;VolumeType, Volume&gt; volumeTable;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../da/d80/class_post_process_1_1_post_process_director.html#aa94c12c7710fb426b22dc6455692e8b5">   15</a></span>        [SerializeField] <span class="keyword">protected</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table&lt;VolumeType, Volume&gt;</a> <a class="code hl_variable" href="../../da/d80/class_post_process_1_1_post_process_director.html#aa94c12c7710fb426b22dc6455692e8b5">volumeTable</a>;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">private</span> Table&lt;VolumeTweenKey, Tween&gt; TweenCacheTable { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table&lt;VolumeTweenKey, Tween&gt;</a> TweenCacheTable { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> Initialize()</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../da/d80/class_post_process_1_1_post_process_director.html#a7191d108d5952ad9f96169b235c1f79c">   20</a></span>        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d80/class_post_process_1_1_post_process_director.html#a7191d108d5952ad9f96169b235c1f79c">Initialize</a>()</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            ppManager.Director = <span class="keyword">this</span>;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
+</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Fade(VolumeType volumeType, <span class="keywordtype">float</span> targetValue, <span class="keywordtype">float</span> duration, Action callback)</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../da/d80/class_post_process_1_1_post_process_director.html#ae79272c2eae554dc2fe699f30ab81ba9">   25</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d80/class_post_process_1_1_post_process_director.html#ae79272c2eae554dc2fe699f30ab81ba9">Fade</a>(<a class="code hl_enumeration" href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a> volumeType, <span class="keywordtype">float</span> targetValue, <span class="keywordtype">float</span> duration, Action callback)</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">if</span> (!TryGetEffect(volumeType, out ColorAdjustments effect)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            var tweenKey = <span class="keyword">new</span> VolumeTweenKey(volumeType, effect.name);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            var tweenKey = <span class="keyword">new</span> <a class="code hl_struct" href="../../d0/d52/struct_volume_tween_key.html">VolumeTweenKey</a>(volumeType, effect.name);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            Cancel(tweenKey);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <a class="code hl_enumvalue" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19">Cancel</a>(tweenKey);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            var tween = DOTween.To(() =&gt; effect.postExposure.value,</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                                   x =&gt; effect.postExposure.value = x,</div>
@@ -144,14 +148,16 @@ $(function(){initNavTree('db/d88/_post_process_director_8cs_source.html','../../
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            TweenCacheTable.Add(tweenKey, tween);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
+</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> BlurIn(VolumeType volumeType, <span class="keywordtype">float</span> duration)</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../da/d80/class_post_process_1_1_post_process_director.html#a6bd8601dbc90880b5e24303d2ce7e197">   45</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d80/class_post_process_1_1_post_process_director.html#a6bd8601dbc90880b5e24303d2ce7e197">BlurIn</a>(<a class="code hl_enumeration" href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a> volumeType, <span class="keywordtype">float</span> duration)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span> (!TryGetEffect(volumeType, out DepthOfField effect)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            var tweenKey = <span class="keyword">new</span> VolumeTweenKey(volumeType, effect.name);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            var tweenKey = <span class="keyword">new</span> <a class="code hl_struct" href="../../d0/d52/struct_volume_tween_key.html">VolumeTweenKey</a>(volumeType, effect.name);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            Cancel(tweenKey);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_enumvalue" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19">Cancel</a>(tweenKey);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            var tween = DOTween.To(() =&gt; effect.focusDistance.value,</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    x =&gt; effect.focusDistance.value = x,</div>
@@ -162,14 +168,16 @@ $(function(){initNavTree('db/d88/_post_process_director_8cs_source.html','../../
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            TweenCacheTable.Add(tweenKey, tween);</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> BlurOut(VolumeType volumeType, <span class="keywordtype">float</span> duration)</div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../da/d80/class_post_process_1_1_post_process_director.html#a42f4f5cce7e1aca8df52a15662cf5fb1">   63</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d80/class_post_process_1_1_post_process_director.html#a42f4f5cce7e1aca8df52a15662cf5fb1">BlurOut</a>(<a class="code hl_enumeration" href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a> volumeType, <span class="keywordtype">float</span> duration)</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (!TryGetEffect(volumeType, out DepthOfField effect)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            var tweenKey = <span class="keyword">new</span> VolumeTweenKey(volumeType, effect.name);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            var tweenKey = <span class="keyword">new</span> <a class="code hl_struct" href="../../d0/d52/struct_volume_tween_key.html">VolumeTweenKey</a>(volumeType, effect.name);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            Cancel(tweenKey);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_enumvalue" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19">Cancel</a>(tweenKey);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            var tween = DOTween.To(() =&gt; effect.focusDistance.value, </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                x =&gt; effect.focusDistance.value = x, </div>
@@ -180,14 +188,16 @@ $(function(){initNavTree('db/d88/_post_process_director_8cs_source.html','../../
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            TweenCacheTable.Add(tweenKey, tween);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
+</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Vignetting(VolumeType volumeType, <span class="keywordtype">float</span> intensity, <span class="keywordtype">float</span> duration, Ease easeType = Ease.Linear)</div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../da/d80/class_post_process_1_1_post_process_director.html#a9f7cff8e80f4c14359eb51eaf07ae26b">   81</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d80/class_post_process_1_1_post_process_director.html#a9f7cff8e80f4c14359eb51eaf07ae26b">Vignetting</a>(<a class="code hl_enumeration" href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a> volumeType, <span class="keywordtype">float</span> intensity, <span class="keywordtype">float</span> duration, Ease easeType = Ease.Linear)</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        {</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">if</span> (!TryGetEffect(volumeType, out Vignette effect)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            var tweenKey = <span class="keyword">new</span> VolumeTweenKey(volumeType, effect.name);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            var tweenKey = <span class="keyword">new</span> <a class="code hl_struct" href="../../d0/d52/struct_volume_tween_key.html">VolumeTweenKey</a>(volumeType, effect.name);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            Cancel(tweenKey);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <a class="code hl_enumvalue" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19">Cancel</a>(tweenKey);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            var tween = DOTween.To(() =&gt; effect.intensity.value, </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                                       x =&gt; effect.intensity.value = x, </div>
@@ -196,15 +206,17 @@ $(function(){initNavTree('db/d88/_post_process_director_8cs_source.html','../../
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            TweenCacheTable.Add(tweenKey, tween);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
+</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Monochrome(VolumeType volumeType, <span class="keywordtype">float</span> endValue, <span class="keywordtype">float</span> duration)</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="../../da/d80/class_post_process_1_1_post_process_director.html#af0ca2dbf9dca58b39fc46381dc2c1f61">   97</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d80/class_post_process_1_1_post_process_director.html#af0ca2dbf9dca58b39fc46381dc2c1f61">Monochrome</a>(<a class="code hl_enumeration" href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a> volumeType, <span class="keywordtype">float</span> endValue, <span class="keywordtype">float</span> duration)</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        {</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">if</span> (!TryGetEffect(volumeType, out ColorAdjustments effect)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordflow">if</span> (effect.active == <span class="keyword">false</span>) effect.active = <span class="keyword">true</span>; </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            var tweenKey = <span class="keyword">new</span> VolumeTweenKey(volumeType, effect.name);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            var tweenKey = <span class="keyword">new</span> <a class="code hl_struct" href="../../d0/d52/struct_volume_tween_key.html">VolumeTweenKey</a>(volumeType, effect.name);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            Cancel(tweenKey);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <a class="code hl_enumvalue" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19">Cancel</a>(tweenKey);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            </div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            effect.active = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            </div>
@@ -213,21 +225,24 @@ $(function(){initNavTree('db/d88/_post_process_director_8cs_source.html','../../
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                                               endValue,</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                                               duration);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            TweenCacheTable.Add(<span class="keyword">new</span> VolumeTweenKey(volumeType, effect.displayName), tween);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            TweenCacheTable.Add(<span class="keyword">new</span> <a class="code hl_struct" href="../../d0/d52/struct_volume_tween_key.html">VolumeTweenKey</a>(volumeType, effect.displayName), tween);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        }</div>
+</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> LensDistortion(VolumeType volumeType, Vector3 source, <span class="keywordtype">float</span> intensity)</div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="../../da/d80/class_post_process_1_1_post_process_director.html#a64cdbf59f2847c5530bb467d010eb8b2">  116</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d80/class_post_process_1_1_post_process_director.html#a64cdbf59f2847c5530bb467d010eb8b2">LensDistortion</a>(<a class="code hl_enumeration" href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a> volumeType, Vector3 source, <span class="keywordtype">float</span> intensity)</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        {</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="comment">// var profile = volumeTable[volumeType];</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        }</div>
+</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> TryGetEffect&lt;T&gt;(VolumeType volumeType, out T effect) where T : VolumeComponent</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> TryGetEffect&lt;T&gt;(<a class="code hl_enumeration" href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a> volumeType, out T effect) where T : VolumeComponent</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordflow">return</span> volumeTable[volumeType].profile.TryGet(out effect);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="../../da/d80/class_post_process_1_1_post_process_director.html#aa94c12c7710fb426b22dc6455692e8b5">volumeTable</a>[volumeType].profile.TryGet(out effect);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Cancel(VolumeTweenKey tweenKey)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_enumvalue" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19">Cancel</a>(<a class="code hl_struct" href="../../d0/d52/struct_volume_tween_key.html">VolumeTweenKey</a> tweenKey)</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        {</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordflow">if</span> (!TweenCacheTable.TryGetValue(tweenKey, out var tween)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            </div>
@@ -248,41 +263,68 @@ $(function(){initNavTree('db/d88/_post_process_director_8cs_source.html','../../
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            });</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keyword">protected</span> <span class="keywordtype">void</span> OnDestroy() =&gt; Clear();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="../../da/d80/class_post_process_1_1_post_process_director.html#a3502549c89abbea9d69c1256689b91a5">  148</a></span>        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d80/class_post_process_1_1_post_process_director.html#a3502549c89abbea9d69c1256689b91a5">OnDestroy</a>() =&gt; Clear();</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> EditorSetUp()</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        {</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            Finder.TryGetObject(out ppManager);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            Finder.TryGetObject(out <a class="code hl_variable" href="../../da/d80/class_post_process_1_1_post_process_director.html#a464e3e1644da541f916ee3a0a2b6f70c">ppManager</a>);</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            volumeTable.Clear();</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            volumeTable.Add(VolumeType.Main, mainVolume);</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            volumeTable.Add(VolumeType.Ui, uiVolume);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <a class="code hl_variable" href="../../da/d80/class_post_process_1_1_post_process_director.html#aa94c12c7710fb426b22dc6455692e8b5">volumeTable</a>.<a class="code hl_function" href="../../d2/d8f/class_table.html#aa5ceff8db5657ae3e7538277e4ed6f8d">Clear</a>();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            <a class="code hl_variable" href="../../da/d80/class_post_process_1_1_post_process_director.html#aa94c12c7710fb426b22dc6455692e8b5">volumeTable</a>.<a class="code hl_function" href="../../d2/d8f/class_table.html#a29330bb38f022574ec3e63e9a8d3f491">Add</a>(<a class="code hl_enumeration" href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a>.Main, mainVolume);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <a class="code hl_variable" href="../../da/d80/class_post_process_1_1_post_process_director.html#aa94c12c7710fb426b22dc6455692e8b5">volumeTable</a>.<a class="code hl_function" href="../../d2/d8f/class_table.html#a29330bb38f022574ec3e63e9a8d3f491">Add</a>(<a class="code hl_enumeration" href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a>.Ui, uiVolume);</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        }</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
+</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
 </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keyword">public</span> <span class="keyword">struct </span>VolumeTweenKey</div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="};">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="../../d0/d52/struct_volume_tween_key.html">  164</a></span><span class="keyword">public</span> <span class="keyword">struct </span><a class="code hl_struct" href="../../d0/d52/struct_volume_tween_key.html">VolumeTweenKey</a></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>{</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">public</span> VolumeType Type;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keyword">public</span> <span class="keywordtype">string</span> EffectName;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="../../d0/d52/struct_volume_tween_key.html#a7cb7aa562263e14588a4a019e1f88f02">  166</a></span>    <span class="keyword">public</span> <a class="code hl_enumeration" href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a> <a class="code hl_variable" href="../../d0/d52/struct_volume_tween_key.html#a7cb7aa562263e14588a4a019e1f88f02">Type</a>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="../../d0/d52/struct_volume_tween_key.html#a0990527aa258c39b0e28c1f05359828f">  167</a></span>    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="../../d0/d52/struct_volume_tween_key.html#a0990527aa258c39b0e28c1f05359828f">EffectName</a>;</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keyword">public</span> VolumeTweenKey(VolumeType type, <span class="keywordtype">string</span> effectName)</div>
+<div class="foldopen" id="foldopen00169" data-start="{" data-end="}">
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="../../d0/d52/struct_volume_tween_key.html#a9b024e6a4916644cf54b05749a99ebb2">  169</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d0/d52/struct_volume_tween_key.html#a9b024e6a4916644cf54b05749a99ebb2">VolumeTweenKey</a>(<a class="code hl_enumeration" href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a> type, <span class="keywordtype">string</span> effectName)</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    {</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        Type       = type;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        EffectName = effectName;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <a class="code hl_variable" href="../../d0/d52/struct_volume_tween_key.html#a7cb7aa562263e14588a4a019e1f88f02">Type</a>       = type;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <a class="code hl_variable" href="../../d0/d52/struct_volume_tween_key.html#a0990527aa258c39b0e28c1f05359828f">EffectName</a> = effectName;</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    }</div>
+</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>}</div>
+</div>
+<div class="ttc" id="a_section_8cs_html_aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19"><div class="ttname"><a href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19">Section.Cancel</a></div><div class="ttdeci">@ Cancel</div></div>
+<div class="ttc" id="a_volume_type_8cs_html_a930cd371d87ebbf3b921dadc5ca2b4ab"><div class="ttname"><a href="../../d5/d9b/_volume_type_8cs.html#a930cd371d87ebbf3b921dadc5ca2b4ab">VolumeType</a></div><div class="ttdeci">VolumeType</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d9b/_volume_type_8cs_source.html#l00001">VolumeType.cs:2</a></div></div>
+<div class="ttc" id="aclass_post_process_1_1_post_process_director_html"><div class="ttname"><a href="../../da/d80/class_post_process_1_1_post_process_director.html">PostProcess.PostProcessDirector</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">PostProcessDirector.cs:11</a></div></div>
+<div class="ttc" id="aclass_post_process_1_1_post_process_director_html_a3502549c89abbea9d69c1256689b91a5"><div class="ttname"><a href="../../da/d80/class_post_process_1_1_post_process_director.html#a3502549c89abbea9d69c1256689b91a5">PostProcess.PostProcessDirector.OnDestroy</a></div><div class="ttdeci">void OnDestroy()</div></div>
+<div class="ttc" id="aclass_post_process_1_1_post_process_director_html_a42f4f5cce7e1aca8df52a15662cf5fb1"><div class="ttname"><a href="../../da/d80/class_post_process_1_1_post_process_director.html#a42f4f5cce7e1aca8df52a15662cf5fb1">PostProcess.PostProcessDirector.BlurOut</a></div><div class="ttdeci">void BlurOut(VolumeType volumeType, float duration)</div><div class="ttdef"><b>Definition</b> <a href="#l00063">PostProcessDirector.cs:63</a></div></div>
+<div class="ttc" id="aclass_post_process_1_1_post_process_director_html_a464e3e1644da541f916ee3a0a2b6f70c"><div class="ttname"><a href="../../da/d80/class_post_process_1_1_post_process_director.html#a464e3e1644da541f916ee3a0a2b6f70c">PostProcess.PostProcessDirector.ppManager</a></div><div class="ttdeci">PostProcessManager ppManager</div><div class="ttdef"><b>Definition</b> <a href="#l00012">PostProcessDirector.cs:12</a></div></div>
+<div class="ttc" id="aclass_post_process_1_1_post_process_director_html_a64cdbf59f2847c5530bb467d010eb8b2"><div class="ttname"><a href="../../da/d80/class_post_process_1_1_post_process_director.html#a64cdbf59f2847c5530bb467d010eb8b2">PostProcess.PostProcessDirector.LensDistortion</a></div><div class="ttdeci">void LensDistortion(VolumeType volumeType, Vector3 source, float intensity)</div><div class="ttdef"><b>Definition</b> <a href="#l00116">PostProcessDirector.cs:116</a></div></div>
+<div class="ttc" id="aclass_post_process_1_1_post_process_director_html_a6bd8601dbc90880b5e24303d2ce7e197"><div class="ttname"><a href="../../da/d80/class_post_process_1_1_post_process_director.html#a6bd8601dbc90880b5e24303d2ce7e197">PostProcess.PostProcessDirector.BlurIn</a></div><div class="ttdeci">void BlurIn(VolumeType volumeType, float duration)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">PostProcessDirector.cs:45</a></div></div>
+<div class="ttc" id="aclass_post_process_1_1_post_process_director_html_a7191d108d5952ad9f96169b235c1f79c"><div class="ttname"><a href="../../da/d80/class_post_process_1_1_post_process_director.html#a7191d108d5952ad9f96169b235c1f79c">PostProcess.PostProcessDirector.Initialize</a></div><div class="ttdeci">virtual void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="#l00020">PostProcessDirector.cs:20</a></div></div>
+<div class="ttc" id="aclass_post_process_1_1_post_process_director_html_a9f7cff8e80f4c14359eb51eaf07ae26b"><div class="ttname"><a href="../../da/d80/class_post_process_1_1_post_process_director.html#a9f7cff8e80f4c14359eb51eaf07ae26b">PostProcess.PostProcessDirector.Vignetting</a></div><div class="ttdeci">void Vignetting(VolumeType volumeType, float intensity, float duration, Ease easeType=Ease.Linear)</div><div class="ttdef"><b>Definition</b> <a href="#l00081">PostProcessDirector.cs:81</a></div></div>
+<div class="ttc" id="aclass_post_process_1_1_post_process_director_html_aa94c12c7710fb426b22dc6455692e8b5"><div class="ttname"><a href="../../da/d80/class_post_process_1_1_post_process_director.html#aa94c12c7710fb426b22dc6455692e8b5">PostProcess.PostProcessDirector.volumeTable</a></div><div class="ttdeci">Table&lt; VolumeType, Volume &gt; volumeTable</div><div class="ttdef"><b>Definition</b> <a href="#l00015">PostProcessDirector.cs:15</a></div></div>
+<div class="ttc" id="aclass_post_process_1_1_post_process_director_html_ae79272c2eae554dc2fe699f30ab81ba9"><div class="ttname"><a href="../../da/d80/class_post_process_1_1_post_process_director.html#ae79272c2eae554dc2fe699f30ab81ba9">PostProcess.PostProcessDirector.Fade</a></div><div class="ttdeci">void Fade(VolumeType volumeType, float targetValue, float duration, Action callback)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">PostProcessDirector.cs:25</a></div></div>
+<div class="ttc" id="aclass_post_process_1_1_post_process_director_html_af0ca2dbf9dca58b39fc46381dc2c1f61"><div class="ttname"><a href="../../da/d80/class_post_process_1_1_post_process_director.html#af0ca2dbf9dca58b39fc46381dc2c1f61">PostProcess.PostProcessDirector.Monochrome</a></div><div class="ttdeci">void Monochrome(VolumeType volumeType, float endValue, float duration)</div><div class="ttdef"><b>Definition</b> <a href="#l00097">PostProcessDirector.cs:97</a></div></div>
+<div class="ttc" id="aclass_post_process_manager_html"><div class="ttname"><a href="../../d7/d51/class_post_process_manager.html">PostProcessManager</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d40/_post_process_manager_8cs_source.html#l00006">PostProcessManager.cs:7</a></div></div>
+<div class="ttc" id="aclass_table_html"><div class="ttname"><a href="../../d2/d8f/class_table.html">Table</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00009">Table.cs:10</a></div></div>
+<div class="ttc" id="aclass_table_html_a29330bb38f022574ec3e63e9a8d3f491"><div class="ttname"><a href="../../d2/d8f/class_table.html#a29330bb38f022574ec3e63e9a8d3f491">Table.Add</a></div><div class="ttdeci">virtual void Add(TKey key, TValue value)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00060">Table.cs:60</a></div></div>
+<div class="ttc" id="aclass_table_html_aa5ceff8db5657ae3e7538277e4ed6f8d"><div class="ttname"><a href="../../d2/d8f/class_table.html#aa5ceff8db5657ae3e7538277e4ed6f8d">Table.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00174">Table.cs:174</a></div></div>
+<div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_post_process_html"><div class="ttname"><a href="../../db/d07/namespace_post_process.html">PostProcess</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">PostProcessDirector.cs:9</a></div></div>
+<div class="ttc" id="astruct_volume_tween_key_html"><div class="ttname"><a href="../../d0/d52/struct_volume_tween_key.html">VolumeTweenKey</a></div><div class="ttdef"><b>Definition</b> <a href="#l00164">PostProcessDirector.cs:165</a></div></div>
+<div class="ttc" id="astruct_volume_tween_key_html_a0990527aa258c39b0e28c1f05359828f"><div class="ttname"><a href="../../d0/d52/struct_volume_tween_key.html#a0990527aa258c39b0e28c1f05359828f">VolumeTweenKey.EffectName</a></div><div class="ttdeci">string EffectName</div><div class="ttdef"><b>Definition</b> <a href="#l00167">PostProcessDirector.cs:167</a></div></div>
+<div class="ttc" id="astruct_volume_tween_key_html_a7cb7aa562263e14588a4a019e1f88f02"><div class="ttname"><a href="../../d0/d52/struct_volume_tween_key.html#a7cb7aa562263e14588a4a019e1f88f02">VolumeTweenKey.Type</a></div><div class="ttdeci">VolumeType Type</div><div class="ttdef"><b>Definition</b> <a href="#l00166">PostProcessDirector.cs:166</a></div></div>
+<div class="ttc" id="astruct_volume_tween_key_html_a9b024e6a4916644cf54b05749a99ebb2"><div class="ttname"><a href="../../d0/d52/struct_volume_tween_key.html#a9b024e6a4916644cf54b05749a99ebb2">VolumeTweenKey.VolumeTweenKey</a></div><div class="ttdeci">VolumeTweenKey(VolumeType type, string effectName)</div><div class="ttdef"><b>Definition</b> <a href="#l00169">PostProcessDirector.cs:169</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><a class="el" href="../../dir_67b8042813d2bf46c2686b11290bb73a.html">PostProcess</a></li><li class="navelem"><b>PostProcessDirector.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><a class="el" href="../../dir_67b8042813d2bf46c2686b11290bb73a.html">PostProcess</a></li><li class="navelem"><a class="el" href="../../db/d88/_post_process_director_8cs.html">PostProcessDirector.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

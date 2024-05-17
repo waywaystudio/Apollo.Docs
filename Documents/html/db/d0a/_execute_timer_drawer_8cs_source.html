@@ -100,7 +100,7 @@ $(function(){initNavTree('db/d0a/_execute_timer_drawer_8cs_source.html','../../'
   <div class="headertitle"><div class="title">ExecuteTimerDrawer.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<a href="../../db/d0a/_execute_timer_drawer_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Reflection;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="../../df/dd3/namespace_common_1_1_status_effects.html">Common.StatusEffects</a>;</div>
@@ -109,18 +109,22 @@ $(function(){initNavTree('db/d0a/_execute_timer_drawer_8cs_source.html','../../'
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d2/dbe/namespace_common_1_1_editor.html">Common.Editor</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">public</span> <span class="keyword">class </span>ExecuteTimerDrawer : OdinAttributeProcessor&lt;ExecuteTimer&gt;</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../dc/dab/class_common_1_1_editor_1_1_execute_timer_drawer.html">   10</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../dc/dab/class_common_1_1_editor_1_1_execute_timer_drawer.html">ExecuteTimerDrawer</a> : OdinAttributeProcessor&lt;ExecuteTimer&gt;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ProcessSelfAttributes(InspectorProperty property, List&lt;Attribute&gt; attributes)</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../dc/dab/class_common_1_1_editor_1_1_execute_timer_drawer.html#af3e6e08335c9999db95f650496a32453">   12</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/dab/class_common_1_1_editor_1_1_execute_timer_drawer.html#af3e6e08335c9999db95f650496a32453">ProcessSelfAttributes</a>(InspectorProperty property, List&lt;Attribute&gt; attributes)</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        }</div>
+</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../dc/dab/class_common_1_1_editor_1_1_execute_timer_drawer.html#af1a0ceeb105dc22122a95adabe6da88c">   17</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/dab/class_common_1_1_editor_1_1_execute_timer_drawer.html#af1a0ceeb105dc22122a95adabe6da88c">ProcessChildMemberAttributes</a>(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            var group = <span class="keyword">new</span> ModuleGroupAttribute(<span class="stringliteral">&quot;Execute Timer&quot;</span>, </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            var group = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d68/class_module_group_attribute.html">ModuleGroupAttribute</a>(<span class="stringliteral">&quot;Execute Timer&quot;</span>, </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                                                 documentLink:<span class="stringliteral">&quot;https://www.notion.so/salinger/Core-Manager-ea7839f3cd9e42d6a4d756b00086d453?pvs=4&quot;</span>,  </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                                                 expanded:true);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                                                 expanded:<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            attributes.Add(group);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            </div>
@@ -152,18 +156,24 @@ $(function(){initNavTree('db/d0a/_execute_timer_drawer_8cs_source.html','../../'
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                attributes.Add(<span class="keyword">new</span> ShowIfAttribute(<span class="stringliteral">&quot;@this.type == TimerType.ExecuteOverTime&quot;</span>));</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">public</span> <span class="keyword">class </span>OverrideModuleDrawer : OdinAttributeProcessor&lt;OverrideModule&gt;</div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../dc/d43/class_common_1_1_editor_1_1_override_module_drawer.html">   55</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../dc/d43/class_common_1_1_editor_1_1_override_module_drawer.html">OverrideModuleDrawer</a> : OdinAttributeProcessor&lt;OverrideModule&gt;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ProcessSelfAttributes(InspectorProperty property, List&lt;Attribute&gt; attributes)</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../dc/d43/class_common_1_1_editor_1_1_override_module_drawer.html#ae4e00970f71e6fd0bafd736f9826ecce">   57</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d43/class_common_1_1_editor_1_1_override_module_drawer.html#ae4e00970f71e6fd0bafd736f9826ecce">ProcessSelfAttributes</a>(InspectorProperty property, List&lt;Attribute&gt; attributes)</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../dc/d43/class_common_1_1_editor_1_1_override_module_drawer.html#aebd0bb9d027dc5e76d1f1495486bca42">   62</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d43/class_common_1_1_editor_1_1_override_module_drawer.html#aebd0bb9d027dc5e76d1f1495486bca42">ProcessChildMemberAttributes</a>(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            var group = <span class="keyword">new</span> ModuleGroupAttribute(<span class="stringliteral">&quot;Override Module&quot;</span>, expanded:true, order:1000f);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            var group = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d68/class_module_group_attribute.html">ModuleGroupAttribute</a>(<span class="stringliteral">&quot;Override Module&quot;</span>, expanded:<span class="keyword">true</span>, order:1000f);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            attributes.Add(group);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            </div>
@@ -185,8 +195,17 @@ $(function(){initNavTree('db/d0a/_execute_timer_drawer_8cs_source.html','../../'
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(1, 999));</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            }</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="ttc" id="aclass_common_1_1_editor_1_1_execute_timer_drawer_html"><div class="ttname"><a href="../../dc/dab/class_common_1_1_editor_1_1_execute_timer_drawer.html">Common.Editor.ExecuteTimerDrawer</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">ExecuteTimerDrawer.cs:11</a></div></div>
+<div class="ttc" id="aclass_common_1_1_editor_1_1_execute_timer_drawer_html_af1a0ceeb105dc22122a95adabe6da88c"><div class="ttname"><a href="../../dc/dab/class_common_1_1_editor_1_1_execute_timer_drawer.html#af1a0ceeb105dc22122a95adabe6da88c">Common.Editor.ExecuteTimerDrawer.ProcessChildMemberAttributes</a></div><div class="ttdeci">override void ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt; Attribute &gt; attributes)</div><div class="ttdef"><b>Definition</b> <a href="#l00017">ExecuteTimerDrawer.cs:17</a></div></div>
+<div class="ttc" id="aclass_common_1_1_editor_1_1_execute_timer_drawer_html_af3e6e08335c9999db95f650496a32453"><div class="ttname"><a href="../../dc/dab/class_common_1_1_editor_1_1_execute_timer_drawer.html#af3e6e08335c9999db95f650496a32453">Common.Editor.ExecuteTimerDrawer.ProcessSelfAttributes</a></div><div class="ttdeci">override void ProcessSelfAttributes(InspectorProperty property, List&lt; Attribute &gt; attributes)</div><div class="ttdef"><b>Definition</b> <a href="#l00012">ExecuteTimerDrawer.cs:12</a></div></div>
+<div class="ttc" id="aclass_common_1_1_editor_1_1_override_module_drawer_html"><div class="ttname"><a href="../../dc/d43/class_common_1_1_editor_1_1_override_module_drawer.html">Common.Editor.OverrideModuleDrawer</a></div><div class="ttdef"><b>Definition</b> <a href="#l00055">ExecuteTimerDrawer.cs:56</a></div></div>
+<div class="ttc" id="aclass_common_1_1_editor_1_1_override_module_drawer_html_ae4e00970f71e6fd0bafd736f9826ecce"><div class="ttname"><a href="../../dc/d43/class_common_1_1_editor_1_1_override_module_drawer.html#ae4e00970f71e6fd0bafd736f9826ecce">Common.Editor.OverrideModuleDrawer.ProcessSelfAttributes</a></div><div class="ttdeci">override void ProcessSelfAttributes(InspectorProperty property, List&lt; Attribute &gt; attributes)</div><div class="ttdef"><b>Definition</b> <a href="#l00057">ExecuteTimerDrawer.cs:57</a></div></div>
+<div class="ttc" id="aclass_common_1_1_editor_1_1_override_module_drawer_html_aebd0bb9d027dc5e76d1f1495486bca42"><div class="ttname"><a href="../../dc/d43/class_common_1_1_editor_1_1_override_module_drawer.html#aebd0bb9d027dc5e76d1f1495486bca42">Common.Editor.OverrideModuleDrawer.ProcessChildMemberAttributes</a></div><div class="ttdeci">override void ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt; Attribute &gt; attributes)</div><div class="ttdef"><b>Definition</b> <a href="#l00062">ExecuteTimerDrawer.cs:62</a></div></div>
+<div class="ttc" id="aclass_module_group_attribute_html"><div class="ttname"><a href="../../d6/d68/class_module_group_attribute.html">ModuleGroupAttribute</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00008">ModuleGroupAttribute.cs:9</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_editor_html"><div class="ttname"><a href="../../d2/dbe/namespace_common_1_1_editor.html">Common.Editor</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/da4/_behaviour_mover_drawer_8cs_source.html#l00008">BehaviourMoverDrawer.cs:9</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_status_effects_html"><div class="ttname"><a href="../../df/dd3/namespace_common_1_1_status_effects.html">Common.StatusEffects</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/d5c/_override_module_8cs_source.html#l00005">OverrideModule.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -194,7 +213,7 @@ $(function(){initNavTree('db/d0a/_execute_timer_drawer_8cs_source.html','../../'
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_eeb16f7eaa20d402ca03e41de2380886.html">Editor</a></li><li class="navelem"><b>ExecuteTimerDrawer.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_eeb16f7eaa20d402ca03e41de2380886.html">Editor</a></li><li class="navelem"><a class="el" href="../../db/d0a/_execute_timer_drawer_8cs.html">ExecuteTimerDrawer.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

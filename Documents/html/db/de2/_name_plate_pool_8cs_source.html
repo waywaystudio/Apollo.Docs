@@ -100,39 +100,42 @@ $(function(){initNavTree('db/de2/_name_plate_pool_8cs_source.html','../../'); in
   <div class="headertitle"><div class="title">NamePlatePool.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d4/d33/namespace_common_1_1_characters_1_1_non_players_1_1_fiends.html">Common.Characters.NonPlayers.Fiends</a>;</div>
+<a href="../../db/de2/_name_plate_pool_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d4/d33/namespace_common_1_1_characters_1_1_non_players_1_1_fiends.html">Common.Characters.NonPlayers.Fiends</a>;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/d71/namespace_common_1_1_u_i_1_1_name_plates.html">Common.UI.NamePlates</a></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keyword">public</span> <span class="keyword">class </span>NamePlatePool : MonoBehaviour, IEditable</div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../d6/d48/class_common_1_1_u_i_1_1_name_plates_1_1_name_plate_pool.html">    6</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d6/d48/class_common_1_1_u_i_1_1_name_plates_1_1_name_plate_pool.html">NamePlatePool</a> : MonoBehaviour, <a class="code hl_interface" href="../../d3/de8/interface_i_editable.html">IEditable</a></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        [SerializeField] <span class="keyword">private</span> FiendSpawnEvent fiendSpawnEvent;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="../../de/da2/class_pool.html">Pool&lt;NamePlate&gt;</a> pool;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="../../d1/dfb/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend_spawn_event.html">FiendSpawnEvent</a> fiendSpawnEvent;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [SerializeField] <span class="keyword">private</span> Pool&lt;NamePlate&gt; pool;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize()</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d6/d48/class_common_1_1_u_i_1_1_name_plates_1_1_name_plate_pool.html#a46630ee40150e2663e146fa856df4b0a">   11</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d48/class_common_1_1_u_i_1_1_name_plates_1_1_name_plate_pool.html#a46630ee40150e2663e146fa856df4b0a">Initialize</a>()</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            var namePlateTransform = transform;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            pool.<a class="code hl_function" href="../../de/da2/class_pool.html#af50a06eba43889ccb513fe8aa5f6c6b3">Initialize</a>(<span class="keyword">null</span>, namePlateTransform, namePlateTransform);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            pool.Initialize(<span class="keyword">null</span>, namePlateTransform, namePlateTransform);</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            fiendSpawnEvent.Add(<span class="stringliteral">&quot;SetNamePlateToFiend&quot;</span>, SetNamePlateToFiend);</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        }</div>
+</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> SetNamePlateToFiend(Fiend fiend)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> SetNamePlateToFiend(<a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a> fiend)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            var namePlate = pool.Get();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            var deadBehaviour = fiend.Behaviours.Dead;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            var deadBehaviour = fiend.<a class="code hl_property" href="../../dd/dff/class_common_1_1_character.html#aa1a4b82596d7a09ebb8be0f04e78c304">Behaviours</a>.Dead;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            namePlate.Active(fiend);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            deadBehaviour.Sections</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                         .Add(Section.Active, <span class="stringliteral">&quot;ReturnNamePlate&quot;</span>, () =&gt; ReturnToPool(namePlate))</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                         .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Active, <span class="stringliteral">&quot;ReturnNamePlate&quot;</span>, () =&gt; ReturnToPool(namePlate))</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                         ;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> ReturnToPool(NamePlate namePlate)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> ReturnToPool(<a class="code hl_class" href="../../d2/dc1/class_common_1_1_u_i_1_1_name_plate.html">NamePlate</a> namePlate)</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            namePlate.DeActive();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            namePlate.<a class="code hl_function" href="../../d2/dc1/class_common_1_1_u_i_1_1_name_plate.html#a13746b433d3b80f20c761bc00d0aecff">DeActive</a>();</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            pool.Release(namePlate);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
@@ -145,9 +148,17 @@ $(function(){initNavTree('db/de2/_name_plate_pool_8cs_source.html','../../'); in
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
-<div class="ttc" id="aclass_pool_html"><div class="ttname"><a href="../../de/da2/class_pool.html">Pool</a></div><div class="ttdoc">https://www.notion.so/salinger/Pool-952c1d279fa241ac9aa3f61abfa577a1?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../df/d04/_pool_8cs_source.html#l00011">Pool.cs:12</a></div></div>
-<div class="ttc" id="aclass_pool_html_af50a06eba43889ccb513fe8aa5f6c6b3"><div class="ttname"><a href="../../de/da2/class_pool.html#af50a06eba43889ccb513fe8aa5f6c6b3">Pool.Initialize</a></div><div class="ttdeci">Pool&lt; T &gt; Initialize(Action&lt; T &gt; onInitialize=null, Transform spawnTransform=null, Transform home=null)</div><div class="ttdoc">Constructor. Pool&lt;T&gt;을 사용하기 위해서는 반드시 한 번 선행되어야 한다. 이미 생성된 후에 다시 실행하면, 하위 Action을 갱신할 수 있다.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d04/_pool_8cs_source.html#l00033">Pool.cs:33</a></div></div>
+<div class="ttc" id="a_section_8cs_html_aa2bc2fd5a40cdb0c40963e6fe6a24cce"><div class="ttname"><a href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a></div><div class="ttdeci">Section</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d0d/_section_8cs_source.html#l00001">Section.cs:2</a></div></div>
+<div class="ttc" id="aclass_common_1_1_character_html_aa1a4b82596d7a09ebb8be0f04e78c304"><div class="ttname"><a href="../../dd/dff/class_common_1_1_character.html#aa1a4b82596d7a09ebb8be0f04e78c304">Common.Character.Behaviours</a></div><div class="ttdeci">UnitBehaviourTable Behaviours</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8a/_character_8cs_source.html#l00037">Character.cs:37</a></div></div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend_html"><div class="ttname"><a href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Common.Characters.NonPlayers.Fiends.Fiend</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/de0/_fiend_8cs_source.html#l00008">Fiend.cs:9</a></div></div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend_spawn_event_html"><div class="ttname"><a href="../../d1/dfb/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend_spawn_event.html">Common.Characters.NonPlayers.Fiends.FiendSpawnEvent</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/d51/_fiend_spawn_event_8cs_source.html#l00003">FiendSpawnEvent.cs:4</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_name_plate_html"><div class="ttname"><a href="../../d2/dc1/class_common_1_1_u_i_1_1_name_plate.html">Common.UI.NamePlate</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d7d/_name_plate_8cs_source.html#l00011">NamePlate.cs:12</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_name_plate_html_a13746b433d3b80f20c761bc00d0aecff"><div class="ttname"><a href="../../d2/dc1/class_common_1_1_u_i_1_1_name_plate.html#a13746b433d3b80f20c761bc00d0aecff">Common.UI.NamePlate.DeActive</a></div><div class="ttdeci">void DeActive()</div><div class="ttdef"><b>Definition</b> <a href="../../da/d7d/_name_plate_8cs_source.html#l00060">NamePlate.cs:60</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_name_plates_1_1_name_plate_pool_html"><div class="ttname"><a href="../../d6/d48/class_common_1_1_u_i_1_1_name_plates_1_1_name_plate_pool.html">Common.UI.NamePlates.NamePlatePool</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">NamePlatePool.cs:7</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_name_plates_1_1_name_plate_pool_html_a46630ee40150e2663e146fa856df4b0a"><div class="ttname"><a href="../../d6/d48/class_common_1_1_u_i_1_1_name_plates_1_1_name_plate_pool.html#a46630ee40150e2663e146fa856df4b0a">Common.UI.NamePlates.NamePlatePool.Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="#l00011">NamePlatePool.cs:11</a></div></div>
+<div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_characters_1_1_non_players_1_1_fiends_html"><div class="ttname"><a href="../../d4/d33/namespace_common_1_1_characters_1_1_non_players_1_1_fiends.html">Common.Characters.NonPlayers.Fiends</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/de0/_fiend_8cs_source.html#l00006">Fiend.cs:7</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_u_i_1_1_name_plates_html"><div class="ttname"><a href="../../da/d71/namespace_common_1_1_u_i_1_1_name_plates.html">Common.UI.NamePlates</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/dde/_combat_value_bar_8cs_source.html#l00004">CombatValueBar.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -155,7 +166,7 @@ $(function(){initNavTree('db/de2/_name_plate_pool_8cs_source.html','../../'); in
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><a class="el" href="../../dir_b26c755244d7ceb3fd11173b52c49e82.html">NamePlates</a></li><li class="navelem"><b>NamePlatePool.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><a class="el" href="../../dir_b26c755244d7ceb3fd11173b52c49e82.html">NamePlates</a></li><li class="navelem"><a class="el" href="../../db/de2/_name_plate_pool_8cs.html">NamePlatePool.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

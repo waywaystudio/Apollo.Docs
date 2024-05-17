@@ -1,6 +1,6 @@
 \doxysection{Dungeon\+Scenarios.\+cs}
 \hypertarget{_dungeon_scenarios_8cs_source}{}\label{_dungeon_scenarios_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/Dungeons/DungeonScenarios.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/Dungeons/DungeonScenarios.cs}}
-
+\mbox{\hyperlink{_dungeon_scenarios_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_challenge_1_1_dungeons_1_1_sections}{Challenge.Dungeons.Sections}};}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Sirenix.OdinInspector;}
@@ -8,39 +8,39 @@
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00004}00004\ }
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_dungeons}{Challenge.Dungeons}}}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DungeonScenarios\ :\ MonoBehaviour,\ ISequencer,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00007}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios}{DungeonScenarios}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_sequencer}{ISequencer}},\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00008}00008\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Table<DungeonSectionType,\ DungeonSection>\ dungeonSectionTable;}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_table}{Table<DungeonSectionType,\ DungeonSection>}}\ dungeonSectionTable;}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [ShowInInspector]}
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DungeonSection\ currentSection;}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_sections_1_1_dungeon_section}{DungeonSection}}\ currentSection;}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DungeonStage\ MasterStage\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DungeonSection\ CurrentSection}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00013}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_ac97d842bb89b802336ff5e8161531ef8}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_table}{SectionTable}}\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00014}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_a653b4b4133fdb3647c4bfd83eed7db06}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_a653b4b4133fdb3647c4bfd83eed7db06}{Invoker}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00015}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_adea32eb86ec30b613ba8c01e3ef90ef1}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_stage}{DungeonStage}}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_adea32eb86ec30b613ba8c01e3ef90ef1}{MasterStage}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00016}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_af2db071d08bd453efe05ee6dc3e7ec4a}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_sections_1_1_dungeon_section}{DungeonSection}}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_af2db071d08bd453efe05ee6dc3e7ec4a}{CurrentSection}}}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ currentSection;\ }
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ =>\ currentSection\ =\ value;}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DungeonSection\ \textcolor{keyword}{this}[DungeonSectionType\ type]\ =>\ dungeonSectionTable[type];}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00021}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_a2debc638b845a7ebf9ea1c583ba8dc1f}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_sections_1_1_dungeon_section}{DungeonSection}}\ \textcolor{keyword}{this}[\mbox{\hyperlink{namespace_challenge_ac7399f34de91c6da192d3a931e858295}{DungeonSectionType}}\ type]\ =>\ dungeonSectionTable[type];}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(DungeonStage\ stage)}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00024}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_a5fa8aac0db161a55283d0b1b184ab896}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_a5fa8aac0db161a55283d0b1b184ab896}{Initialize}}(\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_stage}{DungeonStage}}\ stage)}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ MasterStage\ =\ stage;}
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ \ \ \ \ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_adea32eb86ec30b613ba8c01e3ef90ef1}{MasterStage}}\ =\ stage;}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_a653b4b4133fdb3647c4bfd83eed7db06}{Invoker}}\ \ \ \ \ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}(Sections);}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ dungeonSectionTable.ValueList.ForEach(section\ =>\ section.Initialize(\textcolor{keyword}{this}));}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ dungeonSectionTable.\mbox{\hyperlink{class_table_a1ea84737aa88740a2705e303980a7b10}{ValueList}}.ForEach(section\ =>\ section.Initialize(\textcolor{keyword}{this}));}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ActiveInitialSection()}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00032}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_a8db52325f85ce25ddd28e54c4ef74672}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_a8db52325f85ce25ddd28e54c4ef74672}{ActiveInitialSection}}()}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!dungeonSectionTable.ContainsKey(DungeonSectionType.Initial))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!dungeonSectionTable.\mbox{\hyperlink{class_table_a4c012e54b170a3ee21db16e9be63cf37}{ContainsKey}}(\mbox{\hyperlink{namespace_challenge_ac7399f34de91c6da192d3a931e858295}{DungeonSectionType}}.Initial))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ dungeonSectionTable[DungeonSectionType.Initial].Active();}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ dungeonSectionTable[\mbox{\hyperlink{namespace_challenge_ac7399f34de91c6da192d3a931e858295}{DungeonSectionType}}.Initial].Active();}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00039}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_ae8b5f0a3a4b6ca034e933a7026dbda24}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_ae8b5f0a3a4b6ca034e933a7026dbda24}{Cancel}}()\ =>\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_scenarios_a653b4b4133fdb3647c4bfd83eed7db06}{Invoker}}.\mbox{\hyperlink{class_section_invoker_aa26adf36e80006bc7458495a349c3b7e}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00041}00041\ }
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00042}00042\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
@@ -48,7 +48,7 @@
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ var\ sections\ =\ GetComponentsInChildren<DungeonSection>();}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ dungeonSectionTable.CreateTable(sections,\ section\ =>\ section.SequenceType);}
+\DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ dungeonSectionTable.\mbox{\hyperlink{class_table_aa9b824ab53436ce437d96f9e0367b854}{CreateTable}}(sections,\ section\ =>\ section.SequenceType);}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00049}00049\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_dungeon_scenarios_8cs_source_l00050}00050\ \ \ \ \ \}}

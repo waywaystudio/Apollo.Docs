@@ -1,0 +1,242 @@
+\doxysection{Save\+Manager Class Reference}
+\hypertarget{class_save_manager}{}\label{class_save_manager}\index{SaveManager@{SaveManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_save_manager_ad514147ed1bae9ce0f302f78fc336749}{Save$<$ T $>$}} (string key, T value)
+\item 
+T \mbox{\hyperlink{class_save_manager_ab1ecc2710449db6495b36e5c77cb7951}{Load$<$ T $>$}} (string key, T value=default)
+\item 
+void \mbox{\hyperlink{class_save_manager_ae0f04b9aedd61fd94b2f1b11c09176f3}{Load\+All\+Save\+Information}} ()
+\begin{DoxyCompactList}\small\item\em Serialize\+Manager 사용 시에 반드시 호출되어야 함. 게임 내에 존재하는 모든 세이브 파일 목록을 불러온다. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_save_manager_ab80f832cc9e0fcef6c04fc21140e02ec}{Try\+Create\+New\+Save\+File}} (string filename)
+\begin{DoxyCompactList}\small\item\em 새로운 세이브 파일을 기초 값으로 생성 시도하며 이미 이름이 있다면 취소된다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_save_manager_a7eb5b17053ad793fda7d03b6499360fb}{Save\+To\+New\+File}} (string filename)
+\begin{DoxyCompactList}\small\item\em 새로운 세이브 파일을 현재 데이타 값으로 생성한다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_save_manager_aea00b44b9e0c1a75f820ea7148767bb3}{Save\+To\+Exist\+File}} (string exist\+Save\+File\+Name)
+\begin{DoxyCompactList}\small\item\em 현재 데이터를 이미 생성된 세이브 파일에 덮어쓴다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_save_manager_a1a70b1299f7db5028eddc7b10d97ceaa}{Load\+From\+File}} (string from\+Save\+Filename)
+\begin{DoxyCompactList}\small\item\em 기존 세이브 파일로부터 현재 데이터를 갱신한다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_save_manager_a48b639c593a065f068e8b41fbdbc6a18}{Delete\+Save\+File}} (string filename)
+\begin{DoxyCompactList}\small\item\em 세이브 파일을 삭제한다. 에디터 상태에선 메타파일도 같이 지워준다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_save_manager_ade5f41d4bcf9ef6db242131fb30acece}{Reset\+File}} ()
+\begin{DoxyCompactList}\small\item\em 세이브 파일 상태를 초기화 한다. 세이브 시스템에 핵심 파일인 \+\_\+play\+Save\+File 을 초기화 한다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_save_manager_a58ca9e2645460006af1a678cdbc3f7f6}{Add\+Listener}} (\mbox{\hyperlink{class_saves_1_1_save_listener}{Save\+Listener}} listener)
+\item 
+void \mbox{\hyperlink{class_save_manager_a4e93f248055b404c4f6fc3ce997ad6c4}{Remove\+Listener}} (\mbox{\hyperlink{class_saves_1_1_save_listener}{Save\+Listener}} listener)
+\item 
+void \mbox{\hyperlink{class_save_manager_a521d7ae631fb3b29413b9ea64e08f599}{Save\+All}} ()
+\item 
+void \mbox{\hyperlink{class_save_manager_aa24f169080ff5e633a6cb51d9a0e286c}{Load\+All}} ()
+\item 
+void \mbox{\hyperlink{class_save_manager_ae89d2ae07a78d83e4c2b1b6c1f3d6263}{Dispose}} ()
+\item 
+bool \mbox{\hyperlink{class_save_manager_aab08d86b08d61874898993e0405029ba}{Try\+Get\+Save\+Info}} (string save\+Filename, out \mbox{\hyperlink{class_saves_1_1_save_info}{Save\+Info}} result)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_saves_1_1_save_info}{Save\+Info}} \mbox{\hyperlink{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905}{Current\+Save\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{class_saves_1_1_save_info}{Save\+Info}} $>$ \mbox{\hyperlink{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}{Save\+Info\+List}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_save_manager_a58ca9e2645460006af1a678cdbc3f7f6}\label{class_save_manager_a58ca9e2645460006af1a678cdbc3f7f6} 
+\index{SaveManager@{SaveManager}!AddListener@{AddListener}}
+\index{AddListener@{AddListener}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{AddListener()}{AddListener()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Add\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_saves_1_1_save_listener}{Save\+Listener}}}]{listener }\end{DoxyParamCaption})}
+
+\Hypertarget{class_save_manager_a48b639c593a065f068e8b41fbdbc6a18}\label{class_save_manager_a48b639c593a065f068e8b41fbdbc6a18} 
+\index{SaveManager@{SaveManager}!DeleteSaveFile@{DeleteSaveFile}}
+\index{DeleteSaveFile@{DeleteSaveFile}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{DeleteSaveFile()}{DeleteSaveFile()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Delete\+Save\+File (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+세이브 파일을 삭제한다. 에디터 상태에선 메타파일도 같이 지워준다. 
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00122}{122}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+\Hypertarget{class_save_manager_ae89d2ae07a78d83e4c2b1b6c1f3d6263}\label{class_save_manager_ae89d2ae07a78d83e4c2b1b6c1f3d6263} 
+\index{SaveManager@{SaveManager}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00159}{159}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+\Hypertarget{class_save_manager_ab1ecc2710449db6495b36e5c77cb7951}\label{class_save_manager_ab1ecc2710449db6495b36e5c77cb7951} 
+\index{SaveManager@{SaveManager}!Load$<$ T $>$@{Load$<$ T $>$}}
+\index{Load$<$ T $>$@{Load$<$ T $>$}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{Load$<$ T $>$()}{Load< T >()}}
+{\footnotesize\ttfamily T Save\+Manager.\+Load$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{T}]{value = {\ttfamily default} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+\Hypertarget{class_save_manager_aa24f169080ff5e633a6cb51d9a0e286c}\label{class_save_manager_aa24f169080ff5e633a6cb51d9a0e286c} 
+\index{SaveManager@{SaveManager}!LoadAll@{LoadAll}}
+\index{LoadAll@{LoadAll}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{LoadAll()}{LoadAll()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Load\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_save_manager_ae0f04b9aedd61fd94b2f1b11c09176f3}\label{class_save_manager_ae0f04b9aedd61fd94b2f1b11c09176f3} 
+\index{SaveManager@{SaveManager}!LoadAllSaveInformation@{LoadAllSaveInformation}}
+\index{LoadAllSaveInformation@{LoadAllSaveInformation}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{LoadAllSaveInformation()}{LoadAllSaveInformation()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Load\+All\+Save\+Information (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Serialize\+Manager 사용 시에 반드시 호출되어야 함. 게임 내에 존재하는 모든 세이브 파일 목록을 불러온다. 
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+\Hypertarget{class_save_manager_a1a70b1299f7db5028eddc7b10d97ceaa}\label{class_save_manager_a1a70b1299f7db5028eddc7b10d97ceaa} 
+\index{SaveManager@{SaveManager}!LoadFromFile@{LoadFromFile}}
+\index{LoadFromFile@{LoadFromFile}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{LoadFromFile()}{LoadFromFile()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Load\+From\+File (\begin{DoxyParamCaption}\item[{string}]{from\+Save\+Filename }\end{DoxyParamCaption})}
+
+
+
+기존 세이브 파일로부터 현재 데이터를 갱신한다. 
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00109}{109}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+\Hypertarget{class_save_manager_a4e93f248055b404c4f6fc3ce997ad6c4}\label{class_save_manager_a4e93f248055b404c4f6fc3ce997ad6c4} 
+\index{SaveManager@{SaveManager}!RemoveListener@{RemoveListener}}
+\index{RemoveListener@{RemoveListener}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{RemoveListener()}{RemoveListener()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Remove\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_saves_1_1_save_listener}{Save\+Listener}}}]{listener }\end{DoxyParamCaption})}
+
+\Hypertarget{class_save_manager_ade5f41d4bcf9ef6db242131fb30acece}\label{class_save_manager_ade5f41d4bcf9ef6db242131fb30acece} 
+\index{SaveManager@{SaveManager}!ResetFile@{ResetFile}}
+\index{ResetFile@{ResetFile}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{ResetFile()}{ResetFile()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Reset\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+세이브 파일 상태를 초기화 한다. 세이브 시스템에 핵심 파일인 \+\_\+play\+Save\+File 을 초기화 한다. 
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00141}{141}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+\Hypertarget{class_save_manager_ad514147ed1bae9ce0f302f78fc336749}\label{class_save_manager_ad514147ed1bae9ce0f302f78fc336749} 
+\index{SaveManager@{SaveManager}!Save$<$ T $>$@{Save$<$ T $>$}}
+\index{Save$<$ T $>$@{Save$<$ T $>$}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{Save$<$ T $>$()}{Save< T >()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Save$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+\Hypertarget{class_save_manager_a521d7ae631fb3b29413b9ea64e08f599}\label{class_save_manager_a521d7ae631fb3b29413b9ea64e08f599} 
+\index{SaveManager@{SaveManager}!SaveAll@{SaveAll}}
+\index{SaveAll@{SaveAll}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{SaveAll()}{SaveAll()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Save\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_save_manager_aea00b44b9e0c1a75f820ea7148767bb3}\label{class_save_manager_aea00b44b9e0c1a75f820ea7148767bb3} 
+\index{SaveManager@{SaveManager}!SaveToExistFile@{SaveToExistFile}}
+\index{SaveToExistFile@{SaveToExistFile}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{SaveToExistFile()}{SaveToExistFile()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Save\+To\+Exist\+File (\begin{DoxyParamCaption}\item[{string}]{exist\+Save\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+현재 데이터를 이미 생성된 세이브 파일에 덮어쓴다. 
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00098}{98}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+\Hypertarget{class_save_manager_a7eb5b17053ad793fda7d03b6499360fb}\label{class_save_manager_a7eb5b17053ad793fda7d03b6499360fb} 
+\index{SaveManager@{SaveManager}!SaveToNewFile@{SaveToNewFile}}
+\index{SaveToNewFile@{SaveToNewFile}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{SaveToNewFile()}{SaveToNewFile()}}
+{\footnotesize\ttfamily void Save\+Manager.\+Save\+To\+New\+File (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+새로운 세이브 파일을 현재 데이타 값으로 생성한다. 
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00087}{87}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+\Hypertarget{class_save_manager_ab80f832cc9e0fcef6c04fc21140e02ec}\label{class_save_manager_ab80f832cc9e0fcef6c04fc21140e02ec} 
+\index{SaveManager@{SaveManager}!TryCreateNewSaveFile@{TryCreateNewSaveFile}}
+\index{TryCreateNewSaveFile@{TryCreateNewSaveFile}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{TryCreateNewSaveFile()}{TryCreateNewSaveFile()}}
+{\footnotesize\ttfamily bool Save\+Manager.\+Try\+Create\+New\+Save\+File (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+
+
+새로운 세이브 파일을 기초 값으로 생성 시도하며 이미 이름이 있다면 취소된다. 
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00068}{68}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+\Hypertarget{class_save_manager_aab08d86b08d61874898993e0405029ba}\label{class_save_manager_aab08d86b08d61874898993e0405029ba} 
+\index{SaveManager@{SaveManager}!TryGetSaveInfo@{TryGetSaveInfo}}
+\index{TryGetSaveInfo@{TryGetSaveInfo}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{TryGetSaveInfo()}{TryGetSaveInfo()}}
+{\footnotesize\ttfamily bool Save\+Manager.\+Try\+Get\+Save\+Info (\begin{DoxyParamCaption}\item[{string}]{save\+Filename,  }\item[{out \mbox{\hyperlink{class_saves_1_1_save_info}{Save\+Info}}}]{result }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00225}{225}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905}\label{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905} 
+\index{SaveManager@{SaveManager}!CurrentSaveInfo@{CurrentSaveInfo}}
+\index{CurrentSaveInfo@{CurrentSaveInfo}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{CurrentSaveInfo}{CurrentSaveInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_saves_1_1_save_info}{Save\+Info}} Save\+Manager.\+Current\+Save\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+\Hypertarget{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}\label{class_save_manager_a111ff32e5a8967fa470eac129273a9d9} 
+\index{SaveManager@{SaveManager}!SaveInfoList@{SaveInfoList}}
+\index{SaveInfoList@{SaveInfoList}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{SaveInfoList}{SaveInfoList}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_saves_1_1_save_info}{Save\+Info}}$>$ Save\+Manager.\+Save\+Info\+List = new()\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_save_manager_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_save_manager_8cs_source}{Save\+Manager.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+\_\+\+Core/\+Managers/\mbox{\hyperlink{_save_manager_8cs}{Save\+Manager.\+cs}}\end{DoxyCompactItemize}

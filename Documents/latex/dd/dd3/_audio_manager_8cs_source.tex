@@ -1,6 +1,6 @@
 \doxysection{Audio\+Manager.\+cs}
 \hypertarget{_audio_manager_8cs_source}{}\label{_audio_manager_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/AudioManager.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/AudioManager.cs}}
-
+\mbox{\hyperlink{_audio_manager_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -11,11 +11,11 @@
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }UnityEngine.Audio;}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00010}00010\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }AudioManager\ :\ ScriptableObject}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00010}\mbox{\hyperlink{class_audio_manager}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_audio_manager}{AudioManager}}\ :\ ScriptableObject}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00011}00011\ \{}
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00012}00012\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ AudioMixer\ master;}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00012}\mbox{\hyperlink{class_audio_manager_aaa90d9986c5ef5057c9bea4ee7ebd6ce}{00012}}\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ AudioMixer\ \mbox{\hyperlink{class_audio_manager_aaa90d9986c5ef5057c9bea4ee7ebd6ce}{master}};}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{public}\ AudioDirector\ Director\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00014}\mbox{\hyperlink{class_audio_manager_a5331632b7112e40477420d643232a721}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_audios_1_1_audio_director}{AudioDirector}}\ \mbox{\hyperlink{class_audio_manager_a5331632b7112e40477420d643232a721}{Director}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00015}00015\ }
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ isScheduledReset;}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ Tween\ volumeTween;}
@@ -23,7 +23,7 @@
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{private}\ Dictionary<string,\ int>\ SimultaneousTable\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00022}\mbox{\hyperlink{class_audio_manager_a99c35bde2cb8415dfba42d411d61d5de}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_manager_a99c35bde2cb8415dfba42d411d61d5de}{Initialize}}()}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00023}00023\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ isScheduledReset\ \ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ lateUpdateTask\ \ \ \ =\ \textcolor{keyword}{null};}
@@ -31,7 +31,7 @@
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00027}00027\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00028}00028\ }
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ Simultaneous\ Controller}}
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsPermitPlay(ISoundEffectProperty\ property)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00030}\mbox{\hyperlink{class_audio_manager_abb41654e7aa4d304169217b71c30beba}{00030}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_audio_manager_abb41654e7aa4d304169217b71c30beba}{IsPermitPlay}}(\mbox{\hyperlink{interface_audios_1_1_i_sound_effect_property}{ISoundEffectProperty}}\ property)}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00031}00031\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ var\ key\ =\ \textcolor{keyword}{property}.Key;}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -46,7 +46,7 @@
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ var\ currentCount\ =\ SimultaneousTable[key];}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Valid}}
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentCount\ >=\ property.SimultaneousCount)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentCount\ >=\ property.\mbox{\hyperlink{interface_audios_1_1_i_sound_effect_property_a2929631bbe65228c1166eed581b2fe83}{SimultaneousCount}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ SimultaneousTable[key]\ =\ currentCount\ +\ 1;}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ ClearLateUpdate().Forget();}
@@ -54,9 +54,9 @@
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00051}00051\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Dispose()}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00053}\mbox{\hyperlink{class_audio_manager_acfd812063556dd691059902cba9fb47a}{00053}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_manager_acfd812063556dd691059902cba9fb47a}{Dispose}}()}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00054}00054\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ Director\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_audio_manager_a5331632b7112e40477420d643232a721}{Director}}\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ SimultaneousTable.Clear();}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00057}00057\ }
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lateUpdateTask\ is\ not\ \textcolor{keyword}{null})}
@@ -72,18 +72,18 @@
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00069}00069\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00077}00077\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetVolume(AudioGroupType\ groupType,\ \textcolor{keywordtype}{float}\ volume,\ \textcolor{keywordtype}{float}\ duration\ =\ 0f)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00077}\mbox{\hyperlink{class_audio_manager_ac3324364d2bc066436c626e6605e74f1}{00077}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_audio_manager_ac3324364d2bc066436c626e6605e74f1}{SetVolume}}(\mbox{\hyperlink{namespace_audios_ac13ab1ffa25d65ff0f6e149dc85af24e}{AudioGroupType}}\ groupType,\ \textcolor{keywordtype}{float}\ volume,\ \textcolor{keywordtype}{float}\ duration\ =\ 0f)}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00078}00078\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ var\ exposedParam\ =\ GetVolumeParameter(groupType);}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ var\ dB\ =\ Mathf.Log10(volume)\ *\ 20;}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00081}00081\ }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ volumeTween\ =\ master.DOSetFloat(exposedParam,\ volume,\ duration)}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ volumeTween\ =\ \mbox{\hyperlink{class_audio_manager_aaa90d9986c5ef5057c9bea4ee7ebd6ce}{master}}.DOSetFloat(exposedParam,\ volume,\ duration)}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnKill(()\ =>\ volumeTween\ =\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00085}00085\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00088}00088\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ GetVolumeParameter(AudioGroupType\ groupType)\ =>}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00088}00088\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ GetVolumeParameter(\mbox{\hyperlink{namespace_audios_ac13ab1ffa25d65ff0f6e149dc85af24e}{AudioGroupType}}\ groupType)\ =>}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ groupType\ \textcolor{keywordflow}{switch}}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ AudioGroupType.None\ \ \ =>\ \textcolor{stringliteral}{"{}"{}},}
@@ -93,7 +93,7 @@
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentOutOfRangeException(nameof(groupType),\ groupType,\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00098}00098\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ GetPitchParameter(AudioGroupType\ groupType)\ =>}
+\DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00098}00098\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ GetPitchParameter(\mbox{\hyperlink{namespace_audios_ac13ab1ffa25d65ff0f6e149dc85af24e}{AudioGroupType}}\ groupType)\ =>}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ groupType\ \textcolor{keywordflow}{switch}}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_audio_manager_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ AudioGroupType.None\ \ \ =>\ \textcolor{stringliteral}{"{}"{}},}

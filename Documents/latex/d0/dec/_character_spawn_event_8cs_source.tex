@@ -1,17 +1,17 @@
 \doxysection{Character\+Spawn\+Event.\+cs}
 \hypertarget{_character_spawn_event_8cs_source}{}\label{_character_spawn_event_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/CharacterSpawnEvent.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/CharacterSpawnEvent.cs}}
-
+\mbox{\hyperlink{_character_spawn_event_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00001}00001\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters}{Common.Characters}}}
 \DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00002}00002\ \{}
-\DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00003}00003\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }CharacterSpawnEvent<T>\ :\ SpawnEventTable<T>\ where\ T\ :\ Character}
+\DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00003}\mbox{\hyperlink{class_common_1_1_characters_1_1_character_spawn_event}{00003}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_characters_1_1_character_spawn_event}{CharacterSpawnEvent}}<T>\ :\ \mbox{\hyperlink{class_common_1_1_spawn_event_table}{SpawnEventTable}}<T>\ where\ T\ :\ \mbox{\hyperlink{class_common_1_1_character}{Character}}}
 \DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00004}00004\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00005}00005\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Invoke(T\ subject)}
+\DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00005}\mbox{\hyperlink{class_common_1_1_characters_1_1_character_spawn_event_a2f80c590346d3b296a1f895b5620b3a3}{00005}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_character_spawn_event_a2f80c590346d3b296a1f895b5620b3a3}{Invoke}}(T\ subject)}
 \DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00006}00006\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \ \ \ \ base.Invoke(subject);}
 \DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00008}00008\ }
 \DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ subject.Behaviours.Dead.Sections}
-\DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}RemoveList"{}},\ ()\ =>\ SpawnedList.RemoveSafely(subject))}
+\DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}RemoveList"{}},\ ()\ =>\ \mbox{\hyperlink{class_common_1_1_spawn_event_table_a6359f8f19000bd9acf18984ffe6c0edc}{SpawnedList}}.RemoveSafely(subject))}
 \DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_spawn_event_8cs_source_l00013}00013\ \ \ \ \ \}}

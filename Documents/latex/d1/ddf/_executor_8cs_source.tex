@@ -1,6 +1,6 @@
 \doxysection{Executor.\+cs}
 \hypertarget{_executor_8cs_source}{}\label{_executor_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Component/Executor.cs@{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Component/Executor.cs}}
-
+\mbox{\hyperlink{_executor_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -9,121 +9,121 @@
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00005}00005\ }
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common}{Common}}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Executor\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_executor}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_executor}{Executor}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00009}00009\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ List<ExecuteBehaviour>\ executionList;}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{00010}}\ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{SerializeField}}]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List<ExecuteBehaviour>}}\ \mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}};}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00011}00011\ }
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider;}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ List<Executor>\ referenceExecutor\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{readonly}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List<Executor>}}\ referenceExecutor\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<ExecuteBehaviour>\ List\ =>\ executionList;}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List<ExecuteBehaviour>}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}};}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00016}00016\ }
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider)}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00018}\mbox{\hyperlink{class_common_1_1_executor_aff2d6b3fe96cba36695e501935d726a3}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executor_aff2d6b3fe96cba36695e501935d726a3}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider)}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ this.provider\ =\ provider;}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{this.provider}}\ =\ provider;}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ executionList.ForEach(exe\ =>\ exe.Initialize(provider));}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}}.ForEach(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}.Initialize(provider));}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Execute(GameObject\ taker)}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00025}\mbox{\hyperlink{class_common_1_1_executor_ada0aad3eb7a3b8b6124265474df85982}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executor_ada0aad3eb7a3b8b6124265474df85982}{Execute}}(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{GameObject}}\ taker)}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ executionList.ForEach(exe\ =>\ exe.Execute(taker));}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ referenceExecutor.ForEach(exe\ =>\ exe.Execute(taker));}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}}.ForEach(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}.Execute(taker));}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ referenceExecutor.ForEach(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}.Execute(taker));}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Executes(List<GameObject>\ takerList)}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00031}\mbox{\hyperlink{class_common_1_1_executor_ab82bbdb5325067c22f0e9324e2983635}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executor_ab82bbdb5325067c22f0e9324e2983635}{Executes}}(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List<GameObject>}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{takerList}})}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ executionList.ForEach(exe\ =>\ exe.Executes(takerList));}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ referenceExecutor.ForEach(exe\ =>\ exe.Executes(takerList));}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}}.ForEach(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}.Executes(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{takerList}}));}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ referenceExecutor.ForEach(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}.Executes(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{takerList}}));}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ TryGetExecution<T>(out\ T\ result,\ Predicate<T>\ filter\ =\ \textcolor{keyword}{null})\ where\ T\ :\ ExecuteBehaviour}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00045}\mbox{\hyperlink{class_common_1_1_executor_a3a73ff08253d02a201bd0f0e4268f100}{00045}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_common_1_1_executor_a3a73ff08253d02a201bd0f0e4268f100}{TryGetExecution<T>}}(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{out}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{result}},\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Predicate<T>}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{filter}}\ =\ \textcolor{keyword}{null})\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{where}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}}\ :\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{ExecuteBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{result}}\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ exe\ \textcolor{keywordflow}{in}\ List)}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{var}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List}})}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (exe\ is\ not\ T\ behaviour)\ \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (filter\ is\ \textcolor{keyword}{null}\ ||\ filter(behaviour))}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{is}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{not}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{behaviour}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{filter}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{is}}\ \textcolor{keyword}{null}\ ||\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{filter}}(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{behaviour}}))}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ behaviour;}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{result}}\ =\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{behaviour}};}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result\ is\ not\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{result}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{is}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{not}}\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ TryGetExecutions<T>(out\ List<T>\ result,\ Predicate<T>\ filter\ =\ \textcolor{keyword}{null})\ where\ T\ :\ ExecuteBehaviour}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00062}\mbox{\hyperlink{class_common_1_1_executor_a6e36dbe42361738281dcb200fee8e12d}{00062}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_common_1_1_executor_a6e36dbe42361738281dcb200fee8e12d}{TryGetExecutions<T>}}(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{out}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List<T>}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{result}},\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Predicate<T>}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{filter}}\ =\ \textcolor{keyword}{null})\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{where}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}}\ :\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{ExecuteBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ \textcolor{keyword}{new}\ List<T>();}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{result}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List<T>}}();}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00065}00065\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ executionList)}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{var}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{item}}\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}})}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ is\ not\ T\ typedItem)\ \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (filter\ is\ \textcolor{keyword}{null}\ ||\ filter(typedItem))}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{item}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{is}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{not}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{typedItem}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{filter}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{is}}\ \textcolor{keyword}{null}\ ||\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{filter}}(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{typedItem}}))}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.Add(typedItem);}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{result}}.Add(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{typedItem}});}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result.HasElement();}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{result}}.HasElement();}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00077}00077\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Add(ExecuteBehaviour\ execute)}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00078}\mbox{\hyperlink{class_common_1_1_executor_a2c23c5306ca71d6e9a6c3ff47a72ee34}{00078}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executor_a2c23c5306ca71d6e9a6c3ff47a72ee34}{Add}}(\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{ExecuteBehaviour}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{execute}})}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (executionList.Any(exe\ =>\ exe\ ==\ execute))}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}}.Any(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ ==\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{execute}}))}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}executionList\ already\ has:\{execute\}."{}});}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Debug}}.LogWarning(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{\$}}\textcolor{stringliteral}{"{}executionList\ already\ has:\{execute\}."{}});}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00085}00085\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ execute.Initialize(provider);}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ executionList.Add(execute);}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{execute}}.Initialize(provider);}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}}.Add(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{execute}});}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00089}00089\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Remove(ExecuteBehaviour\ execute)}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00090}\mbox{\hyperlink{class_common_1_1_executor_a518fe8514fc0ed909dbe14b4cd9cb6b7}{00090}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executor_a518fe8514fc0ed909dbe14b4cd9cb6b7}{Remove}}(\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{ExecuteBehaviour}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{execute}})}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!executionList.Any(exe\ =>\ exe\ ==\ execute))}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}}.Any(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ ==\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{execute}}))}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00096}00096\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ execute.DeInitialize();}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ executionList.Remove(execute);}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{execute}}.DeInitialize();}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}}.Remove(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{execute}});}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00100}00100\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetSender(\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ sender)}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00101}\mbox{\hyperlink{class_common_1_1_executor_a1eba5c6cc3c764bfe7d218664e0d9dd7}{00101}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executor_a1eba5c6cc3c764bfe7d218664e0d9dd7}{SetSender}}(\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{sender}})}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ executionList.ForEach(exe\ =>\ exe.Sender\ =\ sender);}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}}.ForEach(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}.Sender\ =\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{sender}});}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Register(Executor\ otherExecutor)}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00106}\mbox{\hyperlink{class_common_1_1_executor_a004860a3e3062dbf76fb17747a5a5b9a}{00106}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executor_a004860a3e3062dbf76fb17747a5a5b9a}{Register}}(\mbox{\hyperlink{class_common_1_1_executor}{Executor}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{otherExecutor}})}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Prevent\ Cross\ Reference}}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (referenceExecutor.Find(e\ =>\ e\ ==\ otherExecutor))}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (referenceExecutor.Find(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{e}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{e}}\ ==\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{otherExecutor}}))}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}Prevented\ Cross\ Register.\ \{otherExecutor.transform.parent.name\}"{}});}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Debug}}.LogWarning(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{\$}}\textcolor{stringliteral}{"{}Prevented\ Cross\ Register.\ \{otherExecutor.transform.parent.name\}"{}});}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ otherExecutor.List.ForEach(exe\ =>\ exe.Initialize(provider));}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ referenceExecutor.Add(otherExecutor);}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{otherExecutor}}.List.ForEach(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}.Initialize(provider));}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ referenceExecutor.Add(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{otherExecutor}});}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00118}00118\ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Unregister(Executor\ otherExecutor)}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00119}\mbox{\hyperlink{class_common_1_1_executor_aaaf1a3c4419ffd84b1eb104af033ed4f}{00119}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executor_aaaf1a3c4419ffd84b1eb104af033ed4f}{Unregister}}(\mbox{\hyperlink{class_common_1_1_executor}{Executor}}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{otherExecutor}})}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ otherExecutor.List.ForEach(exe\ =>\ exe.DeInitialize());}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{otherExecutor}}.List.ForEach(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}\ =>\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{exe}}.DeInitialize());}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ referenceExecutor.RemoveSafely(otherExecutor);}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ referenceExecutor.RemoveSafely(\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{otherExecutor}});}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00126}00126\ }
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00127}00127\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{EditorSetUp}}()}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ GetComponentsInChildren(\textcolor{keyword}{true},\ executionList);}
+\DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{GetComponentsInChildren}}(\textcolor{keyword}{true},\ \mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{executionList}});}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00132}00132\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_executor_8cs_source_l00133}00133\ \ \ \ \ \}}

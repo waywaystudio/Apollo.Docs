@@ -1,0 +1,27 @@
+var interface_apollo_input_1_1_i_player_controls_actions =
+[
+    [ "OnC", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#abade4cdc0833d8250ebfe49a6d92d539", null ],
+    [ "OnDash", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a652722c6197236ce0a26efa3fb0f55d0", null ],
+    [ "OnDev0", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#aa36f29ac65632c52391e30f7b8a895e0", null ],
+    [ "OnDev1", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a2e2d5be93422218aa95981e9f34a5421", null ],
+    [ "OnDev2", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#ac5b93e0b43281bbf75ac02d9b4b3ca35", null ],
+    [ "OnDev3", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a708e8410bc822adbf073f22a0db14b4f", null ],
+    [ "OnDev4", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#aa81174e50d82338030f93f679a7a5829", null ],
+    [ "OnDev5", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a711b437befb32d033093e8e1aa05f005", null ],
+    [ "OnDev6", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a9725747bc80d22305bbcb5fea1a51f0a", null ],
+    [ "OnDev7", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#afe0be859ea0b7b5956f8bda4d99ac110", null ],
+    [ "OnDev8", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a9e4f98027c322cddc1c31d0aa2ba4901", null ],
+    [ "OnDev9", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#af4fcd7a51dd46545638e3e066096ebdc", null ],
+    [ "OnEscape", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a127bff4be6e0adf2523686a08d766b5b", null ],
+    [ "OnInteract", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#abf52737bfe1e20e478363ca6060e727b", null ],
+    [ "OnMastery", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a258d046a1f32d220bd0e3f3341b11635", null ],
+    [ "OnMove", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#aad213cdf121cf4e98a6b320e1442201a", null ],
+    [ "OnSpell", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#abbb7df62d261bb5244b716dd32381bb3", null ],
+    [ "OnUltimate", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a450616066a63d16d1e5852b1630a918f", null ],
+    [ "OnWeapon1Attack", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#ab709c5ddf8447536a5ade82bf57c7680", null ],
+    [ "OnWeapon1Special", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a82292c6fc77235941d29c7e4a8c119af", null ],
+    [ "OnWeapon2Attack", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a97c90e3b9e655f46b00a38959769ed63", null ],
+    [ "OnWeapon2Special", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a5cf127681ce8bdadbcce91b66bb5e449", null ],
+    [ "OnX", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a21064cbff9c5ea1e7206e1270eb5a9e0", null ],
+    [ "OnZ", "db/dde/interface_apollo_input_1_1_i_player_controls_actions.html#a60769d31ce2e421de9eaf6be7e706c2a", null ]
+];

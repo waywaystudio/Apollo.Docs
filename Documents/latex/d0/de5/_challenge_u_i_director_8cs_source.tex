@@ -1,6 +1,6 @@
 \doxysection{Challenge\+UIDirector.\+cs}
 \hypertarget{_challenge_u_i_director_8cs_source}{}\label{_challenge_u_i_director_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/ChallengeUIDirector.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/ChallengeUIDirector.cs}}
-
+\mbox{\hyperlink{_challenge_u_i_director_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_challenge_1_1_u_i}{Challenge.UI}};}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_challenge_1_1_u_i_1_1_dialogue}{Challenge.UI.Dialogue}};}
@@ -19,66 +19,66 @@
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00015}00015\ }
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00016}00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge}{Challenge}}}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00017}00017\ \{}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ChallengeUIDirector\ :\ UIDirector}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00018}\mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director}{ChallengeUIDirector}}\ :\ \mbox{\hyperlink{class_u_is_1_1_u_i_director}{UIDirector}}}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00019}00019\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ CanvasField\ */}}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ [TitleGroup(\textcolor{stringliteral}{"{}CanvasField"{}},\ \textcolor{stringliteral}{"{}Floating\ Text,\ Nameplate"{}})]}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CombatTextPool\ combatTextPool;}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ NamePlatePool\ namePlatePool;}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ FiendIndicatorPool\ indicatorPool;}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ InteractMarkPool\ interactMarkPool;}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ WorldTextPool\ worldTextPool;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_floating_texts_1_1_combat_text_pool}{CombatTextPool}}\ combatTextPool;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_name_plate_pool}{NamePlatePool}}\ namePlatePool;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_fiend_indicator_pool}{FiendIndicatorPool}}\ indicatorPool;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_marks_1_1_interact_mark_pool}{InteractMarkPool}}\ interactMarkPool;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_fields_1_1_world_text_pool}{WorldTextPool}}\ worldTextPool;}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ CanvasEffect\ */}}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ [FormerlySerializedAs(\textcolor{stringliteral}{"{}canvasEffect"{}})]}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ [TitleGroup(\textcolor{stringliteral}{"{}CanvasEffect"{}},\ \textcolor{stringliteral}{"{}Overlay\ Effects"{}})]}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ EffectCanvas\ effectCanvas;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas}{EffectCanvas}}\ effectCanvas;}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00032}00032\ }
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ CanvasDialogue\ */}}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ [TitleGroup(\textcolor{stringliteral}{"{}CanvasDialogue"{}},\ \textcolor{stringliteral}{"{}dialogue\ Canvas"{}})]}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SimpleDialogue\ simpleDialogue;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue}{SimpleDialogue}}\ simpleDialogue;}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ CanvasMasterySelect\ */}}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ [TitleGroup(\textcolor{stringliteral}{"{}CanvasMasterySelect"{}},\ \textcolor{stringliteral}{"{}Popup\ Whisper\ Ability\ Source"{}})]}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CanvasMasterySelect\ canvasMasterySelect;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_canvas_mastery_select}{CanvasMasterySelect}}\ canvasMasterySelect;}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TempPanels\ for\ BIC}}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TipsPanel\ tips;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_tips_1_1_tips_panel}{TipsPanel}}\ tips;}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ DeadPanel\ */}}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ [TitleGroup(\textcolor{stringliteral}{"{}DeadPanel"{}},\ \textcolor{stringliteral}{"{}On\ dred\ Dead\ Again"{}})]}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DeadPanel\ deadPanel;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_tooltips_1_1_dead_panel}{DeadPanel}}\ deadPanel;}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ChallengeHudCanvas\ HudCanvas\ =>\ \textcolor{keyword}{this}[CanvasHierarchyType.Hud]\ as\ ChallengeHudCanvas;}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ChallengePopUpCanvas\ PopUpCanvas\ =>\ \textcolor{keyword}{this}[CanvasHierarchyType.PopUp]\ as\ ChallengePopUpCanvas;}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ CanvasMasterySelect\ CanvasMasterySelect\ =>\ canvasMasterySelect;}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SimpleDialogue\ SimpleDialogue\ =>\ simpleDialogue;}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DeadPanel\ DeadPanel\ =>\ deadPanel;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00047}\mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a0239324400afd9b02a36c12539b800db}{00047}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_challenge_hud_canvas}{ChallengeHudCanvas}}\ \mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a0239324400afd9b02a36c12539b800db}{HudCanvas}}\ =>\ \textcolor{keyword}{this}[\mbox{\hyperlink{_canvas_hierarchy_type_8cs_a66143eb1e62a66da4cc0e20cef9acf66}{CanvasHierarchyType}}.Hud]\ as\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_challenge_hud_canvas}{ChallengeHudCanvas}};}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00048}\mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a0526d8bb572155bfce4334bb345b6c58}{00048}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_challenge_pop_up_canvas}{ChallengePopUpCanvas}}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_pop_up_canvas}{PopUpCanvas}}\ =>\ \textcolor{keyword}{this}[\mbox{\hyperlink{_canvas_hierarchy_type_8cs_a66143eb1e62a66da4cc0e20cef9acf66}{CanvasHierarchyType}}.PopUp]\ as\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_challenge_pop_up_canvas}{ChallengePopUpCanvas}};}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00049}\mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_aedaef241db92e673114d4f07829ed8a9}{00049}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_canvas_mastery_select}{CanvasMasterySelect}}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_canvas_mastery_select}{CanvasMasterySelect}}\ =>\ canvasMasterySelect;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00050}\mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a56316f7142b556d19a5731b42acdbedd}{00050}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue}{SimpleDialogue}}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue}{SimpleDialogue}}\ =>\ simpleDialogue;}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00051}\mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a7da19074f3de0129fcd0d40808aff4f0}{00051}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_tooltips_1_1_dead_panel}{DeadPanel}}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_tooltips_1_1_dead_panel}{DeadPanel}}\ =>\ deadPanel;}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00054}\mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a586d301310cbd6d8c0fe0b13f9bba1bd}{00054}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a586d301310cbd6d8c0fe0b13f9bba1bd}{Initialize}}()}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize();}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ namePlatePool.Initialize();}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ indicatorPool.Initialize();}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ canvasMasterySelect.Initialize();}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ worldTextPool.Initialize();}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ deadPanel.Initialize();}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ namePlatePool.\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_name_plate_pool_a46630ee40150e2663e146fa856df4b0a}{Initialize}}();}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ indicatorPool.\mbox{\hyperlink{class_common_1_1_u_i_1_1_fiend_indicator_pool_afc01272004eadead40f5ced25efa2c8c}{Initialize}}();}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ canvasMasterySelect.\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_canvas_mastery_select_af4b07479aa7e618217f31ad00a4ede3f}{Initialize}}();}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ worldTextPool.\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_fields_1_1_world_text_pool_a53864ca89edc8d99337aea548e0eafc6}{Initialize}}();}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ deadPanel.\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_tooltips_1_1_dead_panel_a67d67fcce1007a06468832643e6366a8}{Initialize}}();}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TempPanels\ for\ BIC}}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ tips.Initialize();}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ tips.\mbox{\hyperlink{class_common_1_1_u_i_element_a000349f8508cdd8b7117ef804df4035c}{Initialize}}();}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00067}00067\ }
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00068}\mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a81021546bdcc72f6bbde842bed77d6fa}{00068}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a81021546bdcc72f6bbde842bed77d6fa}{Initialize}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ combatTextPool.Initialize(dred);}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ interactMarkPool.Initialize(dred);}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ combatTextPool.\mbox{\hyperlink{class_common_1_1_u_i_1_1_floating_texts_1_1_combat_text_pool_ae4b22ca76f43f9a03dc2cb06912218a0}{Initialize}}(dred);}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ interactMarkPool.\mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_marks_1_1_interact_mark_pool_a20f5f4e6f75c395842045e501c229245}{Initialize}}(dred);}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ HudCanvas.Initialize(dred);}
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ PopUpCanvas.Initialize(dred);}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a0239324400afd9b02a36c12539b800db}{HudCanvas}}.\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_challenge_hud_canvas_a8c59496637739266fc75ca8e0d675487}{Initialize}}(dred);}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_u_i_1_1_pop_up_canvas}{PopUpCanvas}}.\mbox{\hyperlink{class_u_is_1_1_canvas_matrix_a545b476d57796f56f4dfcfd9bd7b279e}{Initialize}}(dred);}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ActiveDredCombatText()\ =>\ combatTextPool.ActiveCombatText(ChallengeDirector.Dred);}
+\DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00077}\mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a997d2e83466353acaffe2c50424f3e37}{00077}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_challenge_u_i_director_a997d2e83466353acaffe2c50424f3e37}{ActiveDredCombatText}}()\ =>\ combatTextPool.\mbox{\hyperlink{class_common_1_1_u_i_1_1_floating_texts_1_1_combat_text_pool_a7ce1fdbe21a53025df83a500b58c87ea}{ActiveCombatText}}(\mbox{\hyperlink{class_challenge_1_1_challenge_director}{ChallengeDirector}}.\mbox{\hyperlink{class_challenge_1_1_challenge_director_ab51fe30a01b8f0c78996c017f388c937}{Dred}});}
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00078}00078\ }
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00079}00079\ }
 \DoxyCodeLine{\Hypertarget{_challenge_u_i_director_8cs_source_l00080}00080\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}

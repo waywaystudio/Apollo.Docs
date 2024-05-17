@@ -1,6 +1,6 @@
 \doxysection{Spiritual\+Symbiosis.\+cs}
 \hypertarget{_spiritual_symbiosis_8cs_source}{}\label{_spiritual_symbiosis_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/BellVeer/SpiritualSymbiosis.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/BellVeer/SpiritualSymbiosis.cs}}
-
+\mbox{\hyperlink{_spiritual_symbiosis_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players_1_1_summons}{Common.Characters.NonPlayers.Summons}};}
@@ -10,56 +10,56 @@
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00006}00006\ \{}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ 정령들은\ 가까운\ SPIRIT을\ 흡수해\ 체력\ [10]을\ 회복하고}}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//\ 5\%\ 피해가\ 증가하며\ 피해증가는\ 정령의\ 천도\ 전까지\ 누적된다.}}
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SpiritualSymbiosis\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_spiritual_symbiosis}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_spiritual_symbiosis}{SpiritualSymbiosis}}\ :\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery}{Mastery}}}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00010}00010\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DataIndex\ spectralSpiritCode\ =\ DataIndex.SpectralSpirit;}
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SummonSpawnEvent\ summonSpawnEvent;}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ spectralSpiritCode\ =\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.SpectralSpirit;}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon_spawn_event}{SummonSpawnEvent}}\ summonSpawnEvent;}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_spiritual_symbiosis_a84822b993dba620ce906a0a91f81dc73}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_spiritual_symbiosis_a84822b993dba620ce906a0a91f81dc73}{Injection}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ AddSpectralSpiritCount(dred);}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2271c058314d7872f0c186c167769e42}{AddSpectralSpiritCount}}(dred);}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ summonSpawnEvent.Add(spectralSpiritCode,\ \textcolor{stringliteral}{"{}ActiveSymbiosis"{}},\ ActiveSymbiosis);}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00022}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_spiritual_symbiosis_a5ce5a792cfecc6de0804b0ff68e39d29}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_spiritual_symbiosis_a5ce5a792cfecc6de0804b0ff68e39d29}{Abolition}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ RemoveSpectralSpiritCount(dred);}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a9a2cc1820390ad6638b30889d82e5a1b}{RemoveSpectralSpiritCount}}(dred);}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ summonSpawnEvent.Remove(spectralSpiritCode,\ \textcolor{stringliteral}{"{}ActiveSymbiosis"{}},\ DeActiveSymbiosis);}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00029}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_spiritual_symbiosis_ace2d537f79b543c52f18fd9d2e226709}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_spiritual_symbiosis_ace2d537f79b543c52f18fd9d2e226709}{OnQualityChanged}}()}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ summonSpawnEvent.SpawnedList?.ForEach(summon\ =>}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (summon\ is\ not\ SpectralSpirit\ spectralSpirit)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (summon\ is\ not\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_spectral_spirit}{SpectralSpirit}}\ spectralSpirit)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00034}00034\ }
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spectralSpirit.Symbiosis.HealAmount\ =\ quality.Value;}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spectralSpirit.Symbiosis.HealAmount\ =\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}};}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00038}00038\ }
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00039}00039\ }
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ActiveSymbiosis(Summon\ summon)}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ActiveSymbiosis(\mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon}{Summon}}\ summon)}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (summon\ is\ not\ SpectralSpirit\ spectralSpirit)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (summon\ is\ not\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_spectral_spirit}{SpectralSpirit}}\ spectralSpirit)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ spectralSpirit.ActiveSymbiosis();}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ spectralSpirit.Symbiosis.Sections}
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}SetHealAmount"{}},\ ()\ =>\ spectralSpirit.Symbiosis.HealAmount\ =\ quality.Value)}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}SetHealAmount"{}},\ ()\ =>\ spectralSpirit.Symbiosis.HealAmount\ =\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}})}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00048}00048\ }
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00050}00050\ }
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ DeActiveSymbiosis(Summon\ summon)}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ DeActiveSymbiosis(\mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon}{Summon}}\ summon)}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (summon\ is\ not\ SpectralSpirit\ spectralSpirit)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (summon\ is\ not\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_spectral_spirit}{SpectralSpirit}}\ spectralSpirit)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ spectralSpirit.DeActiveSymbiosis();}
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ spectralSpirit.Symbiosis.HealAmount\ =\ quality[QualityGradeType.Normal];}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ spectralSpirit.Symbiosis.HealAmount\ =\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}[\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Normal];}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ spectralSpirit.Symbiosis.Sections}
-\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Active,\ \textcolor{stringliteral}{"{}SetHealAmount"{}})}
+\DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}SetHealAmount"{}})}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spiritual_symbiosis_8cs_source_l00061}00061\ }

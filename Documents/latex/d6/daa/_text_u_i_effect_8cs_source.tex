@@ -1,6 +1,6 @@
 \doxysection{Text\+UIEffect.\+cs}
 \hypertarget{_text_u_i_effect_8cs_source}{}\label{_text_u_i_effect_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Effects/UIs/TextUIEffect.cs@{C:/Project/Apollo/Assets/Scripts/Common/Effects/UIs/TextUIEffect.cs}}
-
+\mbox{\hyperlink{_text_u_i_effect_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}};}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }DG.Tweening;}
@@ -9,7 +9,7 @@
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00005}00005\ }
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_u_is}{Common.Effects.UIs}}}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TextUIEffect\ :\ UIEffectBehaviour}
+\DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_text_u_i_effect}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_text_u_i_effect}{TextUIEffect}}\ :\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_u_i_effect_behaviour}{UIEffectBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00009}00009\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ targetText;}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
@@ -32,9 +32,9 @@
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Tween\ colorTween;}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(ISequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00031}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_text_u_i_effect_a496f149ce1c48f6203f88eb216296f96}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_text_u_i_effect_a496f149ce1c48f6203f88eb216296f96}{Initialize}}(\mbox{\hyperlink{interface_i_sequencer}{ISequencer}}\ sequencer)}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ UIEventClip)}
+\DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ \mbox{\hyperlink{class_common_1_1_u_i_event_clip}{UIEventClip}})}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}\{nameof(TextUIEffect)\}\ of\ \{gameObject.name\}\ require\ UIEventClip."{}});}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{false});}
@@ -45,7 +45,7 @@
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(sequencer);}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ PlayEffect()}
+\DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00044}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_text_u_i_effect_a8d8cf8985ed0129aa26322030137bce2}{00044}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_text_u_i_effect_a8d8cf8985ed0129aa26322030137bce2}{PlayEffect}}()}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ startSize\ =\ targetText.fontSize;}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -53,7 +53,7 @@
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (doColorTween)\ ColorTween();}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ StopEffect()}
+\DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00052}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_text_u_i_effect_a1926f1ec8301c7f8b5cd8d21d232c3c0}{00052}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_text_u_i_effect_a1926f1ec8301c7f8b5cd8d21d232c3c0}{StopEffect}}()}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ targetText.enabled\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_text_u_i_effect_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ }

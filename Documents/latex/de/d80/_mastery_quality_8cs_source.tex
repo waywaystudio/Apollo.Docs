@@ -1,32 +1,32 @@
 \doxysection{Mastery\+Quality.\+cs}
 \hypertarget{_mastery_quality_8cs_source}{}\label{_mastery_quality_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/MasteryQuality.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/MasteryQuality.cs}}
-
+\mbox{\hyperlink{_mastery_quality_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_masteries}{Common.Masteries}}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ QualityGradeType}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00006}\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00007}00007\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ None\ =\ 0,}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ Normal\ =\ 1,}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ Rare\ =\ 2,}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ Epic\ =\ 3,}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ Legendary\ =\ 4,}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2a6adf97f83acf6453d4a6a4b1070f3754}{None}}\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2a960b44c579bc2f6818d2daaf9e4c16f0}{Normal}}\ =\ 1,}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2aa2cc588f2ab07ad61b05400f593eeb0a}{Rare}}\ =\ 2,}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2ae3f530e977d74053c6d70eb84886e756}{Epic}}\ =\ 3,}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2a9461cd71b44420aa1d0e6487f1b7bb60}{Legendary}}\ =\ 4,}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00013}00013\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00014}00014\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00015}00015\ \ \ \ \ [Serializable]}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MasteryQuality}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality}{MasteryQuality}}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00017}00017\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Table<QualityGradeType,\ float>\ valueTable;}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_table}{Table<QualityGradeType,\ float>}}\ valueTable;}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CombatIntValue\ Level\ \{\ \textcolor{keyword}{get};\ \}}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ QualityGradeType\ currentQuality;}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_combat_int_value}{CombatIntValue}}\ Level\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}\ currentQuality;}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \textcolor{keyword}{this}[QualityGradeType\ grade]\ =>\ valueTable[grade];}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Value\ =>\ valueTable[Grade];}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ QualityGradeType\ Grade}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00023}\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_aa24f6968888d8cb2e5110de4e4f557c0}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \textcolor{keyword}{this}[\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}\ grade]\ =>\ valueTable[grade];}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00024}\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}}\ =>\ valueTable[\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_a8a400023e0c8e69150babc32cacac404}{Grade}}];}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00025}\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_a8a400023e0c8e69150babc32cacac404}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_a8a400023e0c8e69150babc32cacac404}{Grade}}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ currentQuality;}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
@@ -38,52 +38,52 @@
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ MasteryQuality()}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00037}\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ab02010eeda2b0a0597bf84854c5bd06a}{00037}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ab02010eeda2b0a0597bf84854c5bd06a}{MasteryQuality}}()}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ currentQuality\ =\ QualityGradeType.Normal;}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ currentQuality\ =\ \mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Normal;}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ Level\ =\ \textcolor{keyword}{new}\ CombatIntValue();}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ Level.SetMax((\textcolor{keywordtype}{int})QualityGradeType.Legendary);}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ Level\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_common_1_1_combat_int_value}{CombatIntValue}}();}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ Level.\mbox{\hyperlink{class_common_1_1_combat_int_value_a8e7d2fdfda1597038219b7edc12c7ffe}{SetMax}}((\textcolor{keywordtype}{int})\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Legendary);}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ UpGrade()}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00046}\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_a1de4eda06b6f33fc9bff7ddff7a52023}{00046}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_a1de4eda06b6f33fc9bff7ddff7a52023}{UpGrade}}()}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ var\ nextGrade\ =\ Mathf.Clamp((\textcolor{keywordtype}{int})currentQuality\ +\ 1,\ (\textcolor{keywordtype}{int})QualityGradeType.Normal,\ (\textcolor{keywordtype}{int})QualityGradeType.Legendary);}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ var\ nextGrade\ =\ Mathf.Clamp((\textcolor{keywordtype}{int})currentQuality\ +\ 1,\ (\textcolor{keywordtype}{int})\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Normal,\ (\textcolor{keywordtype}{int})\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Legendary);}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ Grade\ =\ (QualityGradeType)nextGrade;}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_a8a400023e0c8e69150babc32cacac404}{Grade}}\ =\ (\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}})nextGrade;}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ DownGrade()}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00053}\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ada6f7df8a7109be15ede08bcf1f89d00}{00053}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ada6f7df8a7109be15ede08bcf1f89d00}{DownGrade}}()}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ var\ prevGrade\ =\ Mathf.Clamp((\textcolor{keywordtype}{int})currentQuality\ -\/\ 1,\ (\textcolor{keywordtype}{int})QualityGradeType.Normal,\ (\textcolor{keywordtype}{int})QualityGradeType.Legendary);}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ var\ prevGrade\ =\ Mathf.Clamp((\textcolor{keywordtype}{int})currentQuality\ -\/\ 1,\ (\textcolor{keywordtype}{int})\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Normal,\ (\textcolor{keywordtype}{int})\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Legendary);}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00056}00056\ }
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ Grade\ =\ (QualityGradeType)prevGrade;}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_a8a400023e0c8e69150babc32cacac404}{Grade}}\ =\ (\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}})prevGrade;}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00059}00059\ }
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ AddOnGradeChanged(\textcolor{keywordtype}{string}\ key,\ Action<int>\ action)}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00060}\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac509f3f49fef47f6f18ede34d9a906bd}{00060}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac509f3f49fef47f6f18ede34d9a906bd}{AddOnGradeChanged}}(\textcolor{keywordtype}{string}\ key,\ Action<int>\ action)}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ Level.AddEvent(key,\ action);}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ Level.\mbox{\hyperlink{class_observable_a1d65dfc7a1fe342a534af8f732a7e297}{AddEvent}}(key,\ action);}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ AddOnGradeChanged(\textcolor{keywordtype}{string}\ key,\ Action\ action)}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00065}\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_a609654ea7799f9fa531f1ba3ed30fc85}{00065}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_a609654ea7799f9fa531f1ba3ed30fc85}{AddOnGradeChanged}}(\textcolor{keywordtype}{string}\ key,\ Action\ action)}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ Level.AddEvent(key,\ action);}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ Level.\mbox{\hyperlink{class_observable_a1d65dfc7a1fe342a534af8f732a7e297}{AddEvent}}(key,\ action);}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ RemoveOnGradeChanged(\textcolor{keywordtype}{string}\ key)}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00070}\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ae725124426d9e0f2aac9195a9696dfda}{00070}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ae725124426d9e0f2aac9195a9696dfda}{RemoveOnGradeChanged}}(\textcolor{keywordtype}{string}\ key)}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ Level.RemoveEvent(key);}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ Level.\mbox{\hyperlink{class_observable_ad56bedff72853b508969e916ce4f0b40}{RemoveEvent}}(key);}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00075}00075\ }
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00076}00076\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ PropertySetUp(\mbox{\hyperlink{namespace_databases}{Databases}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data}{SheetData}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_ability_data}{AbilityData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_ability_data_1_1_mastery_data}{MasteryData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_ability_data_1_1_mastery_data_1_1_mastery}{Mastery}}\ masteryData)}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ valueTable[QualityGradeType.Normal]\ =\ masteryData.Normal;}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ valueTable[QualityGradeType.Rare]\ =\ masteryData.Rare;}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ valueTable[QualityGradeType.Epic]\ =\ masteryData.Epic;}
-\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ valueTable[QualityGradeType.Legendary]\ =\ masteryData.Legendary;}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ valueTable[\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Normal]\ =\ masteryData.Normal;}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ valueTable[\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Rare]\ =\ masteryData.Rare;}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ valueTable[\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Epic]\ =\ masteryData.Epic;}
+\DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ valueTable[\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Legendary]\ =\ masteryData.Legendary;}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00084}00084\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_mastery_quality_8cs_source_l00085}00085\ \ \ \ \ \}}

@@ -5,6 +5,48 @@
 \href{https://www.notion.so/salinger/TimeTrigger-e625551c3918450f961e1eebfe4b6ce1?pvs=4}{\texttt{ https\+://www.\+notion.\+so/salinger/\+Time\+Trigger-\/e625551c3918450f961e1eebfe4b6ce1?pvs=4}}  
 
 
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} \mbox{\hyperlink{class_time_trigger_a8d5526e17f82d5108dbd8a7e7bc6b47f}{Add\+Call\+Back}} (string key, Action action)
+\item 
+\mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} \mbox{\hyperlink{class_time_trigger_a0a61bf0d6306d876761d29983033d761}{Remove\+Call\+Back}} (string key)
+\item 
+\mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} \mbox{\hyperlink{class_time_trigger_a438b37395e56b533b640674afece78a5}{Set\+Delta\+Type}} (\mbox{\hyperlink{_update_type_8cs_a0957e0df001dd796895b75f947daddb2}{Update\+Type}} type)
+\item 
+\mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} \mbox{\hyperlink{class_time_trigger_a83a9f5d72aa6caa0c3f6bfb79f322b90}{Set\+Duration}} (float \mbox{\hyperlink{class_time_trigger_abcee54eed89106de2ddc0bfd48d80c35}{duration}})
+\item 
+\mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} \mbox{\hyperlink{class_time_trigger_ad21e203dedd7acf9915bc720587085cf}{Set\+Weight}} (Func$<$ float $>$ weight)
+\item 
+\mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} \mbox{\hyperlink{class_time_trigger_a5b45ebf91152c2f3ff988ea573c17223}{Register}} (\mbox{\hyperlink{interface_i_sequencer}{ISequencer}} sequencer)
+\item 
+void \mbox{\hyperlink{class_time_trigger_a1cab158a91639ac84536551518479fa9}{Play}} ()
+\item 
+void \mbox{\hyperlink{class_time_trigger_a3b7e626e2bdd1723537f029dc0fb5941}{Stop}} ()
+\item 
+void \mbox{\hyperlink{class_time_trigger_a52710a3af773a028b5d91ff537d1094d}{Replay}} ()
+\item 
+void \mbox{\hyperlink{class_time_trigger_ace361222666f6482ff7eff47bc986904}{Pause}} ()
+\item 
+void \mbox{\hyperlink{class_time_trigger_aada6410a247d3ab1ba7d26e90821b016}{Dispose}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_time_trigger_abcee54eed89106de2ddc0bfd48d80c35}{duration}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_time_trigger_a0e071075eec5f038c342ae98c23c6dcc}{Is\+Running}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float \mbox{\hyperlink{class_time_trigger_ae4453c9bd98cd3d71dccbb095ba6cca4}{Duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_action_table}{Action\+Table}} \mbox{\hyperlink{class_time_trigger_a59f5053a6149989a5248d1c3f44523f3}{Callback}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_observable}{Observable}}$<$ float $>$ \mbox{\hyperlink{class_time_trigger_a4de5f91d18e82f53edfaf09cefc84398}{Progress}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_i_progress}{IProgress}}}
 
 
 \doxysubsection{Detailed Description}
@@ -14,6 +56,183 @@ Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00010}{10}} of fil
 
 
 
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_time_trigger_a8d5526e17f82d5108dbd8a7e7bc6b47f}\label{class_time_trigger_a8d5526e17f82d5108dbd8a7e7bc6b47f} 
+\index{TimeTrigger@{TimeTrigger}!AddCallBack@{AddCallBack}}
+\index{AddCallBack@{AddCallBack}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{AddCallBack()}{AddCallBack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} Time\+Trigger.\+Add\+Call\+Back (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{Action}]{action }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_aada6410a247d3ab1ba7d26e90821b016}\label{class_time_trigger_aada6410a247d3ab1ba7d26e90821b016} 
+\index{TimeTrigger@{TimeTrigger}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Time\+Trigger.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00078}{78}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_ace361222666f6482ff7eff47bc986904}\label{class_time_trigger_ace361222666f6482ff7eff47bc986904} 
+\index{TimeTrigger@{TimeTrigger}!Pause@{Pause}}
+\index{Pause@{Pause}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily void Time\+Trigger.\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_a1cab158a91639ac84536551518479fa9}\label{class_time_trigger_a1cab158a91639ac84536551518479fa9} 
+\index{TimeTrigger@{TimeTrigger}!Play@{Play}}
+\index{Play@{Play}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily void Time\+Trigger.\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00048}{48}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_a5b45ebf91152c2f3ff988ea573c17223}\label{class_time_trigger_a5b45ebf91152c2f3ff988ea573c17223} 
+\index{TimeTrigger@{TimeTrigger}!Register@{Register}}
+\index{Register@{Register}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} Time\+Trigger.\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_i_sequencer}{ISequencer}}}]{sequencer }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_a0a61bf0d6306d876761d29983033d761}\label{class_time_trigger_a0a61bf0d6306d876761d29983033d761} 
+\index{TimeTrigger@{TimeTrigger}!RemoveCallBack@{RemoveCallBack}}
+\index{RemoveCallBack@{RemoveCallBack}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{RemoveCallBack()}{RemoveCallBack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} Time\+Trigger.\+Remove\+Call\+Back (\begin{DoxyParamCaption}\item[{string}]{key }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_a52710a3af773a028b5d91ff537d1094d}\label{class_time_trigger_a52710a3af773a028b5d91ff537d1094d} 
+\index{TimeTrigger@{TimeTrigger}!Replay@{Replay}}
+\index{Replay@{Replay}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{Replay()}{Replay()}}
+{\footnotesize\ttfamily void Time\+Trigger.\+Replay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00067}{67}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_a438b37395e56b533b640674afece78a5}\label{class_time_trigger_a438b37395e56b533b640674afece78a5} 
+\index{TimeTrigger@{TimeTrigger}!SetDeltaType@{SetDeltaType}}
+\index{SetDeltaType@{SetDeltaType}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{SetDeltaType()}{SetDeltaType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} Time\+Trigger.\+Set\+Delta\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_update_type_8cs_a0957e0df001dd796895b75f947daddb2}{Update\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00032}{32}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_a83a9f5d72aa6caa0c3f6bfb79f322b90}\label{class_time_trigger_a83a9f5d72aa6caa0c3f6bfb79f322b90} 
+\index{TimeTrigger@{TimeTrigger}!SetDuration@{SetDuration}}
+\index{SetDuration@{SetDuration}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{SetDuration()}{SetDuration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} Time\+Trigger.\+Set\+Duration (\begin{DoxyParamCaption}\item[{float}]{duration }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00033}{33}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_ad21e203dedd7acf9915bc720587085cf}\label{class_time_trigger_ad21e203dedd7acf9915bc720587085cf} 
+\index{TimeTrigger@{TimeTrigger}!SetWeight@{SetWeight}}
+\index{SetWeight@{SetWeight}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{SetWeight()}{SetWeight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time_trigger}{Time\+Trigger}} Time\+Trigger.\+Set\+Weight (\begin{DoxyParamCaption}\item[{Func$<$ float $>$}]{weight }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00034}{34}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_a3b7e626e2bdd1723537f029dc0fb5941}\label{class_time_trigger_a3b7e626e2bdd1723537f029dc0fb5941} 
+\index{TimeTrigger@{TimeTrigger}!Stop@{Stop}}
+\index{Stop@{Stop}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void Time\+Trigger.\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00058}{58}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_time_trigger_abcee54eed89106de2ddc0bfd48d80c35}\label{class_time_trigger_abcee54eed89106de2ddc0bfd48d80c35} 
+\index{TimeTrigger@{TimeTrigger}!duration@{duration}}
+\index{duration@{duration}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily float Time\+Trigger.\+duration\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_time_trigger_a59f5053a6149989a5248d1c3f44523f3}\label{class_time_trigger_a59f5053a6149989a5248d1c3f44523f3} 
+\index{TimeTrigger@{TimeTrigger}!Callback@{Callback}}
+\index{Callback@{Callback}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{Callback}{Callback}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_action_table}{Action\+Table}} Time\+Trigger.\+Callback = new()\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_ae4453c9bd98cd3d71dccbb095ba6cca4}\label{class_time_trigger_ae4453c9bd98cd3d71dccbb095ba6cca4} 
+\index{TimeTrigger@{TimeTrigger}!Duration@{Duration}}
+\index{Duration@{Duration}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{Duration}{Duration}}
+{\footnotesize\ttfamily float Time\+Trigger.\+Duration\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_i_progress_a4796a11f7a1871cd54b0b4c324723eaf}{IProgress}}.
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_a0e071075eec5f038c342ae98c23c6dcc}\label{class_time_trigger_a0e071075eec5f038c342ae98c23c6dcc} 
+\index{TimeTrigger@{TimeTrigger}!IsRunning@{IsRunning}}
+\index{IsRunning@{IsRunning}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{IsRunning}{IsRunning}}
+{\footnotesize\ttfamily bool Time\+Trigger.\+Is\+Running\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+\Hypertarget{class_time_trigger_a4de5f91d18e82f53edfaf09cefc84398}\label{class_time_trigger_a4de5f91d18e82f53edfaf09cefc84398} 
+\index{TimeTrigger@{TimeTrigger}!Progress@{Progress}}
+\index{Progress@{Progress}!TimeTrigger@{TimeTrigger}}
+\doxysubsubsection{\texorpdfstring{Progress}{Progress}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_observable}{Observable}}$<$float$>$ Time\+Trigger.\+Progress = new()\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_i_progress_afc9a02cfa14a91c37a967ad370a126eb}{IProgress}}.
+
+
+
+Definition at line \mbox{\hyperlink{_time_trigger_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_time_trigger_8cs_source}{Time\+Trigger.\+cs}}.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+\_\+\+Core/\+\_\+\+Protocol/\+\_\+\+Data\+Struct/Time\+Trigger.\+cs\end{DoxyCompactItemize}
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+\_\+\+Core/\+\_\+\+Protocol/\+\_\+\+Data\+Struct/\mbox{\hyperlink{_time_trigger_8cs}{Time\+Trigger.\+cs}}\end{DoxyCompactItemize}

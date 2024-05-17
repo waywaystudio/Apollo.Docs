@@ -1,6 +1,6 @@
 \doxysection{Stun\+Behaviour.\+cs}
 \hypertarget{_stun_behaviour_8cs_source}{}\label{_stun_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/Behaviours/StunBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/Behaviours/StunBehaviour.cs}}
-
+\mbox{\hyperlink{_stun_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Threading;}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Cysharp.Threading.Tasks;}
@@ -8,28 +8,28 @@
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00004}00004\ }
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_behaviours}{Common.Characters.Behaviours}}}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }StunBehaviour\ :\ CharacterBehaviour}
+\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_stun_behaviour}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_stun_behaviour}{StunBehaviour}}\ :\ \mbox{\hyperlink{class_common_1_1_characters_1_1_character_behaviour}{CharacterBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00008}00008\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ stunTask;}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ duration;}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_stun_behaviour_a500c967e7073f6032aee20f071d11c0a}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_stun_behaviour_a500c967e7073f6032aee20f071d11c0a}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_behaver}{IBehaver}}\ behaver)}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00015}00015\ }
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}NotInStun"{}},\ ()\ =>\ Invoker.IsEnd)}
+\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}NotInStun"{}},\ ()\ =>\ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ab08def51d0ec9f00a78b7d4d121e522e}{IsEnd}})}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cancellation(\textcolor{stringliteral}{"{}CancelStunTask"{}},\ stunTask)}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active(\textcolor{keywordtype}{float}\ duration)}
+\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00022}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_stun_behaviour_aba4327c38ec02bb139dd661c8238115a}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_stun_behaviour_aba4327c38ec02bb139dd661c8238115a}{Active}}(\textcolor{keywordtype}{float}\ duration)}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ stunTask\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ Stunning(duration,\ stunTask).Forget();}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00031}00031\ }
@@ -45,7 +45,7 @@
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Yield(cts.Token);}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Complete();}
+\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}}();}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ }
@@ -54,9 +54,9 @@
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ behaviourCode\ \ \ \ \ \ \ \ \ \ \ \ =\ DataIndex.Stun;}
-\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.StateMask\ \ \ \ \ =\ StateMask.CrowdControl;}
-\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.IgnorableMask\ =\ StateMask.Soft\ |\ StateMask.Common\ |\ StateMask.Power\ |\ StateMask.Paralysis\ |\ StateMask.Push;}
+\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a4b8f91bde6fefb1f9c5a1470d7d22b55}{behaviourCode}}\ \ \ \ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.Stun;}
+\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.StateMask\ \ \ \ \ =\ \mbox{\hyperlink{namespace_common_a42d43f9dd990eadd77e3ecd89b27d7e3}{StateMask}}.CrowdControl;}
+\DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.IgnorableMask\ =\ StateMask.Soft\ |\ StateMask.Common\ |\ StateMask.Power\ |\ StateMask.Paralysis\ |\ \mbox{\hyperlink{namespace_common_a42d43f9dd990eadd77e3ecd89b27d7e3}{StateMask}}.Push;}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00057}00057\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_stun_behaviour_8cs_source_l00058}00058\ \ \ \ \ \}}

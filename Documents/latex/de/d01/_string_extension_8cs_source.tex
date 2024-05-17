@@ -1,6 +1,6 @@
 \doxysection{String\+Extension.\+cs}
 \hypertarget{_string_extension_8cs_source}{}\label{_string_extension_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/\_Protocol/\_Extension/StringExtension.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/\_Protocol/\_Extension/StringExtension.cs}}
-
+\mbox{\hyperlink{_string_extension_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_string_extension_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_string_extension_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Linq;}
@@ -33,7 +33,7 @@
 \DoxyCodeLine{\Hypertarget{_string_extension_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ replace\ white\ spaces\ with\ underscore,\ then\ replace\ all\ invalid\ chars\ with\ empty\ string}}
 \DoxyCodeLine{\Hypertarget{_string_extension_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ var\ pascalCase\ =\ invalidCharsRgx.Replace(whiteSpace.Replace(original,\ \textcolor{stringliteral}{"{}\_"{}}),\ \textcolor{keywordtype}{string}.Empty)}
 \DoxyCodeLine{\Hypertarget{_string_extension_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Split(\textcolor{keyword}{new}\ []\ \{\ \textcolor{charliteral}{'\_'}\ \},\ StringSplitOptions.RemoveEmptyEntries)}
-\DoxyCodeLine{\Hypertarget{_string_extension_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(w\ =>\ startsWithLowerCaseChar.Replace(w,\ m\ =>\ m.Value.ToUpper()))}
+\DoxyCodeLine{\Hypertarget{_string_extension_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{namespace_challenge_ac7399f34de91c6da192d3a931e858295ae0626222614bdee31951d84c64e5e9ff}{Select}}(w\ =>\ startsWithLowerCaseChar.Replace(w,\ m\ =>\ m.Value.ToUpper()))}
 \DoxyCodeLine{\Hypertarget{_string_extension_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(w\ =>\ firstCharFollowedByUpperCasesOnly.Replace(w,\ m\ =>\ m.Value.ToLower()))}
 \DoxyCodeLine{\Hypertarget{_string_extension_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(w\ =>\ lowerCaseNextToNumber.Replace(w,\ m\ =>\ m.Value.ToUpper()))}
 \DoxyCodeLine{\Hypertarget{_string_extension_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(w\ =>\ upperCaseInside.Replace(w,\ m\ =>\ m.Value.ToLower()));}

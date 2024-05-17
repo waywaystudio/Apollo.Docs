@@ -1,0 +1,175 @@
+\doxysection{Common.\+Systems.\+Detect\+Model Class Reference}
+\hypertarget{class_common_1_1_systems_1_1_detect_model}{}\label{class_common_1_1_systems_1_1_detect_model}\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_af027f663e9be2521d27f3e42c9e4f828}{Detect\+Model}} (Transform master, int buffer\+Count=32)
+\item 
+List$<$ T $>$ \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_adcca88d710cecd78f378f3936d3fcafb}{Get$<$ T $>$}} (\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}} property)
+\item 
+List$<$ T $>$ \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_a6a4eddb50ee75cb3168b35886fc175b8}{Get$<$ T $>$}} (\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}} property, Predicate$<$ T $>$ filter)
+\item 
+bool \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_af73cb12a2bc871231577f025b61ec9ae}{Try\+Get$<$ T $>$}} (\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}} property, out List$<$ T $>$ result)
+\item 
+bool \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_a4fdc7c6c517846797fe9b9f2db9f28de}{Try\+Get$<$ T $>$}} (\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}} property, Predicate$<$ T $>$ filter, out List$<$ T $>$ result)
+\item 
+bool \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_a75467bfdd74ec433140f26609f179e6b}{Try\+Get\+Objects}} (out List$<$ Game\+Object $>$ result, \mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}} property)
+\item 
+List$<$ Game\+Object $>$ \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_ae559036ad61c4ac82eedca2f1f3a95c9}{Get\+Objects}} (\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}} property)
+\item 
+List$<$ Game\+Object $>$ \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_a0b3b83dc2fa093328e33ba4958a86e31}{In\+Sphere}} (Vector3 center, Vector3 forward, Layer\+Mask layer\+Mask, float radius)
+\item 
+List$<$ Game\+Object $>$ \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_a98814c61e69645eb95558272872bb4c2}{In\+Angle}} (Vector3 center, Vector3 forward, Layer\+Mask layer\+Mask, float radius, float angle)
+\item 
+List$<$ Game\+Object $>$ \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_abfefeeafe565172aabcb710a970daba0}{In\+Rect}} (Vector3 pivot, Vector3 forward, Layer\+Mask layer, float width, float height)
+\item 
+List$<$ Game\+Object $>$ \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_a7e765502f96b05f583db2ca379af83b9}{In\+Donut}} (Vector3 pivot, Layer\+Mask layer\+Mask, \mbox{\hyperlink{class_common_1_1_size_entity}{Size\+Entity}} entity)
+\item 
+List$<$ Game\+Object $>$ \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_a5e5dc8f683822c02fbe10f51cb60c787}{In\+Line}} (Vector3 pivot, Vector3 forward, Layer\+Mask layer, float width, float height)
+\item 
+List$<$ Game\+Object $>$ \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_a9dd9cb18772cae2416cd4f431e83a18f}{Cast\+Ray}} (Vector3 pivot, Vector3 forward, Layer\+Mask layer, float distance)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_af027f663e9be2521d27f3e42c9e4f828}\label{class_common_1_1_systems_1_1_detect_model_af027f663e9be2521d27f3e42c9e4f828} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!DetectModel@{DetectModel}}
+\index{DetectModel@{DetectModel}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{DetectModel()}{DetectModel()}}
+{\footnotesize\ttfamily Common.\+Systems.\+Detect\+Model.\+Detect\+Model (\begin{DoxyParamCaption}\item[{Transform}]{master,  }\item[{int}]{buffer\+Count = {\ttfamily 32} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_a9dd9cb18772cae2416cd4f431e83a18f}\label{class_common_1_1_systems_1_1_detect_model_a9dd9cb18772cae2416cd4f431e83a18f} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!CastRay@{CastRay}}
+\index{CastRay@{CastRay}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{CastRay()}{CastRay()}}
+{\footnotesize\ttfamily List$<$ Game\+Object $>$ Common.\+Systems.\+Detect\+Model.\+Cast\+Ray (\begin{DoxyParamCaption}\item[{Vector3}]{pivot,  }\item[{Vector3}]{forward,  }\item[{Layer\+Mask}]{layer,  }\item[{float}]{distance }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00222}{222}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_adcca88d710cecd78f378f3936d3fcafb}\label{class_common_1_1_systems_1_1_detect_model_adcca88d710cecd78f378f3936d3fcafb} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!Get$<$ T $>$@{Get$<$ T $>$}}
+\index{Get$<$ T $>$@{Get$<$ T $>$}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{Get$<$ T $>$()}{Get< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List$<$ T $>$ Common.\+Systems.\+Detect\+Model.\+Get$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}}}]{property }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_a6a4eddb50ee75cb3168b35886fc175b8}\label{class_common_1_1_systems_1_1_detect_model_a6a4eddb50ee75cb3168b35886fc175b8} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!Get$<$ T $>$@{Get$<$ T $>$}}
+\index{Get$<$ T $>$@{Get$<$ T $>$}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{Get$<$ T $>$()}{Get< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List$<$ T $>$ Common.\+Systems.\+Detect\+Model.\+Get$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}}}]{property,  }\item[{Predicate$<$ T $>$}]{filter }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00047}{47}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_ae559036ad61c4ac82eedca2f1f3a95c9}\label{class_common_1_1_systems_1_1_detect_model_ae559036ad61c4ac82eedca2f1f3a95c9} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!GetObjects@{GetObjects}}
+\index{GetObjects@{GetObjects}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{GetObjects()}{GetObjects()}}
+{\footnotesize\ttfamily List$<$ Game\+Object $>$ Common.\+Systems.\+Detect\+Model.\+Get\+Objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}}}]{property }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00087}{87}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_a98814c61e69645eb95558272872bb4c2}\label{class_common_1_1_systems_1_1_detect_model_a98814c61e69645eb95558272872bb4c2} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!InAngle@{InAngle}}
+\index{InAngle@{InAngle}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{InAngle()}{InAngle()}}
+{\footnotesize\ttfamily List$<$ Game\+Object $>$ Common.\+Systems.\+Detect\+Model.\+In\+Angle (\begin{DoxyParamCaption}\item[{Vector3}]{center,  }\item[{Vector3}]{forward,  }\item[{Layer\+Mask}]{layer\+Mask,  }\item[{float}]{radius,  }\item[{float}]{angle }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00110}{110}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_a7e765502f96b05f583db2ca379af83b9}\label{class_common_1_1_systems_1_1_detect_model_a7e765502f96b05f583db2ca379af83b9} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!InDonut@{InDonut}}
+\index{InDonut@{InDonut}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{InDonut()}{InDonut()}}
+{\footnotesize\ttfamily List$<$ Game\+Object $>$ Common.\+Systems.\+Detect\+Model.\+In\+Donut (\begin{DoxyParamCaption}\item[{Vector3}]{pivot,  }\item[{Layer\+Mask}]{layer\+Mask,  }\item[{\mbox{\hyperlink{class_common_1_1_size_entity}{Size\+Entity}}}]{entity }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00165}{165}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_a5e5dc8f683822c02fbe10f51cb60c787}\label{class_common_1_1_systems_1_1_detect_model_a5e5dc8f683822c02fbe10f51cb60c787} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!InLine@{InLine}}
+\index{InLine@{InLine}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{InLine()}{InLine()}}
+{\footnotesize\ttfamily List$<$ Game\+Object $>$ Common.\+Systems.\+Detect\+Model.\+In\+Line (\begin{DoxyParamCaption}\item[{Vector3}]{pivot,  }\item[{Vector3}]{forward,  }\item[{Layer\+Mask}]{layer,  }\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00197}{197}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_abfefeeafe565172aabcb710a970daba0}\label{class_common_1_1_systems_1_1_detect_model_abfefeeafe565172aabcb710a970daba0} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!InRect@{InRect}}
+\index{InRect@{InRect}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{InRect()}{InRect()}}
+{\footnotesize\ttfamily List$<$ Game\+Object $>$ Common.\+Systems.\+Detect\+Model.\+In\+Rect (\begin{DoxyParamCaption}\item[{Vector3}]{pivot,  }\item[{Vector3}]{forward,  }\item[{Layer\+Mask}]{layer,  }\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00134}{134}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_a0b3b83dc2fa093328e33ba4958a86e31}\label{class_common_1_1_systems_1_1_detect_model_a0b3b83dc2fa093328e33ba4958a86e31} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!InSphere@{InSphere}}
+\index{InSphere@{InSphere}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{InSphere()}{InSphere()}}
+{\footnotesize\ttfamily List$<$ Game\+Object $>$ Common.\+Systems.\+Detect\+Model.\+In\+Sphere (\begin{DoxyParamCaption}\item[{Vector3}]{center,  }\item[{Vector3}]{forward,  }\item[{Layer\+Mask}]{layer\+Mask,  }\item[{float}]{radius }\end{DoxyParamCaption})}
+
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_af73cb12a2bc871231577f025b61ec9ae}\label{class_common_1_1_systems_1_1_detect_model_af73cb12a2bc871231577f025b61ec9ae} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!TryGet$<$ T $>$@{TryGet$<$ T $>$}}
+\index{TryGet$<$ T $>$@{TryGet$<$ T $>$}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{TryGet$<$ T $>$()}{TryGet< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Common.\+Systems.\+Detect\+Model.\+Try\+Get$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}}}]{property,  }\item[{out List$<$ T $>$}]{result }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00066}{66}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_a4fdc7c6c517846797fe9b9f2db9f28de}\label{class_common_1_1_systems_1_1_detect_model_a4fdc7c6c517846797fe9b9f2db9f28de} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!TryGet$<$ T $>$@{TryGet$<$ T $>$}}
+\index{TryGet$<$ T $>$@{TryGet$<$ T $>$}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{TryGet$<$ T $>$()}{TryGet< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Common.\+Systems.\+Detect\+Model.\+Try\+Get$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}}}]{property,  }\item[{Predicate$<$ T $>$}]{filter,  }\item[{out List$<$ T $>$}]{result }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_detect_model_a75467bfdd74ec433140f26609f179e6b}\label{class_common_1_1_systems_1_1_detect_model_a75467bfdd74ec433140f26609f179e6b} 
+\index{Common.Systems.DetectModel@{Common.Systems.DetectModel}!TryGetObjects@{TryGetObjects}}
+\index{TryGetObjects@{TryGetObjects}!Common.Systems.DetectModel@{Common.Systems.DetectModel}}
+\doxysubsubsection{\texorpdfstring{TryGetObjects()}{TryGetObjects()}}
+{\footnotesize\ttfamily bool Common.\+Systems.\+Detect\+Model.\+Try\+Get\+Objects (\begin{DoxyParamCaption}\item[{out List$<$ Game\+Object $>$}]{result,  }\item[{\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}}}]{property }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_detect_model_8cs_source_l00080}{80}} of file \mbox{\hyperlink{_detect_model_8cs_source}{Detect\+Model.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+Systems/\mbox{\hyperlink{_detect_model_8cs}{Detect\+Model.\+cs}}\end{DoxyCompactItemize}

@@ -1,6 +1,6 @@
 \doxysection{Horror\+Behaviour.\+cs}
 \hypertarget{_horror_behaviour_8cs_source}{}\label{_horror_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/Behaviours/HorrorBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/Behaviours/HorrorBehaviour.cs}}
-
+\mbox{\hyperlink{_horror_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Threading;}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }BehaviorDesigner.Runtime;}
@@ -9,33 +9,33 @@
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00005}00005\ }
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_behaviours}{Common.Characters.Behaviours}}}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }HorrorBehaviour\ :\ CharacterBehaviour}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_horror_behaviour}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_horror_behaviour}{HorrorBehaviour}}\ :\ \mbox{\hyperlink{class_common_1_1_characters_1_1_character_behaviour}{CharacterBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00009}00009\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Behavior\ behaviorTree;}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ horrorTask;}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ duration;}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_horror_behaviour_a56adfa3e60ef109c07a06c89f57b4b4d}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_horror_behaviour_a56adfa3e60ef109c07a06c89f57b4b4d}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_behaver}{IBehaver}}\ behaver)}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00018}00018\ }
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}NotInHorror"{}},\ ()\ =>\ Invoker.IsEnd)}
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}DisableAI"{}},\ behaviorTree.DisableBehavior)}
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Cancel,\ \textcolor{stringliteral}{"{}EnableAI"{}},\ behaviorTree.EnableBehavior)}
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}EnableAI"{}},\ behaviorTree.EnableBehavior)}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}NotInHorror"{}},\ ()\ =>\ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ab08def51d0ec9f00a78b7d4d121e522e}{IsEnd}})}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}DisableAI"{}},\ behaviorTree.DisableBehavior)}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Cancel,\ \textcolor{stringliteral}{"{}EnableAI"{}},\ behaviorTree.EnableBehavior)}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}EnableAI"{}},\ behaviorTree.EnableBehavior)}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cancellation(\textcolor{stringliteral}{"{}CancelHorrorTask"{}},\ horrorTask)}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active(\textcolor{keywordtype}{float}\ duration)}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00028}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_horror_behaviour_adf150c8c22742b03497465fe8d10faa8}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_horror_behaviour_adf150c8c22742b03497465fe8d10faa8}{Active}}(\textcolor{keywordtype}{float}\ duration)}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ horrorTask\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Horrify(duration,\ horrorTask).Forget();}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ }
@@ -51,7 +51,7 @@
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Yield(cts.Token);}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Complete();}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}}();}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ }
@@ -60,9 +60,9 @@
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ behaviourCode\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ DataIndex.Horror;}
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.StateMask\ \ \ \ \ \ \ \ \ =\ StateMask.CrowdControl;}
-\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.IgnorableMask\ \ \ \ \ =\ StateMask.Soft\ |\ StateMask.Common\ |\ StateMask.Power\ |\ StateMask.Paralysis\ |\ StateMask.Push;}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a4b8f91bde6fefb1f9c5a1470d7d22b55}{behaviourCode}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.Horror;}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.StateMask\ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{namespace_common_a42d43f9dd990eadd77e3ecd89b27d7e3}{StateMask}}.CrowdControl;}
+\DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.IgnorableMask\ \ \ \ \ =\ StateMask.Soft\ |\ StateMask.Common\ |\ StateMask.Power\ |\ StateMask.Paralysis\ |\ \mbox{\hyperlink{namespace_common_a42d43f9dd990eadd77e3ecd89b27d7e3}{StateMask}}.Push;}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ transform.FindRecursive(out\ behaviorTree);}
 \DoxyCodeLine{\Hypertarget{_horror_behaviour_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}

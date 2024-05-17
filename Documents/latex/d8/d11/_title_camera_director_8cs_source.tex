@@ -1,6 +1,6 @@
 \doxysection{Title\+Camera\+Director.\+cs}
 \hypertarget{_title_camera_director_8cs_source}{}\label{_title_camera_director_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Title/TitleCameraDirector.cs@{C:/Project/Apollo/Assets/Scripts/Title/TitleCameraDirector.cs}}
-
+\mbox{\hyperlink{_title_camera_director_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_cameras}{Cameras}};}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Cinemachine;}
@@ -8,20 +8,20 @@
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00004}00004\ }
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00005}\mbox{\hyperlink{namespace_title}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_title}{Title}}}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TitleCameraDirector\ :\ CameraDirector}
+\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00007}\mbox{\hyperlink{class_title_1_1_title_camera_director}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_title_1_1_title_camera_director}{TitleCameraDirector}}\ :\ \mbox{\hyperlink{class_cameras_1_1_camera_director}{CameraDirector}}}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00008}00008\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ FollowCharacter(Character\ character)}
+\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00009}\mbox{\hyperlink{class_title_1_1_title_camera_director_ae2b57f0b5e98449ca07beedd57bcb085}{00009}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_title_1_1_title_camera_director_ae2b57f0b5e98449ca07beedd57bcb085}{FollowCharacter}}(\mbox{\hyperlink{class_common_1_1_character}{Character}}\ character)}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ var\ characterTransform\ =\ character.transform;}
+\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ var\ characterTransform\ =\ character.\mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}};}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[VirtualCameraType.Player].Follow\ =\ characterTransform;}
-\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[VirtualCameraType.Player].LookAt\ =\ characterTransform;}
+\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Player].Follow\ =\ characterTransform;}
+\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Player].LookAt\ =\ characterTransform;}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ StopFollow()}
+\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00017}\mbox{\hyperlink{class_title_1_1_title_camera_director_abe4a611db402a6be42466b3f4357971b}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_title_1_1_title_camera_director_abe4a611db402a6be42466b3f4357971b}{StopFollow}}()}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[VirtualCameraType.Player].Follow\ =\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[VirtualCameraType.Player].LookAt\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Player].Follow\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Player].LookAt\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
@@ -30,13 +30,13 @@
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ subCameraTable.Clear();}
+\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cameras_1_1_camera_director_ab1bf5158ee58d0397a478ba357894b8b}{subCameraTable}}.\mbox{\hyperlink{class_table_aa5ceff8db5657ae3e7538277e4ed6f8d}{Clear}}();}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00030}00030\ }
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ var\ virtualCameraList\ =\ GetComponentsInChildren<CinemachineVirtualCamera>().ToList();}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ virtualCameraList.ForEach(vc\ =>}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subCameraTable.Add(vc.gameObject.name.Replace(\textcolor{stringliteral}{"{}Camera"{}},\ \textcolor{stringliteral}{"{}"{}}).ToEnum<VirtualCameraType>(),\ vc);}
+\DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cameras_1_1_camera_director_ab1bf5158ee58d0397a478ba357894b8b}{subCameraTable}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(vc.gameObject.name.Replace(\textcolor{stringliteral}{"{}Camera"{}},\ \textcolor{stringliteral}{"{}"{}}).ToEnum<\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}>(),\ vc);}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_title_camera_director_8cs_source_l00038}00038\ \textcolor{preprocessor}{\#endif}}

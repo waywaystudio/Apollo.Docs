@@ -1,6 +1,6 @@
 \doxysection{Flaming\+Poo\+Snare.\+cs}
 \hypertarget{_flaming_poo_snare_8cs_source}{}\label{_flaming_poo_snare_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Snares/Variants/FlamingPooSnare.cs@{C:/Project/Apollo/Assets/Scripts/Common/Snares/Variants/FlamingPooSnare.cs}}
-
+\mbox{\hyperlink{_flaming_poo_snare_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -10,7 +10,7 @@
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00006}00006\ }
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_snares_1_1_variants}{Common.Snares.Variants}}}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00008}00008\ \{}
-\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }FlamingPooSnare\ :\ Snare}
+\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_snares_1_1_variants_1_1_flaming_poo_snare}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_snares_1_1_variants_1_1_flaming_poo_snare}{FlamingPooSnare}}\ :\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare}{Snare}}}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00010}00010\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ LayerMask\ targetLayer;}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ timeTrigger;}
@@ -20,17 +20,17 @@
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ List<GameObject>\ onTrapObjects\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(ICombatProvider\ provider)}
+\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_snares_1_1_variants_1_1_flaming_poo_snare_afbbfddd44be073310584d7ac001df17d}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_variants_1_1_flaming_poo_snare_afbbfddd44be073310584d7ac001df17d}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider)}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(provider);}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ timeTrigger.AddCallBack(\textcolor{stringliteral}{"{}Complete"{}},\ Invoker.Complete);}
+\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ timeTrigger.\mbox{\hyperlink{class_time_trigger_a8d5526e17f82d5108dbd8a7e7bc6b47f}{AddCallBack}}(\textcolor{stringliteral}{"{}Complete"{}},\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a48d3b7d4f08c62742972e454f06f4337}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}});}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00024}00024\ }
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}PlayTimeTrigger"{}},\ timeTrigger.Play)}
-\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}TickDamage"{}},\ TickDamage)}
-\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}CancelTimeTrigger"{}},\ timeTrigger.Stop)}
-\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}DisposeTimeTrigger"{}},\ timeTrigger.Dispose)}
+\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}PlayTimeTrigger"{}},\ timeTrigger.\mbox{\hyperlink{class_time_trigger_a1cab158a91639ac84536551518479fa9}{Play}})}
+\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}TickDamage"{}},\ TickDamage)}
+\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}CancelTimeTrigger"{}},\ timeTrigger.\mbox{\hyperlink{class_time_trigger_a3b7e626e2bdd1723537f029dc0fb5941}{Stop}})}
+\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Dispose,\ \textcolor{stringliteral}{"{}DisposeTimeTrigger"{}},\ timeTrigger.\mbox{\hyperlink{class_time_trigger_aada6410a247d3ab1ba7d26e90821b016}{Dispose}})}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ OnEnter.Add("{}AddOnTrapObject"{},\ AddOnTrapObject);}}
@@ -49,7 +49,7 @@
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (onTrapObjects.IsNullOrEmpty())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ executor.Executes(onTrapObjects);}
+\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a4c7a4088ec80785ac1143ff3fcb8d80d}{executor}}.\mbox{\hyperlink{class_common_1_1_executor_ab82bbdb5325067c22f0e9324e2983635}{Executes}}(onTrapObjects);}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00049}00049\ }
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Delay(TimeSpan.FromSeconds(damageTick),\ cancellationToken:\ cts.Token);}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
@@ -57,7 +57,7 @@
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddOnTrapObject(GameObject\ enteredObject)}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enteredObject.IsInLayerMask(targetLayer)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&}
-\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ enteredObject.TryGetComponent(out\ Character\ character)\ \&\&}
+\DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ enteredObject.TryGetComponent(out\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ character)\ \&\&}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ character.IsAlive)}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_flaming_poo_snare_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ onTrapObjects.AddUniquely(enteredObject);}

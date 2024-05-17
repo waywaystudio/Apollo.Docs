@@ -1,51 +1,51 @@
 \doxysection{Narakmoon\+Projectile.\+cs}
 \hypertarget{_narakmoon_projectile_8cs_source}{}\label{_narakmoon_projectile_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Variants/NarakmoonProjectile.cs@{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Variants/NarakmoonProjectile.cs}}
-
+\mbox{\hyperlink{_narakmoon_projectile_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_projectiles_1_1_variants}{Common.Projectiles.Variants}}}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }NarakmoonProjectile\ :\ Projectile}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00005}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_narakmoon_projectile}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_narakmoon_projectile}{NarakmoonProjectile}}\ :\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00006}00006\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ isRift;}
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TowardDirection\ toward;}
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ColliderTrigger\ colliderTrigger;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_common_a3c3849312910ec6b28b70d8f44f86bff}{TowardDirection}}\ toward;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_collider_trigger}{ColliderTrigger}}\ colliderTrigger;}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Vector3\ riftAngle\ =\ \textcolor{keyword}{new}(0,\ 0,\ 0);}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00012}00012\ }
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(ICombatProvider\ provider)}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00014}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_narakmoon_projectile_a2d84ae148e33924f1d74dccde2057d11}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_narakmoon_projectile_a2d84ae148e33924f1d74dccde2057d11}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider)}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(provider);}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}RotateInstantly"{}},\ RotateInstantly)}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}RotateInstantly"{}},\ RotateInstantly)}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ colliderTrigger}
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddLayerFilter(\textcolor{stringliteral}{"{}LayerFilter"{}},\ DetectProperty.TargetLayer)}
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddOnEnter(\textcolor{stringliteral}{"{}OnCollided"{}},\ OnCollided)}
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Register(\textcolor{keyword}{this})}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_common_1_1_collider_trigger_a20ba1e97271005dfaf2a30b6b1a268a3}{AddLayerFilter}}(\textcolor{stringliteral}{"{}LayerFilter"{}},\ \mbox{\hyperlink{class_common_1_1_detect_property}{DetectProperty}}.\mbox{\hyperlink{class_common_1_1_detect_property_ad6958310e95b20bdbab01c47404c19a4}{TargetLayer}})}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_common_1_1_collider_trigger_aba7d84d77fb8489ee47288ae94afaf1d}{AddOnEnter}}(\textcolor{stringliteral}{"{}OnCollided"{}},\ OnCollided)}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_common_1_1_collider_trigger_a38e7d91c0b4ffdfa7544f66de6eddaff}{Register}}(\textcolor{keyword}{this})}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00029}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_narakmoon_projectile_a1c68efa94cfc04ecdbdf2a0b15485ed2}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_narakmoon_projectile_a1c68efa94cfc04ecdbdf2a0b15485ed2}{Active}}()}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_a7d813ce3250d4ba37a45e27d86df6e9f}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_a7d813ce3250d4ba37a45e27d86df6e9f}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetRift(\textcolor{keywordtype}{bool}\ value)}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00036}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_narakmoon_projectile_a137427cf123551e79cd35d2da6c86b42}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_narakmoon_projectile_a137427cf123551e79cd35d2da6c86b42}{SetRift}}(\textcolor{keywordtype}{bool}\ value)}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (toward\ ==\ TowardDirection.Left)}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (toward\ ==\ \mbox{\hyperlink{namespace_common_a3c3849312910ec6b28b70d8f44f86bff}{TowardDirection}}.Left)}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isRift\ \ \ \ \ \ =\ value;}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ riftAngle.y\ =\ value\ ?\ -\/35f\ :\ 0f;}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (toward\ ==\ TowardDirection.Right)}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (toward\ ==\ \mbox{\hyperlink{namespace_common_a3c3849312910ec6b28b70d8f44f86bff}{TowardDirection}}.Right)}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isRift\ \ \ \ \ \ =\ value;}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ riftAngle.y\ =\ value\ ?\ 35f\ :\ 0f;}
@@ -55,16 +55,16 @@
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnCollided(GameObject\ enteredObject)}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!enteredObject.TryGetComponent(out\ Character\ target)\ ||\ !target.IsAlive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!enteredObject.TryGetComponent(out\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ target)\ ||\ !target.IsAlive)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ executor.Execute(enteredObject);}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_a6ac896a69de48a2b105cd92e02fa0a78}{executor}}.\mbox{\hyperlink{class_common_1_1_executor_ada0aad3eb7a3b8b6124265474df85982}{Execute}}(enteredObject);}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00058}00058\ }
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RotateInstantly()}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isRift)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ transform.Rotate(riftAngle);}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}}.Rotate(riftAngle);}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ }
@@ -73,7 +73,7 @@
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ colliderTrigger.EventHandler\ =\ transform.root.GetComponentInChildren<ColliderEventHandler>();}
+\DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ colliderTrigger.EventHandler\ =\ \mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}}.root.GetComponentInChildren<\mbox{\hyperlink{class_common_1_1_collider_event_handler}{ColliderEventHandler}}>();}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00074}00074\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_narakmoon_projectile_8cs_source_l00075}00075\ \ \ \ \ \}}

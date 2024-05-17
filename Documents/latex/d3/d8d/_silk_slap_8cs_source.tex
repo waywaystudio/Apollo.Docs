@@ -1,6 +1,6 @@
 \doxysection{Silk\+Slap.\+cs}
 \hypertarget{_silk_slap_8cs_source}{}\label{_silk_slap_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SilkStrings/SilkSlap.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SilkStrings/SilkSlap.cs}}
-
+\mbox{\hyperlink{_silk_slap_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_executors_1_1_variants}{Common.Executors.Variants}};}
@@ -11,51 +11,51 @@
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_silk_strings}{Common.Masteries.SilkStrings}}}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00008}00008\ \{}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ 비단의\ 피해량\ 증가\ 20\%\ .\ 타격시\ 적을\ 경직시킨다.\ }}
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SilkSlap\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_silk_slap}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_silk_slap}{SilkSlap}}\ :\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery}{Mastery}}}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00011}00011\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ProjectileSpawnEvent\ spawnEvent;}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event}{ProjectileSpawnEvent}}\ spawnEvent;}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ StatEntity\ silkSlapPowerMultiplier;}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}\ silkSlapPowerMultiplier;}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00015}00015\ }
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_silk_slap_a45c55b654a2e1441c24d02ca5d11b6ee}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_silk_slap_a45c55b654a2e1441c24d02ca5d11b6ee}{Injection}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ silkSlapPowerMultiplier\ =\ \textcolor{keyword}{new}\ StatEntity(StatType.DamageIncreaseRate,\ \textcolor{stringliteral}{"{}silkSlapPowerMultiplier"{}},\ quality.Value);}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ silkSlapPowerMultiplier\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}(\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.DamageIncreaseRate,\ \textcolor{stringliteral}{"{}silkSlapPowerMultiplier"{}},\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}});}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ AddSilkStrings(dred);}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_af1fa459a81da999ee171d9f0440ad02b}{AddSilkStrings}}(dred);}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.Add(DataIndex.SilkTwisterProjectile,\ \textcolor{stringliteral}{"{}SilkSlap"{}},\ AddExtraPowerAndParalysis);}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.\mbox{\hyperlink{class_common_1_1_spawn_event_table_ac8c1e472bcbad1c5493cff1ec02b1a98}{Add}}(\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.SilkTwisterProjectile,\ \textcolor{stringliteral}{"{}SilkSlap"{}},\ AddExtraPowerAndParalysis);}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00026}\mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_silk_slap_aedfc8623c99c8b073013c33601524aab}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_silk_slap_aedfc8623c99c8b073013c33601524aab}{Abolition}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ RemoveSilkStrings(dred);}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a4d1abd12dc408fb0020ee778f1583172}{RemoveSilkStrings}}(dred);}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.Remove(DataIndex.SilkTwisterProjectile,\ \textcolor{stringliteral}{"{}SilkSlap"{}},\ RemoveExtraPowerAndParalysis);}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.\mbox{\hyperlink{class_common_1_1_spawn_event_table_a9949ebd2ab1adcb67a2e7b3b53c93cca}{Remove}}(\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.SilkTwisterProjectile,\ \textcolor{stringliteral}{"{}SilkSlap"{}},\ RemoveExtraPowerAndParalysis);}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00033}\mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_silk_slap_a09a0fe6e4b578111f55343571d05c374}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_silk_slap_a09a0fe6e4b578111f55343571d05c374}{OnQualityChanged}}()}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ silkSlapPowerMultiplier.Value\ =\ quality.Value;}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ silkSlapPowerMultiplier.Value\ =\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}};}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00037}00037\ }
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddExtraPowerAndParalysis(Projectile\ projectile)}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddExtraPowerAndParalysis(\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}\ projectile)}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ var\ executor\ =\ projectile.Executor;}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ var\ executor\ =\ projectile.\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_af8c5ad0b154e4ddc107132a2549ed288}{Executor}};}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ executor.TryGetExecutions<DamageExecutor>(out\ var\ damageExecutors);}
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ executor.TryGetExecutions<ParalysisExecutor>(out\ var\ paralysis);}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ executor.TryGetExecutions<\mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_damage_executor}{DamageExecutor}}>(out\ var\ damageExecutors);}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ executor.TryGetExecutions<\mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_paralysis_executor}{ParalysisExecutor}}>(out\ var\ paralysis);}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ damageExecutors.ForEach(exe\ =>\ exe.DamageTable.Add(silkSlapPowerMultiplier));}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ paralysis.ForEach(exe\ =>\ exe.Activation\ =\ \textcolor{keyword}{true});}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RemoveExtraPowerAndParalysis(Projectile\ projectile)}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RemoveExtraPowerAndParalysis(\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}\ projectile)}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ var\ executor\ =\ projectile.Executor;}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ var\ executor\ =\ projectile.\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_af8c5ad0b154e4ddc107132a2549ed288}{Executor}};}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ executor.TryGetExecutions<DamageExecutor>(out\ var\ damageExecutors);}
-\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ executor.TryGetExecutions<ParalysisExecutor>(out\ var\ paralysis);}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ executor.TryGetExecutions<\mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_damage_executor}{DamageExecutor}}>(out\ var\ damageExecutors);}
+\DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ executor.TryGetExecutions<\mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_paralysis_executor}{ParalysisExecutor}}>(out\ var\ paralysis);}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ damageExecutors.ForEach(exe\ =>\ exe.DamageTable.Remove(silkSlapPowerMultiplier));}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ paralysis.ForEach(exe\ =>\ exe.Activation\ =\ \textcolor{keyword}{false});}
 \DoxyCodeLine{\Hypertarget{_silk_slap_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}

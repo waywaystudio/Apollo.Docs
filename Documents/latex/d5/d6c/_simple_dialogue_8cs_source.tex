@@ -1,6 +1,6 @@
 \doxysection{Simple\+Dialogue.\+cs}
 \hypertarget{_simple_dialogue_8cs_source}{}\label{_simple_dialogue_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Dialogue/SimpleDialogue.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Dialogue/SimpleDialogue.cs}}
-
+\mbox{\hyperlink{_simple_dialogue_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }DG.Tweening;}
@@ -11,27 +11,27 @@
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00008}\mbox{\hyperlink{namespace_challenge_1_1_u_i_1_1_dialogue}{00008}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_u_i_1_1_dialogue}{Challenge.UI.Dialogue}}}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00009}00009\ \{}
-\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SimpleDialogue\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00010}\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue}{SimpleDialogue}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00011}00011\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Image\ background;}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ textMesh;}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<DOTweenAnimation>\ tweenAnimations;}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ OnShow\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00016}\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_ac5fa4c859c7cf12124e2b9d943623fe1}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_ac5fa4c859c7cf12124e2b9d943623fe1}{OnShow}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ShowDialogue(\textcolor{keywordtype}{string}\ message)}
+\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00018}\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_a8f346b7308b10c4e49dd00e16ac0419b}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_a8f346b7308b10c4e49dd00e16ac0419b}{ShowDialogue}}(\textcolor{keywordtype}{string}\ message)}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ textMesh.text\ =\ message;}
-\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ OnShow\ \ \ \ \ \ \ \ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_ac5fa4c859c7cf12124e2b9d943623fe1}{OnShow}}\ \ \ \ \ \ \ \ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{true});}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ EventSystem.current.SetSelectedGameObject(gameObject);}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ tweenAnimations.ForEach(anim\ =>\ anim.DOPlay());}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ HideDialogue()}
+\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00028}\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_a058808d509c7305af827c1e66c7f28f6}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_a058808d509c7305af827c1e66c7f28f6}{HideDialogue}}()}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ OnShow\ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_ac5fa4c859c7cf12124e2b9d943623fe1}{OnShow}}\ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ textMesh.text\ =\ \textcolor{stringliteral}{"{}"{}};}
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_simple_dialogue_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{false});}

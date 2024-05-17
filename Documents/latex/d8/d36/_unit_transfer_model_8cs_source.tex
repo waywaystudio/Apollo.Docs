@@ -1,6 +1,6 @@
 \doxysection{Unit\+Transfer\+Model.\+cs}
 \hypertarget{_unit_transfer_model_8cs_source}{}\label{_unit_transfer_model_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/UnitTransferModel.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/UnitTransferModel.cs}}
-
+\mbox{\hyperlink{_unit_transfer_model_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_systems}{Common.Systems}};}
@@ -10,27 +10,27 @@
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_modules}{Common.Skills.Modules}}}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00007}00007\ \{}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00008}00008\ \ \ \ \ [Serializable]}
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }UnitTransferModel}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_unit_transfer_model}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_unit_transfer_model}{UnitTransferModel}}}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00010}00010\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Section\ activeSection;}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}\ activeSection;}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ slideDistance;}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ slideDuration;}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Ease\ slideEase;}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ disableByObstacle;}
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DetectProperty\ obstacleDetectProperty;}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_detect_property}{DetectProperty}}\ obstacleDetectProperty;}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ Disable\ =>\ activeSection\ is\ Section.None;}
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Character\ MainCharacter\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TransferModel\ TransferModel\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ Disable\ =>\ activeSection\ is\ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.None;}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ MainCharacter\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model}{TransferModel}}\ \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model}{TransferModel}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00022}00022\ }
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(ISequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00024}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_unit_transfer_model_a0ebc5bfd46903d6eb1428c9afa898d75}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_unit_transfer_model_a0ebc5bfd46903d6eb1428c9afa898d75}{Initialize}}(\mbox{\hyperlink{interface_i_sequencer}{ISequencer}}\ sequencer)}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ SkillBehaviour\ sb)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{SkillBehaviour}}\ sb)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00027}00027\ }
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ MainCharacter\ =\ sb.Character;}
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ TransferModel\ =\ MainCharacter.Pathfinding.TransferModel;}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model}{TransferModel}}\ =\ MainCharacter.\mbox{\hyperlink{class_common_1_1_character_a134600c8e09396ae7fcb6b0705ec61ac}{Pathfinding}}.\mbox{\hyperlink{class_common_1_1_systems_1_1_pathfinding_system_a4dc3f7c222064d63100dc40753125a6f}{TransferModel}};}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Disable)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -42,19 +42,19 @@
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00038}00038\ }
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ IsAbleToSliding()}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !disableByObstacle\ ||\ MainCharacter.Detector.GetObjects(obstacleDetectProperty).IsNullOrEmpty();}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !disableByObstacle\ ||\ MainCharacter.\mbox{\hyperlink{class_common_1_1_character_a90eb0e170133dec9cbd85b5fff91c975}{Detector}}.\mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model_ae559036ad61c4ac82eedca2f1f3a95c9}{GetObjects}}(obstacleDetectProperty).IsNullOrEmpty();}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ActiveSliding()}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!IsAbleToSliding())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ TransferModel.Move(slideDistance,\ slideDuration,\ slideEase);}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model}{TransferModel}}.\mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_acef6addcfd5b397a553795729ac878bc}{Move}}(slideDistance,\ slideDuration,\ slideEase);}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00050}00050\ }
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CancelSliding()}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ TransferModel.Cancel();}
+\DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model}{TransferModel}}.\mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_ab20c6aa78820bf52bba5364277790ece}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00055}00055\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_unit_transfer_model_8cs_source_l00056}00056\ \}}

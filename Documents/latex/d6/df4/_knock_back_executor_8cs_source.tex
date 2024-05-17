@@ -1,30 +1,30 @@
 \doxysection{Knock\+Back\+Executor.\+cs}
 \hypertarget{_knock_back_executor_8cs_source}{}\label{_knock_back_executor_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Executors/Variants/KnockBackExecutor.cs@{C:/Project/Apollo/Assets/Scripts/Common/Executors/Variants/KnockBackExecutor.cs}}
-
+\mbox{\hyperlink{_knock_back_executor_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_executors_1_1_variants}{Common.Executors.Variants}}}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }KnockBackExecutor\ :\ ExecuteBehaviour}
+\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00005}\mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_knock_back_executor}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_knock_back_executor}{KnockBackExecutor}}\ :\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{ExecuteBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00006}00006\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ KnockBackProperty\ property;}
+\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_knock_back_property}{KnockBackProperty}}\ property;}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00008}00008\ }
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ExecuteToTarget(GameObject\ target)}
+\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_knock_back_executor_abaf560a281b13f2d804b5219803fda21}{00010}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_knock_back_executor_abaf560a281b13f2d804b5219803fda21}{ExecuteToTarget}}(GameObject\ target)}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!target.TryGetComponent(out\ IKnockBackTaker\ taker))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!target.TryGetComponent(out\ \mbox{\hyperlink{interface_common_1_1_i_knock_back_taker}{IKnockBackTaker}}\ taker))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00013}00013\ }
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetPosition\ =\ target.transform.position;}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ var\ direction\ =\ property.Source\ \textcolor{keywordflow}{switch}}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KnockBackProperty.SourceType.ProviderPosition\ =>\ (targetPosition\ -\/\ Provider.Position).normalized,}
-\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KnockBackProperty.SourceType.ProviderParallel\ =>\ \textcolor{keyword}{new}\ Vector3\ (Provider.Forward.x,\ 0f,\ Provider.Forward.z),}
-\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KnockBackProperty.SourceType.ProviderOpposite\ =>\ \textcolor{keyword}{new}\ Vector3\ (Provider.Forward.x\ *\ -\/1f,\ 0f,\ Provider.Forward.z\ *\ -\/1f),}
-\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ (targetPosition\ -\/\ Provider.Position).normalized}
+\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KnockBackProperty.SourceType.ProviderPosition\ =>\ (targetPosition\ -\/\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}.\mbox{\hyperlink{interface_common_1_1_i_unit_a45b54ea30324ebb0ef8d594abbe8a201}{Position}}).normalized,}
+\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_knock_back_property}{KnockBackProperty}}.\mbox{\hyperlink{class_common_1_1_knock_back_property_a5504e864d3c6fdd69ff263947f6d53a6}{SourceType}}.ProviderParallel\ =>\ \textcolor{keyword}{new}\ Vector3\ (\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}.\mbox{\hyperlink{interface_common_1_1_i_unit_ae9c5c5627cd25a66f0b352fdf40faeb6}{Forward}}.x,\ 0f,\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}.\mbox{\hyperlink{interface_common_1_1_i_unit_ae9c5c5627cd25a66f0b352fdf40faeb6}{Forward}}.z),}
+\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ KnockBackProperty.SourceType.ProviderOpposite\ =>\ \textcolor{keyword}{new}\ Vector3\ (\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}.\mbox{\hyperlink{interface_common_1_1_i_unit_ae9c5c5627cd25a66f0b352fdf40faeb6}{Forward}}.x\ *\ -\/1f,\ 0f,\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}.\mbox{\hyperlink{interface_common_1_1_i_unit_ae9c5c5627cd25a66f0b352fdf40faeb6}{Forward}}.z\ *\ -\/1f),}
+\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ (targetPosition\ -\/\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}.\mbox{\hyperlink{interface_common_1_1_i_unit_a45b54ea30324ebb0ef8d594abbe8a201}{Position}}).normalized}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ taker.TakeKnockBack(Provider.Position,\ direction,\ property);}
+\DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ taker.TakeKnockBack(\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}.\mbox{\hyperlink{interface_common_1_1_i_unit_a45b54ea30324ebb0ef8d594abbe8a201}{Position}},\ direction,\ property);}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00025}00025\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_knock_back_executor_8cs_source_l00026}00026\ \}}

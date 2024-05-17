@@ -1,0 +1,233 @@
+\doxysection{Common.\+Spawn\+Event\+Table\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_common_1_1_spawn_event_table}{}\label{class_common_1_1_spawn_event_table}\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a87a3a79fa02ca1e0ebe23f6441e7d20d}{Invoke}} (\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}} data\+Index, T subject)
+\begin{DoxyCompactList}\small\item\em Invoke Specific Target Actions with Global Actions. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_common_1_1_spawn_event_table_ac48cf81a6a9724e38b1a48000993c7cb}{Invoke}} (T subject)
+\begin{DoxyCompactList}\small\item\em Invoke Only Global Actions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_ac8c1e472bcbad1c5493cff1ec02b1a98}{Add}} (\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}} data\+Index, string spawn\+Action\+Key, Action action)
+\begin{DoxyCompactList}\small\item\em Add Specific Target Spawn event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a5d6c3fa53bc793ca47b7e4ca426fa707}{Add}} (\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}} data\+Index, string spawn\+Action\+Key, Action$<$ T $>$ action)
+\begin{DoxyCompactList}\small\item\em Add Specific Target Spawn event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a17b405defd7621e084ca846e2e7f2911}{Add}} (string global\+Action\+Key, Action$<$ T $>$ action)
+\begin{DoxyCompactList}\small\item\em Add Global Spawn Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a9949ebd2ab1adcb67a2e7b3b53c93cca}{Remove}} (\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}} data\+Index, string spawn\+Action\+Key, Action$<$ T $>$ callback=null)
+\begin{DoxyCompactList}\small\item\em Remove Specific Target Spawn Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a4c512687f35d250902b88d1e5cca8b73}{Remove}} (string spawn\+Action\+Key, Action$<$ T $>$ callback)
+\begin{DoxyCompactList}\small\item\em Remove Global Spawn Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_afd03d266f28ca9d54b1f7a21c1ead4d2}{Remove}} (string spawn\+Action\+Key)
+\begin{DoxyCompactList}\small\item\em Remove Global Spawn Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_ab68090678eedadb9cca8d9b3d18b95c3}{Clear}} ()
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a1f9dd39168a42fb90996b4f24b886fad}{Dispose}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ T $>$ \mbox{\hyperlink{class_common_1_1_spawn_event_table_a6359f8f19000bd9acf18984ffe6c0edc}{Spawned\+List}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_table}{Table}}$<$ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}}, \mbox{\hyperlink{class_action_table}{Action\+Table}}$<$ T $>$ $>$ \mbox{\hyperlink{class_common_1_1_spawn_event_table_ad91c67d8a1878eab5ba8bb794ed1c0f9}{Target\+Action\+Table}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_action_table}{Action\+Table}}$<$ T $>$ \mbox{\hyperlink{class_common_1_1_spawn_event_table_a3cd754f725b6003cc13fba1c3b15fcdb}{Global\+Action\+Table}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em \mbox{\hyperlink{interface_i_data_indexer}{IData\+Indexer}}}]\end{description}
+\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_common_1_1_spawn_event_table_ac8c1e472bcbad1c5493cff1ec02b1a98}\label{class_common_1_1_spawn_event_table_ac8c1e472bcbad1c5493cff1ec02b1a98} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}}}]{data\+Index,  }\item[{string}]{spawn\+Action\+Key,  }\item[{Action}]{action }\end{DoxyParamCaption})}
+
+
+
+Add Specific Target Spawn event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Index} & Target\+Code\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_common_1_1_spawn_event_table_a5d6c3fa53bc793ca47b7e4ca426fa707}\label{class_common_1_1_spawn_event_table_a5d6c3fa53bc793ca47b7e4ca426fa707} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}}}]{data\+Index,  }\item[{string}]{spawn\+Action\+Key,  }\item[{Action$<$ T $>$}]{action }\end{DoxyParamCaption})}
+
+
+
+Add Specific Target Spawn event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Index} & Target\+Code\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00046}{46}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+\Hypertarget{class_common_1_1_spawn_event_table_a17b405defd7621e084ca846e2e7f2911}\label{class_common_1_1_spawn_event_table_a17b405defd7621e084ca846e2e7f2911} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Add (\begin{DoxyParamCaption}\item[{string}]{global\+Action\+Key,  }\item[{Action$<$ T $>$}]{action }\end{DoxyParamCaption})}
+
+
+
+Add Global Spawn Event. 
+
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00067}{67}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+\Hypertarget{class_common_1_1_spawn_event_table_ab68090678eedadb9cca8d9b3d18b95c3}\label{class_common_1_1_spawn_event_table_ab68090678eedadb9cca8d9b3d18b95c3} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!Clear@{Clear}}
+\index{Clear@{Clear}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00109}{109}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+\Hypertarget{class_common_1_1_spawn_event_table_a1f9dd39168a42fb90996b4f24b886fad}\label{class_common_1_1_spawn_event_table_a1f9dd39168a42fb90996b4f24b886fad} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event_a3a13342e5d984854ff773efd077c703a}{Common.\+Projectiles.\+Projectile\+Spawn\+Event}}.
+
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00116}{116}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+\Hypertarget{class_common_1_1_spawn_event_table_a87a3a79fa02ca1e0ebe23f6441e7d20d}\label{class_common_1_1_spawn_event_table_a87a3a79fa02ca1e0ebe23f6441e7d20d} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Invoke (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}}}]{data\+Index,  }\item[{T}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Invoke Specific Target Actions with Global Actions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Index} & Target Code\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+\Hypertarget{class_common_1_1_spawn_event_table_ac48cf81a6a9724e38b1a48000993c7cb}\label{class_common_1_1_spawn_event_table_ac48cf81a6a9724e38b1a48000993c7cb} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Invoke (\begin{DoxyParamCaption}\item[{T}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Invoke Only Global Actions. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_common_1_1_characters_1_1_character_spawn_event_a2f80c590346d3b296a1f895b5620b3a3}{Common.\+Characters.\+Character\+Spawn\+Event$<$ T $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+\Hypertarget{class_common_1_1_spawn_event_table_a9949ebd2ab1adcb67a2e7b3b53c93cca}\label{class_common_1_1_spawn_event_table_a9949ebd2ab1adcb67a2e7b3b53c93cca} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}}}]{data\+Index,  }\item[{string}]{spawn\+Action\+Key,  }\item[{Action$<$ T $>$}]{callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Remove Specific Target Spawn Event. 
+
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00081}{81}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+\Hypertarget{class_common_1_1_spawn_event_table_afd03d266f28ca9d54b1f7a21c1ead4d2}\label{class_common_1_1_spawn_event_table_afd03d266f28ca9d54b1f7a21c1ead4d2} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Remove (\begin{DoxyParamCaption}\item[{string}]{spawn\+Action\+Key }\end{DoxyParamCaption})}
+
+
+
+Remove Global Spawn Event. 
+
+\Hypertarget{class_common_1_1_spawn_event_table_a4c512687f35d250902b88d1e5cca8b73}\label{class_common_1_1_spawn_event_table_a4c512687f35d250902b88d1e5cca8b73} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Remove (\begin{DoxyParamCaption}\item[{string}]{spawn\+Action\+Key,  }\item[{Action$<$ T $>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Remove Global Spawn Event. 
+
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00097}{97}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_common_1_1_spawn_event_table_a3cd754f725b6003cc13fba1c3b15fcdb}\label{class_common_1_1_spawn_event_table_a3cd754f725b6003cc13fba1c3b15fcdb} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!GlobalActionTable@{GlobalActionTable}}
+\index{GlobalActionTable@{GlobalActionTable}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GlobalActionTable}{GlobalActionTable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_action_table}{Action\+Table}}$<$T$>$ \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Global\+Action\+Table = new()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+\Hypertarget{class_common_1_1_spawn_event_table_a6359f8f19000bd9acf18984ffe6c0edc}\label{class_common_1_1_spawn_event_table_a6359f8f19000bd9acf18984ffe6c0edc} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!SpawnedList@{SpawnedList}}
+\index{SpawnedList@{SpawnedList}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SpawnedList}{SpawnedList}}
+{\footnotesize\ttfamily List$<$T$>$ \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Spawned\+List = new()\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+\Hypertarget{class_common_1_1_spawn_event_table_ad91c67d8a1878eab5ba8bb794ed1c0f9}\label{class_common_1_1_spawn_event_table_ad91c67d8a1878eab5ba8bb794ed1c0f9} 
+\index{Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}!TargetActionTable@{TargetActionTable}}
+\index{TargetActionTable@{TargetActionTable}!Common.SpawnEventTable$<$ T $>$@{Common.SpawnEventTable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{TargetActionTable}{TargetActionTable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_table}{Table}}$<$\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}}, \mbox{\hyperlink{class_action_table}{Action\+Table}}$<$T$>$ $>$ \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table}}$<$ T $>$.Target\+Action\+Table = new()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_spawn_event_table_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_spawn_event_table_8cs_source}{Spawn\+Event\+Table.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+\_\+\+Protocol/\+\_\+\+Data\+Struct/\mbox{\hyperlink{_spawn_event_table_8cs}{Spawn\+Event\+Table.\+cs}}\end{DoxyCompactItemize}

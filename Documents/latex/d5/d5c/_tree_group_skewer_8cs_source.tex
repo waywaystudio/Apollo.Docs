@@ -1,60 +1,60 @@
 \doxysection{Tree\+Group\+Skewer.\+cs}
 \hypertarget{_tree_group_skewer_8cs_source}{}\label{_tree_group_skewer_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Traps/Behaviours/TreeGroupSkewer.cs@{C:/Project/Apollo/Assets/Scripts/Common/Traps/Behaviours/TreeGroupSkewer.cs}}
-
+\mbox{\hyperlink{_tree_group_skewer_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_units}{Common.Units}};}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_traps_1_1_behaviours}{Common.Traps.Behaviours}}}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TreeGroupSkewer\ :\ UnitBehaviourCombinator}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_tree_group_skewer}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_tree_group_skewer}{TreeGroupSkewer}}\ :\ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_combinator}{UnitBehaviourCombinator}}}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00007}00007\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ activeDelay\ =\ 1.5f;}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ interval\ =\ 0.5f;}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00010}00010\ }
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_sequencer}{Sequencer}}\ delayAttack;}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TrapImpaleBehaviour\ impaleBehaviour;}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TrapRetrieveBehaviour\ retrieveBehaviour;}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_trap_impale_behaviour}{TrapImpaleBehaviour}}\ impaleBehaviour;}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_trap_retrieve_behaviour}{TrapRetrieveBehaviour}}\ retrieveBehaviour;}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00014}00014\ }
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(UnitBehaviourTable\ table)}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_tree_group_skewer_a8e761653249b0fadbd1b5e90d6747e7b}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_tree_group_skewer_a8e761653249b0fadbd1b5e90d6747e7b}{Initialize}}(\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_table}{UnitBehaviourTable}}\ table)}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(table);}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00019}00019\ }
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ delayAttack\ \ \ \ \ \ \ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sequencer}{Sequencer}}();}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ impaleBehaviour\ \ \ =\ table.Impale;}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ retrieveBehaviour\ =\ table.Retrieve;}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ impaleBehaviour\ \ \ =\ table.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_table_ac92bf7e356d3c8f049050a4cb26d7e4e}{Impale}};}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ retrieveBehaviour\ =\ table.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_table_a1ef7458ba413bfe83f19f686fc21a7e4}{Retrieve}};}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}DelayAttack"{}},\ DelayAttack)}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}CancelDelayAttack"{}},\ ()\ =>\ delayAttack.Cancel())}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}CancelDelayAttack"{}},\ ()\ =>\ delayAttack.Cancel())}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}DelayAttack"{}},\ DelayAttack)}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}CancelDelayAttack"{}},\ ()\ =>\ delayAttack.\mbox{\hyperlink{class_sequencer_acfddf15dca56bc31d71e606b2b94f235}{Cancel}}())}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Dispose,\ \textcolor{stringliteral}{"{}CancelDelayAttack"{}},\ ()\ =>\ delayAttack.\mbox{\hyperlink{class_sequencer_acfddf15dca56bc31d71e606b2b94f235}{Cancel}}())}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00031}\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_tree_group_skewer_aeafc9f9d2b363fff5c9ce078b0019db5}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_tree_group_skewer_aeafc9f9d2b363fff5c9ce078b0019db5}{Active}}()}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_combinator_a1b9710c38f1741a41e093c16fe63106b}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_combinator_a1b9710c38f1741a41e093c16fe63106b}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00037}00037\ }
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ DelayAttack()}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ delayAttack?.Cancel();}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ delayAttack?.\mbox{\hyperlink{class_sequencer_acfddf15dca56bc31d71e606b2b94f235}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ delayAttack\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sequencer}{Sequencer}}();}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ delayAttack}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AppendInterval(activeDelay)}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Append(()\ =>\ impaleBehaviour.Active())}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WaitUntil(()\ =>\ impaleBehaviour.Invoker.IsEnd)}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AppendInterval(interval)}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Append(()\ =>\ retrieveBehaviour.Active())}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .WaitUntil(()\ =>\ retrieveBehaviour.Invoker.IsEnd)}
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Append(()\ =>\ Invoker.Complete())}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_sequencer_a54d39b00068e1b9828a28b2229fd8031}{AppendInterval}}(activeDelay)}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_sequencer_a37ba78b2a0ba195e159897f880bc07a6}{Append}}(()\ =>\ impaleBehaviour.\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_trap_impale_behaviour_a0493fa733c34e0d76b7f31f8a3572fe1}{Active}}())}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_sequencer_a37a5c4d3b9034385bee0d5caa2485275}{WaitUntil}}(()\ =>\ impaleBehaviour.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ab08def51d0ec9f00a78b7d4d121e522e}{IsEnd}})}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_sequencer_a54d39b00068e1b9828a28b2229fd8031}{AppendInterval}}(interval)}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_sequencer_a37ba78b2a0ba195e159897f880bc07a6}{Append}}(()\ =>\ retrieveBehaviour.\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_trap_retrieve_behaviour_ab89c2ba342ee5043d31cfdccbfe199c2}{Active}}())}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_sequencer_a37a5c4d3b9034385bee0d5caa2485275}{WaitUntil}}(()\ =>\ retrieveBehaviour.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ab08def51d0ec9f00a78b7d4d121e522e}{IsEnd}})}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_sequencer_a37ba78b2a0ba195e159897f880bc07a6}{Append}}(()\ =>\ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_combinator_a1b9710c38f1741a41e093c16fe63106b}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}}())}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ delayAttack.Play();}
+\DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ delayAttack.\mbox{\hyperlink{class_sequencer_adf9852a4eddab4c278afdf10ce7cb3af}{Play}}();}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00055}00055\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_tree_group_skewer_8cs_source_l00056}00056\ \}}

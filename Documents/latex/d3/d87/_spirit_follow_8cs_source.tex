@@ -1,6 +1,6 @@
 \doxysection{Spirit\+Follow.\+cs}
 \hypertarget{_spirit_follow_8cs_source}{}\label{_spirit_follow_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Spirits/Actions/SpiritFollow.cs@{C:/Project/Apollo/Assets/Scripts/Common/Spirits/Actions/SpiritFollow.cs}}
-
+\mbox{\hyperlink{_spirit_follow_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Threading;}
@@ -13,55 +13,55 @@
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00009}00009\ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_spirits_1_1_actions}{Common.Spirits.Actions}}}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00011}00011\ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SpiritFollow\ :\ MonoBehaviour,\ IUnitSequencer}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow}{SpiritFollow}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_common_1_1_i_unit_sequencer}{IUnitSequencer}}}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00013}00013\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ speed\ =\ 3f;}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ findInterval\ =\ 1f;}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DetectProperty\ detectProperty;}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_detect_property}{DetectProperty}}\ detectProperty;}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Speed\ \{\ \textcolor{keyword}{get}\ =>\ speed;\ \textcolor{keyword}{set}\ =>\ speed\ =\ value;\ \}}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ Unit\ =>\ Spirit;}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00018}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a8e06d6b2bfd782a07dc2dced4c9aa447}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a8e06d6b2bfd782a07dc2dced4c9aa447}{Speed}}\ \{\ \textcolor{keyword}{get}\ =>\ speed;\ \textcolor{keyword}{set}\ =>\ speed\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a7e3879c9a46da16261fbdd0484f48a0d}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a7e3879c9a46da16261fbdd0484f48a0d}{Unit}}\ =>\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit}{Spirit}};}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00020}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_ad4ba1664e620342f3e6e8745bfd9b021}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_table}{SectionTable}}\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00021}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a20dc6ee0604c0080afe01517f27949a2}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a20dc6ee0604c0080afe01517f27949a2}{Invoker}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ FollowType\ followType\ =\ FollowType.None;}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a92e4ae76829c0dc2795556ea3a3e6264}{FollowType}}\ followType\ =\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a92e4ae76829c0dc2795556ea3a3e6264}{FollowType}}.None;}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ findTask;}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Character\ Target\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Spirit\ Spirit\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ Target\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit}{Spirit}}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit}{Spirit}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ followTask;}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ PathfindingSystem\ Pathfinding\ =>\ Spirit.Pathfinding;}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_systems_1_1_pathfinding_system}{PathfindingSystem}}\ Pathfinding\ =>\ Spirit.Pathfinding;}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ FollowType\ \{\ None\ =\ 0,\ Dred\ =\ 1,\ Enemy\ =\ 2,\ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00030}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a92e4ae76829c0dc2795556ea3a3e6264}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a92e4ae76829c0dc2795556ea3a3e6264}{FollowType}}\ \{\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a92e4ae76829c0dc2795556ea3a3e6264a6adf97f83acf6453d4a6a4b1070f3754}{None}}\ =\ 0,\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ =\ 1,\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a92e4ae76829c0dc2795556ea3a3e6264a8c6d21187fb58b7a079d70030686b33e}{Enemy}}\ =\ 2,\ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00031}00031\ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Spirit\ spirit)}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00033}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a0d1cd9ec37fd37cae045537bf8cee483}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a0d1cd9ec37fd37cae045537bf8cee483}{Initialize}}(\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit}{Spirit}}\ spirit)}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Spirit\ \ =\ spirit;}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit}{Spirit}}\ \ =\ spirit;}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a20dc6ee0604c0080afe01517f27949a2}{Invoker}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}(Sections);}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00037}00037\ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}FindTarget"{}},\ ()\ =>\ FindingTask().Forget())}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}EnableAIMove"{}},\ ()\ =>\ Pathfinding.SetAIMove(\textcolor{keyword}{true}))}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}EnableRvo"{}},\ ()\ =>\ Pathfinding.SetRvo(\textcolor{keyword}{true}))}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}DisableAIMove"{}},\ ()\ =>\ Pathfinding.SetAIMove(\textcolor{keyword}{false}))}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}DisableRvo"{}},\ ()\ =>\ Pathfinding.SetRvo(\textcolor{keyword}{false}))}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}FindTarget"{}},\ ()\ =>\ FindingTask().Forget())}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}EnableAIMove"{}},\ ()\ =>\ Pathfinding.SetAIMove(\textcolor{keyword}{true}))}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}EnableRvo"{}},\ ()\ =>\ Pathfinding.SetRvo(\textcolor{keyword}{true}))}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}DisableAIMove"{}},\ ()\ =>\ Pathfinding.SetAIMove(\textcolor{keyword}{false}))}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}DisableRvo"{}},\ ()\ =>\ Pathfinding.SetRvo(\textcolor{keyword}{false}))}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cancellation(\textcolor{stringliteral}{"{}CancelFollow"{}},\ \textcolor{keyword}{new}\ []\ \{followTask,\ findTask\})}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ Pathfinding.SetSpeedRetriever(()\ =>\ Speed);}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ Pathfinding.SetSpeedRetriever(()\ =>\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a8e06d6b2bfd782a07dc2dced4c9aa447}{Speed}});}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ FollowDred()\ =>\ Active(FollowType.Dred);}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ FollowEnemy()\ =>\ Active(FollowType.Enemy);}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00050}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a45530f94b01552b7508939880e42b04c}{00050}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a45530f94b01552b7508939880e42b04c}{FollowDred}}()\ =>\ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24ccea4d3d769b812b6faa6b76e1a8abaece2d}{Active}}(\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a92e4ae76829c0dc2795556ea3a3e6264}{FollowType}}.Dred);}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00051}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a9e2dba05684f7a064763b705935e05f9}{00051}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a9e2dba05684f7a064763b705935e05f9}{FollowEnemy}}()\ =>\ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24ccea4d3d769b812b6faa6b76e1a8abaece2d}{Active}}(\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a92e4ae76829c0dc2795556ea3a3e6264}{FollowType}}.Enemy);}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00052}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a750f5c38d67874ab9f046cc518c9ee23}{00052}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a750f5c38d67874ab9f046cc518c9ee23}{Cancel}}()\ =>\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a20dc6ee0604c0080afe01517f27949a2}{Invoker}}.\mbox{\hyperlink{class_section_invoker_aa26adf36e80006bc7458495a349c3b7e}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Active(FollowType\ followType)}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24ccea4d3d769b812b6faa6b76e1a8abaece2d}{Active}}(\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a92e4ae76829c0dc2795556ea3a3e6264}{FollowType}}\ followType)}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a20dc6ee0604c0080afe01517f27949a2}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ this.followType\ =\ followType;\ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a20dc6ee0604c0080afe01517f27949a2}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ UniTaskVoid\ FindingTask()}
@@ -77,9 +77,9 @@
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00073}00073\ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (followType)}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FollowType.Dred:}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a92e4ae76829c0dc2795556ea3a3e6264}{FollowType}}.Dred:}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetList\ =\ Spirit.Detector.Get<Dred>(detectProperty);}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetList\ =\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit}{Spirit}}.\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit_a221b2c327406075916d602ecd07b399d}{Detector}}.Get<\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}>(detectProperty);}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ dred\ \textcolor{keywordflow}{in}\ targetList)}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -91,14 +91,14 @@
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00087}00087\ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FollowType.Enemy:}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a92e4ae76829c0dc2795556ea3a3e6264}{FollowType}}.Enemy:}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetList\ =\ Spirit.Detector.Get<NonPlayer>(detectProperty);}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetList\ =\ Spirit.\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit_a221b2c327406075916d602ecd07b399d}{Detector}}.Get<\mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player}{NonPlayer}}>(detectProperty);}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ targetList.Sort((x,\ y)\ =>}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ xDistance\ =\ Vector3.Distance(Spirit.Position,\ x.Position);}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ yDistance\ =\ Vector3.Distance(Spirit.Position,\ y.Position);}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ xDistance\ =\ Vector3.Distance(Spirit.\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit_a9f4894ffdd7d479212b276bede227c42}{Position}},\ x.Position);}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ yDistance\ =\ Vector3.Distance(Spirit.\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit_a9f4894ffdd7d479212b276bede227c42}{Position}},\ y.Position);}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00098}00098\ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ xDistance.CompareTo(yDistance)\ ;}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
@@ -125,19 +125,19 @@
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00121}00121\ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Target\ is\ \textcolor{keyword}{null}\ ||\ !Target.IsAlive)}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Target\ is\ \textcolor{keyword}{null}\ ||\ !Target.\mbox{\hyperlink{class_common_1_1_character_a46fdd9384f4e1e7dcc65d8ba3d919cd4}{IsAlive}})}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Target\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Pathfinding.Move(Target.Position,\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Pathfinding.Move(Target.\mbox{\hyperlink{class_common_1_1_character_a274ffe9dda8db3f5f753c8fbbd0c4a32}{Position}},\ \textcolor{keyword}{null});}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00131}00131\ }
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Yield(PlayerLoopTiming.Update,\ followTask.Token);}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00135}00135\ }
-\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ Invoker.Dispose();}
+\DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_follow_a20dc6ee0604c0080afe01517f27949a2}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a6062e5e18b03eb514b2fde87721fa690}{Dispose}}();}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00137}00137\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_follow_8cs_source_l00138}00138\ \}}
 

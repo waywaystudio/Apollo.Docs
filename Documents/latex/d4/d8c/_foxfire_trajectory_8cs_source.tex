@@ -1,6 +1,6 @@
 \doxysection{Foxfire\+Trajectory.\+cs}
 \hypertarget{_foxfire_trajectory_8cs_source}{}\label{_foxfire_trajectory_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Kimmihohs/FoxfireTrajectory.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Kimmihohs/FoxfireTrajectory.cs}}
-
+\mbox{\hyperlink{_foxfire_trajectory_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_projectiles}{Common.Projectiles}};}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }DG.Tweening;}
@@ -8,27 +8,27 @@
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00004}00004\ }
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players_1_1_kimmihohs}{Common.Skills.NonPlayers.Kimmihohs}}}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }FoxfireTrajectory\ :\ Trajectory}
+\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_foxfire_trajectory}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_foxfire_trajectory}{FoxfireTrajectory}}\ :\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectory}{Trajectory}}}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00008}00008\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Ease\ yoyoEase;}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Tween\ foxfireTween;}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Flying()}
+\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00014}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_foxfire_trajectory_a32055ae93c54b856943f992e16185b13}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_foxfire_trajectory_a32055ae93c54b856943f992e16185b13}{Flying}}()}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ var\ randomRange\ =\ Random.Range(0.85f,\ 1.15f);}
-\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ var\ destination\ =\ Projectile.transform.position\ +\ Direction\ *\ (distance\ *\ randomRange);}
-\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ var\ duration\ =\ distance\ /\ speed\ *\ randomRange;}
+\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ var\ randomRange\ =\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}.Range(0.85f,\ 1.15f);}
+\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ var\ destination\ =\ Projectile.transform.position\ +\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectory_af812e5d1a66fd5ee18c1ba332ce3f835}{Direction}}\ *\ (\mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectory_a83e7c6f86ccc6e17d2ebad83963ebefd}{distance}}\ *\ randomRange);}
+\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ var\ duration\ =\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectory_a83e7c6f86ccc6e17d2ebad83963ebefd}{distance}}\ /\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectory_a12630e35ba259c119c91310ae7f73e8c}{speed}}\ *\ randomRange;}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ foxfireTween\ =\ Projectile.transform.DOMove(destination,\ duration)}
+\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ foxfireTween\ =\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}.\mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}}.DOMove(destination,\ duration)}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetLoops(2,\ LoopType.Yoyo)}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(yoyoEase)}
-\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(Projectile.Invoker.Complete)}
+\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}.\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_a7d813ce3250d4ba37a45e27d86df6e9f}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}})}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Cancel()}
+\DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00027}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_foxfire_trajectory_aba6020796322f68fb6ba90a01dc9e85f}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_foxfire_trajectory_aba6020796322f68fb6ba90a01dc9e85f}{Cancel}}()}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ foxfireTween?.Kill();}
 \DoxyCodeLine{\Hypertarget{_foxfire_trajectory_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ foxfireTween\ =\ \textcolor{keyword}{null};}

@@ -1,0 +1,160 @@
+\doxysection{Common.\+Characters.\+Non\+Players.\+Summons.\+Budda Class Reference}
+\hypertarget{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_budda}{}\label{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_budda}\index{Common.Characters.NonPlayers.Summons.Budda@{Common.Characters.NonPlayers.Summons.Budda}}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon}{Common.\+Characters.\+Non\+Players.\+Summons.\+Summon}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon_a4101e2e6fcc8eb21cefa972dff149b7b}{Initialize}} ()
+\item 
+void \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon_ab861ecc93383d9537ff6291948971b3e}{Summons}} (\mbox{\hyperlink{class_common_1_1_character}{Character}} master)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_common_1_1_character}{Common.\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_common_1_1_character_aa86f40e641361098a374069cb4fb8971}{Pre\+Position}} (\mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{Pre\+Position\+Type}} type)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_a7231466979b271258b996e61462fdb4a}{Stop}} ()
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_a6ed0b22d7841dc34a88a324ec75a689b}{Rotate}} (Vector3 look\+Target, float rotate\+Per\+Frame, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_a40fe9f371cb942175dbf8ebd892724a9}{Rotate\+Instant}} (Vector3 look\+Target)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_a511a19ec860ea572de08e6366991a731}{Idle}} ()
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_ae3727f442cbc7a56632379fe4417cf01}{Idle\+Rigid}} ()
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_a8d09ca890adcfaea49622afdbc71b055}{Run}} ()
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_aa5f41333e05403d243b5a0ce05d04cc0}{Run}} (Vector3 destination, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_a6d7adc1bf674f3ad1d0e074dfa262082}{Dead}} (\mbox{\hyperlink{class_common_1_1_combat_log}{Combat\+Log}} log)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_a5171a75e7636aa5fb048cd5fffc76edc}{Take\+Paralysis}} (float duration)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_abe6b4c377518165c9b3708d734dd984a}{Take\+Knock\+Back}} (Vector3 from, Vector3 direction, \mbox{\hyperlink{class_common_1_1_knock_back_property}{Knock\+Back\+Property}} property)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_a9d6951e76cfebd1e4bf58ff12842cc0b}{Take\+Draw}} (Vector3 from, float max\+Distance, float speed, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_a5e6e371a915868e6431c224a10db8f96}{Take\+Horror}} (float duration)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_a2aef3805d2040b25990a49f970c6b8a1}{Take\+Knock\+Down}} (Vector3 from)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_a7a331870dd3505fcf39bda08986860f4}{Take\+Stun}} (float duration)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_aebc26fe98d3965441b615d3fc3c81f35}{Take\+Damage}} (\mbox{\hyperlink{interface_common_1_1_i_damage_entity}{IDamage\+Entity}} executor)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_ac0dc2d18ed0a69cfc64dd788bdd378bc}{Take\+Heal}} (\mbox{\hyperlink{interface_common_1_1_i_heal_entity}{IHeal\+Entity}} heal\+Entity)
+\item 
+void \mbox{\hyperlink{class_common_1_1_character_ab5898a4f69259686941d486eb789d95a}{Take\+Status\+Effect}} (\mbox{\hyperlink{interface_common_1_1_i_status_effect_entity}{IStatus\+Effect\+Entity}} executor)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_common_1_1_i_draw_taker}{Common.\+IDraw\+Taker}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_common_1_1_i_draw_taker_ad94b4cd0827b790fc81a88c48bb07f38}{Take\+Draw}} (Vector3 from, float max\+Distance, float speed, System.\+Action callback=null)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon}{Common.\+Characters.\+Non\+Players.\+Summons.\+Summon}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_common_1_1_character}{Character}} \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon_afac128fa043d1346aeced180f17400cd}{Master}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player}{Common.\+Characters.\+Non\+Players.\+Non\+Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table}{Non\+Player\+Skill\+Table}} \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player_ae4677aed76125a2fd12b388d787ee40e}{skills}}
+\item 
+\mbox{\hyperlink{class_common_1_1_systems_1_1_searching_system}{Searching\+System}} \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player_a484b1167ae2b8e6625c7d6536f11227f}{searching\+System}}
+\item 
+Behavior \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player_ad90c0ad7bf2caeaf027592a0186a0114}{behaviour\+Tree}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_common_1_1_character}{Common.\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}} \mbox{\hyperlink{class_common_1_1_character_a22af00daf09a4584c6feae0104ee5b97}{character\+Code}}
+\item 
+\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_stop_action}{Stop\+Action}} \mbox{\hyperlink{class_common_1_1_character_a5e6f91bc96b4b1d9d268f67ff1a66a57}{stop\+Control}}
+\item 
+\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_move_action}{Move\+Action}} \mbox{\hyperlink{class_common_1_1_character_af26563d9a108f3ffc6d6134d99fa7667}{move\+Control}}
+\item 
+\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_table}{Unit\+Behaviour\+Table}} \mbox{\hyperlink{class_common_1_1_character_a8a4449858a8cd230fa48e680fa029d62}{behaviour\+Table}}
+\item 
+\mbox{\hyperlink{class_common_1_1_combat_status}{Combat\+Status}} \mbox{\hyperlink{class_common_1_1_character_a532dcaf2ec46e41fb7b31a19ade66bbb}{combat\+Status}}
+\item 
+\mbox{\hyperlink{class_common_1_1_pre_position}{Pre\+Position}} \mbox{\hyperlink{class_common_1_1_character_a9107fc6ae79cbedcd08caaf620ec7273}{pre\+Position}}
+\item 
+\mbox{\hyperlink{class_common_1_1_systems_1_1_pathfinding_system}{Pathfinding\+System}} \mbox{\hyperlink{class_common_1_1_character_a1a7d2caa5c1e374a5205cfea92ca1475}{pathfinding}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player}{Common.\+Characters.\+Non\+Players.\+Non\+Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table}{Non\+Player\+Skill\+Table}} \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player_ab843bc39ad36b56772cce0868c4eed3b}{Skills}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_systems_1_1_searching_system}{Searching\+System}} \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player_aa1406c3ccb15ec2b192abd9ac1831583}{Searching\+System}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Behavior \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player_a27c809aee590462f8989b57bcd6208c8}{Behaviour\+Tree}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_common_1_1_character}{Common.\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}} \mbox{\hyperlink{class_common_1_1_character_a7a5f05394d48e91c1aea6c8d8a843378}{Data\+Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_common_1_1_character_a593eb39da7c9fa2d11027349904fa474}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_common_1_1_character_a46fdd9384f4e1e7dcc65d8ba3d919cd4}{Is\+Alive}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Vector3 \mbox{\hyperlink{class_common_1_1_character_a274ffe9dda8db3f5f753c8fbbd0c4a32}{Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Vector3 \mbox{\hyperlink{class_common_1_1_character_a40a1e699b45c1a6e0d97d224ad2b52c1}{Forward}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_table}{Unit\+Behaviour\+Table}} \mbox{\hyperlink{class_common_1_1_character_aa1a4b82596d7a09ebb8be0f04e78c304}{Behaviours}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_stat_table}{Stat\+Table}} \mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{Stat\+Table}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_status_effect_table}{Status\+Effect\+Table}} \mbox{\hyperlink{class_common_1_1_character_a6d8dec2c1edd5e96bb7e09bb718ba7e4}{Status\+Effect\+Table}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_combat_status}{Combat\+Status}} \mbox{\hyperlink{class_common_1_1_character_a52de756cc0a7782b45814353dd76df22}{Combat\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_combat_value}{Combat\+Value}} \mbox{\hyperlink{class_common_1_1_character_a12a50217e8c8f73d0dbedb9add4de3d3}{Hit\+Points}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_combat_value}{Combat\+Value}} \mbox{\hyperlink{class_common_1_1_character_a75b539bd6f049c87de31ad74a5a842bd}{Shield\+Points}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_action_table}{Action\+Table}}$<$ \mbox{\hyperlink{class_common_1_1_combat_log}{Combat\+Log}} $>$ \mbox{\hyperlink{class_common_1_1_character_a3fa5d84773fea3b76af3f22de59f36be}{On\+Damage\+Provide}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_action_table}{Action\+Table}}$<$ \mbox{\hyperlink{class_common_1_1_combat_log}{Combat\+Log}} $>$ \mbox{\hyperlink{class_common_1_1_character_a7a193325fc7c9ae0945b747a4f44e888}{On\+Heal\+Provide}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_action_table}{Action\+Table}}$<$ \mbox{\hyperlink{class_common_1_1_combat_log}{Combat\+Log}} $>$ \mbox{\hyperlink{class_common_1_1_character_ae954cdfdf7013b5230dc30171a8ac0e1}{On\+Take\+Damage}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage}{Character\+Take\+Damage}} \mbox{\hyperlink{class_common_1_1_character_a8df5da7510a2c899084a8505694c367a}{Take\+Damage\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_move_action}{Move\+Action}} \mbox{\hyperlink{class_common_1_1_character_aaa212d06cea90c897ff4eeeae7877683}{Move\+Control}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_systems_1_1_pathfinding_system}{Pathfinding\+System}} \mbox{\hyperlink{class_common_1_1_character_a134600c8e09396ae7fcb6b0705ec61ac}{Pathfinding}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model}{Detect\+Model}} \mbox{\hyperlink{class_common_1_1_character_a90eb0e170133dec9cbd85b5fff91c975}{Detector}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_state_matrix}{State\+Matrix}} \mbox{\hyperlink{class_common_1_1_character_a0751634b9962a80f0c761fe2e13a6f24}{Current\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour}{Unit\+Behaviour}} \mbox{\hyperlink{class_common_1_1_character_afcb4a8b6ec0bdc895a4204ec94083174}{Current\+Behaviour}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_common_1_1_i_combat_provider}{Common.\+ICombat\+Provider}}}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_common_1_1_i_unit}{Common.\+IUnit}}}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{interface_common_1_1_i_unit_a2ca74a8a9a8e98bfee6898eac58afbc9}{game\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Transform \mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_i_data_indexer}{IData\+Indexer}}}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_common_1_1_i_behaver}{Common.\+IBehaver}}}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_common_1_1_i_status_effect_taker}{Common.\+IStatus\+Effect\+Taker}}}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_budda_8cs_source_l00003}{3}} of file \mbox{\hyperlink{_budda_8cs_source}{Budda.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+Characters/\+Non\+Players/\+Summons/\mbox{\hyperlink{_budda_8cs}{Budda.\+cs}}\end{DoxyCompactItemize}

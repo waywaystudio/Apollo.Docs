@@ -1,6 +1,6 @@
 \doxysection{Harvest\+Spirits.\+cs}
 \hypertarget{_harvest_spirits_8cs_source}{}\label{_harvest_spirits_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/Actions/HarvestSpirits.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/Actions/HarvestSpirits.cs}}
-
+\mbox{\hyperlink{_harvest_spirits_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -12,87 +12,87 @@
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00008}00008\ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00009}00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_actions}{Common.Characters.Actions}}}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00010}00010\ \{}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }HarvestSpirits\ :\ MonoBehaviour,\ IUnitSequencer,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits}{HarvestSpirits}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_common_1_1_i_unit_sequencer}{IUnitSequencer}},\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00012}00012\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ drawDuration\ =\ 0.2f;}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ coolTimer;}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Effector\ effector;}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_effector}{Effector}}\ effector;}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ParticleSystem\ gourdEffect;}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DetectProperty\ detectProperty;}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_detect_property}{DetectProperty}}\ detectProperty;}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ harvestingTask;}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ Unit\ =>\ Dred;}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<Spirit>\ AbsorbedSpirits\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00021}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_ab7382d89a31c6b2fb8b9e82afb8b3a15}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_ab7382d89a31c6b2fb8b9e82afb8b3a15}{Unit}}\ =>\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}};}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00022}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a35e9b08e45943ec40b19f76da3caade5}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_table}{SectionTable}}\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00023}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a59e75624f5ac7501ad3cef8b2398483f}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a59e75624f5ac7501ad3cef8b2398483f}{Invoker}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00024}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a5c0254f4b48df3df1e6757e5f1813ff6}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<Spirit>\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a5c0254f4b48df3df1e6757e5f1813ff6}{AbsorbedSpirits}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dred\ Dred\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<Spirit>\ CalledSpirits\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CombatValue\ SpiritPoints\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Transform\ DredBody\ =>\ Dred.PrePosition(PrePositionType.Origin);}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_combat_value}{CombatValue}}\ SpiritPoints\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Transform\ DredBody\ =>\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}.\mbox{\hyperlink{class_common_1_1_character_aa86f40e641361098a374069cb4fb8971}{PrePosition}}(\mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{PrePositionType}}.Origin);}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00032}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a9d6b8338d946677d346c683b4ef19fad}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a9d6b8338d946677d346c683b4ef19fad}{Initialize}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ \ \ \ \ \ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Dred\ \ \ \ \ \ \ \ \ =\ dred;}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ SpiritPoints\ =\ dred.SpiritPoints;}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a59e75624f5ac7501ad3cef8b2398483f}{Invoker}}\ \ \ \ \ \ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}(Sections);}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ \ \ \ \ \ \ \ \ =\ dred;}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ SpiritPoints\ =\ dred.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_acf686bf5e6f173f6204a5b4730ce137b}{SpiritPoints}};}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}CoolTimeReady"{}},\ ()\ =>\ !coolTimer.IsRunning)}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}CoolTimeReady"{}},\ ()\ =>\ !coolTimer.\mbox{\hyperlink{class_time_trigger_a0e071075eec5f038c342ae98c23c6dcc}{IsRunning}})}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}HasSpirits"{}},\ TryGetSpirits)}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}PlayCoolTimer"{}},\ coolTimer.Play)}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}Absorbing"{}},\ ()\ =>\ Absorbing().Forget())}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Cancel,\ \textcolor{stringliteral}{"{}CancelAbsorbing"{}},\ CancelAbsorbing)}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}ClearSpiritList"{}},\ AbsorbedSpirits.Clear)}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}CancelAbsorbing"{}},\ CancelAbsorbing)}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}CoolTimerDispose"{}},\ coolTimer.Dispose)}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}DestroySpirits"{}},\ DestroySpirits)}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}PlayCoolTimer"{}},\ coolTimer.\mbox{\hyperlink{class_time_trigger_a1cab158a91639ac84536551518479fa9}{Play}})}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}Absorbing"{}},\ ()\ =>\ Absorbing().Forget())}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Cancel,\ \textcolor{stringliteral}{"{}CancelAbsorbing"{}},\ CancelAbsorbing)}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}ClearSpiritList"{}},\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a5c0254f4b48df3df1e6757e5f1813ff6}{AbsorbedSpirits}}.Clear)}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Dispose,\ \textcolor{stringliteral}{"{}CancelAbsorbing"{}},\ CancelAbsorbing)}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Dispose,\ \textcolor{stringliteral}{"{}CoolTimerDispose"{}},\ coolTimer.\mbox{\hyperlink{class_time_trigger_aada6410a247d3ab1ba7d26e90821b016}{Dispose}})}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Dispose,\ \textcolor{stringliteral}{"{}DestroySpirits"{}},\ DestroySpirits)}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ effector.Initialize(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ SpiritPoints.AddEvent(\textcolor{stringliteral}{"{}GourdEffector"{}},\ GourdEffector);}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ effector.\mbox{\hyperlink{class_common_1_1_effector_ad6123dc4b2e083651c82d5c184930571}{Initialize}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ SpiritPoints.\mbox{\hyperlink{class_observable_a1d65dfc7a1fe342a534af8f732a7e297}{AddEvent}}(\textcolor{stringliteral}{"{}GourdEffector"{}},\ GourdEffector);}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ GourdEffector(SpiritPoints.Value);}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ GourdEffector(SpiritPoints.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}});}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00055}00055\ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Reap()}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00056}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a31e0aa6732d2b252c5182e6696e53bef}{00056}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a31e0aa6732d2b252c5182e6696e53bef}{Reap}}()}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a59e75624f5ac7501ad3cef8b2398483f}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a59e75624f5ac7501ad3cef8b2398483f}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00062}00062\ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00063}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a1f67791b7a0a8ddbb3f3d873a67169b6}{00063}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a1f67791b7a0a8ddbb3f3d873a67169b6}{Cancel}}()\ =>\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a59e75624f5ac7501ad3cef8b2398483f}{Invoker}}.\mbox{\hyperlink{class_section_invoker_aa26adf36e80006bc7458495a349c3b7e}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00064}00064\ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ TryGetSpirits()}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ AbsorbedSpirits\ =\ Dred.Detector.Get<Spirit>(detectProperty);}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a5c0254f4b48df3df1e6757e5f1813ff6}{AbsorbedSpirits}}\ =\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}.\mbox{\hyperlink{class_common_1_1_character_a90eb0e170133dec9cbd85b5fff91c975}{Detector}}.Get<\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit}{Spirit}}>(detectProperty);}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00069}00069\ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ AbsorbedSpirits.HasElement();}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a5c0254f4b48df3df1e6757e5f1813ff6}{AbsorbedSpirits}}.HasElement();}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00072}00072\ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ UniTask\ Absorbing()}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (AbsorbedSpirits.IsNullOrEmpty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a5c0254f4b48df3df1e6757e5f1813ff6}{AbsorbedSpirits}}.IsNullOrEmpty())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ harvestingTask\ \ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ AbsorbedSpirits.ForEach(spirit\ =>\ spirit.Draw(DredBody,\ drawDuration,\ \textcolor{keyword}{null}));}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ CalledSpirits.AddRange(AbsorbedSpirits);}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a5c0254f4b48df3df1e6757e5f1813ff6}{AbsorbedSpirits}}.ForEach(spirit\ =>\ spirit.Draw(DredBody,\ drawDuration,\ \textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ CalledSpirits.AddRange(\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a5c0254f4b48df3df1e6757e5f1813ff6}{AbsorbedSpirits}});}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00081}00081\ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Delay(TimeSpan.FromSeconds(drawDuration),\ cancellationToken:\ harvestingTask.Token);}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Complete();}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a59e75624f5ac7501ad3cef8b2398483f}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}}();}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00086}00086\ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CancelAbsorbing()}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (AbsorbedSpirits.HasElement())}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a5c0254f4b48df3df1e6757e5f1813ff6}{AbsorbedSpirits}}.HasElement())}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AbsorbedSpirits.ForEach(spirit\ =>\ spirit.DrawAction.Cancel());}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a5c0254f4b48df3df1e6757e5f1813ff6}{AbsorbedSpirits}}.ForEach(spirit\ =>\ spirit.DrawAction.Cancel());}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (harvestingTask\ is\ not\ \textcolor{keyword}{null})}
@@ -121,7 +121,7 @@
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ CalledSpirits?.ForReverse(spirit\ =>\ \{\ \textcolor{keywordflow}{if}\ (!spirit.IsNullOrDestroyed())\ Destroy(spirit.gameObject);\ \});}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00119}00119\ }
-\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ Invoker?.Dispose();}
+\DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_harvest_spirits_a59e75624f5ac7501ad3cef8b2398483f}{Invoker}}?.\mbox{\hyperlink{class_section_invoker_a6062e5e18b03eb514b2fde87721fa690}{Dispose}}();}
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00121}00121\ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00122}00122\ }
 \DoxyCodeLine{\Hypertarget{_harvest_spirits_8cs_source_l00123}00123\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}

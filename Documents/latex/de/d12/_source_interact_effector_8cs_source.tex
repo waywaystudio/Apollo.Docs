@@ -1,6 +1,6 @@
 \doxysection{Source\+Interact\+Effector.\+cs}
 \hypertarget{_source_interact_effector_8cs_source}{}\label{_source_interact_effector_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/Props/Rewards/SourceInteractEffector.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/Props/Rewards/SourceInteractEffector.cs}}
-
+\mbox{\hyperlink{_source_interact_effector_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
@@ -10,47 +10,47 @@
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00006}00006\ \ \ \ \ \textcolor{comment}{//\ 1.\ Camera\ Focus\ to\ AbilitySource}}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ 2.\ Slow\ zoom}}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//\ 3.\ Shake}}
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SourceInteractEffector\ :\ MonoBehaviour,\ ISequencer,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00009}\mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector}{SourceInteractEffector}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_sequencer}{ISequencer}},\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00010}00010\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ sequenceTimeTrigger;}
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Effector\ effector;}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_effector}{Effector}}\ effector;}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Reward\ source;}
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_reward}{Reward}}\ source;}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00015}\mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_aa3bd0bc25f867951c190caa2056febd0}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_table}{SectionTable}}\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00016}\mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_a3431ca208d4a66bc1118c643bf331c8d}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_a3431ca208d4a66bc1118c643bf331c8d}{Invoker}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00017}00017\ }
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Reward\ source)}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00019}\mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_ac8d9978466d984a2e725019a374cc963}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_ac8d9978466d984a2e725019a374cc963}{Initialize}}(\mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_reward}{Reward}}\ source)}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ this.source\ =\ source;}
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ \ \ \ \ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ sequenceTimeTrigger.AddCallBack(\textcolor{stringliteral}{"{}Complete"{}},\ Invoker.Complete);}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_a3431ca208d4a66bc1118c643bf331c8d}{Invoker}}\ \ \ \ \ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}(Sections);}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ sequenceTimeTrigger.\mbox{\hyperlink{class_time_trigger_a8d5526e17f82d5108dbd8a7e7bc6b47f}{AddCallBack}}(\textcolor{stringliteral}{"{}Complete"{}},\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_a3431ca208d4a66bc1118c643bf331c8d}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}});}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00024}00024\ }
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}HasSource"{}},\ ()\ =>\ this.source\ is\ not\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}PlayTimeTrigger"{}},\ sequenceTimeTrigger.Play)}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}PlayTimeTrigger"{}},\ sequenceTimeTrigger.\mbox{\hyperlink{class_time_trigger_a1cab158a91639ac84536551518479fa9}{Play}})}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ effector.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ effector.\mbox{\hyperlink{class_common_1_1_effector_ad6123dc4b2e083651c82d5c184930571}{Initialize}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00033}\mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_aca4ef717a3976a4fbe337eb7ba8997e3}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_aca4ef717a3976a4fbe337eb7ba8997e3}{Active}}()}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_a3431ca208d4a66bc1118c643bf331c8d}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_a3431ca208d4a66bc1118c643bf331c8d}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00039}00039\ }
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00040}\mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_aa4ed71c9bad78b6477c430fefd4cbe16}{00040}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_aa4ed71c9bad78b6477c430fefd4cbe16}{Cancel}}()\ =>\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_a3431ca208d4a66bc1118c643bf331c8d}{Invoker}}.\mbox{\hyperlink{class_section_invoker_aa26adf36e80006bc7458495a349c3b7e}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ Invoker.Dispose();}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector_a3431ca208d4a66bc1118c643bf331c8d}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a6062e5e18b03eb514b2fde87721fa690}{Dispose}}();}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00044}00044\ }
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00045}00045\ }
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00046}00046\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ =\ transform.GetComponentInChildrenWithDepth<Effector>(1);}
+\DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ =\ transform.GetComponentInChildrenWithDepth<\mbox{\hyperlink{class_common_1_1_effector}{Effector}}>(1);}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ effector.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_source_interact_effector_8cs_source_l00052}00052\ \textcolor{preprocessor}{\#endif}}

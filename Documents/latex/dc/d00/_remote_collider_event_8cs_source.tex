@@ -1,27 +1,27 @@
 \doxysection{Remote\+Collider\+Event.\+cs}
 \hypertarget{_remote_collider_event_8cs_source}{}\label{_remote_collider_event_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Component/RemoteColliderEvent.cs@{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Component/RemoteColliderEvent.cs}}
-
+\mbox{\hyperlink{_remote_collider_event_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common}{Common}}}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00004}00004\ \{}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00005}00005\ \ \ \ \ [RequireComponent(typeof(Collider))]}
-\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }RemoteColliderEvent\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_remote_collider_event}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_remote_collider_event}{RemoteColliderEvent}}\ :\ MonoBehaviour}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00007}00007\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ LayerMask\ interactLayerMask;}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Collider\ modelCollider;}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Collider\ Model\ =>\ modelCollider;}
-\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<GameObject>}}\ OnEntered\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<GameObject>}}\ OnExit\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_remote_collider_event_a5e1f9748d97e5b78ffddda22ad367b9d}{00011}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Collider\ \mbox{\hyperlink{class_common_1_1_remote_collider_event_a5e1f9748d97e5b78ffddda22ad367b9d}{Model}}\ =>\ modelCollider;}
+\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_remote_collider_event_a27d8ab23d0362b045daa46e91bdb7f9f}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<GameObject>}}\ \mbox{\hyperlink{class_common_1_1_remote_collider_event_a27d8ab23d0362b045daa46e91bdb7f9f}{OnEntered}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_remote_collider_event_a764d48ccd5ca5fc4ac2fe9803c971751}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<GameObject>}}\ \mbox{\hyperlink{class_common_1_1_remote_collider_event_a764d48ccd5ca5fc4ac2fe9803c971751}{OnExit}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ActiveCollider()\ =>\ Model.enabled\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ DeActiveCollider()\ =>\ Model.enabled\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ RegisterExecutor(\textcolor{keywordtype}{string}\ key,\ Executor\ executor)}
+\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_remote_collider_event_ab60b670f565d252b276e26603e237221}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_remote_collider_event_ab60b670f565d252b276e26603e237221}{ActiveCollider}}()\ =>\ Model.enabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_remote_collider_event_a82e237844a8a98e44c062e810c811ad7}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_remote_collider_event_a82e237844a8a98e44c062e810c811ad7}{DeActiveCollider}}()\ =>\ Model.enabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00018}\mbox{\hyperlink{class_common_1_1_remote_collider_event_aeebe6270fd8205d8670985142921ec42}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_remote_collider_event_aeebe6270fd8205d8670985142921ec42}{RegisterExecutor}}(\textcolor{keywordtype}{string}\ key,\ \mbox{\hyperlink{class_common_1_1_executor}{Executor}}\ executor)}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ OnEntered.Add(key,\ col\ =>\ executor.Execute(col.gameObject));}
+\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_remote_collider_event_a27d8ab23d0362b045daa46e91bdb7f9f}{OnEntered}}.Add(key,\ col\ =>\ executor.\mbox{\hyperlink{class_common_1_1_executor_ada0aad3eb7a3b8b6124265474df85982}{Execute}}(col.gameObject));}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00023}00023\ }
@@ -29,7 +29,7 @@
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (other.gameObject.IsInLayerMask(interactLayerMask))}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnEntered.Invoke(other.gameObject);}
+\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_remote_collider_event_a27d8ab23d0362b045daa46e91bdb7f9f}{OnEntered}}.Invoke(other.gameObject);}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ }
@@ -37,7 +37,7 @@
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (other.gameObject.IsInLayerMask(interactLayerMask))}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnExit.Invoke(other.gameObject);}
+\DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_remote_collider_event_a764d48ccd5ca5fc4ac2fe9803c971751}{OnExit}}.Invoke(other.gameObject);}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_remote_collider_event_8cs_source_l00039}00039\ }

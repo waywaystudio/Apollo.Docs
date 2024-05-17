@@ -1,6 +1,6 @@
 \doxysection{Resource\+Data\+Drawer.\+cs}
 \hypertarget{_resource_data_drawer_8cs_source}{}\label{_resource_data_drawer_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/CoreEditor/ResourceDataDrawer.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/CoreEditor/ResourceDataDrawer.cs}}
-
+\mbox{\hyperlink{_resource_data_drawer_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -11,14 +11,14 @@
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_core_editor}{CoreEditor}}}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00009}00009\ \{}
-\DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ResourceDataDrawer<T0,\ T1>\ :\ OdinAttributeProcessor<T0>\ where\ T0\ :\ ResourceData<T1>\ where\ T1\ :\ UnityEngine.Object}
+\DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00010}\mbox{\hyperlink{class_core_editor_1_1_resource_data_drawer}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_core_editor_1_1_resource_data_drawer}{ResourceDataDrawer}}<T0,\ T1>\ :\ OdinAttributeProcessor<T0>\ where\ T0\ :\ \mbox{\hyperlink{class_databases_1_1_resource_data}{ResourceData}}<T1>\ where\ T1\ :\ UnityEngine.\mbox{\hyperlink{_pool_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00011}00011\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessSelfAttributes(InspectorProperty\ property,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00012}\mbox{\hyperlink{class_core_editor_1_1_resource_data_drawer_ae977fb32739f7817f362648bd18427a2}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_editor_1_1_resource_data_drawer_ae977fb32739f7817f362648bd18427a2}{ProcessSelfAttributes}}(InspectorProperty\ property,\ List<Attribute>\ attributes)}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ SearchableAttribute());}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00017}\mbox{\hyperlink{class_core_editor_1_1_resource_data_drawer_a4d88713ba4ad73ca086aeff1b77879f1}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_editor_1_1_resource_data_drawer_a4d88713ba4ad73ca086aeff1b77879f1}{ProcessChildMemberAttributes}}(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}searchingTargetPath"{}})}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -37,9 +37,9 @@
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00034}00034\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00035}00035\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ResourceTableDrawer<T>\ :\ OdinAttributeProcessor<ResourceData<T>.ResourceTable>\ where\ T\ :\ UnityEngine.Object}
+\DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00036}\mbox{\hyperlink{class_core_editor_1_1_resource_table_drawer}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_core_editor_1_1_resource_table_drawer}{ResourceTableDrawer}}<T>\ :\ OdinAttributeProcessor<ResourceData<T>.ResourceTable>\ where\ T\ :\ UnityEngine.\mbox{\hyperlink{_pool_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00037}00037\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00038}\mbox{\hyperlink{class_core_editor_1_1_resource_table_drawer_ab4b58b1c18fa32121572182ed811fafa}{00038}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_editor_1_1_resource_table_drawer_ab4b58b1c18fa32121572182ed811fafa}{ProcessChildMemberAttributes}}(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}DataIndex"{}})}
 \DoxyCodeLine{\Hypertarget{_resource_data_drawer_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}

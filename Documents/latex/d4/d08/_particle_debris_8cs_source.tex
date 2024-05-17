@@ -1,6 +1,6 @@
 \doxysection{Particle\+Debris.\+cs}
 \hypertarget{_particle_debris_8cs_source}{}\label{_particle_debris_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Effects/Particles/ParticleDebris.cs@{C:/Project/Apollo/Assets/Scripts/Common/Effects/Particles/ParticleDebris.cs}}
-
+\mbox{\hyperlink{_particle_debris_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }DG.Tweening;}
@@ -8,35 +8,35 @@
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00004}00004\ }
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00005}\mbox{\hyperlink{namespace_common_1_1_effects_1_1_particles}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_particles}{Common.Effects.Particles}}}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ParticleDebris\ :\ EffectBehaviour}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_effects_1_1_particles_1_1_particle_debris}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_effects_1_1_particles_1_1_particle_debris}{ParticleDebris}}\ :\ \mbox{\hyperlink{class_common_1_1_effects_1_1_effect_behaviour}{EffectBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00008}00008\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ PrePositionType\ instantiatePositionType;}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{PrePositionType}}\ instantiatePositionType;}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<GameObject>\ explodedPrefabList\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Vector2Int\ minMaxCount\ =\ \textcolor{keyword}{new}(3,\ 6);}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Vector2\ minMaxScale\ =\ \textcolor{keyword}{new}(3f,\ 5f);}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ spreadAmount\ =\ 30f;}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ explosionForce\ =\ 10f;}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ GetRandomSpreadAmount\ =>\ Random.Range(-\/spreadAmount,\ spreadAmount);}
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Character\ character;}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ GetRandomSpreadAmount\ =>\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}.Range(-\/spreadAmount,\ spreadAmount);}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ character;}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00018}00018\ }
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(ISequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00020}\mbox{\hyperlink{class_common_1_1_effects_1_1_particles_1_1_particle_debris_ac1254d935171d7ef9cb1c6ac688dd8c1}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_particles_1_1_particle_debris_ac1254d935171d7ef9cb1c6ac688dd8c1}{Initialize}}(\mbox{\hyperlink{interface_i_sequencer}{ISequencer}}\ sequencer)}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(sequencer);}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ IUnitSequencer\ unitSequencer)\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (unitSequencer.Unit\ is\ not\ Character\ unitCharacter)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ \mbox{\hyperlink{interface_common_1_1_i_unit_sequencer}{IUnitSequencer}}\ unitSequencer)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (unitSequencer.Unit\ is\ not\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ unitCharacter)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00026}00026\ }
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ character\ =\ unitCharacter;}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ PlayEffect()}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00030}\mbox{\hyperlink{class_common_1_1_effects_1_1_particles_1_1_particle_debris_a172b8ca4485ce8c4922ddfa586f5e443}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_particles_1_1_particle_debris_a172b8ca4485ce8c4922ddfa586f5e443}{PlayEffect}}()}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ var\ pivotPosition\ =\ character.PrePosition(instantiatePositionType).position;}
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ var\ pivotRotation\ =\ character.PrePosition(instantiatePositionType).rotation;}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ var\ pivotPosition\ =\ character.\mbox{\hyperlink{class_common_1_1_character_aa86f40e641361098a374069cb4fb8971}{PrePosition}}(instantiatePositionType).position;}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ var\ pivotRotation\ =\ character.\mbox{\hyperlink{class_common_1_1_character_aa86f40e641361098a374069cb4fb8971}{PrePosition}}(instantiatePositionType).rotation;}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ Random.Range(minMaxCount.x,\ minMaxCount.y\ +\ 1);\ i++)}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}.Range(minMaxCount.x,\ minMaxCount.y\ +\ 1);\ i++)}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ randomPrefab\ =\ explodedPrefabList.Random();}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ instance\ =\ Instantiate(randomPrefab,\ pivotPosition,\ pivotRotation,\ \textcolor{keyword}{null}).transform;}
@@ -44,8 +44,8 @@
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00040}00040\ }
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!debriRigidbody.HasComponent())\ \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instance.rotation\ \ \ =\ Quaternion.Euler(Random.Range(0,\ 360),\ Random.Range(0,\ 360),\ Random.Range(0,\ 360));}
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instance.localScale\ =\ Vector3.one\ *\ Random.Range(minMaxScale.x,\ minMaxScale.y);}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instance.rotation\ \ \ =\ Quaternion.Euler(\mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}.Range(0,\ 360),\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}.Range(0,\ 360),\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}.Range(0,\ 360));}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instance.localScale\ =\ Vector3.one\ *\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}.Range(minMaxScale.x,\ minMaxScale.y);}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ rotateDelta\ =\ Quaternion.Euler(GetRandomSpreadAmount,GetRandomSpreadAmount,\ 0);}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ explosionDirection\ =\ rotateDelta\ *\ transform.forward\ *\ -\/1f;}
@@ -69,7 +69,7 @@
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ DOVirtual.DelayedCall(10f,\ ()\ =>\ Destroy(gameObject));}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00067}00067\ }
-\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ StopEffect()}
+\DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00068}\mbox{\hyperlink{class_common_1_1_effects_1_1_particles_1_1_particle_debris_aa82b117d2c5e16b69261529f3dbb6371}{00068}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_particles_1_1_particle_debris_aa82b117d2c5e16b69261529f3dbb6371}{StopEffect}}()}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_particle_debris_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}

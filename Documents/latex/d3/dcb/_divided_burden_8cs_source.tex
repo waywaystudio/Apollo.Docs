@@ -1,6 +1,6 @@
 \doxysection{Divided\+Burden.\+cs}
 \hypertarget{_divided_burden_8cs_source}{}\label{_divided_burden_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/BellVeer/DividedBurden.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/BellVeer/DividedBurden.cs}}
-
+\mbox{\hyperlink{_divided_burden_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players_1_1_summons}{Common.Characters.NonPlayers.Summons}};}
@@ -12,81 +12,81 @@
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//\ 받은\ 피해의\ [30\%]를\ 소환된\ 정령의\ 수에\ 따라\ 나누어\ 받는다.}}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SpectralSpirit소환시\ Dred에\ 방어(quality.Value)\ 제공}}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00010}00010\ \ \ \ \ \textcolor{comment}{//\ Dred\ OnDamageTaken\ 에\ 소환물에\ 데미지\ 1/n\ }}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DividedBurden\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_divided_burden}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_divided_burden}{DividedBurden}}\ :\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery}{Mastery}}}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00012}00012\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SummonSpawnEvent\ summonSpawnEvent;}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon_spawn_event}{SummonSpawnEvent}}\ summonSpawnEvent;}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dred\ dred;}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ StatEntity\ damageReduceEntity;}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ SpectralDance\ spectralDance;}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred;}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}\ damageReduceEntity;}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_bell_veers_1_1_spectral_dance}{SpectralDance}}\ spectralDance;}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_divided_burden_a9fc686db05059e583d0ceb4b8b68bcfb}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_divided_burden_a9fc686db05059e583d0ceb4b8b68bcfb}{Injection}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ this.dred\ \ \ \ \ \ \ \ \ \ =\ dred;}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ spectralDance\ \ \ \ \ \ =\ dred.Skills.SpectralDance;}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ damageReduceEntity\ =\ \textcolor{keyword}{new}\ StatEntity(StatType.DamageDecreaseRate,\ \textcolor{stringliteral}{"{}DividedBurden.DamageDecrease"{}},\ 0f);}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ spectralDance\ \ \ \ \ \ =\ dred.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_a2625c9d5199e0e18ddbb0c7ad9ed943b}{Skills}}.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_skills_aa2a762b014d60ccf442714116d605d7c}{SpectralDance}};}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ damageReduceEntity\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}(\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.DamageDecreaseRate,\ \textcolor{stringliteral}{"{}DividedBurden.DamageDecrease"{}},\ 0f);}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ AddSpectralSpiritCount(dred);}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2271c058314d7872f0c186c167769e42}{AddSpectralSpiritCount}}(dred);}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ dred.StatTable.Add(damageReduceEntity);}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ dred.OnTakeDamage.Add(\textcolor{stringliteral}{"{}SplatDamageToSpirit"{}},\ SplatDamageToSpirit);}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ dred.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}.\mbox{\hyperlink{class_common_1_1_stat_table_ab19cc9700d6eda177ac7f853e7935c55}{Add}}(damageReduceEntity);}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ dred.\mbox{\hyperlink{class_common_1_1_character_ae954cdfdf7013b5230dc30171a8ac0e1}{OnTakeDamage}}.Add(\textcolor{stringliteral}{"{}SplatDamageToSpirit"{}},\ SplatDamageToSpirit);}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ summonSpawnEvent.Add(DataIndex.SpectralSpirit,\ \textcolor{stringliteral}{"{}DividedBurden"{}},\ AddReduceDamage);}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ summonSpawnEvent.Add(\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.SpectralSpirit,\ \textcolor{stringliteral}{"{}DividedBurden"{}},\ AddReduceDamage);}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00033}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_divided_burden_a034476366427e6a2b519625a65dd23ff}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_divided_burden_a034476366427e6a2b519625a65dd23ff}{Abolition}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ RemoveSpectralSpiritCount(dred);}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a9a2cc1820390ad6638b30889d82e5a1b}{RemoveSpectralSpiritCount}}(dred);}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ dred.StatTable.Remove(damageReduceEntity);}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ dred.OnTakeDamage.Remove(\textcolor{stringliteral}{"{}SplatDamageToSpirit"{}});}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ dred.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}.\mbox{\hyperlink{class_common_1_1_stat_table_a133158ebbb1719b611e827ebfffafa33}{Remove}}(damageReduceEntity);}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ dred.\mbox{\hyperlink{class_common_1_1_character_ae954cdfdf7013b5230dc30171a8ac0e1}{OnTakeDamage}}.Remove(\textcolor{stringliteral}{"{}SplatDamageToSpirit"{}});}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ summonSpawnEvent.Remove(DataIndex.SpectralSpirit,\ \textcolor{stringliteral}{"{}DividedBurden"{}},\ RemoveReduceDamage);}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ summonSpawnEvent.Remove(\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.SpectralSpirit,\ \textcolor{stringliteral}{"{}DividedBurden"{}},\ RemoveReduceDamage);}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00043}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_divided_burden_a85cd3a095f06e240fd80bd85d664b40c}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_divided_burden_a85cd3a095f06e240fd80bd85d664b40c}{OnQualityChanged}}()}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00047}00047\ }
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SplatDamageToSpirit(CombatLog\ log)}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SplatDamageToSpirit(\mbox{\hyperlink{class_common_1_1_combat_log}{CombatLog}}\ log)}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spirits\ =\ spectralDance.SpectralSpirits;}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spirits\ =\ spectralDance.\mbox{\hyperlink{class_common_1_1_skills_1_1_bell_veers_1_1_spectral_dance_a4d567f8d8b915ffd77921dfab52a9777}{SpectralSpirits}};}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00052}00052\ }
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (spirits.IsNullOrEmpty())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ var\ reducedPower\ =\ log.Value\ \ \ \ *\ quality.Value;}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ var\ reducedPower\ =\ log.Value\ \ \ \ *\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}};}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ var\ dividedPower\ =\ reducedPower\ /\ spirits.Count;}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ spirits.ForEach(spirit\ =>}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spirit.TakeDamageAction.TakeDamage(dred,\ log.CombatIndex,\ dividedPower);}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spirit.TakeDamageAction.TakeDamage(dred,\ log.\mbox{\hyperlink{class_common_1_1_combat_log_a2a7dbb7c8a68d5f04bceb1b1d10d7a8b}{CombatIndex}},\ dividedPower);}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00063}00063\ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddReduceDamage(Summon\ summon)}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddReduceDamage(\mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon}{Summon}}\ summon)}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/0.3,\ -\/0.45,\ -\/0.6,\ -\/0.75}}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ damageReduceEntity.Value\ =\ -\/quality.Value;}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ damageReduceEntity.Value\ =\ -\/\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}};}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00068}00068\ }
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ summon.Behaviours.Dead.Sections}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}TryRemoveReduceDamage"{}},\ TryRemoveReduceDamage)}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Complete,\ \textcolor{stringliteral}{"{}TryRemoveReduceDamage"{}},\ TryRemoveReduceDamage)}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00073}00073\ }
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RemoveReduceDamage(Summon\ summon)}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RemoveReduceDamage(\mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon}{Summon}}\ summon)}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ damageReduceEntity.Value\ =\ 0f;}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ summon.Behaviours.Dead.Sections}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Complete,\ \textcolor{stringliteral}{"{}TryRemoveReduceDamage"{}})}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Complete,\ \textcolor{stringliteral}{"{}TryRemoveReduceDamage"{}})}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00082}00082\ }
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ TryRemoveReduceDamage()}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (spectralDance.SpectralSpirits.IsNullOrEmpty())}
+\DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (spectralDance.\mbox{\hyperlink{class_common_1_1_skills_1_1_bell_veers_1_1_spectral_dance_a4d567f8d8b915ffd77921dfab52a9777}{SpectralSpirits}}.IsNullOrEmpty())}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageReduceEntity.Value\ =\ 0f;}
 \DoxyCodeLine{\Hypertarget{_divided_burden_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \}}

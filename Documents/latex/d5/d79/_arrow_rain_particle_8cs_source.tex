@@ -1,6 +1,6 @@
 \doxysection{Arrow\+Rain\+Particle.\+cs}
 \hypertarget{_arrow_rain_particle_8cs_source}{}\label{_arrow_rain_particle_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Variants/UnderworldSoldiers/ArrowRainParticle.cs@{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Variants/UnderworldSoldiers/ArrowRainParticle.cs}}
-
+\mbox{\hyperlink{_arrow_rain_particle_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Threading;}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_effects}{Common.Effects}};}
@@ -11,20 +11,20 @@
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00007}\mbox{\hyperlink{namespace_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers}{00007}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers}{Common.Projectiles.Variants.UnderworldSoldiers}}}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00008}00008\ \{}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ TODO.\ require\ ReWork\ Later...}}
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle}{ArrowRainParticle}}\ :\ EffectBehaviour}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle}{ArrowRainParticle}}\ :\ \mbox{\hyperlink{class_common_1_1_effects_1_1_effect_behaviour}{EffectBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00014}00014\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ParticlePool\ pool;}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_particles_1_1_particle_pool}{ParticlePool}}\ pool;}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ GameObject\ provideObject;}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ cts1;}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ cts2;}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ ProvideObject}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00021}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_aa4f959fd686cbb8733c67c8a4cc53b17}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_aa4f959fd686cbb8733c67c8a4cc53b17}{ProvideObject}}}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!provideObject.IsNullOrDestroyed())\ \textcolor{keywordflow}{return}\ provideObject;}
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_sequencer}{Sequencer}}\ is\ IUnitSequencer\ \{\ Unit:\ not\ \textcolor{keyword}{null}\ \}\ unitSequencer)}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_sequencer}{Sequencer}}\ is\ \mbox{\hyperlink{interface_common_1_1_i_unit_sequencer}{IUnitSequencer}}\ \{\ \mbox{\hyperlink{namespace_common_a044de7969cba8f2a9b9d036741a9b449a19c562a36aeb455d09534f93b4f5236f}{Unit}}:\ not\ \textcolor{keyword}{null}\ \}\ unitSequencer)}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ provideObject\ =\ unitSequencer.Unit.gameObject;}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
@@ -35,7 +35,7 @@
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(ISequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00037}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_a8d670a9e370fc231fe3992253d824bae}{00037}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_a8d670a9e370fc231fe3992253d824bae}{Initialize}}(\mbox{\hyperlink{interface_i_sequencer}{ISequencer}}\ sequencer)}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(sequencer);}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -43,7 +43,7 @@
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00043}00043\ }
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ PlayEffect()}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00045}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_aa1c8f1a084ccb5e933fb669ddd187174}{00045}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_aa1c8f1a084ccb5e933fb669ddd187174}{PlayEffect}}()}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ cts1\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ cts2\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
@@ -52,9 +52,9 @@
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ RandomSamplingPlay(cts2,\ 50).Forget();}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ StopEffect()}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00054}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_ae8d3ea306d43048136f974dd2babd35e}{00054}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_ae8d3ea306d43048136f974dd2babd35e}{StopEffect}}()}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ pool.ReleaseAll();}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ pool.\mbox{\hyperlink{class_common_1_1_effects_1_1_particles_1_1_particle_pool_aeb3b730f94cc24fd5b717ee232dc1bc8}{ReleaseAll}}();}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cts1\ is\ not\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -75,7 +75,7 @@
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Delay(startDelay,\ \textcolor{keyword}{false},\ PlayerLoopTiming.FixedUpdate,\ cts.Token);}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ var\ refVector\ =\ \textcolor{keyword}{new}\ Vector3(0,\ 0,\ 1);}
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ var\ direction\ =\ ProvideObject.transform.forward;}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ var\ direction\ =\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_aa4f959fd686cbb8733c67c8a4cc53b17}{ProvideObject}}.transform.forward;}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ var\ angle\ =\ Vector3.Angle(refVector,\ direction);}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ var\ cross\ =\ Vector3.Cross(refVector,\ direction);}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -88,8 +88,8 @@
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ point\ \textcolor{keywordflow}{in}\ randomPointsEntry)}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ projectilePosition\ =\ ProvideObject.transform.position;}
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ randomDelay\ =\ Random.Range(80,\ 120);}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ projectilePosition\ =\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_aa4f959fd686cbb8733c67c8a4cc53b17}{ProvideObject}}.transform.position;}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ randomDelay\ =\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}.Range(80,\ 120);}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ arrowEffect\ =\ pool.Get();}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00093}00093\ }
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arrowEffect.transform.position\ =\ \textcolor{keyword}{new}\ Vector3((point.x\ -\/\ 7f)\ +\ projectilePosition.x,\ 0f,\ (point.z\ -\/\ 1.0f)\ +\ projectilePosition.z);}
@@ -102,7 +102,7 @@
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ StopEffect();}
+\DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_ae8d3ea306d43048136f974dd2babd35e}{StopEffect}}();}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00106}00106\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_arrow_rain_particle_8cs_source_l00107}00107\ \}}

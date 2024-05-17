@@ -1,6 +1,6 @@
 \doxysection{Player\+Collections.\+cs}
 \hypertarget{_player_collections_8cs_source}{}\label{_player_collections_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Huds/Bottoms/PlayerCollections.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Huds/Bottoms/PlayerCollections.cs}}
-
+\mbox{\hyperlink{_player_collections_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
@@ -9,18 +9,18 @@
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00005}00005\ }
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_u_i_1_1_huds_1_1_bottoms}{Challenge.UI.Huds.Bottoms}}}
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }PlayerCollections\ :\ UIElement}
+\DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00008}\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_player_collections}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_player_collections}{PlayerCollections}}\ :\ \mbox{\hyperlink{class_common_1_1_u_i_element}{UIElement}}}
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00009}00009\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ sacredMedalTextMesh;}
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ corruptionTextMesh;}
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00013}\mbox{\hyperlink{class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_player_collections_aed87b9dfa2a5d2ab24c951b668506552}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_player_collections_aed87b9dfa2a5d2ab24c951b668506552}{Initialize}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ var\ sacredMedal\ =\ dred.Resource.SacredMedal;}
-\DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ var\ corruption\ =\ dred.Resource.Corruption;}
+\DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ var\ sacredMedal\ =\ dred.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_a45cae597932a88f47557398a7e06182e}{Resource}}.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_resources_a25975555489b3343d0cc4038f7dba16e}{SacredMedal}};}
+\DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ var\ corruption\ =\ dred.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_a45cae597932a88f47557398a7e06182e}{Resource}}.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_resources_a1bf02d357f38e3bdf40e32016abfa29e}{Corruption}};}
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ sacredMedal.AddEvent(\textcolor{stringliteral}{"{}UpdateSacredMedalValue"{}},\ UpdateSacredMedalValue);}
+\DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ sacredMedal.\mbox{\hyperlink{class_observable_a1d65dfc7a1fe342a534af8f732a7e297}{AddEvent}}(\textcolor{stringliteral}{"{}UpdateSacredMedalValue"{}},\ UpdateSacredMedalValue);}
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ corruption.AddEvent(\textcolor{stringliteral}{"{}UpdateCorruptionValue"{}},\ UpdateCorruptionValue);}
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00021}00021\ }
 \DoxyCodeLine{\Hypertarget{_player_collections_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateSacredMedalValue(sacredMedal.Value);}

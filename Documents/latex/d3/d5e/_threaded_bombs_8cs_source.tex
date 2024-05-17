@@ -1,6 +1,6 @@
 \doxysection{Threaded\+Bombs.\+cs}
 \hypertarget{_threaded_bombs_8cs_source}{}\label{_threaded_bombs_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SilkStrings/ThreadedBombs.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SilkStrings/ThreadedBombs.cs}}
-
+\mbox{\hyperlink{_threaded_bombs_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_behaviours}{Common.Characters.Behaviours}};}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
@@ -13,53 +13,53 @@
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00009}00009\ \{}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00010}00010\ \ \ \ \ \textcolor{comment}{//\ DASH를\ 시작한\ 위치에\ 저주걸린\ 실타래를\ 설치한다.}}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00011}00011\ \ \ \ \ \textcolor{comment}{//\ 실타래는\ 2초\ 뒤\ 사방으로\ 20피해를\ 주는\ 바늘염사를\ 발사한다.\ 바늘\ 염사는\ BLEED를\ 입힌다}}
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ThreadedBombs\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_threaded_bombs}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_threaded_bombs}{ThreadedBombs}}\ :\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery}{Mastery}}}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00013}00013\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 저주받은\ 실타래\ Snare설치}}
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Executor\ executor;}
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DataIndex\ taintedThreadSnareCode\ =\ DataIndex.TaintedThreadSnare;}
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SnareSpawnEvent\ spawnEvent;}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_executor}{Executor}}\ executor;}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ taintedThreadSnareCode\ =\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.TaintedThreadSnare;}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_spawn_event}{SnareSpawnEvent}}\ spawnEvent;}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DashBehaviour\ dashBehaviour;}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_dash_behaviour}{DashBehaviour}}\ dashBehaviour;}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00020}00020\ }
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00022}\mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_threaded_bombs_af23d7f470b2e64713c38829a9f64f2e4}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_threaded_bombs_af23d7f470b2e64713c38829a9f64f2e4}{Injection}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ AddSilkStrings(dred);}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_af1fa459a81da999ee171d9f0440ad02b}{AddSilkStrings}}(dred);}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ executor.Initialize(dred);}
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ dashBehaviour\ =\ dred.Behaviours.Dash;}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ executor.\mbox{\hyperlink{class_common_1_1_executor_aff2d6b3fe96cba36695e501935d726a3}{Initialize}}(dred);}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ dashBehaviour\ =\ dred.\mbox{\hyperlink{class_common_1_1_character_aa1a4b82596d7a09ebb8be0f04e78c304}{Behaviours}}.Dash;}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ dashBehaviour.Sections}
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}ThreadedBombs"{}},\ ()\ =>}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}ThreadedBombs"{}},\ ()\ =>}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ executor.Execute(null);}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \})}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.Add(taintedThreadSnareCode,\ \textcolor{stringliteral}{"{}AddDamage"{}},\ SetSnareDamage);}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.\mbox{\hyperlink{class_common_1_1_spawn_event_table_ac8c1e472bcbad1c5493cff1ec02b1a98}{Add}}(taintedThreadSnareCode,\ \textcolor{stringliteral}{"{}AddDamage"{}},\ SetSnareDamage);}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00038}\mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_threaded_bombs_af5b70782415c7e7d89d1b7c3efcc1d90}{00038}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_threaded_bombs_af5b70782415c7e7d89d1b7c3efcc1d90}{Abolition}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ RemoveSilkStrings(dred);}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a4d1abd12dc408fb0020ee778f1583172}{RemoveSilkStrings}}(dred);}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ dashBehaviour.Sections}
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Active,\ \textcolor{stringliteral}{"{}ThreadedBombs"{}});}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}ThreadedBombs"{}});}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.Remove(taintedThreadSnareCode,\ \textcolor{stringliteral}{"{}AddDamage"{}});}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.\mbox{\hyperlink{class_common_1_1_spawn_event_table_a9949ebd2ab1adcb67a2e7b3b53c93cca}{Remove}}(taintedThreadSnareCode,\ \textcolor{stringliteral}{"{}AddDamage"{}});}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00048}\mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_threaded_bombs_aa4c8c4687e53733a5fbd2e4fe1becd65}{00048}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_silk_strings_1_1_threaded_bombs_aa4c8c4687e53733a5fbd2e4fe1becd65}{OnQualityChanged}}()}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00052}00052\ }
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SetSnareDamage(Snare\ snare)}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SetSnareDamage(\mbox{\hyperlink{class_common_1_1_snares_1_1_snare}{Snare}}\ snare)}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!snare.Executor.TryGetExecution(out\ DamageExecutor\ dmgExe))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!snare.\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a3c2387604a75f15d3ee4c18c3c40a609}{Executor}}.TryGetExecution(out\ \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_damage_executor}{DamageExecutor}}\ dmgExe))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ dmgExe.DamageTable.Change(StatType.BaseDamage,\ \$\textcolor{stringliteral}{"{}\{snare.DataIndex\}.Initial.\{StatType.BaseDamage\}"{}},\ quality.Value);}
+\DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ dmgExe.DamageTable.Change(\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.BaseDamage,\ \$\textcolor{stringliteral}{"{}\{snare.DataIndex\}.Initial.\{StatType.BaseDamage\}"{}},\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}});}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_threaded_bombs_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ }

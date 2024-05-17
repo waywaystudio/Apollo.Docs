@@ -1,6 +1,6 @@
 \doxysection{List\+Extension.\+cs}
 \hypertarget{_list_extension_8cs_source}{}\label{_list_extension_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/\_Protocol/\_Extension/ListExtension.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/\_Protocol/\_Extension/ListExtension.cs}}
-
+\mbox{\hyperlink{_list_extension_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -37,7 +37,7 @@
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00034}00034\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T\ Random<T>(\textcolor{keyword}{this}\ List<T>\ list)}
+\DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random<T>}}(\textcolor{keyword}{this}\ List<T>\ list)}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00037}00037\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list\ ==\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
@@ -46,7 +46,7 @@
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00042}00042\ }
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ note:\ creating\ a\ Random\ instance\ each\ call\ may\ not\ be\ correct\ for\ you,}}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ consider\ a\ thread-\/safe\ static\ instance}}
-\DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ var\ r\ =\ \textcolor{keyword}{new}\ Random();\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ var\ r\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}();\ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ list.Count\ ==\ 0\ ?\ default\ :\ list[r.Next(0,\ list.Count)];}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00047}00047\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00048}00048\ }
@@ -96,7 +96,7 @@
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00095}00095\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00096}00096\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Shuffle<T>(\textcolor{keyword}{this}\ List<T>\ list)}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00097}00097\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ var\ rng\ =\ \textcolor{keyword}{new}\ Random((\textcolor{keywordtype}{int})DateTime.Now.Ticks\ \&\ 0x0000FFFF);}
+\DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ var\ rng\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}((\textcolor{keywordtype}{int})DateTime.Now.Ticks\ \&\ 0x0000FFFF);}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ var\ n\ =\ list.Count;}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (n\ >\ 1)}
@@ -374,7 +374,7 @@
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00373}00373\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00374}00374\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ ShuffleSublist<T>(IList<T>\ list,\ \textcolor{keywordtype}{int}\ startIndex,\ \textcolor{keywordtype}{int}\ endIndex)}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00375}00375\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00376}00376\ \ \ \ \ \ \ \ \ var\ rng\ =\ \textcolor{keyword}{new}\ Random();}
+\DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00376}00376\ \ \ \ \ \ \ \ \ var\ rng\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}();}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00377}00377\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ endIndex;\ i\ >\ startIndex;\ i-\/-\/)}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00378}00378\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_list_extension_8cs_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ var\ j\ =\ rng.Next(startIndex,\ i\ +\ 1);}

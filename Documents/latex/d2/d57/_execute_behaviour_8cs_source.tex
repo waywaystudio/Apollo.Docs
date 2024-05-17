@@ -1,63 +1,63 @@
 \doxysection{Execute\+Behaviour.\+cs}
 \hypertarget{_execute_behaviour_8cs_source}{}\label{_execute_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Executors/ExecuteBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Executors/ExecuteBehaviour.cs}}
-
+\mbox{\hyperlink{_execute_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_executors}{Common.Executors}}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }ExecuteBehaviour\ :\ MonoBehaviour,\ IConditionTable<GameObject>}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{ExecuteBehaviour}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_condition_table}{IConditionTable}}<GameObject>}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00007}00007\ \ \ \ \ \{\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ICombatProvider\ Provider\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{00008}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IUnit\ Sender\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a773be19e2a5b8c5cc8ae4257ff660ae1}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a773be19e2a5b8c5cc8ae4257ff660ae1}{Sender}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00014}00014\ }
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [Sirenix.OdinInspector.ShowInInspector]}
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ConditionTable<GameObject>\ Conditions\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ Activation}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_afb729ebd300fcec4d99d086fae3d2747}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_condition_table}{ConditionTable<GameObject>}}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_afb729ebd300fcec4d99d086fae3d2747}{Conditions}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_adf0de4fce5e6cd187f92b5a65b0b4bdf}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_adf0de4fce5e6cd187f92b5a65b0b4bdf}{Activation}}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ gameObject.activeSelf;\ }
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ =>\ gameObject.SetActive(value);}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Initialize(ICombatProvider\ provider)}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00024}\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a9c6c06378b9d217c1b6170d378808577}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a9c6c06378b9d217c1b6170d378808577}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider)}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Provider\ is\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}\ is\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Provider\ =\ provider;}
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Conditions.Add(\textcolor{stringliteral}{"{}Activation"{}},\ \_\ =>\ Activation);}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}\ =\ provider;}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_afb729ebd300fcec4d99d086fae3d2747}{Conditions}}.Add(\textcolor{stringliteral}{"{}Activation"{}},\ \_\ =>\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_adf0de4fce5e6cd187f92b5a65b0b4bdf}{Activation}});}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Provider\ ==\ provider)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}\ ==\ provider)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}\{gameObject.name\}'s\ \{GetType().Name\}\ has\ already\ Provider."{}}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ \$\textcolor{stringliteral}{"{}New\ Initialize\ Provider\ is\ not\ same\ with\ previous.\ "{}}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ \$\textcolor{stringliteral}{"{}it\ can\ be\ a\ huge\ problem,\ so\ Register\ or\ Initialize\ ignored"{}});}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Activation\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_adf0de4fce5e6cd187f92b5a65b0b4bdf}{Activation}}\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ DeInitialize()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00043}\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a9259432751c6f91307bcc4a0c8962013}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a9259432751c6f91307bcc4a0c8962013}{DeInitialize}}()\ \{\ \}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Execute(GameObject\ target)}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00045}\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_aa7c0ffd22f64d11a97b3580171c963ae}{00045}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_aa7c0ffd22f64d11a97b3580171c963ae}{Execute}}(GameObject\ target)}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Conditions.HasFalse(target))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_afb729ebd300fcec4d99d086fae3d2747}{Conditions}}.HasFalse(target))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ ExecuteToTarget(target);}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_ae02062bc7a37ed5b3835ce92e2871353}{ExecuteToTarget}}(target);}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Executes(List<GameObject>\ targets)}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00052}\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_acb930b3e2c0c50cada259a1a2af68551}{00052}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_acb930b3e2c0c50cada259a1a2af68551}{Executes}}(List<GameObject>\ targets)}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ ExecutesToTargets(targets);}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a1523ffae7bd7e69df542ddcb5cde08fc}{ExecutesToTargets}}(targets);}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00056}00056\ }
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00057}00057\ }
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ExecuteToTarget(GameObject\ target)\ \{\ \}}
-\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ExecutesToTargets(List<GameObject>\ targets)\ =>\ targets?.ForEach(ExecuteToTarget);}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00058}\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_ae02062bc7a37ed5b3835ce92e2871353}{00058}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_ae02062bc7a37ed5b3835ce92e2871353}{ExecuteToTarget}}(GameObject\ target)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00059}\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a1523ffae7bd7e69df542ddcb5cde08fc}{00059}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a1523ffae7bd7e69df542ddcb5cde08fc}{ExecutesToTargets}}(List<GameObject>\ targets)\ =>\ targets?.ForEach(\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_ae02062bc7a37ed5b3835ce92e2871353}{ExecuteToTarget}});}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00060}00060\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_execute_behaviour_8cs_source_l00061}00061\ \}}
 

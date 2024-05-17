@@ -1,58 +1,58 @@
 \doxysection{Skill\+Behaviour.\+cs}
 \hypertarget{_skill_behaviour_8cs_source}{}\label{_skill_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/SkillBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/SkillBehaviour.cs}}
-
+\mbox{\hyperlink{_skill_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters}{Common.Characters}};}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills}{Common.Skills}}}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SkillBehaviour\ :\ CharacterBehaviour,\ ISkillBehaviour}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{SkillBehaviour}}\ :\ \mbox{\hyperlink{class_common_1_1_characters_1_1_character_behaviour}{CharacterBehaviour}},\ \mbox{\hyperlink{interface_common_1_1_i_skill_behaviour}{ISkillBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00007}00007\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \#\ DataIndex\ =\ (DataIndex.DredSkill)(WeaponType)(SkillType)(Index)}}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Executor\ executor;}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ CoolTimer\ coolTimer;}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ DetectProperty\ detectProperty;}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a29c18c0d8a04eb8172f936b48829b6ee}{00009}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_executor}{Executor}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a29c18c0d8a04eb8172f936b48829b6ee}{executor}};}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a6c22bdc17969cc29e40bf205f7be4d1f}{00010}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_cool_timer}{CoolTimer}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a6c22bdc17969cc29e40bf205f7be4d1f}{coolTimer}};}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_abfc676fbdcb1ef6d4aaccbcd57147be2}{00011}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_detect_property}{DetectProperty}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_abfc676fbdcb1ef6d4aaccbcd57147be2}{detectProperty}};}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ IsInitialized;}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_af456df833df55a80837156925a4ff563}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_af456df833df55a80837156925a4ff563}{IsInitialized}};}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Executor\ Executor\ =>\ executor;}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ CoolTimer\ CoolTimer\ =>\ coolTimer;}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DetectProperty\ DetectProperty\ =>\ detectProperty;}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a0d7d4d5efca59cf81674aacbfe852da4}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_executor}{Executor}}\ \mbox{\hyperlink{class_common_1_1_executor}{Executor}}\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a29c18c0d8a04eb8172f936b48829b6ee}{executor}};}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_aa53f1ce753e016226a74d62cd26687b2}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_cool_timer}{CoolTimer}}\ \mbox{\hyperlink{class_common_1_1_cool_timer}{CoolTimer}}\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a6c22bdc17969cc29e40bf205f7be4d1f}{coolTimer}};}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a3f4424b3d8b67687f421c19a7587d7f8}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_detect_property}{DetectProperty}}\ \mbox{\hyperlink{class_common_1_1_detect_property}{DetectProperty}}\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_abfc676fbdcb1ef6d4aaccbcd57147be2}{detectProperty}};}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00018}00018\ }
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00020}\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a9f41aa1a6614eeeae4a7361a986492db}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a9f41aa1a6614eeeae4a7361a986492db}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_behaver}{IBehaver}}\ behaver)}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsInitialized)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_af456df833df55a80837156925a4ff563}{IsInitialized}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ Sections.Add(Section.Execute,\ \textcolor{stringliteral}{"{}MainExecute"{}},\ Execute);}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ Sections.Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Execute,\ \textcolor{stringliteral}{"{}MainExecute"{}},\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a941b3c6d1f12ac0d9ce7dffcca43280a}{Execute}});}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ coolTimer.Initialize(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ executor.Initialize(Character);}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a6c22bdc17969cc29e40bf205f7be4d1f}{coolTimer}}.\mbox{\hyperlink{class_common_1_1_cool_timer_abb2b2e5e46b69c8247ecaeb1db17e1c7}{Initialize}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a29c18c0d8a04eb8172f936b48829b6ee}{executor}}.\mbox{\hyperlink{class_common_1_1_executor_aff2d6b3fe96cba36695e501935d726a3}{Initialize}}(\mbox{\hyperlink{class_common_1_1_character}{Character}});}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (applyHaste)}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a9e73b145a790132bdd03bc612cd644e6}{applyHaste}})}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ animationPlayer.RegisterHaste(Character.StatTable);}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ae2d0df771f3ce2eb782377362eaadffb}{animationPlayer}}.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_animation_player_ab4dc676d1bfa2d7bb8f7c3afa051ca14}{RegisterHaste}}(\mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}});}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ IsInitialized\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_af456df833df55a80837156925a4ff563}{IsInitialized}}\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00039}\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_af974626037c4874dd07f485cadef0b7b}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_af974626037c4874dd07f485cadef0b7b}{Active}}()}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Execute()}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00046}\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a941b3c6d1f12ac0d9ce7dffcca43280a}{00046}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a941b3c6d1f12ac0d9ce7dffcca43280a}{Execute}}()}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ var\ takers\ =\ Character.Detector.GetObjects(detectProperty);}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ var\ takers\ =\ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_a90eb0e170133dec9cbd85b5fff91c975}{Detector}}.GetObjects(\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_abfc676fbdcb1ef6d4aaccbcd57147be2}{detectProperty}});}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ executor.Executes(takers);}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ effector.Play(takers);}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a29c18c0d8a04eb8172f936b48829b6ee}{executor}}.\mbox{\hyperlink{class_common_1_1_executor_ab82bbdb5325067c22f0e9324e2983635}{Executes}}(takers);}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a33d5209cd5c360560c31c591bac476d3}{effector}}.\mbox{\hyperlink{class_common_1_1_effector_a5a7d72fc541b228b6b7d76776887a409}{Play}}(takers);}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00054}00054\ }
@@ -61,13 +61,13 @@
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00059}00059\ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ applyHaste\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ behaviourCode\ \ \ \ \ \ \ \ \ \ \ \ \ =\ gameObject.name.ToEnum<DataIndex>();}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ executor\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ GetComponentInChildren<Executor>();}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.StateMask\ \ \ \ \ =\ StateMask.Common;}
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.IgnorableMask\ =\ StateMask.Soft;}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a9e73b145a790132bdd03bc612cd644e6}{applyHaste}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a4b8f91bde6fefb1f9c5a1470d7d22b55}{behaviourCode}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ gameObject.name.ToEnum<\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}>();}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a29c18c0d8a04eb8172f936b48829b6ee}{executor}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ GetComponentInChildren<Executor>();}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.StateMask\ \ \ \ \ =\ \mbox{\hyperlink{namespace_common_a42d43f9dd990eadd77e3ecd89b27d7e3}{StateMask}}.Common;}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.IgnorableMask\ =\ \mbox{\hyperlink{namespace_common_a42d43f9dd990eadd77e3ecd89b27d7e3}{StateMask}}.Soft;}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ executor.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a29c18c0d8a04eb8172f936b48829b6ee}{executor}}.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00068}00068\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_skill_behaviour_8cs_source_l00069}00069\ \ \ \ \ \}}

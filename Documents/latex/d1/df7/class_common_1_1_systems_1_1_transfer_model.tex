@@ -1,0 +1,229 @@
+\doxysection{Common.\+Systems.\+Transfer\+Model Class Reference}
+\hypertarget{class_common_1_1_systems_1_1_transfer_model}{}\label{class_common_1_1_systems_1_1_transfer_model}\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_a7979c181eb832544577a2341349b575e}{Transfer\+Model}} (Transform master, Layer\+Mask walkable\+Layer, Layer\+Mask unsafe\+Layer)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_acef6addcfd5b397a553795729ac878bc}{Move}} (float distance, float duration, Ease ease\+Type=Ease.\+In\+Sine)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_a667051509647c1c13f0ef819179f5b93}{Move}} (Vector3 direction, float distance, float duration, Ease ease\+Type=Ease.\+In\+Sine)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_a3010ec7be6280b51faa47974de4205cc}{Jump}} (Vector3 destination, float jump\+Power, float duration, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_a198109b470b3b34ef64a794278e40e02}{Jump}} (Vector3 direction, float distance, float jump\+Power, float duration, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_aff3df5c2f30cffd45ecedcb0ea071511}{Dash}} (Vector3 direction, \mbox{\hyperlink{class_common_1_1_dash_property}{Dash\+Property}} property, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_aa4502da76a3c554650014f305161700a}{Dash}} (Vector3 direction, float distance, float duration, float far\+Threshold=0f, Ease ease\+Type=Ease.\+Unset, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_a031dfc66ae9f7e820c71bdf71b363f77}{Dash}} (Vector3 destination, float duration, float far\+Threshold=0f, Ease ease\+Type=Ease.\+Unset, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_ae848ba7309f8a9ab69a63d56a350d213}{Rotate\+To\+Target}} (Vector3 look\+Target, float rotate\+Per\+Frame, Action callback)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_ae379fe6ae091767965228c6fc2a186b8}{Spiral\+Dash}} (Vector3 target, float duration, float speed, float frequency, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_acfb7744825864a04ac24600e83e3237e}{Knock\+Back}} (Vector3 from, Vector3 direction, \mbox{\hyperlink{class_common_1_1_knock_back_property}{Knock\+Back\+Property}} property, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_af0db5b41873bc1075136fbc720158650}{Knock\+Back}} (Vector3 from, Vector3 direction, float distance, float duration, Ease ease\+Type, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_a9289800b9d561e143db3ba26ea1503f5}{Drawn}} (Vector3 source, float max\+Distance, float speed, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_a001dbadef4f38e8d2cae55c179e675b2}{Drawn}} (Transform source, float duration, Action callback=null)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_a2c3af1f1e7455a5eeb6f90487c379f56}{Cancel\+Dash}} (Vector3 original\+Destination, out float remaining\+Distance, out float remaining\+Duration)
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_ab20c6aa78820bf52bba5364277790ece}{Cancel}} ()
+\item 
+void \mbox{\hyperlink{class_common_1_1_systems_1_1_transfer_model_acf9c644649059997fc2efb44a486382e}{Dispose}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_a7979c181eb832544577a2341349b575e}\label{class_common_1_1_systems_1_1_transfer_model_a7979c181eb832544577a2341349b575e} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!TransferModel@{TransferModel}}
+\index{TransferModel@{TransferModel}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{TransferModel()}{TransferModel()}}
+{\footnotesize\ttfamily Common.\+Systems.\+Transfer\+Model.\+Transfer\+Model (\begin{DoxyParamCaption}\item[{Transform}]{master,  }\item[{Layer\+Mask}]{walkable\+Layer,  }\item[{Layer\+Mask}]{unsafe\+Layer }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_ab20c6aa78820bf52bba5364277790ece}\label{class_common_1_1_systems_1_1_transfer_model_ab20c6aa78820bf52bba5364277790ece} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{Cancel()}{Cancel()}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00232}{232}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_a2c3af1f1e7455a5eeb6f90487c379f56}\label{class_common_1_1_systems_1_1_transfer_model_a2c3af1f1e7455a5eeb6f90487c379f56} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!CancelDash@{CancelDash}}
+\index{CancelDash@{CancelDash}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{CancelDash()}{CancelDash()}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Cancel\+Dash (\begin{DoxyParamCaption}\item[{Vector3}]{original\+Destination,  }\item[{out float}]{remaining\+Distance,  }\item[{out float}]{remaining\+Duration }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00208}{208}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_a031dfc66ae9f7e820c71bdf71b363f77}\label{class_common_1_1_systems_1_1_transfer_model_a031dfc66ae9f7e820c71bdf71b363f77} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!Dash@{Dash}}
+\index{Dash@{Dash}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{Dash()}{Dash()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Dash (\begin{DoxyParamCaption}\item[{Vector3}]{destination,  }\item[{float}]{duration,  }\item[{float}]{far\+Threshold = {\ttfamily 0f},  }\item[{Ease}]{ease\+Type = {\ttfamily Ease\+:\+:Unset},  }\item[{Action}]{callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00096}{96}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_aff3df5c2f30cffd45ecedcb0ea071511}\label{class_common_1_1_systems_1_1_transfer_model_aff3df5c2f30cffd45ecedcb0ea071511} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!Dash@{Dash}}
+\index{Dash@{Dash}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{Dash()}{Dash()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Dash (\begin{DoxyParamCaption}\item[{Vector3}]{direction,  }\item[{\mbox{\hyperlink{class_common_1_1_dash_property}{Dash\+Property}}}]{property,  }\item[{Action}]{callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_aa4502da76a3c554650014f305161700a}\label{class_common_1_1_systems_1_1_transfer_model_aa4502da76a3c554650014f305161700a} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!Dash@{Dash}}
+\index{Dash@{Dash}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{Dash()}{Dash()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Dash (\begin{DoxyParamCaption}\item[{Vector3}]{direction,  }\item[{float}]{distance,  }\item[{float}]{duration,  }\item[{float}]{far\+Threshold = {\ttfamily 0f},  }\item[{Ease}]{ease\+Type = {\ttfamily Ease\+:\+:Unset},  }\item[{Action}]{callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00077}{77}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_acf9c644649059997fc2efb44a486382e}\label{class_common_1_1_systems_1_1_transfer_model_acf9c644649059997fc2efb44a486382e} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00253}{253}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_a001dbadef4f38e8d2cae55c179e675b2}\label{class_common_1_1_systems_1_1_transfer_model_a001dbadef4f38e8d2cae55c179e675b2} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!Drawn@{Drawn}}
+\index{Drawn@{Drawn}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{Drawn()}{Drawn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Drawn (\begin{DoxyParamCaption}\item[{Transform}]{source,  }\item[{float}]{duration,  }\item[{Action}]{callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00185}{185}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_a9289800b9d561e143db3ba26ea1503f5}\label{class_common_1_1_systems_1_1_transfer_model_a9289800b9d561e143db3ba26ea1503f5} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!Drawn@{Drawn}}
+\index{Drawn@{Drawn}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{Drawn()}{Drawn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Drawn (\begin{DoxyParamCaption}\item[{Vector3}]{source,  }\item[{float}]{max\+Distance,  }\item[{float}]{speed,  }\item[{Action}]{callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00169}{169}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_a3010ec7be6280b51faa47974de4205cc}\label{class_common_1_1_systems_1_1_transfer_model_a3010ec7be6280b51faa47974de4205cc} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!Jump@{Jump}}
+\index{Jump@{Jump}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{Jump()}{Jump()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Jump (\begin{DoxyParamCaption}\item[{Vector3}]{destination,  }\item[{float}]{jump\+Power,  }\item[{float}]{duration,  }\item[{Action}]{callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em jump\+Power} & Suggest 2.\+4f\\
+\hline
+{\em duration} & Suggest 0.\+77f\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_a198109b470b3b34ef64a794278e40e02}\label{class_common_1_1_systems_1_1_transfer_model_a198109b470b3b34ef64a794278e40e02} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!Jump@{Jump}}
+\index{Jump@{Jump}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{Jump()}{Jump()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Jump (\begin{DoxyParamCaption}\item[{Vector3}]{direction,  }\item[{float}]{distance,  }\item[{float}]{jump\+Power,  }\item[{float}]{duration,  }\item[{Action}]{callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em jump\+Power} & Suggest 2.\+4f\\
+\hline
+{\em duration} & Suggest 0.\+77f\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00065}{65}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_af0db5b41873bc1075136fbc720158650}\label{class_common_1_1_systems_1_1_transfer_model_af0db5b41873bc1075136fbc720158650} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!KnockBack@{KnockBack}}
+\index{KnockBack@{KnockBack}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{KnockBack()}{KnockBack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Knock\+Back (\begin{DoxyParamCaption}\item[{Vector3}]{from,  }\item[{Vector3}]{direction,  }\item[{float}]{distance,  }\item[{float}]{duration,  }\item[{Ease}]{ease\+Type,  }\item[{Action}]{callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00153}{153}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_acfb7744825864a04ac24600e83e3237e}\label{class_common_1_1_systems_1_1_transfer_model_acfb7744825864a04ac24600e83e3237e} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!KnockBack@{KnockBack}}
+\index{KnockBack@{KnockBack}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{KnockBack()}{KnockBack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Knock\+Back (\begin{DoxyParamCaption}\item[{Vector3}]{from,  }\item[{Vector3}]{direction,  }\item[{\mbox{\hyperlink{class_common_1_1_knock_back_property}{Knock\+Back\+Property}}}]{property,  }\item[{Action}]{callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_acef6addcfd5b397a553795729ac878bc}\label{class_common_1_1_systems_1_1_transfer_model_acef6addcfd5b397a553795729ac878bc} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!Move@{Move}}
+\index{Move@{Move}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Move (\begin{DoxyParamCaption}\item[{float}]{distance,  }\item[{float}]{duration,  }\item[{Ease}]{ease\+Type = {\ttfamily Ease.InSine} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_a667051509647c1c13f0ef819179f5b93}\label{class_common_1_1_systems_1_1_transfer_model_a667051509647c1c13f0ef819179f5b93} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!Move@{Move}}
+\index{Move@{Move}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Move (\begin{DoxyParamCaption}\item[{Vector3}]{direction,  }\item[{float}]{distance,  }\item[{float}]{duration,  }\item[{Ease}]{ease\+Type = {\ttfamily Ease\+:\+:InSine} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_ae848ba7309f8a9ab69a63d56a350d213}\label{class_common_1_1_systems_1_1_transfer_model_ae848ba7309f8a9ab69a63d56a350d213} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!RotateToTarget@{RotateToTarget}}
+\index{RotateToTarget@{RotateToTarget}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{RotateToTarget()}{RotateToTarget()}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Rotate\+To\+Target (\begin{DoxyParamCaption}\item[{Vector3}]{look\+Target,  }\item[{float}]{rotate\+Per\+Frame,  }\item[{Action}]{callback }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00121}{121}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+\Hypertarget{class_common_1_1_systems_1_1_transfer_model_ae379fe6ae091767965228c6fc2a186b8}\label{class_common_1_1_systems_1_1_transfer_model_ae379fe6ae091767965228c6fc2a186b8} 
+\index{Common.Systems.TransferModel@{Common.Systems.TransferModel}!SpiralDash@{SpiralDash}}
+\index{SpiralDash@{SpiralDash}!Common.Systems.TransferModel@{Common.Systems.TransferModel}}
+\doxysubsubsection{\texorpdfstring{SpiralDash()}{SpiralDash()}}
+{\footnotesize\ttfamily void Common.\+Systems.\+Transfer\+Model.\+Spiral\+Dash (\begin{DoxyParamCaption}\item[{Vector3}]{target,  }\item[{float}]{duration,  }\item[{float}]{speed,  }\item[{float}]{frequency,  }\item[{Action}]{callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_transfer_model_8cs_source_l00140}{140}} of file \mbox{\hyperlink{_transfer_model_8cs_source}{Transfer\+Model.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+Systems/\mbox{\hyperlink{_transfer_model_8cs}{Transfer\+Model.\+cs}}\end{DoxyCompactItemize}

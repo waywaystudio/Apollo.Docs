@@ -1,0 +1,117 @@
+\doxysection{Audio\+Manager Class Reference}
+\hypertarget{class_audio_manager}{}\label{class_audio_manager}\index{AudioManager@{AudioManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_audio_manager_a99c35bde2cb8415dfba42d411d61d5de}{Initialize}} ()
+\item 
+bool \mbox{\hyperlink{class_audio_manager_abb41654e7aa4d304169217b71c30beba}{Is\+Permit\+Play}} (\mbox{\hyperlink{interface_audios_1_1_i_sound_effect_property}{ISound\+Effect\+Property}} property)
+\item 
+void \mbox{\hyperlink{class_audio_manager_acfd812063556dd691059902cba9fb47a}{Dispose}} ()
+\item 
+void \mbox{\hyperlink{class_audio_manager_ac3324364d2bc066436c626e6605e74f1}{Set\+Volume}} (\mbox{\hyperlink{namespace_audios_ac13ab1ffa25d65ff0f6e149dc85af24e}{Audio\+Group\+Type}} group\+Type, float volume, float duration=0f)
+\begin{DoxyCompactList}\small\item\em Set Audio\+Group\textquotesingle{}s Volume Between 0 -\/ 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Mixer \mbox{\hyperlink{class_audio_manager_aaa90d9986c5ef5057c9bea4ee7ebd6ce}{master}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_audios_1_1_audio_director}{Audio\+Director}} \mbox{\hyperlink{class_audio_manager_a5331632b7112e40477420d643232a721}{Director}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audio_manager_acfd812063556dd691059902cba9fb47a}\label{class_audio_manager_acfd812063556dd691059902cba9fb47a} 
+\index{AudioManager@{AudioManager}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+\Hypertarget{class_audio_manager_a99c35bde2cb8415dfba42d411d61d5de}\label{class_audio_manager_a99c35bde2cb8415dfba42d411d61d5de} 
+\index{AudioManager@{AudioManager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+\Hypertarget{class_audio_manager_abb41654e7aa4d304169217b71c30beba}\label{class_audio_manager_abb41654e7aa4d304169217b71c30beba} 
+\index{AudioManager@{AudioManager}!IsPermitPlay@{IsPermitPlay}}
+\index{IsPermitPlay@{IsPermitPlay}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{IsPermitPlay()}{IsPermitPlay()}}
+{\footnotesize\ttfamily bool Audio\+Manager.\+Is\+Permit\+Play (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_audios_1_1_i_sound_effect_property}{ISound\+Effect\+Property}}}]{property }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+\Hypertarget{class_audio_manager_ac3324364d2bc066436c626e6605e74f1}\label{class_audio_manager_ac3324364d2bc066436c626e6605e74f1} 
+\index{AudioManager@{AudioManager}!SetVolume@{SetVolume}}
+\index{SetVolume@{SetVolume}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{SetVolume()}{SetVolume()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+Set\+Volume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_audios_ac13ab1ffa25d65ff0f6e149dc85af24e}{Audio\+Group\+Type}}}]{group\+Type,  }\item[{float}]{volume,  }\item[{float}]{duration = {\ttfamily 0f} }\end{DoxyParamCaption})}
+
+
+
+Set Audio\+Group\textquotesingle{}s Volume Between 0 -\/ 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group\+Type} & Master, Bgm or Sfx\\
+\hline
+{\em volume} & value must be with in 1 from 0\\
+\hline
+{\em duration} & set fade duration.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00077}{77}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_audio_manager_aaa90d9986c5ef5057c9bea4ee7ebd6ce}\label{class_audio_manager_aaa90d9986c5ef5057c9bea4ee7ebd6ce} 
+\index{AudioManager@{AudioManager}!master@{master}}
+\index{master@{master}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{master}{master}}
+{\footnotesize\ttfamily Audio\+Mixer Audio\+Manager.\+master\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_audio_manager_a5331632b7112e40477420d643232a721}\label{class_audio_manager_a5331632b7112e40477420d643232a721} 
+\index{AudioManager@{AudioManager}!Director@{Director}}
+\index{Director@{Director}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{Director}{Director}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_audios_1_1_audio_director}{Audio\+Director}} Audio\+Manager.\+Director\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \mbox{\hyperlink{_audio_manager_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_audio_manager_8cs_source}{Audio\+Manager.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+\_\+\+Core/\+Managers/\mbox{\hyperlink{_audio_manager_8cs}{Audio\+Manager.\+cs}}\end{DoxyCompactItemize}

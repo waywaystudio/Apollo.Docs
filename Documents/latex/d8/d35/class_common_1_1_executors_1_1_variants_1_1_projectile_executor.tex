@@ -1,0 +1,246 @@
+\doxysection{Common.\+Executors.\+Variants.\+Projectile\+Executor Class Reference}
+\hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor}{}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor}\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a92307536fd076d9824ea65f458487dac}{Initialize}} (\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombat\+Provider}} combat\+Provider)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Common.\+Executors.\+Execute\+Behaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a9259432751c6f91307bcc4a0c8962013}{De\+Initialize}} ()
+\item 
+void \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_aa7c0ffd22f64d11a97b3580171c963ae}{Execute}} (Game\+Object target)
+\item 
+void \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_acb930b3e2c0c50cada259a1a2af68551}{Executes}} (List$<$ Game\+Object $>$ targets)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_af37ae53284208ae75bd181388ed0a73f}{Execute\+To\+Target}} (Game\+Object target)
+\item 
+override void \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a7511827af016b99756f1468cf7710244}{Executes\+To\+Targets}} (List$<$ Game\+Object $>$ targets)
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a833a3f49423c9aae2f52f4c31e3c106a}{Create\+Projectile}} (\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}} projectile)
+\item 
+void \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a4156b4ddcd280e8a1be51a4a6db2458c}{Return\+To\+Pool}} (\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}} projectile)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_common_a9b9dde4db4210c2614baa167d50e8031}{Start\+Unit}} \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a8744f66e1543f12cf3bd9f7d9fdb3129}{start\+Unit}} = \mbox{\hyperlink{namespace_common_a9b9dde4db4210c2614baa167d50e8031a27703c8f150ac4bb0a3a83a7857353af}{Start\+Unit.\+Provider}}
+\item 
+\mbox{\hyperlink{namespace_common_a813ee3edd13ff1143100350c2a6a4810}{Toward\+Type}} \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_acc6ebad270d902fade08184fd6e0e20a}{toward\+Type}}
+\item 
+\mbox{\hyperlink{namespace_common_a3c3849312910ec6b28b70d8f44f86bff}{Toward\+Direction}} \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a136fbdd039c2c3ba22cb525dea52694b}{toward\+Direction}} = \mbox{\hyperlink{namespace_common_a3c3849312910ec6b28b70d8f44f86bffa67d2f6740a8eaebf4d5c6f79be8da481}{Toward\+Direction.\+Forward}}
+\item 
+\mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{Pre\+Position\+Type}} \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a172c1b7856f5f4638cb051b799d993e1}{muzzle\+Type}} = \mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291a3edf8ca26a1ec14dd6e91dd277ae1de6}{Pre\+Position\+Type.\+Origin}}
+\item 
+Vector3 \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_ae3f82289c4af7e2b92848f4406b4604e}{offset}} = new(0, 1, 0)
+\item 
+\mbox{\hyperlink{class_pool}{Pool}}$<$ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}} $>$ \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_ab04089b9c1a963ee65daf144306d8396}{pool}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pool}{Pool}}$<$ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}} $>$ \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a172ef76a59574506b46be55358442a65}{Pool}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Vector3 \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_ac11735b37e089eb9f55a6e338edcfef0}{Muzzle\+Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}} \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a92f616536cfaf1672ebc78dc7b1a0edd}{Start\+Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Common.\+Executors.\+Execute\+Behaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombat\+Provider}} \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}} \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a773be19e2a5b8c5cc8ae4257ff660ae1}{Sender}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Projectile to Projectile, Projectile To Snare 등 Instantiate 포지션을 전달받기 위해서 필요하다. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_condition_table}{Condition\+Table}}$<$ Game\+Object $>$ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_afb729ebd300fcec4d99d086fae3d2747}{Conditions}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_adf0de4fce5e6cd187f92b5a65b0b4bdf}{Activation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_i_condition_table}{ICondition\+Table$<$ Game\+Object $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_condition_table}{Condition\+Table}} \mbox{\hyperlink{interface_i_condition_table_a3def61f3a36cee5e7ff51e9a11599054}{Conditions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_condition_table}{Condition\+Table}}$<$ T $>$ \mbox{\hyperlink{interface_i_condition_table_a16d51e7abfaf958bef649419ff82b349}{Conditions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a833a3f49423c9aae2f52f4c31e3c106a}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a833a3f49423c9aae2f52f4c31e3c106a} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!CreateProjectile@{CreateProjectile}}
+\index{CreateProjectile@{CreateProjectile}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{CreateProjectile()}{CreateProjectile()}}
+{\footnotesize\ttfamily virtual void Common.\+Executors.\+Variants.\+Projectile\+Executor.\+Create\+Projectile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}}]{projectile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_spear_throws_1_1_trident_projectile_executor_a24807e62e479122e7ea2db8d2454eb16}{Common.\+Skills.\+Split\+Tridents.\+Spear\+Throws.\+Trident\+Projectile\+Executor}}.
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00066}{66}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a7511827af016b99756f1468cf7710244}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a7511827af016b99756f1468cf7710244} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!ExecutesToTargets@{ExecutesToTargets}}
+\index{ExecutesToTargets@{ExecutesToTargets}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{ExecutesToTargets()}{ExecutesToTargets()}}
+{\footnotesize\ttfamily override void Common.\+Executors.\+Variants.\+Projectile\+Executor.\+Executes\+To\+Targets (\begin{DoxyParamCaption}\item[{List$<$ Game\+Object $>$}]{targets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a1523ffae7bd7e69df542ddcb5cde08fc}{Common.\+Executors.\+Execute\+Behaviour}}.
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00047}{47}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_af37ae53284208ae75bd181388ed0a73f}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_af37ae53284208ae75bd181388ed0a73f} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!ExecuteToTarget@{ExecuteToTarget}}
+\index{ExecuteToTarget@{ExecuteToTarget}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{ExecuteToTarget()}{ExecuteToTarget()}}
+{\footnotesize\ttfamily override void Common.\+Executors.\+Variants.\+Projectile\+Executor.\+Execute\+To\+Target (\begin{DoxyParamCaption}\item[{Game\+Object}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_ae02062bc7a37ed5b3835ce92e2871353}{Common.\+Executors.\+Execute\+Behaviour}}.
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00034}{34}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a92307536fd076d9824ea65f458487dac}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a92307536fd076d9824ea65f458487dac} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Common.\+Executors.\+Variants.\+Projectile\+Executor.\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombat\+Provider}}}]{combat\+Provider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a9c6c06378b9d217c1b6170d378808577}{Common.\+Executors.\+Execute\+Behaviour}}.
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a4156b4ddcd280e8a1be51a4a6db2458c}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a4156b4ddcd280e8a1be51a4a6db2458c} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!ReturnToPool@{ReturnToPool}}
+\index{ReturnToPool@{ReturnToPool}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{ReturnToPool()}{ReturnToPool()}}
+{\footnotesize\ttfamily void Common.\+Executors.\+Variants.\+Projectile\+Executor.\+Return\+To\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}}]{projectile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00074}{74}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a172c1b7856f5f4638cb051b799d993e1}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a172c1b7856f5f4638cb051b799d993e1} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!muzzleType@{muzzleType}}
+\index{muzzleType@{muzzleType}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{muzzleType}{muzzleType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{Pre\+Position\+Type}} Common.\+Executors.\+Variants.\+Projectile\+Executor.\+muzzle\+Type = \mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291a3edf8ca26a1ec14dd6e91dd277ae1de6}{Pre\+Position\+Type.\+Origin}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_ae3f82289c4af7e2b92848f4406b4604e}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_ae3f82289c4af7e2b92848f4406b4604e} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!offset@{offset}}
+\index{offset@{offset}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily Vector3 Common.\+Executors.\+Variants.\+Projectile\+Executor.\+offset = new(0, 1, 0)\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_ab04089b9c1a963ee65daf144306d8396}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_ab04089b9c1a963ee65daf144306d8396} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!pool@{pool}}
+\index{pool@{pool}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{pool}{pool}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pool}{Pool}}$<$\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}$>$ Common.\+Executors.\+Variants.\+Projectile\+Executor.\+pool\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a8744f66e1543f12cf3bd9f7d9fdb3129}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a8744f66e1543f12cf3bd9f7d9fdb3129} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!startUnit@{startUnit}}
+\index{startUnit@{startUnit}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{startUnit}{startUnit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_common_a9b9dde4db4210c2614baa167d50e8031}{Start\+Unit}} Common.\+Executors.\+Variants.\+Projectile\+Executor.\+start\+Unit = \mbox{\hyperlink{namespace_common_a9b9dde4db4210c2614baa167d50e8031a27703c8f150ac4bb0a3a83a7857353af}{Start\+Unit.\+Provider}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a136fbdd039c2c3ba22cb525dea52694b}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a136fbdd039c2c3ba22cb525dea52694b} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!towardDirection@{towardDirection}}
+\index{towardDirection@{towardDirection}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{towardDirection}{towardDirection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_common_a3c3849312910ec6b28b70d8f44f86bff}{Toward\+Direction}} Common.\+Executors.\+Variants.\+Projectile\+Executor.\+toward\+Direction = \mbox{\hyperlink{namespace_common_a3c3849312910ec6b28b70d8f44f86bffa67d2f6740a8eaebf4d5c6f79be8da481}{Toward\+Direction.\+Forward}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_acc6ebad270d902fade08184fd6e0e20a}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_acc6ebad270d902fade08184fd6e0e20a} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!towardType@{towardType}}
+\index{towardType@{towardType}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{towardType}{towardType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_common_a813ee3edd13ff1143100350c2a6a4810}{Toward\+Type}} Common.\+Executors.\+Variants.\+Projectile\+Executor.\+toward\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_ac11735b37e089eb9f55a6e338edcfef0}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_ac11735b37e089eb9f55a6e338edcfef0} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!MuzzlePosition@{MuzzlePosition}}
+\index{MuzzlePosition@{MuzzlePosition}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{MuzzlePosition}{MuzzlePosition}}
+{\footnotesize\ttfamily Vector3 Common.\+Executors.\+Variants.\+Projectile\+Executor.\+Muzzle\+Position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a172ef76a59574506b46be55358442a65}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a172ef76a59574506b46be55358442a65} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!Pool@{Pool}}
+\index{Pool@{Pool}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{Pool}{Pool}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pool}{Pool}}$<$\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}$>$ Common.\+Executors.\+Variants.\+Projectile\+Executor.\+Pool\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a92f616536cfaf1672ebc78dc7b1a0edd}\label{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a92f616536cfaf1672ebc78dc7b1a0edd} 
+\index{Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}!StartProvider@{StartProvider}}
+\index{StartProvider@{StartProvider}!Common.Executors.Variants.ProjectileExecutor@{Common.Executors.Variants.ProjectileExecutor}}
+\doxysubsubsection{\texorpdfstring{StartProvider}{StartProvider}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}} Common.\+Executors.\+Variants.\+Projectile\+Executor.\+Start\+Provider\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_executor_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_projectile_executor_8cs_source}{Projectile\+Executor.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+Executors/\+Variants/\mbox{\hyperlink{_projectile_executor_8cs}{Projectile\+Executor.\+cs}}\end{DoxyCompactItemize}

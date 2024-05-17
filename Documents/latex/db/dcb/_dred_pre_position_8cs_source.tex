@@ -1,37 +1,37 @@
 \doxysection{Dred\+Pre\+Position.\+cs}
 \hypertarget{_dred_pre_position_8cs_source}{}\label{_dred_pre_position_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/Dreds/DredPrePosition.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/Dreds/DredPrePosition.cs}}
-
+\mbox{\hyperlink{_dred_pre_position_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}}}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DredPrePosition\ :\ PrePosition}
+\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_pre_position}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_pre_position}{DredPrePosition}}\ :\ \mbox{\hyperlink{class_common_1_1_pre_position}{PrePosition}}}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00007}00007\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Mesh\ mainMesh;}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Mesh\ MainMesh\ =>\ mainMesh;}
+\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_pre_position_a9e18ce8e282006b34ab713193b73019b}{00010}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Mesh\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_pre_position_a9e18ce8e282006b34ab713193b73019b}{MainMesh}}\ =>\ mainMesh;}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00012}00012\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ table.Clear();}
+\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_pre_position_a64a5370d078c1d620f64d271affd2c4e}{table}}.\mbox{\hyperlink{class_table_aa5ceff8db5657ae3e7538277e4ed6f8d}{Clear}}();}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (PrePositionType\ preposition\ \textcolor{keywordflow}{in}\ Enum.GetValues(typeof(PrePositionType)))}
+\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{PrePositionType}}\ preposition\ \textcolor{keywordflow}{in}\ Enum.GetValues(typeof(\mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{PrePositionType}})))}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FindAndAddPosition(preposition,\ preposition.ToString());}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ table.Add(PrePositionType.Origin,\ transform);}
+\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_pre_position_a64a5370d078c1d620f64d271affd2c4e}{table}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(\mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{PrePositionType}}.Origin,\ transform);}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ mainMesh\ =\ transform.FindRecursive(\textcolor{stringliteral}{"{}Model.Dred"{}})?.GetComponent<SkinnedMeshRenderer>().sharedMesh;}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ FindAndAddPosition(PrePositionType\ prepositionType,\ \textcolor{keywordtype}{string}\ objectName)}
+\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ FindAndAddPosition(\mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{PrePositionType}}\ prepositionType,\ \textcolor{keywordtype}{string}\ objectName)}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ var\ prepositionTransform\ =\ transform.FindRecursive(objectName)?.transform;}
-\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (prepositionTransform\ is\ not\ \textcolor{keyword}{null})\ table.Add(prepositionType,\ prepositionTransform);}
+\DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (prepositionTransform\ is\ not\ \textcolor{keyword}{null})\ \mbox{\hyperlink{class_common_1_1_pre_position_a64a5370d078c1d620f64d271affd2c4e}{table}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(prepositionType,\ prepositionTransform);}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00032}00032\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_dred_pre_position_8cs_source_l00033}00033\ \ \ \ \ \}}

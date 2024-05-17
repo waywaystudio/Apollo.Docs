@@ -1,6 +1,6 @@
 \doxysection{Delay\+Ethereal\+Departure.\+cs}
 \hypertarget{_delay_ethereal_departure_8cs_source}{}\label{_delay_ethereal_departure_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/BellVeer/DelayEtherealDeparture.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/BellVeer/DelayEtherealDeparture.cs}}
-
+\mbox{\hyperlink{_delay_ethereal_departure_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_spirits}{Common.Spirits}};}
@@ -10,49 +10,49 @@
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_bell_veer}{Common.Masteries.BellVeer}}}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00007}00007\ \{}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//\ SPIRIT\ 의\ 천도를\ 1초간\ 늦출\ 수\ 있다.}}
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DelayEtherealDeparture\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_delay_ethereal_departure}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_delay_ethereal_departure}{DelayEtherealDeparture}}\ :\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery}{Mastery}}}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00010}00010\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpiritSpawnEvent\ spiritSpawnEvent;}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit_spawn_event}{SpiritSpawnEvent}}\ spiritSpawnEvent;}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00014}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_delay_ethereal_departure_a530d3f7c77a54d9690621487f81f0d07}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_delay_ethereal_departure_a530d3f7c77a54d9690621487f81f0d07}{Injection}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ AddSpectralSpiritCount(dred);}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2271c058314d7872f0c186c167769e42}{AddSpectralSpiritCount}}(dred);}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ spiritSpawnEvent.Add(\textcolor{stringliteral}{"{}DelayEtherealDeparture"{}},\ ProlongSpiritDuration);}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ spiritSpawnEvent.\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit_spawn_event_aaa548b675d01933b1f05d2528d392be7}{Add}}(\textcolor{stringliteral}{"{}DelayEtherealDeparture"{}},\ ProlongSpiritDuration);}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00021}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_delay_ethereal_departure_aa1bea56e6923698b4c14a452917849b9}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_delay_ethereal_departure_aa1bea56e6923698b4c14a452917849b9}{Abolition}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ RemoveSpectralSpiritCount(dred);}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a9a2cc1820390ad6638b30889d82e5a1b}{RemoveSpectralSpiritCount}}(dred);}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ spiritSpawnEvent.Remove(\textcolor{stringliteral}{"{}DelayEtherealDeparture"{}},\ ResetSpiritDuration);}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ spiritSpawnEvent.\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit_spawn_event_afce95236128bd143caf5f05a11a8c80a}{Remove}}(\textcolor{stringliteral}{"{}DelayEtherealDeparture"{}},\ ResetSpiritDuration);}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00028}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_delay_ethereal_departure_a3bc2137375fd06db64d2daa02d82c168}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_delay_ethereal_departure_a3bc2137375fd06db64d2daa02d82c168}{OnQualityChanged}}()\ \{\ \}}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ProlongSpiritDuration(Spirit\ spirit)}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ProlongSpiritDuration(\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit}{Spirit}}\ spirit)}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spawnAction\ =\ spirit.SpawnAction;\ }
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ var\ defaultDuration\ =\ SpiritSpawn.DefaultProlongDuration;}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spawnAction\ =\ spirit.\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit_a5b896485e43ca740f26ba425c980673d}{SpawnAction}};\ }
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ var\ defaultDuration\ =\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_spawn}{SpiritSpawn}}.\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_spawn_a925837bc868750dea9604de367e482b4}{DefaultProlongDuration}};}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ spirit.SpawnAction}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Sections}
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}ProlongDuration"{}},\ ()\ =>\ spawnAction.SetProlongDuration(defaultDuration\ +\ quality.Value))}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}ProlongDuration"{}},\ ()\ =>\ spawnAction.SetProlongDuration(defaultDuration\ +\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}}))}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ResetSpiritDuration(Spirit\ spirit)}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ResetSpiritDuration(\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit}{Spirit}}\ spirit)}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spawnAction\ =\ spirit.SpawnAction;}
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ var\ defaultDuration\ =\ SpiritSpawn.DefaultProlongDuration;}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spawnAction\ =\ spirit.\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit_a5b896485e43ca740f26ba425c980673d}{SpawnAction}};}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ var\ defaultDuration\ =\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_spawn}{SpiritSpawn}}.\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_spawn_a925837bc868750dea9604de367e482b4}{DefaultProlongDuration}};}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00046}00046\ }
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ spawnAction.SetProlongDuration(defaultDuration);}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ spirit.SpawnAction}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Sections}
-\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Active,\ \textcolor{stringliteral}{"{}ProlongDuration"{}})}
+\DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}ProlongDuration"{}})}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_delay_ethereal_departure_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ }

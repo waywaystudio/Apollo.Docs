@@ -1,6 +1,6 @@
 \doxysection{Game\+Object\+Extension.\+cs}
 \hypertarget{_game_object_extension_8cs_source}{}\label{_game_object_extension_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/\_Protocol/\_Extension/GameObjectExtension.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/\_Protocol/\_Extension/GameObjectExtension.cs}}
-
+\mbox{\hyperlink{_game_object_extension_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections;}
@@ -10,7 +10,7 @@
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }DG.Tweening.Core;}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }DG.Tweening.Plugins.Options;}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }UnityEngine;}
-\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }Object\ =\ UnityEngine.Object;}
+\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00009}\mbox{\hyperlink{_game_object_extension_8cs_aef19bab18b9814edeef255c43e4f6bbc}{00009}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_pool_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}\ =\ UnityEngine.Object;}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00010}00010\ \textcolor{comment}{//\ ReSharper\ disable\ UnusedMember.Global}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00011}00011\ \textcolor{comment}{//\ ReSharper\ disable\ InconsistentNaming}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00012}00012\ }
@@ -20,14 +20,14 @@
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00016}00016\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (Transform\ child\ \textcolor{keywordflow}{in}\ gameObject.GetComponentInChildren<Transform>(includeInactive))}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ Object.Destroy(child.gameObject);}
+\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pool_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}.Destroy(child.gameObject);}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00021}00021\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DestroyImmediateAllChildren(\textcolor{keyword}{this}\ GameObject\ gameObject,\ \textcolor{keywordtype}{bool}\ includeInactive\ =\ \textcolor{keyword}{false})}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00023}00023\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (Transform\ child\ \textcolor{keywordflow}{in}\ gameObject.GetComponentInChildren<Transform>(includeInactive))}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ Object.DestroyImmediate(child.gameObject);}
+\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pool_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}.DestroyImmediate(child.gameObject);}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00028}00028\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00029}00029\ }
@@ -97,7 +97,7 @@
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ obj\ \textcolor{keywordflow}{switch}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{null}\ \ \ \ \ =>\ \textcolor{keyword}{true},}
-\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ Object\ o\ =>\ o\ ==\ \textcolor{keyword}{null},}
+\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pool_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}\ o\ =>\ o\ ==\ \textcolor{keyword}{null},}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ =>\ \textcolor{keyword}{false}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00099}00099\ \ \ \ \ \}}
@@ -128,7 +128,7 @@
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00124}00124\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00125}00125\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ GameObject\ Instantiate(\textcolor{keyword}{this}\ GameObject\ original,\ Vector3\ position,\ Transform\ parent)}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00126}00126\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ var\ instance\ =\ Object.Instantiate(original,\ position,\ original.transform.rotation,\ parent);}
+\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ var\ instance\ =\ \mbox{\hyperlink{_pool_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}.Instantiate(original,\ position,\ original.transform.rotation,\ parent);}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00128}00128\ }
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00130}00130\ \ \ \ \ \}}
@@ -148,7 +148,7 @@
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ list.RemoveAt(i);}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (go\ !=\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Object.Destroy(go);}
+\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pool_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}.Destroy(go);}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00150}00150\ \ \ \ \ \}}
@@ -157,7 +157,7 @@
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00153}00153\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gameObject.HasObject()\ \&\&\ gameObject.TryGetComponent(out\ T\ \_))}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Object.Instantiate(gameObject,\ parent).TryGetComponent(out\ component);}
+\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_pool_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}.Instantiate(gameObject,\ parent).TryGetComponent(out\ component);}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ Debug.LogError(\$\textcolor{stringliteral}{"{}Not\ Exist\ \{nameof(T)\}\ in\ prefab:\{gameObject.name\}.\ return\ false"{}});}
@@ -169,7 +169,7 @@
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00165}00165\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gameObject.HasObject()\ \&\&\ gameObject.TryGetComponent(out\ T\ \_))}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Object.Instantiate(gameObject,\ position,\ rotation,\ parent).TryGetComponent(out\ component);}
+\DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_pool_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}.Instantiate(gameObject,\ position,\ rotation,\ parent).TryGetComponent(out\ component);}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_game_object_extension_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ Debug.LogError(\$\textcolor{stringliteral}{"{}Not\ Exist\ \{nameof(T)\}\ in\ prefab:\{gameObject.name\}.\ return\ false"{}});}

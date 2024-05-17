@@ -1,6 +1,6 @@
 \doxysection{Module\+Group\+Drawer.\+cs}
 \hypertarget{_module_group_drawer_8cs_source}{}\label{_module_group_drawer_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/CoreEditor/Attributes/ModuleGroupDrawer.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/CoreEditor/Attributes/ModuleGroupDrawer.cs}}
-
+\mbox{\hyperlink{_module_group_drawer_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Sirenix.OdinInspector.Editor;}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Sirenix.OdinInspector.Editor.ValueResolvers;}
@@ -10,11 +10,11 @@
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00008}00008\ \textcolor{comment}{//\ ReSharper\ disable\ once\ CheckNamespace}}
-\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00009}00009\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ModuleGroupDrawer\ :\ OdinGroupDrawer<ModuleGroupAttribute>}
+\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00009}\mbox{\hyperlink{class_module_group_drawer}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_module_group_drawer}{ModuleGroupDrawer}}\ :\ OdinGroupDrawer<ModuleGroupAttribute>}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00010}00010\ \{}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{private}\ ValueResolver<string>\ titleGetter;}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00014}\mbox{\hyperlink{class_module_group_drawer_a3667fbcea2a6b8f56f1a3394856553d2}{00014}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_module_group_drawer_a3667fbcea2a6b8f56f1a3394856553d2}{Initialize}}()}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00015}00015\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ titleGetter\ =\ ValueResolver.GetForString(Property,\ \$\textcolor{stringliteral}{"{}\ \{Attribute.GroupName\}"{}});}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ }
@@ -24,7 +24,7 @@
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ Property.State.Expanded\ =\ Attribute.Expanded;}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00022}00022\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ DrawPropertyLayout(GUIContent\ label)}
+\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00025}\mbox{\hyperlink{class_module_group_drawer_a3ac3ab83ce8d81a87c680746e2f4e4b4}{00025}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_module_group_drawer_a3ac3ab83ce8d81a87c680746e2f4e4b4}{DrawPropertyLayout}}(GUIContent\ label)}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00026}00026\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ var\ \textcolor{keyword}{property}\ =\ Property;}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ var\ attribute\ =\ Attribute;}
@@ -33,7 +33,7 @@
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ SirenixEditorGUI.ErrorMessageBox(titleGetter.ErrorMessage);}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ SirenixEditorGUI.BeginBox();}
-\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ BeginBoxHeader();}
+\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_module_group_drawer_a4378735e57d7a83b5b762dc528bec0ab}{BeginBoxHeader}}();}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ Property.State.Expanded\ =\ SirenixEditorGUI.Foldout(Property.State.Expanded,\ }
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GUIHelper.TempContent(titleGetter.HasError\ }
@@ -54,7 +54,7 @@
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ GUI.DrawTexture(iconRect,\ EditorIcons.Link.Active);}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ EndBoxHeader();}
+\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_module_group_drawer_addf0853e287bf4d4b9ae9cdffb0cb2e0}{EndBoxHeader}}();}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SirenixEditorGUI.BeginFadeGroup(\textcolor{keyword}{this},\ Property.State.Expanded))}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
@@ -75,7 +75,7 @@
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00073}00073\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00074}00074\ }
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00075}00075\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00079}00079\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Rect\ BeginBoxHeader()}
+\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00079}\mbox{\hyperlink{class_module_group_drawer_a4378735e57d7a83b5b762dc528bec0ab}{00079}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Rect\ \mbox{\hyperlink{class_module_group_drawer_a4378735e57d7a83b5b762dc528bec0ab}{BeginBoxHeader}}()}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00080}00080\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ GUILayout.Space(-\/3f);}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ }
@@ -95,7 +95,7 @@
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rect;}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00097}00097\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00098}00098\ }
-\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00102}00102\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ EndBoxHeader()}
+\DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00102}\mbox{\hyperlink{class_module_group_drawer_addf0853e287bf4d4b9ae9cdffb0cb2e0}{00102}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_module_group_drawer_addf0853e287bf4d4b9ae9cdffb0cb2e0}{EndBoxHeader}}()}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00103}00103\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ GUIHelper.PopLabelWidth();}
 \DoxyCodeLine{\Hypertarget{_module_group_drawer_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ EditorGUILayout.EndHorizontal();}

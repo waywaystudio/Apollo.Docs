@@ -1,6 +1,6 @@
 \doxysection{Data\+Object\+Drawer.\+cs}
 \hypertarget{_data_object_drawer_8cs_source}{}\label{_data_object_drawer_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/CoreEditor/DataObjectDrawer.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/CoreEditor/DataObjectDrawer.cs}}
-
+\mbox{\hyperlink{_data_object_drawer_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -11,14 +11,14 @@
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_core_editor}{CoreEditor}}}
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00009}00009\ \{}
-\DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DataObjectDrawer<T0,\ T1>\ :\ OdinAttributeProcessor<T0>\ where\ T0\ :\ DataObject<T1>\ where\ T1\ :\ class,\ IIdentifier}
+\DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00010}\mbox{\hyperlink{class_core_editor_1_1_data_object_drawer}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_core_editor_1_1_data_object_drawer}{DataObjectDrawer}}<T0,\ T1>\ :\ OdinAttributeProcessor<T0>\ where\ T0\ :\ \mbox{\hyperlink{class_databases_1_1_data_object}{DataObject}}<T1>\ where\ T1\ :\ class,\ \mbox{\hyperlink{interface_databases_1_1_i_identifier}{IIdentifier}}}
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00011}00011\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessSelfAttributes(InspectorProperty\ property,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00012}\mbox{\hyperlink{class_core_editor_1_1_data_object_drawer_ae5ec9a53b475624da1226beb4e4f99a0}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_editor_1_1_data_object_drawer_ae5ec9a53b475624da1226beb4e4f99a0}{ProcessSelfAttributes}}(InspectorProperty\ property,\ List<Attribute>\ attributes)}
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ HideLabelAttribute());}
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00017}\mbox{\hyperlink{class_core_editor_1_1_data_object_drawer_a96092277ebf0e7cac98c0dc1ab6a5f07}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_core_editor_1_1_data_object_drawer_a96092277ebf0e7cac98c0dc1ab6a5f07}{ProcessChildMemberAttributes}}(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}list"{}})}
 \DoxyCodeLine{\Hypertarget{_data_object_drawer_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \{}

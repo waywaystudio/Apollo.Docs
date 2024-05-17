@@ -1,6 +1,6 @@
 \doxysection{Fiend\+Dead\+Behaviour.\+cs}
 \hypertarget{_fiend_dead_behaviour_8cs_source}{}\label{_fiend_dead_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/Behaviours/Deads/FiendDeadBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/Behaviours/Deads/FiendDeadBehaviour.cs}}
-
+\mbox{\hyperlink{_fiend_dead_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players_1_1_fiends}{Common.Characters.NonPlayers.Fiends}};}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_spirits}{Common.Spirits}};}
@@ -8,17 +8,17 @@
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00004}00004\ }
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00005}\mbox{\hyperlink{namespace_common_1_1_characters_1_1_behaviours_1_1_deads}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_behaviours_1_1_deads}{Common.Characters.Behaviours.Deads}}}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }FiendDeadBehaviour\ :\ DeadBehaviour}
+\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_deads_1_1_fiend_dead_behaviour}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_deads_1_1_fiend_dead_behaviour}{FiendDeadBehaviour}}\ :\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_dead_behaviour}{DeadBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00008}00008\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Vector2Range\ spiritSpawnChance\ =\ \textcolor{keyword}{new}(0,\ 50);}
+\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_vector2_range}{Vector2Range}}\ spiritSpawnChance\ =\ \textcolor{keyword}{new}(0,\ 50);}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DropSpiritAction\ spiritDropper;}
-\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ FiendCoinDropAction\ coinDropAction;}
+\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_drop_spirit_action}{DropSpiritAction}}\ spiritDropper;}
+\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend_coin_drop_action}{FiendCoinDropAction}}\ coinDropAction;}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_deads_1_1_fiend_dead_behaviour_a276a12a35dacd0de79b64ba306abb03c}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_deads_1_1_fiend_dead_behaviour_a276a12a35dacd0de79b64ba306abb03c}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_behaver}{IBehaver}}\ behaver)}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (behaver\ is\ not\ Fiend\ fiend)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (behaver\ is\ not\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}\ fiend)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00020}00020\ }
@@ -26,9 +26,9 @@
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ coinDropAction\ =\ fiend.CoinDropAction;}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}SpawnSpirit"{}},\ ()\ =>\ spiritDropper.Active(spiritSpawnChance))}
-\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}CoinDrop"{}},\ ()\ =>\ coinDropAction.Active())}
-\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}SetActiveFalse"{}},\ ()\ =>\ Character.gameObject.SetActive(\textcolor{keyword}{false}))}
+\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}SpawnSpirit"{}},\ ()\ =>\ spiritDropper.\mbox{\hyperlink{class_common_1_1_spirits_1_1_drop_spirit_action_a53ea08a10938928f94bd41c76db39368}{Active}}(spiritSpawnChance))}
+\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}CoinDrop"{}},\ ()\ =>\ coinDropAction.\mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend_coin_drop_action_ac91d2adfb3ab6b36dc2b7ed0b0cf0ae6}{Active}}())}
+\DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Complete,\ \textcolor{stringliteral}{"{}SetActiveFalse"{}},\ ()\ =>\ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{interface_common_1_1_i_unit_a2ca74a8a9a8e98bfee6898eac58afbc9}{gameObject}}.SetActive(\textcolor{keyword}{false}))}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_fiend_dead_behaviour_8cs_source_l00030}00030\ \ \ \ \ \}}

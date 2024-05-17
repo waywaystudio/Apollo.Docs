@@ -100,45 +100,50 @@ $(function(){initNavTree('dd/d3f/_guided_trajectory_8cs_source.html','../../'); 
   <div class="headertitle"><div class="title">GuidedTrajectory.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Threading;</div>
+<a href="../../dd/d3f/_guided_trajectory_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Threading;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Cysharp.Threading.Tasks;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d1c/namespace_common_1_1_projectiles_1_1_trajectories.html">Common.Projectiles.Trajectories</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">public</span> <span class="keyword">class </span>GuidedTrajectory : Trajectory</div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d2/d5d/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d2/d5d/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory.html">GuidedTrajectory</a> : <a class="code hl_class" href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html">Trajectory</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">private</span> CancellationTokenSource guidedTokenSource;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Flying()</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d2/d5d/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory.html#aa527b27a1c9f0b1843de6a6bd60e0cba">   12</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d5d/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory.html#aa527b27a1c9f0b1843de6a6bd60e0cba">Flying</a>()</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            guidedTokenSource = <span class="keyword">new</span> CancellationTokenSource();</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            Guided(guidedTokenSource).Forget();</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        }</div>
+</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Cancel()</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d2/d5d/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory.html#a6ba24a758c80a430370da731b1ca16c0">   19</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d5d/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory.html#a6ba24a758c80a430370da731b1ca16c0">Cancel</a>()</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            guidedTokenSource?.Cancel();</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            guidedTokenSource = <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
+</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">private</span> async UniTaskVoid Guided(CancellationTokenSource cts)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                <span class="keywordflow">if</span> (Projectile.Target.IsNullOrDestroyed()) <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html">Projectile</a>.<a class="code hl_property" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#ac9779ef6b78256d49e7db90ab6e18dfa">Target</a>.IsNullOrDestroyed()) <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                var position = Projectile.transform.position;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                var position = <a class="code hl_class" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html">Projectile</a>.<a class="code hl_property" href="../../d8/d8b/interface_common_1_1_i_unit.html#a472a5fbc5ed5f3077bf1a6c46a290e0b">transform</a>.position;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                var directionToTarget = (Projectile.Target.Position - position).normalized;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                var distanceToTarget = Vector3.Distance(position, Projectile.Target.Position);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                var distancePerFrame = speed * Time.fixedDeltaTime;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                var distanceToTarget = Vector3.Distance(position, <a class="code hl_class" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html">Projectile</a>.<a class="code hl_property" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#ac9779ef6b78256d49e7db90ab6e18dfa">Target</a>.<a class="code hl_property" href="../../dd/dff/class_common_1_1_character.html#a274ffe9dda8db3f5f753c8fbbd0c4a32">Position</a>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                var distancePerFrame = <a class="code hl_variable" href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html#a12630e35ba259c119c91310ae7f73e8c">speed</a> * Time.fixedDeltaTime;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordflow">if</span> (distanceToTarget &lt;= distancePerFrame)</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    Projectile.transform.position = Projectile.Target.Position;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    Projectile.transform.position = <a class="code hl_class" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html">Projectile</a>.<a class="code hl_property" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#ac9779ef6b78256d49e7db90ab6e18dfa">Target</a>.<a class="code hl_property" href="../../dd/dff/class_common_1_1_character.html#a274ffe9dda8db3f5f753c8fbbd0c4a32">Position</a>;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
@@ -147,17 +152,28 @@ $(function(){initNavTree('dd/d3f/_guided_trajectory_8cs_source.html','../../'); 
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                await UniTask.Yield(PlayerLoopTiming.FixedUpdate, cts.Token);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            Projectile.Invoker.Complete();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_typedef" href="../../d0/d16/_database_8cs.html#ab58739cc673d5a939eb6b313566c53b6">Projectile</a>.Invoker.Complete();</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+<div class="ttc" id="a_database_8cs_html_ab58739cc673d5a939eb6b313566c53b6"><div class="ttname"><a href="../../d0/d16/_database_8cs.html#ab58739cc673d5a939eb6b313566c53b6">Projectile</a></div><div class="ttdeci">Databases.SheetData.CombatData.ProjectileData.Projectile Projectile</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d16/_database_8cs_source.html#l00017">Database.cs:17</a></div></div>
+<div class="ttc" id="aclass_common_1_1_character_html_a274ffe9dda8db3f5f753c8fbbd0c4a32"><div class="ttname"><a href="../../dd/dff/class_common_1_1_character.html#a274ffe9dda8db3f5f753c8fbbd0c4a32">Common.Character.Position</a></div><div class="ttdeci">Vector3 Position</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8a/_character_8cs_source.html#l00035">Character.cs:35</a></div></div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_projectile_html"><div class="ttname"><a href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html">Common.Projectiles.Projectile</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d8d/_projectile_8cs_source.html#l00005">Projectile.cs:6</a></div></div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_projectile_html_ac9779ef6b78256d49e7db90ab6e18dfa"><div class="ttname"><a href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#ac9779ef6b78256d49e7db90ab6e18dfa">Common.Projectiles.Projectile.Target</a></div><div class="ttdeci">Character Target</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d8d/_projectile_8cs_source.html#l00018">Projectile.cs:18</a></div></div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory_html"><div class="ttname"><a href="../../d2/d5d/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory.html">Common.Projectiles.Trajectories.GuidedTrajectory</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">GuidedTrajectory.cs:8</a></div></div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory_html_a6ba24a758c80a430370da731b1ca16c0"><div class="ttname"><a href="../../d2/d5d/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory.html#a6ba24a758c80a430370da731b1ca16c0">Common.Projectiles.Trajectories.GuidedTrajectory.Cancel</a></div><div class="ttdeci">override void Cancel()</div><div class="ttdef"><b>Definition</b> <a href="#l00019">GuidedTrajectory.cs:19</a></div></div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory_html_aa527b27a1c9f0b1843de6a6bd60e0cba"><div class="ttname"><a href="../../d2/d5d/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory.html#aa527b27a1c9f0b1843de6a6bd60e0cba">Common.Projectiles.Trajectories.GuidedTrajectory.Flying</a></div><div class="ttdeci">override void Flying()</div><div class="ttdef"><b>Definition</b> <a href="#l00012">GuidedTrajectory.cs:12</a></div></div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectory_html"><div class="ttname"><a href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html">Common.Projectiles.Trajectory</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d89/_trajectory_8cs_source.html#l00005">Trajectory.cs:6</a></div></div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectory_html_a12630e35ba259c119c91310ae7f73e8c"><div class="ttname"><a href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html#a12630e35ba259c119c91310ae7f73e8c">Common.Projectiles.Trajectory.speed</a></div><div class="ttdeci">float speed</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d89/_trajectory_8cs_source.html#l00007">Trajectory.cs:7</a></div></div>
+<div class="ttc" id="ainterface_common_1_1_i_unit_html_a472a5fbc5ed5f3077bf1a6c46a290e0b"><div class="ttname"><a href="../../d8/d8b/interface_common_1_1_i_unit.html#a472a5fbc5ed5f3077bf1a6c46a290e0b">Common.IUnit.transform</a></div><div class="ttdeci">Transform transform</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00016">ICombats.cs:16</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_projectiles_1_1_trajectories_html"><div class="ttname"><a href="../../d4/d1c/namespace_common_1_1_projectiles_1_1_trajectories.html">Common.Projectiles.Trajectories</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d39/_guided_parabola_trajectory_8cs_source.html#l00005">GuidedParabolaTrajectory.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_df0bab9382a706c8111b22aa67473426.html">Projectiles</a></li><li class="navelem"><a class="el" href="../../dir_2e57bb7b07c7f61ce4a8dda3693e14a9.html">Trajectories</a></li><li class="navelem"><b>GuidedTrajectory.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_df0bab9382a706c8111b22aa67473426.html">Projectiles</a></li><li class="navelem"><a class="el" href="../../dir_2e57bb7b07c7f61ce4a8dda3693e14a9.html">Trajectories</a></li><li class="navelem"><a class="el" href="../../dd/d3f/_guided_trajectory_8cs.html">GuidedTrajectory.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

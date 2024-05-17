@@ -1,32 +1,32 @@
 \doxysection{Sound\+Effect.\+cs}
 \hypertarget{_sound_effect_8cs_source}{}\label{_sound_effect_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Effects/Sounds/SoundEffect.cs@{C:/Project/Apollo/Assets/Scripts/Common/Effects/Sounds/SoundEffect.cs}}
-
+\mbox{\hyperlink{_sound_effect_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_audios}{Audios}};}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Cysharp.Threading.Tasks;}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
-\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Random\ =\ UnityEngine.Random;}
+\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00005}\mbox{\hyperlink{_sound_effect_8cs_a832e8f52fca5a678819ec96269dcb532}{00005}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}\ =\ UnityEngine.Random;}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00006}00006\ }
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_sounds}{Common.Effects.Sounds}}}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00008}00008\ \{}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00009}00009\ \ \ \ \ [RequireComponent(typeof(AudioSource))]}
-\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SoundEffect\ :\ EffectBehaviour,\ ISoundEffectProperty,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect}{SoundEffect}}\ :\ \mbox{\hyperlink{class_common_1_1_effects_1_1_effect_behaviour}{EffectBehaviour}},\ \mbox{\hyperlink{interface_audios_1_1_i_sound_effect_property}{ISoundEffectProperty}},\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00011}00011\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ AudioManager\ audioManager;}
+\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_audio_manager}{AudioManager}}\ audioManager;}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ AudioSource\ source;}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ simultaneousCount\ =\ 3;\ }
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ useRandomPitch;}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ randomPitchPercent\ =\ 0.1f;}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ syncWithGameObject\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ Key\ =>\ EffectKey;}
-\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ SimultaneousCount\ =>\ simultaneousCount;}
+\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect_a8a09d323de6298536f8ab57ef7f8a7c0}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect_a8a09d323de6298536f8ab57ef7f8a7c0}{Key}}\ =>\ \mbox{\hyperlink{class_common_1_1_effects_1_1_effect_behaviour_aaad1ef0e285d7d4a1680c754bfb44e3d}{EffectKey}};}
+\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00020}\mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect_a590269aec7445e95cab82fb05ac58a58}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect_a590269aec7445e95cab82fb05ac58a58}{SimultaneousCount}}\ =>\ simultaneousCount;}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Transform\ OriginalParent\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(ISequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00025}\mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect_a6a1e173ec3d191f4183eba3772b55b5d}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect_a6a1e173ec3d191f4183eba3772b55b5d}{Initialize}}(\mbox{\hyperlink{interface_i_sequencer}{ISequencer}}\ sequencer)}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(sequencer);}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -37,12 +37,12 @@
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ PlayEffect()}
+\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00036}\mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect_aaf8a1c5538e47eae32d5c661eb738211}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect_aaf8a1c5538e47eae32d5c661eb738211}{PlayEffect}}()}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!audioManager.IsPermitPlay(\textcolor{keyword}{this}))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!audioManager.\mbox{\hyperlink{class_audio_manager_abb41654e7aa4d304169217b71c30beba}{IsPermitPlay}}(\textcolor{keyword}{this}))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (useRandomPitch)}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ source.pitch\ =\ 1\ +\ Random.Range(-\/randomPitchPercent,\ randomPitchPercent);}
+\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ source.pitch\ =\ 1\ +\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}.Range(-\/randomPitchPercent,\ randomPitchPercent);}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ source.Play();}
@@ -65,7 +65,7 @@
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00063}00063\ }
-\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ StopEffect()}
+\DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00064}\mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect_a4e183760271434ea8bfea8106effc097}{00064}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_sounds_1_1_sound_effect_a4e183760271434ea8bfea8106effc097}{StopEffect}}()}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ source.Stop();}
 \DoxyCodeLine{\Hypertarget{_sound_effect_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}

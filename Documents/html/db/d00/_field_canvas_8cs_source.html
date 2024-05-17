@@ -100,20 +100,27 @@ $(function(){initNavTree('db/d00/_field_canvas_8cs_source.html','../../'); initR
   <div class="headertitle"><div class="title">FieldCanvas.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d8/d4c/namespace_u_is.html">UIs</a>;</div>
+<a href="../../db/d00/_field_canvas_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d8/d4c/namespace_u_is.html">UIs</a>;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d1/ddd/namespace_common_1_1_u_i.html">Common.UI</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keyword">public</span> <span class="keyword">class </span>FieldCanvas : CanvasMatrix, IEditable</div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="../../da/d71/class_common_1_1_u_i_1_1_field_canvas.html">    5</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../da/d71/class_common_1_1_u_i_1_1_field_canvas.html">FieldCanvas</a> : <a class="code hl_class" href="../../d3/d94/class_u_is_1_1_canvas_matrix.html">CanvasMatrix</a>, <a class="code hl_interface" href="../../d3/de8/interface_i_editable.html">IEditable</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> EditorSetUp()</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            hierarchy = CanvasHierarchyType.Field;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            <a class="code hl_variable" href="../../d3/d94/class_u_is_1_1_canvas_matrix.html#a390e60e7e4ae6b185b3485ffc5d05820">hierarchy</a> = <a class="code hl_enumeration" href="../../d8/da2/_canvas_hierarchy_type_8cs.html#a66143eb1e62a66da4cc0e20cef9acf66">CanvasHierarchyType</a>.Field;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        }</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+<div class="ttc" id="a_canvas_hierarchy_type_8cs_html_a66143eb1e62a66da4cc0e20cef9acf66"><div class="ttname"><a href="../../d8/da2/_canvas_hierarchy_type_8cs.html#a66143eb1e62a66da4cc0e20cef9acf66">CanvasHierarchyType</a></div><div class="ttdeci">CanvasHierarchyType</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da2/_canvas_hierarchy_type_8cs_source.html#l00001">CanvasHierarchyType.cs:2</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_field_canvas_html"><div class="ttname"><a href="../../da/d71/class_common_1_1_u_i_1_1_field_canvas.html">Common.UI.FieldCanvas</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">FieldCanvas.cs:6</a></div></div>
+<div class="ttc" id="aclass_u_is_1_1_canvas_matrix_html"><div class="ttname"><a href="../../d3/d94/class_u_is_1_1_canvas_matrix.html">UIs.CanvasMatrix</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d15/_canvas_matrix_8cs_source.html#l00005">CanvasMatrix.cs:6</a></div></div>
+<div class="ttc" id="aclass_u_is_1_1_canvas_matrix_html_a390e60e7e4ae6b185b3485ffc5d05820"><div class="ttname"><a href="../../d3/d94/class_u_is_1_1_canvas_matrix.html#a390e60e7e4ae6b185b3485ffc5d05820">UIs.CanvasMatrix.hierarchy</a></div><div class="ttdeci">CanvasHierarchyType hierarchy</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d15/_canvas_matrix_8cs_source.html#l00007">CanvasMatrix.cs:7</a></div></div>
+<div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_u_i_html"><div class="ttname"><a href="../../d1/ddd/namespace_common_1_1_u_i.html">Common.UI</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/ddf/_effect_canvas_8cs_source.html#l00007">EffectCanvas.cs:8</a></div></div>
 <div class="ttc" id="anamespace_u_is_html"><div class="ttname"><a href="../../d8/d4c/namespace_u_is.html">UIs</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d8d/_canvas_aspect_ratio_resolver_8cs_source.html#l00004">CanvasAspectRatioResolver.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -121,7 +128,7 @@ $(function(){initNavTree('db/d00/_field_canvas_8cs_source.html','../../'); initR
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><b>FieldCanvas.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><a class="el" href="../../db/d00/_field_canvas_8cs.html">FieldCanvas.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

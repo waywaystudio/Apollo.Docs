@@ -1,6 +1,6 @@
 \doxysection{Tree\+Around\+Trap.\+cs}
 \hypertarget{_tree_around_trap_8cs_source}{}\label{_tree_around_trap_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Traps/Variants/TreeAroundTrap.cs@{C:/Project/Apollo/Assets/Scripts/Common/Traps/Variants/TreeAroundTrap.cs}}
-
+\mbox{\hyperlink{_tree_around_trap_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_snares}{Common.Snares}};}
@@ -9,59 +9,59 @@
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00005}00005\ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_traps_1_1_variants}{Common.Traps.Variants}}}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TreeAroundTrap\ :\ MonoBehaviour,\ ISequencer,\ IDeActive,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap}{TreeAroundTrap}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_sequencer}{ISequencer}},\ \mbox{\hyperlink{interface_i_de_active}{IDeActive}},\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00009}00009\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<Trap>\ singleTrapList;}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Effector\ effector;}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CoolTimer\ coolTimeProperty;}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SnareTrigger\ trigger;}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_effector}{Effector}}\ effector;}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_cool_timer}{CoolTimer}}\ coolTimeProperty;}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_trigger}{SnareTrigger}}\ trigger;}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a49aed6226a2fd82d2f80e8fa67af8497}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_table}{SectionTable}}\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a9a9c1f10cb5aa64afeee11a3b3eb3570}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a9a9c1f10cb5aa64afeee11a3b3eb3570}{Invoker}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00017}00017\ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a8af992ba39fa26f310b33c973a9b4e0d}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a8af992ba39fa26f310b33c973a9b4e0d}{Initialize}}()}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a9a9c1f10cb5aa64afeee11a3b3eb3570}{Invoker}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}(Sections);}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}SkewerAllSingleTraps"{}},\ SkewerAllSingleTraps)}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}CancelAllSingleTraps"{}},\ CancelAllSingleTraps)}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}CancelAllSingleTraps"{}},\ CancelAllSingleTraps)}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}SkewerAllSingleTraps"{}},\ SkewerAllSingleTraps)}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}CancelAllSingleTraps"{}},\ CancelAllSingleTraps)}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Dispose,\ \textcolor{stringliteral}{"{}CancelAllSingleTraps"{}},\ CancelAllSingleTraps)}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00028}00028\ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ trigger}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddFilter(\textcolor{stringliteral}{"{}AliveCharacter"{}},\ obj\ =>\ obj.TryGetComponent(out\ Character\ character)\ \&\&\ character.IsAlive)}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddOnEnter(\textcolor{stringliteral}{"{}ActiveTreeAroundTrap"{}},\ OnCollided)}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Register(\textcolor{keyword}{this})}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_common_1_1_collider_trigger_af82a5f7085da7ec7ce01173882a359c9}{AddFilter}}(\textcolor{stringliteral}{"{}AliveCharacter"{}},\ obj\ =>\ obj.TryGetComponent(out\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ character)\ \&\&\ character.IsAlive)}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_common_1_1_collider_trigger_aba7d84d77fb8489ee47288ae94afaf1d}{AddOnEnter}}(\textcolor{stringliteral}{"{}ActiveTreeAroundTrap"{}},\ OnCollided)}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{class_common_1_1_collider_trigger_a38e7d91c0b4ffdfa7544f66de6eddaff}{Register}}(\textcolor{keyword}{this})}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ singleTrapList.ForEach(trap\ =>\ trap.Initialize());}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ coolTimeProperty.Initialize(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ coolTimeProperty.TimeTrigger.AddCallBack(\textcolor{stringliteral}{"{}Complete"{}},\ Invoker.Complete);}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ effector.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ coolTimeProperty.\mbox{\hyperlink{class_common_1_1_cool_timer_abb2b2e5e46b69c8247ecaeb1db17e1c7}{Initialize}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ coolTimeProperty.\mbox{\hyperlink{class_common_1_1_cool_timer_aaa5199dd472401519b1e2bd231dfda2f}{TimeTrigger}}.\mbox{\hyperlink{class_time_trigger_a8d5526e17f82d5108dbd8a7e7bc6b47f}{AddCallBack}}(\textcolor{stringliteral}{"{}Complete"{}},\ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a9a9c1f10cb5aa64afeee11a3b3eb3570}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}});}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ effector.\mbox{\hyperlink{class_common_1_1_effector_ad6123dc4b2e083651c82d5c184930571}{Initialize}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00041}\mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a554323d48266fbe52899511f7486e407}{00041}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a554323d48266fbe52899511f7486e407}{Active}}()}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a9a9c1f10cb5aa64afeee11a3b3eb3570}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a9a9c1f10cb5aa64afeee11a3b3eb3570}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ DeActive()}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00048}\mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_accabd8885e7c1c974b081a73cd692820}{00048}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_accabd8885e7c1c974b081a73cd692820}{DeActive}}()}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ singleTrapList.ForEach(trap\ =>\ trap.DeActive());}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00053}\mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_ac312f96edfff56abfa3b0996cb70ed96}{00053}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_ac312f96edfff56abfa3b0996cb70ed96}{Cancel}}()\ =>\ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a9a9c1f10cb5aa64afeee11a3b3eb3570}{Invoker}}.\mbox{\hyperlink{class_section_invoker_aa26adf36e80006bc7458495a349c3b7e}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00054}00054\ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00055}00055\ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SkewerAllSingleTraps()}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ singleTrapList.ForEach(singleTrap\ =>}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!singleTrap.Behaviours.TryGetCombinator<TreeGroupSkewer>(DataIndex.Skewer,\ out\ var\ skewer))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!singleTrap.Behaviours.TryGetCombinator<\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_tree_group_skewer}{TreeGroupSkewer}}>(\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.Skewer,\ out\ var\ skewer))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ skewer.Active();}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
@@ -71,7 +71,7 @@
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ singleTrapList.ForEach(singleTrap\ =>}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!singleTrap.Behaviours.TryGetCombinator<TreeGroupSkewer>(DataIndex.Skewer,\ out\ var\ skewer))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!singleTrap.Behaviours.TryGetCombinator<\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_tree_group_skewer}{TreeGroupSkewer}}>(\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.Skewer,\ out\ var\ skewer))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00071}00071\ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ skewer.Cancel();}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
@@ -79,21 +79,21 @@
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00075}00075\ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Awake()}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ Initialize();}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a8af992ba39fa26f310b33c973a9b4e0d}{Initialize}}();}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00080}00080\ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnCollided(GameObject\ enteredObject)}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ Active();}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a554323d48266fbe52899511f7486e407}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00085}00085\ }
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ Invoker?.Dispose();}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ \mbox{\hyperlink{class_common_1_1_traps_1_1_variants_1_1_tree_around_trap_a9a9c1f10cb5aa64afeee11a3b3eb3570}{Invoker}}?.\mbox{\hyperlink{class_section_invoker_a6062e5e18b03eb514b2fde87721fa690}{Dispose}}();}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00087}00087\ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00088}00088\ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00089}00089\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ =\ transform.GetComponentInChildrenWithDepth<Effector>(1);}
+\DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ =\ transform.GetComponentInChildrenWithDepth<\mbox{\hyperlink{class_common_1_1_effector}{Effector}}>(1);}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ effector.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_tree_around_trap_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ GetComponentsInChildren(singleTrapList);}

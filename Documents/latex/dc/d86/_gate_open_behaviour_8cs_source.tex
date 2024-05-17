@@ -1,45 +1,45 @@
 \doxysection{Gate\+Open\+Behaviour.\+cs}
 \hypertarget{_gate_open_behaviour_8cs_source}{}\label{_gate_open_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Props/Gates/GateOpenBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Props/Gates/GateOpenBehaviour.cs}}
-
+\mbox{\hyperlink{_gate_open_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }DG.Tweening;}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Random\ =\ UnityEngine.Random;}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00003}\mbox{\hyperlink{_gate_open_behaviour_8cs_a832e8f52fca5a678819ec96269dcb532}{00003}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}\ =\ UnityEngine.Random;}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00004}00004\ }
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_props_1_1_gates}{Common.Props.Gates}}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }GateOpenBehaviour\ :\ MonoBehaviour,\ ISequencer,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour}{GateOpenBehaviour}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_sequencer}{ISequencer}},\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00008}00008\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ humanize\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ duration;}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Ease\ openEaseType\ =\ Ease.OutQuad;}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Effector\ effector;}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_effector}{Effector}}\ effector;}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00013}00013\ }
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Transform\ leftDoor;}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Transform\ rightDoor;}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Tween\ leftDoorTween;}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Tween\ rightDoorTween;}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_ac21e77050133d18a60b9318f2d38bacc}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_table}{SectionTable}}\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00020}\mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_ac43dbf218473dcece7a94bc95a6b6f55}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}\ \mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_ac43dbf218473dcece7a94bc95a6b6f55}{Invoker}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(GateModel\ model)}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00023}\mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_ae46fa668c1da41552d2e70ff392b958e}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_ae46fa668c1da41552d2e70ff392b958e}{Initialize}}(\mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_model}{GateModel}}\ model)}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ \ \ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ leftDoor\ \ =\ model.LeftDoor;}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ rightDoor\ =\ model.RightDoor;}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_ac43dbf218473dcece7a94bc95a6b6f55}{Invoker}}\ \ \ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}(Sections);}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ leftDoor\ \ =\ model.\mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_model_a03bca84e7e24720c73742e30cb4bd30d}{LeftDoor}};}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ rightDoor\ =\ model.\mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_model_a34d79723a537c0f16d95019e9aaaaad5}{RightDoor}};}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00028}00028\ }
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}CancelTween"{}},\ CancelTween)}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Dispose,\ \textcolor{stringliteral}{"{}CancelTween"{}},\ CancelTween)}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ effector.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ effector.\mbox{\hyperlink{class_common_1_1_effector_ad6123dc4b2e083651c82d5c184930571}{Initialize}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active(\textcolor{keywordtype}{bool}\ instant)}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00036}\mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_aa7fca5116d4a85594503641cb1d4344b}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_aa7fca5116d4a85594503641cb1d4344b}{Active}}(\textcolor{keywordtype}{bool}\ instant)}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_ac43dbf218473dcece7a94bc95a6b6f55}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instant)}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Skip\ Sequence\ when\ Open\ Instantly;}}
@@ -48,7 +48,7 @@
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OpenTheDoor(duration);}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_ac43dbf218473dcece7a94bc95a6b6f55}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ }
@@ -58,21 +58,21 @@
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (leftDoorTween\ \ !=\ \textcolor{keyword}{null}\ \&\&\ leftDoorTween.IsActive())\ leftDoorTween.Kill();}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rightDoorTween\ !=\ \textcolor{keyword}{null}\ \&\&\ rightDoorTween.IsActive())\ rightDoorTween.Kill();}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ leftDoorTween\ =\ leftDoor.DOLocalRotate(\textcolor{keyword}{new}\ Vector3(0,\ -\/90,\ 0),\ duration\ *\ (humanize\ ?\ Random.Range(0.8f,\ 1.2f)\ :\ 1f)).SetEase(openEaseType);}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ rightDoorTween\ =\ rightDoor.DOLocalRotate(\textcolor{keyword}{new}\ Vector3(0,\ 90,\ 0),\ duration\ *\ (humanize\ ?\ Random.Range(0.8f,\ 1.2f)\ :\ 1f))}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ leftDoorTween\ =\ leftDoor.DOLocalRotate(\textcolor{keyword}{new}\ Vector3(0,\ -\/90,\ 0),\ duration\ *\ (humanize\ ?\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}.Range(0.8f,\ 1.2f)\ :\ 1f)).SetEase(openEaseType);}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ rightDoorTween\ =\ rightDoor.DOLocalRotate(\textcolor{keyword}{new}\ Vector3(0,\ 90,\ 0),\ duration\ *\ (humanize\ ?\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}.Range(0.8f,\ 1.2f)\ :\ 1f))}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(openEaseType)}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Skip\ Sequence\ when\ Open\ Instantly;}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (duration\ !=\ 0f)}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Complete();}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_ac43dbf218473dcece7a94bc95a6b6f55}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}}();}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \})}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00070}00070\ }
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00071}\mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_afcb351a901527e709294256ee00e2d98}{00071}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_afcb351a901527e709294256ee00e2d98}{Cancel}}()\ =>\ \mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_ac43dbf218473dcece7a94bc95a6b6f55}{Invoker}}.\mbox{\hyperlink{class_section_invoker_aa26adf36e80006bc7458495a349c3b7e}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00072}00072\ }
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00073}00073\ }
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CancelTween()}
@@ -90,13 +90,13 @@
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00088}00088\ }
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ Invoker?.Dispose();}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ \mbox{\hyperlink{class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_ac43dbf218473dcece7a94bc95a6b6f55}{Invoker}}?.\mbox{\hyperlink{class_section_invoker_a6062e5e18b03eb514b2fde87721fa690}{Dispose}}();}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00090}00090\ }
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00091}00091\ }
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00092}00092\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ =\ transform.GetComponentInChildrenWithDepth<Effector>(1);}
+\DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ =\ transform.GetComponentInChildrenWithDepth<\mbox{\hyperlink{class_common_1_1_effector}{Effector}}>(1);}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ effector.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gate_open_behaviour_8cs_source_l00098}00098\ \textcolor{preprocessor}{\#endif}}

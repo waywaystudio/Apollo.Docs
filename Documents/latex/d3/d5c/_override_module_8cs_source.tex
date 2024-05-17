@@ -1,6 +1,6 @@
 \doxysection{Override\+Module.\+cs}
 \hypertarget{_override_module_8cs_source}{}\label{_override_module_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/StatusEffects/Modules/OverrideModule.cs@{C:/Project/Apollo/Assets/Scripts/Common/StatusEffects/Modules/OverrideModule.cs}}
-
+\mbox{\hyperlink{_override_module_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
@@ -9,7 +9,7 @@
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00005}\mbox{\hyperlink{namespace_common_1_1_status_effects}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_status_effects}{Common.StatusEffects}}}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00006}00006\ \{}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00007}00007\ \ \ \ \ [Serializable]}
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }OverrideModule}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_status_effects_1_1_override_module}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_status_effects_1_1_override_module}{OverrideModule}}}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00009}00009\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ OverrideMask\ mask;}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ onProlongMultiplier\ =\ 1f;\ \textcolor{comment}{//\ 중첩됐을\ 때\ 갱신되는\ Original\ Duration\ *\ x의\ x값}}
@@ -17,19 +17,19 @@
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00013}00013\ }
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_status_effects_1_1_status_effect}{StatusEffect}}\ effect;}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ CombatIntValue\ StackValue\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_status_effects_1_1_override_module_a190d6d58d3fe2a0628a9817a879a2db1}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_combat_int_value}{CombatIntValue}}\ \mbox{\hyperlink{class_common_1_1_status_effects_1_1_override_module_a190d6d58d3fe2a0628a9817a879a2db1}{StackValue}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00017}00017\ }
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [Flags]\ \textcolor{keyword}{private}\ \textcolor{keyword}{enum}\ OverrideMask}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ None\ =\ 0,\ \textcolor{comment}{//\ ==\ Disable}}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_canvas_hierarchy_type_8cs_a66143eb1e62a66da4cc0e20cef9acf66a6adf97f83acf6453d4a6a4b1070f3754}{None}}\ =\ 0,\ \textcolor{comment}{//\ ==\ Disable}}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ Stack\ =\ 1\ \ \ \ \ \ \ \ \ <<\ 1,\ }
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ ResetDuration\ =\ 1\ <<\ 2,}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ Custom\ =\ 1\ <<\ 31,}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24ccea90589c47f06eb971d548591f23c285af}{Custom}}\ =\ 1\ <<\ 31,}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{class_common_1_1_status_effects_1_1_status_effect}{StatusEffect}}\ effect)}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00028}\mbox{\hyperlink{class_common_1_1_status_effects_1_1_override_module_ab7dfc7bd39c810e5497496c4bc3bedd4}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_status_effects_1_1_override_module_ab7dfc7bd39c810e5497496c4bc3bedd4}{Initialize}}(\mbox{\hyperlink{class_common_1_1_status_effects_1_1_status_effect}{StatusEffect}}\ effect)}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ this.effect\ =\ effect;}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -45,21 +45,21 @@
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00042}00042\ }
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ StackInitialize(ISequencer\ effect)}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ StackInitialize(\mbox{\hyperlink{interface_i_sequencer}{ISequencer}}\ effect)}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ effect.Sections}
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}ResetStack"{}},\ ResetStack)}
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Override,\ \textcolor{stringliteral}{"{}AddStack"{}},\ AddStack)}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}ResetStack"{}},\ ResetStack)}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Override,\ \textcolor{stringliteral}{"{}AddStack"{}},\ AddStack)}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00050}00050\ }
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ StackValue.Value\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ StackValue.SetMax(maxStack);}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_status_effects_1_1_override_module_a190d6d58d3fe2a0628a9817a879a2db1}{StackValue}}.\mbox{\hyperlink{class_common_1_1_combat_int_value_a8e7d2fdfda1597038219b7edc12c7ffe}{SetMax}}(maxStack);}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00054}00054\ }
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ResetDurationInitialize(ISequencer\ effect)}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ResetDurationInitialize(\mbox{\hyperlink{interface_i_sequencer}{ISequencer}}\ effect)}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ effect.Sections}
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Override,\ \textcolor{stringliteral}{"{}ProlongDuration"{}},\ ProlongDuration)}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Override,\ \textcolor{stringliteral}{"{}ProlongDuration"{}},\ ProlongDuration)}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00061}00061\ }
@@ -70,7 +70,7 @@
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ progress.Value\ =\ effect.ExecuteTimer.Duration\ *\ onProlongMultiplier;}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddStack()\ =>\ StackValue.Value++;}
+\DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddStack()\ =>\ \mbox{\hyperlink{class_common_1_1_status_effects_1_1_override_module_a190d6d58d3fe2a0628a9817a879a2db1}{StackValue}}.\mbox{\hyperlink{class_common_1_1_combat_int_value_affb41ef863def75eb0bdacf864d25e5a}{Value}}++;}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ResetStack()\ =>\ StackValue.Value\ =\ 1;}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00071}00071\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_override_module_8cs_source_l00072}00072\ \}}

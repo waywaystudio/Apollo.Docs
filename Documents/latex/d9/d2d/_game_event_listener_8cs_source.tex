@@ -1,6 +1,6 @@
 \doxysection{Game\+Event\+Listener.\+cs}
 \hypertarget{_game_event_listener_8cs_source}{}\label{_game_event_listener_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/GameEvents/Listener/GameEventListener.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/GameEvents/Listener/GameEventListener.cs}}
-
+\mbox{\hyperlink{_game_event_listener_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00001}00001\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Reflection;}
@@ -17,23 +17,23 @@
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00013}00013\ \{}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }GameEventListener\ :\ MonoBehaviour}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00015}00015\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ GameEvent\ targetEvent;}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{int}\ priority\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00016}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ae4384afce6746018b548643ef825b302}{00016}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_game_events_1_1_game_event}{GameEvent}}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ae4384afce6746018b548643ef825b302}{targetEvent}};}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00017}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_af5c8bfb24961ee39a0601ae79071a0fe}{00017}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_af5c8bfb24961ee39a0601ae79071a0fe}{priority}}\ =\ 5;}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ UnityEvent\ response;}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Priority\ =>\ priority;}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ GameEvent\ TargetEvent\ =>\ targetEvent;}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00020}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_adc0bc69bbf7ceea8716140a54e9abe21}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_adc0bc69bbf7ceea8716140a54e9abe21}{Priority}}\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_af5c8bfb24961ee39a0601ae79071a0fe}{priority}};}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00021}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ab1c483b48f992861b529696e581d2813}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_events_1_1_game_event}{GameEvent}}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ab1c483b48f992861b529696e581d2813}{TargetEvent}}\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ae4384afce6746018b548643ef825b302}{targetEvent}};}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Invoke()\ =>\ response?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00023}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_aa2b6a7310ec106f78720c5a41ed245e9}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_aa2b6a7310ec106f78720c5a41ed245e9}{Invoke}}()\ =>\ response?.Invoke();}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnEnable()\ =>\ TargetEvent.Register(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnDisable()\ =>\ TargetEvent.Unregister(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00025}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a52dabaac511a20dd86900a21ba0a2892}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a52dabaac511a20dd86900a21ba0a2892}{OnEnable}}()\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ab1c483b48f992861b529696e581d2813}{TargetEvent}}.\mbox{\hyperlink{class_game_events_1_1_game_event_afe3d2b3e0282a80e11a9f6bb555262c3}{Register}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00026}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a354fb64deac142ed83b3d2f12b9ac370}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a354fb64deac142ed83b3d2f12b9ac370}{OnDisable}}()\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ab1c483b48f992861b529696e581d2813}{TargetEvent}}.\mbox{\hyperlink{class_game_events_1_1_game_event_aa97f68b2eb8861697f5fa2c567cd13ce}{Unregister}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00029}00029\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AutoRegister()}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (targetEvent\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ae4384afce6746018b548643ef825b302}{targetEvent}}\ ==\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ response.ClearAllUnityEventInEditor();}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
@@ -43,12 +43,12 @@
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00039}00039\ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ behaviour\ \textcolor{keywordflow}{in}\ behaviours)}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ method\ =\ behaviour.GetType().GetMethod(targetEvent.name,BindingFlags.Public\ |\ BindingFlags.Instance);}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ method\ =\ behaviour.GetType().GetMethod(\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ae4384afce6746018b548643ef825b302}{targetEvent}}.name,BindingFlags.Public\ |\ BindingFlags.Instance);}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00043}00043\ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (method\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ response.ClearAllUnityEventInEditor();}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ response.AddPersistentListenerInEditor(behaviour,\ targetEvent.name);}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ response.AddPersistentListenerInEditor(behaviour,\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ae4384afce6746018b548643ef825b302}{targetEvent}}.name);}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00050}00050\ \textcolor{preprocessor}{\#endif}}
@@ -56,23 +56,23 @@
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00052}00052\ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }GameEventListener<T0>\ :\ MonoBehaviour}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00054}00054\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ GameEvent<T0>\ targetEvent;}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{int}\ priority\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00055}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_aedfc9fae8cff4085f5e62c5d3a4556b2}{00055}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_game_events_1_1_game_event}{GameEvent<T0>}}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_aedfc9fae8cff4085f5e62c5d3a4556b2}{targetEvent}};}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_af5c8bfb24961ee39a0601ae79071a0fe}{priority}}\ =\ 5;}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ UnityEvent<T0>\ response;}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Priority\ =>\ priority;}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ GameEvent<T0>\ TargetEvent\ =>\ targetEvent;}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_adc0bc69bbf7ceea8716140a54e9abe21}{Priority}}\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_af5c8bfb24961ee39a0601ae79071a0fe}{priority}};}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00060}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a47cbe2e125ecce0cc914184125c91ee2}{00060}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_events_1_1_game_event}{GameEvent<T0>}}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ab1c483b48f992861b529696e581d2813}{TargetEvent}}\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ae4384afce6746018b548643ef825b302}{targetEvent}};}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Invoke(T0\ value)\ =>\ response?.Invoke(value);}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00062}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a7bdf7579b31c1b2cc06280c2195dfcdf}{00062}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a7bdf7579b31c1b2cc06280c2195dfcdf}{Invoke}}(T0\ value)\ =>\ response?.Invoke(value);}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnEnable()\ =>\ TargetEvent.Register(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnDisable()\ =>\ TargetEvent.Unregister(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00064}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a52dabaac511a20dd86900a21ba0a2892}{00064}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a52dabaac511a20dd86900a21ba0a2892}{OnEnable}}()\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ab1c483b48f992861b529696e581d2813}{TargetEvent}}.\mbox{\hyperlink{class_game_events_1_1_game_event_afe3d2b3e0282a80e11a9f6bb555262c3}{Register}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00065}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a354fb64deac142ed83b3d2f12b9ac370}{00065}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a354fb64deac142ed83b3d2f12b9ac370}{OnDisable}}()\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ab1c483b48f992861b529696e581d2813}{TargetEvent}}.\mbox{\hyperlink{class_game_events_1_1_game_event_aa97f68b2eb8861697f5fa2c567cd13ce}{Unregister}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00068}00068\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AutoRegister()}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (targetEvent\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ae4384afce6746018b548643ef825b302}{targetEvent}}\ ==\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ response.ClearAllUnityEventInEditor();}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
@@ -82,30 +82,30 @@
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00078}00078\ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ behaviour\ \textcolor{keywordflow}{in}\ behaviours)}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ method\ =\ behaviour.GetType().GetMethod(targetEvent.name,BindingFlags.Public\ |\ BindingFlags.Instance);}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ method\ =\ behaviour.GetType().GetMethod(\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ae4384afce6746018b548643ef825b302}{targetEvent}}.name,BindingFlags.Public\ |\ BindingFlags.Instance);}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00082}00082\ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (method\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ response.ClearAllUnityEventInEditor();}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ response.AddPersistentListenerInEditor(behaviour,\ targetEvent.name);}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ response.AddPersistentListenerInEditor(behaviour,\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ae4384afce6746018b548643ef825b302}{targetEvent}}.name);}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00089}00089\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00090}00090\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00091}00091\ }
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00092}00092\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }GameEventListener<T0,\ T1>\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00092}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener}{00092}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener}{GameEventListener}}<T0,\ T1>\ :\ MonoBehaviour}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00093}00093\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ GameEvent<T0,\ T1>\ targetEvent;}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{int}\ priority\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00094}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a679f1550adf07ec5397e409a55d1c0ad}{00094}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_game_events_1_1_game_event}{GameEvent<T0,\ T1>}}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a679f1550adf07ec5397e409a55d1c0ad}{targetEvent}};}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_af5c8bfb24961ee39a0601ae79071a0fe}{priority}}\ =\ 5;}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ UnityEvent<T0,\ T1>\ response;}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Priority\ =>\ priority;}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ GameEvent<T0,\ T1>\ TargetEvent\ =>\ targetEvent;}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_adc0bc69bbf7ceea8716140a54e9abe21}{Priority}}\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_af5c8bfb24961ee39a0601ae79071a0fe}{priority}};}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00099}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a1408dcec64a7d73f6c766d94e3ce0249}{00099}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_events_1_1_game_event}{GameEvent<T0,\ T1>}}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ab1c483b48f992861b529696e581d2813}{TargetEvent}}\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ae4384afce6746018b548643ef825b302}{targetEvent}};}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00100}00100\ }
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Invoke(T0\ value1,\ T1\ value2)\ =>\ response?.Invoke(value1,\ value2);}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00101}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a751fe96a647721e40cfff875c4193b67}{00101}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a751fe96a647721e40cfff875c4193b67}{Invoke}}(T0\ value1,\ T1\ value2)\ =>\ response?.Invoke(value1,\ value2);}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnEnable()\ =>\ TargetEvent.Register(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnDisable()\ =>\ TargetEvent.Unregister(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00103}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a52dabaac511a20dd86900a21ba0a2892}{00103}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a52dabaac511a20dd86900a21ba0a2892}{OnEnable}}()\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ab1c483b48f992861b529696e581d2813}{TargetEvent}}.\mbox{\hyperlink{class_game_events_1_1_game_event_afe3d2b3e0282a80e11a9f6bb555262c3}{Register}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00104}\mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a354fb64deac142ed83b3d2f12b9ac370}{00104}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_a354fb64deac142ed83b3d2f12b9ac370}{OnDisable}}()\ =>\ \mbox{\hyperlink{class_game_events_1_1_listener_1_1_game_event_listener_ab1c483b48f992861b529696e581d2813}{TargetEvent}}.\mbox{\hyperlink{class_game_events_1_1_game_event_aa97f68b2eb8861697f5fa2c567cd13ce}{Unregister}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00105}00105\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00106}00106\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_game_event_listener_8cs_source_l00107}00107\ \ \ \ \ }

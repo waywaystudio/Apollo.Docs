@@ -1,13 +1,13 @@
 \doxysection{Self\+Trembling.\+cs}
 \hypertarget{_self_trembling_8cs_source}{}\label{_self_trembling_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Effects/Motions/SelfTrembling.cs@{C:/Project/Apollo/Assets/Scripts/Common/Effects/Motions/SelfTrembling.cs}}
-
+\mbox{\hyperlink{_self_trembling_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }DG.Tweening;}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00004}\mbox{\hyperlink{namespace_common_1_1_effects_1_1_motions}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_motions}{Common.Effects.Motions}}}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SelfTrembling\ :\ EffectBehaviour}
+\DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_effects_1_1_motions_1_1_self_trembling}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_effects_1_1_motions_1_1_self_trembling}{SelfTrembling}}\ :\ \mbox{\hyperlink{class_common_1_1_effects_1_1_effect_behaviour}{EffectBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00007}00007\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Transform\ rootTransform;}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ duration\ =\ 1f;\ \ \ \ \textcolor{comment}{//\ Duration\ of\ the\ shake}}
@@ -18,7 +18,7 @@
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Tween\ shakeTween;}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(ISequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_effects_1_1_motions_1_1_self_trembling_a89bd748fb252713bf908484895b94659}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_motions_1_1_self_trembling_a89bd748fb252713bf908484895b94659}{Initialize}}(\mbox{\hyperlink{interface_i_sequencer}{ISequencer}}\ sequencer)}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(sequencer);}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00020}00020\ }
@@ -28,12 +28,12 @@
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ PlayEffect()}
+\DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00027}\mbox{\hyperlink{class_common_1_1_effects_1_1_motions_1_1_self_trembling_ae92841c89c6a7e4151929e1be4f61692}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_motions_1_1_self_trembling_ae92841c89c6a7e4151929e1be4f61692}{PlayEffect}}()}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ shakeTween\ =\ rootTransform.DOShakePosition(duration,\ strength,\ vibrato,\ randomness);}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ StopEffect()}
+\DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00032}\mbox{\hyperlink{class_common_1_1_effects_1_1_motions_1_1_self_trembling_a903708c7cb5b7839ca6879bbdb614584}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_motions_1_1_self_trembling_a903708c7cb5b7839ca6879bbdb614584}{StopEffect}}()}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ CancelShakeTween();}
 \DoxyCodeLine{\Hypertarget{_self_trembling_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}

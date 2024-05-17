@@ -1,6 +1,6 @@
 \doxysection{Save\+Manager.\+cs}
 \hypertarget{_save_manager_8cs_source}{}\label{_save_manager_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/SaveManager.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/SaveManager.cs}}
-
+\mbox{\hyperlink{_save_manager_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -8,7 +8,7 @@
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_saves}{Saves}};}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00007}00007\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SaveManager\ :\ ScriptableObject}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00007}\mbox{\hyperlink{class_save_manager}{00007}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_save_manager}{SaveManager}}\ :\ ScriptableObject}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00008}00008\ \{}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ PlaySaveName\ =\ \textcolor{stringliteral}{"{}\_playSaveFile"{}};}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ AutoSaveName\ =\ \textcolor{stringliteral}{"{}\_autoSaveFile"{}};}
@@ -19,42 +19,42 @@
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ SaveFileDirectory\ =>\ ES3Settings.defaultSettings.path;}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ List<SaveListener>\ listenerList\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_saves_1_1_save_info}{SaveInfo}}\ CurrentSaveInfo\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{public}\ List<SaveInfo>\ SaveInfoList\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00018}\mbox{\hyperlink{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_saves_1_1_save_info}{SaveInfo}}\ \mbox{\hyperlink{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905}{CurrentSaveInfo}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00019}\mbox{\hyperlink{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ List<SaveInfo>\ \mbox{\hyperlink{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}{SaveInfoList}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00020}00020\ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00021}00021\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Save<T>(\textcolor{keywordtype}{string}\ key,\ T\ value)}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00022}\mbox{\hyperlink{class_save_manager_ad514147ed1bae9ce0f302f78fc336749}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_ad514147ed1bae9ce0f302f78fc336749}{Save<T>}}(\textcolor{keywordtype}{string}\ key,\ T\ value)}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00023}00023\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ var\ filePath\ =\ CurrentSaveInfo\ ==\ \textcolor{keyword}{null}\ }
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ var\ filePath\ =\ \mbox{\hyperlink{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905}{CurrentSaveInfo}}\ ==\ \textcolor{keyword}{null}\ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ GetPathByName(AutoSaveName)\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ :\ GetPathByName(CurrentSaveInfo.Filename);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ :\ GetPathByName(\mbox{\hyperlink{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905}{CurrentSaveInfo}}.\mbox{\hyperlink{class_saves_1_1_save_info_a6f430e0e26e23c7584c8a8bdb059fe9d}{Filename}});}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ Save(key,\ value,\ filePath);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00029}00029\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00030}00030\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{public}\ T\ Load<T>(\textcolor{keywordtype}{string}\ key,\ T\ value\ =\ \textcolor{keywordflow}{default})}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00031}\mbox{\hyperlink{class_save_manager_ab1ecc2710449db6495b36e5c77cb7951}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ T\ \mbox{\hyperlink{class_save_manager_ab1ecc2710449db6495b36e5c77cb7951}{Load<T>}}(\textcolor{keywordtype}{string}\ key,\ T\ value\ =\ \textcolor{keywordflow}{default})}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00032}00032\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ var\ filePath\ =\ CurrentSaveInfo\ ==\ \textcolor{keyword}{null}\ }
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ var\ filePath\ =\ \mbox{\hyperlink{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905}{CurrentSaveInfo}}\ ==\ \textcolor{keyword}{null}\ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ GetPathByName(AutoSaveName)\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ :\ GetPathByName(CurrentSaveInfo.Filename);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ :\ GetPathByName(\mbox{\hyperlink{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905}{CurrentSaveInfo}}.\mbox{\hyperlink{class_saves_1_1_save_info_a6f430e0e26e23c7584c8a8bdb059fe9d}{Filename}});}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00036}00036\ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Load(key,\ filePath,\ value);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00038}00038\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00039}00039\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00045}00045\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ LoadAllSaveInformation()}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00045}\mbox{\hyperlink{class_save_manager_ae0f04b9aedd61fd94b2f1b11c09176f3}{00045}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_ae0f04b9aedd61fd94b2f1b11c09176f3}{LoadAllSaveInformation}}()}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00046}00046\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ CreatePlaySaveFile();}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ CurrentSaveInfo\ =\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ SaveInfoList.Clear();}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905}{CurrentSaveInfo}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}{SaveInfoList}}.Clear();}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ GetFileNames.ForEach(fileFullName\ =>}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ var\ saveFilePath\ =\ \$\textcolor{stringliteral}{"{}\{SaveFileDirectory\}/\{fileFullName\}"{}};}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!IsValidSaveInformation(saveFilePath))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ SaveInfoList.Add(Load<SaveInfo>(InfoKey,\ saveFilePath));}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}{SaveInfoList}}.Add(Load<SaveInfo>(InfoKey,\ saveFilePath));}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00059}00059\ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ TryCreateAutoSaveFile();}
@@ -62,15 +62,15 @@
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00062}00062\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00064}00064\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00068}00068\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ TryCreateNewSaveFile(\textcolor{keywordtype}{string}\ filename)}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00068}\mbox{\hyperlink{class_save_manager_ab80f832cc9e0fcef6c04fc21140e02ec}{00068}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_save_manager_ab80f832cc9e0fcef6c04fc21140e02ec}{TryCreateNewSaveFile}}(\textcolor{keywordtype}{string}\ filename)}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00069}00069\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!IsValidFileName(filename))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TryGetSaveInfo(filename,\ out\ \_))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_save_manager_aab08d86b08d61874898993e0405029ba}{TryGetSaveInfo}}(filename,\ out\ \_))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00072}00072\ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ var\ serializeInfo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_saves_1_1_save_info}{SaveInfo}}(filename);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ Save(InfoKey,\ serializeInfo,\ GetPathByName(filename));}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ SaveInfoList.Add(serializeInfo);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}{SaveInfoList}}.Add(serializeInfo);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ SortByTimeStamp();}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ Refresh();}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -78,35 +78,35 @@
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00081}00081\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00087}00087\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SaveToNewFile(\textcolor{keywordtype}{string}\ filename)}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00087}\mbox{\hyperlink{class_save_manager_a7eb5b17053ad793fda7d03b6499360fb}{00087}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_a7eb5b17053ad793fda7d03b6499360fb}{SaveToNewFile}}(\textcolor{keywordtype}{string}\ filename)}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00088}00088\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!TryCreateNewSaveFile(filename))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_save_manager_ab80f832cc9e0fcef6c04fc21140e02ec}{TryCreateNewSaveFile}}(filename))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00090}00090\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ SaveToExistFile(filename);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_aea00b44b9e0c1a75f820ea7148767bb3}{SaveToExistFile}}(filename);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00092}00092\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00098}00098\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SaveToExistFile(\textcolor{keywordtype}{string}\ existSaveFileName)}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00098}\mbox{\hyperlink{class_save_manager_aea00b44b9e0c1a75f820ea7148767bb3}{00098}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_aea00b44b9e0c1a75f820ea7148767bb3}{SaveToExistFile}}(\textcolor{keywordtype}{string}\ existSaveFileName)}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00099}00099\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!TryGetSaveInfo(existSaveFileName,\ out\ \_))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_save_manager_aab08d86b08d61874898993e0405029ba}{TryGetSaveInfo}}(existSaveFileName,\ out\ \_))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00101}00101\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ SaveAll();}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_a521d7ae631fb3b29413b9ea64e08f599}{SaveAll}}();}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ TransferSaveInfo(PlaySaveName,\ existSaveFileName);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00104}00104\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00105}00105\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00109}00109\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ LoadFromFile(\textcolor{keywordtype}{string}\ fromSaveFilename)}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00109}\mbox{\hyperlink{class_save_manager_a1a70b1299f7db5028eddc7b10d97ceaa}{00109}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_a1a70b1299f7db5028eddc7b10d97ceaa}{LoadFromFile}}(\textcolor{keywordtype}{string}\ fromSaveFilename)}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00110}00110\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ TransferSaveInfo(fromSaveFilename,\ PlaySaveName);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00112}00112\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ CurrentSaveInfo\ =\ SaveInfoList.Find(info\ =>\ info.Filename\ ==\ PlaySaveName);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905}{CurrentSaveInfo}}\ =\ \mbox{\hyperlink{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}{SaveInfoList}}.Find(info\ =>\ info.Filename\ ==\ PlaySaveName);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00114}00114\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ LoadAll();}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_aa24f169080ff5e633a6cb51d9a0e286c}{LoadAll}}();}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00116}00116\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00117}00117\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00122}00122\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ DeleteSaveFile(\textcolor{keywordtype}{string}\ filename)}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00122}\mbox{\hyperlink{class_save_manager_a48b639c593a065f068e8b41fbdbc6a18}{00122}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_a48b639c593a065f068e8b41fbdbc6a18}{DeleteSaveFile}}(\textcolor{keywordtype}{string}\ filename)}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00123}00123\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TryGetSaveInfo(filename,\ out\ var\ result))\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ SaveInfoList.RemoveSafely(result);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_save_manager_aab08d86b08d61874898993e0405029ba}{TryGetSaveInfo}}(filename,\ out\ var\ result))\ }
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}{SaveInfoList}}.RemoveSafely(result);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00126}00126\ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ DeleteFilePath(GetPathByName(filename));}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -118,28 +118,28 @@
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00134}00134\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00135}00135\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00136}00136\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00141}00141\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ResetFile()}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00141}\mbox{\hyperlink{class_save_manager_ade5f41d4bcf9ef6db242131fb30acece}{00141}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_ade5f41d4bcf9ef6db242131fb30acece}{ResetFile}}()}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00142}00142\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ DeleteSaveFileDirectory(SaveFileDirectory);}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ SaveInfoList.Clear();}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}{SaveInfoList}}.Clear();}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00146}00146\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ var\ metaPath\ =\ \$\textcolor{stringliteral}{"{}Assets/\{SaveFileDirectory\}.jason"{}};}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ System.IO.File.Delete(metaPath);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00149}00149\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ LoadAllSaveInformation();}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_ae0f04b9aedd61fd94b2f1b11c09176f3}{LoadAllSaveInformation}}();}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ Refresh();}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00152}00152\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00154}00154\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ AddListener(SaveListener\ listener)\ =>\ listenerList.AddUniquely(listener);}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00155}00155\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ RemoveListener(SaveListener\ listener)\ =>\ listenerList.RemoveSafely(listener);}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00156}00156\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SaveAll()\ =>\ listenerList.ForEach(listener\ =>\ listener.Save());}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00157}00157\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ LoadAll()\ =>\ listenerList.ForEach(listener\ =>\ listener.Load());}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00154}\mbox{\hyperlink{class_save_manager_a58ca9e2645460006af1a678cdbc3f7f6}{00154}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_a58ca9e2645460006af1a678cdbc3f7f6}{AddListener}}(\mbox{\hyperlink{class_saves_1_1_save_listener}{SaveListener}}\ listener)\ =>\ listenerList.AddUniquely(listener);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00155}\mbox{\hyperlink{class_save_manager_a4e93f248055b404c4f6fc3ce997ad6c4}{00155}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_a4e93f248055b404c4f6fc3ce997ad6c4}{RemoveListener}}(\mbox{\hyperlink{class_saves_1_1_save_listener}{SaveListener}}\ listener)\ =>\ listenerList.RemoveSafely(listener);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00156}\mbox{\hyperlink{class_save_manager_a521d7ae631fb3b29413b9ea64e08f599}{00156}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_a521d7ae631fb3b29413b9ea64e08f599}{SaveAll}}()\ =>\ listenerList.ForEach(listener\ =>\ listener.Save());}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00157}\mbox{\hyperlink{class_save_manager_aa24f169080ff5e633a6cb51d9a0e286c}{00157}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_aa24f169080ff5e633a6cb51d9a0e286c}{LoadAll}}()\ =>\ listenerList.ForEach(listener\ =>\ listener.Load());}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00158}00158\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00159}00159\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Dispose()}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00159}\mbox{\hyperlink{class_save_manager_ae89d2ae07a78d83e4c2b1b6c1f3d6263}{00159}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_ae89d2ae07a78d83e4c2b1b6c1f3d6263}{Dispose}}()}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00160}00160\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ listenerList.Clear();}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ CurrentSaveInfo\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_aa7fb7beffa1ea8b75238f156e9baa905}{CurrentSaveInfo}}\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00163}00163\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00164}00164\ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ }
@@ -153,8 +153,8 @@
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ DeleteSaveFile(destName);}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ TryCreateNewSaveFile(destName);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_a48b639c593a065f068e8b41fbdbc6a18}{DeleteSaveFile}}(destName);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_ab80f832cc9e0fcef6c04fc21140e02ec}{TryCreateNewSaveFile}}(destName);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00184}00184\ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ ES3.GetKeys(GetPathByName(fromName)).ForEach(key\ =>}
@@ -197,11 +197,11 @@
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00223}00223\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00224}00224\ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00225}00225\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ TryGetSaveInfo(\textcolor{keywordtype}{string}\ saveFilename,\ out\ \mbox{\hyperlink{class_saves_1_1_save_info}{SaveInfo}}\ result)}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00225}\mbox{\hyperlink{class_save_manager_aab08d86b08d61874898993e0405029ba}{00225}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_save_manager_aab08d86b08d61874898993e0405029ba}{TryGetSaveInfo}}(\textcolor{keywordtype}{string}\ saveFilename,\ out\ \mbox{\hyperlink{class_saves_1_1_save_info}{SaveInfo}}\ result)}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00226}00226\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ result\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ info\ \textcolor{keywordflow}{in}\ SaveInfoList)}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ info\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}{SaveInfoList}})}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (info.Filename\ !=\ saveFilename)\ \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -214,12 +214,12 @@
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00239}00239\ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00240}00240\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SortByTimeStamp()}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00241}00241\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ SaveInfoList.Sort((b,\ a)\ =>\ \textcolor{keywordtype}{string}.Compare(a.SaveTime,\ b.SaveTime,\ StringComparison.Ordinal));}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_save_manager_a111ff32e5a8967fa470eac129273a9d9}{SaveInfoList}}.Sort((b,\ a)\ =>\ \textcolor{keywordtype}{string}.Compare(a.SaveTime,\ b.SaveTime,\ StringComparison.Ordinal));}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00243}00243\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00244}00244\ }
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00245}00245\ \textcolor{preprocessor}{\ \ \ \ \#region\ ES3\ Packing}}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00246}00246\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Save<T>(\textcolor{keywordtype}{string}\ key,\ T\ value,\ \textcolor{keywordtype}{string}\ filePath)\ =>\ ES3.Save(key,\ value,\ filePath);}
-\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00247}00247\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ T\ Load<T>(\textcolor{keywordtype}{string}\ key,\ \textcolor{keywordtype}{string}\ filePath,\ T\ defaultValue\ =\ \textcolor{keywordflow}{default})\ =>\ ES3.Load(key,\ filePath,\ defaultValue);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00246}00246\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_save_manager_ad514147ed1bae9ce0f302f78fc336749}{Save<T>}}(\textcolor{keywordtype}{string}\ key,\ T\ value,\ \textcolor{keywordtype}{string}\ filePath)\ =>\ ES3.Save(key,\ value,\ filePath);}
+\DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00247}00247\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ T\ \mbox{\hyperlink{class_save_manager_ab1ecc2710449db6495b36e5c77cb7951}{Load<T>}}(\textcolor{keywordtype}{string}\ key,\ \textcolor{keywordtype}{string}\ filePath,\ T\ defaultValue\ =\ \textcolor{keywordflow}{default})\ =>\ ES3.Load(key,\ filePath,\ defaultValue);}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00248}00248\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ IEnumerable<string>\ GetFileNames}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00249}00249\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_save_manager_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}

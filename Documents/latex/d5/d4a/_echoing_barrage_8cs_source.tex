@@ -1,6 +1,6 @@
 \doxysection{Echoing\+Barrage.\+cs}
 \hypertarget{_echoing_barrage_8cs_source}{}\label{_echoing_barrage_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/BellVeer/EchoingBarrage.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/BellVeer/EchoingBarrage.cs}}
-
+\mbox{\hyperlink{_echoing_barrage_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_bell_veers}{Common.Skills.BellVeers}};}
@@ -8,28 +8,28 @@
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_bell_veer}{Common.Masteries.BellVeer}}}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00005}00005\ \{}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00006}00006\ \ \ \ \ \textcolor{comment}{//\ ATTACK시\ 추가로\ 초당\ 2개의\ 령기가\ 발사된다.}}
-\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }EchoingBarrage\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_echoing_barrage}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_echoing_barrage}{EchoingBarrage}}\ :\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery}{Mastery}}}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00008}00008\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ WhirlingEchoes\ whirlingEchoes;}
+\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_bell_veers_1_1_whirling_echoes}{WhirlingEchoes}}\ whirlingEchoes;}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_echoing_barrage_a0141f3e4c57fc5ab79f0195e58285e98}{00011}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_echoing_barrage_a0141f3e4c57fc5ab79f0195e58285e98}{Injection}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ AddSpectralSpiritCount(dred);}
+\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2271c058314d7872f0c186c167769e42}{AddSpectralSpiritCount}}(dred);}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ whirlingEchoes\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ dred.Skills.WhirlingEchoes;}
-\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ whirlingEchoes.CountPerSecond\ =\ WhirlingEchoes.DefaultCount\ +\ quality.Value.ToInt();}
+\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ whirlingEchoes\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ dred.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_a2625c9d5199e0e18ddbb0c7ad9ed943b}{Skills}}.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_skills_a533556f3a740dbfca0619b6a19f396b1}{WhirlingEchoes}};}
+\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ whirlingEchoes.CountPerSecond\ =\ WhirlingEchoes.DefaultCount\ +\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}}.ToInt();}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_echoing_barrage_a0dd13d627f1c078091050b3da027c1f9}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_echoing_barrage_a0dd13d627f1c078091050b3da027c1f9}{Abolition}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ RemoveSpectralSpiritCount(dred);}
+\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a9a2cc1820390ad6638b30889d82e5a1b}{RemoveSpectralSpiritCount}}(dred);}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ whirlingEchoes.CountPerSecond\ =\ WhirlingEchoes.DefaultCount\ +\ quality.Value.ToInt();}
+\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ whirlingEchoes.CountPerSecond\ =\ WhirlingEchoes.DefaultCount\ +\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}}.ToInt();}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00026}\mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_echoing_barrage_a473a24295df6ec747156b4664407016e}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_bell_veer_1_1_echoing_barrage_a473a24295df6ec747156b4664407016e}{OnQualityChanged}}()}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ whirlingEchoes.CountPerSecond\ =\ WhirlingEchoes.DefaultCount\ +\ quality.Value.ToInt();}
+\DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ whirlingEchoes.CountPerSecond\ =\ WhirlingEchoes.DefaultCount\ +\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}}.ToInt();}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00030}00030\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_echoing_barrage_8cs_source_l00031}00031\ \}}

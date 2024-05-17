@@ -1,6 +1,6 @@
 \doxysection{Effect\+Canvas.\+cs}
 \hypertarget{_effect_canvas_8cs_source}{}\label{_effect_canvas_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/UI/EffectCanvas.cs@{C:/Project/Apollo/Assets/Scripts/Common/UI/EffectCanvas.cs}}
-
+\mbox{\hyperlink{_effect_canvas_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i_1_1_effect_canvases}{Common.UI.EffectCanvases}};}
@@ -10,20 +10,20 @@
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00006}00006\ }
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00007}\mbox{\hyperlink{namespace_common_1_1_u_i}{00007}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}}}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00008}00008\ \{}
-\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }EffectCanvas\ :\ CanvasMatrix,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas}{EffectCanvas}}\ :\ \mbox{\hyperlink{class_u_is_1_1_canvas_matrix}{CanvasMatrix}},\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00010}00010\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CanvasGroup\ black;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CanvasGroup\ blur;}
-\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ImageOverlayEffect\ overlayEffect;}
+\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvases_1_1_image_overlay_effect}{ImageOverlayEffect}}\ overlayEffect;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Sequence\ blackFadeSequence;}
-\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Sequence\ blurFadeSequence;}
+\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{_float_text_8cs_a7f07f40568277d699f0beec24a338e80}{Sequence}}\ blackFadeSequence;}
+\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{_float_text_8cs_a7f07f40568277d699f0beec24a338e80}{Sequence}}\ blurFadeSequence;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Tween\ blackFadeTween;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Tween\ blurFadeTween;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ImageOverlayEffect\ OverlayEffect\ =>\ overlayEffect;}
+\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00020}\mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_ad0b556b1aa2dc1f0986f4956befcaa5a}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvases_1_1_image_overlay_effect}{ImageOverlayEffect}}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_ad0b556b1aa2dc1f0986f4956befcaa5a}{OverlayEffect}}\ =>\ overlayEffect;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ FadeOut(\textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
+\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00022}\mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_ac71ce55e452e6dd5c8c3d90f8c94d1da}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_ac71ce55e452e6dd5c8c3d90f8c94d1da}{FadeOut}}(\textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!gameObject.activeSelf)}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -46,7 +46,7 @@
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ BlurOut(\textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
+\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00045}\mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_a36b798f126a6b9c0799c55ca4aa0dad5}{00045}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_a36b798f126a6b9c0799c55ca4aa0dad5}{BlurOut}}(\textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ CancelBlurFadeTween();}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -64,7 +64,7 @@
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ FadeIn(\textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
+\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00063}\mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_a7cac602411c3d199dee703d9b8e6b1ab}{00063}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_a7cac602411c3d199dee703d9b8e6b1ab}{FadeIn}}(\textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ CancelBlackFadeTween();}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -86,7 +86,7 @@
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ BlurIn(\textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
+\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00085}\mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_a3f9512ed990aa6105fdedbd95da1af8c}{00085}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_a3f9512ed990aa6105fdedbd95da1af8c}{BlurIn}}(\textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ CancelBlurFadeTween();}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -104,7 +104,7 @@
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ FadeCancellation()}
+\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00103}\mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_aba19695d1f4d4627d71e54dedbb86152}{00103}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_effect_canvas_aba19695d1f4d4627d71e54dedbb86152}{FadeCancellation}}()}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ CancelBlackFadeTween();}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ CancelBlurFadeTween();}
@@ -148,7 +148,7 @@
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00144}00144\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ hierarchy\ \ \ \ \ =\ CanvasHierarchyType.Effect;}
+\DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_is_1_1_canvas_matrix_a390e60e7e4ae6b185b3485ffc5d05820}{hierarchy}}\ \ \ \ \ =\ \mbox{\hyperlink{_canvas_hierarchy_type_8cs_a66143eb1e62a66da4cc0e20cef9acf66}{CanvasHierarchyType}}.Effect;}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ black\ \ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}FadePanel"{}}).GetComponent<CanvasGroup>();}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ blur\ \ \ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}BlurPanel"{}}).GetComponent<CanvasGroup>();}
 \DoxyCodeLine{\Hypertarget{_effect_canvas_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ overlayEffect\ =\ GetComponentInChildren<ImageOverlayEffect>();}

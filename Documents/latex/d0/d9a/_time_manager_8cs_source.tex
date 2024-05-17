@@ -1,48 +1,48 @@
 \doxysection{Time\+Manager.\+cs}
 \hypertarget{_time_manager_8cs_source}{}\label{_time_manager_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/TimeManager.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/TimeManager.cs}}
-
+\mbox{\hyperlink{_time_manager_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_times}{Times}};}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00004}00004\ }
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00005}00005\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TimeManager\ :\ ScriptableObject}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00005}\mbox{\hyperlink{class_time_manager}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_time_manager}{TimeManager}}\ :\ ScriptableObject}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ TimeDirector\ Director\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsPaused\ =>\ Director\ is\ not\ \textcolor{keyword}{null}\ \&\&\ Director.IsPaused;}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00007}\mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_times_1_1_time_director}{TimeDirector}}\ \mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00008}\mbox{\hyperlink{class_time_manager_af2072e9048d854f66fc5b7eb48d3c4af}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_time_manager_af2072e9048d854f66fc5b7eb48d3c4af}{IsPaused}}\ =>\ \mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}\ is\ not\ \textcolor{keyword}{null}\ \&\&\ \mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}.\mbox{\hyperlink{class_times_1_1_time_director_a1d1f13b58ddccdce763570875af335fe}{IsPaused}};}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00009}00009\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Pause(Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00015}\mbox{\hyperlink{class_time_manager_adde843fbc1873e82dc2b965704f0841d}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_manager_adde843fbc1873e82dc2b965704f0841d}{Pause}}(Action\ callback\ =\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00016}00016\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Verify.IsNotNull(Director))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Verify.IsNotNull(\mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ Director.Pause(callback);}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}.\mbox{\hyperlink{class_times_1_1_time_director_ac961380535b879a6b4943c8ea0a5412f}{Pause}}(callback);}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00020}00020\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00021}00021\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Pause(\textcolor{keywordtype}{float}\ pauseDuration)}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00026}\mbox{\hyperlink{class_time_manager_ab33749afbedcaf6ca80bbb464ef34be0}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_manager_ab33749afbedcaf6ca80bbb464ef34be0}{Pause}}(\textcolor{keywordtype}{float}\ pauseDuration)}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00027}00027\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Verify.IsNotNull(Director))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Verify.IsNotNull(\mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ Director.Pause(pauseDuration);}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}.\mbox{\hyperlink{class_times_1_1_time_director_ac961380535b879a6b4943c8ea0a5412f}{Pause}}(pauseDuration);}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00031}00031\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00032}00032\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00033}00033\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Resume(Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00033}\mbox{\hyperlink{class_time_manager_aa1767ec25d342e1db37a4e20f8e8c7de}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_manager_aa1767ec25d342e1db37a4e20f8e8c7de}{Resume}}(Action\ callback\ =\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00034}00034\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Verify.IsNotNull(Director))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Verify.IsNotNull(\mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ Director.Resume(callback);}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}.\mbox{\hyperlink{class_times_1_1_time_director_a44147687f62d1735c2724e23dad87904}{Resume}}(callback);}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00038}00038\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00039}00039\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ResetTimeScale()}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00040}\mbox{\hyperlink{class_time_manager_a17db4f64d380343633904cb2da40dffa}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_manager_a17db4f64d380343633904cb2da40dffa}{ResetTimeScale}}()}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00041}00041\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Verify.IsNotNull(Director))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Verify.IsNotNull(\mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ Director.ResetTimeScale();}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}.\mbox{\hyperlink{class_times_1_1_time_director_a935a3c77d5f65403f300b89996384414}{ResetTimeScale}}();}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00045}00045\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Dispose()}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00047}\mbox{\hyperlink{class_time_manager_a08f4c71e2a33094129b4955c604e18ca}{00047}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_manager_a08f4c71e2a33094129b4955c604e18ca}{Dispose}}()}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00048}00048\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ Director\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_time_manager_ae1b55f3acae6e8766a413bcfdb63d59f}{Director}}\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00050}00050\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00051}00051\ }
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00052}00052\ }
@@ -54,7 +54,7 @@
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ Time.timeScale\ +=\ 0.2f;}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00059}00059\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00060}00060\ }
-\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00061}00061\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Normal()}
+\DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00061}00061\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2a960b44c579bc2f6818d2daaf9e4c16f0}{Normal}}()}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00062}00062\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Application.isPlaying)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_time_manager_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ }

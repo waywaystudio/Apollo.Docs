@@ -1,6 +1,6 @@
 \doxysection{UIElement\+Window\+Editor.\+cs}
 \hypertarget{_u_i_element_window_editor_8cs_source}{}\label{_u_i_element_window_editor_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/UI/EventClips/WindowEditor/UIElementWindowEditor.cs@{C:/Project/Apollo/Assets/Scripts/Common/UI/EventClips/WindowEditor/UIElementWindowEditor.cs}}
-
+\mbox{\hyperlink{_u_i_element_window_editor_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00001}00001\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System;}
@@ -34,7 +34,7 @@
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ clipList\ =\ eventSourceTransform.GetComponentsInChildren<UIEventClip>().ToList();}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventType.PointerEnter.Iterate(uiType\ =>}
+\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common_aa9209426a6fdf134d1be75b12ac1923e}{UIEventType}}.PointerEnter.Iterate(uiType\ =>}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clipCreateList.Add(\textcolor{keyword}{new}\ EventTriggerGenerator(uiElement,\ uiType,\ clipList.TryGetElement(e\ =>\ e.Type\ ==\ uiType)));}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});\ \ \ \ \ \ \ \ \ }
@@ -43,7 +43,7 @@
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ [Serializable]}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }EventTriggerGenerator}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [TableColumnWidth(130),\ DisplayAsString]\ \textcolor{keyword}{public}\ UIEventType\ Type;}
+\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [TableColumnWidth(130),\ DisplayAsString]\ \textcolor{keyword}{public}\ \mbox{\hyperlink{namespace_common_aa9209426a6fdf134d1be75b12ac1923e}{UIEventType}}\ Type;}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [HideInTables]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ has;}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00044}00044\ }
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ UIElement\ uiElement;}
@@ -95,24 +95,24 @@
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventClip\ uiEventClip\ =\ Type\ \textcolor{keywordflow}{switch}}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventType.PointerEnter\ =>\ clipTransform.gameObject.GetOrAddComponent<PointerEnterUIEventClip>(),}
-\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventType.PointerExit\ \ =>\ clipTransform.gameObject.GetOrAddComponent<PointerExitUIEventClip>(),}
+\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common_aa9209426a6fdf134d1be75b12ac1923e}{UIEventType}}.PointerExit\ \ =>\ clipTransform.gameObject.GetOrAddComponent<PointerExitUIEventClip>(),}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventType.PointerDown\ \ =>\ clipTransform.gameObject.GetOrAddComponent<PointerDownUIEventClip>(),}
-\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventType.PointerUp\ \ \ \ =>\ clipTransform.gameObject.GetOrAddComponent<PointerUpUIEventClip>(),}
+\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common_aa9209426a6fdf134d1be75b12ac1923e}{UIEventType}}.PointerUp\ \ \ \ =>\ clipTransform.gameObject.GetOrAddComponent<PointerUpUIEventClip>(),}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventType.PointerClick\ =>\ clipTransform.gameObject.GetOrAddComponent<PointerClickUIEventClip>(),}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UIEventType.Drag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ expr,}}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UIEventType.Drop\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ expr,}}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UIEventType.Scroll\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ expr,}}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UIEventType.UpdateSelected\ \ \ \ \ \ \ \ \ \ =>\ expr,}}
-\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventType.Select\ \ \ =>\ clipTransform.gameObject.GetOrAddComponent<SelectUIEventClip>(),}
+\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common_aa9209426a6fdf134d1be75b12ac1923e}{UIEventType}}.Select\ \ \ =>\ clipTransform.gameObject.GetOrAddComponent<SelectUIEventClip>(),}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventType.Deselect\ =>\ clipTransform.gameObject.GetOrAddComponent<DeSelectUIEventClip>(),}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UIEventType.Move\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ expr,}}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UIEventType.InitializePotentialDrag\ =>\ expr,}}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UIEventType.BeginDrag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ expr,}}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UIEventType.EndDrag\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ expr,}}
-\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventType.Submit\ =>\ clipTransform.gameObject.GetOrAddComponent<SubmitUIEventClip>(),}
+\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common_aa9209426a6fdf134d1be75b12ac1923e}{UIEventType}}.Submit\ =>\ clipTransform.gameObject.GetOrAddComponent<SubmitUIEventClip>(),}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UIEventType.Cancel\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ expr,}}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventType.Open\ \ =>\ clipTransform.gameObject.GetOrAddComponent<OpenUIEventClip>(),}
-\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UIEventType.Close\ =>\ clipTransform.gameObject.GetOrAddComponent<CloseUIEventClip>(),}
+\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common_aa9209426a6fdf134d1be75b12ac1923e}{UIEventType}}.Close\ =>\ clipTransform.gameObject.GetOrAddComponent<CloseUIEventClip>(),}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ \textcolor{keyword}{null},}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00114}00114\ }
@@ -129,7 +129,7 @@
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clipTransform.TryGetChildGameObject(\textcolor{stringliteral}{"{}Effector"{}},\ out\ var\ effectorTransform))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ effectorTransform\ =\ clipTransform.GetOrAddChildGameObject(\textcolor{stringliteral}{"{}Effector"{}});}
-\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ effectorTransform.gameObject.AddComponent<Effector>();}
+\DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ effectorTransform.gameObject.AddComponent<\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4aed0d5a0e77becdeb7a0c9b37e6fd17c9}{Effector}}>();}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uiEventClip.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_u_i_element_window_editor_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }

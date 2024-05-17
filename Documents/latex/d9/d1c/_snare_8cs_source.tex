@@ -1,86 +1,86 @@
 \doxysection{Snare.\+cs}
 \hypertarget{_snare_8cs_source}{}\label{_snare_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Snares/Snare.cs@{C:/Project/Apollo/Assets/Scripts/Common/Snares/Snare.cs}}
-
+\mbox{\hyperlink{_snare_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_systems}{Common.Systems}};}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00004}\mbox{\hyperlink{namespace_common_1_1_snares}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_snares}{Common.Snares}}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Snare\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}},\ IUnitSequencer,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_snares_1_1_snare}{Snare}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}},\ \mbox{\hyperlink{interface_common_1_1_i_unit_sequencer}{IUnitSequencer}},\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00007}00007\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ DataIndex\ snareCode;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Executor\ executor;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Effector\ effector;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ SnareSpawnEvent\ spawnEvent;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ DetectProperty\ detectProperty;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ SnareDeployer\ deployer;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ ExecuteTimer\ executeTimer;}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a1e568033368e5606540e0013a280af57}{00008}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a1e568033368e5606540e0013a280af57}{snareCode}};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a4c7a4088ec80785ac1143ff3fcb8d80d}{00009}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_executor}{Executor}}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a4c7a4088ec80785ac1143ff3fcb8d80d}{executor}};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a2966ef39e6b147f53981e058392e1cc1}{00010}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_effector}{Effector}}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a2966ef39e6b147f53981e058392e1cc1}{effector}};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ae2f40b55f55169496e4e8f1ae4bbfae8}{00011}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_spawn_event}{SnareSpawnEvent}}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ae2f40b55f55169496e4e8f1ae4bbfae8}{spawnEvent}};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a7ecc94a2dd1456c84443017b78b8f1c3}{00012}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_detect_property}{DetectProperty}}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a7ecc94a2dd1456c84443017b78b8f1c3}{detectProperty}};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ab9c4968a84a78f5cb7fec278124c7e22}{00013}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_deployer}{SnareDeployer}}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ab9c4968a84a78f5cb7fec278124c7e22}{deployer}};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00014}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a549651bdd4d62e827b5685b8ec67643a}{00014}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_execute_timer}{ExecuteTimer}}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a549651bdd4d62e827b5685b8ec67643a}{executeTimer}};}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DataIndex\ DataIndex\ =>\ snareCode;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ Unit\ =>\ \textcolor{keyword}{this};}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ Position\ =>\ transform.position;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ Forward\ =>\ transform.forward;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DetectProperty\ DetectProperty\ =>\ detectProperty;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Effector\ Effector\ =>\ effector;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Executor\ Executor\ =>\ executor;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ExecuteTimer\ ExecuteTimer\ =>\ executeTimer;}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ada2f35e20535b207963705d9877af5a9}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ =>\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a1e568033368e5606540e0013a280af57}{snareCode}};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a4724a718a392e29890b0a36997d82907}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a4724a718a392e29890b0a36997d82907}{Unit}}\ =>\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00018}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a8c91c68344e7d037220a034cab5fbf6b}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a8c91c68344e7d037220a034cab5fbf6b}{Position}}\ =>\ \mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}}.position;}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a493950ad97727f8fb86cca067e7541b5}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a493950ad97727f8fb86cca067e7541b5}{Forward}}\ =>\ \mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}}.forward;}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00020}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a83c20982c9e248b3c6439a06f1fcc913}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_detect_property}{DetectProperty}}\ \mbox{\hyperlink{class_common_1_1_detect_property}{DetectProperty}}\ =>\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a7ecc94a2dd1456c84443017b78b8f1c3}{detectProperty}};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00021}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a7835c013bc9a8b7d604407f13c70fcb8}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_effector}{Effector}}\ \mbox{\hyperlink{class_common_1_1_effector}{Effector}}\ =>\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a2966ef39e6b147f53981e058392e1cc1}{effector}};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00022}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a3c2387604a75f15d3ee4c18c3c40a609}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_executor}{Executor}}\ \mbox{\hyperlink{class_common_1_1_executor}{Executor}}\ =>\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a4c7a4088ec80785ac1143ff3fcb8d80d}{executor}};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00023}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a89923b0a2796d3baa69430c086e498ed}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_execute_timer}{ExecuteTimer}}\ \mbox{\hyperlink{class_common_1_1_execute_timer}{ExecuteTimer}}\ =>\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a549651bdd4d62e827b5685b8ec67643a}{executeTimer}};}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ Provider\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DetectModel\ Detector\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}\ ();}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00025}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_acd50d6df0eeed815e16877d9888b3e3a}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_acd50d6df0eeed815e16877d9888b3e3a}{Provider}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00026}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a7e9325094bedf2c7d9f58e3c16e64323}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model}{DetectModel}}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a7e9325094bedf2c7d9f58e3c16e64323}{Detector}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00027}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a9a99e36a764c76b701efad207d7140c2}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_table}{SectionTable}}\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}\ ();}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00028}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a48d3b7d4f08c62742972e454f06f4337}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a48d3b7d4f08c62742972e454f06f4337}{Invoker}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00029}00029\ }
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider)}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00031}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_aafa4e0dbc4130c3368dc86e943b3a2bc}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_aafa4e0dbc4130c3368dc86e943b3a2bc}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider)}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ Provider\ =\ provider;}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ \ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Detector\ =\ \textcolor{keyword}{new}\ DetectModel(transform);}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_acd50d6df0eeed815e16877d9888b3e3a}{Provider}}\ =\ provider;}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a48d3b7d4f08c62742972e454f06f4337}{Invoker}}\ \ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}(Sections);}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a7e9325094bedf2c7d9f58e3c16e64323}{Detector}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_common_1_1_systems_1_1_detect_model}{DetectModel}}(\mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}});}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ executor.Initialize(Provider);}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ executor.SetSender(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a4c7a4088ec80785ac1143ff3fcb8d80d}{executor}}.\mbox{\hyperlink{class_common_1_1_executor_aff2d6b3fe96cba36695e501935d726a3}{Initialize}}(\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_acd50d6df0eeed815e16877d9888b3e3a}{Provider}});}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a4c7a4088ec80785ac1143ff3fcb8d80d}{executor}}.\mbox{\hyperlink{class_common_1_1_executor_a1eba5c6cc3c764bfe7d218664e0d9dd7}{SetSender}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ effector.Initialize(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ deployer.Initialize(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ executeTimer.Initialize(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.Invoke(snareCode,\ \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a2966ef39e6b147f53981e058392e1cc1}{effector}}.\mbox{\hyperlink{class_common_1_1_effector_ad6123dc4b2e083651c82d5c184930571}{Initialize}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ab9c4968a84a78f5cb7fec278124c7e22}{deployer}}.\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_deployer_aa5e366901c0ae4d7cfa636f23ab0e31e}{Initialize}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a549651bdd4d62e827b5685b8ec67643a}{executeTimer}}.\mbox{\hyperlink{class_common_1_1_execute_timer_a04711144f0076e7e8f41945f100324c4}{Initialize}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ae2f40b55f55169496e4e8f1ae4bbfae8}{spawnEvent}}.\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_spawn_event_a3c6a45f3b8f27198f9782da20b876a37}{Invoke}}(\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a1e568033368e5606540e0013a280af57}{snareCode}},\ \textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Spawn()}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00046}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a1174e2732ad604eaf33e820e9273312b}{00046}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a1174e2732ad604eaf33e820e9273312b}{Spawn}}()}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a48d3b7d4f08c62742972e454f06f4337}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Spawn();}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a48d3b7d4f08c62742972e454f06f4337}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a548186c82f3f12aef7c46a9d4a875832}{Spawn}}();}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00053}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a7f9e3a3b2cb949e40742ed02e4a665ad}{00053}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a7f9e3a3b2cb949e40742ed02e4a665ad}{Cancel}}()}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (deployer.IsDeployed)}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ab9c4968a84a78f5cb7fec278124c7e22}{deployer}}.\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_deployer_ac77821e15b913e215b57aefaedb0239a}{IsDeployed}})}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a48d3b7d4f08c62742972e454f06f4337}{Invoker}}.\mbox{\hyperlink{class_section_invoker_aa26adf36e80006bc7458495a349c3b7e}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ deployer.StopDeploy();}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ab9c4968a84a78f5cb7fec278124c7e22}{deployer}}.\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_deployer_abbaf5f219cf74f70323c6f4112f14929}{StopDeploy}}();}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ Invoker.Dispose();}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00066}\mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ad1fcdc75cc83e9c49cd720ca1a4c8e90}{00066}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ad1fcdc75cc83e9c49cd720ca1a4c8e90}{OnDestroy}}()\ =>\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a48d3b7d4f08c62742972e454f06f4337}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a6062e5e18b03eb514b2fde87721fa690}{Dispose}}();}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00067}00067\ }
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00068}00068\ }
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00069}00069\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ snareCode\ =\ gameObject.name.ToEnum<DataIndex>();}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ executor\ \ =\ GetComponentInChildren<Executor>();}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ \ =\ GetComponentInChildren<Effector>();}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a1e568033368e5606540e0013a280af57}{snareCode}}\ =\ \mbox{\hyperlink{interface_common_1_1_i_unit_a2ca74a8a9a8e98bfee6898eac58afbc9}{gameObject}}.name.ToEnum<\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}>();}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a4c7a4088ec80785ac1143ff3fcb8d80d}{executor}}\ \ =\ GetComponentInChildren<Executor>();}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a2966ef39e6b147f53981e058392e1cc1}{effector}}\ \ =\ GetComponentInChildren<Effector>();}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ executor.EditorSetUp();}
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ effector.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a4c7a4088ec80785ac1143ff3fcb8d80d}{executor}}.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_a2966ef39e6b147f53981e058392e1cc1}{effector}}.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00078}00078\ }
-\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ spawnEvent);}
+\DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare_ae2f40b55f55169496e4e8f1ae4bbfae8}{spawnEvent}});}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00081}00081\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_snare_8cs_source_l00082}00082\ \ \ \ \ \}}

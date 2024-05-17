@@ -1,6 +1,6 @@
 \doxysection{Body\+Decal.\+cs}
 \hypertarget{_body_decal_8cs_source}{}\label{_body_decal_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Projections/Decals/BodyDecal.cs@{C:/Project/Apollo/Assets/Scripts/Common/Projections/Decals/BodyDecal.cs}}
-
+\mbox{\hyperlink{_body_decal_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Threading;}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Cysharp.Threading.Tasks;}
@@ -8,19 +8,19 @@
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00004}00004\ }
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00005}\mbox{\hyperlink{namespace_common_1_1_projections_1_1_decals}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_projections_1_1_decals}{Common.Projections.Decals}}}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }BodyDecal\ :\ Decal}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal}{BodyDecal}}\ :\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decal}{Decal}}}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00008}00008\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ width;}
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ length;}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7c40b670ff6b3a59c46b557664fb29e9}{00012}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7c40b670ff6b3a59c46b557664fb29e9}{width}};}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_aa91f042aca71e2a87ace9d0b58508cf0}{00013}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_aa91f042aca71e2a87ace9d0b58508cf0}{length}};}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ ArrowZDisplacement\ =\ 2.9835f;}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a9bbab17d52720ce543496c7d9a862bd8}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a9bbab17d52720ce543496c7d9a862bd8}{ArrowZDisplacement}}\ =\ 2.9835f;}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ YPosition\ =\ 0.15f;}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00025}\mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7261f94a24a4128fe0a64955a566dad1}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7261f94a24a4128fe0a64955a566dad1}{YPosition}}\ =\ 0.15f;}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IProjectableSequencer\ projectionSequence)}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00028}\mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a6339df25115b4ec256cfe08f19265ab6}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a6339df25115b4ec256cfe08f19265ab6}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_projectable_sequencer}{IProjectableSequencer}}\ projectionSequence)}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(projectionSequence);}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00031}00031\ }
@@ -28,39 +28,39 @@
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ async\ UniTask\ PlayProjection()}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00036}\mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a2424b5a9c6c1dbb3b23c2d2c77546c63}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ async\ UniTask\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a2424b5a9c6c1dbb3b23c2d2c77546c63}{PlayProjection}}()}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ decalProjector.material.SetFloat(FillProgressShaderID,\ 0f);}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_ad2e2bd1e8c5d66f293fc035ab375bbde}{decalProjector}}.material.SetFloat(\mbox{\hyperlink{class_common_1_1_projections_1_1_decal_af6453dccec8eb9086525ef1c8e145c37}{FillProgressShaderID}},\ 0f);}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ ProjectionTokenSource\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a1f743ce1fc67f73b920276927170d834}{ProjectionTokenSource}}\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ var\ timer\ =\ 0f;}
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ var\ inverseDuration\ =\ 1.0f\ /\ ProjectableSequence.CastingTime;}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ var\ inverseDuration\ =\ 1.0f\ /\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_afcb5a79356b14343348885d2f8e3cb01}{ProjectableSequence}}.\mbox{\hyperlink{interface_common_1_1_i_projectable_sequencer_a74a5e64b0e1a89eac7848da9944bee2e}{CastingTime}};}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (timer\ <\ ProjectableSequence.CastingTime)}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (timer\ <\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_afcb5a79356b14343348885d2f8e3cb01}{ProjectableSequence}}.\mbox{\hyperlink{interface_common_1_1_i_projectable_sequencer_a74a5e64b0e1a89eac7848da9944bee2e}{CastingTime}})}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer\ +=\ Time.deltaTime\ *\ inverseDuration;}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer\ =\ \ Mathf.Clamp01(timer);}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ decalProjector.material.SetFloat(FillProgressShaderID,\ timer\ *\ 2f);}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_ad2e2bd1e8c5d66f293fc035ab375bbde}{decalProjector}}.material.SetFloat(\mbox{\hyperlink{class_common_1_1_projections_1_1_decal_af6453dccec8eb9086525ef1c8e145c37}{FillProgressShaderID}},\ timer\ *\ 2f);}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Yield(ProjectionTokenSource.Token);}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Yield(\mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a1f743ce1fc67f73b920276927170d834}{ProjectionTokenSource}}.Token);}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ UpdateBodyProjector()}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ var\ currentSize\ =\ decalProjector.size;}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ var\ currentSize\ =\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_ad2e2bd1e8c5d66f293fc035ab375bbde}{decalProjector}}.size;}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ currentSize.x\ =\ length\ +\ 1\ +\ (width\ -\/\ 1);}
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ currentSize.y\ =\ length\ +\ 1;}
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ currentSize.z\ =\ ProjectorDepth;}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ currentSize.x\ =\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_aa91f042aca71e2a87ace9d0b58508cf0}{length}}\ +\ 1\ +\ (\mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7c40b670ff6b3a59c46b557664fb29e9}{width}}\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ currentSize.y\ =\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_aa91f042aca71e2a87ace9d0b58508cf0}{length}}\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ currentSize.z\ =\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a6533b5bd60c1d5dd15bb39abd426f5d8}{ProjectorDepth}};}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00068}00068\ }
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ decalProjector.size\ =\ currentSize;}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ decalProjector.transform.localPosition\ =\ }
-\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Vector3(0,\ YPosition,\ (length\ +\ 1)\ *\ 0.5f);}
+\DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Vector3(0,\ \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7261f94a24a4128fe0a64955a566dad1}{YPosition}},\ (\mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_aa91f042aca71e2a87ace9d0b58508cf0}{length}}\ +\ 1)\ *\ 0.5f);}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00073}00073\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_body_decal_8cs_source_l00074}00074\ \}}

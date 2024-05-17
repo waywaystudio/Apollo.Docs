@@ -1,0 +1,185 @@
+\doxysection{Common.\+Unit\+Sequence Class Reference}
+\hypertarget{class_common_1_1_unit_sequence}{}\label{class_common_1_1_unit_sequence}\index{Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_unit_sequence_a04fc9278d56ec704ed96f37079b01947}{Initialize}} (\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}} unit)
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_unit_sequence_aa4e0fa462eb9780effb262bb6c7ea656}{Cancel}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{class_common_1_1_unit_sequence_a97f9a249663047eaa19e2f7d450d8bf1}{Convert\+Unit\+To$<$ T $>$}} ()
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_unit_sequence_ae78e58ae2e1ba27cd927291d96707a3b}{On\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_common_1_1_unit_sequence_a3f326123223a067a2cf8a6f1c6f0b51a}{key}}
+\item 
+bool \mbox{\hyperlink{class_common_1_1_unit_sequence_a8d2a52c352949cc9bba12f2f8929f7e0}{complete\+On\+Active}}
+\item 
+\mbox{\hyperlink{class_common_1_1_effector}{Effector}} \mbox{\hyperlink{class_common_1_1_unit_sequence_ad63e876810b1e0448dd753d6886165dd}{effector}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_section_table}{Section\+Table}} \mbox{\hyperlink{class_common_1_1_unit_sequence_a67905549fe1dccc4acfc592e5a76887b}{Sections}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_section_invoker}{Section\+Invoker}} \mbox{\hyperlink{class_common_1_1_unit_sequence_af9a99b2e5db6bb59a3293fd6417d4be6}{Invoker}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}} \mbox{\hyperlink{class_common_1_1_unit_sequence_ae73d56e51cbd16a10c5904441ad61034}{Unit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_common_1_1_effector}{Effector}} \mbox{\hyperlink{class_common_1_1_unit_sequence_a493a988c85890fda4d62012153353ed2}{Effector}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_common_1_1_i_unit_sequencer}{Common.\+IUnit\+Sequencer}}}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_i_sequencer}{ISequencer}}}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_unit_sequence_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_unit_sequence_8cs_source}{Unit\+Sequence.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_common_1_1_unit_sequence_aa4e0fa462eb9780effb262bb6c7ea656}\label{class_common_1_1_unit_sequence_aa4e0fa462eb9780effb262bb6c7ea656} 
+\index{Common.UnitSequence@{Common.UnitSequence}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection{\texorpdfstring{Cancel()}{Cancel()}}
+{\footnotesize\ttfamily virtual void Common.\+Unit\+Sequence.\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_i_sequencer_a37664b89e8e80def49caabb575571860}{ISequencer}}.
+
+\Hypertarget{class_common_1_1_unit_sequence_a97f9a249663047eaa19e2f7d450d8bf1}\label{class_common_1_1_unit_sequence_a97f9a249663047eaa19e2f7d450d8bf1} 
+\index{Common.UnitSequence@{Common.UnitSequence}!ConvertUnitTo$<$ T $>$@{ConvertUnitTo$<$ T $>$}}
+\index{ConvertUnitTo$<$ T $>$@{ConvertUnitTo$<$ T $>$}!Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection{\texorpdfstring{ConvertUnitTo$<$ T $>$()}{ConvertUnitTo< T >()}}
+{\footnotesize\ttfamily T Common.\+Unit\+Sequence.\+Convert\+Unit\+To$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\item[{\em T} : {\em IUnit}]\end{description}
+\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_unit_sequence_8cs_source_l00033}{33}} of file \mbox{\hyperlink{_unit_sequence_8cs_source}{Unit\+Sequence.\+cs}}.
+
+\Hypertarget{class_common_1_1_unit_sequence_a04fc9278d56ec704ed96f37079b01947}\label{class_common_1_1_unit_sequence_a04fc9278d56ec704ed96f37079b01947} 
+\index{Common.UnitSequence@{Common.UnitSequence}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual void Common.\+Unit\+Sequence.\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_sequence_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_unit_sequence_8cs_source}{Unit\+Sequence.\+cs}}.
+
+\Hypertarget{class_common_1_1_unit_sequence_ae78e58ae2e1ba27cd927291d96707a3b}\label{class_common_1_1_unit_sequence_ae78e58ae2e1ba27cd927291d96707a3b} 
+\index{Common.UnitSequence@{Common.UnitSequence}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily virtual void Common.\+Unit\+Sequence.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_sequence_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_unit_sequence_8cs_source}{Unit\+Sequence.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_common_1_1_unit_sequence_a8d2a52c352949cc9bba12f2f8929f7e0}\label{class_common_1_1_unit_sequence_a8d2a52c352949cc9bba12f2f8929f7e0} 
+\index{Common.UnitSequence@{Common.UnitSequence}!completeOnActive@{completeOnActive}}
+\index{completeOnActive@{completeOnActive}!Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection{\texorpdfstring{completeOnActive}{completeOnActive}}
+{\footnotesize\ttfamily bool Common.\+Unit\+Sequence.\+complete\+On\+Active\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_sequence_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_unit_sequence_8cs_source}{Unit\+Sequence.\+cs}}.
+
+\Hypertarget{class_common_1_1_unit_sequence_ad63e876810b1e0448dd753d6886165dd}\label{class_common_1_1_unit_sequence_ad63e876810b1e0448dd753d6886165dd} 
+\index{Common.UnitSequence@{Common.UnitSequence}!effector@{effector}}
+\index{effector@{effector}!Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection{\texorpdfstring{effector}{effector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_effector}{Effector}} Common.\+Unit\+Sequence.\+effector\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_sequence_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_unit_sequence_8cs_source}{Unit\+Sequence.\+cs}}.
+
+\Hypertarget{class_common_1_1_unit_sequence_a3f326123223a067a2cf8a6f1c6f0b51a}\label{class_common_1_1_unit_sequence_a3f326123223a067a2cf8a6f1c6f0b51a} 
+\index{Common.UnitSequence@{Common.UnitSequence}!key@{key}}
+\index{key@{key}!Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily string Common.\+Unit\+Sequence.\+key\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_sequence_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_unit_sequence_8cs_source}{Unit\+Sequence.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_common_1_1_unit_sequence_a493a988c85890fda4d62012153353ed2}\label{class_common_1_1_unit_sequence_a493a988c85890fda4d62012153353ed2} 
+\index{Common.UnitSequence@{Common.UnitSequence}!Effector@{Effector}}
+\index{Effector@{Effector}!Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection{\texorpdfstring{Effector}{Effector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_effector}{Effector}} Common.\+Unit\+Sequence.\+Effector\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_unit_sequence_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_unit_sequence_8cs_source}{Unit\+Sequence.\+cs}}.
+
+\Hypertarget{class_common_1_1_unit_sequence_af9a99b2e5db6bb59a3293fd6417d4be6}\label{class_common_1_1_unit_sequence_af9a99b2e5db6bb59a3293fd6417d4be6} 
+\index{Common.UnitSequence@{Common.UnitSequence}!Invoker@{Invoker}}
+\index{Invoker@{Invoker}!Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection{\texorpdfstring{Invoker}{Invoker}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_section_invoker}{Section\+Invoker}} Common.\+Unit\+Sequence.\+Invoker\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_i_sequencer_ae85739c407b1bdba699562602b44787c}{ISequencer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_unit_sequence_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_unit_sequence_8cs_source}{Unit\+Sequence.\+cs}}.
+
+\Hypertarget{class_common_1_1_unit_sequence_a67905549fe1dccc4acfc592e5a76887b}\label{class_common_1_1_unit_sequence_a67905549fe1dccc4acfc592e5a76887b} 
+\index{Common.UnitSequence@{Common.UnitSequence}!Sections@{Sections}}
+\index{Sections@{Sections}!Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection{\texorpdfstring{Sections}{Sections}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_section_table}{Section\+Table}} Common.\+Unit\+Sequence.\+Sections = new()\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_i_sequencer_a1d356f0ac3768d1b639a2a554c238e2a}{ISequencer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_unit_sequence_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_unit_sequence_8cs_source}{Unit\+Sequence.\+cs}}.
+
+\Hypertarget{class_common_1_1_unit_sequence_ae73d56e51cbd16a10c5904441ad61034}\label{class_common_1_1_unit_sequence_ae73d56e51cbd16a10c5904441ad61034} 
+\index{Common.UnitSequence@{Common.UnitSequence}!Unit@{Unit}}
+\index{Unit@{Unit}!Common.UnitSequence@{Common.UnitSequence}}
+\doxysubsubsection{\texorpdfstring{Unit}{Unit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}} Common.\+Unit\+Sequence.\+Unit\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_common_1_1_i_unit_sequencer_af11e10a8e16d2be8b19654c3fdcdab5f}{Common.\+IUnit\+Sequencer}}.
+
+
+
+Definition at line \mbox{\hyperlink{_unit_sequence_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_unit_sequence_8cs_source}{Unit\+Sequence.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+\_\+\+Protocol/\+\_\+\+Component/\mbox{\hyperlink{_unit_sequence_8cs}{Unit\+Sequence.\+cs}}\end{DoxyCompactItemize}

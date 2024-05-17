@@ -1,29 +1,29 @@
 \doxysection{Split\+Trident\+Ultimate.\+cs}
 \hypertarget{_split_trident_ultimate_8cs_source}{}\label{_split_trident_ultimate_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SplitTrident/SplitTridentUltimate.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SplitTrident/SplitTridentUltimate.cs}}
-
+\mbox{\hyperlink{_split_trident_ultimate_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_split_trident}{Common.Masteries.SplitTrident}}}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SplitTridentUltimate\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_split_trident_ultimate}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_split_trident_ultimate}{SplitTridentUltimate}}\ :\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery}{Mastery}}}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00007}00007\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ WeaponType\ splitTridentType\ =\ WeaponType.SplitTrident;}
-\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DataIndex\ underworldSoldiersCode\ =\ DataIndex.UnderworldSoldiers;}
+\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_common_a68de8ffe832a377df66ceafd6cfdd6c9}{WeaponType}}\ splitTridentType\ =\ \mbox{\hyperlink{namespace_common_a68de8ffe832a377df66ceafd6cfdd6c9}{WeaponType}}.SplitTrident;}
+\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ underworldSoldiersCode\ =\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.UnderworldSoldiers;}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_split_trident_ultimate_a4de639ccbf835f4aad4969929a40e169}{00011}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_split_trident_ultimate_a4de639ccbf835f4aad4969929a40e169}{Injection}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ dred.CombatActionSet.UltimateWeaponType\ =\ splitTridentType;}
-\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ dred.CombatActionSet.ChangeSkill(WeaponActionSlotType.Ultimate,\ splitTridentType,\ underworldSoldiersCode);}
+\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ dred.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_a682ddf6accb5916ed698e38d313ab7ef}{CombatActionSet}}.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_combat_action_set_a7454af1ef3a12d343efff0d20cb8b6bb}{ChangeSkill}}(\mbox{\hyperlink{namespace_common_aac08db5fc69bb35a69e86a91debddc5d}{WeaponActionSlotType}}.Ultimate,\ splitTridentType,\ underworldSoldiersCode);}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_split_trident_ultimate_a5be8ccfc4998b64bba7d269e0d77fcb9}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_split_trident_ultimate_a5be8ccfc4998b64bba7d269e0d77fcb9}{Abolition}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ dred.CombatActionSet.UltimateWeaponType\ =\ WeaponType.None;}
+\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ dred.CombatActionSet.UltimateWeaponType\ =\ \mbox{\hyperlink{namespace_common_a68de8ffe832a377df66ceafd6cfdd6c9}{WeaponType}}.None;}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00022}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_split_trident_ultimate_a2bc33f627455da3d9dddd89d54f6a5e4}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_split_trident_ultimate_a2bc33f627455da3d9dddd89d54f6a5e4}{OnQualityChanged}}()}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_split_trident_ultimate_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}

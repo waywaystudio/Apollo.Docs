@@ -1,6 +1,6 @@
 \doxysection{Enumerable\+Extension.\+cs}
 \hypertarget{_enumerable_extension_8cs_source}{}\label{_enumerable_extension_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/\_Protocol/\_Extension/EnumerableExtension.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/\_Protocol/\_Extension/EnumerableExtension.cs}}
-
+\mbox{\hyperlink{_enumerable_extension_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -87,7 +87,7 @@
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ record);}
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00093}00093\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00094}00094\ }
-\DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00095}00095\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T\ Random<T>(\textcolor{keyword}{this}\ IEnumerable<T>\ enumerable)}
+\DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00095}00095\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random<T>}}(\textcolor{keyword}{this}\ IEnumerable<T>\ enumerable)}
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00096}00096\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enumerable\ ==\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \{}
@@ -96,7 +96,7 @@
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00101}00101\ }
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ note:\ creating\ a\ Random\ instance\ each\ call\ may\ not\ be\ correct\ for\ you,}}
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ consider\ a\ thread-\/safe\ static\ instance}}
-\DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ var\ r\ \ \ \ =\ \textcolor{keyword}{new}\ Random();}
+\DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ var\ r\ \ \ \ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{_number_extension_8cs_a832e8f52fca5a678819ec96269dcb532}{Random}}();}
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ var\ list\ =\ enumerable\ as\ IList<T>\ ??\ enumerable.ToList();}
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ list.Count\ ==\ 0\ ?\ default\ :\ list[r.Next(0,\ list.Count)];}
 \DoxyCodeLine{\Hypertarget{_enumerable_extension_8cs_source_l00107}00107\ \ \ \ \ \}}

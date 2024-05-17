@@ -1,6 +1,6 @@
 \doxysection{Name\+Plate.\+cs}
 \hypertarget{_name_plate_8cs_source}{}\label{_name_plate_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/UI/NamePlate.cs@{C:/Project/Apollo/Assets/Scripts/Common/UI/NamePlate.cs}}
-
+\mbox{\hyperlink{_name_plate_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players_1_1_fiends}{Common.Characters.NonPlayers.Fiends}};}
@@ -12,23 +12,23 @@
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00008}00008\ }
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00009}00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}}}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00010}00010\ \{}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }NamePlate\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plate}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plate}{NamePlate}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00012}00012\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CameraManager\ cameraManager;}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_camera_manager}{CameraManager}}\ cameraManager;}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ RectTransform\ rect;}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Image\ backGlowImage;}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CombatValueBar\ healthPointWhite;}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CombatValueBar\ healthPoint;}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CombatValueBar\ soulArmorWhite;}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CombatValueBar\ soulArmor;}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Indicator\ indicator;}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar}{CombatValueBar}}\ healthPointWhite;}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar}{CombatValueBar}}\ healthPoint;}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar}{CombatValueBar}}\ soulArmorWhite;}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar}{CombatValueBar}}\ soulArmor;}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_indicator}{Indicator}}\ indicator;}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<StatusEffectPlateIcon>\ statusEffectPlateIcons;}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00022}00022\ }
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ width;}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ RectTransform\ rootRectTransform;}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Fiend\ Fiend\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ ProgressWidth}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00026}\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plate_a9387dc21ae0a2c1ada7677944f4d3d43}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00027}\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plate_a4188f6c7aa41163d45947633d4307a2e}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plate_a4188f6c7aa41163d45947633d4307a2e}{ProgressWidth}}}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -39,43 +39,43 @@
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CombatValue\ HitPoints\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CombatValue\ SoulArmor\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_combat_value}{CombatValue}}\ HitPoints\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_combat_value}{CombatValue}}\ SoulArmor\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Canvas\ RootCanvas\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00041}00041\ }
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active(Fiend\ fiend)}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00043}\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plate_a11b5f8238989bc2a2f4b65755cde993f}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plate_a11b5f8238989bc2a2f4b65755cde993f}{Active}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}\ fiend)}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ Fiend\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ fiend;}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ HitPoints\ \ \ \ \ \ \ \ \ =\ \ \ fiend.HitPoints;}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ SoulArmor\ \ \ \ \ \ \ \ \ =\ \ \ fiend.SoulArmorPoints;}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \ \ fiend;}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ HitPoints\ \ \ \ \ \ \ \ \ =\ \ \ fiend.\mbox{\hyperlink{class_common_1_1_character_a12a50217e8c8f73d0dbedb9add4de3d3}{HitPoints}};}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ SoulArmor\ \ \ \ \ \ \ \ \ =\ \ \ fiend.\mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend_a35be0a7ffad13c6a24b7659182780c39}{SoulArmorPoints}};}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ rootRectTransform\ ??=\ GetComponentInParent<Canvas>().GetComponent<RectTransform>();}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ healthPointWhite.Register(HitPoints);}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ healthPoint.Register(HitPoints);}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ soulArmorWhite.Register(SoulArmor);}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ soulArmor.Register(SoulArmor);}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ indicator.Active(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ healthPointWhite.\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar_a39c5b5ba8863a4c96843477dfa00d75b}{Register}}(HitPoints);}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ healthPoint.\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar_a39c5b5ba8863a4c96843477dfa00d75b}{Register}}(HitPoints);}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ soulArmorWhite.\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar_a39c5b5ba8863a4c96843477dfa00d75b}{Register}}(SoulArmor);}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ soulArmor.\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar_a39c5b5ba8863a4c96843477dfa00d75b}{Register}}(SoulArmor);}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ indicator.\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_indicator_a988b54a4ed9db0e0857f78a1c9200ab0}{Active}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ Fiend.StatusEffectTable.OnEffectAdded.Add(\textcolor{stringliteral}{"{}ShowStatusEffectIcon"{}},\ ShowStatusEffectIcon);}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ Fiend.StatusEffectTable.OnEffectRemoved.Add(\textcolor{stringliteral}{"{}HideEffectIcon"{}},\ HideEffectIcon);}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}.\mbox{\hyperlink{class_common_1_1_character_a6d8dec2c1edd5e96bb7e09bb718ba7e4}{StatusEffectTable}}.\mbox{\hyperlink{class_common_1_1_status_effect_table_a02ee9a820a1d8fae39bb6edb80cba5c6}{OnEffectAdded}}.Add(\textcolor{stringliteral}{"{}ShowStatusEffectIcon"{}},\ ShowStatusEffectIcon);}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}.\mbox{\hyperlink{class_common_1_1_character_a6d8dec2c1edd5e96bb7e09bb718ba7e4}{StatusEffectTable}}.\mbox{\hyperlink{class_common_1_1_status_effect_table_a743bad5c59d999292f6748b2fc2d387e}{OnEffectRemoved}}.Add(\textcolor{stringliteral}{"{}HideEffectIcon"{}},\ HideEffectIcon);}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00059}00059\ }
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ DeActive()}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00060}\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plate_a13746b433d3b80f20c761bc00d0aecff}{00060}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plate_a13746b433d3b80f20c761bc00d0aecff}{DeActive}}()}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ Fiend.StatusEffectTable.OnEffectRemoved.Remove(\textcolor{stringliteral}{"{}HideEffectIcon"{}});}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ Fiend.StatusEffectTable.OnEffectAdded.Remove(\textcolor{stringliteral}{"{}ShowStatusEffectIcon"{}});}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}.\mbox{\hyperlink{class_common_1_1_character_a6d8dec2c1edd5e96bb7e09bb718ba7e4}{StatusEffectTable}}.\mbox{\hyperlink{class_common_1_1_status_effect_table_a743bad5c59d999292f6748b2fc2d387e}{OnEffectRemoved}}.Remove(\textcolor{stringliteral}{"{}HideEffectIcon"{}});}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}.\mbox{\hyperlink{class_common_1_1_character_a6d8dec2c1edd5e96bb7e09bb718ba7e4}{StatusEffectTable}}.\mbox{\hyperlink{class_common_1_1_status_effect_table_a02ee9a820a1d8fae39bb6edb80cba5c6}{OnEffectAdded}}.Remove(\textcolor{stringliteral}{"{}ShowStatusEffectIcon"{}});}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SetPlatePosition()}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Fiend.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00070}00070\ }
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetPosition\ =\ Fiend.PrePosition(PrePositionType.Top).position;}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ var\ screenPosition\ =\ cameraManager.MainCamera.WorldToScreenPoint(targetPosition);}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetPosition\ =\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}.\mbox{\hyperlink{class_common_1_1_character_aa86f40e641361098a374069cb4fb8971}{PrePosition}}(\mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{PrePositionType}}.Top).position;}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ var\ screenPosition\ =\ cameraManager.\mbox{\hyperlink{class_camera_manager_a73a5784ce4b2751916200c0030521f94}{MainCamera}}.WorldToScreenPoint(targetPosition);}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ RectTransformUtility.ScreenPointToLocalPointInRectangle(rootRectTransform,\ screenPosition,\ cameraManager.UICamera,\ out\ var\ localPoint);}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ RectTransformUtility.ScreenPointToLocalPointInRectangle(rootRectTransform,\ screenPosition,\ cameraManager.\mbox{\hyperlink{class_camera_manager_a0c32b401b9473c01ff9adf8f09231fb3}{UICamera}},\ out\ var\ localPoint);}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ rect.anchoredPosition\ =\ localPoint;}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
@@ -108,11 +108,11 @@
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ rect\ \ \ \ \ \ \ \ \ \ \ \ \ =\ GetComponent<RectTransform>();}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ backGlowImage\ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}BackGlow"{}}).GetComponent<Image>();}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ healthPointWhite\ =\ transform.Find(\textcolor{stringliteral}{"{}HealthPoint.White"{}}).GetComponent<CombatValueBar>();}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ healthPoint\ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}HealthPoint"{}}).GetComponent<CombatValueBar>();}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ soulArmorWhite\ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}SoulArmor.White"{}}).GetComponent<CombatValueBar>();}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ soulArmor\ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}SoulArmor"{}}).GetComponent<CombatValueBar>();}
-\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ indicator\ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Indicator"{}}).GetComponent<Indicator>();}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ healthPointWhite\ =\ transform.Find(\textcolor{stringliteral}{"{}HealthPoint.White"{}}).GetComponent<\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar}{CombatValueBar}}>();}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ healthPoint\ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}HealthPoint"{}}).GetComponent<\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar}{CombatValueBar}}>();}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ soulArmorWhite\ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}SoulArmor.White"{}}).GetComponent<\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar}{CombatValueBar}}>();}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ soulArmor\ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}SoulArmor"{}}).GetComponent<\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar}{CombatValueBar}}>();}
+\DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ indicator\ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Indicator"{}}).GetComponent<\mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_indicator}{Indicator}}>();}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ GetComponentsInChildren(\textcolor{keyword}{true},\ statusEffectPlateIcons);}
 \DoxyCodeLine{\Hypertarget{_name_plate_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ cameraManager);}

@@ -1,29 +1,29 @@
 \doxysection{Projectile\+Spawn\+Event.\+cs}
 \hypertarget{_projectile_spawn_event_8cs_source}{}\label{_projectile_spawn_event_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/ProjectileSpawnEvent.cs@{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/ProjectileSpawnEvent.cs}}
-
+\mbox{\hyperlink{_projectile_spawn_event_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_projectiles}{Common.Projectiles}}}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ProjectileSpawnEvent\ :\ SpawnEventTable<Projectile>}
+\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00005}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event}{ProjectileSpawnEvent}}\ :\ \mbox{\hyperlink{class_common_1_1_spawn_event_table}{SpawnEventTable}}<Projectile>}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00006}00006\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ Hierarchy\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event_a95742462aaae9d40e7aea7805480121f}{00007}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event_a95742462aaae9d40e7aea7805480121f}{Hierarchy}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00008}00008\ }
-\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Invoke(DataIndex\ dataIndex,\ Projectile\ subject)}
+\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event_ad53abcd8966c4f49e10b7857c4170a2d}{00009}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event_ad53abcd8966c4f49e10b7857c4170a2d}{Invoke}}(\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ dataIndex,\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}\ subject)}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ base.Invoke(dataIndex,\ subject);}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00012}00012\ }
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ subject.Sections}
-\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}RemoveSpawnList"{}},\ ()\ =>\ SpawnedList.RemoveSafely(subject))}
+\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Dispose,\ \textcolor{stringliteral}{"{}RemoveSpawnList"{}},\ ()\ =>\ \mbox{\hyperlink{class_common_1_1_spawn_event_table_a6359f8f19000bd9acf18984ffe6c0edc}{SpawnedList}}.RemoveSafely(subject))}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Dispose()}
+\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00018}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event_a3a13342e5d984854ff773efd077c703a}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event_a3a13342e5d984854ff773efd077c703a}{Dispose}}()}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ base.Dispose();}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ Hierarchy\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event_a95742462aaae9d40e7aea7805480121f}{Hierarchy}}\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00024}00024\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_projectile_spawn_event_8cs_source_l00025}00025\ \}}

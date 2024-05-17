@@ -1,0 +1,205 @@
+\doxysection{Common.\+Executor Class Reference}
+\hypertarget{class_common_1_1_executor}{}\label{class_common_1_1_executor}\index{Common.Executor@{Common.Executor}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} \mbox{\hyperlink{class_common_1_1_executor_aff2d6b3fe96cba36695e501935d726a3}{Initialize}} (\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombat\+Provider}} provider)
+\item 
+\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} \mbox{\hyperlink{class_common_1_1_executor_ada0aad3eb7a3b8b6124265474df85982}{Execute}} (\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Game\+Object}} taker)
+\item 
+\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} \mbox{\hyperlink{class_common_1_1_executor_ab82bbdb5325067c22f0e9324e2983635}{Executes}} (\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List}}$<$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Game\+Object}} $>$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{taker\+List}})
+\item 
+\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{bool}} \mbox{\hyperlink{class_common_1_1_executor_a3a73ff08253d02a201bd0f0e4268f100}{Try\+Get\+Execution$<$ T $>$}} (\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{out}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{result}}, \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Predicate}}$<$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}} $>$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{filter}}=\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{null}})
+\begin{DoxyCompactList}\small\item\em If there are Multiple Specific type of Execute\+Behaviours in List, you can select one by filter. Such as Execute\+Behaviour.\+game\+Object.\+name is "{}\+Damage"{} or \doxylink{class_common_1_1_executors_1_1_execute_behaviour_adf0de4fce5e6cd187f92b5a65b0b4bdf}{Execute\+Behaviour.\+Activation} == true ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{bool}} \mbox{\hyperlink{class_common_1_1_executor_a6e36dbe42361738281dcb200fee8e12d}{Try\+Get\+Executions$<$ T $>$}} (\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{out}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List}}$<$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}} $>$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{result}}, \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Predicate}}$<$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}} $>$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{filter}}=\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{null}})
+\item 
+\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} \mbox{\hyperlink{class_common_1_1_executor_a2c23c5306ca71d6e9a6c3ff47a72ee34}{Add}} (\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Execute\+Behaviour}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{execute}})
+\item 
+\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} \mbox{\hyperlink{class_common_1_1_executor_a518fe8514fc0ed909dbe14b4cd9cb6b7}{Remove}} (\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Execute\+Behaviour}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{execute}})
+\item 
+\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} \mbox{\hyperlink{class_common_1_1_executor_a1eba5c6cc3c764bfe7d218664e0d9dd7}{Set\+Sender}} (\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{sender}})
+\item 
+\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} \mbox{\hyperlink{class_common_1_1_executor_a004860a3e3062dbf76fb17747a5a5b9a}{Register}} (\mbox{\hyperlink{class_common_1_1_executor}{Executor}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{other\+Executor}})
+\item 
+\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} \mbox{\hyperlink{class_common_1_1_executor_aaaf1a3c4419ffd84b1eb104af033ed4f}{Unregister}} (\mbox{\hyperlink{class_common_1_1_executor}{Executor}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{other\+Executor}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List}}$<$ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Execute\+Behaviour}} $>$ \mbox{\hyperlink{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}{execution\+List}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Execute\+Behaviour}} $>$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_common_1_1_executor_a2c23c5306ca71d6e9a6c3ff47a72ee34}\label{class_common_1_1_executor_a2c23c5306ca71d6e9a6c3ff47a72ee34} 
+\index{Common.Executor@{Common.Executor}!Add@{Add}}
+\index{Add@{Add}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} Common.\+Executor.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Execute\+Behaviour}}}]{execute }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00078}{78}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executor_ada0aad3eb7a3b8b6124265474df85982}\label{class_common_1_1_executor_ada0aad3eb7a3b8b6124265474df85982} 
+\index{Common.Executor@{Common.Executor}!Execute@{Execute}}
+\index{Execute@{Execute}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} Common.\+Executor.\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Game\+Object}}}]{taker }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executor_ab82bbdb5325067c22f0e9324e2983635}\label{class_common_1_1_executor_ab82bbdb5325067c22f0e9324e2983635} 
+\index{Common.Executor@{Common.Executor}!Executes@{Executes}}
+\index{Executes@{Executes}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{Executes()}{Executes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} Common.\+Executor.\+Executes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List}}$<$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Game\+Object}} $>$}]{taker\+List }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executor_aff2d6b3fe96cba36695e501935d726a3}\label{class_common_1_1_executor_aff2d6b3fe96cba36695e501935d726a3} 
+\index{Common.Executor@{Common.Executor}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} Common.\+Executor.\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombat\+Provider}}}]{provider }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executor_a004860a3e3062dbf76fb17747a5a5b9a}\label{class_common_1_1_executor_a004860a3e3062dbf76fb17747a5a5b9a} 
+\index{Common.Executor@{Common.Executor}!Register@{Register}}
+\index{Register@{Register}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} Common.\+Executor.\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_executor}{Executor}}}]{other\+Executor }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00106}{106}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executor_a518fe8514fc0ed909dbe14b4cd9cb6b7}\label{class_common_1_1_executor_a518fe8514fc0ed909dbe14b4cd9cb6b7} 
+\index{Common.Executor@{Common.Executor}!Remove@{Remove}}
+\index{Remove@{Remove}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} Common.\+Executor.\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Execute\+Behaviour}}}]{execute }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00090}{90}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executor_a1eba5c6cc3c764bfe7d218664e0d9dd7}\label{class_common_1_1_executor_a1eba5c6cc3c764bfe7d218664e0d9dd7} 
+\index{Common.Executor@{Common.Executor}!SetSender@{SetSender}}
+\index{SetSender@{SetSender}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{SetSender()}{SetSender()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} Common.\+Executor.\+Set\+Sender (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}}]{sender }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00101}{101}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executor_a3a73ff08253d02a201bd0f0e4268f100}\label{class_common_1_1_executor_a3a73ff08253d02a201bd0f0e4268f100} 
+\index{Common.Executor@{Common.Executor}!TryGetExecution$<$ T $>$@{TryGetExecution$<$ T $>$}}
+\index{TryGetExecution$<$ T $>$@{TryGetExecution$<$ T $>$}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{TryGetExecution$<$ T $>$()}{TryGetExecution< T >()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{bool}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Common.\+Executor.\+Try\+Get\+Execution}}$<$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}} $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{out}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}}}]{result,  }\item[{\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Predicate}}$<$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}} $>$}]{filter = {\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{null}}} }\end{DoxyParamCaption})}
+
+
+
+If there are Multiple Specific type of Execute\+Behaviours in List, you can select one by filter. Such as Execute\+Behaviour.\+game\+Object.\+name is "{}\+Damage"{} or \doxylink{class_common_1_1_executors_1_1_execute_behaviour_adf0de4fce5e6cd187f92b5a65b0b4bdf}{Execute\+Behaviour.\+Activation} == true ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & found value\\
+\hline
+{\em filter} & Predicate filter\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & typeof Execute\+Behaviour\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+true if result isn\textquotesingle{}t null, either false
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em Execute\+Behaviour}]\end{description}
+\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executor_a6e36dbe42361738281dcb200fee8e12d}\label{class_common_1_1_executor_a6e36dbe42361738281dcb200fee8e12d} 
+\index{Common.Executor@{Common.Executor}!TryGetExecutions$<$ T $>$@{TryGetExecutions$<$ T $>$}}
+\index{TryGetExecutions$<$ T $>$@{TryGetExecutions$<$ T $>$}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{TryGetExecutions$<$ T $>$()}{TryGetExecutions< T >()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{bool}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Common.\+Executor.\+Try\+Get\+Executions}}$<$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}} $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{out}} \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List}}$<$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}} $>$}]{result,  }\item[{\mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{Predicate}}$<$ \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{T}} $>$}]{filter = {\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{null}}} }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em Execute\+Behaviour}]\end{description}
+\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00062}{62}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executor_aaaf1a3c4419ffd84b1eb104af033ed4f}\label{class_common_1_1_executor_aaaf1a3c4419ffd84b1eb104af033ed4f} 
+\index{Common.Executor@{Common.Executor}!Unregister@{Unregister}}
+\index{Unregister@{Unregister}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{Unregister()}{Unregister()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{void}} Common.\+Executor.\+Unregister (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_common_1_1_executor}{Executor}}}]{other\+Executor }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00119}{119}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066}\label{class_common_1_1_executor_ae08aee99eebab3d716bb5dcbce097066} 
+\index{Common.Executor@{Common.Executor}!executionList@{executionList}}
+\index{executionList@{executionList}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{executionList}{executionList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}{List}}$<$\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Execute\+Behaviour}}$>$ Common.\+Executor.\+execution\+List\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561}\label{class_common_1_1_executor_a3efce7ec6624b3c65abe308d66aae561} 
+\index{Common.Executor@{Common.Executor}!List@{List}}
+\index{List@{List}!Common.Executor@{Common.Executor}}
+\doxysubsubsection{\texorpdfstring{List}{List}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Execute\+Behaviour}}$>$ Common.\+Executor.\+List\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_executor_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_executor_8cs_source}{Executor.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+\_\+\+Protocol/\+\_\+\+Component/\mbox{\hyperlink{_executor_8cs}{Executor.\+cs}}\end{DoxyCompactItemize}

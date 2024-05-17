@@ -1,6 +1,6 @@
 \doxysection{Input\+Listener.\+cs}
 \hypertarget{_input_listener_8cs_source}{}\label{_input_listener_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Inputs/InputListener.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Inputs/InputListener.cs}}
-
+\mbox{\hyperlink{_input_listener_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00001}00001\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Reflection;}
@@ -14,21 +14,21 @@
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00010}00010\ }
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00011}00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_inputs}{Inputs}}}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00012}00012\ \{}
-\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{using\ }Context\ =\ InputAction.CallbackContext;}
+\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_inputs_a481fe2563970c2f650a7e4e948cd67b7}{Context}}\ =\ InputAction.CallbackContext;}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00014}00014\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }InputListener\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00015}\mbox{\hyperlink{class_inputs_1_1_input_listener}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_inputs_1_1_input_listener}{InputListener}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00016}00016\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ InputManager\ inputManager;}
+\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_input_manager}{InputManager}}\ inputManager;}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<InputRegisterPackage>\ inputRegisterList;}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00019}00019\ }
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ [Serializable]}
-\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }InputRegisterPackage}
+\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00021}\mbox{\hyperlink{class_inputs_1_1_input_listener_1_1_input_register_package}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_inputs_1_1_input_listener_1_1_input_register_package}{InputRegisterPackage}}}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ public\ string\ Key;}}
-\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ActionType\ Type;}
-\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ InputSection\ InputSection;}
-\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ ActionName\ =\ \textcolor{stringliteral}{"{}InsertInputEvent's\ Method"{}};}
-\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ UnityEvent<Context>\ Response;}
+\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00024}\mbox{\hyperlink{class_inputs_1_1_input_listener_1_1_input_register_package_a5a755d75346f1ef481ae462016649d91}{00024}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{ActionType}}\ \mbox{\hyperlink{class_inputs_1_1_input_listener_1_1_input_register_package_a5a755d75346f1ef481ae462016649d91}{Type}};}
+\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00025}\mbox{\hyperlink{class_inputs_1_1_input_listener_1_1_input_register_package_ad85f8261db390b5dab5bfd38a96a3b95}{00025}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}\ \mbox{\hyperlink{class_inputs_1_1_input_listener_1_1_input_register_package_ad85f8261db390b5dab5bfd38a96a3b95}{InputSection}};}
+\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00026}\mbox{\hyperlink{class_inputs_1_1_input_listener_1_1_input_register_package_a82d7a115387a9833d9db18ca87b8f9e7}{00026}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_inputs_1_1_input_listener_1_1_input_register_package_a82d7a115387a9833d9db18ca87b8f9e7}{ActionName}}\ =\ \textcolor{stringliteral}{"{}InsertInputEvent's\ Method"{}};}
+\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00027}\mbox{\hyperlink{class_inputs_1_1_input_listener_1_1_input_register_package_a4f1bb73038247f43bf469a852a675a59}{00027}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ UnityEvent<Context>\ \mbox{\hyperlink{class_inputs_1_1_input_listener_1_1_input_register_package_a4f1bb73038247f43bf469a852a675a59}{Response}};}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00030}00030\ }
@@ -36,7 +36,7 @@
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ inputRegisterList.ForEach(\textcolor{keyword}{register}\ =>}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[\textcolor{keyword}{register}.Type].Add(\textcolor{keyword}{register}.InputSection,\ \textcolor{keyword}{register}.ActionName,\ context\ =>\ \textcolor{keyword}{register}.Response?.Invoke(context));}
+\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[\textcolor{keyword}{register}.Type].Add(\textcolor{keyword}{register}.\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}},\ \textcolor{keyword}{register}.ActionName,\ context\ =>\ \textcolor{keyword}{register}.Response?.Invoke(context));}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00038}00038\ }
@@ -44,7 +44,7 @@
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ inputRegisterList.ForEach(\textcolor{keyword}{register}\ =>}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[\textcolor{keyword}{register}.Type]?.Remove(\textcolor{keyword}{register}.InputSection,\ \textcolor{keyword}{register}.ActionName);}
+\DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[\textcolor{keyword}{register}.Type]?.Remove(\textcolor{keyword}{register}.\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}},\ \textcolor{keyword}{register}.ActionName);}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_listener_8cs_source_l00046}00046\ }

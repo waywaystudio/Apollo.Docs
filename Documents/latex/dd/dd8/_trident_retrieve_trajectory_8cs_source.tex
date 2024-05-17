@@ -1,6 +1,6 @@
 \doxysection{Trident\+Retrieve\+Trajectory.\+cs}
 \hypertarget{_trident_retrieve_trajectory_8cs_source}{}\label{_trident_retrieve_trajectory_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Trajectories/TridentRetrieveTrajectory.cs@{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Trajectories/TridentRetrieveTrajectory.cs}}
-
+\mbox{\hyperlink{_trident_retrieve_trajectory_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Threading;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_projectiles_1_1_variants_1_1_tridents}{Common.Projectiles.Variants.Tridents}};}
@@ -9,44 +9,44 @@
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00005}00005\ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_projectiles_1_1_trajectories}{Common.Projectiles.Trajectories}}}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TridentRetrieveTrajectory\ :\ Trajectory}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory}{TridentRetrieveTrajectory}}\ :\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectory}{Trajectory}}}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00009}00009\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ bounceAngle;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ bounceCount;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ LayerMask\ enemyLayer;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ RetrieveAction\ retrieveAction;}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_tridents_1_1_retrieve_action}{RetrieveAction}}\ retrieveAction;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ retrieveCanceller;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ currentBounceCount;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ MaxBounceCount\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsBounce\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a9cda7fbd81819eb131c05f8abcd50382}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a9cda7fbd81819eb131c05f8abcd50382}{MaxBounceCount}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00020}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_aca9db6883bc4ce18b4765b0651cb367c}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_aca9db6883bc4ce18b4765b0651cb367c}{IsBounce}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00021}00021\ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IUnitSequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00023}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a7986c8685cb38ab88f0ac515f3f171e4}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a7986c8685cb38ab88f0ac515f3f171e4}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_unit_sequencer}{IUnitSequencer}}\ sequencer)}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ RetrieveAction\ retrieve)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_tridents_1_1_retrieve_action}{RetrieveAction}}\ retrieve)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00026}00026\ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ retrieveAction\ =\ retrieve;}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ Projectile\ \ \ \ \ =\ retrieveAction.Projectile;}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ provider\ \ \ \ \ \ \ =\ Projectile.Provider;}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ MaxBounceCount\ =\ bounceCount;}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}\ \ \ \ \ =\ retrieveAction.\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_tridents_1_1_retrieve_action_af62a89c3efa894d44758f7562ed3eae6}{Projectile}};}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ provider\ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}.\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_ac4cecfe99c1afbe3b0ef52fb45a5dadc}{Provider}};}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a9cda7fbd81819eb131c05f8abcd50382}{MaxBounceCount}}\ =\ bounceCount;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ retrieve.Sections}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}ProjectileFlying"{}},\ Flying)}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}ProjectileCancelFlying"{}},\ Cancel)}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}ResetBounceCount"{}},\ ()\ =>\ currentBounceCount\ =\ 0)}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}DisposeTrajectory"{}},\ Cancel)}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}ProjectileFlying"{}},\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a72ec15621679497a7877754ef830a76f}{Flying}})}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}ProjectileCancelFlying"{}},\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a4e3800b043eebbd64b506b3aca7c17ae}{Cancel}})}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}ResetBounceCount"{}},\ ()\ =>\ currentBounceCount\ =\ 0)}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Dispose,\ \textcolor{stringliteral}{"{}DisposeTrajectory"{}},\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a4e3800b043eebbd64b506b3aca7c17ae}{Cancel}})}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Flying()}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00041}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a72ec15621679497a7877754ef830a76f}{00041}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a72ec15621679497a7877754ef830a76f}{Flying}}()}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ retrieveCanceller\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsBounce)}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_aca9db6883bc4ce18b4765b0651cb367c}{IsBounce}})}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BounceRetrieve(retrieveCanceller).Forget();}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
@@ -56,7 +56,7 @@
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00054}00054\ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Cancel()}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00055}\mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a4e3800b043eebbd64b506b3aca7c17ae}{00055}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a4e3800b043eebbd64b506b3aca7c17ae}{Cancel}}()}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ retrieveCanceller?.Cancel();}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ retrieveCanceller\ =\ \textcolor{keyword}{null};}
@@ -69,13 +69,13 @@
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (provider.IsNullOrDestroyed())\ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ position\ =\ Projectile.transform.position;}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetPosition\ =\ provider.PrePosition(PrePositionType.RightHand).position;}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ position\ =\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}.\mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}}.position;}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetPosition\ =\ provider.\mbox{\hyperlink{interface_common_1_1_i_preposition_a8154acc53dfce6cf76e2eee1f11a7fdf}{PrePosition}}(\mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{PrePositionType}}.RightHand).position;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ directionToTarget\ =\ (targetPosition\ -\/\ position).normalized;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ distanceToTarget\ =\ Vector3.Distance(position,\ targetPosition);}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ distancePerFrame\ =\ speed\ *\ Time.fixedDeltaTime;}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ distancePerFrame\ =\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectory_a12630e35ba259c119c91310ae7f73e8c}{speed}}\ *\ Time.fixedDeltaTime;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Projectile.transform.LookAt(provider.PrePosition(PrePositionType.RightHand));}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}.\mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}}.LookAt(provider.\mbox{\hyperlink{interface_common_1_1_i_preposition_a8154acc53dfce6cf76e2eee1f11a7fdf}{PrePosition}}(\mbox{\hyperlink{namespace_common_a1477a3f269f76077e23fc8292d6c4291}{PrePositionType}}.RightHand));}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (distanceToTarget\ <=\ distancePerFrame)}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -88,46 +88,46 @@
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Yield(PlayerLoopTiming.FixedUpdate,\ cts.Token);}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ retrieveAction.Invoker.Complete();}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ retrieveAction.\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_tridents_1_1_retrieve_action_a923f6c76467882d419cd87aa3cee39b7}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}}();}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ UniTaskVoid\ BounceRetrieve(CancellationTokenSource\ cts)}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentBounceCount\ ==\ MaxBounceCount)}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentBounceCount\ ==\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a9cda7fbd81819eb131c05f8abcd50382}{MaxBounceCount}})}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DirectRetrieve(cts).Forget();}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ var\ forward\ =\ (provider.Position\ -\/\ Projectile.Position).normalized;}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ var\ radius\ =\ Vector3.Distance(provider.Position,\ Projectile.Position);}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ var\ bounceTargetList\ =\ retrieveAction.Projectile.Detector.InAngle(Projectile.Position,\ forward,\ enemyLayer,\ radius,\ bounceAngle);}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ var\ forward\ =\ (provider.Position\ -\/\ \mbox{\hyperlink{_database_8cs_ab58739cc673d5a939eb6b313566c53b6}{Projectile}}.Position).normalized;}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ var\ radius\ =\ Vector3.Distance(provider.\mbox{\hyperlink{interface_common_1_1_i_unit_a45b54ea30324ebb0ef8d594abbe8a201}{Position}},\ \mbox{\hyperlink{_database_8cs_ab58739cc673d5a939eb6b313566c53b6}{Projectile}}.Position);}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ var\ bounceTargetList\ =\ retrieveAction.\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_tridents_1_1_retrieve_action_af62a89c3efa894d44758f7562ed3eae6}{Projectile}}.\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_trident_projectile_a6202c3223e4ec9f1b19763b8690e83a6}{Detector}}.InAngle(\mbox{\hyperlink{_database_8cs_ab58739cc673d5a939eb6b313566c53b6}{Projectile}}.Position,\ forward,\ enemyLayer,\ radius,\ bounceAngle);}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00102}00102\ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bounceTargetList.HasComponent())}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bounceTargetList.Sort(Projectile.Position,\ SortingType.Random);}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bounceTargetList.RemoveSafely(provider.gameObject);}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bounceTargetList.Sort(\mbox{\hyperlink{_database_8cs_ab58739cc673d5a939eb6b313566c53b6}{Projectile}}.Position,\ \mbox{\hyperlink{namespace_common_a8ca768b5259e0ae2f8baaae4fcb8c5f9}{SortingType}}.Random);}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bounceTargetList.RemoveSafely(provider.\mbox{\hyperlink{interface_common_1_1_i_unit_a2ca74a8a9a8e98bfee6898eac58afbc9}{gameObject}});}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00108}00108\ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!bounceTargetList.IsNullOrEmpty()\ \&\&\ currentBounceCount\ <\ MaxBounceCount)}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!bounceTargetList.IsNullOrEmpty()\ \&\&\ currentBounceCount\ <\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory_a9cda7fbd81819eb131c05f8abcd50382}{MaxBounceCount}})}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ target\ =\ bounceTargetList.LastOrDefault();}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (provider.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!target.TryGetComponent(out\ Character\ character)\ ||\ !character.IsAlive)}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!target.TryGetComponent(out\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ character)\ ||\ !character.IsAlive)}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bounceTargetList.RemoveSafely(target);}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Yield(PlayerLoopTiming.FixedUpdate,\ cts.Token);}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00120}00120\ }
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ projectileTransform\ =\ Projectile.transform;}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ projectileTransform\ =\ \mbox{\hyperlink{_database_8cs_ab58739cc673d5a939eb6b313566c53b6}{Projectile}}.transform;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ position\ =\ projectileTransform.position;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetPosition\ =\ target.transform.position;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ directionToTarget\ =\ (targetPosition\ -\/\ position).normalized;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ distanceToTarget\ =\ Vector3.Distance(position,\ targetPosition);}
-\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ distancePerFrame\ =\ speed\ *\ Time.fixedDeltaTime;}
+\DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ distancePerFrame\ =\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_trajectory_a12630e35ba259c119c91310ae7f73e8c}{speed}}\ *\ Time.fixedDeltaTime;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +=\ directionToTarget\ *\ distancePerFrame;}
 \DoxyCodeLine{\Hypertarget{_trident_retrieve_trajectory_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ projectileTransform.position\ =\ position;}

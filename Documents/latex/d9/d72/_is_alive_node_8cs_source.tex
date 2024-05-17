@@ -1,22 +1,22 @@
 \doxysection{Is\+Alive\+Node.\+cs}
 \hypertarget{_is_alive_node_8cs_source}{}\label{_is_alive_node_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/AI/IsAliveNode.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/AI/IsAliveNode.cs}}
-
+\mbox{\hyperlink{_is_alive_node_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }BehaviorDesigner.Runtime.Tasks;}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_a_i}{Common.Characters.AI}}}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00004}00004\ \{}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00005}00005\ \ \ \ \ [TaskIcon(\textcolor{stringliteral}{"{}\{SkinColor\}SelectorIcon.png"{}}),\ TaskCategory(\textcolor{stringliteral}{"{}Characters"{}})]}
-\DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }IsAliveNode\ :\ Action}
+\DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_characters_1_1_a_i_1_1_is_alive_node}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_characters_1_1_a_i_1_1_is_alive_node}{IsAliveNode}}\ :\ Action}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00007}00007\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Character\ mainCharacter;}
+\DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ mainCharacter;}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnAwake()}
+\DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_characters_1_1_a_i_1_1_is_alive_node_ad19fe8868a690eef8e98dac15c3bb599}{00010}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_a_i_1_1_is_alive_node_ad19fe8868a690eef8e98dac15c3bb599}{OnAwake}}()}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ mainCharacter\ =\ gameObject.GetComponentInParent<Character>();}
+\DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ mainCharacter\ =\ gameObject.GetComponentInParent<\mbox{\hyperlink{class_common_1_1_character}{Character}}>();}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ TaskStatus\ OnUpdate()}
+\DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_characters_1_1_a_i_1_1_is_alive_node_af93c9a4374a7a82a608bb967a8b3b1f1}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ TaskStatus\ \mbox{\hyperlink{class_common_1_1_characters_1_1_a_i_1_1_is_alive_node_af93c9a4374a7a82a608bb967a8b3b1f1}{OnUpdate}}()}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mainCharacter.IsAlive}
 \DoxyCodeLine{\Hypertarget{_is_alive_node_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ TaskStatus.Success}

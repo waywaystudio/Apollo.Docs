@@ -1,0 +1,195 @@
+\doxysection{Common.\+UI.\+Progress\+Image Class Reference}
+\hypertarget{class_common_1_1_u_i_1_1_progress_image}{}\label{class_common_1_1_u_i_1_1_progress_image}\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_add101f7f258618e5d23ccf820bfd1136}{Register}} (\mbox{\hyperlink{class_observable}{Observable}}$<$ float $>$ target\+Progress, \mbox{\hyperlink{class_observable}{Observable}}$<$ float $>$ max\+Getter)
+\item 
+void \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_a84b7833432e6ef31a3294481b6713138}{Unregister}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_a06a2895bba71fdf4e3cc4e5082ffae7a}{Try\+Update\+Image}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Image \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_acfe5dc8681248900f3e17a94e3c009af}{image}}
+\item 
+bool \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_adb798609697aeaed243085ffee59a8a5}{has\+Tween}}
+\item 
+float \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_ad509fcb34f6178602dbecb44519ac346}{tween\+Duration}} = 0.\+1f
+\item 
+Ease \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_ad17447ccccad05684cb2b4ba1e1a3e38}{ease\+Type}} = Ease.\+Linear
+\item 
+Tween \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_aea29967246fcd165f8b1ed74e0581a7b}{Update\+Tween}}
+\item 
+string \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_a125adf04299730b748d0cabaae4c259b}{Progress\+Key}}
+\item 
+bool \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_a588768edb2ccf0ef7d15d81d66692f92}{Is\+Registered}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_observable}{Observable}}$<$ float $>$ \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_aa47449d1e643345cafbe2a71cfadf2d9}{Target\+Progress}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_observable}{Observable}}$<$ float $>$ \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_a3da7e92ca0ed4db2f7c7d63c7a5b35a7}{Max\+Getter}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+float \mbox{\hyperlink{class_common_1_1_u_i_1_1_progress_image_a9ca6ad6ab550987fd9b0699699643c34}{Max}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_add101f7f258618e5d23ccf820bfd1136}\label{class_common_1_1_u_i_1_1_progress_image_add101f7f258618e5d23ccf820bfd1136} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!Register@{Register}}
+\index{Register@{Register}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily void Common.\+UI.\+Progress\+Image.\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observable}{Observable}}$<$ float $>$}]{target\+Progress,  }\item[{\mbox{\hyperlink{class_observable}{Observable}}$<$ float $>$}]{max\+Getter }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_a06a2895bba71fdf4e3cc4e5082ffae7a}\label{class_common_1_1_u_i_1_1_progress_image_a06a2895bba71fdf4e3cc4e5082ffae7a} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!TryUpdateImage@{TryUpdateImage}}
+\index{TryUpdateImage@{TryUpdateImage}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{TryUpdateImage()}{TryUpdateImage()}}
+{\footnotesize\ttfamily virtual void Common.\+UI.\+Progress\+Image.\+Try\+Update\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_health_indicators_1_1_combat_value_circle_abea78c53dcedce76fb47b9d35889fb30}{Challenge.\+UI.\+Huds.\+Bottoms.\+Health\+Indicators.\+Combat\+Value\+Circle}}, and \mbox{\hyperlink{class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar_a695062b71d334af1470f08608a9e54f7}{Common.\+UI.\+Name\+Plates.\+Combat\+Value\+Bar}}.
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_a84b7833432e6ef31a3294481b6713138}\label{class_common_1_1_u_i_1_1_progress_image_a84b7833432e6ef31a3294481b6713138} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!Unregister@{Unregister}}
+\index{Unregister@{Unregister}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{Unregister()}{Unregister()}}
+{\footnotesize\ttfamily void Common.\+UI.\+Progress\+Image.\+Unregister (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_ad17447ccccad05684cb2b4ba1e1a3e38}\label{class_common_1_1_u_i_1_1_progress_image_ad17447ccccad05684cb2b4ba1e1a3e38} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!easeType@{easeType}}
+\index{easeType@{easeType}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{easeType}{easeType}}
+{\footnotesize\ttfamily Ease Common.\+UI.\+Progress\+Image.\+ease\+Type = Ease.\+Linear\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_adb798609697aeaed243085ffee59a8a5}\label{class_common_1_1_u_i_1_1_progress_image_adb798609697aeaed243085ffee59a8a5} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!hasTween@{hasTween}}
+\index{hasTween@{hasTween}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{hasTween}{hasTween}}
+{\footnotesize\ttfamily bool Common.\+UI.\+Progress\+Image.\+has\+Tween\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_acfe5dc8681248900f3e17a94e3c009af}\label{class_common_1_1_u_i_1_1_progress_image_acfe5dc8681248900f3e17a94e3c009af} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!image@{image}}
+\index{image@{image}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily Image Common.\+UI.\+Progress\+Image.\+image\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_a588768edb2ccf0ef7d15d81d66692f92}\label{class_common_1_1_u_i_1_1_progress_image_a588768edb2ccf0ef7d15d81d66692f92} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!IsRegistered@{IsRegistered}}
+\index{IsRegistered@{IsRegistered}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{IsRegistered}{IsRegistered}}
+{\footnotesize\ttfamily bool Common.\+UI.\+Progress\+Image.\+Is\+Registered\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_a125adf04299730b748d0cabaae4c259b}\label{class_common_1_1_u_i_1_1_progress_image_a125adf04299730b748d0cabaae4c259b} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!ProgressKey@{ProgressKey}}
+\index{ProgressKey@{ProgressKey}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{ProgressKey}{ProgressKey}}
+{\footnotesize\ttfamily string Common.\+UI.\+Progress\+Image.\+Progress\+Key\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_ad509fcb34f6178602dbecb44519ac346}\label{class_common_1_1_u_i_1_1_progress_image_ad509fcb34f6178602dbecb44519ac346} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!tweenDuration@{tweenDuration}}
+\index{tweenDuration@{tweenDuration}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{tweenDuration}{tweenDuration}}
+{\footnotesize\ttfamily float Common.\+UI.\+Progress\+Image.\+tween\+Duration = 0.\+1f\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_aea29967246fcd165f8b1ed74e0581a7b}\label{class_common_1_1_u_i_1_1_progress_image_aea29967246fcd165f8b1ed74e0581a7b} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!UpdateTween@{UpdateTween}}
+\index{UpdateTween@{UpdateTween}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{UpdateTween}{UpdateTween}}
+{\footnotesize\ttfamily Tween Common.\+UI.\+Progress\+Image.\+Update\+Tween\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_a9ca6ad6ab550987fd9b0699699643c34}\label{class_common_1_1_u_i_1_1_progress_image_a9ca6ad6ab550987fd9b0699699643c34} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!Max@{Max}}
+\index{Max@{Max}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{Max}{Max}}
+{\footnotesize\ttfamily float Common.\+UI.\+Progress\+Image.\+Max\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_a3da7e92ca0ed4db2f7c7d63c7a5b35a7}\label{class_common_1_1_u_i_1_1_progress_image_a3da7e92ca0ed4db2f7c7d63c7a5b35a7} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!MaxGetter@{MaxGetter}}
+\index{MaxGetter@{MaxGetter}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{MaxGetter}{MaxGetter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_observable}{Observable}}$<$float$>$ Common.\+UI.\+Progress\+Image.\+Max\+Getter = new()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+\Hypertarget{class_common_1_1_u_i_1_1_progress_image_aa47449d1e643345cafbe2a71cfadf2d9}\label{class_common_1_1_u_i_1_1_progress_image_aa47449d1e643345cafbe2a71cfadf2d9} 
+\index{Common.UI.ProgressImage@{Common.UI.ProgressImage}!TargetProgress@{TargetProgress}}
+\index{TargetProgress@{TargetProgress}!Common.UI.ProgressImage@{Common.UI.ProgressImage}}
+\doxysubsubsection{\texorpdfstring{TargetProgress}{TargetProgress}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_observable}{Observable}}$<$float$>$ Common.\+UI.\+Progress\+Image.\+Target\+Progress\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_progress_image_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_progress_image_8cs_source}{Progress\+Image.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+UI/\mbox{\hyperlink{_progress_image_8cs}{Progress\+Image.\+cs}}\end{DoxyCompactItemize}

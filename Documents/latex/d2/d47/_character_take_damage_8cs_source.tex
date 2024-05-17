@@ -1,52 +1,52 @@
 \doxysection{Character\+Take\+Damage.\+cs}
 \hypertarget{_character_take_damage_8cs_source}{}\label{_character_take_damage_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/Actions/CharacterTakeDamage.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/Actions/CharacterTakeDamage.cs}}
-
+\mbox{\hyperlink{_character_take_damage_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_actions}{Common.Characters.Actions}}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CharacterTakeDamage\ :\ MonoBehaviour,\ IUnitSequencer,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00005}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage}{CharacterTakeDamage}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_common_1_1_i_unit_sequencer}{IUnitSequencer}},\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00006}00006\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Effector\ effector;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_effector}{Effector}}\ effector;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IUnit\ Unit\ =>\ Character;}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Character\ Character\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<CombatLog>}}\ OnTakeDamage\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_ab3f5642f032fbcc5f3ffc3a81a15df58}{00009}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_ab3f5642f032fbcc5f3ffc3a81a15df58}{Unit}}\ =>\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a0be5257eb6d231c8aeb95e1223bdf956}{Character}};}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a42d78d80fa68839c8f8b89c20c2d0d12}{00010}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_table}{SectionTable}}\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a9cf0bc10a313a7817f2077b04eb404ad}{00011}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a9cf0bc10a313a7817f2077b04eb404ad}{Invoker}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a0be5257eb6d231c8aeb95e1223bdf956}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a2fe1729c6e141406ef5aed207ba31214}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<CombatLog>}}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a2fe1729c6e141406ef5aed207ba31214}{OnTakeDamage}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ CombatValue\ HitPoints\ =>\ Character.HitPoints;}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ CombatValue\ ShieldPoints\ =>\ Character.ShieldPoints;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a16621f19652ba84fe49bce20cb5cb8b9}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_combat_value}{CombatValue}}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a16621f19652ba84fe49bce20cb5cb8b9}{HitPoints}}\ =>\ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_a12a50217e8c8f73d0dbedb9add4de3d3}{HitPoints}};}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_combat_value}{CombatValue}}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}\ =>\ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_a75b539bd6f049c87de31ad74a5a842bd}{ShieldPoints}};}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Character\ character)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a4053a68b5ecd7bc97fb72aab6524f699}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a4053a68b5ecd7bc97fb72aab6524f699}{Initialize}}(\mbox{\hyperlink{class_common_1_1_character}{Character}}\ character)}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ Character\ =\ character;}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ \ \ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ =\ character;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a9cf0bc10a313a7817f2077b04eb404ad}{Invoker}}\ \ \ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}(Sections);}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00023}00023\ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}IsAlive"{}},\ ()\ =>\ character.IsAlive)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}IsAlive"{}},\ ()\ =>\ character.\mbox{\hyperlink{class_common_1_1_character_a46fdd9384f4e1e7dcc65d8ba3d919cd4}{IsAlive}})}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ effector.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ effector.\mbox{\hyperlink{class_common_1_1_effector_ad6123dc4b2e083651c82d5c184930571}{Initialize}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TakeDamage(IDamageEntity\ damageEntity)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00031}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_aa3bbdb9390d2007589900dd533f601f0}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_aa3bbdb9390d2007589900dd533f601f0}{TakeDamage}}(\mbox{\hyperlink{interface_common_1_1_i_damage_entity}{IDamageEntity}}\ damageEntity)}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ TakeDamage(damageEntity.Provider,\ damageEntity.DataIndex,\ damageEntity.DamageTable,\ damageEntity.DamageFilter,\ damageEntity.Mask);}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_aa3bbdb9390d2007589900dd533f601f0}{TakeDamage}}(damageEntity.\mbox{\hyperlink{interface_common_1_1_i_damage_entity_a060a7f6c2870c794599d2d3ba5c8d02f}{Provider}},\ damageEntity.\mbox{\hyperlink{interface_i_data_indexer_aeb653e4ac7f376fbb206dde713c3303d}{DataIndex}},\ damageEntity.\mbox{\hyperlink{interface_common_1_1_i_damage_entity_a7ac1c24fd3d24c41b3c0864ced86f291}{DamageTable}},\ damageEntity.\mbox{\hyperlink{interface_common_1_1_i_damage_entity_a982b44fc2615784da9c182f314a59ac9}{DamageFilter}},\ damageEntity.\mbox{\hyperlink{interface_common_1_1_i_damage_entity_a5544f5a7338dc4b0c2742ad464b6b98a}{Mask}});}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Can\ not\ Provide\ Log}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TakeDamage(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00037}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_ac1e1678fd0f7f8ba3a1460d545d64619}{00037}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_ac1e1678fd0f7f8ba3a1460d545d64619}{TakeDamage}}(\textcolor{keywordtype}{float}\ value)}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a9cf0bc10a313a7817f2077b04eb404ad}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ShieldPoints.HasComponent()\ \&\&\ ShieldPoints.Value\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.HasComponent()\ \&\&\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}}\ >\ 0)}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ >\ ShieldPoints.Value)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ >\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}})}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/=\ ShieldPoints.Value;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/=\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}};}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ShieldPoints.Value\ =\ \ 0f;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
@@ -57,39 +57,39 @@
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dead\ Calculation}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ >=\ HitPoints.Value)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ >=\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a16621f19652ba84fe49bce20cb5cb8b9}{HitPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}})}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HitPoints.Value\ =\ \ 0;}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Character.Dead(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_a6d7adc1bf674f3ad1d0e074dfa262082}{Dead}}(\textcolor{keyword}{null});}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ HitPoints.Value\ -\/=\ value;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a9cf0bc10a313a7817f2077b04eb404ad}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Minimum\ Condition\ for\ Provide\ Log}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TakeDamage(ICombatProvider\ provider,\ DataIndex\ damageCode,\ \textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00068}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_acc173c6ca1fcf0ef2f2b3998e1105bea}{00068}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_acc173c6ca1fcf0ef2f2b3998e1105bea}{TakeDamage}}(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider,\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ damageCode,\ \textcolor{keywordtype}{float}\ value)}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a9cf0bc10a313a7817f2077b04eb404ad}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00071}00071\ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ var\ log\ =\ \textcolor{keyword}{new}\ CombatLog(provider,\ damageCode,\ Character,\ DamageTypeMask.None);}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ var\ log\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_common_1_1_combat_log}{CombatLog}}(provider,\ damageCode,\ \mbox{\hyperlink{class_common_1_1_character}{Character}},\ \mbox{\hyperlink{namespace_common_af65c84738dec71840a559922a1c90c5b}{DamageTypeMask}}.None);}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ var\ damageAmount\ =\ value;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ log.Type\ =\ CombatEntityType.Damage;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ log.Type\ =\ \mbox{\hyperlink{namespace_common_ac10a299c911c463949202a710dc9ae0c}{CombatEntityType}}.Damage;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Critical\ Calculation\ :\ CombatFormula;}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ var\ takerCriticalExpose\ =\ Character.StatTable[StatType.CriticalExposure];}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ var\ takerCriticalExpose\ =\ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.CriticalExposure];}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00079}00079\ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IsCritical!}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Random.Range(0f,\ 1f)\ <\ takerCriticalExpose)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespace_common_1_1_characters_1_1_actions_a13efa6ac721189c9d99be95511d36d4f}{Random}}.Range(0f,\ 1f)\ <\ takerCriticalExpose)}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageAmount\ *=\ 2.0f;}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log.Type\ \ \ \ \ =\ \ CombatEntityType.CriticalDamage;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log.Type\ \ \ \ \ =\ \ \mbox{\hyperlink{namespace_common_ac10a299c911c463949202a710dc9ae0c}{CombatEntityType}}.CriticalDamage;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ PowerMultiplier}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ var\ takerDamageMultiplier\ =\ Character.StatTable[StatType.DamageDecreaseRate];}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ var\ takerDamageMultiplier\ =\ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.DamageDecreaseRate];}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00089}00089\ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ damageAmount\ *=\ 1.0f\ +\ takerDamageMultiplier;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -97,11 +97,11 @@
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ log.Value\ =\ damageAmount;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00094}00094\ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Shield\ Calculation}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ShieldPoints.HasComponent()\ \&\&\ ShieldPoints.Value\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.HasComponent()\ \&\&\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}}\ >\ 0)}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (damageAmount\ >\ ShieldPoints.Value)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (damageAmount\ >\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}})}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageAmount\ \ \ \ \ \ \ -\/=\ ShieldPoints.Value;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageAmount\ \ \ \ \ \ \ -\/=\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}};}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ShieldPoints.Value\ =\ \ 0f;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
@@ -112,46 +112,46 @@
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dead\ Calculation}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (damageAmount\ >=\ HitPoints.Value)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (damageAmount\ >=\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a16621f19652ba84fe49bce20cb5cb8b9}{HitPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}})}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HitPoints.Value\ =\ \ 0;}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log.Value\ \ \ \ \ \ \ -\/=\ HitPoints.Value;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log.Value\ \ \ \ \ \ \ -\/=\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a16621f19652ba84fe49bce20cb5cb8b9}{HitPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}};}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log.IsFinishing\ =\ \ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Character.Dead(log);}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_a6d7adc1bf674f3ad1d0e074dfa262082}{Dead}}(log);}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ HitPoints.Value\ -\/=\ damageAmount;}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ provider.OnDamageProvide.Invoke(log);}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ provider.\mbox{\hyperlink{interface_common_1_1_i_combat_provider_ad4bbf19f35ec16a7298ee461920ab738}{OnDamageProvide}}.Invoke(log);}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ OnTakeDamage.Invoke(log);}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a9cf0bc10a313a7817f2077b04eb404ad}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a2fe1729c6e141406ef5aed207ba31214}{OnTakeDamage}}.Invoke(log);}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TakeDamage(ICombatProvider\ provider,\ DataIndex\ damageCode,\ StatTable\ damageTable,\ DamageFilter\ filter,\ DamageTypeMask\ damageMask)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00127}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a48fb43a1d026b2a851b60b40157147cb}{00127}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a48fb43a1d026b2a851b60b40157147cb}{TakeDamage}}(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider,\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ damageCode,\ \mbox{\hyperlink{class_common_1_1_stat_table}{StatTable}}\ damageTable,\ \mbox{\hyperlink{class_common_1_1_damage_filter}{DamageFilter}}\ filter,\ \mbox{\hyperlink{namespace_common_af65c84738dec71840a559922a1c90c5b}{DamageTypeMask}}\ damageMask)}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a9cf0bc10a313a7817f2077b04eb404ad}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00130}00130\ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ var\ log\ =\ \textcolor{keyword}{new}\ CombatLog(provider,\ damageCode,\ Character,\ damageMask);}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ var\ damageAmount\ =\ damageTable[StatType.BaseDamage]\ +\ filter[StatType.BaseDamage];}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ var\ log\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_common_1_1_combat_log}{CombatLog}}(provider,\ damageCode,\ \mbox{\hyperlink{class_common_1_1_character}{Character}},\ damageMask);}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ var\ damageAmount\ =\ damageTable[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.BaseDamage]\ +\ filter[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.BaseDamage];}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ log.Type\ =\ CombatEntityType.Damage;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ log.Type\ =\ \mbox{\hyperlink{namespace_common_ac10a299c911c463949202a710dc9ae0c}{CombatEntityType}}.Damage;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Critical\ Calculation\ :\ CombatFormula;}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ var\ providerCriticalChance\ =\ damageTable[StatType.CriticalChance]\ +\ filter[StatType.CriticalChance];}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ var\ takerCriticalExpose\ =\ Character.StatTable[StatType.CriticalExposure];}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ var\ providerCriticalChance\ =\ damageTable[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.CriticalChance]\ +\ filter[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.CriticalChance];}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ var\ takerCriticalExpose\ =\ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.CriticalExposure];}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ var\ criticalCalculation\ =\ providerCriticalChance\ +\ takerCriticalExpose;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IsCritical!}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Random.Range(0f,\ 1f)\ <\ criticalCalculation)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{namespace_common_1_1_characters_1_1_actions_a13efa6ac721189c9d99be95511d36d4f}{Random}}.Range(0f,\ 1f)\ <\ criticalCalculation)}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageAmount\ *=\ 1.0f\ +\ damageTable[StatType.CriticalDamage]\ +\ filter[StatType.CriticalDamage];}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log.Type\ \ \ \ \ =\ \ CombatEntityType.CriticalDamage;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageAmount\ *=\ 1.0f\ +\ damageTable[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.CriticalDamage]\ +\ filter[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.CriticalDamage];}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log.Type\ \ \ \ \ =\ \ \mbox{\hyperlink{namespace_common_ac10a299c911c463949202a710dc9ae0c}{CombatEntityType}}.CriticalDamage;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ PowerMultiplier}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ var\ providerPowerMultiplier\ =\ damageTable[StatType.DamageIncreaseRate]\ +\ filter[StatType.DamageIncreaseRate];}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ var\ takerDamageMultiplier\ =\ Character.StatTable[StatType.DamageDecreaseRate];}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ var\ providerPowerMultiplier\ =\ damageTable[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.DamageIncreaseRate]\ +\ filter[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.DamageIncreaseRate];}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ var\ takerDamageMultiplier\ =\ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.DamageDecreaseRate];}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ var\ damageMultiplier\ =\ providerPowerMultiplier\ +\ takerDamageMultiplier;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ damageAmount\ *=\ 1.0f\ +\ damageMultiplier;}
@@ -160,11 +160,11 @@
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ log.Value\ =\ damageAmount;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Shield\ Calculation}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ShieldPoints.HasComponent()\ \&\&\ ShieldPoints.Value\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.HasComponent()\ \&\&\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}}\ >\ 0)}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (damageAmount\ >\ ShieldPoints.Value)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (damageAmount\ >\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}})}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageAmount\ \ \ \ \ \ \ -\/=\ ShieldPoints.Value;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageAmount\ \ \ \ \ \ \ -\/=\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a7f1afae359e3283c9aee2900678aff30}{ShieldPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}};}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ShieldPoints.Value\ =\ \ 0f;}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
@@ -175,29 +175,29 @@
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dead\ Calculation}}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (damageAmount\ >=\ HitPoints.Value)}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (damageAmount\ >=\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a16621f19652ba84fe49bce20cb5cb8b9}{HitPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}})}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HitPoints.Value\ =\ \ 0;}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log.Value\ \ \ \ \ \ \ -\/=\ HitPoints.Value;}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log.Value\ \ \ \ \ \ \ -\/=\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a16621f19652ba84fe49bce20cb5cb8b9}{HitPoints}}.\mbox{\hyperlink{class_common_1_1_combat_value_a7652d6ffed6b8c9e2dc34dbc3883853e}{Value}};}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ log.IsFinishing\ =\ \ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Character.Dead(log);}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_a6d7adc1bf674f3ad1d0e074dfa262082}{Dead}}(log);}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ HitPoints.Value\ -\/=\ damageAmount;}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ provider.OnDamageProvide.Invoke(log);}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ provider.\mbox{\hyperlink{interface_common_1_1_i_combat_provider_ad4bbf19f35ec16a7298ee461920ab738}{OnDamageProvide}}.Invoke(log);}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ OnTakeDamage.Invoke(log);}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a9cf0bc10a313a7817f2077b04eb404ad}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a2fe1729c6e141406ef5aed207ba31214}{OnTakeDamage}}.Invoke(log);}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00189}00189\ }
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00190}\mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a622d25d17a6a7002d76732427fc4f672}{00190}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a622d25d17a6a7002d76732427fc4f672}{Cancel}}()\ =>\ \mbox{\hyperlink{class_common_1_1_characters_1_1_actions_1_1_character_take_damage_a9cf0bc10a313a7817f2077b04eb404ad}{Invoker}}.\mbox{\hyperlink{class_section_invoker_aa26adf36e80006bc7458495a349c3b7e}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00191}00191\ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00192}00192\ }
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00193}00193\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ =\ transform.GetComponentInChildrenWithDepth<Effector>(1);}
+\DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ =\ transform.GetComponentInChildrenWithDepth<\mbox{\hyperlink{class_common_1_1_effector}{Effector}}>(1);}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ effector.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_character_take_damage_8cs_source_l00199}00199\ \textcolor{preprocessor}{\#endif}}

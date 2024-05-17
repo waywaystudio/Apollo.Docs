@@ -1,6 +1,6 @@
 \doxysection{Swift\+Throw.\+cs}
 \hypertarget{_swift_throw_8cs_source}{}\label{_swift_throw_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SplitTrident/SwiftThrow.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SplitTrident/SwiftThrow.cs}}
-
+\mbox{\hyperlink{_swift_throw_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_split_tridents}{Common.Skills.SplitTridents}};}
@@ -9,49 +9,49 @@
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_split_trident}{Common.Masteries.SplitTrident}}}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00006}00006\ \{}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ ATTACK\ 창을\ 던진\ 후\ [1.5]초간\ 일시적으로\ 이동속도\ +20\%}}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SwiftThrow\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_swift_throw}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_swift_throw}{SwiftThrow}}\ :\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery}{Mastery}}}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00009}00009\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ buffMoveSpeedRatio\ =\ 0.2f;}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ buffTimer;}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00012}00012\ }
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ originalMoveSpeed;}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ StatEntity\ temporalMoveSpeed;}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ SpearThrowBehaviour\ throwBehaviour;}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}\ temporalMoveSpeed;}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_spear_throw_behaviour}{SpearThrowBehaviour}}\ throwBehaviour;}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00018}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_swift_throw_a3e9be0ab5e2bfcfcfd04593090513ba5}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_swift_throw_a3e9be0ab5e2bfcfcfd04593090513ba5}{Injection}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ throwBehaviour\ \ \ \ =\ dred.Skills.SpearThrow;}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ originalMoveSpeed\ =\ dred.StatTable[StatType.MoveSpeed];}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ temporalMoveSpeed\ =\ \textcolor{keyword}{new}\ StatEntity(StatType.MoveSpeed,\ \textcolor{stringliteral}{"{}Mastery.SwiftThrow"{}},\ originalMoveSpeed\ *\ buffMoveSpeedRatio);}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ throwBehaviour\ \ \ \ =\ dred.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_a2625c9d5199e0e18ddbb0c7ad9ed943b}{Skills}}.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_skills_ab07749ee95f904af7008ec2eabd9049e}{SpearThrow}};}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ originalMoveSpeed\ =\ dred.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}[\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.MoveSpeed];}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ temporalMoveSpeed\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}(\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.MoveSpeed,\ \textcolor{stringliteral}{"{}Mastery.SwiftThrow"{}},\ originalMoveSpeed\ *\ buffMoveSpeedRatio);}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00023}00023\ }
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ throwBehaviour.Sections}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Execute,\ \textcolor{stringliteral}{"{}PlaySwiftThrowBuffTimer"{}},\ buffTimer.Play)}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Execute,\ \textcolor{stringliteral}{"{}PlaySwiftThrowBuffTimer"{}},\ ()\ =>\ dred.StatTable.Add(temporalMoveSpeed))}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Execute,\ \textcolor{stringliteral}{"{}PlaySwiftThrowBuffTimer"{}},\ buffTimer.\mbox{\hyperlink{class_time_trigger_a1cab158a91639ac84536551518479fa9}{Play}})}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Execute,\ \textcolor{stringliteral}{"{}PlaySwiftThrowBuffTimer"{}},\ ()\ =>\ dred.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}.\mbox{\hyperlink{class_common_1_1_stat_table_ab19cc9700d6eda177ac7f853e7935c55}{Add}}(temporalMoveSpeed))}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.AddCallBack(\textcolor{stringliteral}{"{}ResetSwiftThrowSpeed"{}},\ ()\ =>\ dred.StatTable.Remove(temporalMoveSpeed));}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.\mbox{\hyperlink{class_time_trigger_a8d5526e17f82d5108dbd8a7e7bc6b47f}{AddCallBack}}(\textcolor{stringliteral}{"{}ResetSwiftThrowSpeed"{}},\ ()\ =>\ dred.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}.\mbox{\hyperlink{class_common_1_1_stat_table_a133158ebbb1719b611e827ebfffafa33}{Remove}}(temporalMoveSpeed));}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00032}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_swift_throw_a15060dc20c7461146f176463a53522b5}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_swift_throw_a15060dc20c7461146f176463a53522b5}{Abolition}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ throwBehaviour.Sections}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Execute,\ \textcolor{stringliteral}{"{}PlaySwiftThrowBuffTimer"{}})}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Execute,\ \textcolor{stringliteral}{"{}PlaySwiftThrowBuffTimer"{}})}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Execute,\ \textcolor{stringliteral}{"{}PlaySwiftThrowBuffTimer"{}})}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Execute,\ \textcolor{stringliteral}{"{}PlaySwiftThrowBuffTimer"{}})}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.RemoveCallBack(\textcolor{stringliteral}{"{}ResetSwiftThrowSpeed"{}});}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.Stop();}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.\mbox{\hyperlink{class_time_trigger_a0a61bf0d6306d876761d29983033d761}{RemoveCallBack}}(\textcolor{stringliteral}{"{}ResetSwiftThrowSpeed"{}});}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.\mbox{\hyperlink{class_time_trigger_a3b7e626e2bdd1723537f029dc0fb5941}{Stop}}();}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00043}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_swift_throw_a3f39550e98d4e07acdd3b1b80c5d1350}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_swift_throw_a3f39550e98d4e07acdd3b1b80c5d1350}{OnQualityChanged}}()}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.SetDuration(quality.Value);}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.\mbox{\hyperlink{class_time_trigger_a83a9f5d72aa6caa0c3f6bfb79f322b90}{SetDuration}}(\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}});}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00047}00047\ }
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.Stop();}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.\mbox{\hyperlink{class_time_trigger_a3b7e626e2bdd1723537f029dc0fb5941}{Stop}}();}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ }
@@ -60,7 +60,7 @@
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.SetDuration(quality[QualityGradeType.Normal]);}
+\DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.\mbox{\hyperlink{class_time_trigger_a83a9f5d72aa6caa0c3f6bfb79f322b90}{SetDuration}}(\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}[\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Normal]);}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00061}00061\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_swift_throw_8cs_source_l00062}00062\ \ \ \ \ \}}

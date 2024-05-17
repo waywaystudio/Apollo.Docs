@@ -1,6 +1,6 @@
 \doxysection{Input\+Action\+Entity.\+cs}
 \hypertarget{_input_action_entity_8cs_source}{}\label{_input_action_entity_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Inputs/InputActionEntity.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Inputs/InputActionEntity.cs}}
-
+\mbox{\hyperlink{_input_action_entity_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -11,96 +11,96 @@
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_inputs}{Inputs}}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00009}00009\ \{}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{using\ }Context\ =\ InputAction.CallbackContext;}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00010}\mbox{\hyperlink{namespace_inputs_a481fe2563970c2f650a7e4e948cd67b7}{00010}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_inputs_a481fe2563970c2f650a7e4e948cd67b7}{Context}}\ =\ InputAction.CallbackContext;}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00011}00011\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00012}00012\ \ \ \ \ [Serializable]}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }InputActionEntity}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00013}\mbox{\hyperlink{class_inputs_1_1_input_action_entity}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_inputs_1_1_input_action_entity}{InputActionEntity}}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00014}00014\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<string>\ bindings;}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00016}00016\ }
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ addWaitUntilTask;}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ removeWaitUntilTask;}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ InputAction\ InputAction\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<string>\ Bindings\ =>\ bindings;}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsPressed\ =>\ InputAction.IsPressed();}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00020}\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{InputAction}}\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{InputAction}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00021}\mbox{\hyperlink{class_inputs_1_1_input_action_entity_ac091f84fbc31edc48d46a34f50d1deb1}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<string>\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_ac091f84fbc31edc48d46a34f50d1deb1}{Bindings}}\ =>\ bindings;}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00022}\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a3009506e6e0f92a493d4254d949f6620}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a3009506e6e0f92a493d4254d949f6620}{IsPressed}}\ =>\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{InputAction}}.\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a3009506e6e0f92a493d4254d949f6620}{IsPressed}}();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00023}00023\ }
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ [Sirenix.OdinInspector.ShowInInspector]}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ [ShowInPlayMode]}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Table<InputSection,\ ActionTable<Context>>\ Table\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_table}{Table<InputSection,\ ActionTable<Context>}}>\ \mbox{\hyperlink{class_table}{Table}}\ \{\ \textcolor{keyword}{get};\ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ InputActionEntity(InputAction\ inputAction)}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00028}\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a09e560f28e4081f64afba78f6ce59410}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a09e560f28e4081f64afba78f6ce59410}{InputActionEntity}}(\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{InputAction}}\ inputAction)}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ InputAction\ =\ inputAction;}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{InputAction}}\ =\ inputAction;}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ bindings\ \ \ \ =\ \textcolor{keyword}{new}\ List<string>();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ Table\ =\ \textcolor{keyword}{new}\ Table<InputSection,\ ActionTable<Context>>();}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ Table.Add(InputSection.Start,\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_action_table}{ActionTable<Context>}}());}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Table.Add(InputSection.Perform,\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_action_table}{ActionTable<Context>}}());}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ Table.Add(InputSection.Cancel,\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_action_table}{ActionTable<Context>}}());}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_table}{Table}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_table}{Table<InputSection,\ ActionTable<Context>}}>();}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_table}{Table}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}.Start,\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_action_table}{ActionTable<Context>}}());}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_table}{Table}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}.Perform,\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_action_table}{ActionTable<Context>}}());}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_table}{Table}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}.Cancel,\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_action_table}{ActionTable<Context>}}());}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00037}00037\ }
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ inputAction.started\ \ \ +=\ StartInvoke;}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ inputAction.canceled\ \ +=\ CancelInvoke;}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ inputAction.performed\ +=\ PerformInvoke;}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a41255ab7cb885885169f088758bb2e30}{SetActive}}(\textcolor{keyword}{true});}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Add(InputSection\ section,\ \textcolor{keywordtype}{string}\ key,\ Action\ action)\ =>\ Add(section,\ key,\ \_\ =>\ action.Invoke());}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Add(InputSection\ section,\ \textcolor{keywordtype}{string}\ key,\ Action<Context>\ action)}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00045}\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a8f86aa7150c3e9e394ef61f503c2cb22}{00045}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a8f86aa7150c3e9e394ef61f503c2cb22}{Add}}(\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}\ section,\ \textcolor{keywordtype}{string}\ key,\ Action\ action)\ =>\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a8f86aa7150c3e9e394ef61f503c2cb22}{Add}}(section,\ key,\ \_\ =>\ action.Invoke());}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00046}\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a4189800b21a6d616314dea308c0cff87}{00046}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a4189800b21a6d616314dea308c0cff87}{Add}}(\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}\ section,\ \textcolor{keywordtype}{string}\ key,\ Action<Context>\ action)}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (InputAction.IsInProgress())}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{InputAction}}.IsInProgress())}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CancelAddWaitTask();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ addWaitUntilTask\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WaitUntilIsFinishProgress(addWaitUntilTask,\ ()\ =>\ Table[section].Add(key,\ action)).Forget();}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WaitUntilIsFinishProgress(addWaitUntilTask,\ ()\ =>\ \mbox{\hyperlink{class_table}{Table}}[section].\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a8f86aa7150c3e9e394ef61f503c2cb22}{Add}}(key,\ action)).Forget();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Table[section].Add(key,\ action);}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_table}{Table}}[section].\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(key,\ action);}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00060}00060\ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Remove(InputSection\ section,\ \textcolor{keywordtype}{string}\ key)}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00061}\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a9f4640cd99146b5a165d5e0a641ffa79}{00061}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a9f4640cd99146b5a165d5e0a641ffa79}{Remove}}(\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}\ section,\ \textcolor{keywordtype}{string}\ key)}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (InputAction.IsInProgress())}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{InputAction}}.IsInProgress())}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CancelRemoveWaitTask();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ removeWaitUntilTask\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WaitUntilIsFinishProgress(removeWaitUntilTask,\ ()\ =>\ Table[section]?.Remove(key)).Forget();}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WaitUntilIsFinishProgress(removeWaitUntilTask,\ ()\ =>\ \mbox{\hyperlink{class_table}{Table}}[section]?.\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a9f4640cd99146b5a165d5e0a641ffa79}{Remove}}(key)).Forget();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Table[section]?.Remove(key);}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_table}{Table}}[section]?.\mbox{\hyperlink{class_table_a96ae583f4f1b063c6f5802e106d9d6be}{Remove}}(key);}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetActive(\textcolor{keywordtype}{bool}\ value)}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00076}\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a41255ab7cb885885169f088758bb2e30}{00076}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a41255ab7cb885885169f088758bb2e30}{SetActive}}(\textcolor{keywordtype}{bool}\ value)}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value)}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InputAction.Enable();}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{InputAction}}.Enable();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InputAction.Disable();}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{InputAction}}.Disable();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00087}00087\ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Clear()}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00088}\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a88af11652fa6f0de76f2d11691beddf9}{00088}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity_a88af11652fa6f0de76f2d11691beddf9}{Clear}}()}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ CancelAddWaitTask();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ CancelRemoveWaitTask();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ Table.Clear();}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_table}{Table}}.\mbox{\hyperlink{class_table_aa5ceff8db5657ae3e7538277e4ed6f8d}{Clear}}();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00095}00095\ }
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00096}00096\ }
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ UniTaskVoid\ WaitUntilIsFinishProgress(CancellationTokenSource\ cts,\ Action\ callback)}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.WaitUntil(()\ =>\ !InputAction.IsInProgress(),\ cancellationToken:\ cts.Token);}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.WaitUntil(()\ =>\ !\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{InputAction}}.IsInProgress(),\ cancellationToken:\ cts.Token);}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ callback?.Invoke();}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00102}00102\ }
@@ -120,9 +120,9 @@
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ removeWaitUntilTask\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00118}00118\ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ StartInvoke(Context\ context)\ =>\ Table[InputSection.Start]?.Invoke(context);}
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ PerformInvoke(Context\ context)\ =>\ Table[InputSection.Perform]?.Invoke(context);\ }
-\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CancelInvoke(Context\ context)\ =>\ Table[InputSection.Cancel]?.Invoke(context);\ }
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ StartInvoke(\mbox{\hyperlink{namespace_inputs_a481fe2563970c2f650a7e4e948cd67b7}{Context}}\ context)\ =>\ \mbox{\hyperlink{class_table}{Table}}[\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}.Start]?.Invoke(context);}
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ PerformInvoke(\mbox{\hyperlink{namespace_inputs_a481fe2563970c2f650a7e4e948cd67b7}{Context}}\ context)\ =>\ \mbox{\hyperlink{class_table}{Table}}[\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}.Perform]?.Invoke(context);\ }
+\DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CancelInvoke(\mbox{\hyperlink{namespace_inputs_a481fe2563970c2f650a7e4e948cd67b7}{Context}}\ context)\ =>\ \mbox{\hyperlink{class_table}{Table}}[\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}.Cancel]?.Invoke(context);\ }
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00122}00122\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_action_entity_8cs_source_l00123}00123\ \}}
 

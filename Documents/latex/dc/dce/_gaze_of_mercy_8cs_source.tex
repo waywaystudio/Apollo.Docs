@@ -1,25 +1,25 @@
 \doxysection{Gaze\+Of\+Mercy.\+cs}
 \hypertarget{_gaze_of_mercy_8cs_source}{}\label{_gaze_of_mercy_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Summons/Buddas/GazeOfMercy.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Summons/Buddas/GazeOfMercy.cs}}
-
+\mbox{\hyperlink{_gaze_of_mercy_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players}{Common.Characters.NonPlayers}};}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00004}\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players_1_1_summons}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players_1_1_summons_1_1_buddas}{Common.Skills.NonPlayers.Summons.Buddas}}}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }GazeOfMercy\ :\ NonPlayerSkillBehaviour}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_summons_1_1_buddas_1_1_gaze_of_mercy}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_summons_1_1_buddas_1_1_gaze_of_mercy}{GazeOfMercy}}\ :\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour}{NonPlayerSkillBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00007}00007\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ Character\ SkillTarget}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_summons_1_1_buddas_1_1_gaze_of_mercy_a4eeccc26ce39b86b57f4a1089ad8274b}{00011}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_summons_1_1_buddas_1_1_gaze_of_mercy_a4eeccc26ce39b86b57f4a1089ad8274b}{SkillTarget}}}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Character\ is\ not\ NonPlayer\ nonPlayer)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!detectProperty.TargetLayer.TryToDivideIndexList(LayerBuffer,\ \textcolor{keyword}{true}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_character}{Character}}\ is\ not\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player}{NonPlayer}}\ nonPlayer)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_abfc676fbdcb1ef6d4aaccbcd57147be2}{detectProperty}}.\mbox{\hyperlink{class_common_1_1_detect_property_ad6958310e95b20bdbab01c47404c19a4}{TargetLayer}}.TryToDivideIndexList(\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ab6d5ae70d657429fcb5618554350e7ed}{LayerBuffer}},\ \textcolor{keyword}{true}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TargetList.Clear();}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{TargetList}}.Clear();}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 복수의\ Layer를\ 주요\ 스킬\ 대상으로\ 삼는\ 경우에\ 처리하기\ 위한\ 로직.}}
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ layer\ \textcolor{keywordflow}{in}\ LayerBuffer)}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ layer\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ab6d5ae70d657429fcb5618554350e7ed}{LayerBuffer}})}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (layer\ ==\ -\/1)\ \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -28,23 +28,23 @@
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ target\ \textcolor{keywordflow}{in}\ searchList)}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (target.IsNullOrDestroyed())\ \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (target.TryGetComponent(out\ Character\ targetCharacter)\ \&\&\ targetCharacter.IsAlive)}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (target.TryGetComponent(out\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ targetCharacter)\ \&\&\ targetCharacter.IsAlive)}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ characterTransform\ =\ Character.transform;}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ characterTransform\ =\ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}};}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ forwardDirection\ =\ characterTransform.forward;}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ toTargetDirection\ =\ (targetCharacter.transform.position\ -\/\ characterTransform.position).normalized;}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Vector3.Angle(forwardDirection,\ toTargetDirection)\ <\ 90)}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TargetList.Add(targetCharacter);}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{TargetList}}.Add(targetCharacter);}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TargetList.IsNullOrEmpty())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{TargetList}}.IsNullOrEmpty())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TargetList.Sort((x,\ y)\ =>}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{TargetList}}.Sort((x,\ y)\ =>}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ position\ =\ transform.position;}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ xDistance\ =\ Vector3.Distance(position,\ x.gameObject.transform.position);}
@@ -53,7 +53,7 @@
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ xDistance.CompareTo(yDistance);}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00054}00054\ }
-\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TargetList.FirstOrDefault();}
+\DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{TargetList}}.FirstOrDefault();}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_gaze_of_mercy_8cs_source_l00058}00058\ \ \ \ \ \}}

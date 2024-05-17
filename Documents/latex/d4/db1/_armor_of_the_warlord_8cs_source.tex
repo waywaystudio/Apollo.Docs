@@ -1,6 +1,6 @@
 \doxysection{Armor\+Of\+The\+Warlord.\+cs}
 \hypertarget{_armor_of_the_warlord_8cs_source}{}\label{_armor_of_the_warlord_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SplitTrident/ArmorOfTheWarlord.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SplitTrident/ArmorOfTheWarlord.cs}}
-
+\mbox{\hyperlink{_armor_of_the_warlord_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_split_tridents}{Common.Skills.SplitTridents}};}
@@ -9,50 +9,50 @@
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00005}\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_split_trident}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_split_trident}{Common.Masteries.SplitTrident}}}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00006}00006\ \{}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ SPECIAL\ 시전후\ 3초간\ 장군신의\ 갑옷을\ 입게되며\ [12]방어\ 획득}}
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ArmorOfTheWarlord\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_armor_of_the_warlord}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_armor_of_the_warlord}{ArmorOfTheWarlord}}\ :\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery}{Mastery}}}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00009}00009\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ buffTimer;}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ StatEntity\ armorEntity;}
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Narakmoon\ narakmoon;}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}\ armorEntity;}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_narakmoon}{Narakmoon}}\ narakmoon;}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_armor_of_the_warlord_a052c2bc14f635739873736e9c87c54f8}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_armor_of_the_warlord_a052c2bc14f635739873736e9c87c54f8}{Injection}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ armorEntity\ =\ \textcolor{keyword}{new}\ StatEntity(StatType.DamageDecreaseRate,\ \textcolor{stringliteral}{"{}ArmorOfTheWarLoad.DamageDecreaseRate"{}},\ quality.Value);}
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ narakmoon\ \ \ =\ dred.Skills.Narakmoon;}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ armorEntity\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}(\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.DamageDecreaseRate,\ \textcolor{stringliteral}{"{}ArmorOfTheWarLoad.DamageDecreaseRate"{}},\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}});}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ narakmoon\ \ \ =\ dred.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_a2625c9d5199e0e18ddbb0c7ad9ed943b}{Skills}}.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_skills_aa92bc6d49c574eb63e476218f46e1d35}{Narakmoon}};}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00019}00019\ }
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ narakmoon.Sections}
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Execute,\ \textcolor{stringliteral}{"{}PlayBuffTimer"{}},\ buffTimer.Play)\ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Execute,\ \textcolor{stringliteral}{"{}ArmorOfTheWarlord"{}},\ ()\ =>\ dred.StatTable.Add(armorEntity))}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Execute,\ \textcolor{stringliteral}{"{}PlayBuffTimer"{}},\ buffTimer.\mbox{\hyperlink{class_time_trigger_a1cab158a91639ac84536551518479fa9}{Play}})\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Execute,\ \textcolor{stringliteral}{"{}ArmorOfTheWarlord"{}},\ ()\ =>\ dred.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}.\mbox{\hyperlink{class_common_1_1_stat_table_ab19cc9700d6eda177ac7f853e7935c55}{Add}}(armorEntity))}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.AddCallBack(\textcolor{stringliteral}{"{}RemoveArmorEntity"{}},\ ()\ =>}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.\mbox{\hyperlink{class_time_trigger_a8d5526e17f82d5108dbd8a7e7bc6b47f}{AddCallBack}}(\textcolor{stringliteral}{"{}RemoveArmorEntity"{}},\ ()\ =>}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dred.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dred.StatTable.Remove(armorEntity);}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dred.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}.\mbox{\hyperlink{class_common_1_1_stat_table_a133158ebbb1719b611e827ebfffafa33}{Remove}}(armorEntity);}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00033}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_armor_of_the_warlord_a50d3821a55ede02f10477bb7b188b2f6}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_armor_of_the_warlord_a50d3821a55ede02f10477bb7b188b2f6}{Abolition}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ narakmoon.Sections}
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Execute,\ \textcolor{stringliteral}{"{}PlayBuffTimer"{}})\ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Execute,\ \textcolor{stringliteral}{"{}ArmorOfTheWarlord"{}})}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Execute,\ \textcolor{stringliteral}{"{}PlayBuffTimer"{}})\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Execute,\ \textcolor{stringliteral}{"{}ArmorOfTheWarlord"{}})}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.Stop();}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.\mbox{\hyperlink{class_time_trigger_a3b7e626e2bdd1723537f029dc0fb5941}{Stop}}();}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00043}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_armor_of_the_warlord_a5a0a130d386a200087def2b618913dde}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_armor_of_the_warlord_a5a0a130d386a200087def2b618913dde}{OnQualityChanged}}()}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ armorEntity.Value\ =\ quality.Value;}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ armorEntity.Value\ =\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}};}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00047}00047\ }
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00048}00048\ }
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.Dispose();}
+\DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ buffTimer.\mbox{\hyperlink{class_time_trigger_aada6410a247d3ab1ba7d26e90821b016}{Dispose}}();}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00053}00053\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_armor_of_the_warlord_8cs_source_l00054}00054\ \}}

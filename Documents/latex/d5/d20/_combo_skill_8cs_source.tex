@@ -1,79 +1,79 @@
 \doxysection{Combo\+Skill.\+cs}
 \hypertarget{_combo_skill_8cs_source}{}\label{_combo_skill_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/ComboSkill.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/ComboSkill.cs}}
-
+\mbox{\hyperlink{_combo_skill_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills}{Common.Skills}}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ComboSkill\ :\ Skill}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill}{ComboSkill}}\ :\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill}{Skill}}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00007}00007\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ DataIndex\ skillCode;}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ intervalTolerance;}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ List<SkillBehaviour>\ comboList;}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_af3b7378b1956e283278cbfa649cfa012}{00008}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_af3b7378b1956e283278cbfa649cfa012}{skillCode}};}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a8c1b0f56db932ec504ee6d7a64614d00}{00009}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a8c1b0f56db932ec504ee6d7a64614d00}{intervalTolerance}};}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a6a8aba420e8d7bde56a20f72e8526810}{00010}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ List<SkillBehaviour>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a6a8aba420e8d7bde56a20f72e8526810}{comboList}};}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ SkillBehaviour\ mainSkill;}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{SkillBehaviour}}\ mainSkill;}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ currentComboIndex;}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ IntervalTolerance\ =>\ intervalTolerance;}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ List<SkillBehaviour>\ BehaviourList\ =>\ comboList;}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ DataIndex\ DataIndex\ =>\ skillCode;}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ SkillBehaviour\ MainBehaviour}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_aeded61dc71a5e6cfe14de317cadb2957}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_aeded61dc71a5e6cfe14de317cadb2957}{IntervalTolerance}}\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a8c1b0f56db932ec504ee6d7a64614d00}{intervalTolerance}};}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_ae3cbfefb944870a6a617828a995ed4f6}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ List<SkillBehaviour>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_ae3cbfefb944870a6a617828a995ed4f6}{BehaviourList}}\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a6a8aba420e8d7bde56a20f72e8526810}{comboList}};}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_af2b164bc170385f4fa53e7b4c6847140}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_af3b7378b1956e283278cbfa649cfa012}{skillCode}};}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00018}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a76f31bd51af582f4999a2c9e70168a6f}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{SkillBehaviour}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a76f31bd51af582f4999a2c9e70168a6f}{MainBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mainSkill.IsNullOrDestroyed())\ currentComboIndex\ =\ 0;}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ comboList[currentComboIndex];}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a6a8aba420e8d7bde56a20f72e8526810}{comboList}}[currentComboIndex];}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(Character\ character)}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00029}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_afe9cb8f8ce9e65259b9446aa82aa4168}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_afe9cb8f8ce9e65259b9446aa82aa4168}{Initialize}}(\mbox{\hyperlink{class_common_1_1_character}{Character}}\ character)}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ intervalTolerance.AddCallBack(\textcolor{stringliteral}{"{}BreakCombo"{}},\ BreakCombo);}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a8c1b0f56db932ec504ee6d7a64614d00}{intervalTolerance}}.\mbox{\hyperlink{class_time_trigger_a8d5526e17f82d5108dbd8a7e7bc6b47f}{AddCallBack}}(\textcolor{stringliteral}{"{}BreakCombo"{}},\ BreakCombo);}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ comboList.ForEach(skillBehaviour\ =>}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a6a8aba420e8d7bde56a20f72e8526810}{comboList}}.ForEach(skillBehaviour\ =>}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!skillBehaviour.TryGetComponent(out\ IComboSource\ source))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!skillBehaviour.TryGetComponent(out\ \mbox{\hyperlink{interface_common_1_1_i_combo_source}{IComboSource}}\ source))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ source.ComboTolerance.SetToleranceTrigger(intervalTolerance);}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ source.ComboTolerance.SetToleranceTrigger(\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a8c1b0f56db932ec504ee6d7a64614d00}{intervalTolerance}});}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ skillBehaviour.Initialize(character);}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ skillBehaviour.Sections}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Order\ 1\ */}.Add(Section.Active,\ \textcolor{stringliteral}{"{}PauseIntervalTolerance"{}},\ intervalTolerance.Pause)}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Order\ 2\ */}.Add(Section.Active,\ \textcolor{stringliteral}{"{}SetNextSkill"{}},\ SetNextSkill)}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Order\ 1\ */}.Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}PauseIntervalTolerance"{}},\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a8c1b0f56db932ec504ee6d7a64614d00}{intervalTolerance}}.\mbox{\hyperlink{class_time_trigger_ace361222666f6482ff7eff47bc986904}{Pause}})}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Order\ 2\ */}.Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}SetNextSkill"{}},\ SetNextSkill)}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00047}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a4c851afd01c45a6ea7bd5ef671f06487}{00047}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a4c851afd01c45a6ea7bd5ef671f06487}{Active}}()}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MainBehaviour.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!MainBehaviour.Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a76f31bd51af582f4999a2c9e70168a6f}{MainBehaviour}}.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a76f31bd51af582f4999a2c9e70168a6f}{MainBehaviour}}.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ MainBehaviour.Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a76f31bd51af582f4999a2c9e70168a6f}{MainBehaviour}}.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00054}00054\ }
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Cancel()}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00055}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a3bff2a6e86b510bd81ea79a3e0d89f2d}{00055}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a3bff2a6e86b510bd81ea79a3e0d89f2d}{Cancel}}()}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (MainBehaviour\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a76f31bd51af582f4999a2c9e70168a6f}{MainBehaviour}}\ is\ not\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MainBehaviour.Cancel();}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a76f31bd51af582f4999a2c9e70168a6f}{MainBehaviour}}.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab2dd38c315aa122e833ab81c279191ea}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00062}00062\ }
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Resign()}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00063}\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a6bbc83a43002814a659b7bfe75de75fc}{00063}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a6bbc83a43002814a659b7bfe75de75fc}{Resign}}()}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ comboList.ForEach(action\ =>}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a6a8aba420e8d7bde56a20f72e8526810}{comboList}}.ForEach(action\ =>}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!action.TryGetComponent(out\ IComboSource\ source))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!action.TryGetComponent(out\ \mbox{\hyperlink{interface_common_1_1_i_combo_source}{IComboSource}}\ source))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ source.ComboTolerance.Resign();}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ action.Sections}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Active,\ \textcolor{stringliteral}{"{}PauseIntervalTolerance"{}})}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Active,\ \textcolor{stringliteral}{"{}SetNextSkill"{}})}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}PauseIntervalTolerance"{}})}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}SetNextSkill"{}})}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
@@ -81,18 +81,18 @@
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SetNextSkill()}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ currentComboIndex\ =\ currentComboIndex\ ==\ comboList.Count\ -\/\ 1\ ?\ 0\ :\ currentComboIndex\ +\ 1;}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ mainSkill\ =\ comboList[currentComboIndex];}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ mainSkill\ =\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a6a8aba420e8d7bde56a20f72e8526810}{comboList}}[currentComboIndex];}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00082}00082\ }
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ BreakCombo()}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ currentComboIndex\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ mainSkill\ \ \ \ \ \ \ \ \ =\ comboList[currentComboIndex];}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ mainSkill\ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a6a8aba420e8d7bde56a20f72e8526810}{comboList}}[currentComboIndex];}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00088}00088\ }
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ intervalTolerance.Dispose();}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a8c1b0f56db932ec504ee6d7a64614d00}{intervalTolerance}}.\mbox{\hyperlink{class_time_trigger_aada6410a247d3ab1ba7d26e90821b016}{Dispose}}();}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00093}00093\ }
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00094}00094\ }
@@ -101,7 +101,7 @@
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ GetComponentsInChildren(comboList);}
+\DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ GetComponentsInChildren(\mbox{\hyperlink{class_common_1_1_skills_1_1_combo_skill_a6a8aba420e8d7bde56a20f72e8526810}{comboList}});}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00102}00102\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_combo_skill_8cs_source_l00103}00103\ \ \ \ \ \}}

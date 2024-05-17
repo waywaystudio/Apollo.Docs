@@ -1,30 +1,30 @@
 \doxysection{Shin\+Kendo\+Behaviour.\+cs}
 \hypertarget{_shin_kendo_behaviour_8cs_source}{}\label{_shin_kendo_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/Blades/ShinKendoBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/Blades/ShinKendoBehaviour.cs}}
-
+\mbox{\hyperlink{_shin_kendo_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_modules}{Common.Skills.Modules}};}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_blades}{Common.Skills.Blades}}}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ShinKendoBehaviour\ :\ SkillBehaviour,\ IComboSource}
+\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_skills_1_1_blades_1_1_shin_kendo_behaviour}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_blades_1_1_shin_kendo_behaviour}{ShinKendoBehaviour}}\ :\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{SkillBehaviour}},\ \mbox{\hyperlink{interface_common_1_1_i_combo_source}{IComboSource}}}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00007}00007\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ UnitTransferModel\ mover;}
-\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ AutoAimModel\ autoAimModel;}
-\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ComboModel\ comboTolerance;}
-\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ RotationModel\ rotationModel;}
+\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_unit_transfer_model}{UnitTransferModel}}\ mover;}
+\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_auto_aim_model}{AutoAimModel}}\ autoAimModel;}
+\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model}{ComboModel}}\ comboTolerance;}
+\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_rotation_model}{RotationModel}}\ rotationModel;}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ComboModel\ ComboTolerance\ =>\ comboTolerance;}
+\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_skills_1_1_blades_1_1_shin_kendo_behaviour_a364cc1fcc4546930979465dd9f7fd2c4}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model}{ComboModel}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_blades_1_1_shin_kendo_behaviour_a364cc1fcc4546930979465dd9f7fd2c4}{ComboTolerance}}\ =>\ comboTolerance;}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_skills_1_1_blades_1_1_shin_kendo_behaviour_aba4502a0a03f69305bd647ed98d93a19}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_blades_1_1_shin_kendo_behaviour_aba4502a0a03f69305bd647ed98d93a19}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_behaver}{IBehaver}}\ behaver)}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ autoAimModel.Initialize(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ mover.Initialize(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ comboTolerance.Initialize(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ rotationModel.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ autoAimModel.\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_auto_aim_model_a65986112420b58ffac57e2a3a35cdc3c}{Initialize}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ mover.\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_unit_transfer_model_a0ebc5bfd46903d6eb1428c9afa898d75}{Initialize}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ comboTolerance.\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_aa3522de2d73c3cf6215bffda759b9562}{Initialize}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ rotationModel.\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_rotation_model_a6d65134c357e98f4fbc117269fc26b32}{Initialize}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00025}00025\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_shin_kendo_behaviour_8cs_source_l00026}00026\ \}}

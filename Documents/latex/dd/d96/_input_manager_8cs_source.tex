@@ -1,6 +1,6 @@
 \doxysection{Input\+Manager.\+cs}
 \hypertarget{_input_manager_8cs_source}{}\label{_input_manager_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/InputManager.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/InputManager.cs}}
-
+\mbox{\hyperlink{_input_manager_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_inputs}{Inputs}};}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
@@ -8,25 +8,25 @@
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine.InputSystem;}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine.UI;}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00007}00007\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }InputManager\ :\ ScriptableObject,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00007}\mbox{\hyperlink{class_input_manager}{00007}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_manager}{InputManager}}\ :\ ScriptableObject,\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00008}00008\ \{}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00009}00009\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ InputActionAsset\ actionAsset;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00010}00010\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ InputSpriteData\ spriteData;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00011}00011\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Table<ActionType,\ InputActionEntity>\ actionTable;}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00010}00010\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_inputs_1_1_input_sprite_data}{InputSpriteData}}\ spriteData;}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00011}00011\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_table}{Table<ActionType,\ InputActionEntity>}}\ actionTable;}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ PlayerInputMap\ =\ \textcolor{stringliteral}{"{}PlayerControls"{}};}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{public}\ InputActionEntity\ \textcolor{keyword}{this}[ActionType\ type]\ =>\ \mbox{\hyperlink{class_action_table}{ActionTable}}[type];}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}\ InputDirector\ Director\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00015}\mbox{\hyperlink{class_input_manager_a990f48f00a1549c38f7b876217deb4e0}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity}{InputActionEntity}}\ \textcolor{keyword}{this}[\mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{ActionType}}\ type]\ =>\ \mbox{\hyperlink{class_action_table}{ActionTable}}[type];}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00016}\mbox{\hyperlink{class_input_manager_a0e027c3046be978c7f9017c66195b0fb}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_inputs_1_1_input_director}{InputDirector}}\ \mbox{\hyperlink{class_input_manager_a0e027c3046be978c7f9017c66195b0fb}{Director}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00017}00017\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsMouseOnUI}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00018}\mbox{\hyperlink{class_input_manager_adbf330bf48542c5a47e0f308d1b7927a}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_adbf330bf48542c5a47e0f308d1b7927a}{IsMouseOnUI}}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00019}00019\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Director\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_a0e027c3046be978c7f9017c66195b0fb}{Director}}\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ var\ pointerEventData\ =\ Director.PointerEventData;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ var\ rayCastResultsList\ =\ Director.RayCastResultsList;}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ var\ pointerEventData\ =\ \mbox{\hyperlink{class_input_manager_a0e027c3046be978c7f9017c66195b0fb}{Director}}.\mbox{\hyperlink{class_inputs_1_1_input_director_a5fd17a1bf95a005c21da71311e7a87da}{PointerEventData}};}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ var\ rayCastResultsList\ =\ \mbox{\hyperlink{class_input_manager_a0e027c3046be978c7f9017c66195b0fb}{Director}}.\mbox{\hyperlink{class_inputs_1_1_input_director_a014f1bfd609db8b26bdc96e4c4fad35f}{RayCastResultsList}};}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ pointerEventData.position\ =\ Mouse.current.position.ReadValue();}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ rayCastResultsList.Clear();}
@@ -45,44 +45,44 @@
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00042}00042\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{private}\ Table<ActionType,\ InputActionEntity>\ \mbox{\hyperlink{class_action_table}{ActionTable}}\ =>\ actionTable;}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_table}{Table<ActionType,\ InputActionEntity>}}\ \mbox{\hyperlink{class_action_table}{ActionTable}}\ =>\ actionTable;}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00045}00045\ \ \ \ \ \textcolor{keyword}{private}\ InputActionMap\ ActionMap\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00047}00047\ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00048}00048\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00048}\mbox{\hyperlink{class_input_manager_a102ac93b5fc077f19151cb3360d43870}{00048}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_manager_a102ac93b5fc077f19151cb3360d43870}{Initialize}}()}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00049}00049\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ actionTable\ =\ \textcolor{keyword}{new}\ Table<ActionType,\ InputActionEntity>();}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ actionTable\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_table}{Table<ActionType,\ InputActionEntity>}}();}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action_table}{ActionTable}}.Clear();}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action_table}{ActionTable}}.\mbox{\hyperlink{class_action_table_core_a60d15f334a5b2b0a0ea811ff1e7304b9}{Clear}}();}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ ActionMap\ =\ actionAsset.FindActionMap(PlayerInputMap);}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ ActionMap?.actions.ForEach(inputAction\ =>}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ var\ inputKey\ =\ inputAction.name;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ var\ inputActionTypeName\ =\ inputKey.ToEnum<ActionType>();}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ var\ inputActionTypeName\ =\ inputKey.ToEnum<\mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{ActionType}}>();}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (inputActionTypeName\ is\ \textcolor{keywordflow}{default}(ActionType))}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (inputActionTypeName\ is\ \textcolor{keywordflow}{default}(\mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{ActionType}}))}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}Not\ Exist\ Type.\ input:\{inputKey\}"{}});}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action_table}{ActionTable}}.Add(inputActionTypeName,\ \textcolor{keyword}{new}\ InputActionEntity(inputAction));}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action_table}{ActionTable}}.\mbox{\hyperlink{class_action_table_a84455f1a9d923913588f1d0bd00b695b}{Add}}(inputActionTypeName,\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_inputs_1_1_input_action_entity}{InputActionEntity}}(inputAction));}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bindings}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ inputAction.bindings.ForEach(bind\ =>}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!bind.path.StartsWith(\textcolor{stringliteral}{"{}<"{}}))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action_table}{ActionTable}}[inputActionTypeName].Bindings.Add(bind.path);}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action_table}{ActionTable}}[inputActionTypeName].Bindings.\mbox{\hyperlink{class_action_table_a84455f1a9d923913588f1d0bd00b695b}{Add}}(bind.path);}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00074}00074\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00076}00076\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsPress(ActionType\ type)}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00076}\mbox{\hyperlink{class_input_manager_a53b5b417ef55b4556dd0e0a8ba84e079}{00076}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a53b5b417ef55b4556dd0e0a8ba84e079}{IsPress}}(\mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{ActionType}}\ type)}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00077}00077\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this}[type]\ is\ not\ \textcolor{keyword}{null}\ \&\&\ \textcolor{keyword}{this}[type].IsPressed;}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00079}00079\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00081}00081\ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ GetMousePosition(Camera\ camera,\ \textcolor{keywordtype}{float}\ groundHeight\ =\ 0f)}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00081}\mbox{\hyperlink{class_input_manager_a7351ff23af6f0a153fcff5daf2b228db}{00081}}\ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_input_manager_a7351ff23af6f0a153fcff5daf2b228db}{GetMousePosition}}(Camera\ camera,\ \textcolor{keywordtype}{float}\ groundHeight\ =\ 0f)}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00082}00082\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ var\ mousePosition\ =\ Vector3.negativeInfinity;}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ var\ plane\ =\ \textcolor{keyword}{new}\ Plane(Vector3.up,\ groundHeight);}
@@ -101,28 +101,28 @@
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00097}00097\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00098}00098\ }
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00099}00099\ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00106}00106\ \ \ \ \ \textcolor{keyword}{public}\ Sprite\ GetActionSprite(InputActionEntity\ actionEntity,\ \textcolor{keywordtype}{string}\ subActionName\ =\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00106}\mbox{\hyperlink{class_input_manager_a6f4467b891381f7cbfb4f83583c376b4}{00106}}\ \ \ \ \ \textcolor{keyword}{public}\ Sprite\ \mbox{\hyperlink{class_input_manager_a6f4467b891381f7cbfb4f83583c376b4}{GetActionSprite}}(\mbox{\hyperlink{class_inputs_1_1_input_action_entity}{InputActionEntity}}\ actionEntity,\ \textcolor{keywordtype}{string}\ subActionName\ =\ \textcolor{stringliteral}{"{}"{}})}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00107}00107\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ var\ path\ =\ GetBindingPath(actionEntity,\ subActionName);}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ spriteData[path];}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00111}00111\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00112}00112\ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00113}00113\ \ \ \ \ \textcolor{keyword}{public}\ Sprite\ GetActionSprite(ActionType\ type,\ \textcolor{keywordtype}{string}\ subActionName\ =\ \textcolor{stringliteral}{"{}"{}})\ =>\ GetActionSprite(actionTable[type],\ subActionName);}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00113}\mbox{\hyperlink{class_input_manager_a10c7cb4ddb50632c8302e73025914434}{00113}}\ \ \ \ \ \textcolor{keyword}{public}\ Sprite\ \mbox{\hyperlink{class_input_manager_a10c7cb4ddb50632c8302e73025914434}{GetActionSprite}}(\mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{ActionType}}\ type,\ \textcolor{keywordtype}{string}\ subActionName\ =\ \textcolor{stringliteral}{"{}"{}})\ =>\ \mbox{\hyperlink{class_input_manager_a10c7cb4ddb50632c8302e73025914434}{GetActionSprite}}(actionTable[type],\ subActionName);}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00114}00114\ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00115}00115\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Dispose()}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00115}\mbox{\hyperlink{class_input_manager_ac78b830475c32f01ad3d472d00be397b}{00115}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_manager_ac78b830475c32f01ad3d472d00be397b}{Dispose}}()}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00116}00116\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action_table}{ActionTable}}.ValueList.ForEach(action\ =>\ action.Clear());}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00118}00118\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00120}00120\ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00126}00126\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ GetBindingPath(InputActionEntity\ actionEntity,\ \textcolor{keywordtype}{string}\ subActionName\ =\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00126}00126\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ GetBindingPath(\mbox{\hyperlink{class_inputs_1_1_input_action_entity}{InputActionEntity}}\ actionEntity,\ \textcolor{keywordtype}{string}\ subActionName\ =\ \textcolor{stringliteral}{"{}"{}})}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00127}00127\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ var\ index\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ var\ inputActionName\ =\ actionEntity.InputAction.name;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ var\ inputBindings\ =\ actionEntity.Bindings;}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ var\ inputActionName\ =\ actionEntity.\mbox{\hyperlink{class_inputs_1_1_input_action_entity_a0a1e9c9e030b566eb1f6ef412adb3594}{InputAction}}.name;}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ var\ inputBindings\ =\ actionEntity.\mbox{\hyperlink{class_inputs_1_1_input_action_entity_ac091f84fbc31edc48d46a34f50d1deb1}{Bindings}};}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Director\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_a0e027c3046be978c7f9017c66195b0fb}{Director}}\ is\ not\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ index\ =\ Director.CurrentScheme\ ==\ \textcolor{stringliteral}{"{}KeyboardMouse"{}}\ ?\ 0\ :\ 1;}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \}}
@@ -153,7 +153,7 @@
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00160}00160\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00161}00161\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00162}00162\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ Initialize();}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_a102ac93b5fc077f19151cb3360d43870}{Initialize}}();}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00164}00164\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00165}00165\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00166}00166\ \}}

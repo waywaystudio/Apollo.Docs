@@ -1,6 +1,6 @@
 \doxysection{Summon\+Execution.\+cs}
 \hypertarget{_summon_execution_8cs_source}{}\label{_summon_execution_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Kimmihohs/SummonExecution.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Kimmihohs/SummonExecution.cs}}
-
+\mbox{\hyperlink{_summon_execution_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players_1_1_fiends}{Common.Characters.NonPlayers.Fiends}};}
@@ -11,24 +11,24 @@
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players_1_1_kimmihohs}{Common.Skills.NonPlayers.Kimmihohs}}}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00009}00009\ \{}
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SummonExecution\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_summon_execution}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_summon_execution}{SummonExecution}}\ :\ MonoBehaviour}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00011}00011\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ParticlePool\ spawnEffectPool;}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_particles_1_1_particle_pool}{ParticlePool}}\ spawnEffectPool;}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<WaveEntry>\ spawnEntityList;}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ serialInterval\ =\ 0.2f;}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ TotalFiendsCount\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ IsSpawnEnd\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<Vector3>\ SpawnPositionList\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ WaveEntry\ CurrentWave\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Character\ MainCharacter\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_spawns_1_1_wave_entry}{WaveEntry}}\ CurrentWave\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ MainCharacter\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00021}00021\ }
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(SummonFiends\ summonFiendsSkill)}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00023}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_summon_execution_afae1a041c34937fbee6fae1762d5a7dd}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_summon_execution_afae1a041c34937fbee6fae1762d5a7dd}{Initialize}}(\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_summon_fiends}{SummonFiends}}\ summonFiendsSkill)}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEffectPool.Initialize(component\ =>\ component.Pool\ =\ spawnEffectPool,\ transform);}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ MainCharacter\ \ \ \ =\ summonFiendsSkill.Character;}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ MainCharacter\ \ \ \ =\ summonFiendsSkill.\mbox{\hyperlink{class_common_1_1_characters_1_1_character_behaviour_a3ff80ed89051b1e932fc3eb9ed5827a5}{Character}};}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ CurrentWave\ =\ spawnEntityList.FirstOrDefault();}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEntityList.ForEach(entity\ =>}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -46,8 +46,8 @@
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00043}00043\ }
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ summonFiendsSkill.Sections}
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}SerialSpawnFiend"{}},\ ()\ =>\ SerialSpawnTask().Forget())}
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}ResetSummonExecution"{}},\ ResetSummonExecution)}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}SerialSpawnFiend"{}},\ ()\ =>\ SerialSpawnTask().Forget())}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}ResetSummonExecution"{}},\ ResetSummonExecution)}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ }
@@ -57,10 +57,10 @@
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsSpawnEnd\ ||\ TotalFiendsCount\ ==\ 0)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ var\ randomPosition\ =\ SpawnPositionList.RandomPick();}
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ var\ fiendPrefab\ =\ Database.FiendPrefabs[CurrentWave.FiendCode];}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ var\ fiendPrefab\ =\ \mbox{\hyperlink{class_database}{Database}}.\mbox{\hyperlink{class_database_a6dd9f09c131df184e9eab1502c322cb7}{FiendPrefabs}}[CurrentWave.\mbox{\hyperlink{class_common_1_1_characters_1_1_spawns_1_1_wave_entry_ab72a4b12d9ba3175f937fa93262aa06f}{FiendCode}}];}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spawnParticle\ =\ spawnEffectPool.Get();}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ CurrentWave.RemainCount-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ CurrentWave.\mbox{\hyperlink{class_common_1_1_characters_1_1_spawns_1_1_wave_entry_aa4379749d18a0c7cbe2030cf01785f3e}{RemainCount}}-\/-\/;}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ spawnParticle.transform.SetPositionAndRotation(randomPosition,\ spawnParticle.transform.rotation);}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ spawnParticle.transform.SetParent(\textcolor{keyword}{null});}
@@ -69,7 +69,7 @@
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Delay(500,\ \textcolor{keyword}{false},\ PlayerLoopTiming.FixedUpdate,\ spawnParticle.GetCancellationTokenOnDestroy());}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00066}00066\ }
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ var\ fiendObject\ =\ Instantiate(fiendPrefab,\ randomPosition,\ Quaternion.identity,\ \textcolor{keyword}{null});}
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fiendObject.TryGetComponent(out\ Fiend\ fiend))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fiendObject.TryGetComponent(out\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend}{Fiend}}\ fiend))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ fiend.Initialize();}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ SetCurrentWave();}
@@ -90,7 +90,7 @@
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SetCurrentWave()}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CurrentWave.RemainCount\ >\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CurrentWave.\mbox{\hyperlink{class_common_1_1_characters_1_1_spawns_1_1_wave_entry_aa4379749d18a0c7cbe2030cf01785f3e}{RemainCount}}\ >\ 0)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ It\ was\ Last\ Fiend}}
 \DoxyCodeLine{\Hypertarget{_summon_execution_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CurrentWave\ ==\ spawnEntityList.LastOrDefault())}

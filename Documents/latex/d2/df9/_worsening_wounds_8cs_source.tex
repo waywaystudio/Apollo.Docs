@@ -1,6 +1,6 @@
 \doxysection{Worsening\+Wounds.\+cs}
 \hypertarget{_worsening_wounds_8cs_source}{}\label{_worsening_wounds_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/Blade/WorseningWounds.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/Blade/WorseningWounds.cs}}
-
+\mbox{\hyperlink{_worsening_wounds_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_status_effects}{Common.StatusEffects}};}
@@ -10,25 +10,25 @@
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_blade}{Common.Masteries.Blade}}}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00007}00007\ \{}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//\ BLEED의\ 지속시간이\ 2초\ 늘어난다.}}
-\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }WorseningWounds\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_masteries_1_1_blade_1_1_worsening_wounds}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_blade_1_1_worsening_wounds}{WorseningWounds}}\ :\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery}{Mastery}}}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00010}00010\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ StatusEffectSpawnEvent\ statusEffectSpawnEvent;}
-\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DataIndex\ bleedStatusEffectCode\ =\ DataIndex.BleedStatusEffect;}
+\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_status_effects_1_1_status_effect_spawn_event}{StatusEffectSpawnEvent}}\ statusEffectSpawnEvent;}
+\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ bleedStatusEffectCode\ =\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.BleedStatusEffect;}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00013}00013\ }
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ originalDuration;}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_masteries_1_1_blade_1_1_worsening_wounds_a819d47c43300cd60f1c9b4f506db7d5b}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_blade_1_1_worsening_wounds_a819d47c43300cd60f1c9b4f506db7d5b}{Injection}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ statusEffectSpawnEvent.Add(bleedStatusEffectCode,\ \textcolor{stringliteral}{"{}ExtendBleedDuration"{}},\ ExtendBleedDuration);}
+\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ statusEffectSpawnEvent.\mbox{\hyperlink{class_common_1_1_spawn_event_table_ac8c1e472bcbad1c5493cff1ec02b1a98}{Add}}(bleedStatusEffectCode,\ \textcolor{stringliteral}{"{}ExtendBleedDuration"{}},\ ExtendBleedDuration);}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00022}\mbox{\hyperlink{class_common_1_1_masteries_1_1_blade_1_1_worsening_wounds_a318972a6e81d16c53e2e7a7cfd287ede}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_blade_1_1_worsening_wounds_a318972a6e81d16c53e2e7a7cfd287ede}{Abolition}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ statusEffectSpawnEvent.Remove(bleedStatusEffectCode,\ \textcolor{stringliteral}{"{}ExtendBleedDuration"{}});}
+\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ statusEffectSpawnEvent.\mbox{\hyperlink{class_common_1_1_spawn_event_table_a9949ebd2ab1adcb67a2e7b3b53c93cca}{Remove}}(bleedStatusEffectCode,\ \textcolor{stringliteral}{"{}ExtendBleedDuration"{}});}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00027}\mbox{\hyperlink{class_common_1_1_masteries_1_1_blade_1_1_worsening_wounds_ae5b05fa1b02a9416b1324a1d00978125}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_blade_1_1_worsening_wounds_ae5b05fa1b02a9416b1324a1d00978125}{OnQualityChanged}}()}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
@@ -36,9 +36,9 @@
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00032}00032\ }
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ExtendBleedDuration(\mbox{\hyperlink{class_common_1_1_status_effects_1_1_status_effect}{StatusEffect}}\ se)}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (se\ is\ not\ Bleed\ bleed)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (se\ is\ not\ \mbox{\hyperlink{class_common_1_1_status_effects_1_1_variants_1_1_bleed}{Bleed}}\ bleed)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ bleed.ExecuteTimer.Duration\ +=\ quality.Value;}
+\DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ bleed.ExecuteTimer.Duration\ +=\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}};}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_worsening_wounds_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ }

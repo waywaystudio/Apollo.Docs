@@ -1,40 +1,40 @@
 \doxysection{Collider\+Event\+Handler.\+cs}
 \hypertarget{_collider_event_handler_8cs_source}{}\label{_collider_event_handler_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Component/ColliderEventHandler.cs@{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Component/ColliderEventHandler.cs}}
-
+\mbox{\hyperlink{_collider_event_handler_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common}{Common}}}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00004}00004\ \{}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00005}00005\ \ \ \ \ [RequireComponent(typeof(Collider))]}
-\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ColliderEventHandler\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_collider_event_handler}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_collider_event_handler}{ColliderEventHandler}}\ :\ MonoBehaviour}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00007}00007\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Collider\ model;}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ConditionTable<GameObject>\ Filter\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<GameObject>}}\ OnEnter\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<GameObject>}}\ OnExit\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable}}\ OnDisabled\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Collider\ Model\ =>\ model\ ??=\ GetComponent<Collider>();}
+\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_collider_event_handler_a4bb8b1bd266c9a4ad47627fe93689b29}{00010}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_condition_table}{ConditionTable<GameObject>}}\ \mbox{\hyperlink{class_common_1_1_collider_event_handler_a4bb8b1bd266c9a4ad47627fe93689b29}{Filter}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_collider_event_handler_a56acb6106a3bd54482c47464ca19464d}{00011}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<GameObject>}}\ \mbox{\hyperlink{class_common_1_1_collider_event_handler_a56acb6106a3bd54482c47464ca19464d}{OnEnter}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_collider_event_handler_a0d366bc71348f1a978c445852024920e}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<GameObject>}}\ \mbox{\hyperlink{class_common_1_1_collider_event_handler_a0d366bc71348f1a978c445852024920e}{OnExit}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_collider_event_handler_a0350a37f76924dc360c4131c443260a0}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable}}\ \mbox{\hyperlink{class_common_1_1_collider_event_handler_a0350a37f76924dc360c4131c443260a0}{OnDisabled}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00014}\mbox{\hyperlink{class_common_1_1_collider_event_handler_a52d7f3938e804f95ff45549ac1e6dc12}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Collider\ \mbox{\hyperlink{class_common_1_1_collider_event_handler_a52d7f3938e804f95ff45549ac1e6dc12}{Model}}\ =>\ model\ ??=\ GetComponent<Collider>();}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnTriggerEnter(Collider\ other)}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Filter.HasFalse(other.gameObject))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_collider_event_handler_a4bb8b1bd266c9a4ad47627fe93689b29}{Filter}}.HasFalse(other.gameObject))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ OnEnter.Invoke(other.gameObject);}
+\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_collider_event_handler_a56acb6106a3bd54482c47464ca19464d}{OnEnter}}.Invoke(other.gameObject);}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnTriggerExit(Collider\ other)}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Filter.HasFalse(other.gameObject))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_collider_event_handler_a4bb8b1bd266c9a4ad47627fe93689b29}{Filter}}.HasFalse(other.gameObject))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ OnExit.Invoke(other.gameObject);}
+\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_collider_event_handler_a0d366bc71348f1a978c445852024920e}{OnExit}}.Invoke(other.gameObject);}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00030}00030\ }
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDisable()}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ OnDisabled.Invoke();}
+\DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_collider_event_handler_a0350a37f76924dc360c4131c443260a0}{OnDisabled}}.\mbox{\hyperlink{class_action_table_a6a6f404afd5039c3252ba21ce53aaa39}{Invoke}}();}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00035}00035\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_collider_event_handler_8cs_source_l00036}00036\ \}}

@@ -1,6 +1,6 @@
 \doxysection{Post\+Process\+Director.\+cs}
 \hypertarget{_post_process_director_8cs_source}{}\label{_post_process_director_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/PostProcess/PostProcessDirector.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/PostProcess/PostProcessDirector.cs}}
-
+\mbox{\hyperlink{_post_process_director_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }DG.Tweening;}
@@ -11,28 +11,28 @@
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00008}\mbox{\hyperlink{namespace_post_process}{00008}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_post_process}{PostProcess}}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00009}00009\ \{}
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }PostProcessDirector\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00010}\mbox{\hyperlink{class_post_process_1_1_post_process_director}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_post_process_1_1_post_process_director}{PostProcessDirector}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00011}00011\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ PostProcessManager\ ppManager;}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00012}\mbox{\hyperlink{class_post_process_1_1_post_process_director_a464e3e1644da541f916ee3a0a2b6f70c}{00012}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_post_process_manager}{PostProcessManager}}\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_a464e3e1644da541f916ee3a0a2b6f70c}{ppManager}};}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Volume\ mainVolume;}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Volume\ uiVolume;}
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Table<VolumeType,\ Volume>\ volumeTable;}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00015}\mbox{\hyperlink{class_post_process_1_1_post_process_director_aa94c12c7710fb426b22dc6455692e8b5}{00015}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_table}{Table<VolumeType,\ Volume>}}\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_aa94c12c7710fb426b22dc6455692e8b5}{volumeTable}};}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Table<VolumeTweenKey,\ Tween>\ TweenCacheTable\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_table}{Table<VolumeTweenKey,\ Tween>}}\ TweenCacheTable\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00020}\mbox{\hyperlink{class_post_process_1_1_post_process_director_a7191d108d5952ad9f96169b235c1f79c}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_a7191d108d5952ad9f96169b235c1f79c}{Initialize}}()}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ ppManager.Director\ =\ \textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Fade(VolumeType\ volumeType,\ \textcolor{keywordtype}{float}\ targetValue,\ \textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00025}\mbox{\hyperlink{class_post_process_1_1_post_process_director_ae79272c2eae554dc2fe699f30ab81ba9}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_ae79272c2eae554dc2fe699f30ab81ba9}{Fade}}(\mbox{\hyperlink{_volume_type_8cs_a930cd371d87ebbf3b921dadc5ca2b4ab}{VolumeType}}\ volumeType,\ \textcolor{keywordtype}{float}\ targetValue,\ \textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!TryGetEffect(volumeType,\ out\ ColorAdjustments\ effect))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tweenKey\ =\ \textcolor{keyword}{new}\ VolumeTweenKey(volumeType,\ effect.name);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tweenKey\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_volume_tween_key}{VolumeTweenKey}}(volumeType,\ effect.name);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ Cancel(tweenKey);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19}{Cancel}}(tweenKey);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00032}00032\ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tween\ =\ DOTween.To(()\ =>\ effect.postExposure.value,}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =>\ effect.postExposure.value\ =\ x,}
@@ -46,13 +46,13 @@
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ TweenCacheTable.Add(tweenKey,\ tween);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ BlurIn(VolumeType\ volumeType,\ \textcolor{keywordtype}{float}\ duration)}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00045}\mbox{\hyperlink{class_post_process_1_1_post_process_director_a6bd8601dbc90880b5e24303d2ce7e197}{00045}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_a6bd8601dbc90880b5e24303d2ce7e197}{BlurIn}}(\mbox{\hyperlink{_volume_type_8cs_a930cd371d87ebbf3b921dadc5ca2b4ab}{VolumeType}}\ volumeType,\ \textcolor{keywordtype}{float}\ duration)}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!TryGetEffect(volumeType,\ out\ DepthOfField\ effect))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tweenKey\ =\ \textcolor{keyword}{new}\ VolumeTweenKey(volumeType,\ effect.name);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tweenKey\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_volume_tween_key}{VolumeTweenKey}}(volumeType,\ effect.name);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ Cancel(tweenKey);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19}{Cancel}}(tweenKey);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00052}00052\ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tween\ =\ DOTween.To(()\ =>\ effect.focusDistance.value,}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =>\ effect.focusDistance.value\ =\ x,}
@@ -64,13 +64,13 @@
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ TweenCacheTable.Add(tweenKey,\ tween);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ BlurOut(VolumeType\ volumeType,\ \textcolor{keywordtype}{float}\ duration)}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00063}\mbox{\hyperlink{class_post_process_1_1_post_process_director_a42f4f5cce7e1aca8df52a15662cf5fb1}{00063}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_a42f4f5cce7e1aca8df52a15662cf5fb1}{BlurOut}}(\mbox{\hyperlink{_volume_type_8cs_a930cd371d87ebbf3b921dadc5ca2b4ab}{VolumeType}}\ volumeType,\ \textcolor{keywordtype}{float}\ duration)}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!TryGetEffect(volumeType,\ out\ DepthOfField\ effect))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00066}00066\ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tweenKey\ =\ \textcolor{keyword}{new}\ VolumeTweenKey(volumeType,\ effect.name);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tweenKey\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_volume_tween_key}{VolumeTweenKey}}(volumeType,\ effect.name);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ Cancel(tweenKey);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19}{Cancel}}(tweenKey);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tween\ =\ DOTween.To(()\ =>\ effect.focusDistance.value,\ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =>\ effect.focusDistance.value\ =\ x,\ }
@@ -82,13 +82,13 @@
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ TweenCacheTable.Add(tweenKey,\ tween);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Vignetting(VolumeType\ volumeType,\ \textcolor{keywordtype}{float}\ intensity,\ \textcolor{keywordtype}{float}\ duration,\ Ease\ easeType\ =\ Ease.Linear)}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00081}\mbox{\hyperlink{class_post_process_1_1_post_process_director_a9f7cff8e80f4c14359eb51eaf07ae26b}{00081}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_a9f7cff8e80f4c14359eb51eaf07ae26b}{Vignetting}}(\mbox{\hyperlink{_volume_type_8cs_a930cd371d87ebbf3b921dadc5ca2b4ab}{VolumeType}}\ volumeType,\ \textcolor{keywordtype}{float}\ intensity,\ \textcolor{keywordtype}{float}\ duration,\ Ease\ easeType\ =\ Ease.Linear)}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!TryGetEffect(volumeType,\ out\ Vignette\ effect))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00084}00084\ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tweenKey\ =\ \textcolor{keyword}{new}\ VolumeTweenKey(volumeType,\ effect.name);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tweenKey\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_volume_tween_key}{VolumeTweenKey}}(volumeType,\ effect.name);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ Cancel(tweenKey);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19}{Cancel}}(tweenKey);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tween\ =\ DOTween.To(()\ =>\ effect.intensity.value,\ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =>\ effect.intensity.value\ =\ x,\ }
@@ -98,14 +98,14 @@
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ TweenCacheTable.Add(tweenKey,\ tween);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Monochrome(VolumeType\ volumeType,\ \textcolor{keywordtype}{float}\ endValue,\ \textcolor{keywordtype}{float}\ duration)}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00097}\mbox{\hyperlink{class_post_process_1_1_post_process_director_af0ca2dbf9dca58b39fc46381dc2c1f61}{00097}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_af0ca2dbf9dca58b39fc46381dc2c1f61}{Monochrome}}(\mbox{\hyperlink{_volume_type_8cs_a930cd371d87ebbf3b921dadc5ca2b4ab}{VolumeType}}\ volumeType,\ \textcolor{keywordtype}{float}\ endValue,\ \textcolor{keywordtype}{float}\ duration)}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!TryGetEffect(volumeType,\ out\ ColorAdjustments\ effect))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (effect.active\ ==\ \textcolor{keyword}{false})\ effect.active\ =\ \textcolor{keyword}{true};\ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00101}00101\ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tweenKey\ =\ \textcolor{keyword}{new}\ VolumeTweenKey(volumeType,\ effect.name);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tweenKey\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_volume_tween_key}{VolumeTweenKey}}(volumeType,\ effect.name);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ Cancel(tweenKey);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19}{Cancel}}(tweenKey);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ effect.active\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -114,21 +114,21 @@
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ endValue,}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ duration);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ TweenCacheTable.Add(\textcolor{keyword}{new}\ VolumeTweenKey(volumeType,\ effect.displayName),\ tween);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ TweenCacheTable.Add(\textcolor{keyword}{new}\ \mbox{\hyperlink{struct_volume_tween_key}{VolumeTweenKey}}(volumeType,\ effect.displayName),\ tween);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ LensDistortion(VolumeType\ volumeType,\ Vector3\ source,\ \textcolor{keywordtype}{float}\ intensity)}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00116}\mbox{\hyperlink{class_post_process_1_1_post_process_director_a64cdbf59f2847c5530bb467d010eb8b2}{00116}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_a64cdbf59f2847c5530bb467d010eb8b2}{LensDistortion}}(\mbox{\hyperlink{_volume_type_8cs_a930cd371d87ebbf3b921dadc5ca2b4ab}{VolumeType}}\ volumeType,\ Vector3\ source,\ \textcolor{keywordtype}{float}\ intensity)}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ var\ profile\ =\ volumeTable[volumeType];}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ TryGetEffect<T>(VolumeType\ volumeType,\ out\ T\ effect)\ where\ T\ :\ VolumeComponent}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ TryGetEffect<T>(\mbox{\hyperlink{_volume_type_8cs_a930cd371d87ebbf3b921dadc5ca2b4ab}{VolumeType}}\ volumeType,\ out\ T\ effect)\ where\ T\ :\ VolumeComponent}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ volumeTable[volumeType].profile.TryGet(out\ effect);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_aa94c12c7710fb426b22dc6455692e8b5}{volumeTable}}[volumeType].profile.TryGet(out\ effect);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00126}00126\ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Cancel(VolumeTweenKey\ tweenKey)}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cceaea4788705e6873b424c65e91c2846b19}{Cancel}}(\mbox{\hyperlink{struct_volume_tween_key}{VolumeTweenKey}}\ tweenKey)}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!TweenCacheTable.TryGetValue(tweenKey,\ out\ var\ tween))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -149,31 +149,31 @@
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ Clear();}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00148}\mbox{\hyperlink{class_post_process_1_1_post_process_director_a3502549c89abbea9d69c1256689b91a5}{00148}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_a3502549c89abbea9d69c1256689b91a5}{OnDestroy}}()\ =>\ Clear();}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00149}00149\ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00150}00150\ }
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00151}00151\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ ppManager);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ \mbox{\hyperlink{class_post_process_1_1_post_process_director_a464e3e1644da541f916ee3a0a2b6f70c}{ppManager}});}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ volumeTable.Clear();}
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ volumeTable.Add(VolumeType.Main,\ mainVolume);}
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ volumeTable.Add(VolumeType.Ui,\ uiVolume);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_post_process_1_1_post_process_director_aa94c12c7710fb426b22dc6455692e8b5}{volumeTable}}.\mbox{\hyperlink{class_table_aa5ceff8db5657ae3e7538277e4ed6f8d}{Clear}}();}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_post_process_1_1_post_process_director_aa94c12c7710fb426b22dc6455692e8b5}{volumeTable}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(\mbox{\hyperlink{_volume_type_8cs_a930cd371d87ebbf3b921dadc5ca2b4ab}{VolumeType}}.Main,\ mainVolume);}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_post_process_1_1_post_process_director_aa94c12c7710fb426b22dc6455692e8b5}{volumeTable}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(\mbox{\hyperlink{_volume_type_8cs_a930cd371d87ebbf3b921dadc5ca2b4ab}{VolumeType}}.Ui,\ uiVolume);}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00160}00160\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00161}00161\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00162}00162\ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00163}00163\ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00164}00164\ \textcolor{keyword}{public}\ \textcolor{keyword}{struct\ }VolumeTweenKey}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00164}\mbox{\hyperlink{struct_volume_tween_key}{00164}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_volume_tween_key}{VolumeTweenKey}}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00165}00165\ \{}
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00166}00166\ \ \ \ \ \textcolor{keyword}{public}\ VolumeType\ Type;}
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00167}00167\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ EffectName;}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00166}\mbox{\hyperlink{struct_volume_tween_key_a7cb7aa562263e14588a4a019e1f88f02}{00166}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{_volume_type_8cs_a930cd371d87ebbf3b921dadc5ca2b4ab}{VolumeType}}\ \mbox{\hyperlink{struct_volume_tween_key_a7cb7aa562263e14588a4a019e1f88f02}{Type}};}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00167}\mbox{\hyperlink{struct_volume_tween_key_a0990527aa258c39b0e28c1f05359828f}{00167}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{struct_volume_tween_key_a0990527aa258c39b0e28c1f05359828f}{EffectName}};}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00168}00168\ }
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00169}00169\ \ \ \ \ \textcolor{keyword}{public}\ VolumeTweenKey(VolumeType\ type,\ \textcolor{keywordtype}{string}\ effectName)}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00169}\mbox{\hyperlink{struct_volume_tween_key_a9b024e6a4916644cf54b05749a99ebb2}{00169}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct_volume_tween_key_a9b024e6a4916644cf54b05749a99ebb2}{VolumeTweenKey}}(\mbox{\hyperlink{_volume_type_8cs_a930cd371d87ebbf3b921dadc5ca2b4ab}{VolumeType}}\ type,\ \textcolor{keywordtype}{string}\ effectName)}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00170}00170\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ Type\ \ \ \ \ \ \ =\ type;}
-\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ EffectName\ =\ effectName;}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_volume_tween_key_a7cb7aa562263e14588a4a019e1f88f02}{Type}}\ \ \ \ \ \ \ =\ type;}
+\DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_volume_tween_key_a0990527aa258c39b0e28c1f05359828f}{EffectName}}\ =\ effectName;}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00173}00173\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_post_process_director_8cs_source_l00174}00174\ \}}
 

@@ -1,6 +1,6 @@
 \doxysection{Non\+Player\+Skill\+Behaviour.\+cs}
 \hypertarget{_non_player_skill_behaviour_8cs_source}{}\label{_non_player_skill_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/NonPlayerSkillBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/NonPlayerSkillBehaviour.cs}}
-
+\mbox{\hyperlink{_non_player_skill_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players}{Common.Characters.NonPlayers}};}
@@ -8,28 +8,28 @@
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00004}00004\ }
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players}{Common.Skills.NonPlayers}}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }NonPlayerSkillBehaviour\ :\ SkillBehaviour}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour}{NonPlayerSkillBehaviour}}\ :\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{SkillBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00008}00008\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ priority;}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ awareRange;}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ad1c854d253659ea9796dd1d107c4870c}{00009}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ad1c854d253659ea9796dd1d107c4870c}{priority}};}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ac1baa00025d418baab99ac35ccf7dabe}{00010}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ac1baa00025d418baab99ac35ccf7dabe}{awareRange}};}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ AwareRange\ =>\ awareRange;}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Priority\ =>\ priority;}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a848630e124ccf7b7d624a4e782b2e45b}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a848630e124ccf7b7d624a4e782b2e45b}{AwareRange}}\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ac1baa00025d418baab99ac35ccf7dabe}{awareRange}};}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_aeecec109023fb7c2428df76017164dc5}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_aeecec109023fb7c2428df76017164dc5}{Priority}}\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ad1c854d253659ea9796dd1d107c4870c}{priority}};}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ readonly\ \textcolor{keywordtype}{int}[]\ LayerBuffer\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[32];}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ List<Character>\ TargetList\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ab6d5ae70d657429fcb5618554350e7ed}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ readonly\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ab6d5ae70d657429fcb5618554350e7ed}{LayerBuffer}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[32];}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ List<Character>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{TargetList}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ Character\ SkillTarget}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00021}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_af6e247ddcbea38bf346b41eb48018d05}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_af6e247ddcbea38bf346b41eb48018d05}{SkillTarget}}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Character\ is\ not\ NonPlayer\ nonPlayer)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!detectProperty.TargetLayer.TryToDivideIndexList(LayerBuffer,\ \textcolor{keyword}{true}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_character}{Character}}\ is\ not\ \mbox{\hyperlink{class_common_1_1_characters_1_1_non_players_1_1_non_player}{NonPlayer}}\ nonPlayer)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_abfc676fbdcb1ef6d4aaccbcd57147be2}{detectProperty}}.\mbox{\hyperlink{class_common_1_1_detect_property_ad6958310e95b20bdbab01c47404c19a4}{TargetLayer}}.TryToDivideIndexList(\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ab6d5ae70d657429fcb5618554350e7ed}{LayerBuffer}},\ \textcolor{keyword}{true}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TargetList.Clear();}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{TargetList}}.Clear();}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 복수의\ Layer를\ 주요\ 스킬\ 대상으로\ 삼는\ 경우에\ 처리하기\ 위한\ 로직.}}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ layer\ \textcolor{keywordflow}{in}\ LayerBuffer)}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ layer\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ab6d5ae70d657429fcb5618554350e7ed}{LayerBuffer}})}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (layer\ ==\ -\/1)\ \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -38,16 +38,16 @@
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ target\ \textcolor{keywordflow}{in}\ searchList)}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (target.IsNullOrDestroyed())\ \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (target.TryGetComponent(out\ Character\ character)\ \&\&\ character.IsAlive)}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (target.TryGetComponent(out\ \mbox{\hyperlink{class_common_1_1_character}{Character}}\ character)\ \&\&\ character.IsAlive)}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TargetList.Add(character);}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{TargetList}}.Add(character);}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TargetList.IsNullOrEmpty())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{TargetList}}.IsNullOrEmpty())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TargetList.Sort((x,\ y)\ =>}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{TargetList}}.Sort((x,\ y)\ =>}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ position\ =\ transform.position;}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ xDistance\ =\ Vector3.Distance(position,\ x.gameObject.transform.position);}
@@ -56,28 +56,28 @@
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ xDistance.CompareTo(yDistance);}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00057}00057\ }
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TargetList.FirstOrDefault();}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a57d57584f0f4b3d4e70e04f1c08d2466}{TargetList}}.FirstOrDefault();}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00062}00062\ }
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00063}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ac192adb29e4c36b2167b5ce060fe77b3}{00063}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_ac192adb29e4c36b2167b5ce060fe77b3}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_behaver}{IBehaver}}\ behaver)}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsInitialized)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_af456df833df55a80837156925a4ff563}{IsInitialized}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00068}00068\ }
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}HasMainTarget"{}},\ ()\ =>\ SkillTarget\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}HasMainTarget"{}},\ ()\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_af6e247ddcbea38bf346b41eb48018d05}{SkillTarget}}\ is\ not\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Execute()}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00074}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a26392216f30f94617c140cf6cfe399e7}{00074}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_a26392216f30f94617c140cf6cfe399e7}{Execute}}()}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SkillTarget.IsNullOrDestroyed()\ ||\ }
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SkillTarget.gameObject.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_af6e247ddcbea38bf346b41eb48018d05}{SkillTarget}}.IsNullOrDestroyed()\ ||\ }
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_af6e247ddcbea38bf346b41eb48018d05}{SkillTarget}}.\mbox{\hyperlink{interface_common_1_1_i_unit_a2ca74a8a9a8e98bfee6898eac58afbc9}{gameObject}}.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ executor.Execute(SkillTarget.gameObject);}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a29c18c0d8a04eb8172f936b48829b6ee}{executor}}.\mbox{\hyperlink{class_common_1_1_executor_ada0aad3eb7a3b8b6124265474df85982}{Execute}}(\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_af6e247ddcbea38bf346b41eb48018d05}{SkillTarget}}.\mbox{\hyperlink{interface_common_1_1_i_unit_a2ca74a8a9a8e98bfee6898eac58afbc9}{gameObject}});}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00081}00081\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_non_player_skill_behaviour_8cs_source_l00082}00082\ \}}

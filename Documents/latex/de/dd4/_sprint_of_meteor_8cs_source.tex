@@ -1,6 +1,6 @@
 \doxysection{Sprint\+Of\+Meteor.\+cs}
 \hypertarget{_sprint_of_meteor_8cs_source}{}\label{_sprint_of_meteor_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SplitTrident/SprintOfMeteor.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SplitTrident/SprintOfMeteor.cs}}
-
+\mbox{\hyperlink{_sprint_of_meteor_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_behaviours}{Common.Characters.Behaviours}};}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
@@ -11,59 +11,59 @@
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_split_trident}{Common.Masteries.SplitTrident}}}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00008}00008\ \{}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ DASH\ 도착지점에\ [20]피해를\ 주는\ 화염구가\ 떨어진다.}}
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SprintOfMeteor\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_sprint_of_meteor}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_sprint_of_meteor}{SprintOfMeteor}}\ :\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery}{Mastery}}}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00011}00011\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DataIndex\ meteorProjectileCode\ =\ DataIndex.SprintMeteorProjectile;}
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ProjectileSpawnEvent\ projectileSpawnEvent;}
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ProjectileExecutor\ projectileExecutor;}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}\ meteorProjectileCode\ =\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.SprintMeteorProjectile;}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_spawn_event}{ProjectileSpawnEvent}}\ projectileSpawnEvent;}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor}{ProjectileExecutor}}\ projectileExecutor;}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DashBehaviour\ dash;}
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ StatEntity\ meteorDamageEntity;}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_dash_behaviour}{DashBehaviour}}\ dash;}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}\ meteorDamageEntity;}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00020}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_sprint_of_meteor_a08b52f266b3d2d8db88d1f9e8cfcf465}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_sprint_of_meteor_a08b52f266b3d2d8db88d1f9e8cfcf465}{Injection}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ projectileExecutor.Initialize(dred);}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ projectileExecutor.\mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_projectile_executor_a92307536fd076d9824ea65f458487dac}{Initialize}}(dred);}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!dred.Behaviours.TryGet(DataIndex.Dash,\ out\ dash))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!dred.\mbox{\hyperlink{class_common_1_1_character_aa1a4b82596d7a09ebb8be0f04e78c304}{Behaviours}}.TryGet(\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.Dash,\ out\ dash))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00025}00025\ }
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ dash.Sections}
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}SprintOfMeteor"{}},\ ()\ =>\ projectileExecutor.Execute(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}SprintOfMeteor"{}},\ ()\ =>\ projectileExecutor.\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_aa7c0ffd22f64d11a97b3580171c963ae}{Execute}}(\textcolor{keyword}{null}));}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ projectileSpawnEvent.Add(meteorProjectileCode,\ \textcolor{stringliteral}{"{}SprintOfMeteor"{}},\ SetMeteorDamage);}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ projectileSpawnEvent.\mbox{\hyperlink{class_common_1_1_spawn_event_table_ac8c1e472bcbad1c5493cff1ec02b1a98}{Add}}(meteorProjectileCode,\ \textcolor{stringliteral}{"{}SprintOfMeteor"{}},\ SetMeteorDamage);}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00032}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_sprint_of_meteor_a1e37e61172ba56974cad0012ebab55a9}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_sprint_of_meteor_a1e37e61172ba56974cad0012ebab55a9}{Abolition}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ projectileExecutor.DeInitialize();}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ projectileExecutor.\mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a9259432751c6f91307bcc4a0c8962013}{DeInitialize}}();}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ dash.Sections}
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.End,\ \textcolor{stringliteral}{"{}SprintOfMeteor"{}});}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}SprintOfMeteor"{}});}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ projectileSpawnEvent.Remove(meteorProjectileCode,\ \textcolor{stringliteral}{"{}SprintOfMeteor"{}},\ RemoveMeteorDamage);}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ projectileSpawnEvent.\mbox{\hyperlink{class_common_1_1_spawn_event_table_a9949ebd2ab1adcb67a2e7b3b53c93cca}{Remove}}(meteorProjectileCode,\ \textcolor{stringliteral}{"{}SprintOfMeteor"{}},\ RemoveMeteorDamage);}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00042}\mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_sprint_of_meteor_a8887d2a8bc22af0c90275c53b07d688a}{00042}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_split_trident_1_1_sprint_of_meteor_a8887d2a8bc22af0c90275c53b07d688a}{OnQualityChanged}}()}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (meteorDamageEntity.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ meteorDamageEntity.Value\ =\ quality.Value;}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ meteorDamageEntity.Value\ =\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}};}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00048}00048\ }
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SetMeteorDamage(Projectile\ projectile)}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SetMeteorDamage(\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}\ projectile)}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!projectile.Executor.TryGetExecution(out\ DamageExecutor\ damageExecutor))\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!damageExecutor.DamageTable.TryGetStatEntity(StatType.BaseDamage,\ \textcolor{stringliteral}{"{}SprintOfMeteor.Initial.BaseDamage"{}},\ out\ meteorDamageEntity))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!projectile.\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile_af8c5ad0b154e4ddc107132a2549ed288}{Executor}}.TryGetExecution(out\ \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_damage_executor}{DamageExecutor}}\ damageExecutor))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!damageExecutor.DamageTable.TryGetStatEntity(\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.BaseDamage,\ \textcolor{stringliteral}{"{}SprintOfMeteor.Initial.BaseDamage"{}},\ out\ meteorDamageEntity))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00054}00054\ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ meteorDamageEntity.Value\ =\ quality.Value;}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ meteorDamageEntity.Value\ =\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}.\mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_quality_ac0a8af319b716d1afc9616ba74fbdbbf}{Value}};}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00057}00057\ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RemoveMeteorDamage(Projectile\ projectile)}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RemoveMeteorDamage(\mbox{\hyperlink{class_common_1_1_projectiles_1_1_projectile}{Projectile}}\ projectile)}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (meteorDamageEntity.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ meteorDamageEntity.Value\ =\ quality[QualityGradeType.Normal];}
+\DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ meteorDamageEntity.Value\ =\ \mbox{\hyperlink{class_common_1_1_masteries_1_1_mastery_a2ad533a923767315ce6731c68a1e377d}{quality}}[\mbox{\hyperlink{namespace_common_1_1_masteries_ad1aacf96ad934614792831ace301dbc2}{QualityGradeType}}.Normal];}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00064}00064\ }
 \DoxyCodeLine{\Hypertarget{_sprint_of_meteor_8cs_source_l00065}00065\ }

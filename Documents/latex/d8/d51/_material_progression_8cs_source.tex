@@ -1,6 +1,6 @@
 \doxysection{Material\+Progression.\+cs}
 \hypertarget{_material_progression_8cs_source}{}\label{_material_progression_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Graphics/MaterialProgression.cs@{C:/Project/Apollo/Assets/Scripts/Common/Graphics/MaterialProgression.cs}}
-
+\mbox{\hyperlink{_material_progression_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -10,7 +10,7 @@
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00006}00006\ }
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_graphics}{Common.Graphics}}}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00008}00008\ \{}
-\DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MaterialProgression\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_graphics_1_1_material_progression}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_graphics_1_1_material_progression}{MaterialProgression}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00010}00010\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ isPlaying\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Renderer\ meshRenderer;}
@@ -24,10 +24,10 @@
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isPlaying)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ SetProgression(progression);}
+\DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_graphics_1_1_material_progression_ab4837b3285673acf7aa79ad3fd8451ad}{SetProgression}}(progression);}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetProgression(\textcolor{keywordtype}{float}\ progression)}
+\DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00026}\mbox{\hyperlink{class_common_1_1_graphics_1_1_material_progression_ab4837b3285673acf7aa79ad3fd8451ad}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_graphics_1_1_material_progression_ab4837b3285673acf7aa79ad3fd8451ad}{SetProgression}}(\textcolor{keywordtype}{float}\ progression)}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ meshRenderer.material.SetFloat(Progression,\ progression);}
 \DoxyCodeLine{\Hypertarget{_material_progression_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }

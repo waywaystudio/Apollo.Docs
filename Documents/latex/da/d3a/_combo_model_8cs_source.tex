@@ -1,6 +1,6 @@
 \doxysection{Combo\+Model.\+cs}
 \hypertarget{_combo_model_8cs_source}{}\label{_combo_model_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/ComboModel.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/ComboModel.cs}}
-
+\mbox{\hyperlink{_combo_model_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
@@ -8,13 +8,13 @@
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_modules}{Common.Skills.Modules}}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00005}00005\ \{}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00006}00006\ \ \ \ \ [Serializable]}
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ComboModel}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model}{ComboModel}}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00008}00008\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ToleranceType\ toleranceType\ =\ ToleranceType.InAnimation;}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ tolerance;}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ intervalTolerance;}
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ SkillBehaviour\ targetSkillBehaviour;}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{SkillBehaviour}}\ targetSkillBehaviour;}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{enum}\ ToleranceType}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ InAnimation,\ \textcolor{comment}{//\ Between\ RigidEnd\ and\ SequenceEnd\ (=AnimationEnd)}}
@@ -22,42 +22,42 @@
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00019}00019\ }
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(SkillBehaviour\ skillBehaviour)}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00021}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_aa3522de2d73c3cf6215bffda759b9562}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_aa3522de2d73c3cf6215bffda759b9562}{Initialize}}(\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{SkillBehaviour}}\ skillBehaviour)}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ targetSkillBehaviour\ =\ skillBehaviour;}
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ tolerance\ \ \ \ \ \ \ \ \ \ \ \ =\ intervalTolerance.Duration;}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ tolerance\ \ \ \ \ \ \ \ \ \ \ \ =\ intervalTolerance.\mbox{\hyperlink{class_time_trigger_ae4453c9bd98cd3d71dccbb095ba6cca4}{Duration}};}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00025}00025\ }
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (toleranceType)}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ToleranceType.InAnimation\ :}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ skillBehaviour.Sections}
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Recovery,\ \textcolor{stringliteral}{"{}RePlayToleranceTrigger"{}},\ ()\ =>\ RePlayToleranceTrigger(0f))}
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}RePlayToleranceTrigger"{}},\ ()\ =>\ RePlayToleranceTrigger(tolerance))}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Recovery,\ \textcolor{stringliteral}{"{}RePlayToleranceTrigger"{}},\ ()\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_a122cf281579366e21946c47daaf55638}{RePlayToleranceTrigger}}(0f))}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}RePlayToleranceTrigger"{}},\ ()\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_a122cf281579366e21946c47daaf55638}{RePlayToleranceTrigger}}(tolerance))}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ToleranceType.AfterAnimation:}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ skillBehaviour.Sections}
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}RePlayToleranceTrigger"{}},\ ()\ =>\ RePlayToleranceTrigger(tolerance))}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}RePlayToleranceTrigger"{}},\ ()\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_a122cf281579366e21946c47daaf55638}{RePlayToleranceTrigger}}(tolerance))}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Resign()}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00046}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_a2fb82e7d2217a128174fb05573a26bf3}{00046}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_a2fb82e7d2217a128174fb05573a26bf3}{Resign}}()}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ var\ startSection\ =\ toleranceType\ ==\ ToleranceType.InAnimation\ ?\ Section.Recovery\ :\ Section.End;}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ var\ startSection\ =\ toleranceType\ ==\ ToleranceType.InAnimation\ ?\ Section.Recovery\ :\ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End;}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ targetSkillBehaviour.Sections.Remove(startSection,\ \textcolor{stringliteral}{"{}RePlayToleranceTrigger"{}});}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ targetSkillBehaviour.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab83cdaf17253ff167db2db616cc7069a}{Sections}}.\mbox{\hyperlink{class_section_table_a89b290530cce1b22d3483b0c3e34e072}{Remove}}(startSection,\ \textcolor{stringliteral}{"{}RePlayToleranceTrigger"{}});}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ intervalTolerance\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetToleranceTrigger(\mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ trigger)\ =>\ intervalTolerance\ =\ trigger;}
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetTriggerMultiplier(Func<float>\ weight)\ =>\ intervalTolerance.SetWeight(weight);}
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ RePlayToleranceTrigger(\textcolor{keywordtype}{float}\ duration)}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00058}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_a029865ba1c37f9e1e8541fa4a927eb4c}{00058}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_a029865ba1c37f9e1e8541fa4a927eb4c}{SetToleranceTrigger}}(\mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ trigger)\ =>\ intervalTolerance\ =\ trigger;}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00059}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_a806003c7e3ca14be7cb0428cf1a192fc}{00059}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_a806003c7e3ca14be7cb0428cf1a192fc}{SetTriggerMultiplier}}(Func<float>\ weight)\ =>\ intervalTolerance.\mbox{\hyperlink{class_time_trigger_ad21e203dedd7acf9915bc720587085cf}{SetWeight}}(weight);}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00060}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_a122cf281579366e21946c47daaf55638}{00060}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_a122cf281579366e21946c47daaf55638}{RePlayToleranceTrigger}}(\textcolor{keywordtype}{float}\ duration)}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 이\ 내용\ 무슨\ 말인지\ 기억이\ 안남;\ */}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 다음\ 프레임으로\ 끊기는\ 것과,\ 자연스럽게\ 끊기는\ 효과를\ 구분하기\ 위해서}}
@@ -67,8 +67,8 @@
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ ?\ Time.fixedDeltaTime\ *\ 2f\ }}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ :\ tolerance;}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ intervalTolerance.SetDuration(duration);}
-\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ intervalTolerance.Replay();}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ intervalTolerance.\mbox{\hyperlink{class_time_trigger_a83a9f5d72aa6caa0c3f6bfb79f322b90}{SetDuration}}(duration);}
+\DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ intervalTolerance.\mbox{\hyperlink{class_time_trigger_a52710a3af773a028b5d91ff537d1094d}{Replay}}();}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00073}00073\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_combo_model_8cs_source_l00074}00074\ \}}

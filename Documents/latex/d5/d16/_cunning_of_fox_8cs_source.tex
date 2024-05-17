@@ -1,6 +1,6 @@
 \doxysection{Cunning\+Of\+Fox.\+cs}
 \hypertarget{_cunning_of_fox_8cs_source}{}\label{_cunning_of_fox_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Kimmihohs/CunningOfFox.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Kimmihohs/CunningOfFox.cs}}
-
+\mbox{\hyperlink{_cunning_of_fox_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Threading;}
@@ -10,7 +10,7 @@
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00006}00006\ }
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00007}\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players}{00007}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players_1_1_kimmihohs}{Common.Skills.NonPlayers.Kimmihohs}}}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00008}00008\ \{\ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CunningOfFox\ :\ NonPlayerSkillBehaviour}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox}{CunningOfFox}}\ :\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour}{NonPlayerSkillBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00010}00010\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ rotatePerFrame\ =\ 10f;}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ spreadRange\ =\ 12;}
@@ -25,43 +25,43 @@
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ :\ transform.position\ +\ \textcolor{keyword}{new}\ Vector3(0,\ 1,\ 0);}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00024}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_aa83fbafbccedd9b2557046b200ad5a6e}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_aa83fbafbccedd9b2557046b200ad5a6e}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_behaver}{IBehaver}}\ behaver)}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Cancel,\ \textcolor{stringliteral}{"{}StopTransfer"{}},\ Character.Pathfinding.Cancel)}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Cancel,\ \textcolor{stringliteral}{"{}CancelSerialFire"{}},\ CancelSerialFire)}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Execute,\ \textcolor{stringliteral}{"{}SoulFire"{}},\ ()\ =>\ SoulFire().Forget())}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}CancelSerialFire"{}},\ CancelSerialFire)}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}CancelSerialFire"{}},\ CancelSerialFire)}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Cancel,\ \textcolor{stringliteral}{"{}StopTransfer"{}},\ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_a134600c8e09396ae7fcb6b0705ec61ac}{Pathfinding}}.Cancel)}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Cancel,\ \textcolor{stringliteral}{"{}CancelSerialFire"{}},\ CancelSerialFire)}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Execute,\ \textcolor{stringliteral}{"{}SoulFire"{}},\ ()\ =>\ SoulFire().Forget())}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}CancelSerialFire"{}},\ CancelSerialFire)}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Dispose,\ \textcolor{stringliteral}{"{}CancelSerialFire"{}},\ CancelSerialFire)}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ pool.Initialize(CreateProjectile,\ transform);}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00039}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_a6a98d7d3fbaed4e613c463a7b34b2df4}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_a6a98d7d3fbaed4e613c463a7b34b2df4}{Active}}()}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!PathfindingUtility.IsValidCombatRotation(Character,\ SkillTarget,\ 5f))}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!PathfindingUtility.IsValidCombatRotation(\mbox{\hyperlink{class_common_1_1_character}{Character}},\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_af6e247ddcbea38bf346b41eb48018d05}{SkillTarget}},\ 5f))}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Character.Rotate(SkillTarget.Position,\ rotatePerFrame,\ Invoker.Active);}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_character}{Character}}.\mbox{\hyperlink{class_common_1_1_character_a6ed0b22d7841dc34a88a324ec75a689b}{Rotate}}(\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_af6e247ddcbea38bf346b41eb48018d05}{SkillTarget}}.\mbox{\hyperlink{class_common_1_1_character_a274ffe9dda8db3f5f753c8fbbd0c4a32}{Position}},\ rotatePerFrame,\ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}});}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Execute()}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00052}\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_aa0a0ecb419dd00e7628f493dfabf05a6}{00052}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_aa0a0ecb419dd00e7628f493dfabf05a6}{Execute}}()}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ executor.Execute(SkillTarget.gameObject);}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour_a29c18c0d8a04eb8172f936b48829b6ee}{executor}}.\mbox{\hyperlink{class_common_1_1_executor_ada0aad3eb7a3b8b6124265474df85982}{Execute}}(\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_af6e247ddcbea38bf346b41eb48018d05}{SkillTarget}}.\mbox{\hyperlink{interface_common_1_1_i_unit_a2ca74a8a9a8e98bfee6898eac58afbc9}{gameObject}});}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ UniTaskVoid\ SoulFire()}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SkillTarget\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_af6e247ddcbea38bf346b41eb48018d05}{SkillTarget}}\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00061}00061\ }
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ serialFireTokenSource\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -93,18 +93,18 @@
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ serialFireTokenSource\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CreateProjectile(CunningOfFoxProjectile\ projectile)}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CreateProjectile(\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_cunning_of_fox_projectile}{CunningOfFoxProjectile}}\ projectile)}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ projectile.transform.position\ =\ MuzzlePosition;}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ projectile.Initialize(Character);}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ projectile.\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_cunning_of_fox_projectile_adb2234c60193827f10cd4dc1b569cbcb}{Initialize}}(\mbox{\hyperlink{class_common_1_1_character}{Character}});}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ projectile.Sections}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\textcolor{stringliteral}{"{}ReturnToPool"{}},\ ()\ =>\ ReturnToPool(projectile));}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\textcolor{stringliteral}{"{}ReturnToPool"{}},\ ()\ =>\ ReturnToPool(projectile));}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ReturnToPool(CunningOfFoxProjectile\ projectile)}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ReturnToPool(\mbox{\hyperlink{class_common_1_1_projectiles_1_1_variants_1_1_cunning_of_fox_projectile}{CunningOfFoxProjectile}}\ projectile)}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ projectile.transform.position\ =\ MuzzlePosition;}
-\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ projectile.transform.SetParent(transform,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ projectile.\mbox{\hyperlink{interface_common_1_1_i_unit_a472a5fbc5ed5f3077bf1a6c46a290e0b}{transform}}.SetParent(transform,\ \textcolor{keyword}{true});}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ pool.Release(projectile);}
 \DoxyCodeLine{\Hypertarget{_cunning_of_fox_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \}}

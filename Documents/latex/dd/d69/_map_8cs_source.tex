@@ -1,68 +1,68 @@
 \doxysection{Map.\+cs}
 \hypertarget{_map_8cs_source}{}\label{_map_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Maps/Map.cs@{C:/Project/Apollo/Assets/Scripts/Common/Maps/Map.cs}}
-
+\mbox{\hyperlink{_map_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00004}\mbox{\hyperlink{namespace_common_1_1_maps}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_maps}{Common.Maps}}}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Map\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_maps_1_1_map}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_maps_1_1_map}{Map}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00007}00007\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Modeling}}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Transform\ environmentContainer;}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Transform\ voidContainer;}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Transform\ wallContainer;}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Transform\ wallDummyContainer;}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Transform\ water;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_aea2c75fd2e4c96b66ca26457942fe775}{00009}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Transform\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_aea2c75fd2e4c96b66ca26457942fe775}{environmentContainer}};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_aac4f50edb4b5896e3b3178fee9de255f}{00010}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Transform\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_aac4f50edb4b5896e3b3178fee9de255f}{voidContainer}};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_a390412407dbca032e1c2c74993186aa4}{00011}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Transform\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a390412407dbca032e1c2c74993186aa4}{wallContainer}};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_a3a47d36a7f477af7543ac38a85057951}{00012}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Transform\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a3a47d36a7f477af7543ac38a85057951}{wallDummyContainer}};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00013}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_a93002accb117806cc81eb2f47ba18be4}{00013}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Transform\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a93002accb117806cc81eb2f47ba18be4}{water}};}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00014}00014\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ PrePositions}}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Table<MapPrepositionType,\ Transform>\ prePositionTable;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_a378241088d512bbafacc5eff1add0294}{00016}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_table}{Table<MapPrepositionType,\ Transform>}}\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a378241088d512bbafacc5eff1add0294}{prePositionTable}};}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Collections}}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ [SerializeField]\ private\ DungeonGate\ enterGate;}}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<BoxCollider>\ entranceColliders;}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00021}00021\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Grid\ grid;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a0a3b07d2657b151a7414026dea998b12}{Grid}}\ grid;}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00023}00023\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Grid\ Grid\ =>\ grid\ ??=\ GetComponentInChildren<Grid>();}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ EnvironmentContainer\ =>\ environmentContainer;}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ VoidContainer\ =>\ voidContainer;}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ WallContainer\ =>\ wallContainer;}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ Water\ =>\ water;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00024}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_a0a3b07d2657b151a7414026dea998b12}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a0a3b07d2657b151a7414026dea998b12}{Grid}}\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a0a3b07d2657b151a7414026dea998b12}{Grid}}\ =>\ grid\ ??=\ GetComponentInChildren<Grid>();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00025}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_ae65a57048c8a11d8b5dd664a453c4d98}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_ae65a57048c8a11d8b5dd664a453c4d98}{EnvironmentContainer}}\ =>\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_aea2c75fd2e4c96b66ca26457942fe775}{environmentContainer}};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00026}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_ad3cdeb06d55e660f2ece6d0f3c30148a}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_ad3cdeb06d55e660f2ece6d0f3c30148a}{VoidContainer}}\ =>\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_aac4f50edb4b5896e3b3178fee9de255f}{voidContainer}};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00027}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_a96f30f7b566d15308e2f15c53d9ee08a}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a96f30f7b566d15308e2f15c53d9ee08a}{WallContainer}}\ =>\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a390412407dbca032e1c2c74993186aa4}{wallContainer}};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00028}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_af24c326563e58f825949f3cb153b8df2}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_af24c326563e58f825949f3cb153b8df2}{Water}}\ =>\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a93002accb117806cc81eb2f47ba18be4}{water}};}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ \textcolor{keyword}{this}[MapPrepositionType\ type]\ =>\ PrePositionTable[type];}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Table<MapPrepositionType,\ Transform>\ PrePositionTable\ =>\ prePositionTable;}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<BoxCollider>\ EntranceColliders\ =>\ entranceColliders;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00030}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_a5b196636f95a439170313cee3ebcb8e1}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ \textcolor{keyword}{this}[\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}\ type]\ =>\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a2d9d1f211536d1d9c0127fa3f61274a8}{PrePositionTable}}[type];}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00031}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_a2d9d1f211536d1d9c0127fa3f61274a8}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_table}{Table<MapPrepositionType,\ Transform>}}\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a2d9d1f211536d1d9c0127fa3f61274a8}{PrePositionTable}}\ =>\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a378241088d512bbafacc5eff1add0294}{prePositionTable}};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00032}\mbox{\hyperlink{class_common_1_1_maps_1_1_map_aaa6cd6bfde1a543c79d5c2f38dcddcf9}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<BoxCollider>\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_aaa6cd6bfde1a543c79d5c2f38dcddcf9}{EntranceColliders}}\ =>\ entranceColliders;}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00033}00033\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00034}00034\ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00035}00035\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Modeling}}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ environmentContainer\ =\ transform.Find(\textcolor{stringliteral}{"{}Modeling(Grid)/Environments"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_aea2c75fd2e4c96b66ca26457942fe775}{environmentContainer}}\ =\ transform.Find(\textcolor{stringliteral}{"{}Modeling(Grid)/Environments"{}});}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ grid\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ GetComponentInChildren<Grid>();}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ voidContainer\ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Modeling(Grid)/Voids"{}});}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ wallContainer\ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Modeling(Grid)/WallColliders"{}});}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ wallDummyContainer\ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Modeling(Grid)/WallDummies"{}});}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ water\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Water"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_aac4f50edb4b5896e3b3178fee9de255f}{voidContainer}}\ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Modeling(Grid)/Voids"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a390412407dbca032e1c2c74993186aa4}{wallContainer}}\ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Modeling(Grid)/WallColliders"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a3a47d36a7f477af7543ac38a85057951}{wallDummyContainer}}\ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Modeling(Grid)/WallDummies"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a93002accb117806cc81eb2f47ba18be4}{water}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Water"{}});}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ PrePositions}}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ var\ playerSpawnPosition\ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}PrePositions/PlayerSpawnPosition"{}});}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ var\ playerSpawnDestination\ =\ transform.Find(\textcolor{stringliteral}{"{}PrePositions/PlayerSpawnDestination"{}});}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ exitGate1\ =\ pathway1.GetComponentInChildren<DungeonGate>();}}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ entranceColliders\ =\ prePositionTable[MapPrepositionType.PlayerSpawn].GetComponentsInOnlyChildren<BoxCollider>(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ entranceColliders\ =\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a378241088d512bbafacc5eff1add0294}{prePositionTable}}[\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.PlayerSpawn].GetComponentsInOnlyChildren<BoxCollider>(\textcolor{keyword}{true});}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Common\ Tabling}}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ prePositionTable.Add(MapPrepositionType.PlayerSpawn,\ playerSpawnPosition);}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ prePositionTable.Add(MapPrepositionType.PlayerDestination,\ playerSpawnDestination);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a378241088d512bbafacc5eff1add0294}{prePositionTable}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.PlayerSpawn,\ playerSpawnPosition);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a378241088d512bbafacc5eff1add0294}{prePositionTable}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.PlayerDestination,\ playerSpawnDestination);}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ PrePositionTableInitialize()}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ PrePositionTable[MapPrepositionType.PlayerSpawn]\ \ \ \ \ \ \ =\ TryCreateChild(\textcolor{stringliteral}{"{}PlayerSpawnPosition"{}});}
-\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ PrePositionTable[MapPrepositionType.PlayerDestination]\ =\ TryCreateChild(\textcolor{stringliteral}{"{}PlayerSpawnDestination"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a2d9d1f211536d1d9c0127fa3f61274a8}{PrePositionTable}}[\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.PlayerSpawn]\ \ \ \ \ \ \ =\ TryCreateChild(\textcolor{stringliteral}{"{}PlayerSpawnPosition"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a2d9d1f211536d1d9c0127fa3f61274a8}{PrePositionTable}}[\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.PlayerDestination]\ =\ TryCreateChild(\textcolor{stringliteral}{"{}PlayerSpawnDestination"{}});}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ Transform\ TryCreateChild(\textcolor{keywordtype}{string}\ childName)}

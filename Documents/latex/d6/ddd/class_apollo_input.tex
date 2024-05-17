@@ -1,0 +1,244 @@
+\doxysection{Apollo\+Input Class Reference}
+\hypertarget{class_apollo_input}{}\label{class_apollo_input}\index{ApolloInput@{ApolloInput}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{interface_apollo_input_1_1_i_player_controls_actions}{IPlayer\+Controls\+Actions}}
+\item 
+interface \mbox{\hyperlink{interface_apollo_input_1_1_i_u_i_controls_actions}{IUIControls\+Actions}}
+\item 
+struct \mbox{\hyperlink{struct_apollo_input_1_1_player_controls_actions}{Player\+Controls\+Actions}}
+\item 
+struct \mbox{\hyperlink{struct_apollo_input_1_1_u_i_controls_actions}{UIControls\+Actions}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_apollo_input_a221d1af2621fec5f4a8987487277f101}{Apollo\+Input}} ()
+\item 
+void \mbox{\hyperlink{class_apollo_input_a3a8a78ad46773abae0644c407bffe0bb}{Dispose}} ()
+\item 
+bool \mbox{\hyperlink{class_apollo_input_a941f1eef221f4a3c0328c1c1703a1a12}{Contains}} (Input\+Action action)
+\item 
+IEnumerator$<$ Input\+Action $>$ \mbox{\hyperlink{class_apollo_input_a2ae561642d557b06562249cfeec235a7}{Get\+Enumerator}} ()
+\item 
+void \mbox{\hyperlink{class_apollo_input_acf2caacd07cc2a3e5c5e6df6b01dce4a}{Enable}} ()
+\item 
+void \mbox{\hyperlink{class_apollo_input_a3034f23081ba779d9c8093459ba2ca22}{Disable}} ()
+\item 
+Input\+Action \mbox{\hyperlink{class_apollo_input_a6a9a1f88e14181188945655fd0d9ad4f}{Find\+Action}} (string action\+Name\+Or\+Id, bool throw\+If\+Not\+Found=false)
+\item 
+int \mbox{\hyperlink{class_apollo_input_af72413df029a4bb53e09cdf2bfe06292}{Find\+Binding}} (Input\+Binding \mbox{\hyperlink{class_apollo_input_a0cf240ed986e82e5b08ff0ffb9546cc3}{binding\+Mask}}, out Input\+Action action)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Input\+Action\+Asset \mbox{\hyperlink{class_apollo_input_a34a499688507f11419a2db8f19c2aed3}{asset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Input\+Binding? \mbox{\hyperlink{class_apollo_input_a0cf240ed986e82e5b08ff0ffb9546cc3}{binding\+Mask}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Read\+Only\+Array$<$ Input\+Device $>$? \mbox{\hyperlink{class_apollo_input_a0979aaba95247b3875e5f9b736fdc3c5}{devices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Read\+Only\+Array$<$ Input\+Control\+Scheme $>$ \mbox{\hyperlink{class_apollo_input_a845575f8473b757a395177d222445ef9}{control\+Schemes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ Input\+Binding $>$ \mbox{\hyperlink{class_apollo_input_a3228a27bab8b71286bb9924e317c55fe}{bindings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_apollo_input_1_1_player_controls_actions}{Player\+Controls\+Actions}} \mbox{\hyperlink{class_apollo_input_a9ba7926923b21176676c935717a92851}{Player\+Controls}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_apollo_input_1_1_u_i_controls_actions}{UIControls\+Actions}} \mbox{\hyperlink{class_apollo_input_a2c2a7e92b4880e89f9ee078889e6242f}{UIControls}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Input\+Control\+Scheme \mbox{\hyperlink{class_apollo_input_aa37313e4e6c241095ce60617cc9ca4fa}{Keyboard\+Mouse\+Scheme}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Input\+Control\+Scheme \mbox{\hyperlink{class_apollo_input_a69b0ed1f1382c901fbf4503988a25186}{Gamepad\+Scheme}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_apollo_input_a221d1af2621fec5f4a8987487277f101}\label{class_apollo_input_a221d1af2621fec5f4a8987487277f101} 
+\index{ApolloInput@{ApolloInput}!ApolloInput@{ApolloInput}}
+\index{ApolloInput@{ApolloInput}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{ApolloInput()}{ApolloInput()}}
+{\footnotesize\ttfamily Apollo\+Input.\+Apollo\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_apollo_input_a941f1eef221f4a3c0328c1c1703a1a12}\label{class_apollo_input_a941f1eef221f4a3c0328c1c1703a1a12} 
+\index{ApolloInput@{ApolloInput}!Contains@{Contains}}
+\index{Contains@{Contains}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily bool Apollo\+Input.\+Contains (\begin{DoxyParamCaption}\item[{Input\+Action}]{action }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01425}{1425}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_a3034f23081ba779d9c8093459ba2ca22}\label{class_apollo_input_a3034f23081ba779d9c8093459ba2ca22} 
+\index{ApolloInput@{ApolloInput}!Disable@{Disable}}
+\index{Disable@{Disable}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily void Apollo\+Input.\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01445}{1445}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_a3a8a78ad46773abae0644c407bffe0bb}\label{class_apollo_input_a3a8a78ad46773abae0644c407bffe0bb} 
+\index{ApolloInput@{ApolloInput}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Apollo\+Input.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01406}{1406}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_acf2caacd07cc2a3e5c5e6df6b01dce4a}\label{class_apollo_input_acf2caacd07cc2a3e5c5e6df6b01dce4a} 
+\index{ApolloInput@{ApolloInput}!Enable@{Enable}}
+\index{Enable@{Enable}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily void Apollo\+Input.\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01440}{1440}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_a6a9a1f88e14181188945655fd0d9ad4f}\label{class_apollo_input_a6a9a1f88e14181188945655fd0d9ad4f} 
+\index{ApolloInput@{ApolloInput}!FindAction@{FindAction}}
+\index{FindAction@{FindAction}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{FindAction()}{FindAction()}}
+{\footnotesize\ttfamily Input\+Action Apollo\+Input.\+Find\+Action (\begin{DoxyParamCaption}\item[{string}]{action\+Name\+Or\+Id,  }\item[{bool}]{throw\+If\+Not\+Found = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01452}{1452}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_af72413df029a4bb53e09cdf2bfe06292}\label{class_apollo_input_af72413df029a4bb53e09cdf2bfe06292} 
+\index{ApolloInput@{ApolloInput}!FindBinding@{FindBinding}}
+\index{FindBinding@{FindBinding}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{FindBinding()}{FindBinding()}}
+{\footnotesize\ttfamily int Apollo\+Input.\+Find\+Binding (\begin{DoxyParamCaption}\item[{Input\+Binding}]{binding\+Mask,  }\item[{out Input\+Action}]{action }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01457}{1457}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_a2ae561642d557b06562249cfeec235a7}\label{class_apollo_input_a2ae561642d557b06562249cfeec235a7} 
+\index{ApolloInput@{ApolloInput}!GetEnumerator@{GetEnumerator}}
+\index{GetEnumerator@{GetEnumerator}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{GetEnumerator()}{GetEnumerator()}}
+{\footnotesize\ttfamily IEnumerator$<$ Input\+Action $>$ Apollo\+Input.\+Get\+Enumerator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01430}{1430}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_apollo_input_a34a499688507f11419a2db8f19c2aed3}\label{class_apollo_input_a34a499688507f11419a2db8f19c2aed3} 
+\index{ApolloInput@{ApolloInput}!asset@{asset}}
+\index{asset@{asset}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{asset}{asset}}
+{\footnotesize\ttfamily Input\+Action\+Asset Apollo\+Input.\+asset\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_a0cf240ed986e82e5b08ff0ffb9546cc3}\label{class_apollo_input_a0cf240ed986e82e5b08ff0ffb9546cc3} 
+\index{ApolloInput@{ApolloInput}!bindingMask@{bindingMask}}
+\index{bindingMask@{bindingMask}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{bindingMask}{bindingMask}}
+{\footnotesize\ttfamily Input\+Binding? Apollo\+Input.\+binding\+Mask\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01411}{1411}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_a3228a27bab8b71286bb9924e317c55fe}\label{class_apollo_input_a3228a27bab8b71286bb9924e317c55fe} 
+\index{ApolloInput@{ApolloInput}!bindings@{bindings}}
+\index{bindings@{bindings}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{bindings}{bindings}}
+{\footnotesize\ttfamily IEnumerable$<$Input\+Binding$>$ Apollo\+Input.\+bindings\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01450}{1450}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_a845575f8473b757a395177d222445ef9}\label{class_apollo_input_a845575f8473b757a395177d222445ef9} 
+\index{ApolloInput@{ApolloInput}!controlSchemes@{controlSchemes}}
+\index{controlSchemes@{controlSchemes}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{controlSchemes}{controlSchemes}}
+{\footnotesize\ttfamily Read\+Only\+Array$<$Input\+Control\+Scheme$>$ Apollo\+Input.\+control\+Schemes\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01423}{1423}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_a0979aaba95247b3875e5f9b736fdc3c5}\label{class_apollo_input_a0979aaba95247b3875e5f9b736fdc3c5} 
+\index{ApolloInput@{ApolloInput}!devices@{devices}}
+\index{devices@{devices}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{devices}{devices}}
+{\footnotesize\ttfamily Read\+Only\+Array$<$Input\+Device$>$? Apollo\+Input.\+devices\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01417}{1417}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_a69b0ed1f1382c901fbf4503988a25186}\label{class_apollo_input_a69b0ed1f1382c901fbf4503988a25186} 
+\index{ApolloInput@{ApolloInput}!GamepadScheme@{GamepadScheme}}
+\index{GamepadScheme@{GamepadScheme}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{GamepadScheme}{GamepadScheme}}
+{\footnotesize\ttfamily Input\+Control\+Scheme Apollo\+Input.\+Gamepad\+Scheme\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01843}{1843}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_aa37313e4e6c241095ce60617cc9ca4fa}\label{class_apollo_input_aa37313e4e6c241095ce60617cc9ca4fa} 
+\index{ApolloInput@{ApolloInput}!KeyboardMouseScheme@{KeyboardMouseScheme}}
+\index{KeyboardMouseScheme@{KeyboardMouseScheme}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{KeyboardMouseScheme}{KeyboardMouseScheme}}
+{\footnotesize\ttfamily Input\+Control\+Scheme Apollo\+Input.\+Keyboard\+Mouse\+Scheme\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01834}{1834}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_a9ba7926923b21176676c935717a92851}\label{class_apollo_input_a9ba7926923b21176676c935717a92851} 
+\index{ApolloInput@{ApolloInput}!PlayerControls@{PlayerControls}}
+\index{PlayerControls@{PlayerControls}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{PlayerControls}{PlayerControls}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_apollo_input_1_1_player_controls_actions}{Player\+Controls\+Actions}} Apollo\+Input.\+Player\+Controls\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01690}{1690}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+\Hypertarget{class_apollo_input_a2c2a7e92b4880e89f9ee078889e6242f}\label{class_apollo_input_a2c2a7e92b4880e89f9ee078889e6242f} 
+\index{ApolloInput@{ApolloInput}!UIControls@{UIControls}}
+\index{UIControls@{UIControls}!ApolloInput@{ApolloInput}}
+\doxysubsubsection{\texorpdfstring{UIControls}{UIControls}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_apollo_input_1_1_u_i_controls_actions}{UIControls\+Actions}} Apollo\+Input.\+UIControls\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_apollo_input_8cs_source_l01832}{1832}} of file \mbox{\hyperlink{_apollo_input_8cs_source}{Apollo\+Input.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+\_\+\+Core/\+Managers/\+Inputs/\mbox{\hyperlink{_apollo_input_8cs}{Apollo\+Input.\+cs}}\end{DoxyCompactItemize}

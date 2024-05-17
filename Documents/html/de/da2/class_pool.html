@@ -94,6 +94,8 @@ $(function(){initNavTree('de/da2/class_pool.html','../../'); initResizable(); })
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="../../d4/d3b/class_pool-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Pool&lt; T &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -104,10 +106,37 @@ $(function(){initNavTree('de/da2/class_pool.html','../../'); initResizable(); })
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af50a06eba43889ccb513fe8aa5f6c6b3" id="r_af50a06eba43889ccb513fe8aa5f6c6b3"><td class="memItemLeft" align="right" valign="top"><a id="af50a06eba43889ccb513fe8aa5f6c6b3" name="af50a06eba43889ccb513fe8aa5f6c6b3"></a>
-<a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (Action&lt; T &gt; onInitialize=null, Transform spawnTransform=null, Transform home=null)</td></tr>
-<tr class="memdesc:af50a06eba43889ccb513fe8aa5f6c6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. Pool&lt;T&gt;을 사용하기 위해서는 반드시 한 번 선행되어야 한다. 이미 생성된 후에 다시 실행하면, 하위 Action을 갱신할 수 있다. <br /></td></tr>
+<tr class="memitem:af50a06eba43889ccb513fe8aa5f6c6b3" id="r_af50a06eba43889ccb513fe8aa5f6c6b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af50a06eba43889ccb513fe8aa5f6c6b3">Initialize</a> (Action&lt; T &gt; onInitialize=null, Transform spawnTransform=null, Transform home=null)</td></tr>
+<tr class="memdesc:af50a06eba43889ccb513fe8aa5f6c6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. Pool&lt;T&gt;을 사용하기 위해서는 반드시 한 번 선행되어야 한다. 이미 생성된 후에 다시 실행하면, 하위 Action을 갱신할 수 있다.  <br /></td></tr>
 <tr class="separator:af50a06eba43889ccb513fe8aa5f6c6b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b7b4362304cb3f90f5eccba7ca1d96" id="r_a79b7b4362304cb3f90f5eccba7ca1d96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79b7b4362304cb3f90f5eccba7ca1d96">AddOnGet</a> (string key, Action&lt; T &gt; action)</td></tr>
+<tr class="separator:a79b7b4362304cb3f90f5eccba7ca1d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f987def79f0a84eeffb5caa376b76a8" id="r_a3f987def79f0a84eeffb5caa376b76a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f987def79f0a84eeffb5caa376b76a8">AddOnRelease</a> (string key, Action&lt; T &gt; action)</td></tr>
+<tr class="separator:a3f987def79f0a84eeffb5caa376b76a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1ef8231aeb24c8e021ef77421fa485" id="r_a1f1ef8231aeb24c8e021ef77421fa485"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f1ef8231aeb24c8e021ef77421fa485">AddOnDestroy</a> (string key, Action&lt; T &gt; action)</td></tr>
+<tr class="separator:a1f1ef8231aeb24c8e021ef77421fa485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f9c6108dbf2a63ce5b39928d1571432" id="r_a8f9c6108dbf2a63ce5b39928d1571432"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f9c6108dbf2a63ce5b39928d1571432">SetHome</a> (Transform transform)</td></tr>
+<tr class="separator:a8f9c6108dbf2a63ce5b39928d1571432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cad572bd7b4d817cfacbfb52f6e598" id="r_aa3cad572bd7b4d817cfacbfb52f6e598"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3cad572bd7b4d817cfacbfb52f6e598">SetMaxCount</a> (int maxCount)</td></tr>
+<tr class="separator:aa3cad572bd7b4d817cfacbfb52f6e598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247b5372655d5f52b4d54653818d1787" id="r_a247b5372655d5f52b4d54653818d1787"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a247b5372655d5f52b4d54653818d1787">Get</a> ()</td></tr>
+<tr class="separator:a247b5372655d5f52b4d54653818d1787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55639986beb9b466bb663e7f6270c46" id="r_aa55639986beb9b466bb663e7f6270c46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa55639986beb9b466bb663e7f6270c46">Release</a> (T component)</td></tr>
+<tr class="separator:aa55639986beb9b466bb663e7f6270c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a653b8f0156943034a897f597ffabfbdf" id="r_a653b8f0156943034a897f597ffabfbdf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a653b8f0156943034a897f597ffabfbdf">ReleaseAll</a> ()</td></tr>
+<tr class="separator:a653b8f0156943034a897f597ffabfbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5944cb849fe37dd80744e7bcc8ea2ce0" id="r_a5944cb849fe37dd80744e7bcc8ea2ce0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5944cb849fe37dd80744e7bcc8ea2ce0">Clear</a> ()</td></tr>
+<tr class="separator:a5944cb849fe37dd80744e7bcc8ea2ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ac6556a93ab94cfcbcb1a21d88c42ff0c" id="r_ac6556a93ab94cfcbcb1a21d88c42ff0c"><td class="memItemLeft" align="right" valign="top">List&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6556a93ab94cfcbcb1a21d88c42ff0c">ActiveObjects</a> = new()</td></tr>
+<tr class="separator:ac6556a93ab94cfcbcb1a21d88c42ff0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:ac7cf01930ce0824e1147e15736701d26" id="r_ac7cf01930ce0824e1147e15736701d26"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7cf01930ce0824e1147e15736701d26">Prefab</a><code> [get]</code></td></tr>
+<tr class="separator:ac7cf01930ce0824e1147e15736701d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a href="https://www.notion.so/salinger/Pool-952c1d279fa241ac9aa3f61abfa577a1?pvs=4">https://www.notion.so/salinger/Pool-952c1d279fa241ac9aa3f61abfa577a1?pvs=4</a> </p>
@@ -121,7 +150,279 @@ Public Member Functions</h2></td></tr>
 </div>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00011">11</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1f1ef8231aeb24c8e021ef77421fa485" name="a1f1ef8231aeb24c8e021ef77421fa485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f1ef8231aeb24c8e021ef77421fa485">&#9670;&#160;</a></span>AddOnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt; <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.AddOnDestroy </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00057">57</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<a id="a79b7b4362304cb3f90f5eccba7ca1d96" name="a79b7b4362304cb3f90f5eccba7ca1d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b7b4362304cb3f90f5eccba7ca1d96">&#9670;&#160;</a></span>AddOnGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt; <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.AddOnGet </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00055">55</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3f987def79f0a84eeffb5caa376b76a8" name="a3f987def79f0a84eeffb5caa376b76a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f987def79f0a84eeffb5caa376b76a8">&#9670;&#160;</a></span>AddOnRelease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt; <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.AddOnRelease </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00056">56</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5944cb849fe37dd80744e7bcc8ea2ce0" name="a5944cb849fe37dd80744e7bcc8ea2ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5944cb849fe37dd80744e7bcc8ea2ce0">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.Clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00091">91</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<a id="a247b5372655d5f52b4d54653818d1787" name="a247b5372655d5f52b4d54653818d1787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a247b5372655d5f52b4d54653818d1787">&#9670;&#160;</a></span>Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.Get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00061">61</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<a id="af50a06eba43889ccb513fe8aa5f6c6b3" name="af50a06eba43889ccb513fe8aa5f6c6b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af50a06eba43889ccb513fe8aa5f6c6b3">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt; <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.Initialize </td>
+          <td>(</td>
+          <td class="paramtype">Action&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>onInitialize</em><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Transform</td>          <td class="paramname"><span class="paramname"><em>spawnTransform</em><span class="paramdefsep"> = </span><span class="paramdefval">null</span>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Transform</td>          <td class="paramname"><span class="paramname"><em>home</em><span class="paramdefsep"> = </span><span class="paramdefval">null</span></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. Pool&lt;T&gt;을 사용하기 위해서는 반드시 한 번 선행되어야 한다. 이미 생성된 후에 다시 실행하면, 하위 Action을 갱신할 수 있다. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00033">33</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa55639986beb9b466bb663e7f6270c46" name="aa55639986beb9b466bb663e7f6270c46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa55639986beb9b466bb663e7f6270c46">&#9670;&#160;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.Release </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>component</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00072">72</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<a id="a653b8f0156943034a897f597ffabfbdf" name="a653b8f0156943034a897f597ffabfbdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a653b8f0156943034a897f597ffabfbdf">&#9670;&#160;</a></span>ReleaseAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.ReleaseAll </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00086">86</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8f9c6108dbf2a63ce5b39928d1571432" name="a8f9c6108dbf2a63ce5b39928d1571432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f9c6108dbf2a63ce5b39928d1571432">&#9670;&#160;</a></span>SetHome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt; <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.SetHome </td>
+          <td>(</td>
+          <td class="paramtype">Transform</td>          <td class="paramname"><span class="paramname"><em>transform</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00058">58</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa3cad572bd7b4d817cfacbfb52f6e598" name="aa3cad572bd7b4d817cfacbfb52f6e598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3cad572bd7b4d817cfacbfb52f6e598">&#9670;&#160;</a></span>SetMaxCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt; <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.SetMaxCount </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxCount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00059">59</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac6556a93ab94cfcbcb1a21d88c42ff0c" name="ac6556a93ab94cfcbcb1a21d88c42ff0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6556a93ab94cfcbcb1a21d88c42ff0c">&#9670;&#160;</a></span>ActiveObjects</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;T&gt; <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.ActiveObjects = new()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00017">17</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="ac7cf01930ce0824e1147e15736701d26" name="ac7cf01930ce0824e1147e15736701d26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7cf01930ce0824e1147e15736701d26">&#9670;&#160;</a></span>Prefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject <a class="el" href="../../de/da2/class_pool.html">Pool</a>&lt; T &gt;.Prefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d04/_pool_8cs_source.html#l00026">26</a> of file <a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Project/Apollo/Assets/Scripts/_Core/_Protocol/_DataStruct/<a class="el" href="../../df/d04/_pool_8cs_source.html">Pool.cs</a></li>
 </ul>
 </div><!-- contents -->

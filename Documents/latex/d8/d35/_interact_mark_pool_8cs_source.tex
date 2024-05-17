@@ -1,6 +1,6 @@
 \doxysection{Interact\+Mark\+Pool.\+cs}
 \hypertarget{_interact_mark_pool_8cs_source}{}\label{_interact_mark_pool_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/UI/InteractMarks/InteractMarkPool.cs@{C:/Project/Apollo/Assets/Scripts/Common/UI/InteractMarks/InteractMarkPool.cs}}
-
+\mbox{\hyperlink{_interact_mark_pool_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_behaviours}{Common.Characters.Behaviours}};}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
@@ -9,28 +9,28 @@
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00005}00005\ }
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00006}\mbox{\hyperlink{namespace_common_1_1_u_i_1_1_interact_marks}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_u_i_1_1_interact_marks}{Common.UI.InteractMarks}}}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }InteractMarkPool\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_marks_1_1_interact_mark_pool}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_marks_1_1_interact_mark_pool}{InteractMarkPool}}\ :\ MonoBehaviour}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00009}00009\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CanvasMatrix\ targetCanvasMatrix;}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_u_is_1_1_canvas_matrix}{CanvasMatrix}}\ targetCanvasMatrix;}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Pool<InteractMark>\ pool;}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dred\ Dred\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ InteractionBehaviour\ Ib\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ InteractMark\ Mark\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_interaction_behaviour}{InteractionBehaviour}}\ Ib\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_mark}{InteractMark}}\ Mark\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_marks_1_1_interact_mark_pool_a20f5f4e6f75c395842045e501c229245}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_marks_1_1_interact_mark_pool_a20f5f4e6f75c395842045e501c229245}{Initialize}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ Dred\ =\ dred;}
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ Ib\ \ \ =\ dred.Behaviours.Interaction;}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ =\ dred;}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ Ib\ \ \ =\ dred.\mbox{\hyperlink{class_common_1_1_character_aa1a4b82596d7a09ebb8be0f04e78c304}{Behaviours}}.Interaction;}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ pool.AddOnGet(\textcolor{stringliteral}{"{}SetPositionFirst"{}},\ mark\ =>\ mark.SetPosition())}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddOnRelease(\textcolor{stringliteral}{"{}CompleteSprite"{}},\ mark\ =>\ mark.Complete())}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Initialize(Create,\ transform);}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ Ib.OnTargetChanged.Add(\textcolor{stringliteral}{"{}ActiveInteractMark"{}},\ ActiveInteractMark);}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ Ib.\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_interaction_behaviour_a265df817d61e4caf2e7d9ff05c716e0e}{OnTargetChanged}}.Add(\textcolor{stringliteral}{"{}ActiveInteractMark"{}},\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_marks_1_1_interact_mark_pool_ab51b42b99c4a363387333230e31c1661}{ActiveInteractMark}});}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ActiveInteractMark(InteractionComponent\ interactable)}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00029}\mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_marks_1_1_interact_mark_pool_ab51b42b99c4a363387333230e31c1661}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_marks_1_1_interact_mark_pool_ab51b42b99c4a363387333230e31c1661}{ActiveInteractMark}}(\mbox{\hyperlink{class_common_1_1_interaction_component}{InteractionComponent}}\ interactable)}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (interactable\ is\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -41,22 +41,22 @@
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Mark.IsNullOrDestroyed())\ Mark\ =\ pool.Get();}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Mark.Active(interactable);}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Mark.\mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_mark_a044398057e44792cc440a941cc246a32}{Active}}(interactable);}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Create(InteractMark\ mark)}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Create(\mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_mark}{InteractMark}}\ mark)}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ mark.Initialize(Dred);}
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ mark.SetCanvasMatrix(targetCanvasMatrix);}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ mark.\mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_mark_a325be909552d8cde2dd867d28a588f4a}{Initialize}}(\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}});}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ mark.\mbox{\hyperlink{class_common_1_1_u_i_1_1_interact_mark_aca520b2402652d6d59829594b83dc18b}{SetCanvasMatrix}}(targetCanvasMatrix);}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00050}00050\ }
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Dred.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ Ib.OnTargetChanged.Remove(\textcolor{stringliteral}{"{}ActiveInteractMark"{}});}
+\DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ Ib.\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_interaction_behaviour_a265df817d61e4caf2e7d9ff05c716e0e}{OnTargetChanged}}.Remove(\textcolor{stringliteral}{"{}ActiveInteractMark"{}});}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00057}00057\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_interact_mark_pool_8cs_source_l00058}00058\ \}}

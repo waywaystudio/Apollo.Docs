@@ -1,29 +1,29 @@
 \doxysection{Trap\+Idle\+Behaviour.\+cs}
 \hypertarget{_trap_idle_behaviour_8cs_source}{}\label{_trap_idle_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Traps/Behaviours/TrapIdleBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Traps/Behaviours/TrapIdleBehaviour.cs}}
-
+\mbox{\hyperlink{_trap_idle_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00001}\mbox{\hyperlink{namespace_common_1_1_traps_1_1_behaviours}{00001}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_traps_1_1_behaviours}{Common.Traps.Behaviours}}}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00002}00002\ \{}
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00003}00003\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TrapIdleBehaviour\ :\ TrapBehaviour}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00003}\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_trap_idle_behaviour}{00003}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_trap_idle_behaviour}{TrapIdleBehaviour}}\ :\ \mbox{\hyperlink{class_common_1_1_traps_1_1_trap_behaviour}{TrapBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00004}00004\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00005}00005\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00005}\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_trap_idle_behaviour_af8a5ec8568421941cc9a90a58d58b442}{00005}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_trap_idle_behaviour_af8a5ec8568421941cc9a90a58d58b442}{Active}}()}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00006}00006\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ActiveRigid()}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_trap_idle_behaviour_aed2f92cf23222989ebb07ba7ff006330}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_behaviours_1_1_trap_idle_behaviour_aed2f92cf23222989ebb07ba7ff006330}{ActiveRigid}}()}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ var\ currentBehaviour\ =\ Trap.CurrentBehaviour;}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ var\ currentBehaviour\ =\ \mbox{\hyperlink{class_common_1_1_trap}{Trap}}.\mbox{\hyperlink{class_common_1_1_trap_a27d05dda13bfc2d2c91c12e28f2ef131}{CurrentBehaviour}};}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO.\ Dash,\ CC\ 등의\ 행동\ Complete\ 이후에\ 실행해야\ 하는데,\ 일반\ Active는\ MaskHierarchy가\ 걸림.}}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentBehaviour.HasComponent()\ \&\&\ currentBehaviour.Invoker.IsActive)}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Trap.CurrentBehaviour.Cancel();}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_trap}{Trap}}.\mbox{\hyperlink{class_common_1_1_trap_a27d05dda13bfc2d2c91c12e28f2ef131}{CurrentBehaviour}}.Cancel();}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
@@ -32,10 +32,10 @@
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ idleOnComplete\ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ behaviourCode\ \ \ \ \ \ \ \ \ \ \ \ \ =\ DataIndex.Idle;}
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ stateMatrix.StateMask\ \ \ \ \ =\ StateMask.Soft;}
-\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ stateMatrix.IgnorableMask\ =\ StateMask.Soft;}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a88780fd980e4a0cd039380a41e82ad7a}{idleOnComplete}}\ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a4b8f91bde6fefb1f9c5a1470d7d22b55}{behaviourCode}}\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.Idle;}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ stateMatrix.StateMask\ \ \ \ \ =\ \mbox{\hyperlink{namespace_common_a42d43f9dd990eadd77e3ecd89b27d7e3}{StateMask}}.Soft;}
+\DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ stateMatrix.IgnorableMask\ =\ \mbox{\hyperlink{namespace_common_a42d43f9dd990eadd77e3ecd89b27d7e3}{StateMask}}.Soft;}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00039}00039\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_trap_idle_behaviour_8cs_source_l00040}00040\ \ \ \ \ \}}

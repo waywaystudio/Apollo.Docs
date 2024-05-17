@@ -100,7 +100,7 @@ $(function(){initNavTree('d2/df2/_karma_card_8cs_source.html','../../'); initRes
   <div class="headertitle"><div class="title">KarmaCard.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<a href="../../d2/df2/_karma_card_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Sirenix.OdinInspector;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>TMPro;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine;</div>
@@ -109,9 +109,10 @@ $(function(){initNavTree('d2/df2/_karma_card_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d1/ddd/namespace_common_1_1_u_i.html">Common.UI</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">public</span> <span class="keyword">class </span>KarmaCard : MonoBehaviour, IEditable</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html">   10</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html">KarmaCard</a> : MonoBehaviour, <a class="code hl_interface" href="../../d3/de8/interface_i_editable.html">IEditable</a></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [SerializeField] <span class="keyword">private</span> KarmaType type;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a793b578cbfd903fe3b2a65d444675515">KarmaType</a> type;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        [SerializeField] <span class="keyword">private</span> CanvasGroup front;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        [SerializeField] <span class="keyword">private</span> CanvasGroup back;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        [SerializeField] <span class="keyword">private</span> Image cardPanel;</div>
@@ -127,9 +128,9 @@ $(function(){initNavTree('d2/df2/_karma_card_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        [SerializeField] <span class="keyword">private</span> Button selectable;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">bool</span> autoRotate;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">public</span> KarmaType Type =&gt; type;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;KarmaCard&gt;</a> OnSelected { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">public</span> Button Selectable =&gt; selectable;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#ac39f331d6f7aba134d8468ed018176e2">   28</a></span>        <span class="keyword">public</span> <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a793b578cbfd903fe3b2a65d444675515">KarmaType</a> <a class="code hl_property" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#ac39f331d6f7aba134d8468ed018176e2">Type</a> =&gt; type;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#a269d29e9474c0b19b95dc549fec8a8be">   29</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;KarmaCard&gt;</a> <a class="code hl_property" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#a269d29e9474c0b19b95dc549fec8a8be">OnSelected</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#aae47b1b9ad81870a6936cdb607625070">   30</a></span>        <span class="keyword">public</span> Button <a class="code hl_property" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#aae47b1b9ad81870a6936cdb607625070">Selectable</a> =&gt; selectable;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> IsFront </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
@@ -142,41 +143,53 @@ $(function(){initNavTree('d2/df2/_karma_card_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }    </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Vanish()</div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#ad3915621db0428ac5189c00ef0c09e9b">   43</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#ad3915621db0428ac5189c00ef0c09e9b">Vanish</a>()</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            gameObject.SetActive(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> DeSelect()</div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#af46ba7b12e1de45df1cecc3048984480">   48</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#af46ba7b12e1de45df1cecc3048984480">DeSelect</a>()</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            EventSystem.current.SetSelectedGameObject(<span class="keyword">null</span>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> OnSelect()</div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#a39a67985ad041c7f677125bfb01c8250">   53</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#a39a67985ad041c7f677125bfb01c8250">OnSelect</a>()</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            OnSelected.Invoke(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <a class="code hl_property" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#a269d29e9474c0b19b95dc549fec8a8be">OnSelected</a>.Invoke(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        [Button]</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> UpdateBackByType()</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#a2d8aaef2df7e359b63ffc869bfae4baf">   59</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#a2d8aaef2df7e359b63ffc869bfae4baf">UpdateBackByType</a>()</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            illustration.sprite = <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="comment">// type != KarmaType.None ? illustrationPreset.GetValue(type) : null;</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            nameText.text = type.ToString();</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        [Button]</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> UpdateFrontByType()</div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#abe0c764059f2272b777b43a642b1397b">   68</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#abe0c764059f2272b777b43a642b1397b">UpdateFrontByType</a>()</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            pattern.color = defaultPatternColor;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="comment">// type != KarmaType.None ? colorPreset.GetValue(type) : defaultPatternColor;</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ResetPatternColor()</div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#ade382058dc18d250789a2ac230b6fd49">   74</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#ade382058dc18d250789a2ac230b6fd49">ResetPatternColor</a>()</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        {</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            pattern.color = defaultPatternColor;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
@@ -191,8 +204,8 @@ $(function(){initNavTree('d2/df2/_karma_card_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                outline.sprite = backOutlineSpriteList.Random();</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            }</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            UpdateBackByType();</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            transform.Rotate(Vector3.up * Random.value * 15);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <a class="code hl_function" href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#a2d8aaef2df7e359b63ffc869bfae4baf">UpdateBackByType</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            transform.Rotate(Vector3.up * <a class="code hl_typedef" href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.value * 15);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Update()</div>
@@ -220,15 +233,29 @@ $(function(){initNavTree('d2/df2/_karma_card_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+<div class="ttc" id="a_number_extension_8cs_html_a832e8f52fca5a678819ec96269dcb532"><div class="ttname"><a href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a></div><div class="ttdeci">UnityEngine.Random Random</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d1a/_number_extension_8cs_source.html#l00005">NumberExtension.cs:5</a></div></div>
 <div class="ttc" id="aclass_action_table_html"><div class="ttname"><a href="../../db/dcc/class_action_table.html">ActionTable</a></div><div class="ttdoc">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00067">ActionTable.cs:68</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_karma_card_html"><div class="ttname"><a href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html">Common.UI.KarmaCard</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">KarmaCard.cs:11</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_karma_card_html_a269d29e9474c0b19b95dc549fec8a8be"><div class="ttname"><a href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#a269d29e9474c0b19b95dc549fec8a8be">Common.UI.KarmaCard.OnSelected</a></div><div class="ttdeci">ActionTable&lt; KarmaCard &gt; OnSelected</div><div class="ttdef"><b>Definition</b> <a href="#l00029">KarmaCard.cs:29</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_karma_card_html_a2d8aaef2df7e359b63ffc869bfae4baf"><div class="ttname"><a href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#a2d8aaef2df7e359b63ffc869bfae4baf">Common.UI.KarmaCard.UpdateBackByType</a></div><div class="ttdeci">void UpdateBackByType()</div><div class="ttdef"><b>Definition</b> <a href="#l00059">KarmaCard.cs:59</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_karma_card_html_a39a67985ad041c7f677125bfb01c8250"><div class="ttname"><a href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#a39a67985ad041c7f677125bfb01c8250">Common.UI.KarmaCard.OnSelect</a></div><div class="ttdeci">void OnSelect()</div><div class="ttdef"><b>Definition</b> <a href="#l00053">KarmaCard.cs:53</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_karma_card_html_aae47b1b9ad81870a6936cdb607625070"><div class="ttname"><a href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#aae47b1b9ad81870a6936cdb607625070">Common.UI.KarmaCard.Selectable</a></div><div class="ttdeci">Button Selectable</div><div class="ttdef"><b>Definition</b> <a href="#l00030">KarmaCard.cs:30</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_karma_card_html_abe0c764059f2272b777b43a642b1397b"><div class="ttname"><a href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#abe0c764059f2272b777b43a642b1397b">Common.UI.KarmaCard.UpdateFrontByType</a></div><div class="ttdeci">void UpdateFrontByType()</div><div class="ttdef"><b>Definition</b> <a href="#l00068">KarmaCard.cs:68</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_karma_card_html_ac39f331d6f7aba134d8468ed018176e2"><div class="ttname"><a href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#ac39f331d6f7aba134d8468ed018176e2">Common.UI.KarmaCard.Type</a></div><div class="ttdeci">KarmaType Type</div><div class="ttdef"><b>Definition</b> <a href="#l00028">KarmaCard.cs:28</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_karma_card_html_ad3915621db0428ac5189c00ef0c09e9b"><div class="ttname"><a href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#ad3915621db0428ac5189c00ef0c09e9b">Common.UI.KarmaCard.Vanish</a></div><div class="ttdeci">void Vanish()</div><div class="ttdef"><b>Definition</b> <a href="#l00043">KarmaCard.cs:43</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_karma_card_html_ade382058dc18d250789a2ac230b6fd49"><div class="ttname"><a href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#ade382058dc18d250789a2ac230b6fd49">Common.UI.KarmaCard.ResetPatternColor</a></div><div class="ttdeci">void ResetPatternColor()</div><div class="ttdef"><b>Definition</b> <a href="#l00074">KarmaCard.cs:74</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_1_1_karma_card_html_af46ba7b12e1de45df1cecc3048984480"><div class="ttname"><a href="../../d6/da2/class_common_1_1_u_i_1_1_karma_card.html#af46ba7b12e1de45df1cecc3048984480">Common.UI.KarmaCard.DeSelect</a></div><div class="ttdeci">void DeSelect()</div><div class="ttdef"><b>Definition</b> <a href="#l00048">KarmaCard.cs:48</a></div></div>
+<div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_u_i_html"><div class="ttname"><a href="../../d1/ddd/namespace_common_1_1_u_i.html">Common.UI</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/ddf/_effect_canvas_8cs_source.html#l00007">EffectCanvas.cs:8</a></div></div>
+<div class="ttc" id="anamespace_common_html_a793b578cbfd903fe3b2a65d444675515"><div class="ttname"><a href="../../d6/dee/namespace_common.html#a793b578cbfd903fe3b2a65d444675515">Common.KarmaType</a></div><div class="ttdeci">KarmaType</div><div class="ttdef"><b>Definition</b> <a href="../../d4/da8/_karma_type_8cs_source.html#l00003">KarmaType.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><b>KarmaCard.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><a class="el" href="../../d2/df2/_karma_card_8cs.html">KarmaCard.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

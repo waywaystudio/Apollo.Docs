@@ -1,0 +1,215 @@
+\doxysection{Cameras.\+Camera\+Director Class Reference}
+\hypertarget{class_cameras_1_1_camera_director}{}\label{class_cameras_1_1_camera_director}\index{Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cameras_1_1_camera_director_aa95051101aba5fa6639a56b0dcf35b19}{Initialize}} ()
+\item 
+void \mbox{\hyperlink{class_cameras_1_1_camera_director_a5c9a99db02f4314fe572014fc41c7ae4}{Follow\+Target}} (\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{Virtual\+Camera\+Type}} camera\+Type, Transform transform)
+\item 
+void \mbox{\hyperlink{class_cameras_1_1_camera_director_af6e4ca537515d103e04bf5882d332dac}{Stop\+Follow}} (\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{Virtual\+Camera\+Type}} camera\+Type)
+\item 
+void \mbox{\hyperlink{class_cameras_1_1_camera_director_aa15a3eba7c4c690119b12075b6c849d6}{Change\+Camera}} (\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{Virtual\+Camera\+Type}} camera\+Type, Action on\+Blend\+Complete=null)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cameras_1_1_camera_director_aa15403b9933b052928359f217b708e4e}{On\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera_manager}{Camera\+Manager}} \mbox{\hyperlink{class_cameras_1_1_camera_director_aae0b0bce47a2cea7a0483be3e8373030}{manager}}
+\item 
+Camera \mbox{\hyperlink{class_cameras_1_1_camera_director_a8f4851ba2413a36a539a325201597243}{main\+Camera}}
+\item 
+Camera \mbox{\hyperlink{class_cameras_1_1_camera_director_a1b9ffc745cd78a7b56e10534f70aa624}{ui\+Camera}}
+\item 
+Cinemachine\+Brain \mbox{\hyperlink{class_cameras_1_1_camera_director_a777a6993486a0106691de3ef3a8325c8}{brain}}
+\item 
+\mbox{\hyperlink{class_table}{Table}}$<$ \mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{Virtual\+Camera\+Type}}, Cinemachine\+Virtual\+Camera $>$ \mbox{\hyperlink{class_cameras_1_1_camera_director_ab1bf5158ee58d0397a478ba357894b8b}{sub\+Camera\+Table}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Camera \mbox{\hyperlink{class_cameras_1_1_camera_director_ad8dfe0eefdba8d63c293e3a14a12a0f0}{Main\+Camera}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Camera \mbox{\hyperlink{class_cameras_1_1_camera_director_a7396e17cbae8c3952ca8ac0af091ad54}{UICamera}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Cinemachine\+Brain \mbox{\hyperlink{class_cameras_1_1_camera_director_a43915ff23eb94ae2671f29710a39a29f}{Brain}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Cinemachine\+Virtual\+Camera \mbox{\hyperlink{class_cameras_1_1_camera_director_a91459cc5b1db5c5f106fe075c86ddc6e}{this\mbox{[}\+Virtual\+Camera\+Type key\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{Virtual\+Camera\+Type}} \mbox{\hyperlink{class_cameras_1_1_camera_director_a5b78a718cd7e6f0f459e330dce580395}{Current\+Camera\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cameras_1_1_camera_director_aa15a3eba7c4c690119b12075b6c849d6}\label{class_cameras_1_1_camera_director_aa15a3eba7c4c690119b12075b6c849d6} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!ChangeCamera@{ChangeCamera}}
+\index{ChangeCamera@{ChangeCamera}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{ChangeCamera()}{ChangeCamera()}}
+{\footnotesize\ttfamily void Cameras.\+Camera\+Director.\+Change\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{Virtual\+Camera\+Type}}}]{camera\+Type,  }\item[{Action}]{on\+Blend\+Complete = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00050}{50}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_a5c9a99db02f4314fe572014fc41c7ae4}\label{class_cameras_1_1_camera_director_a5c9a99db02f4314fe572014fc41c7ae4} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!FollowTarget@{FollowTarget}}
+\index{FollowTarget@{FollowTarget}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{FollowTarget()}{FollowTarget()}}
+{\footnotesize\ttfamily void Cameras.\+Camera\+Director.\+Follow\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{Virtual\+Camera\+Type}}}]{camera\+Type,  }\item[{Transform}]{transform }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_aa95051101aba5fa6639a56b0dcf35b19}\label{class_cameras_1_1_camera_director_aa95051101aba5fa6639a56b0dcf35b19} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual void Cameras.\+Camera\+Director.\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_aa15403b9933b052928359f217b708e4e}\label{class_cameras_1_1_camera_director_aa15403b9933b052928359f217b708e4e} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily void Cameras.\+Camera\+Director.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00080}{80}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_af6e4ca537515d103e04bf5882d332dac}\label{class_cameras_1_1_camera_director_af6e4ca537515d103e04bf5882d332dac} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!StopFollow@{StopFollow}}
+\index{StopFollow@{StopFollow}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{StopFollow()}{StopFollow()}}
+{\footnotesize\ttfamily void Cameras.\+Camera\+Director.\+Stop\+Follow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{Virtual\+Camera\+Type}}}]{camera\+Type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_cameras_1_1_camera_director_a777a6993486a0106691de3ef3a8325c8}\label{class_cameras_1_1_camera_director_a777a6993486a0106691de3ef3a8325c8} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!brain@{brain}}
+\index{brain@{brain}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{brain}{brain}}
+{\footnotesize\ttfamily Cinemachine\+Brain Cameras.\+Camera\+Director.\+brain\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_a8f4851ba2413a36a539a325201597243}\label{class_cameras_1_1_camera_director_a8f4851ba2413a36a539a325201597243} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!mainCamera@{mainCamera}}
+\index{mainCamera@{mainCamera}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{mainCamera}{mainCamera}}
+{\footnotesize\ttfamily Camera Cameras.\+Camera\+Director.\+main\+Camera\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_aae0b0bce47a2cea7a0483be3e8373030}\label{class_cameras_1_1_camera_director_aae0b0bce47a2cea7a0483be3e8373030} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!manager@{manager}}
+\index{manager@{manager}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{manager}{manager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_manager}{Camera\+Manager}} Cameras.\+Camera\+Director.\+manager\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_ab1bf5158ee58d0397a478ba357894b8b}\label{class_cameras_1_1_camera_director_ab1bf5158ee58d0397a478ba357894b8b} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!subCameraTable@{subCameraTable}}
+\index{subCameraTable@{subCameraTable}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{subCameraTable}{subCameraTable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_table}{Table}}$<$\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{Virtual\+Camera\+Type}}, Cinemachine\+Virtual\+Camera$>$ Cameras.\+Camera\+Director.\+sub\+Camera\+Table\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_a1b9ffc745cd78a7b56e10534f70aa624}\label{class_cameras_1_1_camera_director_a1b9ffc745cd78a7b56e10534f70aa624} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!uiCamera@{uiCamera}}
+\index{uiCamera@{uiCamera}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{uiCamera}{uiCamera}}
+{\footnotesize\ttfamily Camera Cameras.\+Camera\+Director.\+ui\+Camera\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_cameras_1_1_camera_director_a43915ff23eb94ae2671f29710a39a29f}\label{class_cameras_1_1_camera_director_a43915ff23eb94ae2671f29710a39a29f} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!Brain@{Brain}}
+\index{Brain@{Brain}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{Brain}{Brain}}
+{\footnotesize\ttfamily Cinemachine\+Brain Cameras.\+Camera\+Director.\+Brain\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_a5b78a718cd7e6f0f459e330dce580395}\label{class_cameras_1_1_camera_director_a5b78a718cd7e6f0f459e330dce580395} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!CurrentCameraType@{CurrentCameraType}}
+\index{CurrentCameraType@{CurrentCameraType}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{CurrentCameraType}{CurrentCameraType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{Virtual\+Camera\+Type}} Cameras.\+Camera\+Director.\+Current\+Camera\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_ad8dfe0eefdba8d63c293e3a14a12a0f0}\label{class_cameras_1_1_camera_director_ad8dfe0eefdba8d63c293e3a14a12a0f0} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!MainCamera@{MainCamera}}
+\index{MainCamera@{MainCamera}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{MainCamera}{MainCamera}}
+{\footnotesize\ttfamily Camera Cameras.\+Camera\+Director.\+Main\+Camera\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_a91459cc5b1db5c5f106fe075c86ddc6e}\label{class_cameras_1_1_camera_director_a91459cc5b1db5c5f106fe075c86ddc6e} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!this\mbox{[}VirtualCameraType key\mbox{]}@{this[VirtualCameraType key]}}
+\index{this\mbox{[}VirtualCameraType key\mbox{]}@{this[VirtualCameraType key]}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{this[VirtualCameraType key]}{this[VirtualCameraType key]}}
+{\footnotesize\ttfamily Cinemachine\+Virtual\+Camera Cameras.\+Camera\+Director.\+this\mbox{[}\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{Virtual\+Camera\+Type}} key\mbox{]}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+\Hypertarget{class_cameras_1_1_camera_director_a7396e17cbae8c3952ca8ac0af091ad54}\label{class_cameras_1_1_camera_director_a7396e17cbae8c3952ca8ac0af091ad54} 
+\index{Cameras.CameraDirector@{Cameras.CameraDirector}!UICamera@{UICamera}}
+\index{UICamera@{UICamera}!Cameras.CameraDirector@{Cameras.CameraDirector}}
+\doxysubsubsection{\texorpdfstring{UICamera}{UICamera}}
+{\footnotesize\ttfamily Camera Cameras.\+Camera\+Director.\+UICamera\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_camera_director_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_camera_director_8cs_source}{Camera\+Director.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+\_\+\+Core/\+Managers/\+Cameras/\mbox{\hyperlink{_camera_director_8cs}{Camera\+Director.\+cs}}\end{DoxyCompactItemize}

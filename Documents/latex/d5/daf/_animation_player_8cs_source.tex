@@ -1,6 +1,6 @@
 \doxysection{Animation\+Player.\+cs}
 \hypertarget{_animation_player_8cs_source}{}\label{_animation_player_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Component/AnimationPlayer.cs@{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Component/AnimationPlayer.cs}}
-
+\mbox{\hyperlink{_animation_player_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -13,22 +13,22 @@
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00009}00009\ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00010}\mbox{\hyperlink{namespace_common}{00010}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common}{Common}}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00011}00011\ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }AnimationPlayer\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_animation_player}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_animation_player}{AnimationPlayer}}\ :\ MonoBehaviour}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00013}00013\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ AnimancerComponent\ animancer;}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ ClipTransition\ targetClip;}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00014}\mbox{\hyperlink{class_common_1_1_animation_player_ac1120c22594304810108aec452d545dc}{00014}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ AnimancerComponent\ \mbox{\hyperlink{class_common_1_1_animation_player_ac1120c22594304810108aec452d545dc}{animancer}};}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{00015}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ ClipTransition\ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}};}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00016}00016\ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ pauseCanceller;}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ AnimancerState\ State\ =>\ animancer.States.Current;}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ IsSelfOverride}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00019}\mbox{\hyperlink{class_common_1_1_animation_player_a5a1220ccfe2cbd422ff0bf8cb2d8d9b6}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ AnimancerState\ \mbox{\hyperlink{class_common_1_1_animation_player_a5a1220ccfe2cbd422ff0bf8cb2d8d9b6}{State}}\ =>\ \mbox{\hyperlink{class_common_1_1_animation_player_ac1120c22594304810108aec452d545dc}{animancer}}.States.Current;}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00020}\mbox{\hyperlink{class_common_1_1_animation_player_a2389f6ecfcbd090f56d060cf69c7f522}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_common_1_1_animation_player_a2389f6ecfcbd090f56d060cf69c7f522}{IsSelfOverride}}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (animancer.States.Current\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_animation_player_ac1120c22594304810108aec452d545dc}{animancer}}.States.Current\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ A\ B\ A\ SelfOverride\ (ex.\ Attack\ -\/\ Idle\ -\/\ Attack)}}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (animancer.States.TryGet(targetClip.Clip,\ out\ var\ stackedState))}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_animation_player_ac1120c22594304810108aec452d545dc}{animancer}}.States.TryGet(\mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.Clip,\ out\ var\ stackedState))}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (stackedState.IsPlaying)}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -38,9 +38,9 @@
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00035}00035\ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ A\ A\ SelfOverride\ (ex.Attack\ -\/\ Attack)}}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (animancer.States.Current.Clip\ ==\ targetClip.Clip\ \&\&\ !targetClip.IsLooping)}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_animation_player_ac1120c22594304810108aec452d545dc}{animancer}}.States.Current.Clip\ ==\ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.Clip\ \&\&\ !\mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.IsLooping)}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ animancer.Stop();}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_ac1120c22594304810108aec452d545dc}{animancer}}.Stop();}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00042}00042\ }
@@ -49,56 +49,56 @@
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00046}00046\ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00047}00047\ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Play()}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00048}\mbox{\hyperlink{class_common_1_1_animation_player_a6c299d4d81a25664acb93e99722f63fa}{00048}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_animation_player_a6c299d4d81a25664acb93e99722f63fa}{Play}}()}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (targetClip.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ Resume();}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_af05e8c2f05d69d5e08bc704dd6f9cdf1}{Resume}}();}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsSelfOverride)}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_animation_player_a2389f6ecfcbd090f56d060cf69c7f522}{IsSelfOverride}})}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ animancer.Play(targetClip,\ 0f);}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_ac1120c22594304810108aec452d545dc}{animancer}}.Play(\mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}},\ 0f);}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ animancer.Play(targetClip);}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_ac1120c22594304810108aec452d545dc}{animancer}}.Play(\mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}});}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00063}00063\ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Pause()}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00064}\mbox{\hyperlink{class_common_1_1_animation_player_a4af60d9bf830c83b5c60892a40c8a439}{00064}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_animation_player_a4af60d9bf830c83b5c60892a40c8a439}{Pause}}()}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (State\ is\ not\ \textcolor{keyword}{null})\ State.IsPlaying\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_animation_player_a5a1220ccfe2cbd422ff0bf8cb2d8d9b6}{State}}\ is\ not\ \textcolor{keyword}{null})\ State.IsPlaying\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Pause(\textcolor{keywordtype}{float}\ second,\ Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00069}\mbox{\hyperlink{class_common_1_1_animation_player_a34bd4e51e053fbd130ed1e25e2776b71}{00069}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_animation_player_a34bd4e51e053fbd130ed1e25e2776b71}{Pause}}(\textcolor{keywordtype}{float}\ second,\ Action\ callback\ =\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ pauseCanceller\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ PauseTask(second,\ pauseCanceller,\ callback).Forget();}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Resume()}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00076}\mbox{\hyperlink{class_common_1_1_animation_player_af05e8c2f05d69d5e08bc704dd6f9cdf1}{00076}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_animation_player_af05e8c2f05d69d5e08bc704dd6f9cdf1}{Resume}}()}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (State\ is\ not\ \textcolor{keyword}{null})\ State.IsPlaying\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_animation_player_a5a1220ccfe2cbd422ff0bf8cb2d8d9b6}{State}}\ is\ not\ \textcolor{keyword}{null})\ State.IsPlaying\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ pauseCanceller?.Cancel();}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Paralysis(\textcolor{keywordtype}{float}\ targetNormalTime,\ \textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00083}\mbox{\hyperlink{class_common_1_1_animation_player_a085c17ee632d41b16ec97f91a695f561}{00083}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_animation_player_a085c17ee632d41b16ec97f91a695f561}{Paralysis}}(\textcolor{keywordtype}{float}\ targetNormalTime,\ \textcolor{keywordtype}{float}\ duration,\ Action\ callback)}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ Play();}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_a6c299d4d81a25664acb93e99722f63fa}{Play}}();}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ targetClip.NormalizedStartTime\ =\ targetNormalTime;}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ Pause(duration,\ callback);}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_a4af60d9bf830c83b5c60892a40c8a439}{Pause}}(duration,\ callback);}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00091}00091\ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ GetInterval(Section\ a)}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00092}\mbox{\hyperlink{class_common_1_1_animation_player_ab5d945a6aa38ff7377a9991a413315ff}{00092}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_animation_player_ab5d945a6aa38ff7377a9991a413315ff}{GetInterval}}(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}\ a)}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ var\ dest\ =\ 0f;}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ var\ animationLength\ =\ targetClip.Length;}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ var\ animationLength\ =\ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.Length;}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ targetClip.SerializedEvents.Names.ForEach((e,\ index)\ =>}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.SerializedEvents.Names.ForEach((e,\ index)\ =>}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e\ ==\ a.ToString())}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -109,13 +109,13 @@
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dest\ *\ animationLength;}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ GetInterval(Section\ a,\ Section\ b)}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00108}\mbox{\hyperlink{class_common_1_1_animation_player_a86f7039683ea9b273b1176c40b5631f7}{00108}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_animation_player_a86f7039683ea9b273b1176c40b5631f7}{GetInterval}}(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}\ a,\ \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}\ b)}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ var\ pre\ =\ 0f;}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ var\ suf\ =\ 0f;}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ var\ animationLength\ =\ targetClip.Length;}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ var\ animationLength\ =\ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.Length;}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ targetClip.SerializedEvents.Names.ForEach((e,\ index)\ =>}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.SerializedEvents.Names.ForEach((e,\ index)\ =>}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e\ ==\ a.ToString())}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -132,20 +132,20 @@
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00129}00129\ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00130}00130\ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ HasEvent(\textcolor{keywordtype}{string}\ eventName)}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00131}\mbox{\hyperlink{class_common_1_1_animation_player_a22034161c54d8ca652d7a77f8ef12fba}{00131}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_common_1_1_animation_player_a22034161c54d8ca652d7a77f8ef12fba}{HasEvent}}(\textcolor{keywordtype}{string}\ eventName)}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ targetClip.SerializedEvents.Names.Any(e\ =>\ e\ ==\ eventName);}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.SerializedEvents.Names.Any(e\ =>\ e\ ==\ eventName);}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ TryGetEvent(\textcolor{keywordtype}{string}\ eventName,\ out\ UnityEvent\ animationEvent)}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00136}\mbox{\hyperlink{class_common_1_1_animation_player_ad181801c0083457dfc8ffea6cee2accf}{00136}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_common_1_1_animation_player_ad181801c0083457dfc8ffea6cee2accf}{TryGetEvent}}(\textcolor{keywordtype}{string}\ eventName,\ out\ UnityEvent\ animationEvent)}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEvent\ result\ =\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00139}00139\ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ targetClip.SerializedEvents.Names.ForEach((e,\ index)\ =>}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.SerializedEvents.Names.ForEach((e,\ index)\ =>}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e\ ==\ eventName)}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ targetClip.SerializedEvents.Callbacks[index];}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.SerializedEvents.Callbacks[index];}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00147}00147\ }
@@ -154,13 +154,13 @@
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ animationEvent\ is\ not\ \textcolor{keyword}{null};}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ TryGetEventNormalizedTime(\textcolor{keywordtype}{string}\ eventName,\ out\ \textcolor{keywordtype}{float}\ normalized)}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00153}\mbox{\hyperlink{class_common_1_1_animation_player_a1438fb2ffbc1ea0fcb0d52e529a3866d}{00153}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_common_1_1_animation_player_a1438fb2ffbc1ea0fcb0d52e529a3866d}{TryGetEventNormalizedTime}}(\textcolor{keywordtype}{string}\ eventName,\ out\ \textcolor{keywordtype}{float}\ normalized)}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ targetClip.SerializedEvents.Names.Length;\ i++)}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.SerializedEvents.Names.Length;\ i++)}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (targetClip.SerializedEvents.Names[i]\ !=\ eventName)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.SerializedEvents.Names[i]\ !=\ eventName)\ \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ normalized\ =\ targetClip.SerializedEvents.NormalizedTimes[i];\ }
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ normalized\ =\ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.SerializedEvents.NormalizedTimes[i];\ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00162}00162\ }
@@ -170,12 +170,12 @@
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ UniTaskVoid\ PauseTask(\textcolor{keywordtype}{float}\ second,\ CancellationTokenSource\ cts,\ Action\ callback\ =\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ Pause();}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_a4af60d9bf830c83b5c60892a40c8a439}{Pause}}();}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00170}00170\ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Delay(TimeSpan.FromSeconds(second),\ cancellationToken:\ cts.Token);}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00172}00172\ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ callback?.Invoke();}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ Resume();}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_af05e8c2f05d69d5e08bc704dd6f9cdf1}{Resume}}();}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
@@ -189,9 +189,9 @@
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ \textcolor{keyword}{new}\ List<UnityEvent>();}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ targetClip.SerializedEvents.Names.ForEach((e,\ index)\ =>}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.SerializedEvents.Names.ForEach((e,\ index)\ =>}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e\ ==\ eventName)\ result.Add(targetClip.SerializedEvents.Callbacks[index]);}
+\DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e\ ==\ eventName)\ result.Add(\mbox{\hyperlink{class_common_1_1_animation_player_a025110752e3fab9ebe81689edb9edfde}{targetClip}}.SerializedEvents.Callbacks[index]);}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_animation_player_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}

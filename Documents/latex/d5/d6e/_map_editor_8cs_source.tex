@@ -1,6 +1,6 @@
 \doxysection{Map\+Editor.\+cs}
 \hypertarget{_map_editor_8cs_source}{}\label{_map_editor_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/MapEditors/MapEditor.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/MapEditors/MapEditor.cs}}
-
+\mbox{\hyperlink{_map_editor_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00001}00001\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
@@ -14,21 +14,21 @@
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00010}00010\ \{}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{using\ }CSVMatrix\ =\ List<List<string>>;}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00012}00012\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }MapEditor\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }MapEditor\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00014}00014\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configuration}}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GameObject\ mapTemplate;}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TerrainData\ terrainDataTemplate;}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ terrainDataPath;}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ MapEditorPrefabData\ propPrefabData;}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_map_editor_prefab_data}{MapEditorPrefabData}}\ propPrefabData;}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ Or\ Load\ Property}}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextAsset\ csvFile;}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ Property}}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ StageRoomType\ mapType;}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ChapterMask\ chapter;}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ChapterThemeMask\ theme;}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_challenge_a8dbdb37c0302935fb71166728e059e60}{StageRoomType}}\ mapType;}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_challenge_a9ef53b173f5fcdb2c0b1e65dc1ad738e}{ChapterMask}}\ chapter;}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_challenge_aa670c67715aeac053de90fd7246e5c60}{ChapterThemeMask}}\ theme;}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ savePath;}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ gridSize\ =\ 4;}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ terrainOffset\ =\ 30f;}
@@ -36,12 +36,12 @@
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ rotateObstacle;}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CSVMatrix\ matrix\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DungeonMap\ currentMap;}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map}{DungeonMap}}\ currentMap;}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ MapName\ =>\ csvFile.name;}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Grid\ Grid\ =>\ CurrentMap.Grid;}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Grid\ Grid\ =>\ CurrentMap.\mbox{\hyperlink{class_common_1_1_maps_1_1_map_a0a3b07d2657b151a7414026dea998b12}{Grid}};}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Transform\ Water\ =>\ CurrentMap.Water;}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DungeonMap\ CurrentMap}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map}{DungeonMap}}\ CurrentMap}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
@@ -112,7 +112,7 @@
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ assetPath\ =\ savePath\ +\ \$\textcolor{stringliteral}{"{}/\{MapName\}.prefab"{}};}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ PrefabUtility.SaveAsPrefabAsset(CurrentMap.gameObject,\ assetPath);}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ map\ =\ result.GetComponent<DungeonMap>();}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ map\ =\ result.GetComponent<\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map}{DungeonMap}}>();}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ map.Chapter\ =\ chapter;}}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ map.Theme\ \ \ =\ theme;}}
@@ -185,11 +185,11 @@
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnThemeChanged()}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ ObstaclePrefabs\ \ \ \ \ =\ propPrefabData.GetThemeObjects(chapter,\ theme,\ PropType.Obstacle);}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ SpiritJarPrefabs\ \ \ \ =\ propPrefabData.GetThemeObjects(chapter,\ theme,\ PropType.Jar);}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ FloorTrapPrefabs\ \ \ \ =\ propPrefabData.GetThemeObjects(chapter,\ theme,\ PropType.FloorTrap);}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ VerticalTrapPrefabs\ =\ propPrefabData.GetThemeObjects(chapter,\ theme,\ PropType.VerticalTrap);}
-\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ ExitGatePrefabs\ \ \ \ \ =\ propPrefabData.GetThemeObjects(chapter,\ theme,\ PropType.ExitGate);}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ ObstaclePrefabs\ \ \ \ \ =\ propPrefabData.\mbox{\hyperlink{class_challenge_1_1_props_1_1_map_editor_prefab_data_a9bb967dca45b2c92980e81b952300d9b}{GetThemeObjects}}(chapter,\ theme,\ \mbox{\hyperlink{namespace_challenge_ac27c4c67437b3c492f2f1f6777b49a20}{PropType}}.Obstacle);}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ SpiritJarPrefabs\ \ \ \ =\ propPrefabData.\mbox{\hyperlink{class_challenge_1_1_props_1_1_map_editor_prefab_data_a9bb967dca45b2c92980e81b952300d9b}{GetThemeObjects}}(chapter,\ theme,\ \mbox{\hyperlink{namespace_challenge_ac27c4c67437b3c492f2f1f6777b49a20}{PropType}}.Jar);}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ FloorTrapPrefabs\ \ \ \ =\ propPrefabData.\mbox{\hyperlink{class_challenge_1_1_props_1_1_map_editor_prefab_data_a9bb967dca45b2c92980e81b952300d9b}{GetThemeObjects}}(chapter,\ theme,\ \mbox{\hyperlink{namespace_challenge_ac27c4c67437b3c492f2f1f6777b49a20}{PropType}}.FloorTrap);}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ VerticalTrapPrefabs\ =\ propPrefabData.\mbox{\hyperlink{class_challenge_1_1_props_1_1_map_editor_prefab_data_a9bb967dca45b2c92980e81b952300d9b}{GetThemeObjects}}(chapter,\ theme,\ \mbox{\hyperlink{namespace_challenge_ac27c4c67437b3c492f2f1f6777b49a20}{PropType}}.VerticalTrap);}
+\DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ ExitGatePrefabs\ \ \ \ \ =\ propPrefabData.\mbox{\hyperlink{class_challenge_1_1_props_1_1_map_editor_prefab_data_a9bb967dca45b2c92980e81b952300d9b}{GetThemeObjects}}(chapter,\ theme,\ \mbox{\hyperlink{namespace_challenge_ac27c4c67437b3c492f2f1f6777b49a20}{PropType}}.ExitGate);}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_map_editor_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Awake()}

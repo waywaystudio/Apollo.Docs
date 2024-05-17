@@ -1,42 +1,42 @@
 \doxysection{Trap\+Behaviour.\+cs}
 \hypertarget{_trap_behaviour_8cs_source}{}\label{_trap_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Traps/TrapBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Traps/TrapBehaviour.cs}}
-
+\mbox{\hyperlink{_trap_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_units}{Common.Units}};}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_traps}{Common.Traps}}}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TrapBehaviour\ :\ UnitBehaviour}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00005}\mbox{\hyperlink{class_common_1_1_traps_1_1_trap_behaviour}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_traps_1_1_trap_behaviour}{TrapBehaviour}}\ :\ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour}{UnitBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00006}00006\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ Trap\ Trap;}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_traps_1_1_trap_behaviour_acfaa8180500e1260579eeac4853fa23f}{00007}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_common_1_1_trap}{Trap}}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_trap_behaviour_acfaa8180500e1260579eeac4853fa23f}{Trap}};}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_traps_1_1_trap_behaviour_ac93be35701d723c70ef5d70eabf23ce4}{00010}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_trap_behaviour_ac93be35701d723c70ef5d70eabf23ce4}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_behaver}{IBehaver}}\ behaver)}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ Trap\ =\ ConvertUnitTo<Trap>();}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_trap}{Trap}}\ =\ ConvertUnitTo<Trap>();}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}StopBehaviour"{}},\ StopBehaviour)}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Complete,\ \textcolor{stringliteral}{"{}StopBehaviour"{}},\ StopBehaviour)}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ animationPlayer.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ae2d0df771f3ce2eb782377362eaadffb}{animationPlayer}}.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_animation_player_a7c4c97d12bbe433d89b421221bdf89d6}{Initialize}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (applyHaste)}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a9e73b145a790132bdd03bc612cd644e6}{applyHaste}})}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ animationPlayer.RegisterHaste(Trap.StatTable);}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ae2d0df771f3ce2eb782377362eaadffb}{animationPlayer}}.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_animation_player_ab4dc676d1bfa2d7bb8f7c3afa051ca14}{RegisterHaste}}(\mbox{\hyperlink{class_common_1_1_trap}{Trap}}.\mbox{\hyperlink{class_common_1_1_trap_addfb8f51bed8770ea61bfe91814d0aa8}{StatTable}});}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Execute()\ =>\ Invoker.Execute();}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00028}\mbox{\hyperlink{class_common_1_1_traps_1_1_trap_behaviour_afea11d381ff907128f316b8e278c2dc8}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_traps_1_1_trap_behaviour_afea11d381ff907128f316b8e278c2dc8}{Execute}}()\ =>\ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ae3b4e74d3fbe84d96b40cb6a8b727b6a}{Execute}}();}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00029}00029\ }
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00030}00030\ }
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ StopBehaviour()}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (idleOnComplete)}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a88780fd980e4a0cd039380a41e82ad7a}{idleOnComplete}})}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Trap.Behaviours.TrapIdle.ActiveRigid();}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_trap}{Trap}}.\mbox{\hyperlink{class_common_1_1_trap_ade250907e10ef2aac572fa5e9d3dd552}{Behaviours}}.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_table_ac5deb0e9c1cf6bbd1ad7b84399f0fe31}{TrapIdle}}.ActiveRigid();}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00038}00038\ }
@@ -46,7 +46,7 @@
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ behaviourCode\ =\ name.ToEnum<DataIndex>();}
+\DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a4b8f91bde6fefb1f9c5a1470d7d22b55}{behaviourCode}}\ =\ name.ToEnum<\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}>();}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00047}00047\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_trap_behaviour_8cs_source_l00048}00048\ \ \ \ \ \}}

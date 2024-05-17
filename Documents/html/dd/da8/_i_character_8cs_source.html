@@ -100,11 +100,11 @@ $(function(){initNavTree('dd/da8/_i_character_8cs_source.html','../../'); initRe
   <div class="headertitle"><div class="title">ICharacter.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/dee/namespace_common.html">Common</a></div>
+<a href="../../dd/da8/_i_character_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/dee/namespace_common.html">Common</a></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>{</div>
 <div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../d8/db9/interface_common_1_1_i_character.html">    6</a></span>    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="../../d8/db9/interface_common_1_1_i_character.html">ICharacter</a> : <a class="code hl_interface" href="../../db/dee/interface_common_1_1_i_combat_provider.html">ICombatProvider</a>,</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>                                  IBehaver,</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>                                  <a class="code hl_interface" href="../../d3/d68/interface_common_1_1_i_behaver.html">IBehaver</a>,</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>                                  <a class="code hl_interface" href="../../d0/db6/interface_common_1_1_i_damage_taker.html">IDamageTaker</a>,</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>                                  <a class="code hl_interface" href="../../d2/dc2/interface_common_1_1_i_heal_taker.html">IHealTaker</a>,</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                                  <a class="code hl_interface" href="../../dc/d54/interface_common_1_1_i_paralysis_taker.html">IParalysisTaker</a>,</div>
@@ -121,12 +121,13 @@ $(function(){initNavTree('dd/da8/_i_character_8cs_source.html','../../'); initRe
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../df/da3/interface_common_1_1_i_trap.html">   24</a></span>    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="../../df/da3/interface_common_1_1_i_trap.html">ITrap</a> : <a class="code hl_interface" href="../../db/dee/interface_common_1_1_i_combat_provider.html">ICombatProvider</a>,</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                             IBehaver</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                             <a class="code hl_interface" href="../../d3/d68/interface_common_1_1_i_behaver.html">IBehaver</a></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
 </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
+<div class="ttc" id="ainterface_common_1_1_i_behaver_html"><div class="ttname"><a href="../../d3/d68/interface_common_1_1_i_behaver.html">Common.IBehaver</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00026">ICombats.cs:27</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_character_html"><div class="ttname"><a href="../../d8/db9/interface_common_1_1_i_character.html">Common.ICharacter</a></div><div class="ttdoc">Character (Interface Packing)</div><div class="ttdef"><b>Definition</b> <a href="#l00006">ICharacter.cs:17</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_combat_provider_html"><div class="ttname"><a href="../../db/dee/interface_common_1_1_i_combat_provider.html">Common.ICombatProvider</a></div><div class="ttdoc">Character, Trap.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00041">ICombats.cs:42</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_damage_taker_html"><div class="ttname"><a href="../../d0/db6/interface_common_1_1_i_damage_taker.html">Common.IDamageTaker</a></div><div class="ttdoc">Character, Projectile, Trap, Prop.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00074">ICombats.cs:75</a></div></div>
@@ -145,7 +146,7 @@ $(function(){initNavTree('dd/da8/_i_character_8cs_source.html','../../'); initRe
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_69ceeae818856e58709384238e26443c.html">_Interface</a></li><li class="navelem"><b>ICharacter.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_69ceeae818856e58709384238e26443c.html">_Interface</a></li><li class="navelem"><a class="el" href="../../dd/da8/_i_character_8cs.html">ICharacter.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

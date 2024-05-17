@@ -1,43 +1,43 @@
 \doxysection{Pointer\+Enter\+UIEvent\+Clip.\+cs}
 \hypertarget{_pointer_enter_u_i_event_clip_8cs_source}{}\label{_pointer_enter_u_i_event_clip_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/UI/EventClips/PointerEnterUIEventClip.cs@{C:/Project/Apollo/Assets/Scripts/Common/UI/EventClips/PointerEnterUIEventClip.cs}}
-
+\mbox{\hyperlink{_pointer_enter_u_i_event_clip_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine.EventSystems;}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_u_i_1_1_event_clips}{Common.UI.EventClips}}}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }PointerEnterUIEventClip\ :\ UIEventClip}
+\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_u_i_1_1_event_clips_1_1_pointer_enter_u_i_event_clip}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_u_i_1_1_event_clips_1_1_pointer_enter_u_i_event_clip}{PointerEnterUIEventClip}}\ :\ \mbox{\hyperlink{class_common_1_1_u_i_event_clip}{UIEventClip}}}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00007}00007\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ syncWithSelectEventClip\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SelectUIEventClip\ selectClip;}
+\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_event_clips_1_1_select_u_i_event_clip}{SelectUIEventClip}}\ selectClip;}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ UIEventType\ Type\ =>\ UIEventType.PointerEnter;}
+\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_u_i_1_1_event_clips_1_1_pointer_enter_u_i_event_clip_aeb93954af4394858a6de040ea56fc714}{00011}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \mbox{\hyperlink{namespace_common_aa9209426a6fdf134d1be75b12ac1923e}{UIEventType}}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_event_clips_1_1_pointer_enter_u_i_event_clip_aeb93954af4394858a6de040ea56fc714}{Type}}\ =>\ \mbox{\hyperlink{namespace_common_aa9209426a6fdf134d1be75b12ac1923e}{UIEventType}}.PointerEnter;}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00012}00012\ \ \ }
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00014}\mbox{\hyperlink{class_common_1_1_u_i_1_1_event_clips_1_1_pointer_enter_u_i_event_clip_aa68d52d12fafaad79f9d0f985530eeea}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_event_clips_1_1_pointer_enter_u_i_event_clip_aa68d52d12fafaad79f9d0f985530eeea}{Active}}()}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (syncWithSelectEventClip)}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EventSystem.current.SetSelectedGameObject(UIElement.gameObject);}
+\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EventSystem.current.SetSelectedGameObject(\mbox{\hyperlink{class_common_1_1_u_i_element}{UIElement}}.gameObject);}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_u_i_event_clip_ac39dc229cd31b58637b04baee2f6a2e9}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();\ \ \ }
+\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_u_i_event_clip_ac39dc229cd31b58637b04baee2f6a2e9}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();\ \ \ }
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Cancel()}
+\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00028}\mbox{\hyperlink{class_common_1_1_u_i_1_1_event_clips_1_1_pointer_enter_u_i_event_clip_a3a3e76af291e114811d4dd84a974f2ac}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_event_clips_1_1_pointer_enter_u_i_event_clip_a3a3e76af291e114811d4dd84a974f2ac}{Cancel}}()}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (syncWithSelectEventClip)}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectClip.Cancel();}
+\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectClip.\mbox{\hyperlink{class_common_1_1_u_i_event_clip_ac357fa17330b202b0a52731750599cfa}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Cancel();\ }
+\DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_u_i_event_clip_ac39dc229cd31b58637b04baee2f6a2e9}{Invoker}}.\mbox{\hyperlink{class_section_invoker_aa26adf36e80006bc7458495a349c3b7e}{Cancel}}();\ }
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_pointer_enter_u_i_event_clip_8cs_source_l00039}00039\ }

@@ -1,24 +1,24 @@
 \doxysection{Challenge\+Camera\+Director.\+cs}
 \hypertarget{_challenge_camera_director_8cs_source}{}\label{_challenge_camera_director_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/ChallengeCameraDirector.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/ChallengeCameraDirector.cs}}
-
+\mbox{\hyperlink{_challenge_camera_director_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_cameras}{Cameras}};}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge}{Challenge}}}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ChallengeCameraDirector\ :\ CameraDirector}
+\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00005}\mbox{\hyperlink{class_challenge_1_1_challenge_camera_director}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_challenge_1_1_challenge_camera_director}{ChallengeCameraDirector}}\ :\ \mbox{\hyperlink{class_cameras_1_1_camera_director}{CameraDirector}}}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00006}00006\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ Dev\ Method}}
-\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ToggleCamera()}
+\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00008}\mbox{\hyperlink{class_challenge_1_1_challenge_camera_director_ad226a3e18e217b8ece9b514f7ade2625}{00008}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_challenge_camera_director_ad226a3e18e217b8ece9b514f7ade2625}{ToggleCamera}}()}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00010}00010\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
-\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CurrentCameraType\ ==\ VirtualCameraType.Dev)}
+\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_cameras_1_1_camera_director_a5b78a718cd7e6f0f459e330dce580395}{CurrentCameraType}}\ ==\ \mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Dev)}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ChangeCamera(VirtualCameraType.Player);}
+\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cameras_1_1_camera_director_aa15a3eba7c4c690119b12075b6c849d6}{ChangeCamera}}(\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Player);}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (CurrentCameraType\ ==\ VirtualCameraType.Player)}
+\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_cameras_1_1_camera_director_a5b78a718cd7e6f0f459e330dce580395}{CurrentCameraType}}\ ==\ \mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Player)}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ChangeCamera(VirtualCameraType.Dev);}
+\DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cameras_1_1_camera_director_aa15a3eba7c4c690119b12075b6c849d6}{ChangeCamera}}(\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Dev);}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00019}00019\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_challenge_camera_director_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}

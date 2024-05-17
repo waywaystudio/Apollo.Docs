@@ -100,7 +100,7 @@ $(function(){initNavTree('d5/d90/_flash_hit_8cs_source.html','../../'); initResi
   <div class="headertitle"><div class="title">FlashHit.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<a href="../../d5/d90/_flash_hit_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Threading;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Cysharp.Threading.Tasks;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine;</div>
@@ -108,7 +108,8 @@ $(function(){initNavTree('d5/d90/_flash_hit_8cs_source.html','../../'); initResi
 <div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../de/dd6/namespace_common_1_1_effects_1_1_materials.html">    6</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../de/dd6/namespace_common_1_1_effects_1_1_materials.html">Common.Effects.Materials</a></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">public</span> <span class="keyword">class </span>FlashHit : EffectBehaviour</div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html">    8</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html">FlashHit</a> : <a class="code hl_class" href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html">EffectBehaviour</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">float</span> flashDuration;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        [SerializeField] <span class="keyword">private</span> Material flashMaterial;</div>
@@ -123,24 +124,29 @@ $(function(){initNavTree('d5/d90/_flash_hit_8cs_source.html','../../'); initResi
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Initialize(ISequencer sequencer)</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html#a124f9cc718a4ee1d0bb5961cb0e7f0a8">   23</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html#a124f9cc718a4ee1d0bb5961cb0e7f0a8">Initialize</a>(<a class="code hl_interface" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a> sequencer)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            base.Initialize(sequencer);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="comment">// Ensure</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            sequencer.Sections.Add(Section.End, <span class="stringliteral">&quot;Stop&quot;</span>, Stop);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            sequencer.<a class="code hl_property" href="../../d6/de9/interface_i_sequencer.html#a1d356f0ac3768d1b639a2a554c238e2a">Sections</a>.<a class="code hl_function" href="../../d9/d7a/class_section_table.html#a61c60331af2a87be7e4d6b85a46a372b">Add</a>(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.End, <span class="stringliteral">&quot;Stop&quot;</span>, <a class="code hl_function" href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html#af9a1191aedbaf72031e98755806de933">Stop</a>);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            originalMaterial = objectRenderer.material;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
+</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> PlayEffect()</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html#ae68981a6473234dc82f040108f780b1e">   33</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html#ae68981a6473234dc82f040108f780b1e">PlayEffect</a>()</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            flashTask = <span class="keyword">new</span> CancellationTokenSource();</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            Flashing(flashTask).Forget();</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
+</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> StopEffect()</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html#a32134c101d11b094b55c4b365192db0b">   40</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html#a32134c101d11b094b55c4b365192db0b">StopEffect</a>()</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            objectRenderer.material = originalMaterial;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
@@ -149,6 +155,7 @@ $(function(){initNavTree('d5/d90/_flash_hit_8cs_source.html','../../'); initResi
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            flashTask.Cancel();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            flashTask = <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">private</span> async UniTaskVoid Flashing(CancellationTokenSource cts)</div>
@@ -157,18 +164,29 @@ $(function(){initNavTree('d5/d90/_flash_hit_8cs_source.html','../../'); initResi
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            await UniTask.Delay(TimeSpan.FromSeconds(flashDuration), cancellationToken:cts.Token);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            StopEffect();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <a class="code hl_function" href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html#a32134c101d11b094b55c4b365192db0b">StopEffect</a>();</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
 </div>
+<div class="ttc" id="a_section_8cs_html_aa2bc2fd5a40cdb0c40963e6fe6a24cce"><div class="ttname"><a href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a></div><div class="ttdeci">Section</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d0d/_section_8cs_source.html#l00001">Section.cs:2</a></div></div>
+<div class="ttc" id="aclass_common_1_1_effects_1_1_effect_behaviour_html"><div class="ttname"><a href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html">Common.Effects.EffectBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d7c/_effect_behaviour_8cs_source.html#l00005">EffectBehaviour.cs:6</a></div></div>
+<div class="ttc" id="aclass_common_1_1_effects_1_1_effect_behaviour_html_af9a1191aedbaf72031e98755806de933"><div class="ttname"><a href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html#af9a1191aedbaf72031e98755806de933">Common.Effects.EffectBehaviour.Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d7c/_effect_behaviour_8cs_source.html#l00105">EffectBehaviour.cs:105</a></div></div>
+<div class="ttc" id="aclass_common_1_1_effects_1_1_materials_1_1_flash_hit_html"><div class="ttname"><a href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html">Common.Effects.Materials.FlashHit</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">FlashHit.cs:9</a></div></div>
+<div class="ttc" id="aclass_common_1_1_effects_1_1_materials_1_1_flash_hit_html_a124f9cc718a4ee1d0bb5961cb0e7f0a8"><div class="ttname"><a href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html#a124f9cc718a4ee1d0bb5961cb0e7f0a8">Common.Effects.Materials.FlashHit.Initialize</a></div><div class="ttdeci">override void Initialize(ISequencer sequencer)</div><div class="ttdef"><b>Definition</b> <a href="#l00023">FlashHit.cs:23</a></div></div>
+<div class="ttc" id="aclass_common_1_1_effects_1_1_materials_1_1_flash_hit_html_a32134c101d11b094b55c4b365192db0b"><div class="ttname"><a href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html#a32134c101d11b094b55c4b365192db0b">Common.Effects.Materials.FlashHit.StopEffect</a></div><div class="ttdeci">override void StopEffect()</div><div class="ttdef"><b>Definition</b> <a href="#l00040">FlashHit.cs:40</a></div></div>
+<div class="ttc" id="aclass_common_1_1_effects_1_1_materials_1_1_flash_hit_html_ae68981a6473234dc82f040108f780b1e"><div class="ttname"><a href="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.html#ae68981a6473234dc82f040108f780b1e">Common.Effects.Materials.FlashHit.PlayEffect</a></div><div class="ttdeci">override void PlayEffect()</div><div class="ttdef"><b>Definition</b> <a href="#l00033">FlashHit.cs:33</a></div></div>
+<div class="ttc" id="aclass_section_table_html_a61c60331af2a87be7e4d6b85a46a372b"><div class="ttname"><a href="../../d9/d7a/class_section_table.html#a61c60331af2a87be7e4d6b85a46a372b">SectionTable.Add</a></div><div class="ttdeci">SectionTable Add(Section section, string key, Action action)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d08/_section_table_8cs_source.html#l00027">SectionTable.cs:27</a></div></div>
+<div class="ttc" id="ainterface_i_sequencer_html"><div class="ttname"><a href="../../d6/de9/interface_i_sequencer.html">ISequencer</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d67/_i_sequencer_8cs_source.html#l00001">ISequencer.cs:2</a></div></div>
+<div class="ttc" id="ainterface_i_sequencer_html_a1d356f0ac3768d1b639a2a554c238e2a"><div class="ttname"><a href="../../d6/de9/interface_i_sequencer.html#a1d356f0ac3768d1b639a2a554c238e2a">ISequencer.Sections</a></div><div class="ttdeci">SectionTable Sections</div><div class="ttdef"><b>Definition</b> <a href="../../db/d67/_i_sequencer_8cs_source.html#l00003">ISequencer.cs:3</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_effects_1_1_materials_html"><div class="ttname"><a href="../../de/dd6/namespace_common_1_1_effects_1_1_materials.html">Common.Effects.Materials</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">FlashHit.cs:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_4f600ce21d15360a8fcbaa00ac019ddf.html">Effects</a></li><li class="navelem"><a class="el" href="../../dir_59687c74731c86facbc508be8bcbdc68.html">Materials</a></li><li class="navelem"><b>FlashHit.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_4f600ce21d15360a8fcbaa00ac019ddf.html">Effects</a></li><li class="navelem"><a class="el" href="../../dir_59687c74731c86facbc508be8bcbdc68.html">Materials</a></li><li class="navelem"><a class="el" href="../../d5/d90/_flash_hit_8cs.html">FlashHit.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

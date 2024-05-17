@@ -1,0 +1,129 @@
+\doxysection{Common.\+Executors.\+Variants.\+Snare\+Executor Class Reference}
+\hypertarget{class_common_1_1_executors_1_1_variants_1_1_snare_executor}{}\label{class_common_1_1_executors_1_1_variants_1_1_snare_executor}\index{Common.Executors.Variants.SnareExecutor@{Common.Executors.Variants.SnareExecutor}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_snare_executor_a351c5f6bdb6c6200bda1909ed0df0c44}{Initialize}} (\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombat\+Provider}} combat\+Provider)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Common.\+Executors.\+Execute\+Behaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a9259432751c6f91307bcc4a0c8962013}{De\+Initialize}} ()
+\item 
+void \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_aa7c0ffd22f64d11a97b3580171c963ae}{Execute}} (Game\+Object target)
+\item 
+void \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_acb930b3e2c0c50cada259a1a2af68551}{Executes}} (List$<$ Game\+Object $>$ targets)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_snare_executor_af372436d9f6e806d4f0553567c2d5c7c}{Execute\+To\+Target}} (Game\+Object target)
+\item 
+override void \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_snare_executor_a06553e173b1c6193656046fa4fe5c1f1}{Executes\+To\+Targets}} (List$<$ Game\+Object $>$ target\+List)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_common_a9b9dde4db4210c2614baa167d50e8031}{Start\+Unit}} \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_snare_executor_a3c77ec8ed295960f3531af4e61d91aed}{start\+Unit}} = \mbox{\hyperlink{namespace_common_a9b9dde4db4210c2614baa167d50e8031a27703c8f150ac4bb0a3a83a7857353af}{Start\+Unit.\+Provider}}
+\item 
+\mbox{\hyperlink{class_pool}{Pool}}$<$ \mbox{\hyperlink{class_common_1_1_snares_1_1_snare}{Snare}} $>$ \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_snare_executor_affca9c4e54a560bc17d5669f22230049}{pool}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Common.\+Executors.\+Execute\+Behaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombat\+Provider}} \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}} \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a773be19e2a5b8c5cc8ae4257ff660ae1}{Sender}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Projectile to Projectile, Projectile To Snare 등 Instantiate 포지션을 전달받기 위해서 필요하다. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_condition_table}{Condition\+Table}}$<$ Game\+Object $>$ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_afb729ebd300fcec4d99d086fae3d2747}{Conditions}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_adf0de4fce5e6cd187f92b5a65b0b4bdf}{Activation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_i_condition_table}{ICondition\+Table$<$ Game\+Object $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_condition_table}{Condition\+Table}} \mbox{\hyperlink{interface_i_condition_table_a3def61f3a36cee5e7ff51e9a11599054}{Conditions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_condition_table}{Condition\+Table}}$<$ T $>$ \mbox{\hyperlink{interface_i_condition_table_a16d51e7abfaf958bef649419ff82b349}{Conditions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_snare_executor_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_snare_executor_8cs_source}{Snare\+Executor.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_snare_executor_a06553e173b1c6193656046fa4fe5c1f1}\label{class_common_1_1_executors_1_1_variants_1_1_snare_executor_a06553e173b1c6193656046fa4fe5c1f1} 
+\index{Common.Executors.Variants.SnareExecutor@{Common.Executors.Variants.SnareExecutor}!ExecutesToTargets@{ExecutesToTargets}}
+\index{ExecutesToTargets@{ExecutesToTargets}!Common.Executors.Variants.SnareExecutor@{Common.Executors.Variants.SnareExecutor}}
+\doxysubsubsection{\texorpdfstring{ExecutesToTargets()}{ExecutesToTargets()}}
+{\footnotesize\ttfamily override void Common.\+Executors.\+Variants.\+Snare\+Executor.\+Executes\+To\+Targets (\begin{DoxyParamCaption}\item[{List$<$ Game\+Object $>$}]{target\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a1523ffae7bd7e69df542ddcb5cde08fc}{Common.\+Executors.\+Execute\+Behaviour}}.
+
+
+
+Definition at line \mbox{\hyperlink{_snare_executor_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_snare_executor_8cs_source}{Snare\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_snare_executor_af372436d9f6e806d4f0553567c2d5c7c}\label{class_common_1_1_executors_1_1_variants_1_1_snare_executor_af372436d9f6e806d4f0553567c2d5c7c} 
+\index{Common.Executors.Variants.SnareExecutor@{Common.Executors.Variants.SnareExecutor}!ExecuteToTarget@{ExecuteToTarget}}
+\index{ExecuteToTarget@{ExecuteToTarget}!Common.Executors.Variants.SnareExecutor@{Common.Executors.Variants.SnareExecutor}}
+\doxysubsubsection{\texorpdfstring{ExecuteToTarget()}{ExecuteToTarget()}}
+{\footnotesize\ttfamily override void Common.\+Executors.\+Variants.\+Snare\+Executor.\+Execute\+To\+Target (\begin{DoxyParamCaption}\item[{Game\+Object}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_ae02062bc7a37ed5b3835ce92e2871353}{Common.\+Executors.\+Execute\+Behaviour}}.
+
+
+
+Definition at line \mbox{\hyperlink{_snare_executor_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_snare_executor_8cs_source}{Snare\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_snare_executor_a351c5f6bdb6c6200bda1909ed0df0c44}\label{class_common_1_1_executors_1_1_variants_1_1_snare_executor_a351c5f6bdb6c6200bda1909ed0df0c44} 
+\index{Common.Executors.Variants.SnareExecutor@{Common.Executors.Variants.SnareExecutor}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Common.Executors.Variants.SnareExecutor@{Common.Executors.Variants.SnareExecutor}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Common.\+Executors.\+Variants.\+Snare\+Executor.\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombat\+Provider}}}]{combat\+Provider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a9c6c06378b9d217c1b6170d378808577}{Common.\+Executors.\+Execute\+Behaviour}}.
+
+
+
+Definition at line \mbox{\hyperlink{_snare_executor_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_snare_executor_8cs_source}{Snare\+Executor.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_snare_executor_affca9c4e54a560bc17d5669f22230049}\label{class_common_1_1_executors_1_1_variants_1_1_snare_executor_affca9c4e54a560bc17d5669f22230049} 
+\index{Common.Executors.Variants.SnareExecutor@{Common.Executors.Variants.SnareExecutor}!pool@{pool}}
+\index{pool@{pool}!Common.Executors.Variants.SnareExecutor@{Common.Executors.Variants.SnareExecutor}}
+\doxysubsubsection{\texorpdfstring{pool}{pool}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pool}{Pool}}$<$\mbox{\hyperlink{class_common_1_1_snares_1_1_snare}{Snare}}$>$ Common.\+Executors.\+Variants.\+Snare\+Executor.\+pool\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_snare_executor_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_snare_executor_8cs_source}{Snare\+Executor.\+cs}}.
+
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_snare_executor_a3c77ec8ed295960f3531af4e61d91aed}\label{class_common_1_1_executors_1_1_variants_1_1_snare_executor_a3c77ec8ed295960f3531af4e61d91aed} 
+\index{Common.Executors.Variants.SnareExecutor@{Common.Executors.Variants.SnareExecutor}!startUnit@{startUnit}}
+\index{startUnit@{startUnit}!Common.Executors.Variants.SnareExecutor@{Common.Executors.Variants.SnareExecutor}}
+\doxysubsubsection{\texorpdfstring{startUnit}{startUnit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_common_a9b9dde4db4210c2614baa167d50e8031}{Start\+Unit}} Common.\+Executors.\+Variants.\+Snare\+Executor.\+start\+Unit = \mbox{\hyperlink{namespace_common_a9b9dde4db4210c2614baa167d50e8031a27703c8f150ac4bb0a3a83a7857353af}{Start\+Unit.\+Provider}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_snare_executor_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_snare_executor_8cs_source}{Snare\+Executor.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+Executors/\+Variants/\mbox{\hyperlink{_snare_executor_8cs}{Snare\+Executor.\+cs}}\end{DoxyCompactItemize}

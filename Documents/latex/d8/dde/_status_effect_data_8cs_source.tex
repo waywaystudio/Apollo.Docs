@@ -1,6 +1,6 @@
 \doxysection{Status\+Effect\+Data.\+cs}
 \hypertarget{_status_effect_data_8cs_source}{}\label{_status_effect_data_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/SheetData/CombatData/StatusEffectData.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/SheetData/CombatData/StatusEffectData.cs}}
-
+\mbox{\hyperlink{_status_effect_data_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00001}00001\ \textcolor{comment}{/*\ \ \ \ \ =====\ Do\ not\ touch\ this.\ Auto\ Generated\ Code.\ =====\ \ \ \ */}}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00002}00002\ \textcolor{comment}{/*\ \ \ \ \ If\ you\ want\ custom\ code\ generation\ modify\ this\ =>\ 'CodeGeneratorScriptableObject.cs'\ \ */}}
@@ -13,40 +13,40 @@
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00009}00009\ }
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_combat_data}{Databases.SheetData.CombatData}}}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00011}00011\ \{\ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }StatusEffectData\ :\ DataObject<StatusEffectData.StatusEffect>}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00012}\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data}{StatusEffectData}}\ :\ \mbox{\hyperlink{class_databases_1_1_data_object}{DataObject}}<StatusEffectData.StatusEffect>}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00013}00013\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [Serializable]}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }StatusEffect\ :\ IIdentifier}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{Serializable}}]}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00015}\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data_1_1_status_effect}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data_1_1_status_effect}{StatusEffect}}\ :\ \mbox{\hyperlink{interface_databases_1_1_i_identifier}{IIdentifier}}}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Int32\ id;}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ String\ name;}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ String\ iconPath;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{SerializeField}}]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{Int32}}\ id;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{SerializeField}}]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{String}}\ name;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{SerializeField}}]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{String}}\ iconPath;}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Int32\ ID\ =>\ id;}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ String\ Name\ =>\ name;}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ String\ IconPath\ =>\ iconPath;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00021}\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data_1_1_status_effect_acbd3f39b2fab589edf29ccc5068dff69}{00021}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{Int32}}\ \mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data_1_1_status_effect_acbd3f39b2fab589edf29ccc5068dff69}{ID}}\ =>\ id;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00022}\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data_1_1_status_effect_ae301b1063e5fe228de545349244046fb}{00022}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{String}}\ \mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data_1_1_status_effect_ae301b1063e5fe228de545349244046fb}{Name}}\ =>\ name;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00023}\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data_1_1_status_effect_a950fa7ad110cd603f1c471193405129a}{00023}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{String}}\ \mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data_1_1_status_effect_a950fa7ad110cd603f1c471193405129a}{IconPath}}\ =>\ iconPath;}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00024}00024\ }
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00027}00027\ \textcolor{preprocessor}{\#region\ Editor\ Functions.}}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00028}00028\ \textcolor{preprocessor}{\ \ \ \ \#if\ UNITY\_EDITOR}}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ SpreadSheetID\ =\ \textcolor{stringliteral}{"{}1eTCgtF0zV7vMK95Z820Db5jJ8mWI790hUL8KwaI-\/uJc"{}};}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ SpreadSheetName\ =\ \textcolor{stringliteral}{"{}CombatData"{}};}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ WorkSheetName\ =\ \textcolor{stringliteral}{"{}StatusEffect"{}};\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{readonly}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{SpreadSheetID}}\ =\ \textcolor{stringliteral}{"{}1eTCgtF0zV7vMK95Z820Db5jJ8mWI790hUL8KwaI-\/uJc"{}};}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{readonly}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{SpreadSheetName}}\ =\ \textcolor{stringliteral}{"{}CombatData"{}};}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{readonly}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{WorkSheetName}}\ =\ \textcolor{stringliteral}{"{}StatusEffect"{}};\ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00032}00032\ \ \ }
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ LoadFromJson()}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{LoadFromJson}}()}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00035}00035\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ List\ =\ UnityGoogleSheet.Editor.Core.UgsEditorUtility}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .LoadFromJson<StatusEffect>(\textcolor{stringliteral}{"{}CombatData"{}});\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{List}}\ =\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{UnityGoogleSheet.Editor.Core.UgsEditorUtility}}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .LoadFromJson<\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data_1_1_status_effect}{StatusEffect}}>(\textcolor{stringliteral}{"{}CombatData"{}});\ }
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ LoadFromGoogleSpreadSheet()}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{LoadFromGoogleSpreadSheet}}()}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ UnityGoogleSheet.Editor.Core.UgsExplorer}
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ParseSpreadSheet(SpreadSheetID,\ \textcolor{stringliteral}{"{}StatusEffect"{}});}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{UnityGoogleSheet.Editor.Core.UgsExplorer}}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ParseSpreadSheet(\mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{SpreadSheetID}},\ \textcolor{stringliteral}{"{}StatusEffect"{}});}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ LoadFromJson();}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_databases_1_1_data_object_ac3bc722454288e74b3ec72e330d6ca1c}{LoadFromJson}}();}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEditor.EditorUtility.SetDirty(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEditor.AssetDatabase.Refresh();}
 \DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}

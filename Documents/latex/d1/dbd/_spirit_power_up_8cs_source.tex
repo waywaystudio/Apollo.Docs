@@ -1,6 +1,6 @@
 \doxysection{Spirit\+Power\+Up.\+cs}
 \hypertarget{_spirit_power_up_8cs_source}{}\label{_spirit_power_up_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Spirits/Actions/SpiritPowerUp.cs@{C:/Project/Apollo/Assets/Scripts/Common/Spirits/Actions/SpiritPowerUp.cs}}
-
+\mbox{\hyperlink{_spirit_power_up_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Threading;}
@@ -10,48 +10,48 @@
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00006}00006\ }
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_spirits_1_1_actions}{Common.Spirits.Actions}}}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00008}00008\ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SpiritPowerUp\ :\ MonoBehaviour,\ IUnitSequencer}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00009}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up}{SpiritPowerUp}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_common_1_1_i_unit_sequencer}{IUnitSequencer}}}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00010}00010\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ spiritProlongTime\ =\ 3f;}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ StatTable\ spiritBuffTable;}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_stat_table}{StatTable}}\ spiritBuffTable;}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ Unit\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ SpiritProlongTime\ \{\ \textcolor{keyword}{get}\ =>\ spiritProlongTime;\ \textcolor{keyword}{set}\ =>\ spiritProlongTime\ =\ value;\ \}}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ StatTable\ SpiritBuffTable\ =>\ spiritBuffTable;}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00014}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_ac25162c8d768564083403b2107986ce5}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_ac25162c8d768564083403b2107986ce5}{Unit}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a126ef11edf3fa9eb012b7fdd0969e65f}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_table}{SectionTable}}\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00016}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a4686f4166975619372fd5314b7b8cb0f}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a4686f4166975619372fd5314b7b8cb0f}{Invoker}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_aa879b456801f12435ced1c475ce32d20}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_aa879b456801f12435ced1c475ce32d20}{SpiritProlongTime}}\ \{\ \textcolor{keyword}{get}\ =>\ spiritProlongTime;\ \textcolor{keyword}{set}\ =>\ spiritProlongTime\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00018}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a68a420e9c0d14dcc97b43d7fc8fcf3fe}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_stat_table}{StatTable}}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a68a420e9c0d14dcc97b43d7fc8fcf3fe}{SpiritBuffTable}}\ =>\ spiritBuffTable;}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00019}00019\ }
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ powerUpTask;}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dred\ Dred\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ Maybe\ Dred}}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ Maybe\ Dred}}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00022}00022\ }
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Spirit\ spirit)}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00024}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_add011f75fe7b7bfa5e541ea0a061c559}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_add011f75fe7b7bfa5e541ea0a061c559}{Initialize}}(\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit}{Spirit}}\ spirit)}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ Unit\ \ \ \ =\ spirit;}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ Dred\ \ \ \ =\ spirit.Dred;}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_ac25162c8d768564083403b2107986ce5}{Unit}}\ \ \ \ =\ spirit;}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ \ \ \ =\ spirit.\mbox{\hyperlink{class_common_1_1_spirits_1_1_spirit_a06f311e88546d54ab2b6efd34e5e5f71}{Dred}};}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a4686f4166975619372fd5314b7b8cb0f}{Invoker}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_section_invoker}{SectionInvoker}}(Sections);}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00029}00029\ }
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}PowerUpTask"{}},\ ()\ =>\ PowerUpTask().Forget())}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}UnRegisterPowerUp"{}},\ UnRegisterPowerUp)}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}PowerUpTask"{}},\ ()\ =>\ PowerUpTask().Forget())}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}UnRegisterPowerUp"{}},\ UnRegisterPowerUp)}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cancellation(\textcolor{stringliteral}{"{}CancelPowerUpTask"{}},\ powerUpTask)}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ spiritBuffTable.Initialize();}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ spiritBuffTable.\mbox{\hyperlink{class_common_1_1_stat_table_acb8596a9e9dc61089ec7d4e28df111a5}{Initialize}}();}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00039}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_aee6395cfb93272ed4a5524b0b667c244}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_aee6395cfb93272ed4a5524b0b667c244}{Active}}()}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a4686f4166975619372fd5314b7b8cb0f}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a4686f4166975619372fd5314b7b8cb0f}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00046}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a945074cbca603618bd315d5bcb47b150}{00046}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a945074cbca603618bd315d5bcb47b150}{Cancel}}()\ =>\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a4686f4166975619372fd5314b7b8cb0f}{Invoker}}.\mbox{\hyperlink{class_section_invoker_aa26adf36e80006bc7458495a349c3b7e}{Cancel}}();}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ChangeBasePower(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00048}\mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a573838fa28cf25e87b02dab711adb095}{00048}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a573838fa28cf25e87b02dab711adb095}{ChangeBasePower}}(\textcolor{keywordtype}{float}\ value)}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ spiritBuffTable.Change(StatType.DamageIncreaseRate,\ \textcolor{stringliteral}{"{}SpiritProviderMultiplier"{}},\ value);}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ spiritBuffTable.\mbox{\hyperlink{class_common_1_1_stat_table_ab9eaf30d6e210757cb320e5f7e3ea7a9}{Change}}(\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.DamageIncreaseRate,\ \textcolor{stringliteral}{"{}SpiritProviderMultiplier"{}},\ value);}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00052}00052\ }
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00053}00053\ }
@@ -59,21 +59,21 @@
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ powerUpTask\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ Dred.StatTable.RegisterTable(spiritBuffTable);}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}.\mbox{\hyperlink{class_common_1_1_stat_table_a735ee6db68a6dc716fb685dd25d00f95}{RegisterTable}}(spiritBuffTable);}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ Dred.SpiritPoints.Value\ +=\ 1f;}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Delay(TimeSpan.FromSeconds(spiritProlongTime),\ cancellationToken:powerUpTask.Token);}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ Dred.StatTable.UnregisterTable(spiritBuffTable);}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}.\mbox{\hyperlink{class_common_1_1_stat_table_a83cbe50ec156762eaaa7646f01807843}{UnregisterTable}}(spiritBuffTable);}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ Dred.SpiritPoints.Value\ -\/=\ 1f;}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00066}00066\ }
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ UnRegisterPowerUp()}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ Dred.StatTable.UnregisterTable(spiritBuffTable);}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}.\mbox{\hyperlink{class_common_1_1_stat_table_a83cbe50ec156762eaaa7646f01807843}{UnregisterTable}}(spiritBuffTable);}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00071}00071\ }
-\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ Invoker.Dispose();}
+\DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ \mbox{\hyperlink{class_common_1_1_spirits_1_1_actions_1_1_spirit_power_up_a4686f4166975619372fd5314b7b8cb0f}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a6062e5e18b03eb514b2fde87721fa690}{Dispose}}();}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00073}00073\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spirit_power_up_8cs_source_l00074}00074\ \}}
 

@@ -100,14 +100,16 @@ $(function(){initNavTree('d2/d55/_lobby_time_director_8cs_source.html','../../')
   <div class="headertitle"><div class="title">LobbyTimeDirector.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<a href="../../d2/d55/_lobby_time_director_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../da/d2e/namespace_times.html">Times</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/dd1/namespace_lobby.html">Lobby</a></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keyword">public</span> <span class="keyword">class </span>LobbyTimeDirector : TimeDirector</div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../dc/d4d/class_lobby_1_1_lobby_time_director.html">    6</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../dc/d4d/class_lobby_1_1_lobby_time_director.html">LobbyTimeDirector</a> : <a class="code hl_class" href="../../d3/dcc/class_times_1_1_time_director.html">TimeDirector</a></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Pause(Action callback = <span class="keyword">null</span>)</div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../dc/d4d/class_lobby_1_1_lobby_time_director.html#adb50e5c2426045ca97619ab3df590a6a">    8</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d4d/class_lobby_1_1_lobby_time_director.html#adb50e5c2426045ca97619ab3df590a6a">Pause</a>(Action callback = <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            <span class="comment">// Time Pause</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            base.Pause(callback);</div>
@@ -115,8 +117,10 @@ $(function(){initNavTree('d2/d55/_lobby_time_director_8cs_source.html','../../')
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="comment">// DeActive Player Control</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="comment">// ChallengeDirector.Input.SetPlayerActivity(false);</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        }</div>
+</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Resume(Action callback = <span class="keyword">null</span>)</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../dc/d4d/class_lobby_1_1_lobby_time_director.html#a4c0c72fada763d5cf44bd072434a1931">   17</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d4d/class_lobby_1_1_lobby_time_director.html#a4c0c72fada763d5cf44bd072434a1931">Resume</a>(Action callback = <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="comment">// Time Resume</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            base.Resume(callback);</div>
@@ -124,8 +128,14 @@ $(function(){initNavTree('d2/d55/_lobby_time_director_8cs_source.html','../../')
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="comment">// Active Player Control</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="comment">// ChallengeDirector.Input.SetPlayerActivity(true);</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
+</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+<div class="ttc" id="aclass_lobby_1_1_lobby_time_director_html"><div class="ttname"><a href="../../dc/d4d/class_lobby_1_1_lobby_time_director.html">Lobby.LobbyTimeDirector</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">LobbyTimeDirector.cs:7</a></div></div>
+<div class="ttc" id="aclass_lobby_1_1_lobby_time_director_html_a4c0c72fada763d5cf44bd072434a1931"><div class="ttname"><a href="../../dc/d4d/class_lobby_1_1_lobby_time_director.html#a4c0c72fada763d5cf44bd072434a1931">Lobby.LobbyTimeDirector.Resume</a></div><div class="ttdeci">override void Resume(Action callback=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00017">LobbyTimeDirector.cs:17</a></div></div>
+<div class="ttc" id="aclass_lobby_1_1_lobby_time_director_html_adb50e5c2426045ca97619ab3df590a6a"><div class="ttname"><a href="../../dc/d4d/class_lobby_1_1_lobby_time_director.html#adb50e5c2426045ca97619ab3df590a6a">Lobby.LobbyTimeDirector.Pause</a></div><div class="ttdeci">override void Pause(Action callback=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00008">LobbyTimeDirector.cs:8</a></div></div>
+<div class="ttc" id="aclass_times_1_1_time_director_html"><div class="ttname"><a href="../../d3/dcc/class_times_1_1_time_director.html">Times.TimeDirector</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d08/_time_director_8cs_source.html#l00008">TimeDirector.cs:9</a></div></div>
 <div class="ttc" id="anamespace_lobby_html"><div class="ttname"><a href="../../dc/dd1/namespace_lobby.html">Lobby</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/df5/_camp_section_type_8cs_source.html#l00001">CampSectionType.cs:2</a></div></div>
 <div class="ttc" id="anamespace_times_html"><div class="ttname"><a href="../../da/d2e/namespace_times.html">Times</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d08/_time_director_8cs_source.html#l00006">TimeDirector.cs:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -133,7 +143,7 @@ $(function(){initNavTree('d2/d55/_lobby_time_director_8cs_source.html','../../')
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_cc5575b2b52e1a4c4e6baf43258babe2.html">Lobby</a></li><li class="navelem"><b>LobbyTimeDirector.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_cc5575b2b52e1a4c4e6baf43258babe2.html">Lobby</a></li><li class="navelem"><a class="el" href="../../d2/d55/_lobby_time_director_8cs.html">LobbyTimeDirector.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

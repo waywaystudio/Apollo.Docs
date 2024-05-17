@@ -1,13 +1,13 @@
 \doxysection{Canvas\+Group\+Effect.\+cs}
 \hypertarget{_canvas_group_effect_8cs_source}{}\label{_canvas_group_effect_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Effects/UIs/CanvasGroupEffect.cs@{C:/Project/Apollo/Assets/Scripts/Common/Effects/UIs/CanvasGroupEffect.cs}}
-
+\mbox{\hyperlink{_canvas_group_effect_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }DG.Tweening;}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00004}\mbox{\hyperlink{namespace_common_1_1_effects_1_1_u_is}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_u_is}{Common.Effects.UIs}}}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CanvasGroupEffect\ :\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_u_i_effect_behaviour}{UIEffectBehaviour}}}
+\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_canvas_group_effect}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_canvas_group_effect}{CanvasGroupEffect}}\ :\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_u_i_effect_behaviour}{UIEffectBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00007}00007\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CanvasGroup\ targetCanvasGroup;}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00009}00009\ \ \ \ \ }
@@ -20,14 +20,14 @@
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ alphaDuration\ =\ 0.25f;}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Ease\ alphaEase\ =\ Ease.Linear;}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{enum}\ StartAlphaType\ \{\ None\ =\ 0,\ Static,\ Dynamic,\ \}}
+\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{enum}\ StartAlphaType\ \{\ \mbox{\hyperlink{_canvas_hierarchy_type_8cs_a66143eb1e62a66da4cc0e20cef9acf66a6adf97f83acf6453d4a6a4b1070f3754}{None}}\ =\ 0,\ \mbox{\hyperlink{namespace_common_ae9ed8dc674589207675d645c71e3324ba84a8921b25f505d0d2077aeb5db4bc16}{Static}},\ Dynamic,\ \}}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00020}00020\ }
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Tween\ alphaTween;}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(ISequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00024}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_canvas_group_effect_aa127cbac0870392181e831b15d61b2c9}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_canvas_group_effect_aa127cbac0870392181e831b15d61b2c9}{Initialize}}(\mbox{\hyperlink{interface_i_sequencer}{ISequencer}}\ sequencer)}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ UIEventClip)}
+\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ \mbox{\hyperlink{class_common_1_1_u_i_event_clip}{UIEventClip}})}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}Alpha\ Effect\ of\ \{gameObject.name\}\ require\ UIEventClip."{}});}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{false});}
@@ -38,12 +38,12 @@
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(sequencer);}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ PlayEffect()}
+\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00037}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_canvas_group_effect_aa8244d9342037396e84fffaaa765c812}{00037}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_canvas_group_effect_aa8244d9342037396e84fffaaa765c812}{PlayEffect}}()}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (doAlphaTween)\ AlphaTween();}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ StopEffect()}
+\DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00042}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_canvas_group_effect_a18a337fc83363bef608af30a00791633}{00042}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_canvas_group_effect_a18a337fc83363bef608af30a00791633}{StopEffect}}()}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ CancelTween();}
 \DoxyCodeLine{\Hypertarget{_canvas_group_effect_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}

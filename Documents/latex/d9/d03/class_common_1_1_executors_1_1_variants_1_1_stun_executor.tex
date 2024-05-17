@@ -1,0 +1,71 @@
+\doxysection{Common.\+Executors.\+Variants.\+Stun\+Executor Class Reference}
+\hypertarget{class_common_1_1_executors_1_1_variants_1_1_stun_executor}{}\label{class_common_1_1_executors_1_1_variants_1_1_stun_executor}\index{Common.Executors.Variants.StunExecutor@{Common.Executors.Variants.StunExecutor}}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_common_1_1_executors_1_1_variants_1_1_stun_executor_abc6e92c6e7ffe9d15b325e33c16fa6a2}{Execute\+To\+Target}} (Game\+Object target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Common.\+Executors.\+Execute\+Behaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a1523ffae7bd7e69df542ddcb5cde08fc}{Executes\+To\+Targets}} (List$<$ Game\+Object $>$ targets)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Common.\+Executors.\+Execute\+Behaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a9c6c06378b9d217c1b6170d378808577}{Initialize}} (\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombat\+Provider}} provider)
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a9259432751c6f91307bcc4a0c8962013}{De\+Initialize}} ()
+\item 
+void \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_aa7c0ffd22f64d11a97b3580171c963ae}{Execute}} (Game\+Object target)
+\item 
+void \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_acb930b3e2c0c50cada259a1a2af68551}{Executes}} (List$<$ Game\+Object $>$ targets)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour}{Common.\+Executors.\+Execute\+Behaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombat\+Provider}} \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a675136236739d5e839ed750ce7a2ce00}{Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}} \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_a773be19e2a5b8c5cc8ae4257ff660ae1}{Sender}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Projectile to Projectile, Projectile To Snare 등 Instantiate 포지션을 전달받기 위해서 필요하다. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_condition_table}{Condition\+Table}}$<$ Game\+Object $>$ \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_afb729ebd300fcec4d99d086fae3d2747}{Conditions}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_adf0de4fce5e6cd187f92b5a65b0b4bdf}{Activation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_i_condition_table}{ICondition\+Table$<$ Game\+Object $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_condition_table}{Condition\+Table}} \mbox{\hyperlink{interface_i_condition_table_a3def61f3a36cee5e7ff51e9a11599054}{Conditions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_condition_table}{Condition\+Table}}$<$ T $>$ \mbox{\hyperlink{interface_i_condition_table_a16d51e7abfaf958bef649419ff82b349}{Conditions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_stun_executor_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_stun_executor_8cs_source}{Stun\+Executor.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_common_1_1_executors_1_1_variants_1_1_stun_executor_abc6e92c6e7ffe9d15b325e33c16fa6a2}\label{class_common_1_1_executors_1_1_variants_1_1_stun_executor_abc6e92c6e7ffe9d15b325e33c16fa6a2} 
+\index{Common.Executors.Variants.StunExecutor@{Common.Executors.Variants.StunExecutor}!ExecuteToTarget@{ExecuteToTarget}}
+\index{ExecuteToTarget@{ExecuteToTarget}!Common.Executors.Variants.StunExecutor@{Common.Executors.Variants.StunExecutor}}
+\doxysubsubsection{\texorpdfstring{ExecuteToTarget()}{ExecuteToTarget()}}
+{\footnotesize\ttfamily override void Common.\+Executors.\+Variants.\+Stun\+Executor.\+Execute\+To\+Target (\begin{DoxyParamCaption}\item[{Game\+Object}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_common_1_1_executors_1_1_execute_behaviour_ae02062bc7a37ed5b3835ce92e2871353}{Common.\+Executors.\+Execute\+Behaviour}}.
+
+
+
+Definition at line \mbox{\hyperlink{_stun_executor_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_stun_executor_8cs_source}{Stun\+Executor.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+Executors/\+Variants/\mbox{\hyperlink{_stun_executor_8cs}{Stun\+Executor.\+cs}}\end{DoxyCompactItemize}

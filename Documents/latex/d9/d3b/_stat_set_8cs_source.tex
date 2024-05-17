@@ -1,38 +1,38 @@
 \doxysection{Stat\+Set.\+cs}
 \hypertarget{_stat_set_8cs_source}{}\label{_stat_set_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_DataStruct/StatSet.cs@{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_DataStruct/StatSet.cs}}
-
+\mbox{\hyperlink{_stat_set_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common}{Common}}}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }StatSet}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_stat_set}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_stat_set}{StatSet}}}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00007}00007\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ Dictionary<string,\ StatEntity>\ table\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ StatEntity\ \textcolor{keyword}{this}[\textcolor{keywordtype}{string}\ key]\ =>\ table[key];}
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Value\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<float>}}\ OnValueChanged\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00010}\mbox{\hyperlink{class_common_1_1_stat_set_a3ca4414755da1aa85813e2905ce651cd}{00010}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}\ \textcolor{keyword}{this}[\textcolor{keywordtype}{string}\ key]\ =>\ table[key];}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_stat_set_a0d2c96475056754485cbe7979dc731aa}{00011}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_stat_set_a0d2c96475056754485cbe7979dc731aa}{Value}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_stat_set_a05c14b49f2010b4ef264a9fefdf49a53}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<float>}}\ \mbox{\hyperlink{class_common_1_1_stat_set_a05c14b49f2010b4ef264a9fefdf49a53}{OnValueChanged}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Add(StatEntity\ stat)}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00015}\mbox{\hyperlink{class_common_1_1_stat_set_a05eb0092b442d7175803abb69a2bb1e9}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_stat_set_a05eb0092b442d7175803abb69a2bb1e9}{Add}}(\mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}\ stat)}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ table[stat.StatKey]\ =\ stat;}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ table[stat.\mbox{\hyperlink{class_common_1_1_stat_entity_a277004039edf395ce0c3cc661b78c996}{StatKey}}]\ =\ stat;}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ stat.OnValueChanged.Add(\textcolor{stringliteral}{"{}Calculate"{}},\ Calculate);}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ stat.\mbox{\hyperlink{class_common_1_1_stat_entity_a24522826259d68dfb3b4eae7e80dd0a4}{OnValueChanged}}.\mbox{\hyperlink{class_action_table_a84455f1a9d923913588f1d0bd00b695b}{Add}}(\textcolor{stringliteral}{"{}Calculate"{}},\ Calculate);}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ Calculate();}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Remove(StatEntity\ stat)}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00023}\mbox{\hyperlink{class_common_1_1_stat_set_a9675d445dbe76ce28761420d18b61008}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_stat_set_a9675d445dbe76ce28761420d18b61008}{Remove}}(\mbox{\hyperlink{class_common_1_1_stat_entity}{StatEntity}}\ stat)}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{\ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!table.Remove(stat.StatKey,\ out\ var\ targetStat))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!table.Remove(stat.\mbox{\hyperlink{class_common_1_1_stat_entity_a277004039edf395ce0c3cc661b78c996}{StatKey}},\ out\ var\ targetStat))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ targetStat.OnValueChanged.Remove(\textcolor{stringliteral}{"{}Calculate"{}});}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ Calculate();}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Remove(\textcolor{keywordtype}{string}\ statKey)}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00031}\mbox{\hyperlink{class_common_1_1_stat_set_a7686b0a9b29532661becf2394c371492}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_stat_set_a7686b0a9b29532661becf2394c371492}{Remove}}(\textcolor{keywordtype}{string}\ statKey)}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{\ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!table.Remove(statKey,\ out\ var\ targetStat))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -40,7 +40,7 @@
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ Calculate();}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ ContainsKey(\textcolor{keywordtype}{string}\ key)\ =>\ table.ContainsKey(key);}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00039}\mbox{\hyperlink{class_common_1_1_stat_set_a8c8585eed90c1c51269ab6bab888b597}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_common_1_1_stat_set_a8c8585eed90c1c51269ab6bab888b597}{ContainsKey}}(\textcolor{keywordtype}{string}\ key)\ =>\ table.ContainsKey(key);}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00041}00041\ }
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Calculate()}
@@ -48,10 +48,10 @@
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ 0f;}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ table.Values.ForEach(statValue\ =>\ result\ +=\ statValue.Value);}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(Mathf.Abs(Value\ -\/\ result)\ >\ 0.000001f))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(Mathf.Abs(\mbox{\hyperlink{class_common_1_1_stat_set_a0d2c96475056754485cbe7979dc731aa}{Value}}\ -\/\ result)\ >\ 0.000001f))\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ Value\ =\ result;}
-\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ OnValueChanged.Invoke(Value);}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_stat_set_a0d2c96475056754485cbe7979dc731aa}{Value}}\ =\ result;}
+\DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_stat_set_a05c14b49f2010b4ef264a9fefdf49a53}{OnValueChanged}}.\mbox{\hyperlink{class_action_table_a6a6f404afd5039c3252ba21ce53aaa39}{Invoke}}(\mbox{\hyperlink{class_common_1_1_stat_set_a0d2c96475056754485cbe7979dc731aa}{Value}});}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00052}00052\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_stat_set_8cs_source_l00053}00053\ \}}

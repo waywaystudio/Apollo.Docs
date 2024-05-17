@@ -100,26 +100,28 @@ $(function(){initNavTree('de/dc8/_input_sprite_data_8cs_source.html','../../'); 
   <div class="headertitle"><div class="title">InputSpriteData.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<a href="../../de/dc8/_input_sprite_data_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Sirenix.OdinInspector;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/d95/namespace_inputs.html">Inputs</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">public</span> <span class="keyword">class </span>InputSpriteData : ScriptableObject, IEditable</div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../db/dcf/class_inputs_1_1_input_sprite_data.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../db/dcf/class_inputs_1_1_input_sprite_data.html">InputSpriteData</a> : ScriptableObject, <a class="code hl_interface" href="../../d3/de8/interface_i_editable.html">IEditable</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [FolderPath]</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">string</span> spriteFolderPath; <span class="comment">// For Resource Getter but Do not move to #if UNITY_EDITOR area</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        [SerializeField] <span class="keyword">private</span> Sprite nullImage;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [SerializeField] <span class="keyword">private</span> Table&lt;string, Sprite&gt; spriteTable;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table&lt;string, Sprite&gt;</a> spriteTable;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">public</span> Sprite <span class="keyword">this</span>[<span class="keywordtype">string</span> path]</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../db/dcf/class_inputs_1_1_input_sprite_data.html#a47e5b57690f76d975a52734fea1e161f">   14</a></span>        <span class="keyword">public</span> Sprite <span class="keyword">this</span>[<span class="keywordtype">string</span> path]</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keyword">get</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                var spritePath = ConvertInputPath(path);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                var spritePath = <a class="code hl_function" href="../../db/dcf/class_inputs_1_1_input_sprite_data.html#ac602c78ed84bf185dda5ddeb7806726a">ConvertInputPath</a>(path);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                <span class="keywordflow">if</span> (!spriteTable.ContainsKey(spritePath))</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                <span class="keywordflow">if</span> (!spriteTable.<a class="code hl_function" href="../../d2/d8f/class_table.html#a4c012e54b170a3ee21db16e9be63cf37">ContainsKey</a>(spritePath))</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                    Debug.LogWarning($<span class="stringliteral">&quot;Not Exist Path:{path} SpritePath:{spritePath}&quot;</span>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                    <span class="keywordflow">return</span> nullImage;</div>
@@ -128,8 +130,10 @@ $(function(){initNavTree('de/dc8/_input_sprite_data_8cs_source.html','../../'); 
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="keywordflow">return</span> spriteTable[spritePath];</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            }</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
+</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> ConvertInputPath(<span class="keywordtype">string</span> inputPath)</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../db/dcf/class_inputs_1_1_input_sprite_data.html#ac602c78ed84bf185dda5ddeb7806726a">   36</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code hl_function" href="../../db/dcf/class_inputs_1_1_input_sprite_data.html#ac602c78ed84bf185dda5ddeb7806726a">ConvertInputPath</a>(<span class="keywordtype">string</span> inputPath)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="comment">// Remove the angle brackets</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            var result = inputPath.Replace(<span class="stringliteral">&quot;&lt;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>)</div>
@@ -139,6 +143,7 @@ $(function(){initNavTree('de/dc8/_input_sprite_data_8cs_source.html','../../'); 
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
+</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
@@ -146,19 +151,27 @@ $(function(){initNavTree('de/dc8/_input_sprite_data_8cs_source.html','../../'); 
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            Finder.TryGetObjectList(spriteFolderPath, <span class="stringliteral">&quot;&quot;</span>, out List&lt;Sprite&gt; inputSprites);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            spriteTable.Clear();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            spriteTable.CreateTable(inputSprites, sprite =&gt; sprite.name);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            spriteTable.<a class="code hl_function" href="../../d2/d8f/class_table.html#aa5ceff8db5657ae3e7538277e4ed6f8d">Clear</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            spriteTable.<a class="code hl_function" href="../../d2/d8f/class_table.html#aa9b824ab53436ce437d96f9e0367b854">CreateTable</a>(inputSprites, sprite =&gt; sprite.name);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="ttc" id="aclass_inputs_1_1_input_sprite_data_html"><div class="ttname"><a href="../../db/dcf/class_inputs_1_1_input_sprite_data.html">Inputs.InputSpriteData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">InputSpriteData.cs:8</a></div></div>
+<div class="ttc" id="aclass_inputs_1_1_input_sprite_data_html_ac602c78ed84bf185dda5ddeb7806726a"><div class="ttname"><a href="../../db/dcf/class_inputs_1_1_input_sprite_data.html#ac602c78ed84bf185dda5ddeb7806726a">Inputs.InputSpriteData.ConvertInputPath</a></div><div class="ttdeci">static string ConvertInputPath(string inputPath)</div><div class="ttdoc">Convert InputPath to sprite path. Sprite fileName can't include &quot;&lt;&quot; or &quot;/&quot;, Conversion require.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">InputSpriteData.cs:36</a></div></div>
+<div class="ttc" id="aclass_table_html"><div class="ttname"><a href="../../d2/d8f/class_table.html">Table</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00009">Table.cs:10</a></div></div>
+<div class="ttc" id="aclass_table_html_a4c012e54b170a3ee21db16e9be63cf37"><div class="ttname"><a href="../../d2/d8f/class_table.html#a4c012e54b170a3ee21db16e9be63cf37">Table.ContainsKey</a></div><div class="ttdeci">bool ContainsKey(TKey key)</div></div>
+<div class="ttc" id="aclass_table_html_aa5ceff8db5657ae3e7538277e4ed6f8d"><div class="ttname"><a href="../../d2/d8f/class_table.html#aa5ceff8db5657ae3e7538277e4ed6f8d">Table.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00174">Table.cs:174</a></div></div>
+<div class="ttc" id="aclass_table_html_aa9b824ab53436ce437d96f9e0367b854"><div class="ttname"><a href="../../d2/d8f/class_table.html#aa9b824ab53436ce437d96f9e0367b854">Table.CreateTable</a></div><div class="ttdeci">void CreateTable(List&lt; TValue &gt; dataList, Func&lt; TValue, TKey &gt; keySelector)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00103">Table.cs:103</a></div></div>
+<div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_inputs_html"><div class="ttname"><a href="../../df/d95/namespace_inputs.html">Inputs</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/ded/_action_type_8cs_source.html#l00001">ActionType.cs:2</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><a class="el" href="../../dir_926e0e493f7d1e6c07fae87609bc66f7.html">Inputs</a></li><li class="navelem"><b>InputSpriteData.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><a class="el" href="../../dir_926e0e493f7d1e6c07fae87609bc66f7.html">Inputs</a></li><li class="navelem"><a class="el" href="../../de/dc8/_input_sprite_data_8cs.html">InputSpriteData.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

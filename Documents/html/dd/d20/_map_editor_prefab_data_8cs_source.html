@@ -100,26 +100,29 @@ $(function(){initNavTree('dd/d20/_map_editor_prefab_data_8cs_source.html','../..
   <div class="headertitle"><div class="title">MapEditorPrefabData.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<a href="../../dd/d20/_map_editor_prefab_data_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Sirenix.OdinInspector;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="../../d4/dcb/namespace_challenge_1_1_props.html">    5</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/dcb/namespace_challenge_1_1_props.html">Challenge.Props</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">public</span> <span class="keyword">class </span>MapEditorPrefabData : ScriptableObject, IEditable</div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html">MapEditorPrefabData</a> : ScriptableObject, <a class="code hl_interface" href="../../d3/de8/interface_i_editable.html">IEditable</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [ListDrawerSettings(IsReadOnly = <span class="keyword">true</span>, ShowFoldout = <span class="keyword">true</span>)]</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        [SerializeField] <span class="keyword">private</span> List&lt;GameObject&gt; list;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> List&lt;GameObject&gt; GetThemeObjects(ChapterMask chapter, ChapterThemeMask theme, PropType type)</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html#a9bb967dca45b2c92980e81b952300d9b">   13</a></span>        <span class="keyword">public</span> List&lt;GameObject&gt; <a class="code hl_function" href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html#a9bb967dca45b2c92980e81b952300d9b">GetThemeObjects</a>(<a class="code hl_enumeration" href="../../d9/d6d/namespace_challenge.html#a9ef53b173f5fcdb2c0b1e65dc1ad738e">ChapterMask</a> chapter, <a class="code hl_enumeration" href="../../d9/d6d/namespace_challenge.html#aa670c67715aeac053de90fd7246e5c60">ChapterThemeMask</a> theme, <a class="code hl_enumeration" href="../../d9/d6d/namespace_challenge.html#ac27c4c67437b3c492f2f1f6777b49a20">PropType</a> type)</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">return</span> list.FindAll(prop =&gt; prop.TryGetComponent(out PropObject po)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">return</span> list.FindAll(prop =&gt; prop.TryGetComponent(out <a class="code hl_class" href="../../d7/d1e/class_challenge_1_1_props_1_1_prop_object.html">PropObject</a> po)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                                        &amp;&amp; po.ChapterMask.HasFlag(chapter)</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                                        &amp;&amp; po.ThemeMask.HasFlag(theme)</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                                        &amp;&amp; po.PropType == type);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
+</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
@@ -135,15 +138,23 @@ $(function(){initNavTree('dd/d20/_map_editor_prefab_data_8cs_source.html','../..
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ResetTable() =&gt; list.Clear();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
 </div>
+<div class="ttc" id="aclass_challenge_1_1_props_1_1_map_editor_prefab_data_html"><div class="ttname"><a href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html">Challenge.Props.MapEditorPrefabData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">MapEditorPrefabData.cs:8</a></div></div>
+<div class="ttc" id="aclass_challenge_1_1_props_1_1_map_editor_prefab_data_html_a9bb967dca45b2c92980e81b952300d9b"><div class="ttname"><a href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html#a9bb967dca45b2c92980e81b952300d9b">Challenge.Props.MapEditorPrefabData.GetThemeObjects</a></div><div class="ttdeci">List&lt; GameObject &gt; GetThemeObjects(ChapterMask chapter, ChapterThemeMask theme, PropType type)</div><div class="ttdef"><b>Definition</b> <a href="#l00013">MapEditorPrefabData.cs:13</a></div></div>
+<div class="ttc" id="aclass_challenge_1_1_props_1_1_prop_object_html"><div class="ttname"><a href="../../d7/d1e/class_challenge_1_1_props_1_1_prop_object.html">Challenge.Props.PropObject</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d14/_prop_object_8cs_source.html#l00005">PropObject.cs:6</a></div></div>
+<div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_challenge_1_1_props_html"><div class="ttname"><a href="../../d4/dcb/namespace_challenge_1_1_props.html">Challenge.Props</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">MapEditorPrefabData.cs:6</a></div></div>
+<div class="ttc" id="anamespace_challenge_html_a9ef53b173f5fcdb2c0b1e65dc1ad738e"><div class="ttname"><a href="../../d9/d6d/namespace_challenge.html#a9ef53b173f5fcdb2c0b1e65dc1ad738e">Challenge.ChapterMask</a></div><div class="ttdeci">ChapterMask</div><div class="ttdef"><b>Definition</b> <a href="../../d7/df7/_stage_room_type_8cs_source.html#l00006">StageRoomType.cs:7</a></div></div>
+<div class="ttc" id="anamespace_challenge_html_aa670c67715aeac053de90fd7246e5c60"><div class="ttname"><a href="../../d9/d6d/namespace_challenge.html#aa670c67715aeac053de90fd7246e5c60">Challenge.ChapterThemeMask</a></div><div class="ttdeci">ChapterThemeMask</div><div class="ttdef"><b>Definition</b> <a href="../../d7/df7/_stage_room_type_8cs_source.html#l00019">StageRoomType.cs:20</a></div></div>
+<div class="ttc" id="anamespace_challenge_html_ac27c4c67437b3c492f2f1f6777b49a20"><div class="ttname"><a href="../../d9/d6d/namespace_challenge.html#ac27c4c67437b3c492f2f1f6777b49a20">Challenge.PropType</a></div><div class="ttdeci">PropType</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da0/_prop_type_8cs_source.html#l00003">PropType.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_5477b79ade494537bba3ab6151195e50.html">Props</a></li><li class="navelem"><b>MapEditorPrefabData.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_5477b79ade494537bba3ab6151195e50.html">Props</a></li><li class="navelem"><a class="el" href="../../dd/d20/_map_editor_prefab_data_8cs.html">MapEditorPrefabData.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

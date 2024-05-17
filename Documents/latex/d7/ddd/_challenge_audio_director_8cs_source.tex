@@ -1,24 +1,24 @@
 \doxysection{Challenge\+Audio\+Director.\+cs}
 \hypertarget{_challenge_audio_director_8cs_source}{}\label{_challenge_audio_director_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/ChallengeAudioDirector.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/ChallengeAudioDirector.cs}}
-
+\mbox{\hyperlink{_challenge_audio_director_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_audios}{Audios}};}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge}{Challenge}}}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ChallengeAudioDirector\ :\ AudioDirector}
+\DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00005}\mbox{\hyperlink{class_challenge_1_1_challenge_audio_director}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_challenge_1_1_challenge_audio_director}{ChallengeAudioDirector}}\ :\ \mbox{\hyperlink{class_audios_1_1_audio_director}{AudioDirector}}}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00006}00006\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ PlayStageBgm(ChapterMask\ chapter,\ ChapterThemeMask\ theme)}
+\DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00007}\mbox{\hyperlink{class_challenge_1_1_challenge_audio_director_aaeb43b437472672a2df8adb14702b906}{00007}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_challenge_audio_director_aaeb43b437472672a2df8adb14702b906}{PlayStageBgm}}(\mbox{\hyperlink{namespace_challenge_a9ef53b173f5fcdb2c0b1e65dc1ad738e}{ChapterMask}}\ chapter,\ \mbox{\hyperlink{namespace_challenge_aa670c67715aeac053de90fd7246e5c60}{ChapterThemeMask}}\ theme)}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ var\ chapterIndex\ =\ chapter.GetBitPosition();}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ var\ themeIndex\ =\ theme.GetBitPosition();}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ var\ title\ =\ \$\textcolor{stringliteral}{"{}Chapter\{chapterIndex\}.Theme\{themeIndex\}"{}};}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ Play(title);}
+\DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_audios_1_1_audio_director_a5d7e5dbe8fa1f069640fd9e94b21925f}{Play}}(title);}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ PlayBossPhase1()\ =>\ Play(\textcolor{stringliteral}{"{}Kimmiho.Phase1"{}});}
-\DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ PlayBossPhase2()\ =>\ Play(\textcolor{stringliteral}{"{}Kimmiho.Phase2"{}});}
+\DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00016}\mbox{\hyperlink{class_challenge_1_1_challenge_audio_director_a04b34bbc04e1e2a6afebf960fa6f6f75}{00016}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_challenge_audio_director_a04b34bbc04e1e2a6afebf960fa6f6f75}{PlayBossPhase1}}()\ =>\ \mbox{\hyperlink{class_audios_1_1_audio_director_a5d7e5dbe8fa1f069640fd9e94b21925f}{Play}}(\textcolor{stringliteral}{"{}Kimmiho.Phase1"{}});}
+\DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00017}\mbox{\hyperlink{class_challenge_1_1_challenge_audio_director_a178c9f67d5140aa728da6f9498d1e742}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_challenge_audio_director_a178c9f67d5140aa728da6f9498d1e742}{PlayBossPhase2}}()\ =>\ \mbox{\hyperlink{class_audios_1_1_audio_director_a5d7e5dbe8fa1f069640fd9e94b21925f}{Play}}(\textcolor{stringliteral}{"{}Kimmiho.Phase2"{}});}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00018}00018\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_challenge_audio_director_8cs_source_l00019}00019\ \}}
 

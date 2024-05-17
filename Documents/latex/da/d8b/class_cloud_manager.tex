@@ -1,0 +1,137 @@
+\doxysection{Cloud\+Manager Class Reference}
+\hypertarget{class_cloud_manager}{}\label{class_cloud_manager}\index{CloudManager@{CloudManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cloud_manager_a19b2e86568c36a9cce5222ed378ee03e}{Initialize}} ()
+\item 
+void \mbox{\hyperlink{class_cloud_manager_ad7e1911c7c1cad551c68d2e31904eaee}{Dispose}} ()
+\item 
+void \mbox{\hyperlink{class_cloud_manager_a51f15910f2f2ad6961e244d4ffccc553}{Log\+In}} ()
+\item 
+void \mbox{\hyperlink{class_cloud_manager_aa2bd6b0e69e4cafe7e14418735d1df8e}{Save$<$ T $>$}} (string key, T value)
+\begin{DoxyCompactList}\small\item\em Save As User\+Data (string, string) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cloud_manager_a1226385ddb3aaf159c29cb9236339154}{Load$<$ T $>$}} (string key, Action$<$ T $>$ callback=null, T default\+Value=default)
+\item 
+async Uni\+Task$<$ T $>$ \mbox{\hyperlink{class_cloud_manager_a52f1bedd358fad8344b55e63b45e6151}{Load$<$ T $>$}} (string key, T default\+Value=default)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_cloud_manager_a19b4986658df7aef96e56e9f63bd3bce}{On\+Shared\+Failure}} (Play\+Fab\+Error error)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_cloud_manager_a1368e499da85d6d1c14f5f610368b14c}{Play\+Fab\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_cloud_manager_a094560540b5167258d26d6ac943b1570}{Is\+Log\+In}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_cloud_manager_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_cloud_manager_8cs_source}{Cloud\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cloud_manager_ad7e1911c7c1cad551c68d2e31904eaee}\label{class_cloud_manager_ad7e1911c7c1cad551c68d2e31904eaee} 
+\index{CloudManager@{CloudManager}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!CloudManager@{CloudManager}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Cloud\+Manager.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_cloud_manager_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_cloud_manager_8cs_source}{Cloud\+Manager.\+cs}}.
+
+\Hypertarget{class_cloud_manager_a19b2e86568c36a9cce5222ed378ee03e}\label{class_cloud_manager_a19b2e86568c36a9cce5222ed378ee03e} 
+\index{CloudManager@{CloudManager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!CloudManager@{CloudManager}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Cloud\+Manager.\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_cloud_manager_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_cloud_manager_8cs_source}{Cloud\+Manager.\+cs}}.
+
+\Hypertarget{class_cloud_manager_a1226385ddb3aaf159c29cb9236339154}\label{class_cloud_manager_a1226385ddb3aaf159c29cb9236339154} 
+\index{CloudManager@{CloudManager}!Load$<$ T $>$@{Load$<$ T $>$}}
+\index{Load$<$ T $>$@{Load$<$ T $>$}!CloudManager@{CloudManager}}
+\doxysubsubsection{\texorpdfstring{Load$<$ T $>$()}{Load< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Cloud\+Manager.\+Load$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{Action$<$ T $>$}]{callback = {\ttfamily null},  }\item[{T}]{default\+Value = {\ttfamily default} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_cloud_manager_8cs_source_l00062}{62}} of file \mbox{\hyperlink{_cloud_manager_8cs_source}{Cloud\+Manager.\+cs}}.
+
+\Hypertarget{class_cloud_manager_a52f1bedd358fad8344b55e63b45e6151}\label{class_cloud_manager_a52f1bedd358fad8344b55e63b45e6151} 
+\index{CloudManager@{CloudManager}!Load$<$ T $>$@{Load$<$ T $>$}}
+\index{Load$<$ T $>$@{Load$<$ T $>$}!CloudManager@{CloudManager}}
+\doxysubsubsection{\texorpdfstring{Load$<$ T $>$()}{Load< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Uni\+Task$<$ T $>$ Cloud\+Manager.\+Load$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{T}]{default\+Value = {\ttfamily default} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_cloud_manager_8cs_source_l00069}{69}} of file \mbox{\hyperlink{_cloud_manager_8cs_source}{Cloud\+Manager.\+cs}}.
+
+\Hypertarget{class_cloud_manager_a51f15910f2f2ad6961e244d4ffccc553}\label{class_cloud_manager_a51f15910f2f2ad6961e244d4ffccc553} 
+\index{CloudManager@{CloudManager}!LogIn@{LogIn}}
+\index{LogIn@{LogIn}!CloudManager@{CloudManager}}
+\doxysubsubsection{\texorpdfstring{LogIn()}{LogIn()}}
+{\footnotesize\ttfamily void Cloud\+Manager.\+Log\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_cloud_manager_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_cloud_manager_8cs_source}{Cloud\+Manager.\+cs}}.
+
+\Hypertarget{class_cloud_manager_a19b4986658df7aef96e56e9f63bd3bce}\label{class_cloud_manager_a19b4986658df7aef96e56e9f63bd3bce} 
+\index{CloudManager@{CloudManager}!OnSharedFailure@{OnSharedFailure}}
+\index{OnSharedFailure@{OnSharedFailure}!CloudManager@{CloudManager}}
+\doxysubsubsection{\texorpdfstring{OnSharedFailure()}{OnSharedFailure()}}
+{\footnotesize\ttfamily static void Cloud\+Manager.\+On\+Shared\+Failure (\begin{DoxyParamCaption}\item[{Play\+Fab\+Error}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_cloud_manager_aa2bd6b0e69e4cafe7e14418735d1df8e}\label{class_cloud_manager_aa2bd6b0e69e4cafe7e14418735d1df8e} 
+\index{CloudManager@{CloudManager}!Save$<$ T $>$@{Save$<$ T $>$}}
+\index{Save$<$ T $>$@{Save$<$ T $>$}!CloudManager@{CloudManager}}
+\doxysubsubsection{\texorpdfstring{Save$<$ T $>$()}{Save< T >()}}
+{\footnotesize\ttfamily void Cloud\+Manager.\+Save$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+Save As User\+Data (string, string) 
+
+
+
+Definition at line \mbox{\hyperlink{_cloud_manager_8cs_source_l00046}{46}} of file \mbox{\hyperlink{_cloud_manager_8cs_source}{Cloud\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_cloud_manager_a094560540b5167258d26d6ac943b1570}\label{class_cloud_manager_a094560540b5167258d26d6ac943b1570} 
+\index{CloudManager@{CloudManager}!IsLogIn@{IsLogIn}}
+\index{IsLogIn@{IsLogIn}!CloudManager@{CloudManager}}
+\doxysubsubsection{\texorpdfstring{IsLogIn}{IsLogIn}}
+{\footnotesize\ttfamily bool Cloud\+Manager.\+Is\+Log\+In\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_cloud_manager_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_cloud_manager_8cs_source}{Cloud\+Manager.\+cs}}.
+
+\Hypertarget{class_cloud_manager_a1368e499da85d6d1c14f5f610368b14c}\label{class_cloud_manager_a1368e499da85d6d1c14f5f610368b14c} 
+\index{CloudManager@{CloudManager}!PlayFabId@{PlayFabId}}
+\index{PlayFabId@{PlayFabId}!CloudManager@{CloudManager}}
+\doxysubsubsection{\texorpdfstring{PlayFabId}{PlayFabId}}
+{\footnotesize\ttfamily string Cloud\+Manager.\+Play\+Fab\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_cloud_manager_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_cloud_manager_8cs_source}{Cloud\+Manager.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+\_\+\+Core/\+Managers/\mbox{\hyperlink{_cloud_manager_8cs}{Cloud\+Manager.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,144 @@
+\doxysection{Input\+Manager Class Reference}
+\hypertarget{class_input_manager}{}\label{class_input_manager}\index{InputManager@{InputManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_input_manager_a102ac93b5fc077f19151cb3360d43870}{Initialize}} ()
+\item 
+bool \mbox{\hyperlink{class_input_manager_a53b5b417ef55b4556dd0e0a8ba84e079}{Is\+Press}} (\mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{Action\+Type}} type)
+\item 
+Vector3 \mbox{\hyperlink{class_input_manager_a7351ff23af6f0a153fcff5daf2b228db}{Get\+Mouse\+Position}} (Camera camera, float ground\+Height=0f)
+\item 
+Sprite \mbox{\hyperlink{class_input_manager_a6f4467b891381f7cbfb4f83583c376b4}{Get\+Action\+Sprite}} (\mbox{\hyperlink{class_inputs_1_1_input_action_entity}{Input\+Action\+Entity}} action\+Entity, string sub\+Action\+Name="{}"{})
+\begin{DoxyCompactList}\small\item\em Get Input Image. \end{DoxyCompactList}\item 
+Sprite \mbox{\hyperlink{class_input_manager_a10c7cb4ddb50632c8302e73025914434}{Get\+Action\+Sprite}} (\mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{Action\+Type}} type, string sub\+Action\+Name="{}"{})
+\item 
+void \mbox{\hyperlink{class_input_manager_ac78b830475c32f01ad3d472d00be397b}{Dispose}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_inputs_1_1_input_action_entity}{Input\+Action\+Entity}} \mbox{\hyperlink{class_input_manager_a990f48f00a1549c38f7b876217deb4e0}{this\mbox{[}\+Action\+Type type\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_inputs_1_1_input_director}{Input\+Director}} \mbox{\hyperlink{class_input_manager_a0e027c3046be978c7f9017c66195b0fb}{Director}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_input_manager_adbf330bf48542c5a47e0f308d1b7927a}{Is\+Mouse\+On\+UI}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_input_manager_ac78b830475c32f01ad3d472d00be397b}\label{class_input_manager_ac78b830475c32f01ad3d472d00be397b} 
+\index{InputManager@{InputManager}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Input\+Manager.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cs_source_l00115}{115}} of file \mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}}.
+
+\Hypertarget{class_input_manager_a10c7cb4ddb50632c8302e73025914434}\label{class_input_manager_a10c7cb4ddb50632c8302e73025914434} 
+\index{InputManager@{InputManager}!GetActionSprite@{GetActionSprite}}
+\index{GetActionSprite@{GetActionSprite}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{GetActionSprite()}{GetActionSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sprite Input\+Manager.\+Get\+Action\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{Action\+Type}}}]{type,  }\item[{string}]{sub\+Action\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_input_manager_a6f4467b891381f7cbfb4f83583c376b4}\label{class_input_manager_a6f4467b891381f7cbfb4f83583c376b4} 
+\index{InputManager@{InputManager}!GetActionSprite@{GetActionSprite}}
+\index{GetActionSprite@{GetActionSprite}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{GetActionSprite()}{GetActionSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sprite Input\+Manager.\+Get\+Action\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_inputs_1_1_input_action_entity}{Input\+Action\+Entity}}}]{action\+Entity,  }\item[{string}]{sub\+Action\+Name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Get Input Image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action\+Name} & "{}\+Dash"{}, "{}\+Move"{} and so on\\
+\hline
+{\em sub\+Action\+Name} & if action\+Name is "{}\+Move"{}, please insert sub\+Action\+Name within \{"{}up"{}, "{}down"{}, "{}left"{}, "{}right"{}\}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if, sprite\+Data is not exist, return null
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cs_source_l00106}{106}} of file \mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}}.
+
+\Hypertarget{class_input_manager_a7351ff23af6f0a153fcff5daf2b228db}\label{class_input_manager_a7351ff23af6f0a153fcff5daf2b228db} 
+\index{InputManager@{InputManager}!GetMousePosition@{GetMousePosition}}
+\index{GetMousePosition@{GetMousePosition}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{GetMousePosition()}{GetMousePosition()}}
+{\footnotesize\ttfamily Vector3 Input\+Manager.\+Get\+Mouse\+Position (\begin{DoxyParamCaption}\item[{Camera}]{camera,  }\item[{float}]{ground\+Height = {\ttfamily 0f} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cs_source_l00081}{81}} of file \mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}}.
+
+\Hypertarget{class_input_manager_a102ac93b5fc077f19151cb3360d43870}\label{class_input_manager_a102ac93b5fc077f19151cb3360d43870} 
+\index{InputManager@{InputManager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Input\+Manager.\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cs_source_l00048}{48}} of file \mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}}.
+
+\Hypertarget{class_input_manager_a53b5b417ef55b4556dd0e0a8ba84e079}\label{class_input_manager_a53b5b417ef55b4556dd0e0a8ba84e079} 
+\index{InputManager@{InputManager}!IsPress@{IsPress}}
+\index{IsPress@{IsPress}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{IsPress()}{IsPress()}}
+{\footnotesize\ttfamily bool Input\+Manager.\+Is\+Press (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{Action\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cs_source_l00076}{76}} of file \mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_input_manager_a0e027c3046be978c7f9017c66195b0fb}\label{class_input_manager_a0e027c3046be978c7f9017c66195b0fb} 
+\index{InputManager@{InputManager}!Director@{Director}}
+\index{Director@{Director}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{Director}{Director}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_inputs_1_1_input_director}{Input\+Director}} Input\+Manager.\+Director\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}}.
+
+\Hypertarget{class_input_manager_adbf330bf48542c5a47e0f308d1b7927a}\label{class_input_manager_adbf330bf48542c5a47e0f308d1b7927a} 
+\index{InputManager@{InputManager}!IsMouseOnUI@{IsMouseOnUI}}
+\index{IsMouseOnUI@{IsMouseOnUI}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{IsMouseOnUI}{IsMouseOnUI}}
+{\footnotesize\ttfamily bool Input\+Manager.\+Is\+Mouse\+On\+UI\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}}.
+
+\Hypertarget{class_input_manager_a990f48f00a1549c38f7b876217deb4e0}\label{class_input_manager_a990f48f00a1549c38f7b876217deb4e0} 
+\index{InputManager@{InputManager}!this\mbox{[}ActionType type\mbox{]}@{this[ActionType type]}}
+\index{this\mbox{[}ActionType type\mbox{]}@{this[ActionType type]}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{this[ActionType type]}{this[ActionType type]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_inputs_1_1_input_action_entity}{Input\+Action\+Entity}} Input\+Manager.\+this\mbox{[}\mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{Action\+Type}} type\mbox{]}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+\_\+\+Core/\+Managers/\mbox{\hyperlink{_input_manager_8cs}{Input\+Manager.\+cs}}\end{DoxyCompactItemize}

@@ -1,39 +1,39 @@
 \doxysection{Camera\+Zoom.\+cs}
 \hypertarget{_camera_zoom_8cs_source}{}\label{_camera_zoom_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Effects/Cameras/CameraZoom.cs@{C:/Project/Apollo/Assets/Scripts/Common/Effects/Cameras/CameraZoom.cs}}
-
+\mbox{\hyperlink{_camera_zoom_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Cinemachine;}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_cameras}{Common.Effects.Cameras}}}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CameraZoom\ :\ EffectBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_effects_1_1_cameras_1_1_camera_zoom}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_effects_1_1_cameras_1_1_camera_zoom}{CameraZoom}}\ :\ \mbox{\hyperlink{class_common_1_1_effects_1_1_effect_behaviour}{EffectBehaviour}},\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00007}00007\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CameraManager\ cameraManager;}
+\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_camera_manager}{CameraManager}}\ cameraManager;}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CinemachineBlendDefinition\ blend;}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ magnification\ =\ 0.8f;}
-\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ VirtualCameraType\ targetCamera;}
+\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}\ targetCamera;}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00012}00012\ }
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ PlayEffect()}
+\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00014}\mbox{\hyperlink{class_common_1_1_effects_1_1_cameras_1_1_camera_zoom_a4c40300ee612c798a9e15a6853c19dff}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_cameras_1_1_camera_zoom_a4c40300ee612c798a9e15a6853c19dff}{PlayEffect}}()}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \{\ \ \ }
-\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (targetCamera\ !=\ cameraManager.ActiveCameraType)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (targetCamera\ !=\ cameraManager.\mbox{\hyperlink{class_camera_manager_a8223539cc493e713f6d074be8f56b468}{ActiveCameraType}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ var\ effectorCamera\ =\ cameraManager.Director[VirtualCameraType.Effector];}
-\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ var\ playerCameraFov\ =\ cameraManager.Director[VirtualCameraType.Player].m\_Lens.FieldOfView;}
+\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ var\ effectorCamera\ =\ cameraManager.\mbox{\hyperlink{class_camera_manager_a6006ac9367c4431b4ff93b0e42c073da}{Director}}[\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Effector];}
+\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ var\ playerCameraFov\ =\ cameraManager.\mbox{\hyperlink{class_camera_manager_a6006ac9367c4431b4ff93b0e42c073da}{Director}}[\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Player].m\_Lens.FieldOfView;}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ var\ selfTransform\ =\ transform;}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ effectorCamera.m\_Lens.FieldOfView\ =\ playerCameraFov\ *\ magnification;}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ effectorCamera.Follow\ \ \ \ \ \ \ \ \ \ \ \ \ =\ selfTransform;}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ effectorCamera.LookAt\ \ \ \ \ \ \ \ \ \ \ \ \ =\ selfTransform;}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ cameraManager.SetPlayerToEffectorBlend(blend);}
-\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ cameraManager.Director.ChangeCamera(VirtualCameraType.Effector);}
+\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ cameraManager.\mbox{\hyperlink{class_camera_manager_a79e97d11313593f500203cba9e6aaa05}{SetPlayerToEffectorBlend}}(blend);}
+\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ cameraManager.\mbox{\hyperlink{class_camera_manager_a6006ac9367c4431b4ff93b0e42c073da}{Director}}.\mbox{\hyperlink{class_cameras_1_1_camera_director_aa15a3eba7c4c690119b12075b6c849d6}{ChangeCamera}}(\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Effector);}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ StopEffect()}
+\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00030}\mbox{\hyperlink{class_common_1_1_effects_1_1_cameras_1_1_camera_zoom_a8969f78b898e147ebce78fe1c145e836}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_cameras_1_1_camera_zoom_a8969f78b898e147ebce78fe1c145e836}{StopEffect}}()}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ cameraManager.Director.ChangeCamera(VirtualCameraType.Player);}
+\DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ cameraManager.\mbox{\hyperlink{class_camera_manager_a6006ac9367c4431b4ff93b0e42c073da}{Director}}.\mbox{\hyperlink{class_cameras_1_1_camera_director_aa15a3eba7c4c690119b12075b6c849d6}{ChangeCamera}}(\mbox{\hyperlink{_virtual_camera_type_8cs_aa57945740cd254803023301988941fc4}{VirtualCameraType}}.Player);}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00034}00034\ }
 \DoxyCodeLine{\Hypertarget{_camera_zoom_8cs_source_l00035}00035\ }

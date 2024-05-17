@@ -1,6 +1,6 @@
 \doxysection{Image\+UIBlink\+Effect.\+cs}
 \hypertarget{_image_u_i_blink_effect_8cs_source}{}\label{_image_u_i_blink_effect_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Effects/UIs/ImageUIBlinkEffect.cs@{C:/Project/Apollo/Assets/Scripts/Common/Effects/UIs/ImageUIBlinkEffect.cs}}
-
+\mbox{\hyperlink{_image_u_i_blink_effect_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }DG.Tweening;}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
@@ -8,7 +8,7 @@
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00004}00004\ }
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_u_is}{Common.Effects.UIs}}}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00006}00006\ \{}
-\DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ImageUIBlinkEffect\ :\ UIEffectBehaviour}
+\DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00007}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_image_u_i_blink_effect}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_image_u_i_blink_effect}{ImageUIBlinkEffect}}\ :\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_u_i_effect_behaviour}{UIEffectBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00008}00008\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Image\ targetImage;}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
@@ -23,9 +23,9 @@
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Color\ originalColor;}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(ISequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00022}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_image_u_i_blink_effect_a1b5a2fc63b0cf72edf1f78543a297b19}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_image_u_i_blink_effect_a1b5a2fc63b0cf72edf1f78543a297b19}{Initialize}}(\mbox{\hyperlink{interface_i_sequencer}{ISequencer}}\ sequencer)}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ UIEventClip)}
+\DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ \mbox{\hyperlink{class_common_1_1_u_i_event_clip}{UIEventClip}})}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}Alpha\ Effect\ of\ \{gameObject.name\}\ require\ UIEventClip."{}});}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{false});}
@@ -38,12 +38,12 @@
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ originalColor\ =\ targetImage.color;}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ PlayEffect()}
+\DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00037}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_image_u_i_blink_effect_ac5095296bce2f5675cbef62880813253}{00037}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_image_u_i_blink_effect_ac5095296bce2f5675cbef62880813253}{PlayEffect}}()}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (doColorTween)\ ColorTween();}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ StopEffect()}
+\DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00042}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_image_u_i_blink_effect_a78c4fd439434273b9def7df1286371ae}{00042}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_image_u_i_blink_effect_a78c4fd439434273b9def7df1286371ae}{StopEffect}}()}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ targetImage.enabled\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_image_u_i_blink_effect_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ }

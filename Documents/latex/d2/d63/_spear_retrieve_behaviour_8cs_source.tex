@@ -1,6 +1,6 @@
 \doxysection{Spear\+Retrieve\+Behaviour.\+cs}
 \hypertarget{_spear_retrieve_behaviour_8cs_source}{}\label{_spear_retrieve_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/SplitTridents/SpearRetrieveBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/SplitTridents/SpearRetrieveBehaviour.cs}}
-
+\mbox{\hyperlink{_spear_retrieve_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_modules}{Common.Skills.Modules}};}
@@ -9,43 +9,43 @@
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00005}00005\ }
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_split_tridents}{Common.Skills.SplitTridents}}}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SpearRetrieveBehaviour\ :\ SkillBehaviour,\ IComboSource}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_spear_retrieve_behaviour}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_spear_retrieve_behaviour}{SpearRetrieveBehaviour}}\ :\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{SkillBehaviour}},\ \mbox{\hyperlink{interface_common_1_1_i_combo_source}{IComboSource}}}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00009}00009\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpearThrowBehaviour\ throwBehaviour;}
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ComboModel\ comboTolerance;}
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ RotationModel\ rotationModel;}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_spear_throw_behaviour}{SpearThrowBehaviour}}\ throwBehaviour;}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model}{ComboModel}}\ comboTolerance;}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_rotation_model}{RotationModel}}\ rotationModel;}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ComboModel\ ComboTolerance\ =>\ comboTolerance;}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00014}\mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_spear_retrieve_behaviour_ac967fe8ed205ae122e6f0f64896879b9}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model}{ComboModel}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_spear_retrieve_behaviour_ac967fe8ed205ae122e6f0f64896879b9}{ComboTolerance}}\ =>\ comboTolerance;}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00017}\mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_spear_retrieve_behaviour_ac2cdcc20badfba52f333072dfa15b455}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_spear_retrieve_behaviour_ac2cdcc20badfba52f333072dfa15b455}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_behaver}{IBehaver}}\ behaver)}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00020}00020\ }
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}TryShowWeapon"{}},\ \textcolor{keyword}{null})\ \textcolor{comment}{//\ Do\ Not\ Show\ Weapon\ On\ Active\ Section;}}
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}TryRetrieveTridentProjectile"{}},\ TryRetrieveTridentProjectile)}
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}TryShowWeapon"{}},\ TryShowWeapon)}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}TryShowWeapon"{}},\ \textcolor{keyword}{null})\ \textcolor{comment}{//\ Do\ Not\ Show\ Weapon\ On\ Active\ Section;}}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}TryRetrieveTridentProjectile"{}},\ TryRetrieveTridentProjectile)}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Complete,\ \textcolor{stringliteral}{"{}TryShowWeapon"{}},\ TryShowWeapon)}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ comboTolerance.Initialize(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ rotationModel.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ comboTolerance.\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_combo_model_aa3522de2d73c3cf6215bffda759b9562}{Initialize}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ rotationModel.\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_rotation_model_a6d65134c357e98f4fbc117269fc26b32}{Initialize}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00031}00031\ }
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ TryRetrieveTridentProjectile()}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (throwBehaviour.TridentProjectile.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (throwBehaviour.\mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_spear_throw_behaviour_ab15234bfcad2b5c13585d0a1ab634b69}{TridentProjectile}}.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ throwBehaviour.TridentProjectile.Retrieve(Invoker.Complete);}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ throwBehaviour.\mbox{\hyperlink{class_common_1_1_skills_1_1_split_tridents_1_1_spear_throw_behaviour_ab15234bfcad2b5c13585d0a1ab634b69}{TridentProjectile}}.Retrieve(\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}});}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00038}00038\ }
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ TryShowWeapon()}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Character\ is\ not\ Dred\ dred)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_character}{Character}}\ is\ not\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00042}00042\ }
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponTable\ =\ dred.WeaponTable;}
-\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tridentWeapon\ =\ weaponTable[WeaponType.SplitTrident];}
+\DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ var\ tridentWeapon\ =\ weaponTable[\mbox{\hyperlink{namespace_common_a68de8ffe832a377df66ceafd6cfdd6c9}{WeaponType}}.SplitTrident];}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ weaponTable.TryShowWeapon(tridentWeapon);}
 \DoxyCodeLine{\Hypertarget{_spear_retrieve_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}

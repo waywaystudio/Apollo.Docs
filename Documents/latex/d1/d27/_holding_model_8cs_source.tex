@@ -1,6 +1,6 @@
 \doxysection{Holding\+Model.\+cs}
 \hypertarget{_holding_model_8cs_source}{}\label{_holding_model_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/HoldingModel.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/HoldingModel.cs}}
-
+\mbox{\hyperlink{_holding_model_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Threading;}
@@ -12,32 +12,32 @@
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_modules}{Common.Skills.Modules}}}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00009}00009\ \{}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00010}00010\ \ \ \ \ [Serializable]}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }HoldingModel\ :\ ICastingProperty,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00011}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model}{HoldingModel}}\ :\ \mbox{\hyperlink{interface_common_1_1_i_casting_property}{ICastingProperty}},\ \mbox{\hyperlink{interface_i_editable}{IEditable}}}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00012}00012\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ isInfinity;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ maxProgress\ =\ 3f;\ \textcolor{comment}{//\ second}}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ UpdateType\ updateType\ =\ UpdateType.FixedUpdate;}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ InputManager\ inputManager;}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{_update_type_8cs_a0957e0df001dd796895b75f947daddb2}{UpdateType}}\ updateType\ =\ \mbox{\hyperlink{_update_type_8cs_a0957e0df001dd796895b75f947daddb2}{UpdateType}}.FixedUpdate;}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_input_manager}{InputManager}}\ inputManager;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dred\ dred;}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ SkillBehaviour\ skillBehaviour;}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred;}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{SkillBehaviour}}\ skillBehaviour;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ castTask;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ casted;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ erupted;}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ActionType\ assignInput\ =\ ActionType.None;}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{ActionType}}\ assignInput\ =\ \mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{ActionType}}.None;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Observable<float>\ Progress\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Func<float>\ MaxProgress\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsInfinity\ =>\ isInfinity;}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ NormalProgress\ =>\ Progress.Value\ /\ maxProgress;}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00025}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_a2f4f1af0626151646d1a2ee617159c7e}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_observable}{Observable<float>}}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_a2f4f1af0626151646d1a2ee617159c7e}{Progress}}\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00026}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ab202783f70b8f00192355085fe27c182}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Func<float>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ab202783f70b8f00192355085fe27c182}{MaxProgress}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00027}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_a858ba32bca05ab411e87db5c515b0369}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_a858ba32bca05ab411e87db5c515b0369}{IsInfinity}}\ =>\ isInfinity;}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00028}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_a8da493316f0f724cef62619ed2b98b3f}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_a8da493316f0f724cef62619ed2b98b3f}{NormalProgress}}\ =>\ Progress.Value\ /\ maxProgress;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ActionType\ AssignInput}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{ActionType}}\ AssignInput}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (assignInput\ ==\ ActionType.None)}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (assignInput\ ==\ \mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{ActionType}}.None)}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ assignInput\ =\ dred.CombatActionSet.GetActionType(skillBehaviour.DataIndex);}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ assignInput\ =\ dred.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_a682ddf6accb5916ed698e38d313ab7ef}{CombatActionSet}}.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_combat_action_set_a4a31b7f3962e304c4737d3b6bd931dfb}{GetActionType}}(skillBehaviour.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a1a4ed3cf51b19068654cda97c8fc5f0c}{DataIndex}});}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00038}00038\ }
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ assignInput;}
@@ -45,26 +45,26 @@
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(SkillBehaviour\ skillBehaviour)}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00044}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_afacd855554376de909be1d8e847d5c92}{00044}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_afacd855554376de909be1d8e847d5c92}{Initialize}}(\mbox{\hyperlink{class_common_1_1_skills_1_1_skill_behaviour}{SkillBehaviour}}\ skillBehaviour)}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (skillBehaviour.Character\ is\ not\ Dred\ red)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (skillBehaviour.\mbox{\hyperlink{class_common_1_1_characters_1_1_character_behaviour_a3ff80ed89051b1e932fc3eb9ed5827a5}{Character}}\ is\ not\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ red)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ dred\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ red;}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ MaxProgress\ \ \ \ \ \ \ \ \ =\ ()\ =>\ maxProgress;}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ab202783f70b8f00192355085fe27c182}{MaxProgress}}\ \ \ \ \ \ \ \ \ =\ ()\ =>\ maxProgress;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ this.skillBehaviour\ =\ skillBehaviour;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ skillBehaviour.Sections}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}RegisterEruptInput"{}},\ RegisterEruptInput)}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Cast,\ \textcolor{stringliteral}{"{}CastSkillAction"{}},\ Cast)}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Cancel,\ \textcolor{stringliteral}{"{}CancelCast"{}},\ Cancel)}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}ResetProgress"{}},\ Stop)}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}UnregisterEruptInput"{}},\ UnregisterEruptInput)}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}RegisterEruptInput"{}},\ RegisterEruptInput)}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Cast,\ \textcolor{stringliteral}{"{}CastSkillAction"{}},\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_a636632e496842fc6d806bb8812adddb5}{Cast}})}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Cancel,\ \textcolor{stringliteral}{"{}CancelCast"{}},\ Cancel)}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}ResetProgress"{}},\ Stop)}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}UnregisterEruptInput"{}},\ UnregisterEruptInput)}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ dred.StatTable.AddStatEvent(StatType.BaseAttackSpeed,\ \$\textcolor{stringliteral}{"{}\{GetHashCode()\}.ChangeCastingSpeed"{}},\ value\ =>\ MaxProgress\ =\ ()\ =>\ maxProgress\ /\ (1\ +\ value));}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ dred.\mbox{\hyperlink{class_common_1_1_character_aaac78675e5389abd66dec50c8e25dabc}{StatTable}}.\mbox{\hyperlink{class_common_1_1_stat_table_a909941f026fa2bb83328d3ed2423baea}{AddStatEvent}}(\mbox{\hyperlink{namespace_common_a060118192df9f745f9a772099df53c18}{StatType}}.BaseAttackSpeed,\ \$\textcolor{stringliteral}{"{}\{GetHashCode()\}.ChangeCastingSpeed"{}},\ value\ =>\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ab202783f70b8f00192355085fe27c182}{MaxProgress}}\ =\ ()\ =>\ maxProgress\ /\ (1\ +\ value));}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cast()}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00063}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_a636632e496842fc6d806bb8812adddb5}{00063}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_a636632e496842fc6d806bb8812adddb5}{Cast}}()}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (casted)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ }
@@ -75,13 +75,13 @@
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ HoldingTasking(castTask).Forget();}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Erupt()}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00074}\mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ae8dc28f6278d872d484475c4f0b1a2e4}{00074}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ae8dc28f6278d872d484475c4f0b1a2e4}{Erupt}}()}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!casted)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (erupted)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00078}00078\ }
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ erupted\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ skillBehaviour.Invoker.Eruption();}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ skillBehaviour.\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_afa78e141998497e4e5395175a9f66839}{Eruption}}();}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Cancel()}
@@ -103,34 +103,34 @@
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RegisterEruptInput()}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (AssignInput\ is\ ActionType.None)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (AssignInput\ is\ \mbox{\hyperlink{namespace_inputs_a13f9ab8601ef79b5658f0b4d68aeab70}{ActionType}}.None)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[AssignInput].Add(InputSection.Cancel,\ \$\textcolor{stringliteral}{"{}\{skillBehaviour.DataIndex\}.EruptChargeFinisher"{}},\ Erupt);}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[AssignInput].Add(\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}.Cancel,\ \$\textcolor{stringliteral}{"{}\{skillBehaviour.DataIndex\}.EruptChargeFinisher"{}},\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ae8dc28f6278d872d484475c4f0b1a2e4}{Erupt}});}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ UnregisterEruptInput()}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[AssignInput].Remove(InputSection.Cancel,\ \$\textcolor{stringliteral}{"{}\{skillBehaviour.DataIndex\}.EruptChargeFinisher"{}});}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[AssignInput].Remove(\mbox{\hyperlink{namespace_inputs_a4d1eb49b43325e0bb7df7c3b7ab49d3c}{InputSection}}.Cancel,\ \$\textcolor{stringliteral}{"{}\{skillBehaviour.DataIndex\}.EruptChargeFinisher"{}});}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ UniTaskVoid\ HoldingTasking(CancellationTokenSource\ cts)}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!cts.IsCancellationRequested)}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!inputManager.IsPress(AssignInput))}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!inputManager.\mbox{\hyperlink{class_input_manager_a53b5b417ef55b4556dd0e0a8ba84e079}{IsPress}}(AssignInput))}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Erupt();}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ae8dc28f6278d872d484475c4f0b1a2e4}{Erupt}}();}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ Progress.Value\ <\ MaxProgress.Invoke())}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_a2f4f1af0626151646d1a2ee617159c7e}{Progress}}.\mbox{\hyperlink{class_observable_ab42adb9abdc083cfadd5cb224f16829e}{Value}}\ <\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ab202783f70b8f00192355085fe27c182}{MaxProgress}}.Invoke())}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Progress.Value\ +=\ Time.fixedDeltaTime;}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00125}00125\ }
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isInfinity\ \&\&\ Progress.Value\ >\ MaxProgress.Invoke())}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isInfinity\ \&\&\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_a2f4f1af0626151646d1a2ee617159c7e}{Progress}}.\mbox{\hyperlink{class_observable_ab42adb9abdc083cfadd5cb224f16829e}{Value}}\ >\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ab202783f70b8f00192355085fe27c182}{MaxProgress}}.Invoke())}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Progress.Value\ =\ MaxProgress.Invoke();}
-\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Erupt();}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Progress.Value\ =\ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ab202783f70b8f00192355085fe27c182}{MaxProgress}}.Invoke();}
+\DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_skills_1_1_modules_1_1_holding_model_ae8dc28f6278d872d484475c4f0b1a2e4}{Erupt}}();}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cts.Cancel();}
 \DoxyCodeLine{\Hypertarget{_holding_model_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}

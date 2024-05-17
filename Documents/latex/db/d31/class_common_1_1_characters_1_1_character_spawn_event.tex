@@ -1,0 +1,75 @@
+\doxysection{Common.\+Characters.\+Character\+Spawn\+Event\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_common_1_1_characters_1_1_character_spawn_event}{}\label{class_common_1_1_characters_1_1_character_spawn_event}\index{Common.Characters.CharacterSpawnEvent$<$ T $>$@{Common.Characters.CharacterSpawnEvent$<$ T $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_common_1_1_characters_1_1_character_spawn_event_a2f80c590346d3b296a1f895b5620b3a3}{Invoke}} (T subject)
+\begin{DoxyCompactList}\small\item\em Invoke Only Global Actions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a87a3a79fa02ca1e0ebe23f6441e7d20d}{Invoke}} (\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}} data\+Index, T subject)
+\begin{DoxyCompactList}\small\item\em Invoke Specific Target Actions with Global Actions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_ac8c1e472bcbad1c5493cff1ec02b1a98}{Add}} (\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}} data\+Index, string spawn\+Action\+Key, Action action)
+\begin{DoxyCompactList}\small\item\em Add Specific Target Spawn event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a5d6c3fa53bc793ca47b7e4ca426fa707}{Add}} (\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}} data\+Index, string spawn\+Action\+Key, Action$<$ T $>$ action)
+\begin{DoxyCompactList}\small\item\em Add Specific Target Spawn event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a17b405defd7621e084ca846e2e7f2911}{Add}} (string global\+Action\+Key, Action$<$ T $>$ action)
+\begin{DoxyCompactList}\small\item\em Add Global Spawn Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a9949ebd2ab1adcb67a2e7b3b53c93cca}{Remove}} (\mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}} data\+Index, string spawn\+Action\+Key, Action$<$ T $>$ callback=null)
+\begin{DoxyCompactList}\small\item\em Remove Specific Target Spawn Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a4c512687f35d250902b88d1e5cca8b73}{Remove}} (string spawn\+Action\+Key, Action$<$ T $>$ callback)
+\begin{DoxyCompactList}\small\item\em Remove Global Spawn Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_afd03d266f28ca9d54b1f7a21c1ead4d2}{Remove}} (string spawn\+Action\+Key)
+\begin{DoxyCompactList}\small\item\em Remove Global Spawn Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_common_1_1_spawn_event_table_ab68090678eedadb9cca8d9b3d18b95c3}{Clear}} ()
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_spawn_event_table_a1f9dd39168a42fb90996b4f24b886fad}{Dispose}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_common_1_1_spawn_event_table}{Common.\+Spawn\+Event\+Table$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ T $>$ \mbox{\hyperlink{class_common_1_1_spawn_event_table_a6359f8f19000bd9acf18984ffe6c0edc}{Spawned\+List}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_table}{Table}}$<$ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{Data\+Index}}, \mbox{\hyperlink{class_action_table}{Action\+Table}}$<$ T $>$ $>$ \mbox{\hyperlink{class_common_1_1_spawn_event_table_ad91c67d8a1878eab5ba8bb794ed1c0f9}{Target\+Action\+Table}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_action_table}{Action\+Table}}$<$ T $>$ \mbox{\hyperlink{class_common_1_1_spawn_event_table_a3cd754f725b6003cc13fba1c3b15fcdb}{Global\+Action\+Table}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em \mbox{\hyperlink{class_common_1_1_character}{Character}}}]\end{description}
+\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_character_spawn_event_8cs_source_l00003}{3}} of file \mbox{\hyperlink{_character_spawn_event_8cs_source}{Character\+Spawn\+Event.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_common_1_1_characters_1_1_character_spawn_event_a2f80c590346d3b296a1f895b5620b3a3}\label{class_common_1_1_characters_1_1_character_spawn_event_a2f80c590346d3b296a1f895b5620b3a3} 
+\index{Common.Characters.CharacterSpawnEvent$<$ T $>$@{Common.Characters.CharacterSpawnEvent$<$ T $>$}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!Common.Characters.CharacterSpawnEvent$<$ T $>$@{Common.Characters.CharacterSpawnEvent$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}}
+{\footnotesize\ttfamily override void \mbox{\hyperlink{class_common_1_1_characters_1_1_character_spawn_event}{Common.\+Characters.\+Character\+Spawn\+Event}}$<$ T $>$.Invoke (\begin{DoxyParamCaption}\item[{T}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Invoke Only Global Actions. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_common_1_1_spawn_event_table_ac48cf81a6a9724e38b1a48000993c7cb}{Common.\+Spawn\+Event\+Table$<$ T $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{_character_spawn_event_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_character_spawn_event_8cs_source}{Character\+Spawn\+Event.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+Characters/\mbox{\hyperlink{_character_spawn_event_8cs}{Character\+Spawn\+Event.\+cs}}\end{DoxyCompactItemize}

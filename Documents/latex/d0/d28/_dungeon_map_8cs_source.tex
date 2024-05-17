@@ -1,6 +1,6 @@
 \doxysection{Dungeon\+Map.\+cs}
 \hypertarget{_dungeon_map_8cs_source}{}\label{_dungeon_map_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/Dungeons/DungeonMap.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/Dungeons/DungeonMap.cs}}
-
+\mbox{\hyperlink{_dungeon_map_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_challenge_1_1_props_1_1_variants}{Challenge.Props.Variants}};}
@@ -11,29 +11,29 @@
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00008}\mbox{\hyperlink{namespace_challenge_1_1_dungeons}{00008}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_dungeons}{Challenge.Dungeons}}}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00009}00009\ \{}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DungeonMap\ :\ Map}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00010}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map}{DungeonMap}}\ :\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map}{Map}}}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00011}00011\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ChapterMask\ chapter;}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ChapterThemeMask\ theme;}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ StageRoomType\ mapType;}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_challenge_a9ef53b173f5fcdb2c0b1e65dc1ad738e}{ChapterMask}}\ chapter;}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_challenge_aa670c67715aeac053de90fd7246e5c60}{ChapterThemeMask}}\ theme;}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{namespace_challenge_a8dbdb37c0302935fb71166728e059e60}{StageRoomType}}\ mapType;}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Collections}}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DungeonGate\ exitGate1;}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DungeonGate\ exitGate2;}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_variants_1_1_dungeon_gate}{DungeonGate}}\ exitGate1;}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_variants_1_1_dungeon_gate}{DungeonGate}}\ exitGate2;}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<Transform>\ fiendSpawnPositions;}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<TreeAroundTrap>\ treeAroundTraps;}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<FloorTrap>\ floorTraps;}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ChapterMask\ Chapter\ \{\ \textcolor{keyword}{get}\ =>\ chapter;\ \textcolor{keyword}{set}\ =>\ chapter\ =\ value;\ \}}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ChapterThemeMask\ Theme\ \{\ \textcolor{keyword}{get}\ =>\ theme;\ \textcolor{keyword}{set}\ =>\ theme\ =\ value;\ \}}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ StageRoomType\ MapType\ \{\ \textcolor{keyword}{get}\ =>\ mapType;\ \textcolor{keyword}{set}\ =>\ mapType\ =\ value;\ \}}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DungeonGate\ ExitGate1\ =>\ exitGate1;}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DungeonGate\ ExitGate2\ =>\ exitGate2;}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ WallDummyContainer\ =>\ wallDummyContainer;}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<Transform>\ FiendSpawnPositions\ =>\ fiendSpawnPositions;}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00023}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_aff50b24527a2b10c69b9e1aa79bf9b71}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{namespace_challenge_a9ef53b173f5fcdb2c0b1e65dc1ad738e}{ChapterMask}}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_aff50b24527a2b10c69b9e1aa79bf9b71}{Chapter}}\ \{\ \textcolor{keyword}{get}\ =>\ chapter;\ \textcolor{keyword}{set}\ =>\ chapter\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00024}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a91afa56e754556b1b207843cafc69a58}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{namespace_challenge_aa670c67715aeac053de90fd7246e5c60}{ChapterThemeMask}}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a91afa56e754556b1b207843cafc69a58}{Theme}}\ \{\ \textcolor{keyword}{get}\ =>\ theme;\ \textcolor{keyword}{set}\ =>\ theme\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00025}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a944b742612424607ca6ce3ef3f320371}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{namespace_challenge_a8dbdb37c0302935fb71166728e059e60}{StageRoomType}}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a944b742612424607ca6ce3ef3f320371}{MapType}}\ \{\ \textcolor{keyword}{get}\ =>\ mapType;\ \textcolor{keyword}{set}\ =>\ mapType\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00026}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_ae5a11fe6e5eba1aae324b26293120125}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_variants_1_1_dungeon_gate}{DungeonGate}}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_ae5a11fe6e5eba1aae324b26293120125}{ExitGate1}}\ =>\ exitGate1;}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00027}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a1f67e6bde4110cbdb2fe8c0ba960ca24}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_challenge_1_1_props_1_1_variants_1_1_dungeon_gate}{DungeonGate}}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a1f67e6bde4110cbdb2fe8c0ba960ca24}{ExitGate2}}\ =>\ exitGate2;}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00028}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a542bfe97b7ec3f04f3f94a46fc46dc56}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a542bfe97b7ec3f04f3f94a46fc46dc56}{WallDummyContainer}}\ =>\ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a3a47d36a7f477af7543ac38a85057951}{wallDummyContainer}};}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00029}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a2707e1dfa2f2a95c13c4d3c2cfae9e46}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<Transform>\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a2707e1dfa2f2a95c13c4d3c2cfae9e46}{FiendSpawnPositions}}\ =>\ fiendSpawnPositions;}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00030}00030\ }
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ DeActiveTraps()}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00032}\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a845812489bfc74eb6b19c75773b074ea}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_dungeon_map_a845812489bfc74eb6b19c75773b074ea}{DeActiveTraps}}()}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ treeAroundTraps.ForEach(trap\ =>\ trap.DeActive());}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ floorTraps.ForEach(trap\ =>\ trap.DeActive());}
@@ -53,23 +53,23 @@
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ var\ pathway1\ =\ transform.Find(\textcolor{stringliteral}{"{}PrePositions/Pathway1"{}});}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ var\ pathway2\ =\ transform.Find(\textcolor{stringliteral}{"{}PrePositions/Pathway2"{}});}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ exitGate1\ \ \ \ \ \ \ \ \ \ \ =\ pathway1.GetComponentInChildren<DungeonGate>();}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ exitGate2\ \ \ \ \ \ \ \ \ \ \ =\ pathway2.GetComponentInChildren<DungeonGate>();}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ exitGate1\ \ \ \ \ \ \ \ \ \ \ =\ pathway1.GetComponentInChildren<\mbox{\hyperlink{class_challenge_1_1_props_1_1_variants_1_1_dungeon_gate}{DungeonGate}}>();}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ exitGate2\ \ \ \ \ \ \ \ \ \ \ =\ pathway2.GetComponentInChildren<\mbox{\hyperlink{class_challenge_1_1_props_1_1_variants_1_1_dungeon_gate}{DungeonGate}}>();}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ fiendSpawnPositions\ =\ transform.Find(\textcolor{stringliteral}{"{}PrePositions/FiendSpawnPositions"{}}).GetComponentsInOnlyChildren<Transform>();}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Common\ Tabling}}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ prePositionTable.Add(MapPrepositionType.FiendSpawns,\ fiendSpawnContainer);}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ prePositionTable.Add(MapPrepositionType.Gate1,\ pathway1);}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ prePositionTable.Add(MapPrepositionType.Gate2,\ pathway2);}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a378241088d512bbafacc5eff1add0294}{prePositionTable}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.FiendSpawns,\ fiendSpawnContainer);}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a378241088d512bbafacc5eff1add0294}{prePositionTable}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.Gate1,\ pathway1);}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a378241088d512bbafacc5eff1add0294}{prePositionTable}}.\mbox{\hyperlink{class_table_a29330bb38f022574ec3e63e9a8d3f491}{Add}}(\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.Gate2,\ pathway2);}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ PrePositionTableInitialize()}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ PrePositionTable[MapPrepositionType.FiendSpawns]\ \ \ \ \ \ \ =\ TryCreateChild(\textcolor{stringliteral}{"{}FiendSpawnPositions"{}});}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ PrePositionTable[MapPrepositionType.PlayerSpawn]\ \ \ \ \ \ \ =\ TryCreateChild(\textcolor{stringliteral}{"{}PlayerSpawnPosition"{}});}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ PrePositionTable[MapPrepositionType.PlayerDestination]\ =\ TryCreateChild(\textcolor{stringliteral}{"{}PlayerSpawnDestination"{}});}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ PrePositionTable[MapPrepositionType.Gate1]\ \ \ \ \ \ \ \ \ \ \ \ \ =\ TryCreateChild(\textcolor{stringliteral}{"{}Pathway1"{}});}
-\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ PrePositionTable[MapPrepositionType.Gate2]\ \ \ \ \ \ \ \ \ \ \ \ \ =\ TryCreateChild(\textcolor{stringliteral}{"{}Pathway2"{}});}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a2d9d1f211536d1d9c0127fa3f61274a8}{PrePositionTable}}[\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.FiendSpawns]\ \ \ \ \ \ \ =\ TryCreateChild(\textcolor{stringliteral}{"{}FiendSpawnPositions"{}});}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a2d9d1f211536d1d9c0127fa3f61274a8}{PrePositionTable}}[\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.PlayerSpawn]\ \ \ \ \ \ \ =\ TryCreateChild(\textcolor{stringliteral}{"{}PlayerSpawnPosition"{}});}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a2d9d1f211536d1d9c0127fa3f61274a8}{PrePositionTable}}[\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.PlayerDestination]\ =\ TryCreateChild(\textcolor{stringliteral}{"{}PlayerSpawnDestination"{}});}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a2d9d1f211536d1d9c0127fa3f61274a8}{PrePositionTable}}[\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.Gate1]\ \ \ \ \ \ \ \ \ \ \ \ \ =\ TryCreateChild(\textcolor{stringliteral}{"{}Pathway1"{}});}
+\DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_maps_1_1_map_a2d9d1f211536d1d9c0127fa3f61274a8}{PrePositionTable}}[\mbox{\hyperlink{namespace_common_af570d89b4c7b26f2254acb9ef73c48a0}{MapPrepositionType}}.Gate2]\ \ \ \ \ \ \ \ \ \ \ \ \ =\ TryCreateChild(\textcolor{stringliteral}{"{}Pathway2"{}});}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00070}00070\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_dungeon_map_8cs_source_l00071}00071\ \ \ \ \ \}}

@@ -1,30 +1,30 @@
 \doxysection{Enforce\+Weapon\+Panel.\+cs}
 \hypertarget{_enforce_weapon_panel_8cs_source}{}\label{_enforce_weapon_panel_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Lobby/UI/PopUps/EnforceWeaponPanel.cs@{C:/Project/Apollo/Assets/Scripts/Lobby/UI/PopUps/EnforceWeaponPanel.cs}}
-
+\mbox{\hyperlink{_enforce_weapon_panel_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}};}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00004}\mbox{\hyperlink{namespace_lobby_1_1_u_i}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_lobby_1_1_u_i_1_1_pop_ups}{Lobby.UI.PopUps}}}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00005}00005\ \{}
-\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }EnforceWeaponPanel\ :\ Panel}
+\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00006}\mbox{\hyperlink{class_lobby_1_1_u_i_1_1_pop_ups_1_1_enforce_weapon_panel}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lobby_1_1_u_i_1_1_pop_ups_1_1_enforce_weapon_panel}{EnforceWeaponPanel}}\ :\ \mbox{\hyperlink{class_common_1_1_u_i_1_1_panel}{Panel}}}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00007}00007\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00008}\mbox{\hyperlink{class_lobby_1_1_u_i_1_1_pop_ups_1_1_enforce_weapon_panel_a2606e9ba4d1ff4884a5a59e64d74a4cb}{00008}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lobby_1_1_u_i_1_1_pop_ups_1_1_enforce_weapon_panel_a2606e9ba4d1ff4884a5a59e64d74a4cb}{Initialize}}()}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize();}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[UIEventType.Open].Sections}
-\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}DisablePlayerControl"{}},\ DisablePlayerControl)}
+\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[\mbox{\hyperlink{namespace_common_aa9209426a6fdf134d1be75b12ac1923e}{UIEventType}}.Open].Sections}
+\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}DisablePlayerControl"{}},\ DisablePlayerControl)}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[UIEventType.Close].Sections}
-\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}EnablePlayerControl"{}},\ EnablePlayerControl)}
+\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[\mbox{\hyperlink{namespace_common_aa9209426a6fdf134d1be75b12ac1923e}{UIEventType}}.Close].Sections}
+\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}EnablePlayerControl"{}},\ EnablePlayerControl)}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DisablePlayerControl()\ =>\ LobbyDirector.Input.SetPlayerActivity(\textcolor{keyword}{false},\ \textcolor{keyword}{false});}
-\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ EnablePlayerControl()\ =>\ LobbyDirector.Input.SetPlayerActivity(\textcolor{keyword}{true},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DisablePlayerControl()\ =>\ \mbox{\hyperlink{class_lobby_1_1_lobby_director}{LobbyDirector}}.\mbox{\hyperlink{class_lobby_1_1_lobby_director_a755a3ddd718dc3bed0319c5a2899fa4e}{Input}}.\mbox{\hyperlink{class_inputs_1_1_input_director_aed82d039cb981a13e322bfbc817c5f90}{SetPlayerActivity}}(\textcolor{keyword}{false},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ EnablePlayerControl()\ =>\ \mbox{\hyperlink{class_lobby_1_1_lobby_director}{LobbyDirector}}.\mbox{\hyperlink{class_lobby_1_1_lobby_director_a755a3ddd718dc3bed0319c5a2899fa4e}{Input}}.\mbox{\hyperlink{class_inputs_1_1_input_director_aed82d039cb981a13e322bfbc817c5f90}{SetPlayerActivity}}(\textcolor{keyword}{true},\ \textcolor{keyword}{false});}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00024}00024\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_enforce_weapon_panel_8cs_source_l00025}00025\ \}}
 

@@ -1,67 +1,67 @@
 \doxysection{Player\+Run\+Behaviour.\+cs}
 \hypertarget{_player_run_behaviour_8cs_source}{}\label{_player_run_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/Behaviours/PlayerRunBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/Behaviours/PlayerRunBehaviour.cs}}
-
+\mbox{\hyperlink{_player_run_behaviour_8cs}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_behaviours}{Common.Characters.Behaviours}}}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }PlayerRunBehaviour\ :\ CharacterBehaviour}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00005}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour}{PlayerRunBehaviour}}\ :\ \mbox{\hyperlink{class_common_1_1_characters_1_1_character_behaviour}{CharacterBehaviour}}}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00006}00006\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dred\ dred;}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ dred;}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ onRun;}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ PlayerController\ controller;}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_player_controller}{PlayerController}}\ controller;}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00012}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour_a70f073da6450316d4aea41901670e7d4}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour_a70f073da6450316d4aea41901670e7d4}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_behaver}{IBehaver}}\ behaver)}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Character\ is\ not\ Dred\ red)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_common_1_1_character}{Character}}\ is\ not\ \mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred}{Dred}}\ red)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ dred\ \ \ \ \ \ \ =\ red;}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ onRun\ \ \ \ \ \ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ controller\ =\ dred.Controller;}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ controller\ =\ dred.\mbox{\hyperlink{class_common_1_1_characters_1_1_dreds_1_1_dred_a254ef122a13e44a8cf7bfd61f80eb660}{Controller}};}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ var\ simpleRunBehaviour\ =\ dred.Behaviours.Run;}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ var\ simpleRunBehaviour\ =\ dred.\mbox{\hyperlink{class_common_1_1_character_aa1a4b82596d7a09ebb8be0f04e78c304}{Behaviours}}.Run;}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}CanMove"{}},\ ()\ =>\ dred.Pathfinding.CanMove)}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}CanMove"{}},\ ()\ =>\ dred.\mbox{\hyperlink{class_common_1_1_character_a134600c8e09396ae7fcb6b0705ec61ac}{Pathfinding}}.CanMove)}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}NotInCinematicRun"{}},\ ()\ =>\ simpleRunBehaviour.Invoker.IsEnd)}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}NotInRun"{}},\ ()\ =>\ onRun\ ==\ \textcolor{keyword}{false})}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}OnRun"{}},\ ()\ =>\ onRun\ =\ \textcolor{keyword}{true})}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}SetOnRunFalse"{}},\ ()\ =>\ onRun\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.Active,\ \textcolor{stringliteral}{"{}OnRun"{}},\ ()\ =>\ onRun\ =\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}}.End,\ \textcolor{stringliteral}{"{}SetOnRunFalse"{}},\ ()\ =>\ onRun\ =\ \textcolor{keyword}{false})}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Invoke\ in\ Move\ Input.Perform}}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetRunStatus()}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00034}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour_a30e6176600a1e57f5acd204cb7a4b597}{00034}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour_a30e6176600a1e57f5acd204cb7a4b597}{SetRunStatus}}()}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!controller.IsNeutral)}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!controller.\mbox{\hyperlink{class_common_1_1_characters_1_1_player_controller_a5be96e68efa457a40b24f67d81cdc192}{IsNeutral}})}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00042}00042\ }
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Invoke\ in\ Move\ Input.Cancel}}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TryCompleteRun()}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00044}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour_af9cb619957502ed31216875e613ede1d}{00044}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour_af9cb619957502ed31216875e613ede1d}{TryCompleteRun}}()}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ onRun\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Complete();}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a255a206040518c3d4dbaaaa6b643096a}{Complete}}();}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ FootStep()\ =>\ Invoker.Execute();}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00052}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour_a1ec2c643223418df4d205daabd946b99}{00052}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour_a1ec2c643223418df4d205daabd946b99}{FootStep}}()\ =>\ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ae3b4e74d3fbe84d96b40cb6a8b727b6a}{Execute}}();}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ RegisterBehaviour()}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00055}\mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour_abed7f10ed0067f15d0aef7a76765de14}{00055}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour_abed7f10ed0067f15d0aef7a76765de14}{RegisterBehaviour}}()}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dred.CurrentState\ ==\ stateMatrix)\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dred.CurrentBehaviour.HasComponent())}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dred.\mbox{\hyperlink{class_common_1_1_character_a0751634b9962a80f0c761fe2e13a6f24}{CurrentState}}\ ==\ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab45df4b4a413b808dfbd13b7e4b21dd2}{stateMatrix}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dred.\mbox{\hyperlink{class_common_1_1_character_afcb4a8b6ec0bdc895a4204ec94083174}{CurrentBehaviour}}.HasComponent())}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dred.CurrentBehaviour.Cancel();}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dred.\mbox{\hyperlink{class_common_1_1_character_afcb4a8b6ec0bdc895a4204ec94083174}{CurrentBehaviour}}.Cancel();}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ dred.CurrentBehaviour\ =\ \textcolor{keyword}{this};}
@@ -69,19 +69,19 @@
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Update()}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controller.IsNeutral)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_a4d3e120e794e65343e30bc5e567ecefe}{IsAbleToActive}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controller.\mbox{\hyperlink{class_common_1_1_characters_1_1_player_controller_a5be96e68efa457a40b24f67d81cdc192}{IsNeutral}})\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_ab609ba34ca1e9566e009029db77a7170}{Invoker}}.\mbox{\hyperlink{class_section_invoker_ac2841777b56623d2070aee7ab16e6137}{Active}}();}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00079}00079\ }
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00080}00080\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ behaviourCode\ \ \ \ \ \ \ \ \ \ \ \ =\ DataIndex.PlayerRun;}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.StateMask\ \ \ \ \ =\ StateMask.Soft;}
-\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.IgnorableMask\ =\ StateMask.Soft;}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_a4b8f91bde6fefb1f9c5a1470d7d22b55}{behaviourCode}}\ \ \ \ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{_data_index_8cs_acd63cd93ca0fdfe8177c88f2bb3b5343}{DataIndex}}.PlayerRun;}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.StateMask\ \ \ \ \ =\ \mbox{\hyperlink{namespace_common_a42d43f9dd990eadd77e3ecd89b27d7e3}{StateMask}}.Soft;}
+\DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.IgnorableMask\ =\ \mbox{\hyperlink{namespace_common_a42d43f9dd990eadd77e3ecd89b27d7e3}{StateMask}}.Soft;}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00087}00087\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_player_run_behaviour_8cs_source_l00088}00088\ \ \ \ \ \}}

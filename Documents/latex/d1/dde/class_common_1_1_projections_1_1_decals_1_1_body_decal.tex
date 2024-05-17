@@ -1,0 +1,183 @@
+\doxysection{Common.\+Projections.\+Decals.\+Body\+Decal Class Reference}
+\hypertarget{class_common_1_1_projections_1_1_decals_1_1_body_decal}{}\label{class_common_1_1_projections_1_1_decals_1_1_body_decal}\index{Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a6339df25115b4ec256cfe08f19265ab6}{Initialize}} (\mbox{\hyperlink{interface_common_1_1_i_projectable_sequencer}{IProjectable\+Sequencer}} projection\+Sequence)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override async Uni\+Task \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a2424b5a9c6c1dbb3b23c2d2c77546c63}{Play\+Projection}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_common_1_1_projections_1_1_decal}{Common.\+Projections.\+Decal}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a73950343495e0a0a79ccc1fa4083dcbd}{Stop\+Projection}} ()
+\item 
+void \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a3bb9b3257381f89161f9efbc1f0775ee}{Cancel\+Projection}} ()
+\item 
+void \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a28dbb8a529970b0fc0d4cb1f91d96dd4}{On\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7c40b670ff6b3a59c46b557664fb29e9}{width}}
+\begin{DoxyCompactList}\small\item\em Head \& Body Line Projector는 독립적인 width와 length를 가짐 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_aa91f042aca71e2a87ace9d0b58508cf0}{length}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_common_1_1_projections_1_1_decal}{Common.\+Projections.\+Decal}}}
+\begin{DoxyCompactItemize}
+\item 
+Decal\+Projector \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_ad2e2bd1e8c5d66f293fc035ab375bbde}{decal\+Projector}}
+\item 
+Material \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_adaf84b1d1da3118452b97a36bc40520a}{material\+Reference}}
+\item 
+Color \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a56791d2f57144e452263fda6fc969406}{background\+Color}} = Color.\+white
+\item 
+Color \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a393d7c7982398dcde8f24586e9876489}{fill\+Color}} = Color.\+red
+\item 
+\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}} \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_ac436095e2c0effef7092987f60c70bc0}{start\+Section}} = \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24ccea4d3d769b812b6faa6b76e1a8abaece2d}{Section.\+Active}}
+\item 
+\mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24cce}{Section}} \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_af26ffcfb52e2e0d15889008a42b5af42}{end\+Section}} = \mbox{\hyperlink{_section_8cs_aa2bc2fd5a40cdb0c40963e6fe6a24ccea87557f11575c0ad78e4e28abedc13b6e}{Section.\+End}}
+\item 
+\mbox{\hyperlink{interface_common_1_1_i_projectable_sequencer}{IProjectable\+Sequencer}} \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_afcb5a79356b14343348885d2f8e3cb01}{Projectable\+Sequence}}
+\item 
+\mbox{\hyperlink{class_common_1_1_detect_property}{Detect\+Property}} \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_ad04cb4a6818e48fe097bc7a4ff0a871f}{Detect\+Property}}
+\item 
+Cancellation\+Token\+Source \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a1f743ce1fc67f73b920276927170d834}{Projection\+Token\+Source}}
+\item 
+float \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_ac9f65b3bf7e11cdc51c9ec07400921d0}{Arc\+Angle\+Normalizer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a9bbab17d52720ce543496c7d9a862bd8}{Arrow\+ZDisplacement}} = 2.\+9835f
+\begin{DoxyCompactList}\small\item\em The line head projector\textquotesingle{}s Z offset, this lines up the head and body of the line. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7261f94a24a4128fe0a64955a566dad1}{YPosition}} = 0.\+15f
+\begin{DoxyCompactList}\small\item\em The projector\textquotesingle{}s \textquotesingle{}y\textquotesingle{} position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_common_1_1_projections_1_1_decal}{Common.\+Projections.\+Decal}}}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a6533b5bd60c1d5dd15bb39abd426f5d8}{Projector\+Depth}} = 50f
+\item 
+static readonly int \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a057910af5d62dff5bbd6a4f00c17c620}{Color\+Shader\+ID}} = Shader.\+Property\+To\+ID("{}\+\_\+\+Color"{})
+\item 
+static readonly int \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a78f5e301acf34ff58743d94d51131edb}{Fill\+Color\+Shader\+ID}} = Shader.\+Property\+To\+ID("{}\+\_\+\+Fill\+Color"{})
+\item 
+static readonly int \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_af6453dccec8eb9086525ef1c8e145c37}{Fill\+Progress\+Shader\+ID}} = Shader.\+Property\+To\+ID("{}\+\_\+\+Fill\+Progress"{})
+\item 
+static readonly int \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a143af7133f9ff52a5be638ae55b56bf6}{Arc\+Shader\+ID}} = Shader.\+Property\+To\+ID("{}\+\_\+\+Arc"{})
+\item 
+static readonly int \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a5ac05fe124a8e782dc116c511a7270ec}{Angle\+Shader\+ID}} = Shader.\+Property\+To\+ID("{}\+\_\+\+Angle"{})
+\item 
+static readonly int \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_ac7f0216113a7c9fb505333176dba1f7b}{Inner\+Radius\+ID}} = Shader.\+Property\+To\+ID("{}\+\_\+\+Inner\+Radius"{})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_common_1_1_projections_1_1_decal}{Common.\+Projections.\+Decal}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_aee1c5b49908cbf43b06790549811fa19}{Is\+Active}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_aca63c1bfff70c1dad9f96acc21e45b9a}{Instance\+Key}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Vector3 \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_ae9ff65db7633d9eac431886066b96f9c}{Projector\+Size}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_body_decal_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_body_decal_8cs_source}{Body\+Decal.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_common_1_1_projections_1_1_decals_1_1_body_decal_a6339df25115b4ec256cfe08f19265ab6}\label{class_common_1_1_projections_1_1_decals_1_1_body_decal_a6339df25115b4ec256cfe08f19265ab6} 
+\index{Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily override void Common.\+Projections.\+Decals.\+Body\+Decal.\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_common_1_1_i_projectable_sequencer}{IProjectable\+Sequencer}}}]{projection\+Sequence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_abcefe5769eaa865c3daf483cc9d7d053}{Common.\+Projections.\+Decal}}.
+
+
+
+Definition at line \mbox{\hyperlink{_body_decal_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_body_decal_8cs_source}{Body\+Decal.\+cs}}.
+
+\Hypertarget{class_common_1_1_projections_1_1_decals_1_1_body_decal_a2424b5a9c6c1dbb3b23c2d2c77546c63}\label{class_common_1_1_projections_1_1_decals_1_1_body_decal_a2424b5a9c6c1dbb3b23c2d2c77546c63} 
+\index{Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}!PlayProjection@{PlayProjection}}
+\index{PlayProjection@{PlayProjection}!Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}}
+\doxysubsubsection{\texorpdfstring{PlayProjection()}{PlayProjection()}}
+{\footnotesize\ttfamily override async Uni\+Task Common.\+Projections.\+Decals.\+Body\+Decal.\+Play\+Projection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_common_1_1_projections_1_1_decal_a5f2c3a35652149965b8b5e8eee8cba61}{Common.\+Projections.\+Decal}}.
+
+
+
+Definition at line \mbox{\hyperlink{_body_decal_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_body_decal_8cs_source}{Body\+Decal.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_common_1_1_projections_1_1_decals_1_1_body_decal_a9bbab17d52720ce543496c7d9a862bd8}\label{class_common_1_1_projections_1_1_decals_1_1_body_decal_a9bbab17d52720ce543496c7d9a862bd8} 
+\index{Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}!ArrowZDisplacement@{ArrowZDisplacement}}
+\index{ArrowZDisplacement@{ArrowZDisplacement}!Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}}
+\doxysubsubsection{\texorpdfstring{ArrowZDisplacement}{ArrowZDisplacement}}
+{\footnotesize\ttfamily const float Common.\+Projections.\+Decals.\+Body\+Decal.\+Arrow\+ZDisplacement = 2.\+9835f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The line head projector\textquotesingle{}s Z offset, this lines up the head and body of the line. 
+
+
+
+Definition at line \mbox{\hyperlink{_body_decal_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_body_decal_8cs_source}{Body\+Decal.\+cs}}.
+
+\Hypertarget{class_common_1_1_projections_1_1_decals_1_1_body_decal_aa91f042aca71e2a87ace9d0b58508cf0}\label{class_common_1_1_projections_1_1_decals_1_1_body_decal_aa91f042aca71e2a87ace9d0b58508cf0} 
+\index{Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}!length@{length}}
+\index{length@{length}!Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily float Common.\+Projections.\+Decals.\+Body\+Decal.\+length\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_body_decal_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_body_decal_8cs_source}{Body\+Decal.\+cs}}.
+
+\Hypertarget{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7c40b670ff6b3a59c46b557664fb29e9}\label{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7c40b670ff6b3a59c46b557664fb29e9} 
+\index{Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}!width@{width}}
+\index{width@{width}!Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily float Common.\+Projections.\+Decals.\+Body\+Decal.\+width\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Head \& Body Line Projector는 독립적인 width와 length를 가짐 
+
+
+
+Definition at line \mbox{\hyperlink{_body_decal_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_body_decal_8cs_source}{Body\+Decal.\+cs}}.
+
+\Hypertarget{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7261f94a24a4128fe0a64955a566dad1}\label{class_common_1_1_projections_1_1_decals_1_1_body_decal_a7261f94a24a4128fe0a64955a566dad1} 
+\index{Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}!YPosition@{YPosition}}
+\index{YPosition@{YPosition}!Common.Projections.Decals.BodyDecal@{Common.Projections.Decals.BodyDecal}}
+\doxysubsubsection{\texorpdfstring{YPosition}{YPosition}}
+{\footnotesize\ttfamily const float Common.\+Projections.\+Decals.\+Body\+Decal.\+YPosition = 0.\+15f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+The projector\textquotesingle{}s \textquotesingle{}y\textquotesingle{} position. 
+
+
+
+Definition at line \mbox{\hyperlink{_body_decal_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_body_decal_8cs_source}{Body\+Decal.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Project/\+Apollo/\+Assets/\+Scripts/\+Common/\+Projections/\+Decals/\mbox{\hyperlink{_body_decal_8cs}{Body\+Decal.\+cs}}\end{DoxyCompactItemize}
