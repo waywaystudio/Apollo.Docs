@@ -19,6 +19,9 @@ jobs:
       - name: Generate Doxygen documentation
         run: doxygen Apollo.Doxyfile
 
+      - name: Create .nojekyll
+        run: echo "" > Documents/html/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
