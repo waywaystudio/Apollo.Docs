@@ -1,32 +1,33 @@
-name: Deploy Doxygen to GitHub Pages
+name: Deploy Doxygen Documentation to GitHub Pages
 
 on:
   push:
     branches:
-      - master
+      - master  # 워크플로우가 master 브랜치에 푸시될 때 실행
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest  # 가장 최신의 Ubuntu 러너 사용
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2  # 코드 체크아웃
 
       - name: Setup Doxygen
-        run: sudo apt-get install -y doxygen graphviz
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y doxygen graphviz  # Doxygen과 Graphviz 설치
 
       - name: Generate Doxygen documentation
-        run: doxygen Apollo.Doxyfile
+        run: doxygen Apollo.Doxyfile  # Doxygen 실행
+
+      - name: Prepare files for deployment
+        run: |
+          touch Apollo.Docs/html/.nojekyll  # .nojekyll 파일 생성
+          echo "Deploying to GitHub Pages"  # 배포 로그 출력
 
       - name: Deploy to GitHub Pages
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git clone --depth 1 --branch gh-pages https://github.com/${{ github.repository }} gh-pages
-          rsync -av --delete Documents/html/ gh-pages/
-          cd gh-pages
-          touch .nojekyll
-          git add .
-          git commit -m 'Deploy Doxygen docs'
-          git push origin gh-pages
+        uses: peaceiris/actions-gh-pages@v3  # GitHub Pages 배포 액션
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub 토큰 사용
+          publish_dir: ./Apollo.Docs/html  # 배포할 디렉토리 지정
