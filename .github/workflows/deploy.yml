@@ -14,19 +14,19 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Doxygen
-        run: sudo apt-get install -y doxygen
+        run: sudo apt-get install -y doxygen graphviz
 
       - name: Generate Doxygen documentation
         run: doxygen Apollo.Doxyfile
 
-      - name: Create .nojekyll
-        run: touch Documents/html/.nojekyll
-
-      - name: List files for debugging
-        run: ls -R Documents/html
-
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: Documents/html
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git clone --depth 1 --branch gh-pages https://github.com/${{ github.repository }} gh-pages
+          rsync -av --delete Documents/html/ gh-pages/
+          cd gh-pages
+          touch .nojekyll
+          git add .
+          git commit -m 'Deploy Doxygen docs'
+          git push origin gh-pages
