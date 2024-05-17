@@ -100,31 +100,38 @@ $(function(){initNavTree('d6/de2/_spec_data_8cs_source.html','../../'); initResi
   <div class="headertitle"><div class="title">SpecData.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<a href="../../d6/de2/_spec_data_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/dee/namespace_common.html">Common</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keyword">public</span> <span class="keyword">class </span>SpecData : ScriptableObject, IEditable</div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="../../d6/dd7/class_common_1_1_spec_data.html">    5</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d6/dd7/class_common_1_1_spec_data.html">SpecData</a> : ScriptableObject, <a class="code hl_interface" href="../../d3/de8/interface_i_editable.html">IEditable</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="keyword">public</span> StatTable DefaultSpec;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d6/dd7/class_common_1_1_spec_data.html#a4c54b743d8b9c87a3c01da53eeba1bdf">    7</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../dc/d34/class_common_1_1_stat_table.html">StatTable</a> <a class="code hl_variable" href="../../d6/dd7/class_common_1_1_spec_data.html#a4c54b743d8b9c87a3c01da53eeba1bdf">DefaultSpec</a>;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> EditorSetUp()</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            DefaultSpec.ApplyKeyName();</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            DefaultSpec.InitialStats.Sort((x, y) =&gt; x.StatType.CompareTo(y.StatType));</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <a class="code hl_variable" href="../../d6/dd7/class_common_1_1_spec_data.html#a4c54b743d8b9c87a3c01da53eeba1bdf">DefaultSpec</a>.ApplyKeyName();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <a class="code hl_variable" href="../../d6/dd7/class_common_1_1_spec_data.html#a4c54b743d8b9c87a3c01da53eeba1bdf">DefaultSpec</a>.<a class="code hl_property" href="../../dc/d34/class_common_1_1_stat_table.html#a29964684753534ad9bcf506c68d90cca">InitialStats</a>.Sort((x, y) =&gt; x.StatType.CompareTo(y.StatType));</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
+<div class="ttc" id="aclass_common_1_1_spec_data_html"><div class="ttname"><a href="../../d6/dd7/class_common_1_1_spec_data.html">Common.SpecData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">SpecData.cs:6</a></div></div>
+<div class="ttc" id="aclass_common_1_1_spec_data_html_a4c54b743d8b9c87a3c01da53eeba1bdf"><div class="ttname"><a href="../../d6/dd7/class_common_1_1_spec_data.html#a4c54b743d8b9c87a3c01da53eeba1bdf">Common.SpecData.DefaultSpec</a></div><div class="ttdeci">StatTable DefaultSpec</div><div class="ttdef"><b>Definition</b> <a href="#l00007">SpecData.cs:7</a></div></div>
+<div class="ttc" id="aclass_common_1_1_stat_table_html"><div class="ttname"><a href="../../dc/d34/class_common_1_1_stat_table.html">Common.StatTable</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/dee/_stat_table_8cs_source.html#l00008">StatTable.cs:9</a></div></div>
+<div class="ttc" id="aclass_common_1_1_stat_table_html_a29964684753534ad9bcf506c68d90cca"><div class="ttname"><a href="../../dc/d34/class_common_1_1_stat_table.html#a29964684753534ad9bcf506c68d90cca">Common.StatTable.InitialStats</a></div><div class="ttdeci">List&lt; StatEntity &gt; InitialStats</div><div class="ttdef"><b>Definition</b> <a href="../../de/dee/_stat_table_8cs_source.html#l00014">StatTable.cs:14</a></div></div>
+<div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_common_html"><div class="ttname"><a href="../../d6/dee/namespace_common.html">Common</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/daf/_animation_player_8cs_source.html#l00010">AnimationPlayer.cs:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_3f25204ea0d4df6d15d2b0e65f34be1d.html">_DataStruct</a></li><li class="navelem"><b>SpecData.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_3f25204ea0d4df6d15d2b0e65f34be1d.html">_DataStruct</a></li><li class="navelem"><a class="el" href="../../d6/de2/_spec_data_8cs.html">SpecData.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

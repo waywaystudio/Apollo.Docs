@@ -100,7 +100,7 @@ $(function(){initNavTree('d5/d79/_arrow_rain_particle_8cs_source.html','../../')
   <div class="headertitle"><div class="title">ArrowRainParticle.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Threading;</div>
+<a href="../../d5/d79/_arrow_rain_particle_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Threading;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../dd/da3/namespace_common_1_1_effects.html">Common.Effects</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d3/d07/namespace_common_1_1_effects_1_1_particles.html">Common.Effects.Particles</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Cysharp.Threading.Tasks;</div>
@@ -111,20 +111,21 @@ $(function(){initNavTree('d5/d79/_arrow_rain_particle_8cs_source.html','../../')
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">// TODO. require ReWork Later...</span></div>
 <div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html">   13</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html">ArrowRainParticle</a> : EffectBehaviour</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html">   13</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html">ArrowRainParticle</a> : <a class="code hl_class" href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html">EffectBehaviour</a></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        [SerializeField] <span class="keyword">private</span> ParticlePool pool;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="../../d7/d1c/class_common_1_1_effects_1_1_particles_1_1_particle_pool.html">ParticlePool</a> pool;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">private</span> GameObject provideObject;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">private</span> CancellationTokenSource cts1;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">private</span> CancellationTokenSource cts2;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">public</span> GameObject ProvideObject</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#aa4f959fd686cbb8733c67c8a4cc53b17">   21</a></span>        <span class="keyword">public</span> GameObject <a class="code hl_property" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#aa4f959fd686cbb8733c67c8a4cc53b17">ProvideObject</a></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keyword">get</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                <span class="keywordflow">if</span> (!provideObject.IsNullOrDestroyed()) <span class="keywordflow">return</span> provideObject;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d49/class_sequencer.html">Sequencer</a> is IUnitSequencer { Unit: not <span class="keyword">null</span> } unitSequencer)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d49/class_sequencer.html">Sequencer</a> is <a class="code hl_interface" href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html">IUnitSequencer</a> { <a class="code hl_enumvalue" href="../../d6/dee/namespace_common.html#a044de7969cba8f2a9b9d036741a9b449a19c562a36aeb455d09534f93b4f5236f">Unit</a>: not <span class="keyword">null</span> } unitSequencer)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                    provideObject = unitSequencer.Unit.gameObject;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                }</div>
@@ -133,17 +134,21 @@ $(function(){initNavTree('d5/d79/_arrow_rain_particle_8cs_source.html','../../')
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            }  </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keyword">set</span> =&gt; provideObject = value;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
+</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Initialize(ISequencer sequencer)</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#a8d670a9e370fc231fe3992253d824bae">   37</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#a8d670a9e370fc231fe3992253d824bae">Initialize</a>(<a class="code hl_interface" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a> sequencer)</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            base.Initialize(sequencer);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            pool.Initialize(component =&gt; component.Pool = pool, <span class="keyword">null</span>, transform);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
+</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> PlayEffect()</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#aa1c8f1a084ccb5e933fb669ddd187174">   45</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#aa1c8f1a084ccb5e933fb669ddd187174">PlayEffect</a>()</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            cts1 = <span class="keyword">new</span> CancellationTokenSource();</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            cts2 = <span class="keyword">new</span> CancellationTokenSource();</div>
@@ -151,10 +156,12 @@ $(function(){initNavTree('d5/d79/_arrow_rain_particle_8cs_source.html','../../')
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            RandomSamplingPlay(cts1).Forget();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            RandomSamplingPlay(cts2, 50).Forget();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> StopEffect()</div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#ae8d3ea306d43048136f974dd2babd35e">   54</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#ae8d3ea306d43048136f974dd2babd35e">StopEffect</a>()</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            pool.ReleaseAll();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            pool.<a class="code hl_function" href="../../d7/d1c/class_common_1_1_effects_1_1_particles_1_1_particle_pool.html#aeb3b730f94cc24fd5b717ee232dc1bc8">ReleaseAll</a>();</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">if</span> (cts1 is not <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            {</div>
@@ -168,6 +175,7 @@ $(function(){initNavTree('d5/d79/_arrow_rain_particle_8cs_source.html','../../')
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                cts2 = <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keyword">private</span> async UniTask RandomSamplingPlay(CancellationTokenSource cts, <span class="keywordtype">int</span> startDelay = 0)</div>
@@ -175,7 +183,7 @@ $(function(){initNavTree('d5/d79/_arrow_rain_particle_8cs_source.html','../../')
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            await UniTask.Delay(startDelay, <span class="keyword">false</span>, PlayerLoopTiming.FixedUpdate, cts.Token);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            var refVector = <span class="keyword">new</span> Vector3(0, 0, 1);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            var direction = ProvideObject.transform.forward;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            var direction = <a class="code hl_property" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#aa4f959fd686cbb8733c67c8a4cc53b17">ProvideObject</a>.transform.forward;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            var angle = Vector3.Angle(refVector, direction);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            var cross = Vector3.Cross(refVector, direction);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            </div>
@@ -188,8 +196,8 @@ $(function(){initNavTree('d5/d79/_arrow_rain_particle_8cs_source.html','../../')
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">foreach</span> (var point <span class="keywordflow">in</span> randomPointsEntry)</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                var projectilePosition = ProvideObject.transform.position;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                var randomDelay = Random.Range(80, 120);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                var projectilePosition = <a class="code hl_property" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#aa4f959fd686cbb8733c67c8a4cc53b17">ProvideObject</a>.transform.position;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                var randomDelay = <a class="code hl_typedef" href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(80, 120);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                var arrowEffect = pool.Get();</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                arrowEffect.transform.position = <span class="keyword">new</span> Vector3((point.x - 7f) + projectilePosition.x, 0f, (point.z - 1.0f) + projectilePosition.z);</div>
@@ -202,23 +210,34 @@ $(function(){initNavTree('d5/d79/_arrow_rain_particle_8cs_source.html','../../')
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnDestroy()</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        {</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            StopEffect();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <a class="code hl_function" href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#ae8d3ea306d43048136f974dd2babd35e">StopEffect</a>();</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        }</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
 </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
 </div>
+<div class="ttc" id="a_number_extension_8cs_html_a832e8f52fca5a678819ec96269dcb532"><div class="ttname"><a href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a></div><div class="ttdeci">UnityEngine.Random Random</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d1a/_number_extension_8cs_source.html#l00005">NumberExtension.cs:5</a></div></div>
+<div class="ttc" id="aclass_common_1_1_effects_1_1_effect_behaviour_html"><div class="ttname"><a href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html">Common.Effects.EffectBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d7c/_effect_behaviour_8cs_source.html#l00005">EffectBehaviour.cs:6</a></div></div>
+<div class="ttc" id="aclass_common_1_1_effects_1_1_particles_1_1_particle_pool_html"><div class="ttname"><a href="../../d7/d1c/class_common_1_1_effects_1_1_particles_1_1_particle_pool.html">Common.Effects.Particles.ParticlePool</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/da0/_particle_pool_8cs_source.html#l00007">ParticlePool.cs:8</a></div></div>
+<div class="ttc" id="aclass_common_1_1_effects_1_1_particles_1_1_particle_pool_html_aeb3b730f94cc24fd5b717ee232dc1bc8"><div class="ttname"><a href="../../d7/d1c/class_common_1_1_effects_1_1_particles_1_1_particle_pool.html#aeb3b730f94cc24fd5b717ee232dc1bc8">Common.Effects.Particles.ParticlePool.ReleaseAll</a></div><div class="ttdeci">override void ReleaseAll()</div><div class="ttdef"><b>Definition</b> <a href="../../d4/da0/_particle_pool_8cs_source.html#l00014">ParticlePool.cs:14</a></div></div>
 <div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_html"><div class="ttname"><a href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html">Common.Projectiles.Variants.UnderworldSoldiers.ArrowRainParticle</a></div><div class="ttdoc">Custom Particle Script for ArrowRain.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">ArrowRainParticle.cs:14</a></div></div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_html_a8d670a9e370fc231fe3992253d824bae"><div class="ttname"><a href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#a8d670a9e370fc231fe3992253d824bae">Common.Projectiles.Variants.UnderworldSoldiers.ArrowRainParticle.Initialize</a></div><div class="ttdeci">override void Initialize(ISequencer sequencer)</div><div class="ttdef"><b>Definition</b> <a href="#l00037">ArrowRainParticle.cs:37</a></div></div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_html_aa1c8f1a084ccb5e933fb669ddd187174"><div class="ttname"><a href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#aa1c8f1a084ccb5e933fb669ddd187174">Common.Projectiles.Variants.UnderworldSoldiers.ArrowRainParticle.PlayEffect</a></div><div class="ttdeci">override void PlayEffect()</div><div class="ttdef"><b>Definition</b> <a href="#l00045">ArrowRainParticle.cs:45</a></div></div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_html_aa4f959fd686cbb8733c67c8a4cc53b17"><div class="ttname"><a href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#aa4f959fd686cbb8733c67c8a4cc53b17">Common.Projectiles.Variants.UnderworldSoldiers.ArrowRainParticle.ProvideObject</a></div><div class="ttdeci">GameObject ProvideObject</div><div class="ttdef"><b>Definition</b> <a href="#l00021">ArrowRainParticle.cs:22</a></div></div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle_html_ae8d3ea306d43048136f974dd2babd35e"><div class="ttname"><a href="../../d2/d89/class_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_1_1_arrow_rain_particle.html#ae8d3ea306d43048136f974dd2babd35e">Common.Projectiles.Variants.UnderworldSoldiers.ArrowRainParticle.StopEffect</a></div><div class="ttdeci">override void StopEffect()</div><div class="ttdef"><b>Definition</b> <a href="#l00054">ArrowRainParticle.cs:54</a></div></div>
 <div class="ttc" id="aclass_sequencer_html"><div class="ttname"><a href="../../d6/d49/class_sequencer.html">Sequencer</a></div><div class="ttdoc">Serial Action Invoker Which use UniTask and DOTween Combination.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/dc0/_sequencer_8cs_source.html#l00012">Sequencer.cs:13</a></div></div>
+<div class="ttc" id="ainterface_common_1_1_i_unit_sequencer_html"><div class="ttname"><a href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html">Common.IUnitSequencer</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/daa/_i_common_sequencer_8cs_source.html#l00003">ICommonSequencer.cs:4</a></div></div>
+<div class="ttc" id="ainterface_i_sequencer_html"><div class="ttname"><a href="../../d6/de9/interface_i_sequencer.html">ISequencer</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d67/_i_sequencer_8cs_source.html#l00001">ISequencer.cs:2</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_effects_1_1_particles_html"><div class="ttname"><a href="../../d3/d07/namespace_common_1_1_effects_1_1_particles.html">Common.Effects.Particles</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d08/_particle_debris_8cs_source.html#l00005">ParticleDebris.cs:6</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_effects_html"><div class="ttname"><a href="../../dd/da3/namespace_common_1_1_effects.html">Common.Effects</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/d6a/_camera_impulse_8cs_source.html#l00008">CameraImpulse.cs:9</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers_html"><div class="ttname"><a href="../../d4/dfb/namespace_common_1_1_projectiles_1_1_variants_1_1_underworld_soldiers.html">Common.Projectiles.Variants.UnderworldSoldiers</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">ArrowRainParticle.cs:8</a></div></div>
+<div class="ttc" id="anamespace_common_html_a044de7969cba8f2a9b9d036741a9b449a19c562a36aeb455d09534f93b4f5236f"><div class="ttname"><a href="../../d6/dee/namespace_common.html#a044de7969cba8f2a9b9d036741a9b449a19c562a36aeb455d09534f93b4f5236f">Common.EffectTargetType.Unit</a></div><div class="ttdeci">@ Unit</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_df0bab9382a706c8111b22aa67473426.html">Projectiles</a></li><li class="navelem"><a class="el" href="../../dir_ef90f9b27c2a808fc28227ea8b3b1a30.html">Variants</a></li><li class="navelem"><a class="el" href="../../dir_837ad79d40c39ee49686523da5bf0af8.html">UnderworldSoldiers</a></li><li class="navelem"><b>ArrowRainParticle.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_df0bab9382a706c8111b22aa67473426.html">Projectiles</a></li><li class="navelem"><a class="el" href="../../dir_ef90f9b27c2a808fc28227ea8b3b1a30.html">Variants</a></li><li class="navelem"><a class="el" href="../../dir_837ad79d40c39ee49686523da5bf0af8.html">UnderworldSoldiers</a></li><li class="navelem"><a class="el" href="../../d5/d79/_arrow_rain_particle_8cs.html">ArrowRainParticle.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

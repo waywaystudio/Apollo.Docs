@@ -100,30 +100,38 @@ $(function(){initNavTree('d4/dc4/_stun_executor_8cs_source.html','../../'); init
   <div class="headertitle"><div class="title">StunExecutor.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<a href="../../d4/dc4/_stun_executor_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d8/d9a/namespace_common_1_1_executors_1_1_variants.html">Common.Executors.Variants</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keyword">public</span> <span class="keyword">class </span>StunExecutor : ExecuteBehaviour</div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="../../d9/d03/class_common_1_1_executors_1_1_variants_1_1_stun_executor.html">    5</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d9/d03/class_common_1_1_executors_1_1_variants_1_1_stun_executor.html">StunExecutor</a> : <a class="code hl_class" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">ExecuteBehaviour</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">float</span> duration;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ExecuteToTarget(GameObject target)</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d9/d03/class_common_1_1_executors_1_1_variants_1_1_stun_executor.html#abc6e92c6e7ffe9d15b325e33c16fa6a2">   10</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d03/class_common_1_1_executors_1_1_variants_1_1_stun_executor.html#abc6e92c6e7ffe9d15b325e33c16fa6a2">ExecuteToTarget</a>(GameObject target)</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            <span class="keywordflow">if</span> (!target.TryGetComponent(out IStunTaker taker)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            <span class="keywordflow">if</span> (!target.TryGetComponent(out <a class="code hl_interface" href="../../de/db0/interface_common_1_1_i_stun_taker.html">IStunTaker</a> taker)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            taker.TakeStun(duration);</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        }</div>
+</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+<div class="ttc" id="aclass_common_1_1_executors_1_1_execute_behaviour_html"><div class="ttname"><a href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d57/_execute_behaviour_8cs_source.html#l00006">ExecuteBehaviour.cs:7</a></div></div>
+<div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_stun_executor_html"><div class="ttname"><a href="../../d9/d03/class_common_1_1_executors_1_1_variants_1_1_stun_executor.html">Common.Executors.Variants.StunExecutor</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">StunExecutor.cs:6</a></div></div>
+<div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_stun_executor_html_abc6e92c6e7ffe9d15b325e33c16fa6a2"><div class="ttname"><a href="../../d9/d03/class_common_1_1_executors_1_1_variants_1_1_stun_executor.html#abc6e92c6e7ffe9d15b325e33c16fa6a2">Common.Executors.Variants.StunExecutor.ExecuteToTarget</a></div><div class="ttdeci">override void ExecuteToTarget(GameObject target)</div><div class="ttdef"><b>Definition</b> <a href="#l00010">StunExecutor.cs:10</a></div></div>
+<div class="ttc" id="ainterface_common_1_1_i_stun_taker_html"><div class="ttname"><a href="../../de/db0/interface_common_1_1_i_stun_taker.html">Common.IStunTaker</a></div><div class="ttdoc">Character.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00140">ICombats.cs:141</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_executors_1_1_variants_html"><div class="ttname"><a href="../../d8/d9a/namespace_common_1_1_executors_1_1_variants.html">Common.Executors.Variants</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/ded/_damage_executor_8cs_source.html#l00003">DamageExecutor.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_103b1203c1e1c6d27198bc3e6626ec4d.html">Executors</a></li><li class="navelem"><a class="el" href="../../dir_749f634b7181e6abbc2b07b2d5359ed8.html">Variants</a></li><li class="navelem"><b>StunExecutor.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_103b1203c1e1c6d27198bc3e6626ec4d.html">Executors</a></li><li class="navelem"><a class="el" href="../../dir_749f634b7181e6abbc2b07b2d5359ed8.html">Variants</a></li><li class="navelem"><a class="el" href="../../d4/dc4/_stun_executor_8cs.html">StunExecutor.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

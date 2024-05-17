@@ -100,7 +100,7 @@ $(function(){initNavTree('d7/d6f/_log_in_entity_8cs_source.html','../../'); init
   <div class="headertitle"><div class="title">LogInEntity.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<a href="../../d7/d6f/_log_in_entity_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Threading;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Cysharp.Threading.Tasks;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>PlayFab;</div>
@@ -110,40 +110,44 @@ $(function(){initNavTree('d7/d6f/_log_in_entity_8cs_source.html','../../'); init
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d2/dce/namespace_clouds.html">Clouds</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    [Serializable]</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">public</span> <span class="keyword">class </span>LogInEntity</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html">   11</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html">LogInEntity</a></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">bool</span> setAutoCustomId;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">string</span> customId;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">private</span> CancellationTokenSource loginCanceller;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> IsLogin { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">public</span> <span class="keywordtype">string</span> PlayFabId { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">public</span> <span class="keywordtype">string</span> CustomId =&gt; customId;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abcd3ef2b1b263ff4aee08e0e10c2b277">   18</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abcd3ef2b1b263ff4aee08e0e10c2b277">IsLogin</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#a1dac1f6673317535fcb95ef5e5d1b897">   19</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#a1dac1f6673317535fcb95ef5e5d1b897">PlayFabId</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abaebd550b722932c18ac114273549523">   20</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abaebd550b722932c18ac114273549523">CustomId</a> =&gt; customId;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize()</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#aabe204d95b48807632b077bdad921624">   23</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#aabe204d95b48807632b077bdad921624">Initialize</a>()</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">if</span> (setAutoCustomId)</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                customId = SystemInfo.deviceUniqueIdentifier;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            }</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
+</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">public</span> async UniTask ASyncLogIn()</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#aa1830d911cfd30f27585836798e6e45d">   31</a></span>        <span class="keyword">public</span> async UniTask <a class="code hl_function" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#aa1830d911cfd30f27585836798e6e45d">ASyncLogIn</a>()</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            loginCanceller = <span class="keyword">new</span> CancellationTokenSource();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            IsLogin        = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_property" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abcd3ef2b1b263ff4aee08e0e10c2b277">IsLogin</a>        = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            var request = <span class="keyword">new</span> LoginWithCustomIDRequest</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                CustomId      = CustomId, </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <a class="code hl_property" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abaebd550b722932c18ac114273549523">CustomId</a>      = <a class="code hl_property" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abaebd550b722932c18ac114273549523">CustomId</a>, </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                CreateAccount = <span class="keyword">true</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            };</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, CloudManager.OnSharedFailure);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, <a class="code hl_class" href="../../da/d8b/class_cloud_manager.html">CloudManager</a>.<a class="code hl_function" href="../../da/d8b/class_cloud_manager.html#a19b4986658df7aef96e56e9f63bd3bce">OnSharedFailure</a>);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            await UniTask.WaitUntil(() =&gt; IsLogin, cancellationToken:loginCanceller.Token);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            await UniTask.WaitUntil(() =&gt; <a class="code hl_property" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abcd3ef2b1b263ff4aee08e0e10c2b277">IsLogin</a>, cancellationToken:loginCanceller.Token);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        </div>
@@ -151,12 +155,14 @@ $(function(){initNavTree('d7/d6f/_log_in_entity_8cs_source.html','../../'); init
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                Debug.Log(<span class="stringliteral">&quot;Logged in successfully&quot;</span>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                IsLogin   = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                PlayFabId = result.PlayFabId;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <a class="code hl_property" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abcd3ef2b1b263ff4aee08e0e10c2b277">IsLogin</a>   = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <a class="code hl_property" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#a1dac1f6673317535fcb95ef5e5d1b897">PlayFabId</a> = result.PlayFabId;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Dispose()</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#a4d685048807ab543cf4dcf77c778aded">   57</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#a4d685048807ab543cf4dcf77c778aded">Dispose</a>()</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">if</span> (loginCanceller is not <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
@@ -165,18 +171,29 @@ $(function(){initNavTree('d7/d6f/_log_in_entity_8cs_source.html','../../'); init
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                loginCanceller = <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            PlayFabId = <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            IsLogin   = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <a class="code hl_property" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#a1dac1f6673317535fcb95ef5e5d1b897">PlayFabId</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <a class="code hl_property" href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abcd3ef2b1b263ff4aee08e0e10c2b277">IsLogin</a>   = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+<div class="ttc" id="aclass_cloud_manager_html"><div class="ttname"><a href="../../da/d8b/class_cloud_manager.html">CloudManager</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d48/_cloud_manager_8cs_source.html#l00009">CloudManager.cs:10</a></div></div>
+<div class="ttc" id="aclass_cloud_manager_html_a19b4986658df7aef96e56e9f63bd3bce"><div class="ttname"><a href="../../da/d8b/class_cloud_manager.html#a19b4986658df7aef96e56e9f63bd3bce">CloudManager.OnSharedFailure</a></div><div class="ttdeci">static void OnSharedFailure(PlayFabError error)</div></div>
+<div class="ttc" id="aclass_clouds_1_1_log_in_entity_html"><div class="ttname"><a href="../../d2/dbb/class_clouds_1_1_log_in_entity.html">Clouds.LogInEntity</a></div><div class="ttdef"><b>Definition</b> <a href="#l00011">LogInEntity.cs:12</a></div></div>
+<div class="ttc" id="aclass_clouds_1_1_log_in_entity_html_a1dac1f6673317535fcb95ef5e5d1b897"><div class="ttname"><a href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#a1dac1f6673317535fcb95ef5e5d1b897">Clouds.LogInEntity.PlayFabId</a></div><div class="ttdeci">string PlayFabId</div><div class="ttdef"><b>Definition</b> <a href="#l00019">LogInEntity.cs:19</a></div></div>
+<div class="ttc" id="aclass_clouds_1_1_log_in_entity_html_a4d685048807ab543cf4dcf77c778aded"><div class="ttname"><a href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#a4d685048807ab543cf4dcf77c778aded">Clouds.LogInEntity.Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdef"><b>Definition</b> <a href="#l00057">LogInEntity.cs:57</a></div></div>
+<div class="ttc" id="aclass_clouds_1_1_log_in_entity_html_aa1830d911cfd30f27585836798e6e45d"><div class="ttname"><a href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#aa1830d911cfd30f27585836798e6e45d">Clouds.LogInEntity.ASyncLogIn</a></div><div class="ttdeci">async UniTask ASyncLogIn()</div><div class="ttdef"><b>Definition</b> <a href="#l00031">LogInEntity.cs:31</a></div></div>
+<div class="ttc" id="aclass_clouds_1_1_log_in_entity_html_aabe204d95b48807632b077bdad921624"><div class="ttname"><a href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#aabe204d95b48807632b077bdad921624">Clouds.LogInEntity.Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="#l00023">LogInEntity.cs:23</a></div></div>
+<div class="ttc" id="aclass_clouds_1_1_log_in_entity_html_abaebd550b722932c18ac114273549523"><div class="ttname"><a href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abaebd550b722932c18ac114273549523">Clouds.LogInEntity.CustomId</a></div><div class="ttdeci">string CustomId</div><div class="ttdef"><b>Definition</b> <a href="#l00020">LogInEntity.cs:20</a></div></div>
+<div class="ttc" id="aclass_clouds_1_1_log_in_entity_html_abcd3ef2b1b263ff4aee08e0e10c2b277"><div class="ttname"><a href="../../d2/dbb/class_clouds_1_1_log_in_entity.html#abcd3ef2b1b263ff4aee08e0e10c2b277">Clouds.LogInEntity.IsLogin</a></div><div class="ttdeci">bool IsLogin</div><div class="ttdef"><b>Definition</b> <a href="#l00018">LogInEntity.cs:18</a></div></div>
 <div class="ttc" id="anamespace_clouds_html"><div class="ttname"><a href="../../d2/dce/namespace_clouds.html">Clouds</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d40/_load_entity_8cs_source.html#l00009">LoadEntity.cs:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><a class="el" href="../../dir_fa59be56a60461f0a8d7b73e6a40764d.html">Clouds</a></li><li class="navelem"><b>LogInEntity.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><a class="el" href="../../dir_fa59be56a60461f0a8d7b73e6a40764d.html">Clouds</a></li><li class="navelem"><a class="el" href="../../d7/d6f/_log_in_entity_8cs.html">LogInEntity.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

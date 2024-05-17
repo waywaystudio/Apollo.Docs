@@ -100,45 +100,52 @@ $(function(){initNavTree('d9/d3b/_stat_set_8cs_source.html','../../'); initResiz
   <div class="headertitle"><div class="title">StatSet.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<a href="../../d9/d3b/_stat_set_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/dee/namespace_common.html">Common</a></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keyword">public</span> <span class="keyword">class </span>StatSet</div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../d5/dc2/class_common_1_1_stat_set.html">    6</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d5/dc2/class_common_1_1_stat_set.html">StatSet</a></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keyword">private</span> readonly Dictionary&lt;string, StatEntity&gt; table = <span class="keyword">new</span>();</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">public</span> StatEntity <span class="keyword">this</span>[<span class="keywordtype">string</span> key] =&gt; table[key];</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">public</span> <span class="keywordtype">float</span> Value { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;float&gt;</a> OnValueChanged { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d5/dc2/class_common_1_1_stat_set.html#a3ca4414755da1aa85813e2905ce651cd">   10</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d5/dd3/class_common_1_1_stat_entity.html">StatEntity</a> <span class="keyword">this</span>[<span class="keywordtype">string</span> key] =&gt; table[key];</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d5/dc2/class_common_1_1_stat_set.html#a0d2c96475056754485cbe7979dc731aa">   11</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d5/dc2/class_common_1_1_stat_set.html#a0d2c96475056754485cbe7979dc731aa">Value</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d5/dc2/class_common_1_1_stat_set.html#a05c14b49f2010b4ef264a9fefdf49a53">   12</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;float&gt;</a> <a class="code hl_property" href="../../d5/dc2/class_common_1_1_stat_set.html#a05c14b49f2010b4ef264a9fefdf49a53">OnValueChanged</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Add(StatEntity stat)</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d5/dc2/class_common_1_1_stat_set.html#a05eb0092b442d7175803abb69a2bb1e9">   15</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/dc2/class_common_1_1_stat_set.html#a05eb0092b442d7175803abb69a2bb1e9">Add</a>(<a class="code hl_class" href="../../d5/dd3/class_common_1_1_stat_entity.html">StatEntity</a> stat)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            table[stat.StatKey] = stat;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            table[stat.<a class="code hl_property" href="../../d5/dd3/class_common_1_1_stat_entity.html#a277004039edf395ce0c3cc661b78c996">StatKey</a>] = stat;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            stat.OnValueChanged.Add(<span class="stringliteral">&quot;Calculate&quot;</span>, Calculate);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            stat.<a class="code hl_property" href="../../d5/dd3/class_common_1_1_stat_entity.html#a24522826259d68dfb3b4eae7e80dd0a4">OnValueChanged</a>.<a class="code hl_function" href="../../db/dcc/class_action_table.html#a84455f1a9d923913588f1d0bd00b695b">Add</a>(<span class="stringliteral">&quot;Calculate&quot;</span>, Calculate);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            Calculate();</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        }</div>
+</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Remove(StatEntity stat)</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d5/dc2/class_common_1_1_stat_set.html#a9675d445dbe76ce28761420d18b61008">   23</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/dc2/class_common_1_1_stat_set.html#a9675d445dbe76ce28761420d18b61008">Remove</a>(<a class="code hl_class" href="../../d5/dd3/class_common_1_1_stat_entity.html">StatEntity</a> stat)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {    </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">if</span> (!table.Remove(stat.StatKey, out var targetStat)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">if</span> (!table.Remove(stat.<a class="code hl_property" href="../../d5/dd3/class_common_1_1_stat_entity.html#a277004039edf395ce0c3cc661b78c996">StatKey</a>, out var targetStat)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            targetStat.OnValueChanged.Remove(<span class="stringliteral">&quot;Calculate&quot;</span>);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            Calculate();</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
+</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Remove(<span class="keywordtype">string</span> statKey)</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d5/dc2/class_common_1_1_stat_set.html#a7686b0a9b29532661becf2394c371492">   31</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/dc2/class_common_1_1_stat_set.html#a7686b0a9b29532661becf2394c371492">Remove</a>(<span class="keywordtype">string</span> statKey)</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {    </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (!table.Remove(statKey, out var targetStat)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            targetStat.OnValueChanged.Remove(<span class="stringliteral">&quot;Calculate&quot;</span>);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            Calculate();</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> ContainsKey(<span class="keywordtype">string</span> key) =&gt; table.ContainsKey(key);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d5/dc2/class_common_1_1_stat_set.html#a8c8585eed90c1c51269ab6bab888b597">   39</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d5/dc2/class_common_1_1_stat_set.html#a8c8585eed90c1c51269ab6bab888b597">ContainsKey</a>(<span class="keywordtype">string</span> key) =&gt; table.ContainsKey(key);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Calculate()</div>
@@ -146,12 +153,13 @@ $(function(){initNavTree('d9/d3b/_stat_set_8cs_source.html','../../'); initResiz
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            var result = 0f;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            table.Values.ForEach(statValue =&gt; result += statValue.Value);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span> (!(Mathf.Abs(Value - result) &gt; 0.000001f)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span> (!(Mathf.Abs(<a class="code hl_property" href="../../d5/dc2/class_common_1_1_stat_set.html#a0d2c96475056754485cbe7979dc731aa">Value</a> - result) &gt; 0.000001f)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            Value = result;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            OnValueChanged.Invoke(Value);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_property" href="../../d5/dc2/class_common_1_1_stat_set.html#a0d2c96475056754485cbe7979dc731aa">Value</a> = result;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_property" href="../../d5/dc2/class_common_1_1_stat_set.html#a05c14b49f2010b4ef264a9fefdf49a53">OnValueChanged</a>.<a class="code hl_function" href="../../db/dcc/class_action_table.html#a6a6f404afd5039c3252ba21ce53aaa39">Invoke</a>(<a class="code hl_property" href="../../d5/dc2/class_common_1_1_stat_set.html#a0d2c96475056754485cbe7979dc731aa">Value</a>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">// namespace Common</span></div>
@@ -372,13 +380,25 @@ $(function(){initNavTree('d9/d3b/_stat_set_8cs_source.html','../../'); initResiz
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment">//     }</span></div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="comment">// }</span></div>
 <div class="ttc" id="aclass_action_table_html"><div class="ttname"><a href="../../db/dcc/class_action_table.html">ActionTable</a></div><div class="ttdoc">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00067">ActionTable.cs:68</a></div></div>
+<div class="ttc" id="aclass_action_table_html_a6a6f404afd5039c3252ba21ce53aaa39"><div class="ttname"><a href="../../db/dcc/class_action_table.html#a6a6f404afd5039c3252ba21ce53aaa39">ActionTable.Invoke</a></div><div class="ttdeci">void Invoke()</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00036">ActionTable.cs:36</a></div></div>
+<div class="ttc" id="aclass_action_table_html_a84455f1a9d923913588f1d0bd00b695b"><div class="ttname"><a href="../../db/dcc/class_action_table.html#a84455f1a9d923913588f1d0bd00b695b">ActionTable.Add</a></div><div class="ttdeci">void Add(string key, Action action)</div></div>
+<div class="ttc" id="aclass_common_1_1_stat_entity_html"><div class="ttname"><a href="../../d5/dd3/class_common_1_1_stat_entity.html">Common.StatEntity</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d3b/_stat_entity_8cs_source.html#l00007">StatEntity.cs:8</a></div></div>
+<div class="ttc" id="aclass_common_1_1_stat_entity_html_a24522826259d68dfb3b4eae7e80dd0a4"><div class="ttname"><a href="../../d5/dd3/class_common_1_1_stat_entity.html#a24522826259d68dfb3b4eae7e80dd0a4">Common.StatEntity.OnValueChanged</a></div><div class="ttdeci">ActionTable&lt; float &gt; OnValueChanged</div><div class="ttdef"><b>Definition</b> <a href="../../df/d3b/_stat_entity_8cs_source.html#l00017">StatEntity.cs:17</a></div></div>
+<div class="ttc" id="aclass_common_1_1_stat_entity_html_a277004039edf395ce0c3cc661b78c996"><div class="ttname"><a href="../../d5/dd3/class_common_1_1_stat_entity.html#a277004039edf395ce0c3cc661b78c996">Common.StatEntity.StatKey</a></div><div class="ttdeci">string StatKey</div><div class="ttdef"><b>Definition</b> <a href="../../df/d3b/_stat_entity_8cs_source.html#l00018">StatEntity.cs:18</a></div></div>
+<div class="ttc" id="aclass_common_1_1_stat_set_html"><div class="ttname"><a href="../../d5/dc2/class_common_1_1_stat_set.html">Common.StatSet</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">StatSet.cs:7</a></div></div>
+<div class="ttc" id="aclass_common_1_1_stat_set_html_a05c14b49f2010b4ef264a9fefdf49a53"><div class="ttname"><a href="../../d5/dc2/class_common_1_1_stat_set.html#a05c14b49f2010b4ef264a9fefdf49a53">Common.StatSet.OnValueChanged</a></div><div class="ttdeci">ActionTable&lt; float &gt; OnValueChanged</div><div class="ttdef"><b>Definition</b> <a href="#l00012">StatSet.cs:12</a></div></div>
+<div class="ttc" id="aclass_common_1_1_stat_set_html_a05eb0092b442d7175803abb69a2bb1e9"><div class="ttname"><a href="../../d5/dc2/class_common_1_1_stat_set.html#a05eb0092b442d7175803abb69a2bb1e9">Common.StatSet.Add</a></div><div class="ttdeci">void Add(StatEntity stat)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">StatSet.cs:15</a></div></div>
+<div class="ttc" id="aclass_common_1_1_stat_set_html_a0d2c96475056754485cbe7979dc731aa"><div class="ttname"><a href="../../d5/dc2/class_common_1_1_stat_set.html#a0d2c96475056754485cbe7979dc731aa">Common.StatSet.Value</a></div><div class="ttdeci">float Value</div><div class="ttdef"><b>Definition</b> <a href="#l00011">StatSet.cs:11</a></div></div>
+<div class="ttc" id="aclass_common_1_1_stat_set_html_a7686b0a9b29532661becf2394c371492"><div class="ttname"><a href="../../d5/dc2/class_common_1_1_stat_set.html#a7686b0a9b29532661becf2394c371492">Common.StatSet.Remove</a></div><div class="ttdeci">void Remove(string statKey)</div><div class="ttdef"><b>Definition</b> <a href="#l00031">StatSet.cs:31</a></div></div>
+<div class="ttc" id="aclass_common_1_1_stat_set_html_a8c8585eed90c1c51269ab6bab888b597"><div class="ttname"><a href="../../d5/dc2/class_common_1_1_stat_set.html#a8c8585eed90c1c51269ab6bab888b597">Common.StatSet.ContainsKey</a></div><div class="ttdeci">bool ContainsKey(string key)</div></div>
+<div class="ttc" id="aclass_common_1_1_stat_set_html_a9675d445dbe76ce28761420d18b61008"><div class="ttname"><a href="../../d5/dc2/class_common_1_1_stat_set.html#a9675d445dbe76ce28761420d18b61008">Common.StatSet.Remove</a></div><div class="ttdeci">void Remove(StatEntity stat)</div><div class="ttdef"><b>Definition</b> <a href="#l00023">StatSet.cs:23</a></div></div>
 <div class="ttc" id="anamespace_common_html"><div class="ttname"><a href="../../d6/dee/namespace_common.html">Common</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/daf/_animation_player_8cs_source.html#l00010">AnimationPlayer.cs:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_3f25204ea0d4df6d15d2b0e65f34be1d.html">_DataStruct</a></li><li class="navelem"><b>StatSet.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_3f25204ea0d4df6d15d2b0e65f34be1d.html">_DataStruct</a></li><li class="navelem"><a class="el" href="../../d9/d3b/_stat_set_8cs.html">StatSet.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

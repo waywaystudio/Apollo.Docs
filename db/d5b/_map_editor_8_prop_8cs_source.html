@@ -100,7 +100,7 @@ $(function(){initNavTree('db/d5b/_map_editor_8_prop_8cs_source.html','../../'); 
   <div class="headertitle"><div class="title">MapEditor.Prop.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<a href="../../db/d5b/_map_editor_8_prop_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Linq;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d0/d0e/namespace_challenge_1_1_dungeons.html">Challenge.Dungeons</a>;</div>
@@ -130,7 +130,7 @@ $(function(){initNavTree('db/d5b/_map_editor_8_prop_8cs_source.html','../../'); 
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">private</span> Transform VoidContainer =&gt; CurrentMap.VoidContainer;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">private</span> Transform WallContainer =&gt; CurrentMap.WallContainer;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">private</span> Transform WallDummyContainer =&gt; CurrentMap.WallDummyContainer;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">private</span> Table&lt;MapPrepositionType, Transform&gt; PrePositionTable =&gt; CurrentMap.PrePositionTable;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table&lt;MapPrepositionType, Transform&gt;</a> PrePositionTable =&gt; CurrentMap.PrePositionTable;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> GenerateMapFromMatrix()</div>
@@ -182,7 +182,7 @@ $(function(){initNavTree('db/d5b/_map_editor_8_prop_8cs_source.html','../../'); 
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                            CreatePrefab(VerticalTrapPrefabs.Random(), pos, EnvironmentContainer);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                            </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                            var obstacle = CreatePrefab(ObstaclePrefabs.Random(), pos, EnvironmentContainer);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                            obstacle.transform.localRotation = Quaternion.Euler(<span class="keyword">new</span> Vector3(0, Random.value * 360f, 0));</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                            obstacle.transform.localRotation = Quaternion.Euler(<span class="keyword">new</span> Vector3(0, <a class="code hl_typedef" href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.value * 360f, 0));</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                        }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;s&quot;</span>:</div>
@@ -195,81 +195,81 @@ $(function(){initNavTree('db/d5b/_map_editor_8_prop_8cs_source.html','../../'); 
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                            var obstacleTransform = CreatePrefab(ObstaclePrefabs.Random(), pos, EnvironmentContainer).transform;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                            </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                            obstacleTransform.localRotation = rotateObstacle </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                ? Quaternion.Euler(<span class="keyword">new</span> Vector3(0, Random.value * 360f, 0)) </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                ? Quaternion.Euler(<span class="keyword">new</span> Vector3(0, <a class="code hl_typedef" href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.value * 360f, 0)) </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                                : obstacleTransform.localRotation;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                            </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                        }</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;sp&quot;</span>:</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                        {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                            CreatePrefab(FiendSpawnPin, pos, PrePositionTable[MapPrepositionType.FiendSpawns]);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                            CreatePrefab(FiendSpawnPin, pos, PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.FiendSpawns]);</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                        }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;e1&quot;</span>:</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                        {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                            PrePositionTable[MapPrepositionType.PlayerSpawn].position = pos;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                            PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.PlayerSpawn].position = pos;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                            </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                            CreatePrefab(WallPrefab, pos, PrePositionTable[MapPrepositionType.PlayerSpawn]).SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                            CreatePrefab(WallPrefab, pos, PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.PlayerSpawn]).SetActive(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                        }</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;e2&quot;</span>:</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                        {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                            PrePositionTable[MapPrepositionType.PlayerDestination].position = pos;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                            PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.PlayerDestination].position = pos;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                        }</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;ew&quot;</span>:</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                        {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                            CreatePrefab(WallPrefab, pos, PrePositionTable[MapPrepositionType.PlayerSpawn]).SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                            CreatePrefab(WallPrefab, pos, PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.PlayerSpawn]).SetActive(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                        }</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;xs1&quot;</span>:</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                        {</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                            PrePositionTable[MapPrepositionType.Gate1].position = pos;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                            PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.Gate1].position = pos;</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                            CreatePrefab(ExitGatePrefabs.Random(), pos, PrePositionTable[MapPrepositionType.Gate1]);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                            CreatePrefab(ExitGatePrefabs.Random(), pos, PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.Gate1]);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                        }</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;xd1&quot;</span>:</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                        {</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                            PrePositionTable[MapPrepositionType.Gate1].LookAt(pos);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                            PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.Gate1].LookAt(pos);</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                        }</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;xs2&quot;</span>:</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                        {</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                            PrePositionTable[MapPrepositionType.Gate2].position = pos;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                            PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.Gate2].position = pos;</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                            </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                            CreatePrefab(ExitGatePrefabs.Random(), pos, PrePositionTable[MapPrepositionType.Gate2]);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                            CreatePrefab(ExitGatePrefabs.Random(), pos, PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.Gate2]);</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                        }</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;xd2&quot;</span>:</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                        {</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                            PrePositionTable[MapPrepositionType.Gate2].LookAt(pos);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                            PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.Gate2].LookAt(pos);</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                        }</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;boss&quot;</span>:</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                        {</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                            PrePositionTable[MapPrepositionType.Boss]          = TryCreateChild(<span class="stringliteral">&quot;BossSpawnPosition&quot;</span>);</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                            PrePositionTable[MapPrepositionType.Boss].position = pos;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                            PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.Boss]          = TryCreateChild(<span class="stringliteral">&quot;BossSpawnPosition&quot;</span>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                            PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.Boss].position = pos;</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                        }</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;m&quot;</span>:</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                        {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                            <span class="keywordflow">if</span> (!PrePositionTable.ContainsKey(MapPrepositionType.MerchantGoods))</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                            <span class="keywordflow">if</span> (!PrePositionTable.<a class="code hl_function" href="../../d2/d8f/class_table.html#a4c012e54b170a3ee21db16e9be63cf37">ContainsKey</a>(<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.MerchantGoods))</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                            {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                                PrePositionTable[MapPrepositionType.MerchantGoods] = TryCreateChild(<span class="stringliteral">&quot;MerchantGoods&quot;</span>);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                                PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.MerchantGoods] = TryCreateChild(<span class="stringliteral">&quot;MerchantGoods&quot;</span>);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                            }</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                            </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                            CreatePrefab(MerchantGoodsPin, pos, PrePositionTable[MapPrepositionType.MerchantGoods]);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                            CreatePrefab(MerchantGoodsPin, pos, PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.MerchantGoods]);</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                        }</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                        <span class="keywordflow">case</span> <span class="stringliteral">&quot;sr&quot;</span>:</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                        {</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                            <span class="keywordflow">if</span> (!PrePositionTable.ContainsKey(MapPrepositionType.StartReward))</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                            <span class="keywordflow">if</span> (!PrePositionTable.<a class="code hl_function" href="../../d2/d8f/class_table.html#a4c012e54b170a3ee21db16e9be63cf37">ContainsKey</a>(<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.StartReward))</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                            {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                                PrePositionTable[MapPrepositionType.StartReward] = TryCreateChild(<span class="stringliteral">&quot;StartRewardSpawn&quot;</span>);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                                PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.StartReward] = TryCreateChild(<span class="stringliteral">&quot;StartRewardSpawn&quot;</span>);</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                            }</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                            </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                            CreatePrefab(MerchantGoodsPin, pos, PrePositionTable[MapPrepositionType.StartReward]);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                            CreatePrefab(MerchantGoodsPin, pos, PrePositionTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">MapPrepositionType</a>.StartReward]);</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                        }</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                    }</div>
@@ -293,7 +293,7 @@ $(function(){initNavTree('db/d5b/_map_editor_8_prop_8cs_source.html','../../'); 
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            VoidContainer.DeleteChildren();</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            WallContainer.DeleteChildren();</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            WallDummyContainer.DeleteChildren();</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            PrePositionTable.KeyList.ForEach(key =&gt; PrePositionTable[key].DeleteChildren());</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            PrePositionTable.<a class="code hl_property" href="../../d2/d8f/class_table.html#aff475c7731aa4c465bdc355b22af30a3">KeyList</a>.ForEach(key =&gt; PrePositionTable[key].DeleteChildren());</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        }</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keyword">private</span> Transform TryCreateChild(<span class="keywordtype">string</span> childName)</div>
@@ -303,7 +303,7 @@ $(function(){initNavTree('db/d5b/_map_editor_8_prop_8cs_source.html','../../'); 
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <span class="keywordflow">return</span> prePosition.Find(childName) ?? prePosition.CreateChildGameObject(childName);</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keyword">private</span> <span class="keyword">static</span> GameObject CreatePrefab(Object prefab, Vector3 position, Transform parent)</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keyword">private</span> <span class="keyword">static</span> GameObject CreatePrefab(<a class="code hl_typedef" href="../../df/d04/_pool_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a> prefab, Vector3 position, Transform parent)</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        {</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            var instance = PrefabUtility.InstantiatePrefab(prefab, parent) as GameObject;</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
@@ -315,21 +315,28 @@ $(function(){initNavTree('db/d5b/_map_editor_8_prop_8cs_source.html','../../'); 
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            <span class="keywordflow">return</span> instance;</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        }</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> TryGetExistMap(out DungeonMap map)</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> TryGetExistMap(out <a class="code hl_class" href="../../df/dab/class_challenge_1_1_dungeons_1_1_dungeon_map.html">DungeonMap</a> map)</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        {</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            <span class="keywordflow">return</span> Finder.TryGetObject(savePath, $<span class="stringliteral">&quot;{MapName}&quot;</span>, out map);</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        }</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    }</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>}</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_number_extension_8cs_html_a832e8f52fca5a678819ec96269dcb532"><div class="ttname"><a href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a></div><div class="ttdeci">UnityEngine.Random Random</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d1a/_number_extension_8cs_source.html#l00005">NumberExtension.cs:5</a></div></div>
+<div class="ttc" id="a_pool_8cs_html_aef19bab18b9814edeef255c43e4f6bbc"><div class="ttname"><a href="../../df/d04/_pool_8cs.html#aef19bab18b9814edeef255c43e4f6bbc">Object</a></div><div class="ttdeci">UnityEngine.Object Object</div><div class="ttdef"><b>Definition</b> <a href="../../df/d04/_pool_8cs_source.html#l00005">Pool.cs:5</a></div></div>
+<div class="ttc" id="aclass_challenge_1_1_dungeons_1_1_dungeon_map_html"><div class="ttname"><a href="../../df/dab/class_challenge_1_1_dungeons_1_1_dungeon_map.html">Challenge.Dungeons.DungeonMap</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/d28/_dungeon_map_8cs_source.html#l00010">DungeonMap.cs:11</a></div></div>
+<div class="ttc" id="aclass_table_html"><div class="ttname"><a href="../../d2/d8f/class_table.html">Table</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00009">Table.cs:10</a></div></div>
+<div class="ttc" id="aclass_table_html_a4c012e54b170a3ee21db16e9be63cf37"><div class="ttname"><a href="../../d2/d8f/class_table.html#a4c012e54b170a3ee21db16e9be63cf37">Table.ContainsKey</a></div><div class="ttdeci">bool ContainsKey(TKey key)</div></div>
+<div class="ttc" id="aclass_table_html_aff475c7731aa4c465bdc355b22af30a3"><div class="ttname"><a href="../../d2/d8f/class_table.html#aff475c7731aa4c465bdc355b22af30a3">Table.KeyList</a></div><div class="ttdeci">List&lt; TKey &gt; KeyList</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00014">Table.cs:14</a></div></div>
 <div class="ttc" id="anamespace_challenge_1_1_dungeons_html"><div class="ttname"><a href="../../d0/d0e/namespace_challenge_1_1_dungeons.html">Challenge.Dungeons</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/d28/_dungeon_map_8cs_source.html#l00008">DungeonMap.cs:9</a></div></div>
 <div class="ttc" id="anamespace_common_html"><div class="ttname"><a href="../../d6/dee/namespace_common.html">Common</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/daf/_animation_player_8cs_source.html#l00010">AnimationPlayer.cs:11</a></div></div>
+<div class="ttc" id="anamespace_common_html_af570d89b4c7b26f2254acb9ef73c48a0"><div class="ttname"><a href="../../d6/dee/namespace_common.html#af570d89b4c7b26f2254acb9ef73c48a0">Common.MapPrepositionType</a></div><div class="ttdeci">MapPrepositionType</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d1c/_map_preposition_type_8cs_source.html#l00003">MapPrepositionType.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_2448244663f0baa019929cda5b44b135.html">MapEditors</a></li><li class="navelem"><b>MapEditor.Prop.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_2448244663f0baa019929cda5b44b135.html">MapEditors</a></li><li class="navelem"><a class="el" href="../../db/d5b/_map_editor_8_prop_8cs.html">MapEditor.Prop.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

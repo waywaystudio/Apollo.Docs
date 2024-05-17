@@ -100,7 +100,7 @@ $(function(){initNavTree('da/dea/_fiends_waves_drawer_8cs_source.html','../../')
   <div class="headertitle"><div class="title">FiendsWavesDrawer.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<a href="../../da/dea/_fiends_waves_drawer_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Reflection;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d9/dd8/namespace_challenge_1_1_dungeons_1_1_sections_1_1_combats.html">Challenge.Dungeons.Sections.Combats</a>;</div>
@@ -109,9 +109,11 @@ $(function(){initNavTree('da/dea/_fiends_waves_drawer_8cs_source.html','../../')
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../de/d4d/namespace_challenge_1_1_editor.html">Challenge.Editor</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">public</span> <span class="keyword">class </span>FiendsWavesDrawer : OdinAttributeProcessor&lt;FiendsWaves&gt;</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d1/dc0/class_challenge_1_1_editor_1_1_fiends_waves_drawer.html">   10</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d1/dc0/class_challenge_1_1_editor_1_1_fiends_waves_drawer.html">FiendsWavesDrawer</a> : OdinAttributeProcessor&lt;FiendsWaves&gt;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d1/dc0/class_challenge_1_1_editor_1_1_fiends_waves_drawer.html#a2d017595c1176319bc782b2926b083cd">   12</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/dc0/class_challenge_1_1_editor_1_1_fiends_waves_drawer.html#a2d017595c1176319bc782b2926b083cd">ProcessChildMemberAttributes</a>(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;spawnEntityList&quot;</span>)</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            {</div>
@@ -126,11 +128,15 @@ $(function(){initNavTree('da/dea/_fiends_waves_drawer_8cs_source.html','../../')
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            }</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
+</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">public</span> <span class="keyword">class </span>FiendsWaveDataDrawer : OdinAttributeProcessor&lt;FiendsWaveData&gt;</div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../dc/d04/class_challenge_1_1_editor_1_1_fiends_wave_data_drawer.html">   29</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../dc/d04/class_challenge_1_1_editor_1_1_fiends_wave_data_drawer.html">FiendsWaveDataDrawer</a> : OdinAttributeProcessor&lt;FiendsWaveData&gt;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../dc/d04/class_challenge_1_1_editor_1_1_fiends_wave_data_drawer.html#ac3d63b11552773291d106f3508fd6d25">   31</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d04/class_challenge_1_1_editor_1_1_fiends_wave_data_drawer.html#ac3d63b11552773291d106f3508fd6d25">ProcessChildMemberAttributes</a>(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;spawnEntityList&quot;</span>)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            {</div>
@@ -150,8 +156,14 @@ $(function(){initNavTree('da/dea/_fiends_waves_drawer_8cs_source.html','../../')
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 100));</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
+</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="ttc" id="aclass_challenge_1_1_editor_1_1_fiends_wave_data_drawer_html"><div class="ttname"><a href="../../dc/d04/class_challenge_1_1_editor_1_1_fiends_wave_data_drawer.html">Challenge.Editor.FiendsWaveDataDrawer</a></div><div class="ttdef"><b>Definition</b> <a href="#l00029">FiendsWavesDrawer.cs:30</a></div></div>
+<div class="ttc" id="aclass_challenge_1_1_editor_1_1_fiends_wave_data_drawer_html_ac3d63b11552773291d106f3508fd6d25"><div class="ttname"><a href="../../dc/d04/class_challenge_1_1_editor_1_1_fiends_wave_data_drawer.html#ac3d63b11552773291d106f3508fd6d25">Challenge.Editor.FiendsWaveDataDrawer.ProcessChildMemberAttributes</a></div><div class="ttdeci">override void ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt; Attribute &gt; attributes)</div><div class="ttdef"><b>Definition</b> <a href="#l00031">FiendsWavesDrawer.cs:31</a></div></div>
+<div class="ttc" id="aclass_challenge_1_1_editor_1_1_fiends_waves_drawer_html"><div class="ttname"><a href="../../d1/dc0/class_challenge_1_1_editor_1_1_fiends_waves_drawer.html">Challenge.Editor.FiendsWavesDrawer</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">FiendsWavesDrawer.cs:11</a></div></div>
+<div class="ttc" id="aclass_challenge_1_1_editor_1_1_fiends_waves_drawer_html_a2d017595c1176319bc782b2926b083cd"><div class="ttname"><a href="../../d1/dc0/class_challenge_1_1_editor_1_1_fiends_waves_drawer.html#a2d017595c1176319bc782b2926b083cd">Challenge.Editor.FiendsWavesDrawer.ProcessChildMemberAttributes</a></div><div class="ttdeci">override void ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt; Attribute &gt; attributes)</div><div class="ttdef"><b>Definition</b> <a href="#l00012">FiendsWavesDrawer.cs:12</a></div></div>
 <div class="ttc" id="anamespace_challenge_1_1_dungeons_1_1_sections_1_1_combats_html"><div class="ttname"><a href="../../d9/dd8/namespace_challenge_1_1_dungeons_1_1_sections_1_1_combats.html">Challenge.Dungeons.Sections.Combats</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/da1/_fiends_wave_data_8cs_source.html#l00009">FiendsWaveData.cs:10</a></div></div>
 <div class="ttc" id="anamespace_challenge_1_1_editor_html"><div class="ttname"><a href="../../de/d4d/namespace_challenge_1_1_editor.html">Challenge.Editor</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/db7/_challenge_quick_menu_8cs_source.html#l00004">ChallengeQuickMenu.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -159,7 +171,7 @@ $(function(){initNavTree('da/dea/_fiends_waves_drawer_8cs_source.html','../../')
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_92b02ba27bde29bec9d46d674711a634.html">Editor</a></li><li class="navelem"><b>FiendsWavesDrawer.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_92b02ba27bde29bec9d46d674711a634.html">Editor</a></li><li class="navelem"><a class="el" href="../../da/dea/_fiends_waves_drawer_8cs.html">FiendsWavesDrawer.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

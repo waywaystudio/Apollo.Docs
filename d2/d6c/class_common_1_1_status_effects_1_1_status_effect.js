@@ -1,4 +1,25 @@
 var class_common_1_1_status_effects_1_1_status_effect =
 [
-    [ "Initialize", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a7ee85f8cacb4d9a182e9136798ae0529", null ]
+    [ "Active", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a39fd3add03bd87d9fa59cb00df5268d4", null ],
+    [ "Cancel", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a88f13c5e3eb791f2b32f234da4637b2f", null ],
+    [ "Initialize", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a7ee85f8cacb4d9a182e9136798ae0529", null ],
+    [ "effector", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a59eec94f3a796f670b26914fd04d50a9", null ],
+    [ "executeTimer", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a7459cadc1fe336777da797b109d6592f", null ],
+    [ "executor", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#aab499916398a90e8e271c144ec35b885", null ],
+    [ "icon", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a52a402241970a9bc5c59b1669e7ec21d", null ],
+    [ "overrideModule", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a9a6f0f981cba4b6dd148554e3896ac73", null ],
+    [ "spawnEvent", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a1ec0c796fde3dd7162953dafd4c32125", null ],
+    [ "statusEffectCode", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a85a8f7b693e1349be531c99e704819c6", null ],
+    [ "visualEffectPivot", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#abae207edf08e7ac32e35c4560628bb2a", null ],
+    [ "DataIndex", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a85f0132c9f84524f9084ae8ca4b45c9f", null ],
+    [ "DispelCode", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a6a4f11f7640957cd51a8ea5a8eb44da8", null ],
+    [ "ExecuteTimer", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a89fbcdeeea47419a46a543518dc241e9", null ],
+    [ "Executor", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#abd27a51b2529d6c95fc3e510b361bf77", null ],
+    [ "Icon", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a26fd1a18bc678a1b18831a79e0d8caf8", null ],
+    [ "Invoker", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a91870f4e533ec93b42bbe2e6f97a222c", null ],
+    [ "Provider", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a35bcce8cb1908f92b6d65b2f3ec2346f", null ],
+    [ "Sections", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a0c7abb6547dba5033824eb470116abbe", null ],
+    [ "Target", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a88253226a863e72babf3129a0ad6431e", null ],
+    [ "Unit", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a81a32e88452017701d6a29870c9fc02f", null ],
+    [ "VisualEffectPivot", "d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a624ff46f7687ffb02d360c3a96d37a31", null ]
 ];

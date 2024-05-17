@@ -100,23 +100,24 @@ $(function(){initNavTree('d8/de0/_whisper_pre_request_8cs_source.html','../../')
   <div class="headertitle"><div class="title">WhisperPreRequest.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<a href="../../d8/de0/_whisper_pre_request_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../db/dee/namespace_common_1_1_whispers.html">Common.Whispers</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/d61/namespace_challenge_1_1_combats.html">Challenge.Combats</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">public</span> <span class="keyword">class </span>WhisperPreRequest : MonoBehaviour, IEditable</div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d4/dd9/class_challenge_1_1_combats_1_1_whisper_pre_request.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d4/dd9/class_challenge_1_1_combats_1_1_whisper_pre_request.html">WhisperPreRequest</a> : MonoBehaviour, <a class="code hl_interface" href="../../d3/de8/interface_i_editable.html">IEditable</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [SerializeField] <span class="keyword">private</span> List&lt;DataIndex&gt; requireWhisperCodes;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        [SerializeField] <span class="keyword">private</span> OperatorType conditionType;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        [SerializeField] <span class="keyword">private</span> Whisper targetWhisper;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="../../da/dd6/class_common_1_1_whispers_1_1_whisper.html">Whisper</a> targetWhisper;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">private</span> <span class="keyword">enum</span> OperatorType { None = 0, And, Or }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">private</span> <span class="keyword">enum</span> OperatorType { <a class="code hl_enumvalue" href="../../d8/da2/_canvas_hierarchy_type_8cs.html#a66143eb1e62a66da4cc0e20cef9acf66a6adf97f83acf6453d4a6a4b1070f3754">None</a> = 0, And, Or }</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">if</span> (ChallengeDirector.Instance.IsNullOrDestroyed()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../df/df8/class_challenge_1_1_challenge_director.html">ChallengeDirector</a>.<a class="code hl_property" href="../../d8/d30/class_singleton_1_1_mono_singleton.html#af75f6680c306e14ab2a2119dc6d26a16">Instance</a>.IsNullOrDestroyed()) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            targetWhisper.Conditions</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                         .Add(<span class="stringliteral">&quot;RequirePreWhisper&quot;</span>, HasPreWhisper);</div>
@@ -146,7 +147,14 @@ $(function(){initNavTree('d8/de0/_whisper_pre_request_8cs_source.html','../../')
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+<div class="ttc" id="a_canvas_hierarchy_type_8cs_html_a66143eb1e62a66da4cc0e20cef9acf66a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="../../d8/da2/_canvas_hierarchy_type_8cs.html#a66143eb1e62a66da4cc0e20cef9acf66a6adf97f83acf6453d4a6a4b1070f3754">CanvasHierarchyType.None</a></div><div class="ttdeci">@ None</div></div>
+<div class="ttc" id="aclass_challenge_1_1_challenge_director_html"><div class="ttname"><a href="../../df/df8/class_challenge_1_1_challenge_director.html">Challenge.ChallengeDirector</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d01/_challenge_director_8cs_source.html#l00008">ChallengeDirector.cs:9</a></div></div>
+<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_pre_request_html"><div class="ttname"><a href="../../d4/dd9/class_challenge_1_1_combats_1_1_whisper_pre_request.html">Challenge.Combats.WhisperPreRequest</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">WhisperPreRequest.cs:8</a></div></div>
+<div class="ttc" id="aclass_common_1_1_whispers_1_1_whisper_html"><div class="ttname"><a href="../../da/dd6/class_common_1_1_whispers_1_1_whisper.html">Common.Whispers.Whisper</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d52/_whisper_8cs_source.html#l00007">Whisper.cs:8</a></div></div>
+<div class="ttc" id="aclass_singleton_1_1_mono_singleton_html_af75f6680c306e14ab2a2119dc6d26a16"><div class="ttname"><a href="../../d8/d30/class_singleton_1_1_mono_singleton.html#af75f6680c306e14ab2a2119dc6d26a16">Singleton.MonoSingleton.Instance</a></div><div class="ttdeci">static T Instance</div><div class="ttdef"><b>Definition</b> <a href="../../d9/d73/_mono_singleton_8cs_source.html#l00012">MonoSingleton.cs:13</a></div></div>
+<div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_challenge_1_1_combats_html"><div class="ttname"><a href="../../da/d61/namespace_challenge_1_1_combats.html">Challenge.Combats</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/dae/_mastery_ability_8cs_source.html#l00005">MasteryAbility.cs:6</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_whispers_html"><div class="ttname"><a href="../../db/dee/namespace_common_1_1_whispers.html">Common.Whispers</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d52/_whisper_8cs_source.html#l00004">Whisper.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -154,7 +162,7 @@ $(function(){initNavTree('d8/de0/_whisper_pre_request_8cs_source.html','../../')
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_6d233b363695a672988938dc921ffc8d.html">Combats</a></li><li class="navelem"><b>WhisperPreRequest.cs</b></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_6d233b363695a672988938dc921ffc8d.html">Combats</a></li><li class="navelem"><a class="el" href="../../d8/de0/_whisper_pre_request_8cs.html">WhisperPreRequest.cs</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

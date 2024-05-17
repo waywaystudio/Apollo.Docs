@@ -7,8 +7,8 @@ var dir_12abb7915f57923dd60d85eb2df22f20 =
     [ "MasterySelect", "dir_2224238d43cf3668b1005fe4602dbf67.html", "dir_2224238d43cf3668b1005fe4602dbf67" ],
     [ "PopUps", "dir_7bc10b94630eed10adfff2e3ae7cacf4.html", "dir_7bc10b94630eed10adfff2e3ae7cacf4" ],
     [ "Tooltips", "dir_ebe0ebde52c91445578b536cbfc8f17f.html", "dir_ebe0ebde52c91445578b536cbfc8f17f" ],
-    [ "CanvasKarmaSelect.cs", "d8/d4b/_canvas_karma_select_8cs_source.html", null ],
-    [ "CanvasMasterySelect.cs", "d6/d59/_canvas_mastery_select_8cs_source.html", null ],
-    [ "ChallengeHudCanvas.cs", "d4/d67/_challenge_hud_canvas_8cs_source.html", null ],
-    [ "ChallengePopUpCanvas.cs", "d7/d75/_challenge_pop_up_canvas_8cs_source.html", null ]
+    [ "CanvasKarmaSelect.cs", "d8/d4b/_canvas_karma_select_8cs.html", "d8/d4b/_canvas_karma_select_8cs" ],
+    [ "CanvasMasterySelect.cs", "d6/d59/_canvas_mastery_select_8cs.html", "d6/d59/_canvas_mastery_select_8cs" ],
+    [ "ChallengeHudCanvas.cs", "d4/d67/_challenge_hud_canvas_8cs.html", "d4/d67/_challenge_hud_canvas_8cs" ],
+    [ "ChallengePopUpCanvas.cs", "d7/d75/_challenge_pop_up_canvas_8cs.html", "d7/d75/_challenge_pop_up_canvas_8cs" ]
 ];
