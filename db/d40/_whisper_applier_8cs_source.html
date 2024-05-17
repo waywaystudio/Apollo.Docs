@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Challenge/Combats/WhisperApplier.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Challenge/Combats/WhisperApplier.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('db/d40/_whisper_applier_8cs_source.html','../../'); in
   <div class="headertitle"><div class="title">WhisperApplier.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../db/d40/_whisper_applier_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Sirenix.OdinInspector;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine;</div>
@@ -111,27 +112,24 @@ $(function(){initNavTree('db/d40/_whisper_applier_8cs_source.html','../../'); in
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html">    9</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html">WhisperApplier</a> : <a class="code hl_interface" href="../../d3/de8/interface_i_editable.html">IEditable</a></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">   11</a></span>        <span class="keyword">public</span> <a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">List&lt;WhisperApplierEntity&gt;</a> <a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">List</a> = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">public</span> List&lt;WhisperApplierEntity&gt; List = <span class="keyword">new</span>();</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#af0cf72a3b0cc4da5a79f4e7bd97e06fc">   14</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#af0cf72a3b0cc4da5a79f4e7bd97e06fc">Initialize</a>()</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize()</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">List</a>.ForEach(<a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">applier</a> =&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            List.ForEach(applier =&gt;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">applier</a>.Has)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keywordflow">if</span> (applier.Has)</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                    applier.Inject();</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                }</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            });</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
-</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a27b1fdf7aaec7a91b1248592fc0847cb">   25</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a27b1fdf7aaec7a91b1248592fc0847cb">InjectAll</a>() =&gt; <a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">List</a>.ForEach(<a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">applier</a> =&gt; <a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">applier</a>.Inject());</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a4e0307adab8bfd4f860339dfaa8e9c8f">   26</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a4e0307adab8bfd4f860339dfaa8e9c8f">AbolishAll</a>() =&gt; <a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">List</a>.ForEach(<a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">applier</a> =&gt; <a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">applier</a>.Abolish());</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> InjectAll() =&gt; List.ForEach(applier =&gt; applier.Inject());</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> AbolishAll() =&gt; List.ForEach(applier =&gt; applier.Abolish());</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a32acb0cd803aaee1b77c9f8b984f3c08">   28</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a32acb0cd803aaee1b77c9f8b984f3c08">CreateList</a>()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> CreateList()</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="comment">// List.Clear();</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="comment">//</span></div>
@@ -150,13 +148,12 @@ $(function(){initNavTree('db/d40/_whisper_applier_8cs_source.html','../../'); in
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="comment">//     List.Add(applierEntity);</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="comment">// });</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
-</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_variable" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">EditorSetUp</a>()</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> EditorSetUp()</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_function" href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a32acb0cd803aaee1b77c9f8b984f3c08">CreateList</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            CreateList();</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
@@ -168,41 +165,35 @@ $(function(){initNavTree('db/d40/_whisper_applier_8cs_source.html','../../'); in
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        [TableColumnWidth(160)]</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        [DisplayAsString]</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#afb195dd0d8278c72a541299600684670">   62</a></span>        <span class="keyword">public</span> <a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a> <a class="code hl_variable" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#afb195dd0d8278c72a541299600684670">WhisperCode</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">public</span> DataIndex WhisperCode;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        [TableColumnWidth(300)]</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        [DisplayAsString]</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#ab2e301da32d976fe4a9c5ca9c0b7bbcd">   66</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#ab2e301da32d976fe4a9c5ca9c0b7bbcd">Description</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">public</span> <span class="keywordtype">string</span> Description;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        [TableColumnWidth(40)]</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#ac63dad9eb71a0d9bc7f1e9405192b4a1">   69</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#ac63dad9eb71a0d9bc7f1e9405192b4a1">Has</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> Has;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        [Button]</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        [TableColumnWidth(140)]</div>
-<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#a66352512491bd41cc5ef9561087cddc0">   73</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#a66352512491bd41cc5ef9561087cddc0">Toggle</a>()</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Toggle()</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <a class="code hl_variable" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#ac63dad9eb71a0d9bc7f1e9405192b4a1">Has</a> = !<a class="code hl_variable" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#ac63dad9eb71a0d9bc7f1e9405192b4a1">Has</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            Has = !Has;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            Apply();</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
-</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        </div>
-<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#a361c431c40dea378a34c08a762af9584">   80</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#a361c431c40dea378a34c08a762af9584">Inject</a>()</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Inject()</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <a class="code hl_variable" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#ac63dad9eb71a0d9bc7f1e9405192b4a1">Has</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            Has = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            Apply();</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
-</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#a9e2fdc1d55b80175fc8fb8bb07ae9341">   86</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#a9e2fdc1d55b80175fc8fb8bb07ae9341">Abolish</a>()</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Abolish()</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <a class="code hl_variable" href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#ac63dad9eb71a0d9bc7f1e9405192b4a1">Has</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            Has = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            Apply();</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
-</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        </div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Apply()</div>
@@ -229,20 +220,8 @@ $(function(){initNavTree('db/d40/_whisper_applier_8cs_source.html','../../'); in
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
 </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
-<div class="ttc" id="a_data_index_8cs_html_acd63cd93ca0fdfe8177c88f2bb3b5343"><div class="ttname"><a href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a></div><div class="ttdeci">DataIndex</div><div class="ttdef"><b>Definition</b> <a href="../../df/dce/_data_index_8cs_source.html#l00006">DataIndex.cs:7</a></div></div>
 <div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_entity_html"><div class="ttname"><a href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html">Challenge.Combats.WhisperApplierEntity</a></div><div class="ttdef"><b>Definition</b> <a href="#l00058">WhisperApplier.cs:59</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_entity_html_a361c431c40dea378a34c08a762af9584"><div class="ttname"><a href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#a361c431c40dea378a34c08a762af9584">Challenge.Combats.WhisperApplierEntity.Inject</a></div><div class="ttdeci">void Inject()</div><div class="ttdef"><b>Definition</b> <a href="#l00080">WhisperApplier.cs:80</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_entity_html_a66352512491bd41cc5ef9561087cddc0"><div class="ttname"><a href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#a66352512491bd41cc5ef9561087cddc0">Challenge.Combats.WhisperApplierEntity.Toggle</a></div><div class="ttdeci">void Toggle()</div><div class="ttdef"><b>Definition</b> <a href="#l00073">WhisperApplier.cs:73</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_entity_html_a9e2fdc1d55b80175fc8fb8bb07ae9341"><div class="ttname"><a href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#a9e2fdc1d55b80175fc8fb8bb07ae9341">Challenge.Combats.WhisperApplierEntity.Abolish</a></div><div class="ttdeci">void Abolish()</div><div class="ttdef"><b>Definition</b> <a href="#l00086">WhisperApplier.cs:86</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_entity_html_ab2e301da32d976fe4a9c5ca9c0b7bbcd"><div class="ttname"><a href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#ab2e301da32d976fe4a9c5ca9c0b7bbcd">Challenge.Combats.WhisperApplierEntity.Description</a></div><div class="ttdeci">string Description</div><div class="ttdef"><b>Definition</b> <a href="#l00066">WhisperApplier.cs:66</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_entity_html_ac63dad9eb71a0d9bc7f1e9405192b4a1"><div class="ttname"><a href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#ac63dad9eb71a0d9bc7f1e9405192b4a1">Challenge.Combats.WhisperApplierEntity.Has</a></div><div class="ttdeci">bool Has</div><div class="ttdef"><b>Definition</b> <a href="#l00069">WhisperApplier.cs:69</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_entity_html_afb195dd0d8278c72a541299600684670"><div class="ttname"><a href="../../da/de7/class_challenge_1_1_combats_1_1_whisper_applier_entity.html#afb195dd0d8278c72a541299600684670">Challenge.Combats.WhisperApplierEntity.WhisperCode</a></div><div class="ttdeci">DataIndex WhisperCode</div><div class="ttdef"><b>Definition</b> <a href="#l00062">WhisperApplier.cs:62</a></div></div>
 <div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_html"><div class="ttname"><a href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html">Challenge.Combats.WhisperApplier</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">WhisperApplier.cs:10</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_html_a27b1fdf7aaec7a91b1248592fc0847cb"><div class="ttname"><a href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a27b1fdf7aaec7a91b1248592fc0847cb">Challenge.Combats.WhisperApplier.InjectAll</a></div><div class="ttdeci">void InjectAll()</div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_html_a32acb0cd803aaee1b77c9f8b984f3c08"><div class="ttname"><a href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a32acb0cd803aaee1b77c9f8b984f3c08">Challenge.Combats.WhisperApplier.CreateList</a></div><div class="ttdeci">void CreateList()</div><div class="ttdef"><b>Definition</b> <a href="#l00028">WhisperApplier.cs:28</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_html_a4e0307adab8bfd4f860339dfaa8e9c8f"><div class="ttname"><a href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a4e0307adab8bfd4f860339dfaa8e9c8f">Challenge.Combats.WhisperApplier.AbolishAll</a></div><div class="ttdeci">void AbolishAll()</div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_html_a924339d9b5cf6c19606e021ff9c9d798"><div class="ttname"><a href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#a924339d9b5cf6c19606e021ff9c9d798">Challenge.Combats.WhisperApplier.List</a></div><div class="ttdeci">List&lt; WhisperApplierEntity &gt; List</div><div class="ttdef"><b>Definition</b> <a href="#l00011">WhisperApplier.cs:11</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_whisper_applier_html_af0cf72a3b0cc4da5a79f4e7bd97e06fc"><div class="ttname"><a href="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.html#af0cf72a3b0cc4da5a79f4e7bd97e06fc">Challenge.Combats.WhisperApplier.Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="#l00014">WhisperApplier.cs:14</a></div></div>
 <div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_challenge_1_1_combats_html"><div class="ttname"><a href="../../da/d61/namespace_challenge_1_1_combats.html">Challenge.Combats</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/dae/_mastery_ability_8cs_source.html#l00005">MasteryAbility.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -250,7 +229,7 @@ $(function(){initNavTree('db/d40/_whisper_applier_8cs_source.html','../../'); in
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_6d233b363695a672988938dc921ffc8d.html">Combats</a></li><li class="navelem"><a class="el" href="../../db/d40/_whisper_applier_8cs.html">WhisperApplier.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_6d233b363695a672988938dc921ffc8d.html">Combats</a></li><li class="navelem"><b>WhisperApplier.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

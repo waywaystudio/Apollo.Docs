@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Editor/UIEventClipDrawer.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Editor/UIEventClipDrawer.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d6/dc8/_u_i_event_clip_drawer_8cs_source.html','../../
   <div class="headertitle"><div class="title">UIEventClipDrawer.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d6/dc8/_u_i_event_clip_drawer_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Reflection;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d1/ddd/namespace_common_1_1_u_i.html">Common.UI</a>;</div>
@@ -112,8 +113,7 @@ $(function(){initNavTree('d6/dc8/_u_i_event_clip_drawer_8cs_source.html','../../
 <div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../da/d7d/class_common_1_1_editor_1_1_u_i_event_clip_drawer.html">   10</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../da/d7d/class_common_1_1_editor_1_1_u_i_event_clip_drawer.html">UIEventClipDrawer</a> : OdinAttributeProcessor&lt;UIEventClip&gt;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../da/d7d/class_common_1_1_editor_1_1_u_i_event_clip_drawer.html#a15311ff13df8fcb7a7f375b0e79a3586">   12</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d7d/class_common_1_1_editor_1_1_u_i_event_clip_drawer.html#a15311ff13df8fcb7a7f375b0e79a3586">ProcessChildMemberAttributes</a>(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;completeType&quot;</span>)</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            {</div>
@@ -125,15 +125,13 @@ $(function(){initNavTree('d6/dc8/_u_i_event_clip_drawer_8cs_source.html','../../
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                attributes.Add(<span class="keyword">new</span> ShowIfAttribute(<span class="stringliteral">&quot;@this.completeType == CompletionType.Timer&quot;</span>));</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            }</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
-</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
 </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    </div>
 <div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d7/da5/class_common_1_1_editor_1_1_u_i_element_drawer.html">   26</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d7/da5/class_common_1_1_editor_1_1_u_i_element_drawer.html">UIElementDrawer</a> : OdinAttributeProcessor&lt;UIElement&gt;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d7/da5/class_common_1_1_editor_1_1_u_i_element_drawer.html#a66fd3fe216ab2d602f2921c6b9c5d666">   28</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d7/da5/class_common_1_1_editor_1_1_u_i_element_drawer.html#a66fd3fe216ab2d602f2921c6b9c5d666">ProcessChildMemberAttributes</a>(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            var eventClipTableGroup = <span class="keyword">new</span> TitleGroupAttribute(<span class="stringliteral">&quot;EventClip Table&quot;</span>, <span class="stringliteral">&quot;Open, Close, Select, and so on&quot;</span>, order:200); </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            </div>
@@ -154,15 +152,13 @@ $(function(){initNavTree('d6/dc8/_u_i_event_clip_drawer_8cs_source.html','../../
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                });</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            }</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
-</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
 </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    </div>
 <div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d4/d27/class_common_1_1_editor_1_1_u_i_panel_drawer.html">   51</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d4/d27/class_common_1_1_editor_1_1_u_i_panel_drawer.html">UIPanelDrawer</a> : OdinAttributeProcessor&lt;Panel&gt;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
-<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d4/d27/class_common_1_1_editor_1_1_u_i_panel_drawer.html#a41a65db171e086f56a978aaf11bd12e4">   53</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d27/class_common_1_1_editor_1_1_u_i_panel_drawer.html#a41a65db171e086f56a978aaf11bd12e4">ProcessChildMemberAttributes</a>(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;CreateDefaultPanel&quot;</span>)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            {</div>
@@ -176,16 +172,12 @@ $(function(){initNavTree('d6/dc8/_u_i_event_clip_drawer_8cs_source.html','../../
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                });</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
-</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
 <div class="ttc" id="aclass_common_1_1_editor_1_1_u_i_element_drawer_html"><div class="ttname"><a href="../../d7/da5/class_common_1_1_editor_1_1_u_i_element_drawer.html">Common.Editor.UIElementDrawer</a></div><div class="ttdef"><b>Definition</b> <a href="#l00026">UIEventClipDrawer.cs:27</a></div></div>
-<div class="ttc" id="aclass_common_1_1_editor_1_1_u_i_element_drawer_html_a66fd3fe216ab2d602f2921c6b9c5d666"><div class="ttname"><a href="../../d7/da5/class_common_1_1_editor_1_1_u_i_element_drawer.html#a66fd3fe216ab2d602f2921c6b9c5d666">Common.Editor.UIElementDrawer.ProcessChildMemberAttributes</a></div><div class="ttdeci">override void ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt; Attribute &gt; attributes)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">UIEventClipDrawer.cs:28</a></div></div>
 <div class="ttc" id="aclass_common_1_1_editor_1_1_u_i_event_clip_drawer_html"><div class="ttname"><a href="../../da/d7d/class_common_1_1_editor_1_1_u_i_event_clip_drawer.html">Common.Editor.UIEventClipDrawer</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">UIEventClipDrawer.cs:11</a></div></div>
-<div class="ttc" id="aclass_common_1_1_editor_1_1_u_i_event_clip_drawer_html_a15311ff13df8fcb7a7f375b0e79a3586"><div class="ttname"><a href="../../da/d7d/class_common_1_1_editor_1_1_u_i_event_clip_drawer.html#a15311ff13df8fcb7a7f375b0e79a3586">Common.Editor.UIEventClipDrawer.ProcessChildMemberAttributes</a></div><div class="ttdeci">override void ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt; Attribute &gt; attributes)</div><div class="ttdef"><b>Definition</b> <a href="#l00012">UIEventClipDrawer.cs:12</a></div></div>
 <div class="ttc" id="aclass_common_1_1_editor_1_1_u_i_panel_drawer_html"><div class="ttname"><a href="../../d4/d27/class_common_1_1_editor_1_1_u_i_panel_drawer.html">Common.Editor.UIPanelDrawer</a></div><div class="ttdef"><b>Definition</b> <a href="#l00051">UIEventClipDrawer.cs:52</a></div></div>
-<div class="ttc" id="aclass_common_1_1_editor_1_1_u_i_panel_drawer_html_a41a65db171e086f56a978aaf11bd12e4"><div class="ttname"><a href="../../d4/d27/class_common_1_1_editor_1_1_u_i_panel_drawer.html#a41a65db171e086f56a978aaf11bd12e4">Common.Editor.UIPanelDrawer.ProcessChildMemberAttributes</a></div><div class="ttdeci">override void ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt; Attribute &gt; attributes)</div><div class="ttdef"><b>Definition</b> <a href="#l00053">UIEventClipDrawer.cs:53</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_editor_html"><div class="ttname"><a href="../../d2/dbe/namespace_common_1_1_editor.html">Common.Editor</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/da4/_behaviour_mover_drawer_8cs_source.html#l00008">BehaviourMoverDrawer.cs:9</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_u_i_html"><div class="ttname"><a href="../../d1/ddd/namespace_common_1_1_u_i.html">Common.UI</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/ddf/_effect_canvas_8cs_source.html#l00007">EffectCanvas.cs:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -193,7 +185,7 @@ $(function(){initNavTree('d6/dc8/_u_i_event_clip_drawer_8cs_source.html','../../
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_eeb16f7eaa20d402ca03e41de2380886.html">Editor</a></li><li class="navelem"><a class="el" href="../../d6/dc8/_u_i_event_clip_drawer_8cs.html">UIEventClipDrawer.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_eeb16f7eaa20d402ca03e41de2380886.html">Editor</a></li><li class="navelem"><b>UIEventClipDrawer.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

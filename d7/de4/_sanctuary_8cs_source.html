@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Masteries/SilkStrings/Sanctuary.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Masteries/SilkStrings/Sanctuary.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d7/de4/_sanctuary_8cs_source.html','../../'); initResi
   <div class="headertitle"><div class="title">Sanctuary.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d7/de4/_sanctuary_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../da/d8a/namespace_common_1_1_characters_1_1_dreds.html">Common.Characters.Dreds</a>;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../da/d8a/namespace_common_1_1_characters_1_1_dreds.html">Common.Characters.Dreds</a>;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d3/dd3/namespace_common_1_1_skills_1_1_silk_strings.html">Common.Skills.SilkStrings</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d4/d27/namespace_common_1_1_skills_1_1_silk_strings_1_1_threaded_sanctums.html">Common.Skills.SilkStrings.ThreadedSanctums</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d0/d3e/namespace_common_1_1_snares.html">Common.Snares</a>;</div>
@@ -118,33 +119,27 @@ $(function(){initNavTree('d7/de4/_sanctuary_8cs_source.html','../../'); initResi
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> dred;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d4/da8/class_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary.html#a8f58fd956e0461b259b472948ab6ff0a">   18</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/da8/class_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary.html#a8f58fd956e0461b259b472948ab6ff0a">Injection</a>(<a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> dred)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Injection(<a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> dred)</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            this.dred               = dred;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            reduceDamageProvideStat = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/dd3/class_common_1_1_stat_entity.html">StatEntity</a>(<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a060118192df9f745f9a772099df53c18">StatType</a>.DamageDecreaseRate, <span class="stringliteral">&quot;SanctuaryMastery&quot;</span>, -<a class="code hl_variable" href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html#a2ad533a923767315ce6731c68a1e377d">quality</a>.<a class="code hl_property" href="../../d9/dbc/class_common_1_1_masteries_1_1_mastery_quality.html#ac0a8af319b716d1afc9616ba74fbdbbf">Value</a>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            reduceDamageProvideStat = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/dd3/class_common_1_1_stat_entity.html">StatEntity</a>(StatType.DamageDecreaseRate, <span class="stringliteral">&quot;SanctuaryMastery&quot;</span>, -quality.Value);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_function" href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html#af1fa459a81da999ee171d9f0440ad02b">AddSilkStrings</a>(dred);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            AddSilkStrings(dred);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            spawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Add</a>(<a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a>.ThreadedSanctumSnare, <span class="stringliteral">&quot;SanctuaryMastery&quot;</span>, AddReduceDamageMultiplierEffect);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            spawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Add</a>(DataIndex.ThreadedSanctumSnare, <span class="stringliteral">&quot;SanctuaryMastery&quot;</span>, AddReduceDamageMultiplierEffect);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
-</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d4/da8/class_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary.html#a2b1cec5d920a6584eba2b8f98afaca44">   28</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/da8/class_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary.html#a2b1cec5d920a6584eba2b8f98afaca44">Abolition</a>(<a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> dred)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Abolition(<a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> dred)</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <a class="code hl_function" href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html#a4d1abd12dc408fb0020ee778f1583172">RemoveSilkStrings</a>(dred);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            RemoveSilkStrings(dred);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            spawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a9949ebd2ab1adcb67a2e7b3b53c93cca">Remove</a>(<a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a>.ThreadedSanctumSnare, <span class="stringliteral">&quot;SanctuaryMastery&quot;</span>, RemoveReduceDamageMultiplierEffect);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            spawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a9949ebd2ab1adcb67a2e7b3b53c93cca">Remove</a>(DataIndex.ThreadedSanctumSnare, <span class="stringliteral">&quot;SanctuaryMastery&quot;</span>, RemoveReduceDamageMultiplierEffect);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
-</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d4/da8/class_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary.html#acb31fbf656bc4fa3691833457fd0f8d4">   35</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/da8/class_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary.html#acb31fbf656bc4fa3691833457fd0f8d4">OnQualityChanged</a>()</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnQualityChanged()</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            reduceDamageProvideStat.Value = -<a class="code hl_variable" href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html#a2ad533a923767315ce6731c68a1e377d">quality</a>.<a class="code hl_property" href="../../d9/dbc/class_common_1_1_masteries_1_1_mastery_quality.html#ac0a8af319b716d1afc9616ba74fbdbbf">Value</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            reduceDamageProvideStat.Value = -quality.Value;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
-</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>     </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> AddReduceDamageMultiplierEffect(<a class="code hl_class" href="../../dd/db2/class_common_1_1_snares_1_1_snare.html">Snare</a> snare)</div>
@@ -161,7 +156,7 @@ $(function(){initNavTree('d7/de4/_sanctuary_8cs_source.html','../../'); initResi
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">if</span> (snare is not <a class="code hl_class" href="../../d4/dbe/class_common_1_1_skills_1_1_silk_strings_1_1_threaded_sanctums_1_1_threaded_sanctum_snare.html">ThreadedSanctumSnare</a> sanctumSnare) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            dred.<a class="code hl_property" href="../../dd/dff/class_common_1_1_character.html#aaac78675e5389abd66dec50c8e25dabc">StatTable</a>.<a class="code hl_function" href="../../dc/d34/class_common_1_1_stat_table.html#a133158ebbb1719b611e827ebfffafa33">Remove</a>(reduceDamageProvideStat);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            dred.StatTable.Remove(reduceDamageProvideStat);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            sanctumSnare.Trigger</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                        .RemoveOnEnter(<span class="stringliteral">&quot;DredSanctuary&quot;</span>)</div>
@@ -171,16 +166,16 @@ $(function(){initNavTree('d7/de4/_sanctuary_8cs_source.html','../../'); initResi
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> AddReduceDamageMultiplier(GameObject enteredObject)</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (enteredObject != dred.<a class="code hl_property" href="../../d8/d8b/interface_common_1_1_i_unit.html#a2ca74a8a9a8e98bfee6898eac58afbc9">gameObject</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (enteredObject != dred.gameObject) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            dred.<a class="code hl_property" href="../../dd/dff/class_common_1_1_character.html#aaac78675e5389abd66dec50c8e25dabc">StatTable</a>.<a class="code hl_function" href="../../dc/d34/class_common_1_1_stat_table.html#ab19cc9700d6eda177ac7f853e7935c55">Add</a>(reduceDamageProvideStat);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            dred.StatTable.Add(reduceDamageProvideStat);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> RemoveReduceDamageMultiplier(GameObject enteredObject)</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">if</span> (enteredObject != dred.<a class="code hl_property" href="../../d8/d8b/interface_common_1_1_i_unit.html#a2ca74a8a9a8e98bfee6898eac58afbc9">gameObject</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">if</span> (enteredObject != dred.gameObject) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            dred.<a class="code hl_property" href="../../dd/dff/class_common_1_1_character.html#aaac78675e5389abd66dec50c8e25dabc">StatTable</a>.<a class="code hl_function" href="../../dc/d34/class_common_1_1_stat_table.html#a133158ebbb1719b611e827ebfffafa33">Remove</a>(reduceDamageProvideStat);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            dred.StatTable.Remove(reduceDamageProvideStat);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        </div>
@@ -195,39 +190,26 @@ $(function(){initNavTree('d7/de4/_sanctuary_8cs_source.html','../../'); initResi
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
 </div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
-<div class="ttc" id="a_data_index_8cs_html_acd63cd93ca0fdfe8177c88f2bb3b5343"><div class="ttname"><a href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a></div><div class="ttdeci">DataIndex</div><div class="ttdef"><b>Definition</b> <a href="../../df/dce/_data_index_8cs_source.html#l00006">DataIndex.cs:7</a></div></div>
-<div class="ttc" id="aclass_common_1_1_character_html_aaac78675e5389abd66dec50c8e25dabc"><div class="ttname"><a href="../../dd/dff/class_common_1_1_character.html#aaac78675e5389abd66dec50c8e25dabc">Common.Character.StatTable</a></div><div class="ttdeci">StatTable StatTable</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8a/_character_8cs_source.html#l00039">Character.cs:39</a></div></div>
 <div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Common.Characters.Dreds.Dred</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00005">Dred.cs:6</a></div></div>
 <div class="ttc" id="aclass_common_1_1_masteries_1_1_mastery_html"><div class="ttname"><a href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html">Common.Masteries.Mastery</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d21/_mastery_8cs_source.html#l00007">Mastery.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_masteries_1_1_mastery_html_a2ad533a923767315ce6731c68a1e377d"><div class="ttname"><a href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html#a2ad533a923767315ce6731c68a1e377d">Common.Masteries.Mastery.quality</a></div><div class="ttdeci">MasteryQuality quality</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d21/_mastery_8cs_source.html#l00012">Mastery.cs:12</a></div></div>
-<div class="ttc" id="aclass_common_1_1_masteries_1_1_mastery_html_a4d1abd12dc408fb0020ee778f1583172"><div class="ttname"><a href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html#a4d1abd12dc408fb0020ee778f1583172">Common.Masteries.Mastery.RemoveSilkStrings</a></div><div class="ttdeci">static void RemoveSilkStrings(Dred dred)</div></div>
-<div class="ttc" id="aclass_common_1_1_masteries_1_1_mastery_html_af1fa459a81da999ee171d9f0440ad02b"><div class="ttname"><a href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html#af1fa459a81da999ee171d9f0440ad02b">Common.Masteries.Mastery.AddSilkStrings</a></div><div class="ttdeci">static void AddSilkStrings(Dred dred)</div></div>
-<div class="ttc" id="aclass_common_1_1_masteries_1_1_mastery_quality_html_ac0a8af319b716d1afc9616ba74fbdbbf"><div class="ttname"><a href="../../d9/dbc/class_common_1_1_masteries_1_1_mastery_quality.html#ac0a8af319b716d1afc9616ba74fbdbbf">Common.Masteries.MasteryQuality.Value</a></div><div class="ttdeci">float Value</div><div class="ttdef"><b>Definition</b> <a href="../../de/d80/_mastery_quality_8cs_source.html#l00024">MasteryQuality.cs:24</a></div></div>
 <div class="ttc" id="aclass_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary_html"><div class="ttname"><a href="../../d4/da8/class_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary.html">Common.Masteries.SilkStrings.Sanctuary</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">Sanctuary.cs:11</a></div></div>
-<div class="ttc" id="aclass_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary_html_a2b1cec5d920a6584eba2b8f98afaca44"><div class="ttname"><a href="../../d4/da8/class_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary.html#a2b1cec5d920a6584eba2b8f98afaca44">Common.Masteries.SilkStrings.Sanctuary.Abolition</a></div><div class="ttdeci">override void Abolition(Dred dred)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Sanctuary.cs:28</a></div></div>
-<div class="ttc" id="aclass_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary_html_a8f58fd956e0461b259b472948ab6ff0a"><div class="ttname"><a href="../../d4/da8/class_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary.html#a8f58fd956e0461b259b472948ab6ff0a">Common.Masteries.SilkStrings.Sanctuary.Injection</a></div><div class="ttdeci">override void Injection(Dred dred)</div><div class="ttdef"><b>Definition</b> <a href="#l00018">Sanctuary.cs:18</a></div></div>
-<div class="ttc" id="aclass_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary_html_acb31fbf656bc4fa3691833457fd0f8d4"><div class="ttname"><a href="../../d4/da8/class_common_1_1_masteries_1_1_silk_strings_1_1_sanctuary.html#acb31fbf656bc4fa3691833457fd0f8d4">Common.Masteries.SilkStrings.Sanctuary.OnQualityChanged</a></div><div class="ttdeci">override void OnQualityChanged()</div><div class="ttdef"><b>Definition</b> <a href="#l00035">Sanctuary.cs:35</a></div></div>
 <div class="ttc" id="aclass_common_1_1_skills_1_1_silk_strings_1_1_threaded_sanctums_1_1_threaded_sanctum_snare_html"><div class="ttname"><a href="../../d4/dbe/class_common_1_1_skills_1_1_silk_strings_1_1_threaded_sanctums_1_1_threaded_sanctum_snare.html">Common.Skills.SilkStrings.ThreadedSanctums.ThreadedSanctumSnare</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/db8/_threaded_sanctum_snare_8cs_source.html#l00008">ThreadedSanctumSnare.cs:9</a></div></div>
 <div class="ttc" id="aclass_common_1_1_snares_1_1_snare_html"><div class="ttname"><a href="../../dd/db2/class_common_1_1_snares_1_1_snare.html">Common.Snares.Snare</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/d1c/_snare_8cs_source.html#l00006">Snare.cs:7</a></div></div>
 <div class="ttc" id="aclass_common_1_1_snares_1_1_snare_spawn_event_html"><div class="ttname"><a href="../../dc/dd5/class_common_1_1_snares_1_1_snare_spawn_event.html">Common.Snares.SnareSpawnEvent</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dea/_snare_spawn_event_8cs_source.html#l00003">SnareSpawnEvent.cs:4</a></div></div>
 <div class="ttc" id="aclass_common_1_1_spawn_event_table_html_a9949ebd2ab1adcb67a2e7b3b53c93cca"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a9949ebd2ab1adcb67a2e7b3b53c93cca">Common.SpawnEventTable.Remove</a></div><div class="ttdeci">void Remove(DataIndex dataIndex, string spawnActionKey, Action&lt; T &gt; callback=null)</div><div class="ttdoc">Remove Specific Target Spawn Event.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/da4/_spawn_event_table_8cs_source.html#l00081">SpawnEventTable.cs:81</a></div></div>
 <div class="ttc" id="aclass_common_1_1_spawn_event_table_html_ac8c1e472bcbad1c5493cff1ec02b1a98"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Common.SpawnEventTable.Add</a></div><div class="ttdeci">void Add(DataIndex dataIndex, string spawnActionKey, Action action)</div><div class="ttdoc">Add Specific Target Spawn event.</div></div>
 <div class="ttc" id="aclass_common_1_1_stat_entity_html"><div class="ttname"><a href="../../d5/dd3/class_common_1_1_stat_entity.html">Common.StatEntity</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d3b/_stat_entity_8cs_source.html#l00007">StatEntity.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_stat_table_html_a133158ebbb1719b611e827ebfffafa33"><div class="ttname"><a href="../../dc/d34/class_common_1_1_stat_table.html#a133158ebbb1719b611e827ebfffafa33">Common.StatTable.Remove</a></div><div class="ttdeci">void Remove(StatEntity stat)</div></div>
-<div class="ttc" id="aclass_common_1_1_stat_table_html_ab19cc9700d6eda177ac7f853e7935c55"><div class="ttname"><a href="../../dc/d34/class_common_1_1_stat_table.html#ab19cc9700d6eda177ac7f853e7935c55">Common.StatTable.Add</a></div><div class="ttdeci">void Add(StatEntity stat)</div><div class="ttdef"><b>Definition</b> <a href="../../de/dee/_stat_table_8cs_source.html#l00030">StatTable.cs:30</a></div></div>
-<div class="ttc" id="ainterface_common_1_1_i_unit_html_a2ca74a8a9a8e98bfee6898eac58afbc9"><div class="ttname"><a href="../../d8/d8b/interface_common_1_1_i_unit.html#a2ca74a8a9a8e98bfee6898eac58afbc9">Common.IUnit.gameObject</a></div><div class="ttdeci">GameObject gameObject</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00015">ICombats.cs:15</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_characters_1_1_dreds_html"><div class="ttname"><a href="../../da/d8a/namespace_common_1_1_characters_1_1_dreds.html">Common.Characters.Dreds</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00003">Dred.cs:4</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_masteries_1_1_silk_strings_html"><div class="ttname"><a href="../../df/de6/namespace_common_1_1_masteries_1_1_silk_strings.html">Common.Masteries.SilkStrings</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/df7/_conflagration_8cs_source.html#l00013">Conflagration.cs:14</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_skills_1_1_silk_strings_1_1_threaded_sanctums_html"><div class="ttname"><a href="../../d4/d27/namespace_common_1_1_skills_1_1_silk_strings_1_1_threaded_sanctums.html">Common.Skills.SilkStrings.ThreadedSanctums</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/db8/_threaded_sanctum_snare_8cs_source.html#l00006">ThreadedSanctumSnare.cs:7</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_skills_1_1_silk_strings_html"><div class="ttname"><a href="../../d3/dd3/namespace_common_1_1_skills_1_1_silk_strings.html">Common.Skills.SilkStrings</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/da6/_silk_twister_8cs_source.html#l00005">SilkTwister.cs:6</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_snares_html"><div class="ttname"><a href="../../d0/d3e/namespace_common_1_1_snares.html">Common.Snares</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/d1c/_snare_8cs_source.html#l00004">Snare.cs:5</a></div></div>
-<div class="ttc" id="anamespace_common_html_a060118192df9f745f9a772099df53c18"><div class="ttname"><a href="../../d6/dee/namespace_common.html#a060118192df9f745f9a772099df53c18">Common.StatType</a></div><div class="ttdeci">StatType</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d1a/_stat_type_8cs_source.html#l00003">StatType.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_e4b6c65017730d334e40e89b6ad817dd.html">Masteries</a></li><li class="navelem"><a class="el" href="../../dir_17f18a7423638f8fb18345479d850232.html">SilkStrings</a></li><li class="navelem"><a class="el" href="../../d7/de4/_sanctuary_8cs.html">Sanctuary.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_e4b6c65017730d334e40e89b6ad817dd.html">Masteries</a></li><li class="navelem"><a class="el" href="../../dir_17f18a7423638f8fb18345479d850232.html">SilkStrings</a></li><li class="navelem"><b>Sanctuary.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

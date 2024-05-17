@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Units/UnitBehaviourLayeredAnimationPlayer.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Units/UnitBehaviourLayeredAnimationPlayer.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d7/d65/_unit_behaviour_layered_animation_player_8cs_so
   <div class="headertitle"><div class="title">UnitBehaviourLayeredAnimationPlayer.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d7/d65/_unit_behaviour_layered_animation_player_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Threading;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Threading;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>Animancer;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="../../da/d8a/namespace_common_1_1_characters_1_1_dreds.html">Common.Characters.Dreds</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Cysharp.Threading.Tasks;</div>
@@ -124,57 +125,53 @@ $(function(){initNavTree('d7/d65/_unit_behaviour_layered_animation_player_8cs_so
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> isOnRunning;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d1/d28/class_common_1_1_units_1_1_unit_behaviour_layered_animation_player.html#a9287e3f983293f4dc477c603f45703c1">   27</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d28/class_common_1_1_units_1_1_unit_behaviour_layered_animation_player.html#a9287e3f983293f4dc477c603f45703c1">Initialize</a>(<a class="code hl_class" href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html">UnitBehaviour</a> behaviour)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Initialize(<a class="code hl_class" href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html">UnitBehaviour</a> behaviour)</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span> (behaviour.<a class="code hl_property" href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html#ad80e2b847efda2270d9371b4e4be2844">Unit</a> is not <a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> red) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span> (behaviour.Unit is not <a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> red) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            dred = red;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            base.<a class="code hl_function" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html#a6bf2eb95258da33733f48133578a2abe">Initialize</a>(behaviour);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            base.Initialize(behaviour);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            behaviour.Sections</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                     .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.End, <span class="stringliteral">&quot;ResetIsOnRunning&quot;</span>, () =&gt; isOnRunning = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                     .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.End, <span class="stringliteral">&quot;StopActionMask&quot;</span>, () =&gt; actionLayer.Stop())</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                     .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.End,<span class="stringliteral">&quot;CancelRunTask&quot;</span>, CancelRunTask)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                     .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Dispose,<span class="stringliteral">&quot;CancelRunTask&quot;</span>, CancelRunTask)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                     .Add(Section.End, <span class="stringliteral">&quot;ResetIsOnRunning&quot;</span>, () =&gt; isOnRunning = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                     .Add(Section.End, <span class="stringliteral">&quot;StopActionMask&quot;</span>, () =&gt; actionLayer.Stop())</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                     .Add(Section.End,<span class="stringliteral">&quot;CancelRunTask&quot;</span>, CancelRunTask)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                     .Add(Section.Dispose,<span class="stringliteral">&quot;CancelRunTask&quot;</span>, CancelRunTask)</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                     ;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            baseLayer   = <a class="code hl_variable" href="../../d8/d1b/class_common_1_1_animation_player.html#ac1120c22594304810108aec452d545dc">animancer</a>.Layers[0];</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            actionLayer = <a class="code hl_variable" href="../../d8/d1b/class_common_1_1_animation_player.html#ac1120c22594304810108aec452d545dc">animancer</a>.Layers[1];</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            baseLayer   = animancer.Layers[0];</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            actionLayer = animancer.Layers[1];</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            actionLayer.SetMask(actionMask);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            actionLayer.SetDebugName(<span class="stringliteral">&quot;Action Layer&quot;</span>);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
-</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d1/d28/class_common_1_1_units_1_1_unit_behaviour_layered_animation_player.html#a1c84b82f0f9c3068a40ac0fd39e09ddb">   49</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d28/class_common_1_1_units_1_1_unit_behaviour_layered_animation_player.html#a1c84b82f0f9c3068a40ac0fd39e09ddb">Play</a>()</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Play()</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        { </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/d1b/class_common_1_1_animation_player.html#a025110752e3fab9ebe81689edb9edfde">targetClip</a>.IsNullOrDestroyed()) <span class="keywordflow">return</span>; </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">if</span> (targetClip.IsNullOrDestroyed()) <span class="keywordflow">return</span>; </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_function" href="../../d8/d1b/class_common_1_1_animation_player.html#af05e8c2f05d69d5e08bc704dd6f9cdf1">Resume</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            Resume();</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="comment">// Overwrite</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="../../d8/d1b/class_common_1_1_animation_player.html#ac1120c22594304810108aec452d545dc">animancer</a>.States.Current is not <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="../../d8/d1b/class_common_1_1_animation_player.html#ac1120c22594304810108aec452d545dc">animancer</a>.States.Current.Clip == <a class="code hl_variable" href="../../d8/d1b/class_common_1_1_animation_player.html#a025110752e3fab9ebe81689edb9edfde">targetClip</a>.Clip)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">if</span> (animancer.States.Current is not <span class="keyword">null</span> &amp;&amp; animancer.States.Current.Clip == targetClip.Clip)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                Debug.Log($<span class="stringliteral">&quot;AnimationOverwrite:{targetClip.Name}.{gameObject.name}&quot;</span>);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <a class="code hl_property" href="../../d8/d1b/class_common_1_1_animation_player.html#a5a1220ccfe2cbd422ff0bf8cb2d8d9b6">State</a>.Stop();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                State.Stop();</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            actionLayer.Play(<a class="code hl_variable" href="../../d8/d1b/class_common_1_1_animation_player.html#a025110752e3fab9ebe81689edb9edfde">targetClip</a>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            actionLayer.Play(targetClip);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            runTask = <span class="keyword">new</span> CancellationTokenSource();</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            RunTask(runTask).Forget();</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
-</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">private</span> async UniTaskVoid RunTask(CancellationTokenSource cts)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">while</span> (!cts.IsCancellationRequested)</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                var directionInput = dred.<a class="code hl_property" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html#a254ef122a13e44a8cf7bfd61f80eb660">Controller</a>.<a class="code hl_property" href="../../da/dd4/class_common_1_1_characters_1_1_player_controller.html#a9ceefb7bf95b749b9e158bc96bfa496f">DirectValue</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                var directionInput = dred.Controller.DirectValue;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">if</span> (directionInput != Vector2.zero)</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                {</div>
@@ -207,21 +204,10 @@ $(function(){initNavTree('d7/d65/_unit_behaviour_layered_animation_player_8cs_so
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
 </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
-<div class="ttc" id="a_section_8cs_html_aa2bc2fd5a40cdb0c40963e6fe6a24cce"><div class="ttname"><a href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a></div><div class="ttdeci">Section</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d0d/_section_8cs_source.html#l00001">Section.cs:2</a></div></div>
-<div class="ttc" id="aclass_common_1_1_animation_player_html_a025110752e3fab9ebe81689edb9edfde"><div class="ttname"><a href="../../d8/d1b/class_common_1_1_animation_player.html#a025110752e3fab9ebe81689edb9edfde">Common.AnimationPlayer.targetClip</a></div><div class="ttdeci">ClipTransition targetClip</div><div class="ttdef"><b>Definition</b> <a href="../../d5/daf/_animation_player_8cs_source.html#l00015">AnimationPlayer.cs:15</a></div></div>
-<div class="ttc" id="aclass_common_1_1_animation_player_html_a5a1220ccfe2cbd422ff0bf8cb2d8d9b6"><div class="ttname"><a href="../../d8/d1b/class_common_1_1_animation_player.html#a5a1220ccfe2cbd422ff0bf8cb2d8d9b6">Common.AnimationPlayer.State</a></div><div class="ttdeci">AnimancerState State</div><div class="ttdef"><b>Definition</b> <a href="../../d5/daf/_animation_player_8cs_source.html#l00019">AnimationPlayer.cs:19</a></div></div>
-<div class="ttc" id="aclass_common_1_1_animation_player_html_ac1120c22594304810108aec452d545dc"><div class="ttname"><a href="../../d8/d1b/class_common_1_1_animation_player.html#ac1120c22594304810108aec452d545dc">Common.AnimationPlayer.animancer</a></div><div class="ttdeci">AnimancerComponent animancer</div><div class="ttdef"><b>Definition</b> <a href="../../d5/daf/_animation_player_8cs_source.html#l00014">AnimationPlayer.cs:14</a></div></div>
-<div class="ttc" id="aclass_common_1_1_animation_player_html_af05e8c2f05d69d5e08bc704dd6f9cdf1"><div class="ttname"><a href="../../d8/d1b/class_common_1_1_animation_player.html#af05e8c2f05d69d5e08bc704dd6f9cdf1">Common.AnimationPlayer.Resume</a></div><div class="ttdeci">void Resume()</div><div class="ttdef"><b>Definition</b> <a href="../../d5/daf/_animation_player_8cs_source.html#l00076">AnimationPlayer.cs:76</a></div></div>
 <div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Common.Characters.Dreds.Dred</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00005">Dred.cs:6</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html_a254ef122a13e44a8cf7bfd61f80eb660"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html#a254ef122a13e44a8cf7bfd61f80eb660">Common.Characters.Dreds.Dred.Controller</a></div><div class="ttdeci">PlayerController Controller</div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00016">Dred.cs:16</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html_a6bf2eb95258da33733f48133578a2abe"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html#a6bf2eb95258da33733f48133578a2abe">Common.Characters.Dreds.Dred.Initialize</a></div><div class="ttdeci">override void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00027">Dred.cs:27</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_player_controller_html_a9ceefb7bf95b749b9e158bc96bfa496f"><div class="ttname"><a href="../../da/dd4/class_common_1_1_characters_1_1_player_controller.html#a9ceefb7bf95b749b9e158bc96bfa496f">Common.Characters.PlayerController.DirectValue</a></div><div class="ttdeci">Vector2 DirectValue</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00018">PlayerController.cs:18</a></div></div>
 <div class="ttc" id="aclass_common_1_1_units_1_1_unit_behaviour_animation_player_html"><div class="ttname"><a href="../../df/dc2/class_common_1_1_units_1_1_unit_behaviour_animation_player.html">Common.Units.UnitBehaviourAnimationPlayer</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/d71/_unit_behaviour_animation_player_8cs_source.html#l00005">UnitBehaviourAnimationPlayer.cs:6</a></div></div>
 <div class="ttc" id="aclass_common_1_1_units_1_1_unit_behaviour_html"><div class="ttname"><a href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html">Common.Units.UnitBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d49/_unit_behaviour_8cs_source.html#l00007">UnitBehaviour.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_units_1_1_unit_behaviour_html_ad80e2b847efda2270d9371b4e4be2844"><div class="ttname"><a href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html#ad80e2b847efda2270d9371b4e4be2844">Common.Units.UnitBehaviour.Unit</a></div><div class="ttdeci">IUnit Unit</div><div class="ttdef"><b>Definition</b> <a href="../../db/d49/_unit_behaviour_8cs_source.html#l00017">UnitBehaviour.cs:17</a></div></div>
 <div class="ttc" id="aclass_common_1_1_units_1_1_unit_behaviour_layered_animation_player_html"><div class="ttname"><a href="../../d1/d28/class_common_1_1_units_1_1_unit_behaviour_layered_animation_player.html">Common.Units.UnitBehaviourLayeredAnimationPlayer</a></div><div class="ttdoc">Invoke Skill Animation (Upper Body) with Run Animation (Lower Body)</div><div class="ttdef"><b>Definition</b> <a href="#l00014">UnitBehaviourLayeredAnimationPlayer.cs:15</a></div></div>
-<div class="ttc" id="aclass_common_1_1_units_1_1_unit_behaviour_layered_animation_player_html_a1c84b82f0f9c3068a40ac0fd39e09ddb"><div class="ttname"><a href="../../d1/d28/class_common_1_1_units_1_1_unit_behaviour_layered_animation_player.html#a1c84b82f0f9c3068a40ac0fd39e09ddb">Common.Units.UnitBehaviourLayeredAnimationPlayer.Play</a></div><div class="ttdeci">override void Play()</div><div class="ttdef"><b>Definition</b> <a href="#l00049">UnitBehaviourLayeredAnimationPlayer.cs:49</a></div></div>
-<div class="ttc" id="aclass_common_1_1_units_1_1_unit_behaviour_layered_animation_player_html_a9287e3f983293f4dc477c603f45703c1"><div class="ttname"><a href="../../d1/d28/class_common_1_1_units_1_1_unit_behaviour_layered_animation_player.html#a9287e3f983293f4dc477c603f45703c1">Common.Units.UnitBehaviourLayeredAnimationPlayer.Initialize</a></div><div class="ttdeci">override void Initialize(UnitBehaviour behaviour)</div><div class="ttdef"><b>Definition</b> <a href="#l00027">UnitBehaviourLayeredAnimationPlayer.cs:27</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_characters_1_1_dreds_html"><div class="ttname"><a href="../../da/d8a/namespace_common_1_1_characters_1_1_dreds.html">Common.Characters.Dreds</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00003">Dred.cs:4</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_units_html"><div class="ttname"><a href="../../d3/d6c/namespace_common_1_1_units.html">Common.Units</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d49/_unit_behaviour_8cs_source.html#l00003">UnitBehaviour.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -229,7 +215,7 @@ $(function(){initNavTree('d7/d65/_unit_behaviour_layered_animation_player_8cs_so
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_564e225a8aeeed0ad4bfc74c6c4c9f1a.html">Units</a></li><li class="navelem"><a class="el" href="../../d7/d65/_unit_behaviour_layered_animation_player_8cs.html">UnitBehaviourLayeredAnimationPlayer.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_564e225a8aeeed0ad4bfc74c6c4c9f1a.html">Units</a></li><li class="navelem"><b>UnitBehaviourLayeredAnimationPlayer.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

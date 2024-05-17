@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Challenge/MapEditors/MapEditor.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Challenge/MapEditors/MapEditor.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d5/d6e/_map_editor_8cs_source.html','../../'); initRes
   <div class="headertitle"><div class="title">MapEditor.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/d6e/_map_editor_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d0/d0e/namespace_challenge_1_1_dungeons.html">Challenge.Dungeons</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d4/dcb/namespace_challenge_1_1_props.html">Challenge.Props</a>;</div>
@@ -124,9 +125,9 @@ $(function(){initNavTree('d5/d6e/_map_editor_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        [SerializeField] <span class="keyword">private</span> TextAsset csvFile;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="comment">// Save Property</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_enumeration" href="../../d9/d6d/namespace_challenge.html#a8dbdb37c0302935fb71166728e059e60">StageRoomType</a> mapType;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_enumeration" href="../../d9/d6d/namespace_challenge.html#a9ef53b173f5fcdb2c0b1e65dc1ad738e">ChapterMask</a> chapter;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_enumeration" href="../../d9/d6d/namespace_challenge.html#aa670c67715aeac053de90fd7246e5c60">ChapterThemeMask</a> theme;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        [SerializeField] <span class="keyword">private</span> StageRoomType mapType;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        [SerializeField] <span class="keyword">private</span> ChapterMask chapter;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        [SerializeField] <span class="keyword">private</span> ChapterThemeMask theme;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">string</span> savePath;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> gridSize = 4;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">float</span> terrainOffset = 30f;</div>
@@ -137,7 +138,7 @@ $(function(){initNavTree('d5/d6e/_map_editor_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../df/dab/class_challenge_1_1_dungeons_1_1_dungeon_map.html">DungeonMap</a> currentMap;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">private</span> <span class="keywordtype">string</span> MapName =&gt; csvFile.name;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">private</span> Grid Grid =&gt; CurrentMap.<a class="code hl_property" href="../../df/d56/class_common_1_1_maps_1_1_map.html#a0a3b07d2657b151a7414026dea998b12">Grid</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">private</span> Grid Grid =&gt; CurrentMap.Grid;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">private</span> Transform Water =&gt; CurrentMap.Water;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../df/dab/class_challenge_1_1_dungeons_1_1_dungeon_map.html">DungeonMap</a> CurrentMap</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
@@ -283,11 +284,11 @@ $(function(){initNavTree('d5/d6e/_map_editor_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        </div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnThemeChanged()</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        {</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            ObstaclePrefabs     = propPrefabData.<a class="code hl_function" href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html#a9bb967dca45b2c92980e81b952300d9b">GetThemeObjects</a>(chapter, theme, <a class="code hl_enumeration" href="../../d9/d6d/namespace_challenge.html#ac27c4c67437b3c492f2f1f6777b49a20">PropType</a>.Obstacle);</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            SpiritJarPrefabs    = propPrefabData.<a class="code hl_function" href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html#a9bb967dca45b2c92980e81b952300d9b">GetThemeObjects</a>(chapter, theme, <a class="code hl_enumeration" href="../../d9/d6d/namespace_challenge.html#ac27c4c67437b3c492f2f1f6777b49a20">PropType</a>.Jar);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            FloorTrapPrefabs    = propPrefabData.<a class="code hl_function" href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html#a9bb967dca45b2c92980e81b952300d9b">GetThemeObjects</a>(chapter, theme, <a class="code hl_enumeration" href="../../d9/d6d/namespace_challenge.html#ac27c4c67437b3c492f2f1f6777b49a20">PropType</a>.FloorTrap);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            VerticalTrapPrefabs = propPrefabData.<a class="code hl_function" href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html#a9bb967dca45b2c92980e81b952300d9b">GetThemeObjects</a>(chapter, theme, <a class="code hl_enumeration" href="../../d9/d6d/namespace_challenge.html#ac27c4c67437b3c492f2f1f6777b49a20">PropType</a>.VerticalTrap);</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            ExitGatePrefabs     = propPrefabData.<a class="code hl_function" href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html#a9bb967dca45b2c92980e81b952300d9b">GetThemeObjects</a>(chapter, theme, <a class="code hl_enumeration" href="../../d9/d6d/namespace_challenge.html#ac27c4c67437b3c492f2f1f6777b49a20">PropType</a>.ExitGate);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            ObstaclePrefabs     = propPrefabData.GetThemeObjects(chapter, theme, PropType.Obstacle);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            SpiritJarPrefabs    = propPrefabData.GetThemeObjects(chapter, theme, PropType.Jar);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            FloorTrapPrefabs    = propPrefabData.GetThemeObjects(chapter, theme, PropType.FloorTrap);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            VerticalTrapPrefabs = propPrefabData.GetThemeObjects(chapter, theme, PropType.VerticalTrap);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            ExitGatePrefabs     = propPrefabData.GetThemeObjects(chapter, theme, PropType.ExitGate);</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        }</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        </div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
@@ -307,21 +308,15 @@ $(function(){initNavTree('d5/d6e/_map_editor_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_challenge_1_1_dungeons_1_1_dungeon_map_html"><div class="ttname"><a href="../../df/dab/class_challenge_1_1_dungeons_1_1_dungeon_map.html">Challenge.Dungeons.DungeonMap</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/d28/_dungeon_map_8cs_source.html#l00010">DungeonMap.cs:11</a></div></div>
 <div class="ttc" id="aclass_challenge_1_1_props_1_1_map_editor_prefab_data_html"><div class="ttname"><a href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html">Challenge.Props.MapEditorPrefabData</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/d20/_map_editor_prefab_data_8cs_source.html#l00007">MapEditorPrefabData.cs:8</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_props_1_1_map_editor_prefab_data_html_a9bb967dca45b2c92980e81b952300d9b"><div class="ttname"><a href="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.html#a9bb967dca45b2c92980e81b952300d9b">Challenge.Props.MapEditorPrefabData.GetThemeObjects</a></div><div class="ttdeci">List&lt; GameObject &gt; GetThemeObjects(ChapterMask chapter, ChapterThemeMask theme, PropType type)</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d20/_map_editor_prefab_data_8cs_source.html#l00013">MapEditorPrefabData.cs:13</a></div></div>
-<div class="ttc" id="aclass_common_1_1_maps_1_1_map_html_a0a3b07d2657b151a7414026dea998b12"><div class="ttname"><a href="../../df/d56/class_common_1_1_maps_1_1_map.html#a0a3b07d2657b151a7414026dea998b12">Common.Maps.Map.Grid</a></div><div class="ttdeci">Grid Grid</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d69/_map_8cs_source.html#l00024">Map.cs:24</a></div></div>
 <div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_challenge_1_1_dungeons_html"><div class="ttname"><a href="../../d0/d0e/namespace_challenge_1_1_dungeons.html">Challenge.Dungeons</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/d28/_dungeon_map_8cs_source.html#l00008">DungeonMap.cs:9</a></div></div>
 <div class="ttc" id="anamespace_challenge_1_1_props_html"><div class="ttname"><a href="../../d4/dcb/namespace_challenge_1_1_props.html">Challenge.Props</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/d20/_map_editor_prefab_data_8cs_source.html#l00005">MapEditorPrefabData.cs:6</a></div></div>
-<div class="ttc" id="anamespace_challenge_html_a8dbdb37c0302935fb71166728e059e60"><div class="ttname"><a href="../../d9/d6d/namespace_challenge.html#a8dbdb37c0302935fb71166728e059e60">Challenge.StageRoomType</a></div><div class="ttdeci">StageRoomType</div><div class="ttdef"><b>Definition</b> <a href="../../d7/df7/_stage_room_type_8cs_source.html#l00030">StageRoomType.cs:31</a></div></div>
-<div class="ttc" id="anamespace_challenge_html_a9ef53b173f5fcdb2c0b1e65dc1ad738e"><div class="ttname"><a href="../../d9/d6d/namespace_challenge.html#a9ef53b173f5fcdb2c0b1e65dc1ad738e">Challenge.ChapterMask</a></div><div class="ttdeci">ChapterMask</div><div class="ttdef"><b>Definition</b> <a href="../../d7/df7/_stage_room_type_8cs_source.html#l00006">StageRoomType.cs:7</a></div></div>
-<div class="ttc" id="anamespace_challenge_html_aa670c67715aeac053de90fd7246e5c60"><div class="ttname"><a href="../../d9/d6d/namespace_challenge.html#aa670c67715aeac053de90fd7246e5c60">Challenge.ChapterThemeMask</a></div><div class="ttdeci">ChapterThemeMask</div><div class="ttdef"><b>Definition</b> <a href="../../d7/df7/_stage_room_type_8cs_source.html#l00019">StageRoomType.cs:20</a></div></div>
-<div class="ttc" id="anamespace_challenge_html_ac27c4c67437b3c492f2f1f6777b49a20"><div class="ttname"><a href="../../d9/d6d/namespace_challenge.html#ac27c4c67437b3c492f2f1f6777b49a20">Challenge.PropType</a></div><div class="ttdeci">PropType</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da0/_prop_type_8cs_source.html#l00003">PropType.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_2448244663f0baa019929cda5b44b135.html">MapEditors</a></li><li class="navelem"><a class="el" href="../../d5/d6e/_map_editor_8cs.html">MapEditor.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_2448244663f0baa019929cda5b44b135.html">MapEditors</a></li><li class="navelem"><b>MapEditor.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

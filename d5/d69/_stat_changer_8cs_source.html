@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/StatusEffects/Modules/StatChanger.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/StatusEffects/Modules/StatChanger.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d5/d69/_stat_changer_8cs_source.html','../../'); initR
   <div class="headertitle"><div class="title">StatChanger.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/d69/_stat_changer_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
@@ -110,7 +111,7 @@ $(function(){initNavTree('d5/d69/_stat_changer_8cs_source.html','../../'); initR
 <div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../da/d1b/class_common_1_1_status_effects_1_1_modules_1_1_stat_changer.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../da/d1b/class_common_1_1_status_effects_1_1_modules_1_1_stat_changer.html">StatChanger</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a060118192df9f745f9a772099df53c18">StatType</a> statType;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [SerializeField] <span class="keyword">private</span> StatType statType;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">string</span> statKey;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">float</span> targetValue;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
@@ -118,26 +119,24 @@ $(function(){initNavTree('d5/d69/_stat_changer_8cs_source.html','../../'); initR
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">private</span> <span class="keywordtype">float</span> originalValue;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d5/dd3/class_common_1_1_stat_entity.html">StatEntity</a> statEntity;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">StatusEffect</a> effect;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a> MainTarget =&gt; effect.<a class="code hl_property" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a88253226a863e72babf3129a0ad6431e">Target</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a> MainTarget =&gt; effect.Target;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        </div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../da/d1b/class_common_1_1_status_effects_1_1_modules_1_1_stat_changer.html#a8f5a943fa9b3ed06911db1166c277969">   20</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d1b/class_common_1_1_status_effects_1_1_modules_1_1_stat_changer.html#a8f5a943fa9b3ed06911db1166c277969">Initialize</a>(<a class="code hl_class" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">StatusEffect</a> effect)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize(<a class="code hl_class" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">StatusEffect</a> effect)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            this.effect = effect;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            effect.Sections</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                  .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Active, <span class="stringliteral">&quot;ChangeStat&quot;</span>, ChangeStat)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                  .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.End, <span class="stringliteral">&quot;ResetStat&quot;</span>, ResetStat)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                  .Add(Section.Active, <span class="stringliteral">&quot;ChangeStat&quot;</span>, ChangeStat)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                  .Add(Section.End, <span class="stringliteral">&quot;ResetStat&quot;</span>, ResetStat)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                  ;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
-</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> ChangeStat()</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (MainTarget.IsNullOrDestroyed()) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">if</span> (MainTarget.<a class="code hl_property" href="../../dd/dff/class_common_1_1_character.html#aaac78675e5389abd66dec50c8e25dabc">StatTable</a>.<a class="code hl_function" href="../../dc/d34/class_common_1_1_stat_table.html#a2bdf1dd64ffedc52d624dffebc5412b0">TryGetStatEntity</a>(statType, statKey, out statEntity))</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">if</span> (MainTarget.StatTable.TryGetStatEntity(statType, statKey, out statEntity))</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                existed          = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                originalValue    = statEntity.Value;</div>
@@ -147,7 +146,7 @@ $(function(){initNavTree('d5/d69/_stat_changer_8cs_source.html','../../'); initR
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                statEntity = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/dd3/class_common_1_1_stat_entity.html">StatEntity</a>(statType, statKey, targetValue);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                MainTarget.<a class="code hl_property" href="../../dd/dff/class_common_1_1_character.html#aaac78675e5389abd66dec50c8e25dabc">StatTable</a>.<a class="code hl_function" href="../../dc/d34/class_common_1_1_stat_table.html#ab19cc9700d6eda177ac7f853e7935c55">Add</a>(statEntity);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                MainTarget.StatTable.Add(statEntity);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
@@ -161,32 +160,24 @@ $(function(){initNavTree('d5/d69/_stat_changer_8cs_source.html','../../'); initR
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                MainTarget.<a class="code hl_property" href="../../dd/dff/class_common_1_1_character.html#aaac78675e5389abd66dec50c8e25dabc">StatTable</a>.<a class="code hl_function" href="../../dc/d34/class_common_1_1_stat_table.html#a133158ebbb1719b611e827ebfffafa33">Remove</a>(statEntity);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                MainTarget.StatTable.Remove(statEntity);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
 </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
 </div>
-<div class="ttc" id="a_section_8cs_html_aa2bc2fd5a40cdb0c40963e6fe6a24cce"><div class="ttname"><a href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a></div><div class="ttdeci">Section</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d0d/_section_8cs_source.html#l00001">Section.cs:2</a></div></div>
 <div class="ttc" id="aclass_common_1_1_character_html"><div class="ttname"><a href="../../dd/dff/class_common_1_1_character.html">Common.Character</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8a/_character_8cs_source.html#l00010">Character.cs:11</a></div></div>
-<div class="ttc" id="aclass_common_1_1_character_html_aaac78675e5389abd66dec50c8e25dabc"><div class="ttname"><a href="../../dd/dff/class_common_1_1_character.html#aaac78675e5389abd66dec50c8e25dabc">Common.Character.StatTable</a></div><div class="ttdeci">StatTable StatTable</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8a/_character_8cs_source.html#l00039">Character.cs:39</a></div></div>
 <div class="ttc" id="aclass_common_1_1_stat_entity_html"><div class="ttname"><a href="../../d5/dd3/class_common_1_1_stat_entity.html">Common.StatEntity</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d3b/_stat_entity_8cs_source.html#l00007">StatEntity.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_stat_table_html_a133158ebbb1719b611e827ebfffafa33"><div class="ttname"><a href="../../dc/d34/class_common_1_1_stat_table.html#a133158ebbb1719b611e827ebfffafa33">Common.StatTable.Remove</a></div><div class="ttdeci">void Remove(StatEntity stat)</div></div>
-<div class="ttc" id="aclass_common_1_1_stat_table_html_a2bdf1dd64ffedc52d624dffebc5412b0"><div class="ttname"><a href="../../dc/d34/class_common_1_1_stat_table.html#a2bdf1dd64ffedc52d624dffebc5412b0">Common.StatTable.TryGetStatEntity</a></div><div class="ttdeci">bool TryGetStatEntity(StatType statType, string statKey, out StatEntity result)</div><div class="ttdef"><b>Definition</b> <a href="../../de/dee/_stat_table_8cs_source.html#l00079">StatTable.cs:79</a></div></div>
-<div class="ttc" id="aclass_common_1_1_stat_table_html_ab19cc9700d6eda177ac7f853e7935c55"><div class="ttname"><a href="../../dc/d34/class_common_1_1_stat_table.html#ab19cc9700d6eda177ac7f853e7935c55">Common.StatTable.Add</a></div><div class="ttdeci">void Add(StatEntity stat)</div><div class="ttdef"><b>Definition</b> <a href="../../de/dee/_stat_table_8cs_source.html#l00030">StatTable.cs:30</a></div></div>
 <div class="ttc" id="aclass_common_1_1_status_effects_1_1_modules_1_1_stat_changer_html"><div class="ttname"><a href="../../da/d1b/class_common_1_1_status_effects_1_1_modules_1_1_stat_changer.html">Common.StatusEffects.Modules.StatChanger</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">StatChanger.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_status_effects_1_1_modules_1_1_stat_changer_html_a8f5a943fa9b3ed06911db1166c277969"><div class="ttname"><a href="../../da/d1b/class_common_1_1_status_effects_1_1_modules_1_1_stat_changer.html#a8f5a943fa9b3ed06911db1166c277969">Common.StatusEffects.Modules.StatChanger.Initialize</a></div><div class="ttdeci">void Initialize(StatusEffect effect)</div><div class="ttdef"><b>Definition</b> <a href="#l00020">StatChanger.cs:20</a></div></div>
 <div class="ttc" id="aclass_common_1_1_status_effects_1_1_status_effect_html"><div class="ttname"><a href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">Common.StatusEffects.StatusEffect</a></div><div class="ttdoc">Active One tool Unit. Buff or DeBuff Object.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d08/_status_effect_8cs_source.html#l00008">StatusEffect.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_status_effects_1_1_status_effect_html_a88253226a863e72babf3129a0ad6431e"><div class="ttname"><a href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a88253226a863e72babf3129a0ad6431e">Common.StatusEffects.StatusEffect.Target</a></div><div class="ttdeci">Character Target</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d08/_status_effect_8cs_source.html#l00023">StatusEffect.cs:23</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_status_effects_1_1_modules_html"><div class="ttname"><a href="../../d5/d3d/namespace_common_1_1_status_effects_1_1_modules.html">Common.StatusEffects.Modules</a></div><div class="ttdef"><b>Definition</b> <a href="#l00004">StatChanger.cs:5</a></div></div>
-<div class="ttc" id="anamespace_common_html_a060118192df9f745f9a772099df53c18"><div class="ttname"><a href="../../d6/dee/namespace_common.html#a060118192df9f745f9a772099df53c18">Common.StatType</a></div><div class="ttdeci">StatType</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d1a/_stat_type_8cs_source.html#l00003">StatType.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3c7429eb840a3c9f659a8dcca0b9dc1d.html">StatusEffects</a></li><li class="navelem"><a class="el" href="../../dir_a8f4b11609410dcff2a4c8e31592eedb.html">Modules</a></li><li class="navelem"><a class="el" href="../../d5/d69/_stat_changer_8cs.html">StatChanger.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3c7429eb840a3c9f659a8dcca0b9dc1d.html">StatusEffects</a></li><li class="navelem"><a class="el" href="../../dir_a8f4b11609410dcff2a4c8e31592eedb.html">Modules</a></li><li class="navelem"><b>StatChanger.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

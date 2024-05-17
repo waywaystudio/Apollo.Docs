@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/_Core/Managers/UIs/CanvasAspectRatioResolver.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/_Core/Managers/UIs/CanvasAspectRatioResolver.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d2/d8d/_canvas_aspect_ratio_resolver_8cs_source.html',
   <div class="headertitle"><div class="title">CanvasAspectRatioResolver.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d2/d8d/_canvas_aspect_ratio_resolver_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine.UI;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
@@ -114,28 +115,24 @@ $(function(){initNavTree('d2/d8d/_canvas_aspect_ratio_resolver_8cs_source.html',
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        [SerializeField] <span class="keyword">private</span> CanvasScaler canvasScaler;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d1/d35/class_u_is_1_1_canvas_aspect_ratio_resolver.html#a05322e33bbdd64515938d31b101e4df1">   13</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d35/class_u_is_1_1_canvas_aspect_ratio_resolver.html#a05322e33bbdd64515938d31b101e4df1">RatioNarrowerHandler</a>()</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> RatioNarrowerHandler()</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            canvasScaler.matchWidthOrHeight = 0;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        }</div>
-</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d1/d35/class_u_is_1_1_canvas_aspect_ratio_resolver.html#a6c397a71aef9854a75e5f0ba249af0da">   18</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d35/class_u_is_1_1_canvas_aspect_ratio_resolver.html#a6c397a71aef9854a75e5f0ba249af0da">RatioWiderHandler</a>()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> RatioWiderHandler()</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            canvasScaler.matchWidthOrHeight = 1;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        }</div>
-</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnEnable()</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            uiManager.<a class="code hl_function" href="../../d7/d75/class_u_i_manager.html#a57acd7ba2720c82d7a7c849d1f058c1b">AddCanvas</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            uiManager.AddCanvas(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnDisable()</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            uiManager.<a class="code hl_function" href="../../d7/d75/class_u_i_manager.html#a7cda19a1d626fdd5f4d2e3e13c4a275d">RemoveCanvas</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            uiManager.RemoveCanvas(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
@@ -152,18 +149,14 @@ $(function(){initNavTree('d2/d8d/_canvas_aspect_ratio_resolver_8cs_source.html',
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 </div>
 <div class="ttc" id="aclass_u_i_manager_html"><div class="ttname"><a href="../../d7/d75/class_u_i_manager.html">UIManager</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/de4/_u_i_manager_8cs_source.html#l00007">UIManager.cs:8</a></div></div>
-<div class="ttc" id="aclass_u_i_manager_html_a57acd7ba2720c82d7a7c849d1f058c1b"><div class="ttname"><a href="../../d7/d75/class_u_i_manager.html#a57acd7ba2720c82d7a7c849d1f058c1b">UIManager.AddCanvas</a></div><div class="ttdeci">void AddCanvas(CanvasAspectRatioResolver resolver)</div><div class="ttdef"><b>Definition</b> <a href="../../da/de4/_u_i_manager_8cs_source.html#l00045">UIManager.cs:45</a></div></div>
-<div class="ttc" id="aclass_u_i_manager_html_a7cda19a1d626fdd5f4d2e3e13c4a275d"><div class="ttname"><a href="../../d7/d75/class_u_i_manager.html#a7cda19a1d626fdd5f4d2e3e13c4a275d">UIManager.RemoveCanvas</a></div><div class="ttdeci">void RemoveCanvas(CanvasAspectRatioResolver resolver)</div><div class="ttdef"><b>Definition</b> <a href="../../da/de4/_u_i_manager_8cs_source.html#l00052">UIManager.cs:52</a></div></div>
 <div class="ttc" id="aclass_u_is_1_1_canvas_aspect_ratio_resolver_html"><div class="ttname"><a href="../../d1/d35/class_u_is_1_1_canvas_aspect_ratio_resolver.html">UIs.CanvasAspectRatioResolver</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">CanvasAspectRatioResolver.cs:8</a></div></div>
-<div class="ttc" id="aclass_u_is_1_1_canvas_aspect_ratio_resolver_html_a05322e33bbdd64515938d31b101e4df1"><div class="ttname"><a href="../../d1/d35/class_u_is_1_1_canvas_aspect_ratio_resolver.html#a05322e33bbdd64515938d31b101e4df1">UIs.CanvasAspectRatioResolver.RatioNarrowerHandler</a></div><div class="ttdeci">void RatioNarrowerHandler()</div><div class="ttdef"><b>Definition</b> <a href="#l00013">CanvasAspectRatioResolver.cs:13</a></div></div>
-<div class="ttc" id="aclass_u_is_1_1_canvas_aspect_ratio_resolver_html_a6c397a71aef9854a75e5f0ba249af0da"><div class="ttname"><a href="../../d1/d35/class_u_is_1_1_canvas_aspect_ratio_resolver.html#a6c397a71aef9854a75e5f0ba249af0da">UIs.CanvasAspectRatioResolver.RatioWiderHandler</a></div><div class="ttdeci">void RatioWiderHandler()</div><div class="ttdef"><b>Definition</b> <a href="#l00018">CanvasAspectRatioResolver.cs:18</a></div></div>
 <div class="ttc" id="anamespace_u_is_html"><div class="ttname"><a href="../../d8/d4c/namespace_u_is.html">UIs</a></div><div class="ttdef"><b>Definition</b> <a href="#l00004">CanvasAspectRatioResolver.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><a class="el" href="../../dir_10bef12d4bf3c3af6fefd99f4a99cbb2.html">UIs</a></li><li class="navelem"><a class="el" href="../../d2/d8d/_canvas_aspect_ratio_resolver_8cs.html">CanvasAspectRatioResolver.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><a class="el" href="../../dir_10bef12d4bf3c3af6fefd99f4a99cbb2.html">UIs</a></li><li class="navelem"><b>CanvasAspectRatioResolver.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

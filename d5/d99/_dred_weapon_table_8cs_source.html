@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Characters/Dreds/DredWeaponTable.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Characters/Dreds/DredWeaponTable.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d5/d99/_dred_weapon_table_8cs_source.html','../../'); 
   <div class="headertitle"><div class="title">DredWeaponTable.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/d99/_dred_weapon_table_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/d8a/namespace_common_1_1_characters_1_1_dreds.html">Common.Characters.Dreds</a></div>
@@ -110,60 +111,56 @@ $(function(){initNavTree('d5/d99/_dred_weapon_table_8cs_source.html','../../'); 
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table&lt;WeaponType, DredWeapon&gt;</a> weaponTable;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">private</span> <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a68de8ffe832a377df66ceafd6cfdd6c9">WeaponType</a> prevWeaponType;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">private</span> WeaponType prevWeaponType;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a1ec587f2b747cbc148ca66fade38f13b">   12</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html">DredWeapon</a> <span class="keyword">this</span>[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a68de8ffe832a377df66ceafd6cfdd6c9">WeaponType</a> type] =&gt; weaponTable[type];</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a80d3d84863e6be0d8076d04f0c8f691b">   13</a></span>        <span class="keyword">public</span> List&lt;DredWeapon&gt; <a class="code hl_property" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a80d3d84863e6be0d8076d04f0c8f691b">WeaponList</a> =&gt; weaponTable.<a class="code hl_property" href="../../d2/d8f/class_table.html#a1ea84737aa88740a2705e303980a7b10">ValueList</a>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a92ea0f3c6b7149f12636dc2c21e64c22">   14</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html">CharacterBehaviour</a> <a class="code hl_property" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a92ea0f3c6b7149f12636dc2c21e64c22">CurrentSkillBehaviour</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html">DredWeapon</a> <span class="keyword">this</span>[WeaponType type] =&gt; weaponTable[type];</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> List&lt;DredWeapon&gt; WeaponList =&gt; weaponTable.ValueList;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html">CharacterBehaviour</a> CurrentSkillBehaviour { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a645074ce05cc2f7a45a8a90bb2b8893b">   17</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a645074ce05cc2f7a45a8a90bb2b8893b">Initialize</a>(<a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> dred)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize(<a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> dred)</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">foreach</span> (var dredWeapon <span class="keywordflow">in</span> <a class="code hl_property" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a80d3d84863e6be0d8076d04f0c8f691b">WeaponList</a>)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">foreach</span> (var dredWeapon <span class="keywordflow">in</span> WeaponList)</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                dredWeapon.Initialize(dred);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                dredWeapon.AddOnWeaponModelHidden(<span class="stringliteral">&quot;ResetPreviousWeaponType&quot;</span>, <a class="code hl_function" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a395bcd701c7d29bcab129363e310ef4f">ResetPreviousWeaponType</a>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                dredWeapon.AddOnWeaponModelHidden(<span class="stringliteral">&quot;ResetPreviousWeaponType&quot;</span>, ResetPreviousWeaponType);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                dredWeapon.AllSkillBehaviour.ForEach(sb =&gt;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                    sb.Sections</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                      .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Active, <span class="stringliteral">&quot;TryShowWeapon&quot;</span>, () =&gt; <a class="code hl_function" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a22e62421721b4fd896d3f5f21a469377">TryShowWeapon</a>(dredWeapon))</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                      .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.End, <span class="stringliteral">&quot;ReserveHideWeapon&quot;</span>, () =&gt; ReserveHideWeapon(dredWeapon))</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                      .Add(Section.Active, <span class="stringliteral">&quot;TryShowWeapon&quot;</span>, () =&gt; TryShowWeapon(dredWeapon))</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                      .Add(Section.End, <span class="stringliteral">&quot;ReserveHideWeapon&quot;</span>, () =&gt; ReserveHideWeapon(dredWeapon))</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                      ;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                });</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
-</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#af500adb9d4c84c8526a7b86b9490a932">   33</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#af500adb9d4c84c8526a7b86b9490a932">ContainsKey</a>(<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a68de8ffe832a377df66ceafd6cfdd6c9">WeaponType</a> type) =&gt; weaponTable.<a class="code hl_function" href="../../d2/d8f/class_table.html#a4c012e54b170a3ee21db16e9be63cf37">ContainsKey</a>(type);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a395bcd701c7d29bcab129363e310ef4f">   34</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a395bcd701c7d29bcab129363e310ef4f">ResetPreviousWeaponType</a>() =&gt; prevWeaponType = <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a68de8ffe832a377df66ceafd6cfdd6c9">WeaponType</a>.None;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> ContainsKey(WeaponType type) =&gt; weaponTable.ContainsKey(type);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ResetPreviousWeaponType() =&gt; prevWeaponType = WeaponType.None;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        </div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a22e62421721b4fd896d3f5f21a469377">   36</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a22e62421721b4fd896d3f5f21a469377">TryShowWeapon</a>(<a class="code hl_class" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html">DredWeapon</a> weapon)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> TryShowWeapon(<a class="code hl_class" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html">DredWeapon</a> weapon)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">if</span> (prevWeaponType != weapon.<a class="code hl_property" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#a02870b8d65b8a3eba2bca87d6256cb9e">WeaponType</a>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">if</span> (prevWeaponType != weapon.WeaponType)</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <span class="keywordflow">if</span> (prevWeaponType != <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a68de8ffe832a377df66ceafd6cfdd6c9">WeaponType</a>.None)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <span class="keywordflow">if</span> (prevWeaponType != WeaponType.None)</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    weaponTable[prevWeaponType].HideWeaponsInstantly();</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                prevWeaponType = weapon.<a class="code hl_property" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#a02870b8d65b8a3eba2bca87d6256cb9e">WeaponType</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                prevWeaponType = weapon.WeaponType;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                weapon.<a class="code hl_function" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#a3a331add4ea0e8897121e589e161b66c">ShowWeapons</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                weapon.ShowWeapons();</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                weapon.<a class="code hl_function" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#ac2d64482bc3cce8cc0858faa5b4dabfc">ProlongHideDelay</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                weapon.ProlongHideDelay();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            }</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
-</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> ReserveHideWeapon(<a class="code hl_class" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html">DredWeapon</a> weapon)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a92ea0f3c6b7149f12636dc2c21e64c22">CurrentSkillBehaviour</a>.HasComponent())</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">if</span> (CurrentSkillBehaviour.HasComponent())</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                weapon.<a class="code hl_function" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#af83fda797c2c8d276955cd8828fc16c6">HideWeapons</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                weapon.HideWeapons();</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
@@ -173,40 +170,25 @@ $(function(){initNavTree('d5/d99/_dred_weapon_table_8cs_source.html','../../'); 
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> EditorSetUp()</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            weaponTable.<a class="code hl_function" href="../../d2/d8f/class_table.html#aa9b824ab53436ce437d96f9e0367b854">CreateTable</a>(GetComponentsInChildren&lt;DredWeapon&gt;(), group =&gt; group.WeaponType);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            weaponTable.CreateTable(GetComponentsInChildren&lt;DredWeapon&gt;(), group =&gt; group.WeaponType);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
 </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
-<div class="ttc" id="a_section_8cs_html_aa2bc2fd5a40cdb0c40963e6fe6a24cce"><div class="ttname"><a href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a></div><div class="ttdeci">Section</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d0d/_section_8cs_source.html#l00001">Section.cs:2</a></div></div>
 <div class="ttc" id="aclass_common_1_1_characters_1_1_character_behaviour_html"><div class="ttname"><a href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html">Common.Characters.CharacterBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/dea/_character_behaviour_8cs_source.html#l00005">CharacterBehaviour.cs:6</a></div></div>
 <div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Common.Characters.Dreds.Dred</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00005">Dred.cs:6</a></div></div>
 <div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_html"><div class="ttname"><a href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html">Common.Characters.Dreds.DredWeapon</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d43/_dred_weapon_8cs_source.html#l00008">DredWeapon.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_html_a02870b8d65b8a3eba2bca87d6256cb9e"><div class="ttname"><a href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#a02870b8d65b8a3eba2bca87d6256cb9e">Common.Characters.Dreds.DredWeapon.WeaponType</a></div><div class="ttdeci">WeaponType WeaponType</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d43/_dred_weapon_8cs_source.html#l00016">DredWeapon.cs:16</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_html_a3a331add4ea0e8897121e589e161b66c"><div class="ttname"><a href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#a3a331add4ea0e8897121e589e161b66c">Common.Characters.Dreds.DredWeapon.ShowWeapons</a></div><div class="ttdeci">void ShowWeapons()</div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_html_ac2d64482bc3cce8cc0858faa5b4dabfc"><div class="ttname"><a href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#ac2d64482bc3cce8cc0858faa5b4dabfc">Common.Characters.Dreds.DredWeapon.ProlongHideDelay</a></div><div class="ttdeci">void ProlongHideDelay()</div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_html_af83fda797c2c8d276955cd8828fc16c6"><div class="ttname"><a href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#af83fda797c2c8d276955cd8828fc16c6">Common.Characters.Dreds.DredWeapon.HideWeapons</a></div><div class="ttdeci">void HideWeapons()</div></div>
 <div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table_html"><div class="ttname"><a href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html">Common.Characters.Dreds.DredWeaponTable</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">DredWeaponTable.cs:7</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table_html_a22e62421721b4fd896d3f5f21a469377"><div class="ttname"><a href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a22e62421721b4fd896d3f5f21a469377">Common.Characters.Dreds.DredWeaponTable.TryShowWeapon</a></div><div class="ttdeci">void TryShowWeapon(DredWeapon weapon)</div><div class="ttdef"><b>Definition</b> <a href="#l00036">DredWeaponTable.cs:36</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table_html_a395bcd701c7d29bcab129363e310ef4f"><div class="ttname"><a href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a395bcd701c7d29bcab129363e310ef4f">Common.Characters.Dreds.DredWeaponTable.ResetPreviousWeaponType</a></div><div class="ttdeci">void ResetPreviousWeaponType()</div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table_html_a645074ce05cc2f7a45a8a90bb2b8893b"><div class="ttname"><a href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a645074ce05cc2f7a45a8a90bb2b8893b">Common.Characters.Dreds.DredWeaponTable.Initialize</a></div><div class="ttdeci">void Initialize(Dred dred)</div><div class="ttdef"><b>Definition</b> <a href="#l00017">DredWeaponTable.cs:17</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table_html_a80d3d84863e6be0d8076d04f0c8f691b"><div class="ttname"><a href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a80d3d84863e6be0d8076d04f0c8f691b">Common.Characters.Dreds.DredWeaponTable.WeaponList</a></div><div class="ttdeci">List&lt; DredWeapon &gt; WeaponList</div><div class="ttdef"><b>Definition</b> <a href="#l00013">DredWeaponTable.cs:13</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table_html_a92ea0f3c6b7149f12636dc2c21e64c22"><div class="ttname"><a href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#a92ea0f3c6b7149f12636dc2c21e64c22">Common.Characters.Dreds.DredWeaponTable.CurrentSkillBehaviour</a></div><div class="ttdeci">CharacterBehaviour CurrentSkillBehaviour</div><div class="ttdef"><b>Definition</b> <a href="#l00014">DredWeaponTable.cs:14</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table_html_af500adb9d4c84c8526a7b86b9490a932"><div class="ttname"><a href="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.html#af500adb9d4c84c8526a7b86b9490a932">Common.Characters.Dreds.DredWeaponTable.ContainsKey</a></div><div class="ttdeci">bool ContainsKey(WeaponType type)</div></div>
 <div class="ttc" id="aclass_table_html"><div class="ttname"><a href="../../d2/d8f/class_table.html">Table</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00009">Table.cs:10</a></div></div>
-<div class="ttc" id="aclass_table_html_a1ea84737aa88740a2705e303980a7b10"><div class="ttname"><a href="../../d2/d8f/class_table.html#a1ea84737aa88740a2705e303980a7b10">Table.ValueList</a></div><div class="ttdeci">List&lt; TValue &gt; ValueList</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00015">Table.cs:15</a></div></div>
-<div class="ttc" id="aclass_table_html_a4c012e54b170a3ee21db16e9be63cf37"><div class="ttname"><a href="../../d2/d8f/class_table.html#a4c012e54b170a3ee21db16e9be63cf37">Table.ContainsKey</a></div><div class="ttdeci">bool ContainsKey(TKey key)</div></div>
-<div class="ttc" id="aclass_table_html_aa9b824ab53436ce437d96f9e0367b854"><div class="ttname"><a href="../../d2/d8f/class_table.html#aa9b824ab53436ce437d96f9e0367b854">Table.CreateTable</a></div><div class="ttdeci">void CreateTable(List&lt; TValue &gt; dataList, Func&lt; TValue, TKey &gt; keySelector)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00103">Table.cs:103</a></div></div>
 <div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_characters_1_1_dreds_html"><div class="ttname"><a href="../../da/d8a/namespace_common_1_1_characters_1_1_dreds.html">Common.Characters.Dreds</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00003">Dred.cs:4</a></div></div>
-<div class="ttc" id="anamespace_common_html_a68de8ffe832a377df66ceafd6cfdd6c9"><div class="ttname"><a href="../../d6/dee/namespace_common.html#a68de8ffe832a377df66ceafd6cfdd6c9">Common.WeaponType</a></div><div class="ttdeci">WeaponType</div><div class="ttdef"><b>Definition</b> <a href="../../de/d47/_weapon_type_8cs_source.html#l00003">WeaponType.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_7154228bae9157f0b8806d72dde360d2.html">Characters</a></li><li class="navelem"><a class="el" href="../../dir_cf7dbe463493b3e44ba4bc4e6a61372e.html">Dreds</a></li><li class="navelem"><a class="el" href="../../d5/d99/_dred_weapon_table_8cs.html">DredWeaponTable.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_7154228bae9157f0b8806d72dde360d2.html">Characters</a></li><li class="navelem"><a class="el" href="../../dir_cf7dbe463493b3e44ba4bc4e6a61372e.html">Dreds</a></li><li class="navelem"><b>DredWeaponTable.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

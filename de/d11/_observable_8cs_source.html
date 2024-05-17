@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/_Core/_Protocol/_DataStruct/Observable.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/_Core/_Protocol/_DataStruct/Observable.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,56 +101,42 @@ $(function(){initNavTree('de/d11/_observable_8cs_source.html','../../'); initRes
   <div class="headertitle"><div class="title">Observable.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../de/d11/_observable_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>[Serializable]</div>
 <div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="../../d9/dba/class_observable.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d9/dba/class_observable.html">Observable</a>&lt;T&gt;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d9/dba/class_observable.html#a0a9ef149ce4c12df64b3adf4776bfc11">    7</a></span>    [SerializeField] <span class="keyword">protected</span> T <a class="code hl_variable" href="../../d9/dba/class_observable.html#a0a9ef149ce4c12df64b3adf4776bfc11">value</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    [SerializeField] <span class="keyword">protected</span> T value;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d9/dba/class_observable.html#a36c42fa316c673d9035a828a049e3e6c">    9</a></span>    <span class="keyword">protected</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;T&gt;</a> <a class="code hl_property" href="../../d9/dba/class_observable.html#a36c42fa316c673d9035a828a049e3e6c">OnValueChanged</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">protected</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;T&gt;</a> OnValueChanged { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d9/dba/class_observable.html#ab42adb9abdc083cfadd5cb224f16829e">   11</a></span>    <span class="keyword">public</span> <span class="keyword">virtual</span> T <a class="code hl_property" href="../../d9/dba/class_observable.html#ab42adb9abdc083cfadd5cb224f16829e">Value</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">public</span> <span class="keyword">virtual</span> T Value</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">get</span> =&gt; <a class="code hl_variable" href="../../d9/dba/class_observable.html#a0a9ef149ce4c12df64b3adf4776bfc11">value</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">get</span> =&gt; value;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">set</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            this.value = <a class="code hl_variable" href="../../d9/dba/class_observable.html#a0a9ef149ce4c12df64b3adf4776bfc11">value</a>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <a class="code hl_property" href="../../d9/dba/class_observable.html#a36c42fa316c673d9035a828a049e3e6c">OnValueChanged</a>.<a class="code hl_function" href="../../db/dcc/class_action_table.html#a6a6f404afd5039c3252ba21ce53aaa39">Invoke</a>(<a class="code hl_variable" href="../../d9/dba/class_observable.html#a0a9ef149ce4c12df64b3adf4776bfc11">value</a>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            this.value = value;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            OnValueChanged.Invoke(value);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        }</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
-</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d9/dba/class_observable.html#a1d65dfc7a1fe342a534af8f732a7e297">   21</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dba/class_observable.html#a1d65dfc7a1fe342a534af8f732a7e297">AddEvent</a>(<span class="keywordtype">string</span> key, Action action) =&gt; <a class="code hl_function" href="../../d9/dba/class_observable.html#a1d65dfc7a1fe342a534af8f732a7e297">AddEvent</a>(key, _ =&gt; action());</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d9/dba/class_observable.html#a54a28368e80cf15f2418b0e34c5f497b">   22</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dba/class_observable.html#a54a28368e80cf15f2418b0e34c5f497b">AddEvent</a>(<span class="keywordtype">string</span> key, Action&lt;T&gt; action) =&gt; <a class="code hl_property" href="../../d9/dba/class_observable.html#a36c42fa316c673d9035a828a049e3e6c">OnValueChanged</a>.<a class="code hl_function" href="../../db/dcc/class_action_table.html#a84455f1a9d923913588f1d0bd00b695b">Add</a>(key, action);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d9/dba/class_observable.html#ad56bedff72853b508969e916ce4f0b40">   23</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dba/class_observable.html#ad56bedff72853b508969e916ce4f0b40">RemoveEvent</a>(Action action) =&gt; <a class="code hl_function" href="../../d9/dba/class_observable.html#ad56bedff72853b508969e916ce4f0b40">RemoveEvent</a>(action.ToString());</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d9/dba/class_observable.html#a97e1c1d017bcc6d9a0ce4d15c04537c6">   24</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dba/class_observable.html#a97e1c1d017bcc6d9a0ce4d15c04537c6">RemoveEvent</a>(<span class="keywordtype">string</span> key) =&gt; <a class="code hl_property" href="../../d9/dba/class_observable.html#a36c42fa316c673d9035a828a049e3e6c">OnValueChanged</a>.<a class="code hl_function" href="../../da/dcb/class_action_table_core.html#aac76b0ce9d1ddb8e02d7dc4e9d37862c">Remove</a>(key);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d9/dba/class_observable.html#a22539329ee5dcce2ab30f6c0df2a3488">   25</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/dba/class_observable.html#a22539329ee5dcce2ab30f6c0df2a3488">ClearEvent</a>() =&gt; <a class="code hl_property" href="../../d9/dba/class_observable.html#a36c42fa316c673d9035a828a049e3e6c">OnValueChanged</a>.<a class="code hl_function" href="../../da/dcb/class_action_table_core.html#a60d15f334a5b2b0a0ea811ff1e7304b9">Clear</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> AddEvent(<span class="keywordtype">string</span> key, Action action) =&gt; AddEvent(key, _ =&gt; action());</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> AddEvent(<span class="keywordtype">string</span> key, Action&lt;T&gt; action) =&gt; OnValueChanged.Add(key, action);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> RemoveEvent(Action action) =&gt; RemoveEvent(action.ToString());</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> RemoveEvent(<span class="keywordtype">string</span> key) =&gt; OnValueChanged.Remove(key);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> ClearEvent() =&gt; OnValueChanged.Clear();</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
 </div>
-<div class="ttc" id="aclass_action_table_core_html_a60d15f334a5b2b0a0ea811ff1e7304b9"><div class="ttname"><a href="../../da/dcb/class_action_table_core.html#a60d15f334a5b2b0a0ea811ff1e7304b9">ActionTableCore.Clear</a></div><div class="ttdeci">void Clear()</div></div>
-<div class="ttc" id="aclass_action_table_core_html_aac76b0ce9d1ddb8e02d7dc4e9d37862c"><div class="ttname"><a href="../../da/dcb/class_action_table_core.html#aac76b0ce9d1ddb8e02d7dc4e9d37862c">ActionTableCore.Remove</a></div><div class="ttdeci">void Remove(string key)</div></div>
 <div class="ttc" id="aclass_action_table_html"><div class="ttname"><a href="../../db/dcc/class_action_table.html">ActionTable</a></div><div class="ttdoc">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00067">ActionTable.cs:68</a></div></div>
-<div class="ttc" id="aclass_action_table_html_a6a6f404afd5039c3252ba21ce53aaa39"><div class="ttname"><a href="../../db/dcc/class_action_table.html#a6a6f404afd5039c3252ba21ce53aaa39">ActionTable.Invoke</a></div><div class="ttdeci">void Invoke()</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00036">ActionTable.cs:36</a></div></div>
-<div class="ttc" id="aclass_action_table_html_a84455f1a9d923913588f1d0bd00b695b"><div class="ttname"><a href="../../db/dcc/class_action_table.html#a84455f1a9d923913588f1d0bd00b695b">ActionTable.Add</a></div><div class="ttdeci">void Add(string key, Action action)</div></div>
 <div class="ttc" id="aclass_observable_html"><div class="ttname"><a href="../../d9/dba/class_observable.html">Observable</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">Observable.cs:6</a></div></div>
-<div class="ttc" id="aclass_observable_html_a0a9ef149ce4c12df64b3adf4776bfc11"><div class="ttname"><a href="../../d9/dba/class_observable.html#a0a9ef149ce4c12df64b3adf4776bfc11">Observable.value</a></div><div class="ttdeci">T value</div><div class="ttdef"><b>Definition</b> <a href="#l00007">Observable.cs:7</a></div></div>
-<div class="ttc" id="aclass_observable_html_a1d65dfc7a1fe342a534af8f732a7e297"><div class="ttname"><a href="../../d9/dba/class_observable.html#a1d65dfc7a1fe342a534af8f732a7e297">Observable.AddEvent</a></div><div class="ttdeci">void AddEvent(string key, Action action)</div></div>
-<div class="ttc" id="aclass_observable_html_a22539329ee5dcce2ab30f6c0df2a3488"><div class="ttname"><a href="../../d9/dba/class_observable.html#a22539329ee5dcce2ab30f6c0df2a3488">Observable.ClearEvent</a></div><div class="ttdeci">void ClearEvent()</div></div>
-<div class="ttc" id="aclass_observable_html_a36c42fa316c673d9035a828a049e3e6c"><div class="ttname"><a href="../../d9/dba/class_observable.html#a36c42fa316c673d9035a828a049e3e6c">Observable.OnValueChanged</a></div><div class="ttdeci">ActionTable&lt; T &gt; OnValueChanged</div><div class="ttdef"><b>Definition</b> <a href="#l00009">Observable.cs:9</a></div></div>
-<div class="ttc" id="aclass_observable_html_a54a28368e80cf15f2418b0e34c5f497b"><div class="ttname"><a href="../../d9/dba/class_observable.html#a54a28368e80cf15f2418b0e34c5f497b">Observable.AddEvent</a></div><div class="ttdeci">void AddEvent(string key, Action&lt; T &gt; action)</div></div>
-<div class="ttc" id="aclass_observable_html_a97e1c1d017bcc6d9a0ce4d15c04537c6"><div class="ttname"><a href="../../d9/dba/class_observable.html#a97e1c1d017bcc6d9a0ce4d15c04537c6">Observable.RemoveEvent</a></div><div class="ttdeci">void RemoveEvent(string key)</div></div>
-<div class="ttc" id="aclass_observable_html_ab42adb9abdc083cfadd5cb224f16829e"><div class="ttname"><a href="../../d9/dba/class_observable.html#ab42adb9abdc083cfadd5cb224f16829e">Observable.Value</a></div><div class="ttdeci">virtual T Value</div><div class="ttdef"><b>Definition</b> <a href="#l00011">Observable.cs:12</a></div></div>
-<div class="ttc" id="aclass_observable_html_ad56bedff72853b508969e916ce4f0b40"><div class="ttname"><a href="../../d9/dba/class_observable.html#ad56bedff72853b508969e916ce4f0b40">Observable.RemoveEvent</a></div><div class="ttdeci">void RemoveEvent(Action action)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_bbd58014f32f462c4fa406e6f5f6bceb.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_297aea29709d29695aa55335af6d4836.html">_DataStruct</a></li><li class="navelem"><a class="el" href="../../de/d11/_observable_8cs.html">Observable.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_bbd58014f32f462c4fa406e6f5f6bceb.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_297aea29709d29695aa55335af6d4836.html">_DataStruct</a></li><li class="navelem"><b>Observable.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

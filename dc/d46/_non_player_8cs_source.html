@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Characters/NonPlayers/NonPlayer.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Characters/NonPlayers/NonPlayer.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('dc/d46/_non_player_8cs_source.html','../../'); initRes
   <div class="headertitle"><div class="title">NonPlayer.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../dc/d46/_non_player_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>BehaviorDesigner.Runtime;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>BehaviorDesigner.Runtime;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../df/db6/namespace_common_1_1_systems.html">Common.Systems</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -109,23 +110,21 @@ $(function(){initNavTree('dc/d46/_non_player_8cs_source.html','../../'); initRes
 <div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html">NonPlayer</a> : <a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ae4677aed76125a2fd12b388d787ee40e">    9</a></span>        [SerializeField] <span class="keyword">protected</span> <a class="code hl_class" href="../../d7/db7/class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table.html">NonPlayerSkillTable</a> <a class="code hl_variable" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ae4677aed76125a2fd12b388d787ee40e">skills</a>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#a484b1167ae2b8e6625c7d6536f11227f">   10</a></span>        [SerializeField] <span class="keyword">protected</span> <a class="code hl_class" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html">SearchingSystem</a> <a class="code hl_variable" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#a484b1167ae2b8e6625c7d6536f11227f">searchingSystem</a>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ad90c0ad7bf2caeaf027592a0186a0114">   11</a></span>        [SerializeField] <span class="keyword">protected</span> Behavior <a class="code hl_variable" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ad90c0ad7bf2caeaf027592a0186a0114">behaviourTree</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [SerializeField] <span class="keyword">protected</span> <a class="code hl_class" href="../../d7/db7/class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table.html">NonPlayerSkillTable</a> skills;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        [SerializeField] <span class="keyword">protected</span> <a class="code hl_class" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html">SearchingSystem</a> searchingSystem;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        [SerializeField] <span class="keyword">protected</span> Behavior behaviourTree;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ab843bc39ad36b56772cce0868c4eed3b">   13</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d7/db7/class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table.html">NonPlayerSkillTable</a> Skills =&gt; <a class="code hl_variable" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ae4677aed76125a2fd12b388d787ee40e">skills</a>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#aa1406c3ccb15ec2b192abd9ac1831583">   14</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html">SearchingSystem</a> <a class="code hl_class" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html">SearchingSystem</a> =&gt; <a class="code hl_variable" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#a484b1167ae2b8e6625c7d6536f11227f">searchingSystem</a>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#a27c809aee590462f8989b57bcd6208c8">   15</a></span>        <span class="keyword">public</span> Behavior <a class="code hl_property" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#a27c809aee590462f8989b57bcd6208c8">BehaviourTree</a> =&gt; <a class="code hl_variable" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ad90c0ad7bf2caeaf027592a0186a0114">behaviourTree</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d7/db7/class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table.html">NonPlayerSkillTable</a> Skills =&gt; skills;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html">SearchingSystem</a> <a class="code hl_class" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html">SearchingSystem</a> =&gt; searchingSystem;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">public</span> Behavior BehaviourTree =&gt; behaviourTree;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ac97e16fa76438d3cd0cbddba5e6ddec5">   18</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ac97e16fa76438d3cd0cbddba5e6ddec5">Initialize</a>()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Initialize()</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            base.Initialize();</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_variable" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ae4677aed76125a2fd12b388d787ee40e">skills</a>.<a class="code hl_function" href="../../d7/db7/class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table.html#a3cec9980d8b44d7cf1cd92de3407904c">Initialize</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            skills.Initialize(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
-</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
@@ -133,9 +132,9 @@ $(function(){initNavTree('dc/d46/_non_player_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            base.EditorSetUp();</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <a class="code hl_variable" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ae4677aed76125a2fd12b388d787ee40e">skills</a>          = GetComponentInChildren&lt;NonPlayerSkillTable&gt;();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_variable" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#a484b1167ae2b8e6625c7d6536f11227f">searchingSystem</a> = GetComponentInChildren&lt;SearchingSystem&gt;();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_variable" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ad90c0ad7bf2caeaf027592a0186a0114">behaviourTree</a>   = GetComponentInChildren&lt;Behavior&gt;();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            skills          = GetComponentInChildren&lt;NonPlayerSkillTable&gt;();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            searchingSystem = GetComponentInChildren&lt;SearchingSystem&gt;();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            behaviourTree   = GetComponentInChildren&lt;Behavior&gt;();</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
@@ -143,13 +142,7 @@ $(function(){initNavTree('dc/d46/_non_player_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
 <div class="ttc" id="aclass_common_1_1_character_html"><div class="ttname"><a href="../../dd/dff/class_common_1_1_character.html">Common.Character</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8a/_character_8cs_source.html#l00010">Character.cs:11</a></div></div>
 <div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_html"><div class="ttname"><a href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html">Common.Characters.NonPlayers.NonPlayer</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">NonPlayer.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_html_a27c809aee590462f8989b57bcd6208c8"><div class="ttname"><a href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#a27c809aee590462f8989b57bcd6208c8">Common.Characters.NonPlayers.NonPlayer.BehaviourTree</a></div><div class="ttdeci">Behavior BehaviourTree</div><div class="ttdef"><b>Definition</b> <a href="#l00015">NonPlayer.cs:15</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_html_a484b1167ae2b8e6625c7d6536f11227f"><div class="ttname"><a href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#a484b1167ae2b8e6625c7d6536f11227f">Common.Characters.NonPlayers.NonPlayer.searchingSystem</a></div><div class="ttdeci">SearchingSystem searchingSystem</div><div class="ttdef"><b>Definition</b> <a href="#l00010">NonPlayer.cs:10</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_html_ac97e16fa76438d3cd0cbddba5e6ddec5"><div class="ttname"><a href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ac97e16fa76438d3cd0cbddba5e6ddec5">Common.Characters.NonPlayers.NonPlayer.Initialize</a></div><div class="ttdeci">override void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="#l00018">NonPlayer.cs:18</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_html_ad90c0ad7bf2caeaf027592a0186a0114"><div class="ttname"><a href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ad90c0ad7bf2caeaf027592a0186a0114">Common.Characters.NonPlayers.NonPlayer.behaviourTree</a></div><div class="ttdeci">Behavior behaviourTree</div><div class="ttdef"><b>Definition</b> <a href="#l00011">NonPlayer.cs:11</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_html_ae4677aed76125a2fd12b388d787ee40e"><div class="ttname"><a href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ae4677aed76125a2fd12b388d787ee40e">Common.Characters.NonPlayers.NonPlayer.skills</a></div><div class="ttdeci">NonPlayerSkillTable skills</div><div class="ttdef"><b>Definition</b> <a href="#l00009">NonPlayer.cs:9</a></div></div>
 <div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table_html"><div class="ttname"><a href="../../d7/db7/class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table.html">Common.Characters.NonPlayers.NonPlayerSkillTable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d81/_non_player_skill_table_8cs_source.html#l00007">NonPlayerSkillTable.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table_html_a3cec9980d8b44d7cf1cd92de3407904c"><div class="ttname"><a href="../../d7/db7/class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table.html#a3cec9980d8b44d7cf1cd92de3407904c">Common.Characters.NonPlayers.NonPlayerSkillTable.Initialize</a></div><div class="ttdeci">void Initialize(Character character)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d81/_non_player_skill_table_8cs_source.html#l00033">NonPlayerSkillTable.cs:33</a></div></div>
 <div class="ttc" id="aclass_common_1_1_systems_1_1_searching_system_html"><div class="ttname"><a href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html">Common.Systems.SearchingSystem</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/dfd/_searching_system_8cs_source.html#l00006">SearchingSystem.cs:7</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_characters_1_1_non_players_html"><div class="ttname"><a href="../../d6/d16/namespace_common_1_1_characters_1_1_non_players.html">Common.Characters.NonPlayers</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d05/_ally_8cs_source.html#l00003">Ally.cs:4</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_systems_html"><div class="ttname"><a href="../../df/db6/namespace_common_1_1_systems.html">Common.Systems</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00005">DetectModel.cs:6</a></div></div>
@@ -158,7 +151,7 @@ $(function(){initNavTree('dc/d46/_non_player_8cs_source.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_7154228bae9157f0b8806d72dde360d2.html">Characters</a></li><li class="navelem"><a class="el" href="../../dir_e844e84bdbf8e2ab61e4d50b7c329806.html">NonPlayers</a></li><li class="navelem"><a class="el" href="../../dc/d46/_non_player_8cs.html">NonPlayer.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_7154228bae9157f0b8806d72dde360d2.html">Characters</a></li><li class="navelem"><a class="el" href="../../dir_e844e84bdbf8e2ab61e4d50b7c329806.html">NonPlayers</a></li><li class="navelem"><b>NonPlayer.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Kimmihohs/CunningOfFoxTrajectory.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Kimmihohs/CunningOfFoxTrajectory.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d0/d80/_cunning_of_fox_trajectory_8cs_source.html','..
   <div class="headertitle"><div class="title">CunningOfFoxTrajectory.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d0/d80/_cunning_of_fox_trajectory_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d4/d1c/namespace_common_1_1_projectiles_1_1_trajectories.html">Common.Projectiles.Trajectories</a>;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d4/d1c/namespace_common_1_1_projectiles_1_1_trajectories.html">Common.Projectiles.Trajectories</a>;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>DG.Tweening;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -112,29 +113,19 @@ $(function(){initNavTree('d0/d80/_cunning_of_fox_trajectory_8cs_source.html','..
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">float</span> duration = 1.65f;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d6/d03/class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_trajectory.html#a01adbb76205989f57adbc4b73401ad26">   12</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d03/class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_trajectory.html#a01adbb76205989f57adbc4b73401ad26">Flying</a>()</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Flying()</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            var destinationNaturalize = <a class="code hl_property" href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html#a154f94c326726317be7a252a15ff2c1d">Destination</a> + <a class="code hl_typedef" href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.insideUnitCircle.ToVector3XZ() * 2f;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            var destinationNaturalize = Destination + Random.insideUnitCircle.ToVector3XZ() * 2f;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <a class="code hl_variable" href="../../d8/db9/class_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory.html#abcdfd00eea0bc50e20bf616d59cf2c1a">ParabolaTween</a> = <a class="code hl_typedef" href="../../d0/d16/_database_8cs.html#ab58739cc673d5a939eb6b313566c53b6">Projectile</a>.transform.DOJump(destinationNaturalize, <a class="code hl_variable" href="../../d8/db9/class_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory.html#a5e77e1493252c372bc0190df828a3052">jumpHeight</a>, <a class="code hl_variable" href="../../d8/db9/class_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory.html#af737d07223e8a5a15259fcb27117943a">numJumps</a>, duration)</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                                      .OnComplete(() =&gt; <a class="code hl_typedef" href="../../d0/d16/_database_8cs.html#ab58739cc673d5a939eb6b313566c53b6">Projectile</a>.Invoker.Complete())</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                                      .SetEase(<a class="code hl_variable" href="../../d8/db9/class_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory.html#a5f9bab98f1a29d908265e12f0e949d10">ease</a>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            ParabolaTween = Projectile.transform.DOJump(destinationNaturalize, jumpHeight, numJumps, duration)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                                      .OnComplete(() =&gt; Projectile.Invoker.Complete())</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                                      .SetEase(ease);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
-</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
 </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
-<div class="ttc" id="a_database_8cs_html_ab58739cc673d5a939eb6b313566c53b6"><div class="ttname"><a href="../../d0/d16/_database_8cs.html#ab58739cc673d5a939eb6b313566c53b6">Projectile</a></div><div class="ttdeci">Databases.SheetData.CombatData.ProjectileData.Projectile Projectile</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d16/_database_8cs_source.html#l00017">Database.cs:17</a></div></div>
-<div class="ttc" id="a_number_extension_8cs_html_a832e8f52fca5a678819ec96269dcb532"><div class="ttname"><a href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a></div><div class="ttdeci">UnityEngine.Random Random</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d1a/_number_extension_8cs_source.html#l00005">NumberExtension.cs:5</a></div></div>
 <div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory_html"><div class="ttname"><a href="../../d8/db9/class_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory.html">Common.Projectiles.Trajectories.ParabolaTrajectory</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d55/_parabola_trajectory_8cs_source.html#l00006">ParabolaTrajectory.cs:7</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory_html_a5e77e1493252c372bc0190df828a3052"><div class="ttname"><a href="../../d8/db9/class_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory.html#a5e77e1493252c372bc0190df828a3052">Common.Projectiles.Trajectories.ParabolaTrajectory.jumpHeight</a></div><div class="ttdeci">float jumpHeight</div><div class="ttdef"><b>Definition</b> <a href="../../db/d55/_parabola_trajectory_8cs_source.html#l00008">ParabolaTrajectory.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory_html_a5f9bab98f1a29d908265e12f0e949d10"><div class="ttname"><a href="../../d8/db9/class_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory.html#a5f9bab98f1a29d908265e12f0e949d10">Common.Projectiles.Trajectories.ParabolaTrajectory.ease</a></div><div class="ttdeci">Ease ease</div><div class="ttdef"><b>Definition</b> <a href="../../db/d55/_parabola_trajectory_8cs_source.html#l00010">ParabolaTrajectory.cs:10</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory_html_abcdfd00eea0bc50e20bf616d59cf2c1a"><div class="ttname"><a href="../../d8/db9/class_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory.html#abcdfd00eea0bc50e20bf616d59cf2c1a">Common.Projectiles.Trajectories.ParabolaTrajectory.ParabolaTween</a></div><div class="ttdeci">Tween ParabolaTween</div><div class="ttdef"><b>Definition</b> <a href="../../db/d55/_parabola_trajectory_8cs_source.html#l00012">ParabolaTrajectory.cs:12</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory_html_af737d07223e8a5a15259fcb27117943a"><div class="ttname"><a href="../../d8/db9/class_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory.html#af737d07223e8a5a15259fcb27117943a">Common.Projectiles.Trajectories.ParabolaTrajectory.numJumps</a></div><div class="ttdeci">int numJumps</div><div class="ttdef"><b>Definition</b> <a href="../../db/d55/_parabola_trajectory_8cs_source.html#l00009">ParabolaTrajectory.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectory_html_a154f94c326726317be7a252a15ff2c1d"><div class="ttname"><a href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html#a154f94c326726317be7a252a15ff2c1d">Common.Projectiles.Trajectory.Destination</a></div><div class="ttdeci">Vector3 Destination</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d89/_trajectory_8cs_source.html#l00014">Trajectory.cs:15</a></div></div>
 <div class="ttc" id="aclass_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_trajectory_html"><div class="ttname"><a href="../../d6/d03/class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_trajectory.html">Common.Skills.NonPlayers.Kimmihohs.CunningOfFoxTrajectory</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">CunningOfFoxTrajectory.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_trajectory_html_a01adbb76205989f57adbc4b73401ad26"><div class="ttname"><a href="../../d6/d03/class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_trajectory.html#a01adbb76205989f57adbc4b73401ad26">Common.Skills.NonPlayers.Kimmihohs.CunningOfFoxTrajectory.Flying</a></div><div class="ttdeci">override void Flying()</div><div class="ttdef"><b>Definition</b> <a href="#l00012">CunningOfFoxTrajectory.cs:12</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_projectiles_1_1_trajectories_html"><div class="ttname"><a href="../../d4/d1c/namespace_common_1_1_projectiles_1_1_trajectories.html">Common.Projectiles.Trajectories</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d39/_guided_parabola_trajectory_8cs_source.html#l00005">GuidedParabolaTrajectory.cs:6</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_skills_1_1_non_players_1_1_kimmihohs_html"><div class="ttname"><a href="../../dd/d43/namespace_common_1_1_skills_1_1_non_players_1_1_kimmihohs.html">Common.Skills.NonPlayers.Kimmihohs</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d16/_cunning_of_fox_8cs_source.html#l00007">CunningOfFox.cs:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -142,7 +133,7 @@ $(function(){initNavTree('d0/d80/_cunning_of_fox_trajectory_8cs_source.html','..
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_d572cda828bfa5b83e7d57eb46f6ce39.html">Skills</a></li><li class="navelem"><a class="el" href="../../dir_692581fa25d4bed2900b04a7b001598f.html">NonPlayers</a></li><li class="navelem"><a class="el" href="../../dir_173cb499e0555f31225393baf533fc75.html">Kimmihohs</a></li><li class="navelem"><a class="el" href="../../d0/d80/_cunning_of_fox_trajectory_8cs.html">CunningOfFoxTrajectory.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_d572cda828bfa5b83e7d57eb46f6ce39.html">Skills</a></li><li class="navelem"><a class="el" href="../../dir_692581fa25d4bed2900b04a7b001598f.html">NonPlayers</a></li><li class="navelem"><a class="el" href="../../dir_173cb499e0555f31225393baf533fc75.html">Kimmihohs</a></li><li class="navelem"><b>CunningOfFoxTrajectory.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

@@ -8,13 +8,13 @@ var dir_670cf5a0d06f59627a6a3e9f4b52c4b8 =
     [ "Saves", "dir_bf43d609cf3e9a24fc8f6da0b2a786ad.html", "dir_bf43d609cf3e9a24fc8f6da0b2a786ad" ],
     [ "Times", "dir_802ea4063fb4df5e545165828f00333d.html", "dir_802ea4063fb4df5e545165828f00333d" ],
     [ "UIs", "dir_10bef12d4bf3c3af6fefd99f4a99cbb2.html", "dir_10bef12d4bf3c3af6fefd99f4a99cbb2" ],
-    [ "AudioManager.cs", "dd/dd3/_audio_manager_8cs.html", "dd/dd3/_audio_manager_8cs" ],
-    [ "CameraManager.cs", "d3/df0/_camera_manager_8cs.html", "d3/df0/_camera_manager_8cs" ],
-    [ "CloudManager.cs", "df/d48/_cloud_manager_8cs.html", "df/d48/_cloud_manager_8cs" ],
-    [ "InputManager.cs", "dd/d96/_input_manager_8cs.html", "dd/d96/_input_manager_8cs" ],
-    [ "PostProcessManager.cs", "df/d40/_post_process_manager_8cs.html", "df/d40/_post_process_manager_8cs" ],
-    [ "SaveManager.cs", "dd/d09/_save_manager_8cs.html", "dd/d09/_save_manager_8cs" ],
-    [ "SceneLoader.cs", "d7/d26/_scene_loader_8cs.html", "d7/d26/_scene_loader_8cs" ],
-    [ "TimeManager.cs", "d0/d9a/_time_manager_8cs.html", "d0/d9a/_time_manager_8cs" ],
-    [ "UIManager.cs", "da/de4/_u_i_manager_8cs.html", "da/de4/_u_i_manager_8cs" ]
+    [ "AudioManager.cs", "dd/dd3/_audio_manager_8cs_source.html", null ],
+    [ "CameraManager.cs", "d3/df0/_camera_manager_8cs_source.html", null ],
+    [ "CloudManager.cs", "df/d48/_cloud_manager_8cs_source.html", null ],
+    [ "InputManager.cs", "dd/d96/_input_manager_8cs_source.html", null ],
+    [ "PostProcessManager.cs", "df/d40/_post_process_manager_8cs_source.html", null ],
+    [ "SaveManager.cs", "dd/d09/_save_manager_8cs_source.html", null ],
+    [ "SceneLoader.cs", "d7/d26/_scene_loader_8cs_source.html", null ],
+    [ "TimeManager.cs", "d0/d9a/_time_manager_8cs_source.html", null ],
+    [ "UIManager.cs", "da/de4/_u_i_manager_8cs_source.html", null ]
 ];

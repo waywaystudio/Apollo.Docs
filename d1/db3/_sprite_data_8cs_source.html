@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/_Core/Databases/ResourceData/SpriteData.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/_Core/Databases/ResourceData/SpriteData.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d1/db3/_sprite_data_8cs_source.html','../../'); initRe
   <div class="headertitle"><div class="title">SpriteData.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d1/db3/_sprite_data_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Linq;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Reflection;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Text;</div>
@@ -121,11 +122,11 @@ $(function(){initNavTree('d1/db3/_sprite_data_8cs_source.html','../../'); initRe
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">         * */</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ImportResource(<span class="keywordtype">string</span> targetPath, <span class="keywordtype">string</span> paramNames)</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <a class="code hl_variable" href="../../db/de9/class_databases_1_1_resource_data.html#adbf715bc42da97bf1d315e84ed8d89a7">resourceList</a>.Clear();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            resourceList.Clear();</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            var spriteLog = <span class="keyword">new</span> StringBuilder();</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">foreach</span> (var dataObject <span class="keywordflow">in</span> <a class="code hl_class" href="../../dc/d83/class_database.html">Database</a>.<a class="code hl_property" href="../../dc/d83/class_database.html#a178c2a9d49e030744cabcf805ee062ff">SheetDataList</a>)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">foreach</span> (var dataObject <span class="keywordflow">in</span> <a class="code hl_class" href="../../dc/d83/class_database.html">Database</a>.SheetDataList)</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="comment">// Get the generic type of the data object</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                var genericType = dataObject.GetType().BaseType?.GetGenericArguments().FirstOrDefault();</div>
@@ -158,7 +159,7 @@ $(function(){initNavTree('d1/db3/_sprite_data_8cs_source.html','../../'); initRe
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    <span class="keywordflow">if</span> (Finder.TryGetSprite(targetPath, iconPath, out var result))</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                        <a class="code hl_variable" href="../../db/de9/class_databases_1_1_resource_data.html#adbf715bc42da97bf1d315e84ed8d89a7">resourceList</a>.Add(<span class="keyword">new</span> <a class="code hl_class" href="../../d4/d1a/class_databases_1_1_resource_data_1_1_resource_table.html">ResourceTable</a>((<a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a>)dataIndex, result));</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                        resourceList.Add(<span class="keyword">new</span> <a class="code hl_class" href="../../d4/d1a/class_databases_1_1_resource_data_1_1_resource_table.html">ResourceTable</a>((DataIndex)dataIndex, result));</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                        spriteLog.AppendLine($<span class="stringliteral">&quot;Added Sprite file name of &lt;color=green&gt;{iconPath}&lt;/color&gt;&quot;</span>);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                }</div>
@@ -196,13 +197,10 @@ $(function(){initNavTree('d1/db3/_sprite_data_8cs_source.html','../../'); initRe
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment"> * If you have duplicate sprite names in different sprite sheets, this method might still return the wrong sprite.</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"> * If that&#39;s the case, you&#39;ll need to adjust your sprite naming convention or your search method to uniquely identify each sprite.</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment"> */</span></div>
-<div class="ttc" id="a_data_index_8cs_html_acd63cd93ca0fdfe8177c88f2bb3b5343"><div class="ttname"><a href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a></div><div class="ttdeci">DataIndex</div><div class="ttdef"><b>Definition</b> <a href="../../df/dce/_data_index_8cs_source.html#l00006">DataIndex.cs:7</a></div></div>
 <div class="ttc" id="aclass_database_html"><div class="ttname"><a href="../../dc/d83/class_database.html">Database</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/d16/_database_8cs_source.html#l00026">Database.cs:27</a></div></div>
-<div class="ttc" id="aclass_database_html_a178c2a9d49e030744cabcf805ee062ff"><div class="ttname"><a href="../../dc/d83/class_database.html#a178c2a9d49e030744cabcf805ee062ff">Database.SheetDataList</a></div><div class="ttdeci">static List&lt; DataObject &gt; SheetDataList</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d16/_database_8cs_source.html#l00051">Database.cs:51</a></div></div>
 <div class="ttc" id="aclass_databases_1_1_resource_data_1_1_resource_table_html"><div class="ttname"><a href="../../d4/d1a/class_databases_1_1_resource_data_1_1_resource_table.html">Databases.ResourceData.ResourceTable</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/da2/_resource_data_8cs_source.html#l00018">ResourceData.cs:19</a></div></div>
 <div class="ttc" id="aclass_databases_1_1_resource_data_1_1_sprite_data_html"><div class="ttname"><a href="../../d4/d0a/class_databases_1_1_resource_data_1_1_sprite_data.html">Databases.ResourceData.SpriteData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">SpriteData.cs:10</a></div></div>
 <div class="ttc" id="aclass_databases_1_1_resource_data_html"><div class="ttname"><a href="../../db/de9/class_databases_1_1_resource_data.html">Databases.ResourceData</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/da2/_resource_data_8cs_source.html#l00012">ResourceData.cs:13</a></div></div>
-<div class="ttc" id="aclass_databases_1_1_resource_data_html_adbf715bc42da97bf1d315e84ed8d89a7"><div class="ttname"><a href="../../db/de9/class_databases_1_1_resource_data.html#adbf715bc42da97bf1d315e84ed8d89a7">Databases.ResourceData&lt; Sprite &gt;::resourceList</a></div><div class="ttdeci">List&lt; ResourceTable &gt; resourceList</div><div class="ttdef"><b>Definition</b> <a href="../../db/da2/_resource_data_8cs_source.html#l00016">ResourceData.cs:16</a></div></div>
 <div class="ttc" id="ainterface_databases_1_1_i_identifier_html"><div class="ttname"><a href="../../df/d8f/interface_databases_1_1_i_identifier.html">Databases.IIdentifier</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/df5/_i_identifier_8cs_source.html#l00003">IIdentifier.cs:4</a></div></div>
 <div class="ttc" id="anamespace_databases_1_1_resource_data_html"><div class="ttname"><a href="../../da/d40/namespace_databases_1_1_resource_data.html">Databases.ResourceData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">SpriteData.cs:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -210,7 +208,7 @@ $(function(){initNavTree('d1/db3/_sprite_data_8cs_source.html','../../'); initRe
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_9fa654f32ef00c4d37756528442a35df.html">Databases</a></li><li class="navelem"><a class="el" href="../../dir_e3e44d99303520764124062729c9aa9f.html">ResourceData</a></li><li class="navelem"><a class="el" href="../../d1/db3/_sprite_data_8cs.html">SpriteData.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_9fa654f32ef00c4d37756528442a35df.html">Databases</a></li><li class="navelem"><a class="el" href="../../dir_e3e44d99303520764124062729c9aa9f.html">ResourceData</a></li><li class="navelem"><b>SpriteData.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

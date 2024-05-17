@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Props/Gates/GateModel.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Props/Gates/GateModel.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d5/d4f/_gate_model_8cs_source.html','../../'); initRes
   <div class="headertitle"><div class="title">GateModel.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/d4f/_gate_model_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/d47/namespace_common_1_1_props_1_1_gates.html">Common.Props.Gates</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
@@ -112,31 +113,25 @@ $(function(){initNavTree('d5/d4f/_gate_model_8cs_source.html','../../'); initRes
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [SerializeField] <span class="keyword">private</span> Transform leftDoor;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        [SerializeField] <span class="keyword">private</span> Transform rightDoor;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a03bca84e7e24720c73742e30cb4bd30d">   12</a></span>        <span class="keyword">public</span> Transform <a class="code hl_property" href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a03bca84e7e24720c73742e30cb4bd30d">LeftDoor</a> =&gt; leftDoor;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a34d79723a537c0f16d95019e9aaaaad5">   13</a></span>        <span class="keyword">public</span> Transform <a class="code hl_property" href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a34d79723a537c0f16d95019e9aaaaad5">RightDoor</a> =&gt; rightDoor;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> Transform LeftDoor =&gt; leftDoor;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> Transform RightDoor =&gt; rightDoor;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a2a0dcc726339dace38e3120c856cecd5">   16</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a2a0dcc726339dace38e3120c856cecd5">Initialize</a>()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize()</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            openBehaviour.<a class="code hl_function" href="../../d5/d43/class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour.html#ae46fa668c1da41552d2e70ff392b958e">Initialize</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            closeBehaviour.<a class="code hl_function" href="../../d9/d50/class_common_1_1_props_1_1_gates_1_1_gate_close_behaviour.html#a637964fcfde297fb941ea4c026f192aa">Initialize</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            openBehaviour.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            closeBehaviour.Initialize(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
-</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a23ffc86f0dd8b1e665d44ac26d171761">   22</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a23ffc86f0dd8b1e665d44ac26d171761">Open</a>(<span class="keywordtype">bool</span> instant = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Open(<span class="keywordtype">bool</span> instant = <span class="keyword">false</span>)</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            openBehaviour.<a class="code hl_function" href="../../d5/d43/class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour.html#aa7fca5116d4a85594503641cb1d4344b">Active</a>(instant);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            openBehaviour.Active(instant);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
-</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a2f4fca780627716e2e61acc50715db12">   27</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a2f4fca780627716e2e61acc50715db12">Close</a>(<span class="keywordtype">bool</span> instant = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Close(<span class="keywordtype">bool</span> instant = <span class="keyword">false</span>)</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            closeBehaviour.<a class="code hl_function" href="../../d9/d50/class_common_1_1_props_1_1_gates_1_1_gate_close_behaviour.html#a6e84c8d9f4d7467d4601a0df4f3131e0">Active</a>(instant);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            closeBehaviour.Active(instant);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
-</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
@@ -152,17 +147,8 @@ $(function(){initNavTree('d5/d4f/_gate_model_8cs_source.html','../../'); initRes
 </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 <div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_close_behaviour_html"><div class="ttname"><a href="../../d9/d50/class_common_1_1_props_1_1_gates_1_1_gate_close_behaviour.html">Common.Props.Gates.GateCloseBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d00/_gate_close_behaviour_8cs_source.html#l00006">GateCloseBehaviour.cs:7</a></div></div>
-<div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_close_behaviour_html_a637964fcfde297fb941ea4c026f192aa"><div class="ttname"><a href="../../d9/d50/class_common_1_1_props_1_1_gates_1_1_gate_close_behaviour.html#a637964fcfde297fb941ea4c026f192aa">Common.Props.Gates.GateCloseBehaviour.Initialize</a></div><div class="ttdeci">void Initialize(GateModel model)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d00/_gate_close_behaviour_8cs_source.html#l00022">GateCloseBehaviour.cs:22</a></div></div>
-<div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_close_behaviour_html_a6e84c8d9f4d7467d4601a0df4f3131e0"><div class="ttname"><a href="../../d9/d50/class_common_1_1_props_1_1_gates_1_1_gate_close_behaviour.html#a6e84c8d9f4d7467d4601a0df4f3131e0">Common.Props.Gates.GateCloseBehaviour.Active</a></div><div class="ttdeci">void Active(bool instant)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d00/_gate_close_behaviour_8cs_source.html#l00035">GateCloseBehaviour.cs:35</a></div></div>
 <div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_model_html"><div class="ttname"><a href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html">Common.Props.Gates.GateModel</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">GateModel.cs:6</a></div></div>
-<div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_model_html_a03bca84e7e24720c73742e30cb4bd30d"><div class="ttname"><a href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a03bca84e7e24720c73742e30cb4bd30d">Common.Props.Gates.GateModel.LeftDoor</a></div><div class="ttdeci">Transform LeftDoor</div><div class="ttdef"><b>Definition</b> <a href="#l00012">GateModel.cs:12</a></div></div>
-<div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_model_html_a23ffc86f0dd8b1e665d44ac26d171761"><div class="ttname"><a href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a23ffc86f0dd8b1e665d44ac26d171761">Common.Props.Gates.GateModel.Open</a></div><div class="ttdeci">void Open(bool instant=false)</div><div class="ttdef"><b>Definition</b> <a href="#l00022">GateModel.cs:22</a></div></div>
-<div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_model_html_a2a0dcc726339dace38e3120c856cecd5"><div class="ttname"><a href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a2a0dcc726339dace38e3120c856cecd5">Common.Props.Gates.GateModel.Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="#l00016">GateModel.cs:16</a></div></div>
-<div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_model_html_a2f4fca780627716e2e61acc50715db12"><div class="ttname"><a href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a2f4fca780627716e2e61acc50715db12">Common.Props.Gates.GateModel.Close</a></div><div class="ttdeci">void Close(bool instant=false)</div><div class="ttdef"><b>Definition</b> <a href="#l00027">GateModel.cs:27</a></div></div>
-<div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_model_html_a34d79723a537c0f16d95019e9aaaaad5"><div class="ttname"><a href="../../db/d33/class_common_1_1_props_1_1_gates_1_1_gate_model.html#a34d79723a537c0f16d95019e9aaaaad5">Common.Props.Gates.GateModel.RightDoor</a></div><div class="ttdeci">Transform RightDoor</div><div class="ttdef"><b>Definition</b> <a href="#l00013">GateModel.cs:13</a></div></div>
 <div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_html"><div class="ttname"><a href="../../d5/d43/class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour.html">Common.Props.Gates.GateOpenBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d86/_gate_open_behaviour_8cs_source.html#l00007">GateOpenBehaviour.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_html_aa7fca5116d4a85594503641cb1d4344b"><div class="ttname"><a href="../../d5/d43/class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour.html#aa7fca5116d4a85594503641cb1d4344b">Common.Props.Gates.GateOpenBehaviour.Active</a></div><div class="ttdeci">void Active(bool instant)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d86/_gate_open_behaviour_8cs_source.html#l00036">GateOpenBehaviour.cs:36</a></div></div>
-<div class="ttc" id="aclass_common_1_1_props_1_1_gates_1_1_gate_open_behaviour_html_ae46fa668c1da41552d2e70ff392b958e"><div class="ttname"><a href="../../d5/d43/class_common_1_1_props_1_1_gates_1_1_gate_open_behaviour.html#ae46fa668c1da41552d2e70ff392b958e">Common.Props.Gates.GateOpenBehaviour.Initialize</a></div><div class="ttdeci">void Initialize(GateModel model)</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d86/_gate_open_behaviour_8cs_source.html#l00023">GateOpenBehaviour.cs:23</a></div></div>
 <div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_props_1_1_gates_html"><div class="ttname"><a href="../../d6/d47/namespace_common_1_1_props_1_1_gates.html">Common.Props.Gates</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d00/_gate_close_behaviour_8cs_source.html#l00004">GateCloseBehaviour.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -170,7 +156,7 @@ $(function(){initNavTree('d5/d4f/_gate_model_8cs_source.html','../../'); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_fc6a5277cbb62d4c61653ef17f42a1ef.html">Props</a></li><li class="navelem"><a class="el" href="../../dir_f32026ac165fcd0c0aab89976cf8b9a9.html">Gates</a></li><li class="navelem"><a class="el" href="../../d5/d4f/_gate_model_8cs.html">GateModel.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_fc6a5277cbb62d4c61653ef17f42a1ef.html">Props</a></li><li class="navelem"><a class="el" href="../../dir_f32026ac165fcd0c0aab89976cf8b9a9.html">Gates</a></li><li class="navelem"><b>GateModel.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

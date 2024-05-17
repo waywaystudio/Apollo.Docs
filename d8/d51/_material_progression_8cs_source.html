@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Graphics/MaterialProgression.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Graphics/MaterialProgression.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d8/d51/_material_progression_8cs_source.html','../../'
   <div class="headertitle"><div class="title">MaterialProgression.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d8/d51/_material_progression_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>Sirenix.OdinInspector;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine;</div>
@@ -123,11 +124,10 @@ $(function(){initNavTree('d8/d51/_material_progression_8cs_source.html','../../'
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">if</span> (!isPlaying) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_function" href="../../d6/d72/class_common_1_1_graphics_1_1_material_progression.html#ab4837b3285673acf7aa79ad3fd8451ad">SetProgression</a>(progression);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            SetProgression(progression);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d6/d72/class_common_1_1_graphics_1_1_material_progression.html#ab4837b3285673acf7aa79ad3fd8451ad">   26</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d72/class_common_1_1_graphics_1_1_material_progression.html#ab4837b3285673acf7aa79ad3fd8451ad">SetProgression</a>(<span class="keywordtype">float</span> progression)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetProgression(<span class="keywordtype">float</span> progression)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            meshRenderer.material.SetFloat(Progression, progression);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            </div>
@@ -138,7 +138,6 @@ $(function(){initNavTree('d8/d51/_material_progression_8cs_source.html','../../'
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                meshRenderer.material.SetFloat(propertyName, lerpValue);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            });</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
-</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> EditorSetUp()</div>
@@ -156,7 +155,6 @@ $(function(){initNavTree('d8/d51/_material_progression_8cs_source.html','../../'
 </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
 <div class="ttc" id="aclass_common_1_1_graphics_1_1_material_progression_html"><div class="ttname"><a href="../../d6/d72/class_common_1_1_graphics_1_1_material_progression.html">Common.Graphics.MaterialProgression</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">MaterialProgression.cs:10</a></div></div>
-<div class="ttc" id="aclass_common_1_1_graphics_1_1_material_progression_html_ab4837b3285673acf7aa79ad3fd8451ad"><div class="ttname"><a href="../../d6/d72/class_common_1_1_graphics_1_1_material_progression.html#ab4837b3285673acf7aa79ad3fd8451ad">Common.Graphics.MaterialProgression.SetProgression</a></div><div class="ttdeci">void SetProgression(float progression)</div><div class="ttdef"><b>Definition</b> <a href="#l00026">MaterialProgression.cs:26</a></div></div>
 <div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_graphics_html"><div class="ttname"><a href="../../d3/d1e/namespace_common_1_1_graphics.html">Common.Graphics</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/dd7/_animation_effect_8cs_source.html#l00005">AnimationEffect.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -164,7 +162,7 @@ $(function(){initNavTree('d8/d51/_material_progression_8cs_source.html','../../'
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3b9748162348771335bbaf63e4865af2.html">Graphics</a></li><li class="navelem"><a class="el" href="../../d8/d51/_material_progression_8cs.html">MaterialProgression.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3b9748162348771335bbaf63e4865af2.html">Graphics</a></li><li class="navelem"><b>MaterialProgression.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

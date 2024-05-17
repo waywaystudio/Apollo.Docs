@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Variants/FoxfireProjectile.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Variants/FoxfireProjectile.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('da/d84/_foxfire_projectile_8cs_source.html','../../');
   <div class="headertitle"><div class="title">FoxfireProjectile.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../da/d84/_foxfire_projectile_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d41/namespace_common_1_1_projectiles_1_1_variants.html">Common.Projectiles.Variants</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
@@ -116,36 +117,34 @@ $(function(){initNavTree('da/d84/_foxfire_projectile_8cs_source.html','../../');
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            base.Initialize(provider);</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            Sections</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Execute, <span class="stringliteral">&quot;InstantComplete&quot;</span>, <a class="code hl_property" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#a7d813ce3250d4ba37a45e27d86df6e9f">Invoker</a>.<a class="code hl_function" href="../../d5/db3/class_section_invoker.html#a255a206040518c3d4dbaaaa6b643096a">Complete</a>)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                .Add(Section.Execute, <span class="stringliteral">&quot;InstantComplete&quot;</span>, Invoker.Complete)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                ;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            trigger</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                .<a class="code hl_function" href="../../df/d42/class_common_1_1_collider_trigger.html#a20ba1e97271005dfaf2a30b6b1a268a3">AddLayerFilter</a>(<span class="stringliteral">&quot;LayerFilter&quot;</span>, <a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a>.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#ad6958310e95b20bdbab01c47404c19a4">TargetLayer</a>)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                .<a class="code hl_function" href="../../df/d42/class_common_1_1_collider_trigger.html#aba7d84d77fb8489ee47288ae94afaf1d">AddOnEnter</a>(<span class="stringliteral">&quot;CollideFoxfireProjectile&quot;</span>, OnCollided)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                .<a class="code hl_function" href="../../df/d42/class_common_1_1_collider_trigger.html#a38e7d91c0b4ffdfa7544f66de6eddaff">Register</a>(<span class="keyword">this</span>)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                .AddLayerFilter(<span class="stringliteral">&quot;LayerFilter&quot;</span>, <a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a>.TargetLayer)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                .AddOnEnter(<span class="stringliteral">&quot;CollideFoxfireProjectile&quot;</span>, OnCollided)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                .Register(<span class="keyword">this</span>)</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                ;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
 </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d3/d1c/class_common_1_1_projectiles_1_1_variants_1_1_foxfire_projectile.html#a765f6aa602eb459b6f56b1449c3f9bd0">   25</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d3/d1c/class_common_1_1_projectiles_1_1_variants_1_1_foxfire_projectile.html#a765f6aa602eb459b6f56b1449c3f9bd0">TakeDamage</a>(<a class="code hl_interface" href="../../d6/d40/interface_common_1_1_i_damage_entity.html">IDamageEntity</a> <a class="code hl_variable" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#a6ac896a69de48a2b105cd92e02fa0a78">executor</a>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> TakeDamage(<a class="code hl_interface" href="../../d6/d40/interface_common_1_1_i_damage_entity.html">IDamageEntity</a> executor)</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <a class="code hl_function" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#aa472964fccb8b340f27ffc4f020fef66">Cancel</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            Cancel();</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
-</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnCollided(GameObject enteredObject)</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (enteredObject.TryGetComponent(out <a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a> character) &amp;&amp; character.IsAlive)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <a class="code hl_property" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#ac9779ef6b78256d49e7db90ab6e18dfa">Target</a> = character;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                Target = character;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <a class="code hl_property" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#a7d813ce3250d4ba37a45e27d86df6e9f">Invoker</a>.<a class="code hl_function" href="../../d5/db3/class_section_invoker.html#ae3b4e74d3fbe84d96b40cb6a8b727b6a">Execute</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                Invoker.Execute();</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            }</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (enteredObject.layer == LayerMask.GetMask(<span class="stringliteral">&quot;Obstacle&quot;</span>))</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <a class="code hl_property" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#a7d813ce3250d4ba37a45e27d86df6e9f">Invoker</a>.<a class="code hl_function" href="../../d5/db3/class_section_invoker.html#a255a206040518c3d4dbaaaa6b643096a">Complete</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                Invoker.Complete();</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            }</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        </div>
@@ -161,24 +160,12 @@ $(function(){initNavTree('da/d84/_foxfire_projectile_8cs_source.html','../../');
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
 </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
-<div class="ttc" id="a_section_8cs_html_aa2bc2fd5a40cdb0c40963e6fe6a24cce"><div class="ttname"><a href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a></div><div class="ttdeci">Section</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d0d/_section_8cs_source.html#l00001">Section.cs:2</a></div></div>
 <div class="ttc" id="aclass_common_1_1_character_html"><div class="ttname"><a href="../../dd/dff/class_common_1_1_character.html">Common.Character</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8a/_character_8cs_source.html#l00010">Character.cs:11</a></div></div>
 <div class="ttc" id="aclass_common_1_1_collider_trigger_html"><div class="ttname"><a href="../../df/d42/class_common_1_1_collider_trigger.html">Common.ColliderTrigger</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/da8/_collider_trigger_8cs_source.html#l00008">ColliderTrigger.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_collider_trigger_html_a20ba1e97271005dfaf2a30b6b1a268a3"><div class="ttname"><a href="../../df/d42/class_common_1_1_collider_trigger.html#a20ba1e97271005dfaf2a30b6b1a268a3">Common.ColliderTrigger.AddLayerFilter</a></div><div class="ttdeci">ColliderTrigger AddLayerFilter(string key, LayerMask layerMask)</div><div class="ttdef"><b>Definition</b> <a href="../../d4/da8/_collider_trigger_8cs_source.html#l00027">ColliderTrigger.cs:27</a></div></div>
-<div class="ttc" id="aclass_common_1_1_collider_trigger_html_a38e7d91c0b4ffdfa7544f66de6eddaff"><div class="ttname"><a href="../../df/d42/class_common_1_1_collider_trigger.html#a38e7d91c0b4ffdfa7544f66de6eddaff">Common.ColliderTrigger.Register</a></div><div class="ttdeci">virtual ColliderTrigger Register(ISequencer sequencer)</div><div class="ttdef"><b>Definition</b> <a href="../../d4/da8/_collider_trigger_8cs_source.html#l00035">ColliderTrigger.cs:35</a></div></div>
-<div class="ttc" id="aclass_common_1_1_collider_trigger_html_aba7d84d77fb8489ee47288ae94afaf1d"><div class="ttname"><a href="../../df/d42/class_common_1_1_collider_trigger.html#aba7d84d77fb8489ee47288ae94afaf1d">Common.ColliderTrigger.AddOnEnter</a></div><div class="ttdeci">ColliderTrigger AddOnEnter(string key, Action&lt; GameObject &gt; action)</div><div class="ttdef"><b>Definition</b> <a href="../../d4/da8/_collider_trigger_8cs_source.html#l00019">ColliderTrigger.cs:19</a></div></div>
 <div class="ttc" id="aclass_common_1_1_detect_property_html"><div class="ttname"><a href="../../dc/d03/class_common_1_1_detect_property.html">Common.DetectProperty</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/d38/_detect_property_8cs_source.html#l00007">DetectProperty.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_detect_property_html_ad6958310e95b20bdbab01c47404c19a4"><div class="ttname"><a href="../../dc/d03/class_common_1_1_detect_property.html#ad6958310e95b20bdbab01c47404c19a4">Common.DetectProperty.TargetLayer</a></div><div class="ttdeci">LayerMask TargetLayer</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d38/_detect_property_8cs_source.html#l00015">DetectProperty.cs:15</a></div></div>
 <div class="ttc" id="aclass_common_1_1_projectiles_1_1_projectile_html"><div class="ttname"><a href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html">Common.Projectiles.Projectile</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d8d/_projectile_8cs_source.html#l00005">Projectile.cs:6</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_projectile_html_a6ac896a69de48a2b105cd92e02fa0a78"><div class="ttname"><a href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#a6ac896a69de48a2b105cd92e02fa0a78">Common.Projectiles.Projectile.executor</a></div><div class="ttdeci">Executor executor</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d8d/_projectile_8cs_source.html#l00008">Projectile.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_projectile_html_a7d813ce3250d4ba37a45e27d86df6e9f"><div class="ttname"><a href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#a7d813ce3250d4ba37a45e27d86df6e9f">Common.Projectiles.Projectile.Invoker</a></div><div class="ttdeci">SectionInvoker Invoker</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d8d/_projectile_8cs_source.html#l00022">Projectile.cs:22</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_projectile_html_aa472964fccb8b340f27ffc4f020fef66"><div class="ttname"><a href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#aa472964fccb8b340f27ffc4f020fef66">Common.Projectiles.Projectile.Cancel</a></div><div class="ttdeci">void Cancel()</div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_projectile_html_ac9779ef6b78256d49e7db90ab6e18dfa"><div class="ttname"><a href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#ac9779ef6b78256d49e7db90ab6e18dfa">Common.Projectiles.Projectile.Target</a></div><div class="ttdeci">Character Target</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d8d/_projectile_8cs_source.html#l00018">Projectile.cs:18</a></div></div>
 <div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_foxfire_projectile_html"><div class="ttname"><a href="../../d3/d1c/class_common_1_1_projectiles_1_1_variants_1_1_foxfire_projectile.html">Common.Projectiles.Variants.FoxfireProjectile</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">FoxfireProjectile.cs:6</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_foxfire_projectile_html_a765f6aa602eb459b6f56b1449c3f9bd0"><div class="ttname"><a href="../../d3/d1c/class_common_1_1_projectiles_1_1_variants_1_1_foxfire_projectile.html#a765f6aa602eb459b6f56b1449c3f9bd0">Common.Projectiles.Variants.FoxfireProjectile.TakeDamage</a></div><div class="ttdeci">void TakeDamage(IDamageEntity executor)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">FoxfireProjectile.cs:25</a></div></div>
 <div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_foxfire_projectile_html_ad3bb16233db0d0838dad38bd2701fa09"><div class="ttname"><a href="../../d3/d1c/class_common_1_1_projectiles_1_1_variants_1_1_foxfire_projectile.html#ad3bb16233db0d0838dad38bd2701fa09">Common.Projectiles.Variants.FoxfireProjectile.Initialize</a></div><div class="ttdeci">override void Initialize(ICombatProvider provider)</div><div class="ttdoc">ProjectileExecutor로 부터 호출.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">FoxfireProjectile.cs:10</a></div></div>
-<div class="ttc" id="aclass_section_invoker_html_a255a206040518c3d4dbaaaa6b643096a"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html#a255a206040518c3d4dbaaaa6b643096a">SectionInvoker.Complete</a></div><div class="ttdeci">void Complete()</div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00035">SectionInvoker.cs:35</a></div></div>
-<div class="ttc" id="aclass_section_invoker_html_ae3b4e74d3fbe84d96b40cb6a8b727b6a"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html#ae3b4e74d3fbe84d96b40cb6a8b727b6a">SectionInvoker.Execute</a></div><div class="ttdeci">void Execute()</div></div>
 <div class="ttc" id="ainterface_common_1_1_i_combat_provider_html"><div class="ttname"><a href="../../db/dee/interface_common_1_1_i_combat_provider.html">Common.ICombatProvider</a></div><div class="ttdoc">Character, Trap.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00041">ICombats.cs:42</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_damage_entity_html"><div class="ttname"><a href="../../d6/d40/interface_common_1_1_i_damage_entity.html">Common.IDamageEntity</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00049">ICombats.cs:50</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_damage_taker_html"><div class="ttname"><a href="../../d0/db6/interface_common_1_1_i_damage_taker.html">Common.IDamageTaker</a></div><div class="ttdoc">Character, Projectile, Trap, Prop.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00074">ICombats.cs:75</a></div></div>
@@ -188,7 +175,7 @@ $(function(){initNavTree('da/d84/_foxfire_projectile_8cs_source.html','../../');
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_df0bab9382a706c8111b22aa67473426.html">Projectiles</a></li><li class="navelem"><a class="el" href="../../dir_ef90f9b27c2a808fc28227ea8b3b1a30.html">Variants</a></li><li class="navelem"><a class="el" href="../../da/d84/_foxfire_projectile_8cs.html">FoxfireProjectile.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_df0bab9382a706c8111b22aa67473426.html">Projectiles</a></li><li class="navelem"><a class="el" href="../../dir_ef90f9b27c2a808fc28227ea8b3b1a30.html">Variants</a></li><li class="navelem"><b>FoxfireProjectile.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

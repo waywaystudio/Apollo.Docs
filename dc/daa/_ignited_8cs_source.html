@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/StatusEffects/Variants/Ignited.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/StatusEffects/Variants/Ignited.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('dc/daa/_ignited_8cs_source.html','../../'); initResiza
   <div class="headertitle"><div class="title">Ignited.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../dc/daa/_ignited_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d8/d9a/namespace_common_1_1_executors_1_1_variants.html">Common.Executors.Variants</a>;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d8/d9a/namespace_common_1_1_executors_1_1_variants.html">Common.Executors.Variants</a>;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d7c/namespace_common_1_1_status_effects_1_1_variants.html">Common.StatusEffects.Variants</a></div>
@@ -120,44 +121,38 @@ $(function(){initNavTree('dc/daa/_ignited_8cs_source.html','../../'); initResiza
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="../../d2/d98/class_common_1_1_executor.html">Executor</a>.TryGetExecution(out <a class="code hl_class" href="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.html">DamageExecutor</a> damageExecutor)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            stackPower = damageExecutor.DamageTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a060118192df9f745f9a772099df53c18">StatType</a>.BaseDamage, <span class="stringliteral">&quot;IgnitionStackPower&quot;</span>];</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            originalDamage = damageExecutor.DamageTable[<a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a060118192df9f745f9a772099df53c18">StatType</a>.BaseDamage];</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            stackPower = damageExecutor.DamageTable[StatType.BaseDamage, <span class="stringliteral">&quot;IgnitionStackPower&quot;</span>];</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            originalDamage = damageExecutor.DamageTable[StatType.BaseDamage];</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_variable" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a9a6f0f981cba4b6dd148554e3896ac73">overrideModule</a>.<a class="code hl_property" href="../../d0/d85/class_common_1_1_status_effects_1_1_override_module.html#a190d6d58d3fe2a0628a9817a879a2db1">StackValue</a>.<a class="code hl_function" href="../../d9/dba/class_observable.html#a1d65dfc7a1fe342a534af8f732a7e297">AddEvent</a>(<span class="stringliteral">&quot;IncreaseStackPowerEntity&quot;</span>, OnStackChanged);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            overrideModule.StackValue.AddEvent(<span class="stringliteral">&quot;IncreaseStackPowerEntity&quot;</span>, OnStackChanged);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
 </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnStackChanged(<span class="keywordtype">int</span> stack)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            var extraPower = Mathf.Abs(stack - 1) * 5f * <a class="code hl_variable" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a7459cadc1fe336777da797b109d6592f">executeTimer</a>.<a class="code hl_property" href="../../d5/d13/class_common_1_1_execute_timer.html#a2b8b1547866292baa7b8df7d260c27b1">Interval</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            var extraPower = Mathf.Abs(stack - 1) * 5f * executeTimer.Interval;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            stackPower.Value = originalDamage + extraPower;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
 </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
-<div class="ttc" id="aclass_common_1_1_execute_timer_html_a2b8b1547866292baa7b8df7d260c27b1"><div class="ttname"><a href="../../d5/d13/class_common_1_1_execute_timer.html#a2b8b1547866292baa7b8df7d260c27b1">Common.ExecuteTimer.Interval</a></div><div class="ttdeci">float Interval</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d32/_execute_timer_8cs_source.html#l00019">ExecuteTimer.cs:19</a></div></div>
 <div class="ttc" id="aclass_common_1_1_executor_html"><div class="ttname"><a href="../../d2/d98/class_common_1_1_executor.html">Common.Executor</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/ddf/_executor_8cs_source.html#l00008">Executor.cs:9</a></div></div>
 <div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_damage_executor_html"><div class="ttname"><a href="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.html">Common.Executors.Variants.DamageExecutor</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/ded/_damage_executor_8cs_source.html#l00005">DamageExecutor.cs:6</a></div></div>
 <div class="ttc" id="aclass_common_1_1_stat_entity_html"><div class="ttname"><a href="../../d5/dd3/class_common_1_1_stat_entity.html">Common.StatEntity</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d3b/_stat_entity_8cs_source.html#l00007">StatEntity.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_status_effects_1_1_override_module_html_a190d6d58d3fe2a0628a9817a879a2db1"><div class="ttname"><a href="../../d0/d85/class_common_1_1_status_effects_1_1_override_module.html#a190d6d58d3fe2a0628a9817a879a2db1">Common.StatusEffects.OverrideModule.StackValue</a></div><div class="ttdeci">CombatIntValue StackValue</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d5c/_override_module_8cs_source.html#l00016">OverrideModule.cs:16</a></div></div>
 <div class="ttc" id="aclass_common_1_1_status_effects_1_1_status_effect_html"><div class="ttname"><a href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">Common.StatusEffects.StatusEffect</a></div><div class="ttdoc">Active One tool Unit. Buff or DeBuff Object.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d08/_status_effect_8cs_source.html#l00008">StatusEffect.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_status_effects_1_1_status_effect_html_a7459cadc1fe336777da797b109d6592f"><div class="ttname"><a href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a7459cadc1fe336777da797b109d6592f">Common.StatusEffects.StatusEffect.executeTimer</a></div><div class="ttdeci">ExecuteTimer executeTimer</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d08/_status_effect_8cs_source.html#l00017">StatusEffect.cs:17</a></div></div>
-<div class="ttc" id="aclass_common_1_1_status_effects_1_1_status_effect_html_a9a6f0f981cba4b6dd148554e3896ac73"><div class="ttname"><a href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a9a6f0f981cba4b6dd148554e3896ac73">Common.StatusEffects.StatusEffect.overrideModule</a></div><div class="ttdeci">OverrideModule overrideModule</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d08/_status_effect_8cs_source.html#l00016">StatusEffect.cs:16</a></div></div>
 <div class="ttc" id="aclass_common_1_1_status_effects_1_1_variants_1_1_ignited_html"><div class="ttname"><a href="../../d4/d5b/class_common_1_1_status_effects_1_1_variants_1_1_ignited.html">Common.StatusEffects.Variants.Ignited</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">Ignited.cs:8</a></div></div>
 <div class="ttc" id="aclass_common_1_1_status_effects_1_1_variants_1_1_ignited_html_a22c73b6e03e99ea757ebef40e3ea1fd8"><div class="ttname"><a href="../../d4/d5b/class_common_1_1_status_effects_1_1_variants_1_1_ignited.html#a22c73b6e03e99ea757ebef40e3ea1fd8">Common.StatusEffects.Variants.Ignited.Initialize</a></div><div class="ttdeci">override void Initialize(ICombatProvider provider)</div><div class="ttdoc">Scene 시작과 함께 한 번 호출.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">Ignited.cs:13</a></div></div>
-<div class="ttc" id="aclass_observable_html_a1d65dfc7a1fe342a534af8f732a7e297"><div class="ttname"><a href="../../d9/dba/class_observable.html#a1d65dfc7a1fe342a534af8f732a7e297">Observable.AddEvent</a></div><div class="ttdeci">void AddEvent(string key, Action action)</div></div>
 <div class="ttc" id="ainterface_common_1_1_i_combat_provider_html"><div class="ttname"><a href="../../db/dee/interface_common_1_1_i_combat_provider.html">Common.ICombatProvider</a></div><div class="ttdoc">Character, Trap.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00041">ICombats.cs:42</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_executors_1_1_variants_html"><div class="ttname"><a href="../../d8/d9a/namespace_common_1_1_executors_1_1_variants.html">Common.Executors.Variants</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/ded/_damage_executor_8cs_source.html#l00003">DamageExecutor.cs:4</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_status_effects_1_1_variants_html"><div class="ttname"><a href="../../dc/d7c/namespace_common_1_1_status_effects_1_1_variants.html">Common.StatusEffects.Variants</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d31/_bleed_8cs_source.html#l00001">Bleed.cs:2</a></div></div>
-<div class="ttc" id="anamespace_common_html_a060118192df9f745f9a772099df53c18"><div class="ttname"><a href="../../d6/dee/namespace_common.html#a060118192df9f745f9a772099df53c18">Common.StatType</a></div><div class="ttdeci">StatType</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d1a/_stat_type_8cs_source.html#l00003">StatType.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3c7429eb840a3c9f659a8dcca0b9dc1d.html">StatusEffects</a></li><li class="navelem"><a class="el" href="../../dir_a9d9710a1b6e74854ac28f5a8d58cb15.html">Variants</a></li><li class="navelem"><a class="el" href="../../dc/daa/_ignited_8cs.html">Ignited.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3c7429eb840a3c9f659a8dcca0b9dc1d.html">StatusEffects</a></li><li class="navelem"><a class="el" href="../../dir_a9d9710a1b6e74854ac28f5a8d58cb15.html">Variants</a></li><li class="navelem"><b>Ignited.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

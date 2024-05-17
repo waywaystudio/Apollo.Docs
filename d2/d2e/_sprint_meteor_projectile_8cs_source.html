@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Variants/SprintMeteorProjectile.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Variants/SprintMeteorProjectile.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d2/d2e/_sprint_meteor_projectile_8cs_source.html','../
   <div class="headertitle"><div class="title">SprintMeteorProjectile.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d2/d2e/_sprint_meteor_projectile_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../df/db6/namespace_common_1_1_systems.html">Common.Systems</a>;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../df/db6/namespace_common_1_1_systems.html">Common.Systems</a>;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d4/d41/namespace_common_1_1_projectiles_1_1_variants.html">Common.Projectiles.Variants</a></div>
@@ -116,39 +117,29 @@ $(function(){initNavTree('d2/d2e/_sprint_meteor_projectile_8cs_source.html','../
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            base.Initialize(provider);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            Detector = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">DetectModel</a>(<a class="code hl_property" href="../../d8/d8b/interface_common_1_1_i_unit.html#a472a5fbc5ed5f3077bf1a6c46a290e0b">transform</a>, 16);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            Detector = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">DetectModel</a>(transform, 16);</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            Sections</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Complete, <span class="stringliteral">&quot;InstantExecute&quot;</span>, <a class="code hl_property" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#a7d813ce3250d4ba37a45e27d86df6e9f">Invoker</a>.<a class="code hl_function" href="../../d5/db3/class_section_invoker.html#ae3b4e74d3fbe84d96b40cb6a8b727b6a">Execute</a>)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                .Add(Section.Complete, <span class="stringliteral">&quot;InstantExecute&quot;</span>, Invoker.Execute)</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                ;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
 </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d5/d5b/class_common_1_1_projectiles_1_1_variants_1_1_sprint_meteor_projectile.html#a381641d0f4d4fd4e6d7a4440d9c7533e">   22</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d5b/class_common_1_1_projectiles_1_1_variants_1_1_sprint_meteor_projectile.html#a381641d0f4d4fd4e6d7a4440d9c7533e">MainExecution</a>()</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> MainExecution()</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            var takers = Detector.<a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#ae559036ad61c4ac82eedca2f1f3a95c9">GetObjects</a>(<a class="code hl_variable" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#a48cf2763750ce4f066291b64074e3b3a">detectProperty</a>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            var takers = Detector.GetObjects(detectProperty);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_class" href="../../d2/d98/class_common_1_1_executor.html">Executor</a>.<a class="code hl_function" href="../../d2/d98/class_common_1_1_executor.html#ab82bbdb5325067c22f0e9324e2983635">Executes</a>(takers);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_class" href="../../d2/d98/class_common_1_1_executor.html">Executor</a>.Executes(takers);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
-</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
 </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
-<div class="ttc" id="a_section_8cs_html_aa2bc2fd5a40cdb0c40963e6fe6a24cce"><div class="ttname"><a href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a></div><div class="ttdeci">Section</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d0d/_section_8cs_source.html#l00001">Section.cs:2</a></div></div>
 <div class="ttc" id="aclass_common_1_1_executor_html"><div class="ttname"><a href="../../d2/d98/class_common_1_1_executor.html">Common.Executor</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/ddf/_executor_8cs_source.html#l00008">Executor.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_executor_html_ab82bbdb5325067c22f0e9324e2983635"><div class="ttname"><a href="../../d2/d98/class_common_1_1_executor.html#ab82bbdb5325067c22f0e9324e2983635">Common.Executor.Executes</a></div><div class="ttdeci">void Executes(List&lt; GameObject &gt; takerList)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/ddf/_executor_8cs_source.html#l00031">Executor.cs:31</a></div></div>
 <div class="ttc" id="aclass_common_1_1_projectiles_1_1_projectile_html"><div class="ttname"><a href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html">Common.Projectiles.Projectile</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d8d/_projectile_8cs_source.html#l00005">Projectile.cs:6</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_projectile_html_a48cf2763750ce4f066291b64074e3b3a"><div class="ttname"><a href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#a48cf2763750ce4f066291b64074e3b3a">Common.Projectiles.Projectile.detectProperty</a></div><div class="ttdeci">DetectProperty detectProperty</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d8d/_projectile_8cs_source.html#l00012">Projectile.cs:12</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_projectile_html_a7d813ce3250d4ba37a45e27d86df6e9f"><div class="ttname"><a href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#a7d813ce3250d4ba37a45e27d86df6e9f">Common.Projectiles.Projectile.Invoker</a></div><div class="ttdeci">SectionInvoker Invoker</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d8d/_projectile_8cs_source.html#l00022">Projectile.cs:22</a></div></div>
 <div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_sprint_meteor_projectile_html"><div class="ttname"><a href="../../d5/d5b/class_common_1_1_projectiles_1_1_variants_1_1_sprint_meteor_projectile.html">Common.Projectiles.Variants.SprintMeteorProjectile</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">SprintMeteorProjectile.cs:7</a></div></div>
-<div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_sprint_meteor_projectile_html_a381641d0f4d4fd4e6d7a4440d9c7533e"><div class="ttname"><a href="../../d5/d5b/class_common_1_1_projectiles_1_1_variants_1_1_sprint_meteor_projectile.html#a381641d0f4d4fd4e6d7a4440d9c7533e">Common.Projectiles.Variants.SprintMeteorProjectile.MainExecution</a></div><div class="ttdeci">override void MainExecution()</div><div class="ttdef"><b>Definition</b> <a href="#l00022">SprintMeteorProjectile.cs:22</a></div></div>
 <div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_sprint_meteor_projectile_html_aaa009c7abcbe44b5e0fc5873f8db5ab2"><div class="ttname"><a href="../../d5/d5b/class_common_1_1_projectiles_1_1_variants_1_1_sprint_meteor_projectile.html#aaa009c7abcbe44b5e0fc5873f8db5ab2">Common.Projectiles.Variants.SprintMeteorProjectile.Initialize</a></div><div class="ttdeci">override void Initialize(ICombatProvider provider)</div><div class="ttdoc">ProjectileExecutor로 부터 호출.</div><div class="ttdef"><b>Definition</b> <a href="#l00011">SprintMeteorProjectile.cs:11</a></div></div>
 <div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">Common.Systems.DetectModel</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00008">DetectModel.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_ae559036ad61c4ac82eedca2f1f3a95c9"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#ae559036ad61c4ac82eedca2f1f3a95c9">Common.Systems.DetectModel.GetObjects</a></div><div class="ttdeci">List&lt; GameObject &gt; GetObjects(DetectProperty property)</div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00087">DetectModel.cs:87</a></div></div>
-<div class="ttc" id="aclass_section_invoker_html_ae3b4e74d3fbe84d96b40cb6a8b727b6a"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html#ae3b4e74d3fbe84d96b40cb6a8b727b6a">SectionInvoker.Execute</a></div><div class="ttdeci">void Execute()</div></div>
 <div class="ttc" id="ainterface_common_1_1_i_combat_provider_html"><div class="ttname"><a href="../../db/dee/interface_common_1_1_i_combat_provider.html">Common.ICombatProvider</a></div><div class="ttdoc">Character, Trap.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00041">ICombats.cs:42</a></div></div>
-<div class="ttc" id="ainterface_common_1_1_i_unit_html_a472a5fbc5ed5f3077bf1a6c46a290e0b"><div class="ttname"><a href="../../d8/d8b/interface_common_1_1_i_unit.html#a472a5fbc5ed5f3077bf1a6c46a290e0b">Common.IUnit.transform</a></div><div class="ttdeci">Transform transform</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00016">ICombats.cs:16</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_projectiles_1_1_variants_html"><div class="ttname"><a href="../../d4/d41/namespace_common_1_1_projectiles_1_1_variants.html">Common.Projectiles.Variants</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d19/_cunning_of_fox_projectile_8cs_source.html#l00003">CunningOfFoxProjectile.cs:4</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_systems_html"><div class="ttname"><a href="../../df/db6/namespace_common_1_1_systems.html">Common.Systems</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00005">DetectModel.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -156,7 +147,7 @@ $(function(){initNavTree('d2/d2e/_sprint_meteor_projectile_8cs_source.html','../
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_df0bab9382a706c8111b22aa67473426.html">Projectiles</a></li><li class="navelem"><a class="el" href="../../dir_ef90f9b27c2a808fc28227ea8b3b1a30.html">Variants</a></li><li class="navelem"><a class="el" href="../../d2/d2e/_sprint_meteor_projectile_8cs.html">SprintMeteorProjectile.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_df0bab9382a706c8111b22aa67473426.html">Projectiles</a></li><li class="navelem"><a class="el" href="../../dir_ef90f9b27c2a808fc28227ea8b3b1a30.html">Variants</a></li><li class="navelem"><b>SprintMeteorProjectile.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

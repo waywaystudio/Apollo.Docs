@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/_Core/Managers/TimeManager.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/_Core/Managers/TimeManager.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,59 +101,53 @@ $(function(){initNavTree('d0/d9a/_time_manager_8cs_source.html','../../'); initR
   <div class="headertitle"><div class="title">TimeManager.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d0/d9a/_time_manager_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../da/d2e/namespace_times.html">Times</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="../../d9/d7f/class_time_manager.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d9/d7f/class_time_manager.html">TimeManager</a> : ScriptableObject</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">    7</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="../../d3/dcc/class_times_1_1_time_director.html">TimeDirector</a> <a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d9/d7f/class_time_manager.html#af2072e9048d854f66fc5b7eb48d3c4af">    8</a></span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="../../d9/d7f/class_time_manager.html#af2072e9048d854f66fc5b7eb48d3c4af">IsPaused</a> =&gt; <a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a> is not <span class="keyword">null</span> &amp;&amp; <a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a>.<a class="code hl_property" href="../../d3/dcc/class_times_1_1_time_director.html#a1d1f13b58ddccdce763570875af335fe">IsPaused</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">public</span> <a class="code hl_class" href="../../d3/dcc/class_times_1_1_time_director.html">TimeDirector</a> Director { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">public</span> <span class="keywordtype">bool</span> IsPaused =&gt; Director is not <span class="keyword">null</span> &amp;&amp; Director.IsPaused;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d9/d7f/class_time_manager.html#adde843fbc1873e82dc2b965704f0841d">   15</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d7f/class_time_manager.html#adde843fbc1873e82dc2b965704f0841d">Pause</a>(Action callback = <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(<a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a>)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(Director)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a>.<a class="code hl_function" href="../../d3/dcc/class_times_1_1_time_director.html#ac961380535b879a6b4943c8ea0a5412f">Pause</a>(callback);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        Director.Pause(callback);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
 </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    </div>
 <div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d9/d7f/class_time_manager.html#ab33749afbedcaf6ca80bbb464ef34be0">   26</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d7f/class_time_manager.html#ab33749afbedcaf6ca80bbb464ef34be0">Pause</a>(<span class="keywordtype">float</span> pauseDuration)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(<a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a>)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(Director)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a>.<a class="code hl_function" href="../../d3/dcc/class_times_1_1_time_director.html#ac961380535b879a6b4943c8ea0a5412f">Pause</a>(pauseDuration);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        Director.Pause(pauseDuration);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
 </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    </div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d9/d7f/class_time_manager.html#aa1767ec25d342e1db37a4e20f8e8c7de">   33</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d7f/class_time_manager.html#aa1767ec25d342e1db37a4e20f8e8c7de">Resume</a>(Action callback = <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> Resume(Action callback = <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(<a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a>)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(Director)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a>.<a class="code hl_function" href="../../d3/dcc/class_times_1_1_time_director.html#a44147687f62d1735c2724e23dad87904">Resume</a>(callback);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        Director.Resume(callback);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
-</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
-<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d9/d7f/class_time_manager.html#a17db4f64d380343633904cb2da40dffa">   40</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d7f/class_time_manager.html#a17db4f64d380343633904cb2da40dffa">ResetTimeScale</a>()</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> ResetTimeScale()</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(<a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a>)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(Director)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a>.<a class="code hl_function" href="../../d3/dcc/class_times_1_1_time_director.html#a935a3c77d5f65403f300b89996384414">ResetTimeScale</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        Director.ResetTimeScale();</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
-</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d9/d7f/class_time_manager.html#a08f4c71e2a33094129b4955c604e18ca">   47</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d7f/class_time_manager.html#a08f4c71e2a33094129b4955c604e18ca">Dispose</a>()</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> Dispose()</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_property" href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">Director</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        Director = <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
-</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
@@ -163,7 +158,7 @@ $(function(){initNavTree('d0/d9a/_time_manager_8cs_source.html','../../'); initR
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        Time.timeScale += 0.2f;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_enumvalue" href="../../d6/db7/namespace_common_1_1_masteries.html#ad1aacf96ad934614792831ace301dbc2a960b44c579bc2f6818d2daaf9e4c16f0">Normal</a>()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">public</span> <span class="keywordtype">void</span> Normal()</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span> (!Application.isPlaying) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        </div>
@@ -180,26 +175,16 @@ $(function(){initNavTree('d0/d9a/_time_manager_8cs_source.html','../../'); initR
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
 </div>
 <div class="ttc" id="aclass_time_manager_html"><div class="ttname"><a href="../../d9/d7f/class_time_manager.html">TimeManager</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">TimeManager.cs:6</a></div></div>
-<div class="ttc" id="aclass_time_manager_html_a08f4c71e2a33094129b4955c604e18ca"><div class="ttname"><a href="../../d9/d7f/class_time_manager.html#a08f4c71e2a33094129b4955c604e18ca">TimeManager.Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdef"><b>Definition</b> <a href="#l00047">TimeManager.cs:47</a></div></div>
-<div class="ttc" id="aclass_time_manager_html_a17db4f64d380343633904cb2da40dffa"><div class="ttname"><a href="../../d9/d7f/class_time_manager.html#a17db4f64d380343633904cb2da40dffa">TimeManager.ResetTimeScale</a></div><div class="ttdeci">void ResetTimeScale()</div><div class="ttdef"><b>Definition</b> <a href="#l00040">TimeManager.cs:40</a></div></div>
-<div class="ttc" id="aclass_time_manager_html_aa1767ec25d342e1db37a4e20f8e8c7de"><div class="ttname"><a href="../../d9/d7f/class_time_manager.html#aa1767ec25d342e1db37a4e20f8e8c7de">TimeManager.Resume</a></div><div class="ttdeci">void Resume(Action callback=null)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">TimeManager.cs:33</a></div></div>
 <div class="ttc" id="aclass_time_manager_html_ab33749afbedcaf6ca80bbb464ef34be0"><div class="ttname"><a href="../../d9/d7f/class_time_manager.html#ab33749afbedcaf6ca80bbb464ef34be0">TimeManager.Pause</a></div><div class="ttdeci">void Pause(float pauseDuration)</div><div class="ttdoc">Pause with Specific Duration.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">TimeManager.cs:26</a></div></div>
 <div class="ttc" id="aclass_time_manager_html_adde843fbc1873e82dc2b965704f0841d"><div class="ttname"><a href="../../d9/d7f/class_time_manager.html#adde843fbc1873e82dc2b965704f0841d">TimeManager.Pause</a></div><div class="ttdeci">void Pause(Action callback=null)</div><div class="ttdoc">Permanent Pause Until Resume Action.</div><div class="ttdef"><b>Definition</b> <a href="#l00015">TimeManager.cs:15</a></div></div>
-<div class="ttc" id="aclass_time_manager_html_ae1b55f3acae6e8766a413bcfdb63d59f"><div class="ttname"><a href="../../d9/d7f/class_time_manager.html#ae1b55f3acae6e8766a413bcfdb63d59f">TimeManager.Director</a></div><div class="ttdeci">TimeDirector Director</div><div class="ttdef"><b>Definition</b> <a href="#l00007">TimeManager.cs:7</a></div></div>
-<div class="ttc" id="aclass_time_manager_html_af2072e9048d854f66fc5b7eb48d3c4af"><div class="ttname"><a href="../../d9/d7f/class_time_manager.html#af2072e9048d854f66fc5b7eb48d3c4af">TimeManager.IsPaused</a></div><div class="ttdeci">bool IsPaused</div><div class="ttdef"><b>Definition</b> <a href="#l00008">TimeManager.cs:8</a></div></div>
 <div class="ttc" id="aclass_times_1_1_time_director_html"><div class="ttname"><a href="../../d3/dcc/class_times_1_1_time_director.html">Times.TimeDirector</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d08/_time_director_8cs_source.html#l00008">TimeDirector.cs:9</a></div></div>
-<div class="ttc" id="aclass_times_1_1_time_director_html_a1d1f13b58ddccdce763570875af335fe"><div class="ttname"><a href="../../d3/dcc/class_times_1_1_time_director.html#a1d1f13b58ddccdce763570875af335fe">Times.TimeDirector.IsPaused</a></div><div class="ttdeci">bool IsPaused</div><div class="ttdef"><b>Definition</b> <a href="../../de/d08/_time_director_8cs_source.html#l00019">TimeDirector.cs:19</a></div></div>
-<div class="ttc" id="aclass_times_1_1_time_director_html_a44147687f62d1735c2724e23dad87904"><div class="ttname"><a href="../../d3/dcc/class_times_1_1_time_director.html#a44147687f62d1735c2724e23dad87904">Times.TimeDirector.Resume</a></div><div class="ttdeci">virtual void Resume()</div></div>
-<div class="ttc" id="aclass_times_1_1_time_director_html_a935a3c77d5f65403f300b89996384414"><div class="ttname"><a href="../../d3/dcc/class_times_1_1_time_director.html#a935a3c77d5f65403f300b89996384414">Times.TimeDirector.ResetTimeScale</a></div><div class="ttdeci">void ResetTimeScale()</div><div class="ttdef"><b>Definition</b> <a href="../../de/d08/_time_director_8cs_source.html#l00140">TimeDirector.cs:140</a></div></div>
-<div class="ttc" id="aclass_times_1_1_time_director_html_ac961380535b879a6b4943c8ea0a5412f"><div class="ttname"><a href="../../d3/dcc/class_times_1_1_time_director.html#ac961380535b879a6b4943c8ea0a5412f">Times.TimeDirector.Pause</a></div><div class="ttdeci">virtual void Pause()</div></div>
-<div class="ttc" id="anamespace_common_1_1_masteries_html_ad1aacf96ad934614792831ace301dbc2a960b44c579bc2f6818d2daaf9e4c16f0"><div class="ttname"><a href="../../d6/db7/namespace_common_1_1_masteries.html#ad1aacf96ad934614792831ace301dbc2a960b44c579bc2f6818d2daaf9e4c16f0">Common.Masteries.QualityGradeType.Normal</a></div><div class="ttdeci">@ Normal</div></div>
 <div class="ttc" id="anamespace_times_html"><div class="ttname"><a href="../../da/d2e/namespace_times.html">Times</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d08/_time_director_8cs_source.html#l00006">TimeDirector.cs:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><a class="el" href="../../d0/d9a/_time_manager_8cs.html">TimeManager.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><b>TimeManager.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

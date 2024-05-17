@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/_Protocol/_DataStruct/StatusEffectTable.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/_Protocol/_DataStruct/StatusEffectTable.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d1/d92/_status_effect_table_8cs_source.html','../../')
   <div class="headertitle"><div class="title">StatusEffectTable.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d1/d92/_status_effect_table_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../df/dd3/namespace_common_1_1_status_effects.html">Common.StatusEffects</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/dee/namespace_common.html">Common</a></div>
@@ -109,47 +110,42 @@ $(function(){initNavTree('d1/d92/_status_effect_table_8cs_source.html','../../')
 <div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../db/dce/class_common_1_1_status_effect_table.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../db/dce/class_common_1_1_status_effect_table.html">StatusEffectTable</a> : <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>&lt;DataIndex, StatusEffect&gt;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../db/dce/class_common_1_1_status_effect_table.html#a02ee9a820a1d8fae39bb6edb80cba5c6">    9</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;StatusEffect&gt;</a> <a class="code hl_property" href="../../db/dce/class_common_1_1_status_effect_table.html#a02ee9a820a1d8fae39bb6edb80cba5c6">OnEffectAdded</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../db/dce/class_common_1_1_status_effect_table.html#a743bad5c59d999292f6748b2fc2d387e">   10</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;StatusEffect&gt;</a> <a class="code hl_property" href="../../db/dce/class_common_1_1_status_effect_table.html#a743bad5c59d999292f6748b2fc2d387e">OnEffectRemoved</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;StatusEffect&gt;</a> OnEffectAdded { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;StatusEffect&gt;</a> OnEffectRemoved { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../db/dce/class_common_1_1_status_effect_table.html#a0111d249972ea69c8e774cf0207d1472">   13</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dce/class_common_1_1_status_effect_table.html#a0111d249972ea69c8e774cf0207d1472">Has</a>(<a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a> effectCode) =&gt; <a class="code hl_function" href="../../d2/d8f/class_table.html#a4c012e54b170a3ee21db16e9be63cf37">ContainsKey</a>(effectCode);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> Has(DataIndex effectCode) =&gt; ContainsKey(effectCode);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../db/dce/class_common_1_1_status_effect_table.html#ada0cf0fe6fe707a9d4224df6e23ed9c6">   15</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/dce/class_common_1_1_status_effect_table.html#ada0cf0fe6fe707a9d4224df6e23ed9c6">Add</a>(<a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a> effectCode, <a class="code hl_class" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">StatusEffect</a> statusEffect)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Add(DataIndex effectCode, <a class="code hl_class" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">StatusEffect</a> statusEffect)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            base.Add(effectCode, statusEffect);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <a class="code hl_property" href="../../db/dce/class_common_1_1_status_effect_table.html#a02ee9a820a1d8fae39bb6edb80cba5c6">OnEffectAdded</a>?.Invoke(statusEffect);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            OnEffectAdded?.Invoke(statusEffect);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
-</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../db/dce/class_common_1_1_status_effect_table.html#a51b689a0bae729857499f11830d14f35">   27</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/dce/class_common_1_1_status_effect_table.html#a51b689a0bae729857499f11830d14f35">Dispel</a>(<a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a> effectCode, <a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a> dispelCode = <a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a>.None)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../db/dce/class_common_1_1_status_effect_table.html#a51b689a0bae729857499f11830d14f35">   27</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/dce/class_common_1_1_status_effect_table.html#a51b689a0bae729857499f11830d14f35">Dispel</a>(DataIndex effectCode, DataIndex dispelCode = DataIndex.None)</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d2/d8f/class_table.html#a74d69f8171c23b32a0dae0f461b1675d">TryGetValue</a>(effectCode, out var effect)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">if</span> (!TryGetValue(effectCode, out var effect)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            effect.DispelCode = dispelCode;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            effect.Cancel();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
 </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../db/dce/class_common_1_1_status_effect_table.html#a4a78983c3f5bcff9df361f3814270147">   35</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dce/class_common_1_1_status_effect_table.html#a4a78983c3f5bcff9df361f3814270147">Remove</a>(<a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a> effectCode)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> Remove(DataIndex effectCode)</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d2/d8f/class_table.html#a74d69f8171c23b32a0dae0f461b1675d">TryGetValue</a>(effectCode, out var effect)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!TryGetValue(effectCode, out var effect)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_property" href="../../db/dce/class_common_1_1_status_effect_table.html#a743bad5c59d999292f6748b2fc2d387e">OnEffectRemoved</a>?.Invoke(effect);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            OnEffectRemoved?.Invoke(effect);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            base.Remove(effectCode);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
-</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../db/dce/class_common_1_1_status_effect_table.html#a19a12a72d2e51df737a9a9eddff8620a">   45</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/dce/class_common_1_1_status_effect_table.html#a19a12a72d2e51df737a9a9eddff8620a">TryGetEffect&lt;T&gt;</a>(<a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a> effectCode, out T effect) where T : <a class="code hl_class" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">StatusEffect</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> TryGetEffect&lt;T&gt;(DataIndex effectCode, out T effect) where T : <a class="code hl_class" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">StatusEffect</a></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="../../d8/d11/_camp_map_8cs.html#af3e343bb7a5a6bf80e88bc9ba6e6bc3b">Map</a>.TryGetValue(effectCode, out var value))</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span> (Map.TryGetValue(effectCode, out var value))</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                var result = value as T;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
@@ -160,34 +156,19 @@ $(function(){initNavTree('d1/d92/_status_effect_table_8cs_source.html','../../')
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            effect = <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="../../db/dce/class_common_1_1_status_effect_table.html#a0634c32e07a3dbfe67b643e11398dac7">   59</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/dce/class_common_1_1_status_effect_table.html#a0634c32e07a3dbfe67b643e11398dac7">RemoveAllEffects</a>()</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> RemoveAllEffects()</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <a class="code hl_property" href="../../d2/d8f/class_table.html#a1ea84737aa88740a2705e303980a7b10">ValueList</a>?.ForReverse(effect =&gt; effect.Cancel());</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            ValueList?.ForReverse(effect =&gt; effect.Cancel());</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
-</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
-<div class="ttc" id="a_camp_map_8cs_html_af3e343bb7a5a6bf80e88bc9ba6e6bc3b"><div class="ttname"><a href="../../d8/d11/_camp_map_8cs.html#af3e343bb7a5a6bf80e88bc9ba6e6bc3b">Map</a></div><div class="ttdeci">Common.Maps.Map Map</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d11/_camp_map_8cs_source.html#l00004">CampMap.cs:4</a></div></div>
-<div class="ttc" id="a_data_index_8cs_html_acd63cd93ca0fdfe8177c88f2bb3b5343"><div class="ttname"><a href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a></div><div class="ttdeci">DataIndex</div><div class="ttdef"><b>Definition</b> <a href="../../df/dce/_data_index_8cs_source.html#l00006">DataIndex.cs:7</a></div></div>
 <div class="ttc" id="aclass_action_table_html"><div class="ttname"><a href="../../db/dcc/class_action_table.html">ActionTable</a></div><div class="ttdoc">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00067">ActionTable.cs:68</a></div></div>
 <div class="ttc" id="aclass_common_1_1_status_effect_table_html"><div class="ttname"><a href="../../db/dce/class_common_1_1_status_effect_table.html">Common.StatusEffectTable</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">StatusEffectTable.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_status_effect_table_html_a0111d249972ea69c8e774cf0207d1472"><div class="ttname"><a href="../../db/dce/class_common_1_1_status_effect_table.html#a0111d249972ea69c8e774cf0207d1472">Common.StatusEffectTable.Has</a></div><div class="ttdeci">bool Has(DataIndex effectCode)</div></div>
-<div class="ttc" id="aclass_common_1_1_status_effect_table_html_a02ee9a820a1d8fae39bb6edb80cba5c6"><div class="ttname"><a href="../../db/dce/class_common_1_1_status_effect_table.html#a02ee9a820a1d8fae39bb6edb80cba5c6">Common.StatusEffectTable.OnEffectAdded</a></div><div class="ttdeci">ActionTable&lt; StatusEffect &gt; OnEffectAdded</div><div class="ttdef"><b>Definition</b> <a href="#l00009">StatusEffectTable.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_status_effect_table_html_a0634c32e07a3dbfe67b643e11398dac7"><div class="ttname"><a href="../../db/dce/class_common_1_1_status_effect_table.html#a0634c32e07a3dbfe67b643e11398dac7">Common.StatusEffectTable.RemoveAllEffects</a></div><div class="ttdeci">void RemoveAllEffects()</div><div class="ttdef"><b>Definition</b> <a href="#l00059">StatusEffectTable.cs:59</a></div></div>
-<div class="ttc" id="aclass_common_1_1_status_effect_table_html_a19a12a72d2e51df737a9a9eddff8620a"><div class="ttname"><a href="../../db/dce/class_common_1_1_status_effect_table.html#a19a12a72d2e51df737a9a9eddff8620a">Common.StatusEffectTable.TryGetEffect&lt; T &gt;</a></div><div class="ttdeci">bool TryGetEffect&lt; T &gt;(DataIndex effectCode, out T effect)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">StatusEffectTable.cs:45</a></div></div>
-<div class="ttc" id="aclass_common_1_1_status_effect_table_html_a4a78983c3f5bcff9df361f3814270147"><div class="ttname"><a href="../../db/dce/class_common_1_1_status_effect_table.html#a4a78983c3f5bcff9df361f3814270147">Common.StatusEffectTable.Remove</a></div><div class="ttdeci">override bool Remove(DataIndex effectCode)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">StatusEffectTable.cs:35</a></div></div>
 <div class="ttc" id="aclass_common_1_1_status_effect_table_html_a51b689a0bae729857499f11830d14f35"><div class="ttname"><a href="../../db/dce/class_common_1_1_status_effect_table.html#a51b689a0bae729857499f11830d14f35">Common.StatusEffectTable.Dispel</a></div><div class="ttdeci">void Dispel(DataIndex effectCode, DataIndex dispelCode=DataIndex.None)</div><div class="ttdoc">Dispel StatusEffect.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">StatusEffectTable.cs:27</a></div></div>
-<div class="ttc" id="aclass_common_1_1_status_effect_table_html_a743bad5c59d999292f6748b2fc2d387e"><div class="ttname"><a href="../../db/dce/class_common_1_1_status_effect_table.html#a743bad5c59d999292f6748b2fc2d387e">Common.StatusEffectTable.OnEffectRemoved</a></div><div class="ttdeci">ActionTable&lt; StatusEffect &gt; OnEffectRemoved</div><div class="ttdef"><b>Definition</b> <a href="#l00010">StatusEffectTable.cs:10</a></div></div>
-<div class="ttc" id="aclass_common_1_1_status_effect_table_html_ada0cf0fe6fe707a9d4224df6e23ed9c6"><div class="ttname"><a href="../../db/dce/class_common_1_1_status_effect_table.html#ada0cf0fe6fe707a9d4224df6e23ed9c6">Common.StatusEffectTable.Add</a></div><div class="ttdeci">override void Add(DataIndex effectCode, StatusEffect statusEffect)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">StatusEffectTable.cs:15</a></div></div>
 <div class="ttc" id="aclass_common_1_1_status_effects_1_1_status_effect_html"><div class="ttname"><a href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">Common.StatusEffects.StatusEffect</a></div><div class="ttdoc">Active One tool Unit. Buff or DeBuff Object.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d08/_status_effect_8cs_source.html#l00008">StatusEffect.cs:9</a></div></div>
 <div class="ttc" id="aclass_table_html"><div class="ttname"><a href="../../d2/d8f/class_table.html">Table</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00009">Table.cs:10</a></div></div>
-<div class="ttc" id="aclass_table_html_a1ea84737aa88740a2705e303980a7b10"><div class="ttname"><a href="../../d2/d8f/class_table.html#a1ea84737aa88740a2705e303980a7b10">Table&lt; DataIndex, StatusEffect &gt;::ValueList</a></div><div class="ttdeci">List&lt; TValue &gt; ValueList</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00015">Table.cs:15</a></div></div>
-<div class="ttc" id="aclass_table_html_a4c012e54b170a3ee21db16e9be63cf37"><div class="ttname"><a href="../../d2/d8f/class_table.html#a4c012e54b170a3ee21db16e9be63cf37">Table&lt; DataIndex, StatusEffect &gt;::ContainsKey</a></div><div class="ttdeci">bool ContainsKey(TKey key)</div></div>
-<div class="ttc" id="aclass_table_html_a74d69f8171c23b32a0dae0f461b1675d"><div class="ttname"><a href="../../d2/d8f/class_table.html#a74d69f8171c23b32a0dae0f461b1675d">Table&lt; DataIndex, StatusEffect &gt;::TryGetValue</a></div><div class="ttdeci">bool TryGetValue(TKey key, out TValue value)</div></div>
 <div class="ttc" id="anamespace_common_1_1_status_effects_html"><div class="ttname"><a href="../../df/dd3/namespace_common_1_1_status_effects.html">Common.StatusEffects</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/d5c/_override_module_8cs_source.html#l00005">OverrideModule.cs:6</a></div></div>
 <div class="ttc" id="anamespace_common_html"><div class="ttname"><a href="../../d6/dee/namespace_common.html">Common</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/daf/_animation_player_8cs_source.html#l00010">AnimationPlayer.cs:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -195,7 +176,7 @@ $(function(){initNavTree('d1/d92/_status_effect_table_8cs_source.html','../../')
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_3f25204ea0d4df6d15d2b0e65f34be1d.html">_DataStruct</a></li><li class="navelem"><a class="el" href="../../d1/d92/_status_effect_table_8cs.html">StatusEffectTable.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_3f25204ea0d4df6d15d2b0e65f34be1d.html">_DataStruct</a></li><li class="navelem"><b>StatusEffectTable.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

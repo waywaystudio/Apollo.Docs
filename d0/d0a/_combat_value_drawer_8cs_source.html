@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Editor/CombatValueDrawer.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Editor/CombatValueDrawer.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d0/d0a/_combat_value_drawer_8cs_source.html','../../')
   <div class="headertitle"><div class="title">CombatValueDrawer.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d0/d0a/_combat_value_drawer_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Reflection;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Sirenix.OdinInspector;</div>
@@ -111,27 +112,24 @@ $(function(){initNavTree('d0/d0a/_combat_value_drawer_8cs_source.html','../../')
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d6/d42/class_common_1_1_editor_1_1_combat_value_drawer.html">    9</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d6/d42/class_common_1_1_editor_1_1_combat_value_drawer.html">CombatValueDrawer</a> : OdinAttributeProcessor&lt;CombatValue&gt;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d6/d42/class_common_1_1_editor_1_1_combat_value_drawer.html#a7c133b39d3fe2cb0359086c218c03ced">   11</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d42/class_common_1_1_editor_1_1_combat_value_drawer.html#a7c133b39d3fe2cb0359086c218c03ced">ProcessChildMemberAttributes</a>(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt;Attribute&gt; attributes)</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;value&quot;</span>)</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            }</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        }</div>
-</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
 </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
 <div class="ttc" id="aclass_common_1_1_editor_1_1_combat_value_drawer_html"><div class="ttname"><a href="../../d6/d42/class_common_1_1_editor_1_1_combat_value_drawer.html">Common.Editor.CombatValueDrawer</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">CombatValueDrawer.cs:10</a></div></div>
-<div class="ttc" id="aclass_common_1_1_editor_1_1_combat_value_drawer_html_a7c133b39d3fe2cb0359086c218c03ced"><div class="ttname"><a href="../../d6/d42/class_common_1_1_editor_1_1_combat_value_drawer.html#a7c133b39d3fe2cb0359086c218c03ced">Common.Editor.CombatValueDrawer.ProcessChildMemberAttributes</a></div><div class="ttdeci">override void ProcessChildMemberAttributes(InspectorProperty parentProperty, MemberInfo member, List&lt; Attribute &gt; attributes)</div><div class="ttdef"><b>Definition</b> <a href="#l00011">CombatValueDrawer.cs:11</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_editor_html"><div class="ttname"><a href="../../d2/dbe/namespace_common_1_1_editor.html">Common.Editor</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/da4/_behaviour_mover_drawer_8cs_source.html#l00008">BehaviourMoverDrawer.cs:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_eeb16f7eaa20d402ca03e41de2380886.html">Editor</a></li><li class="navelem"><a class="el" href="../../d0/d0a/_combat_value_drawer_8cs.html">CombatValueDrawer.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_eeb16f7eaa20d402ca03e41de2380886.html">Editor</a></li><li class="navelem"><b>CombatValueDrawer.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

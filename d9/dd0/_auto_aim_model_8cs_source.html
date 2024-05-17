@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/AutoAimModel.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/AutoAimModel.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d9/dd0/_auto_aim_model_8cs_source.html','../../'); ini
   <div class="headertitle"><div class="title">AutoAimModel.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d9/dd0/_auto_aim_model_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d3/d4a/namespace_common_1_1_characters_1_1_behaviours.html">Common.Characters.Behaviours</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="../../df/db6/namespace_common_1_1_systems.html">Common.Systems</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine;</div>
@@ -119,57 +120,48 @@ $(function(){initNavTree('d9/dd0/_auto_aim_model_8cs_source.html','../../'); ini
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a> <a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d8/db4/class_common_1_1_skills_1_1_modules_1_1_auto_aim_model.html#a65986112420b58ffac57e2a3a35cdc3c">   18</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/db4/class_common_1_1_skills_1_1_modules_1_1_auto_aim_model.html#a65986112420b58ffac57e2a3a35cdc3c">Initialize</a>(<a class="code hl_interface" href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html">IUnitSequencer</a> sequencer)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize(<a class="code hl_interface" href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html">IUnitSequencer</a> sequencer)</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <span class="keywordflow">if</span> (!enable) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">if</span> (sequencer.<a class="code hl_property" href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html#af11e10a8e16d2be8b19654c3fdcdab5f">Unit</a> is not <a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a> character) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordflow">if</span> (sequencer.Unit is not <a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a> character) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a>   = character;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <a class="code hl_class" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">DetectModel</a> = character.Detector;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            sequencer.Sections</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                     .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Active, <span class="stringliteral">&quot;AutoAiming&quot;</span>, AutoAiming)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                     .Add(Section.Active, <span class="stringliteral">&quot;AutoAiming&quot;</span>, AutoAiming)</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                     ;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
-</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> AutoAiming()</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">DetectModel</a>.<a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a75467bfdd74ec433140f26609f179e6b">TryGetObjects</a>(out var aimRangedTargets, autoAimProperty)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">DetectModel</a>.TryGetObjects(out var aimRangedTargets, autoAimProperty)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            aimRangedTargets.Sort(<a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a>.<a class="code hl_property" href="../../dd/dff/class_common_1_1_character.html#a274ffe9dda8db3f5f753c8fbbd0c4a32">Position</a>, <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9">SortingType</a>.DistanceAscending);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            aimRangedTargets.Sort(<a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a>.Position, SortingType.DistanceAscending);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            var focusTarget = aimRangedTargets.FirstOrNull();</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a>.<a class="code hl_function" href="../../dd/dff/class_common_1_1_character.html#a40fe9f371cb942175dbf8ebd892724a9">RotateInstant</a>(focusTarget.transform.position);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_class" href="../../dd/dff/class_common_1_1_character.html">Character</a>.RotateInstant(focusTarget.transform.position);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
 </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 </div>
-<div class="ttc" id="a_section_8cs_html_aa2bc2fd5a40cdb0c40963e6fe6a24cce"><div class="ttname"><a href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a></div><div class="ttdeci">Section</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d0d/_section_8cs_source.html#l00001">Section.cs:2</a></div></div>
 <div class="ttc" id="aclass_common_1_1_character_html"><div class="ttname"><a href="../../dd/dff/class_common_1_1_character.html">Common.Character</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8a/_character_8cs_source.html#l00010">Character.cs:11</a></div></div>
-<div class="ttc" id="aclass_common_1_1_character_html_a274ffe9dda8db3f5f753c8fbbd0c4a32"><div class="ttname"><a href="../../dd/dff/class_common_1_1_character.html#a274ffe9dda8db3f5f753c8fbbd0c4a32">Common.Character.Position</a></div><div class="ttdeci">Vector3 Position</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8a/_character_8cs_source.html#l00035">Character.cs:35</a></div></div>
-<div class="ttc" id="aclass_common_1_1_character_html_a40fe9f371cb942175dbf8ebd892724a9"><div class="ttname"><a href="../../dd/dff/class_common_1_1_character.html#a40fe9f371cb942175dbf8ebd892724a9">Common.Character.RotateInstant</a></div><div class="ttdeci">void RotateInstant(Vector3 lookTarget)</div></div>
 <div class="ttc" id="aclass_common_1_1_detect_property_html"><div class="ttname"><a href="../../dc/d03/class_common_1_1_detect_property.html">Common.DetectProperty</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/d38/_detect_property_8cs_source.html#l00007">DetectProperty.cs:8</a></div></div>
 <div class="ttc" id="aclass_common_1_1_skills_1_1_modules_1_1_auto_aim_model_html"><div class="ttname"><a href="../../d8/db4/class_common_1_1_skills_1_1_modules_1_1_auto_aim_model.html">Common.Skills.Modules.AutoAimModel</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">AutoAimModel.cs:10</a></div></div>
-<div class="ttc" id="aclass_common_1_1_skills_1_1_modules_1_1_auto_aim_model_html_a65986112420b58ffac57e2a3a35cdc3c"><div class="ttname"><a href="../../d8/db4/class_common_1_1_skills_1_1_modules_1_1_auto_aim_model.html#a65986112420b58ffac57e2a3a35cdc3c">Common.Skills.Modules.AutoAimModel.Initialize</a></div><div class="ttdeci">void Initialize(IUnitSequencer sequencer)</div><div class="ttdef"><b>Definition</b> <a href="#l00018">AutoAimModel.cs:18</a></div></div>
 <div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">Common.Systems.DetectModel</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00008">DetectModel.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_a75467bfdd74ec433140f26609f179e6b"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a75467bfdd74ec433140f26609f179e6b">Common.Systems.DetectModel.TryGetObjects</a></div><div class="ttdeci">bool TryGetObjects(out List&lt; GameObject &gt; result, DetectProperty property)</div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00080">DetectModel.cs:80</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_unit_sequencer_html"><div class="ttname"><a href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html">Common.IUnitSequencer</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/daa/_i_common_sequencer_8cs_source.html#l00003">ICommonSequencer.cs:4</a></div></div>
-<div class="ttc" id="ainterface_common_1_1_i_unit_sequencer_html_af11e10a8e16d2be8b19654c3fdcdab5f"><div class="ttname"><a href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html#af11e10a8e16d2be8b19654c3fdcdab5f">Common.IUnitSequencer.Unit</a></div><div class="ttdeci">IUnit Unit</div><div class="ttdef"><b>Definition</b> <a href="../../db/daa/_i_common_sequencer_8cs_source.html#l00005">ICommonSequencer.cs:5</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_characters_1_1_behaviours_html"><div class="ttname"><a href="../../d3/d4a/namespace_common_1_1_characters_1_1_behaviours.html">Common.Characters.Behaviours</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d7d/_dash_behaviour_8cs_source.html#l00005">DashBehaviour.cs:6</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_skills_1_1_modules_html"><div class="ttname"><a href="../../d5/d5e/namespace_common_1_1_skills_1_1_modules.html">Common.Skills.Modules</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">AutoAimModel.cs:7</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_systems_html"><div class="ttname"><a href="../../df/db6/namespace_common_1_1_systems.html">Common.Systems</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00005">DetectModel.cs:6</a></div></div>
-<div class="ttc" id="anamespace_common_html_a8ca768b5259e0ae2f8baaae4fcb8c5f9"><div class="ttname"><a href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9">Common.SortingType</a></div><div class="ttdeci">SortingType</div><div class="ttdef"><b>Definition</b> <a href="../../de/d11/_sorting_type_8cs_source.html#l00003">SortingType.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_d572cda828bfa5b83e7d57eb46f6ce39.html">Skills</a></li><li class="navelem"><a class="el" href="../../dir_c65f46ea537fd861a9f3faa06c1d78a3.html">Modules</a></li><li class="navelem"><a class="el" href="../../d9/dd0/_auto_aim_model_8cs.html">AutoAimModel.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_d572cda828bfa5b83e7d57eb46f6ce39.html">Skills</a></li><li class="navelem"><a class="el" href="../../dir_c65f46ea537fd861a9f3faa06c1d78a3.html">Modules</a></li><li class="navelem"><b>AutoAimModel.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

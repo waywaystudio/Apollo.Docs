@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/UI/ImageFlipper.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/UI/ImageFlipper.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('df/dbe/_image_flipper_8cs_source.html','../../'); init
   <div class="headertitle"><div class="title">ImageFlipper.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../df/dbe/_image_flipper_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine.UI;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -130,8 +131,7 @@ $(function(){initNavTree('df/dbe/_image_flipper_8cs_source.html','../../'); init
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
 </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        </div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#af08bea31c04bf40359e780c4f20d6fdb">   34</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#af08bea31c04bf40359e780c4f20d6fdb">ModifyMesh</a>(VertexHelper vertexHelper)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ModifyMesh(VertexHelper vertexHelper)</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">if</span> (!enabled)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordflow">return</span>;</div>
@@ -139,15 +139,13 @@ $(function(){initNavTree('df/dbe/_image_flipper_8cs_source.html','../../'); init
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            var list = <span class="keyword">new</span> List&lt;UIVertex&gt;();</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            vertexHelper.GetUIVertexStream(list);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_function" href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#aa6b728fcf592681d5aa9fa79333f31e2">ModifyVertices</a>(list); <span class="comment">// calls the old ModifyVertices which was used on pre 5.2</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            ModifyVertices(list); <span class="comment">// calls the old ModifyVertices which was used on pre 5.2</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            vertexHelper.Clear();</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            vertexHelper.AddUIVertexTriangleStream(list);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
-</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#a76c82ab6bf22066c50893ab893e825d0">   48</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#a76c82ab6bf22066c50893ab893e825d0">ModifyMesh</a>(Mesh mesh)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ModifyMesh(Mesh mesh)</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">if</span> (!enabled)</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keywordflow">return</span>;</div>
@@ -158,7 +156,7 @@ $(function(){initNavTree('df/dbe/_image_flipper_8cs_source.html','../../'); init
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                vertexHelper.GetUIVertexStream(list);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_function" href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#aa6b728fcf592681d5aa9fa79333f31e2">ModifyVertices</a>(list); <span class="comment">// calls the old ModifyVertices which was used on pre 5.2</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            ModifyVertices(list); <span class="comment">// calls the old ModifyVertices which was used on pre 5.2</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keyword">using</span> (var vertexHelper2 = <span class="keyword">new</span> VertexHelper())</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            {</div>
@@ -166,10 +164,8 @@ $(function(){initNavTree('df/dbe/_image_flipper_8cs_source.html','../../'); init
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                vertexHelper2.FillMesh(mesh);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
-</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#aa6b728fcf592681d5aa9fa79333f31e2">   68</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#aa6b728fcf592681d5aa9fa79333f31e2">ModifyVertices</a>(List&lt;UIVertex&gt; verts)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ModifyVertices(List&lt;UIVertex&gt; verts)</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">if</span> (!enabled)</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">return</span>;</div>
@@ -191,7 +187,6 @@ $(function(){initNavTree('df/dbe/_image_flipper_8cs_source.html','../../'); init
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                verts[i] = v;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
-</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
@@ -205,17 +200,14 @@ $(function(){initNavTree('df/dbe/_image_flipper_8cs_source.html','../../'); init
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
 <div class="ttc" id="aclass_common_1_1_u_i_1_1_image_flipper_html"><div class="ttname"><a href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html">Common.UI.ImageFlipper</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">ImageFlipper.cs:9</a></div></div>
 <div class="ttc" id="aclass_common_1_1_u_i_1_1_image_flipper_html_a1d058fece9898e46df2cc6ef46887264"><div class="ttname"><a href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#a1d058fece9898e46df2cc6ef46887264">Common.UI.ImageFlipper.Vertical</a></div><div class="ttdeci">bool Vertical</div><div class="ttdoc">Gets or sets a value indicating whether this UnityEngine.UI.UIFlippable should be flipped vertically.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">ImageFlipper.cs:29</a></div></div>
-<div class="ttc" id="aclass_common_1_1_u_i_1_1_image_flipper_html_a76c82ab6bf22066c50893ab893e825d0"><div class="ttname"><a href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#a76c82ab6bf22066c50893ab893e825d0">Common.UI.ImageFlipper.ModifyMesh</a></div><div class="ttdeci">void ModifyMesh(Mesh mesh)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">ImageFlipper.cs:48</a></div></div>
-<div class="ttc" id="aclass_common_1_1_u_i_1_1_image_flipper_html_aa6b728fcf592681d5aa9fa79333f31e2"><div class="ttname"><a href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#aa6b728fcf592681d5aa9fa79333f31e2">Common.UI.ImageFlipper.ModifyVertices</a></div><div class="ttdeci">void ModifyVertices(List&lt; UIVertex &gt; verts)</div><div class="ttdef"><b>Definition</b> <a href="#l00068">ImageFlipper.cs:68</a></div></div>
 <div class="ttc" id="aclass_common_1_1_u_i_1_1_image_flipper_html_add2931ac678b4bad7ea48f4a598c0548"><div class="ttname"><a href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#add2931ac678b4bad7ea48f4a598c0548">Common.UI.ImageFlipper.Horizontal</a></div><div class="ttdeci">bool Horizontal</div><div class="ttdoc">Gets or sets a value indicating whether this UnityEngine.UI.UIFlippable should be flipped horizontall...</div><div class="ttdef"><b>Definition</b> <a href="#l00018">ImageFlipper.cs:19</a></div></div>
-<div class="ttc" id="aclass_common_1_1_u_i_1_1_image_flipper_html_af08bea31c04bf40359e780c4f20d6fdb"><div class="ttname"><a href="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html#af08bea31c04bf40359e780c4f20d6fdb">Common.UI.ImageFlipper.ModifyMesh</a></div><div class="ttdeci">void ModifyMesh(VertexHelper vertexHelper)</div><div class="ttdef"><b>Definition</b> <a href="#l00034">ImageFlipper.cs:34</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_u_i_html"><div class="ttname"><a href="../../d1/ddd/namespace_common_1_1_u_i.html">Common.UI</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/ddf/_effect_canvas_8cs_source.html#l00007">EffectCanvas.cs:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><a class="el" href="../../df/dbe/_image_flipper_8cs.html">ImageFlipper.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><b>ImageFlipper.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

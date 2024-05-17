@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Characters/AI/NonPlayerMeleePositioning.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Characters/AI/NonPlayerMeleePositioning.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d4/d81/_non_player_melee_positioning_8cs_source.html',
   <div class="headertitle"><div class="title">NonPlayerMeleePositioning.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d4/d81/_non_player_melee_positioning_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>BehaviorDesigner.Runtime.Tasks;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>BehaviorDesigner.Runtime.Tasks;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d6/d16/namespace_common_1_1_characters_1_1_non_players.html">Common.Characters.NonPlayers</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d7/d3f/namespace_common_1_1_skills_1_1_non_players.html">Common.Skills.NonPlayers</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine;</div>
@@ -113,32 +114,28 @@ $(function(){initNavTree('d4/d81/_non_player_melee_positioning_8cs_source.html',
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html">NonPlayer</a> nonPlayer;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">private</span> <span class="keyword">static</span> LayerMask obstacleLayer;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html">NonPlayerSkillBehaviour</a> PrioritySkill =&gt; nonPlayer.<a class="code hl_property" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ab843bc39ad36b56772cce0868c4eed3b">Skills</a>.<a class="code hl_property" href="../../d7/db7/class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table.html#a41a9423d3dadef9c844c36b445a33519">MostPrioritySkill</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html">NonPlayerSkillBehaviour</a> PrioritySkill =&gt; nonPlayer.Skills.MostPrioritySkill;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../dc/da6/class_common_1_1_characters_1_1_a_i_1_1_non_player_melee_positioning.html#aeef9f83f323362a3114d57234a0e1185">   16</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/da6/class_common_1_1_characters_1_1_a_i_1_1_non_player_melee_positioning.html#aeef9f83f323362a3114d57234a0e1185">OnAwake</a>()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> OnAwake()</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            nonPlayer     = gameObject.GetComponentInParent&lt;<a class="code hl_class" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html">NonPlayer</a>&gt;();</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            obstacleLayer = LayerMask.GetMask(<span class="stringliteral">&quot;Obstacle&quot;</span>);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
-</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../dc/da6/class_common_1_1_characters_1_1_a_i_1_1_non_player_melee_positioning.html#a592367e5a9a3cac51ede1ce59f42eb34">   22</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> TaskStatus <a class="code hl_function" href="../../dc/da6/class_common_1_1_characters_1_1_a_i_1_1_non_player_melee_positioning.html#a592367e5a9a3cac51ede1ce59f42eb34">OnUpdate</a>()</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">public</span> <span class="keyword">override</span> TaskStatus OnUpdate()</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">if</span> (PrioritySkill is <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                <span class="keywordflow">return</span> TaskStatus.Failure;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            var isValidPosition = IsValidCombatPosition(nonPlayer, PrioritySkill.<a class="code hl_property" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">SkillTarget</a>, PrioritySkill.<a class="code hl_property" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#a848630e124ccf7b7d624a4e782b2e45b">AwareRange</a>, out var dest);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            var isValidPosition = IsValidCombatPosition(nonPlayer, PrioritySkill.<a class="code hl_property" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">SkillTarget</a>, PrioritySkill.AwareRange, out var dest);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            nonPlayer.<a class="code hl_function" href="../../dd/dff/class_common_1_1_character.html#a8d09ca890adcfaea49622afdbc71b055">Run</a>(dest);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            nonPlayer.Run(dest);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">return</span> isValidPosition </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                ? TaskStatus.Success </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                : TaskStatus.Failure;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
-</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> IsValidCombatPosition(<a class="code hl_interface" href="../../d8/d8b/interface_common_1_1_i_unit.html">IUnit</a> fiend, <a class="code hl_interface" href="../../d8/d8b/interface_common_1_1_i_unit.html">IUnit</a> taker, <span class="keywordtype">float</span> range, out Vector3 combatPosition)</div>
@@ -147,8 +144,8 @@ $(function(){initNavTree('d4/d81/_non_player_melee_positioning_8cs_source.html',
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">if</span> (fiend is <span class="keyword">null</span> || taker is <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            var targetPosition = taker.<a class="code hl_property" href="../../d8/d8b/interface_common_1_1_i_unit.html#a45b54ea30324ebb0ef8d594abbe8a201">Position</a>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            var fiendPosition = fiend.<a class="code hl_property" href="../../d8/d8b/interface_common_1_1_i_unit.html#a45b54ea30324ebb0ef8d594abbe8a201">Position</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            var targetPosition = taker.Position;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            var fiendPosition = fiend.Position;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            var currentDistance = Vector3.Distance(targetPosition, fiendPosition);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            var obstacleOnPath = Physics.Linecast(fiendPosition, targetPosition, out _, obstacleLayer);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            </div>
@@ -171,18 +168,11 @@ $(function(){initNavTree('d4/d81/_non_player_melee_positioning_8cs_source.html',
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
 </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
-<div class="ttc" id="aclass_common_1_1_character_html_a8d09ca890adcfaea49622afdbc71b055"><div class="ttname"><a href="../../dd/dff/class_common_1_1_character.html#a8d09ca890adcfaea49622afdbc71b055">Common.Character.Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d8a/_character_8cs_source.html#l00086">Character.cs:86</a></div></div>
 <div class="ttc" id="aclass_common_1_1_characters_1_1_a_i_1_1_non_player_melee_positioning_html"><div class="ttname"><a href="../../dc/da6/class_common_1_1_characters_1_1_a_i_1_1_non_player_melee_positioning.html">Common.Characters.AI.NonPlayerMeleePositioning</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">NonPlayerMeleePositioning.cs:10</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_a_i_1_1_non_player_melee_positioning_html_a592367e5a9a3cac51ede1ce59f42eb34"><div class="ttname"><a href="../../dc/da6/class_common_1_1_characters_1_1_a_i_1_1_non_player_melee_positioning.html#a592367e5a9a3cac51ede1ce59f42eb34">Common.Characters.AI.NonPlayerMeleePositioning.OnUpdate</a></div><div class="ttdeci">override TaskStatus OnUpdate()</div><div class="ttdef"><b>Definition</b> <a href="#l00022">NonPlayerMeleePositioning.cs:22</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_a_i_1_1_non_player_melee_positioning_html_aeef9f83f323362a3114d57234a0e1185"><div class="ttname"><a href="../../dc/da6/class_common_1_1_characters_1_1_a_i_1_1_non_player_melee_positioning.html#aeef9f83f323362a3114d57234a0e1185">Common.Characters.AI.NonPlayerMeleePositioning.OnAwake</a></div><div class="ttdeci">override void OnAwake()</div><div class="ttdef"><b>Definition</b> <a href="#l00016">NonPlayerMeleePositioning.cs:16</a></div></div>
 <div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_html"><div class="ttname"><a href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html">Common.Characters.NonPlayers.NonPlayer</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d46/_non_player_8cs_source.html#l00007">NonPlayer.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_html_ab843bc39ad36b56772cce0868c4eed3b"><div class="ttname"><a href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html#ab843bc39ad36b56772cce0868c4eed3b">Common.Characters.NonPlayers.NonPlayer.Skills</a></div><div class="ttdeci">NonPlayerSkillTable Skills</div><div class="ttdef"><b>Definition</b> <a href="../../dc/d46/_non_player_8cs_source.html#l00013">NonPlayer.cs:13</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table_html_a41a9423d3dadef9c844c36b445a33519"><div class="ttname"><a href="../../d7/db7/class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table.html#a41a9423d3dadef9c844c36b445a33519">Common.Characters.NonPlayers.NonPlayerSkillTable.MostPrioritySkill</a></div><div class="ttdeci">NonPlayerSkillBehaviour MostPrioritySkill</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d81/_non_player_skill_table_8cs_source.html#l00012">NonPlayerSkillTable.cs:13</a></div></div>
 <div class="ttc" id="aclass_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_html"><div class="ttname"><a href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html">Common.Skills.NonPlayers.NonPlayerSkillBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_non_player_skill_behaviour_8cs_source.html#l00007">NonPlayerSkillBehaviour.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_html_a848630e124ccf7b7d624a4e782b2e45b"><div class="ttname"><a href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#a848630e124ccf7b7d624a4e782b2e45b">Common.Skills.NonPlayers.NonPlayerSkillBehaviour.AwareRange</a></div><div class="ttdeci">float AwareRange</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_non_player_skill_behaviour_8cs_source.html#l00012">NonPlayerSkillBehaviour.cs:12</a></div></div>
 <div class="ttc" id="aclass_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_html_af6e247ddcbea38bf346b41eb48018d05"><div class="ttname"><a href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">Common.Skills.NonPlayers.NonPlayerSkillBehaviour.SkillTarget</a></div><div class="ttdeci">virtual Character SkillTarget</div><div class="ttdoc">Designed For Enemy AI.</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_non_player_skill_behaviour_8cs_source.html#l00021">NonPlayerSkillBehaviour.cs:22</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_unit_html"><div class="ttname"><a href="../../d8/d8b/interface_common_1_1_i_unit.html">Common.IUnit</a></div><div class="ttdoc">Character, Trap, Projectile, StatusEffect, Snare.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00011">ICombats.cs:12</a></div></div>
-<div class="ttc" id="ainterface_common_1_1_i_unit_html_a45b54ea30324ebb0ef8d594abbe8a201"><div class="ttname"><a href="../../d8/d8b/interface_common_1_1_i_unit.html#a45b54ea30324ebb0ef8d594abbe8a201">Common.IUnit.Position</a></div><div class="ttdeci">Vector3 Position</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00017">ICombats.cs:17</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_characters_1_1_a_i_html"><div class="ttname"><a href="../../d0/d2b/namespace_common_1_1_characters_1_1_a_i.html">Common.Characters.AI</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/da3/_has_proper_target_8cs_source.html#l00004">HasProperTarget.cs:5</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_characters_1_1_non_players_html"><div class="ttname"><a href="../../d6/d16/namespace_common_1_1_characters_1_1_non_players.html">Common.Characters.NonPlayers</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d05/_ally_8cs_source.html#l00003">Ally.cs:4</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_skills_1_1_non_players_html"><div class="ttname"><a href="../../d7/d3f/namespace_common_1_1_skills_1_1_non_players.html">Common.Skills.NonPlayers</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d16/_cunning_of_fox_8cs_source.html#l00007">CunningOfFox.cs:8</a></div></div>
@@ -191,7 +181,7 @@ $(function(){initNavTree('d4/d81/_non_player_melee_positioning_8cs_source.html',
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_7154228bae9157f0b8806d72dde360d2.html">Characters</a></li><li class="navelem"><a class="el" href="../../dir_182e33d8ebc008687d10e5b9b4f7ed5b.html">AI</a></li><li class="navelem"><a class="el" href="../../d4/d81/_non_player_melee_positioning_8cs.html">NonPlayerMeleePositioning.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_7154228bae9157f0b8806d72dde360d2.html">Characters</a></li><li class="navelem"><a class="el" href="../../dir_182e33d8ebc008687d10e5b9b4f7ed5b.html">AI</a></li><li class="navelem"><b>NonPlayerMeleePositioning.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

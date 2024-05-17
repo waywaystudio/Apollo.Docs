@@ -7,8 +7,7 @@ var namespace_common_1_1_characters =
     [ "Enemies", "dd/df2/namespace_common_1_1_characters_1_1_enemies.html", "dd/df2/namespace_common_1_1_characters_1_1_enemies" ],
     [ "NonPlayers", "d6/d16/namespace_common_1_1_characters_1_1_non_players.html", "d6/d16/namespace_common_1_1_characters_1_1_non_players" ],
     [ "Spawns", "de/d9a/namespace_common_1_1_characters_1_1_spawns.html", "de/d9a/namespace_common_1_1_characters_1_1_spawns" ],
-    [ "CharacterBehaviour", "d7/d81/class_common_1_1_characters_1_1_character_behaviour.html", "d7/d81/class_common_1_1_characters_1_1_character_behaviour" ],
+    [ "CharacterBehaviour", "d7/d81/class_common_1_1_characters_1_1_character_behaviour.html", null ],
     [ "CharacterSpawnEvent", "db/d31/class_common_1_1_characters_1_1_character_spawn_event.html", "db/d31/class_common_1_1_characters_1_1_character_spawn_event" ],
-    [ "PlayerController", "da/dd4/class_common_1_1_characters_1_1_player_controller.html", "da/dd4/class_common_1_1_characters_1_1_player_controller" ],
-    [ "Context", "da/d2d/namespace_common_1_1_characters.html#ad6fbf284724a8225d1d7a01b15549454", null ]
+    [ "PlayerController", "da/dd4/class_common_1_1_characters_1_1_player_controller.html", null ]
 ];

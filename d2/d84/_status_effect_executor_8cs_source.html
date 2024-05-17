@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Executors/Variants/StatusEffectExecutor.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Executors/Variants/StatusEffectExecutor.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d2/d84/_status_effect_executor_8cs_source.html','../..
   <div class="headertitle"><div class="title">StatusEffectExecutor.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d2/d84/_status_effect_executor_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../df/dd3/namespace_common_1_1_status_effects.html">Common.StatusEffects</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -112,28 +113,25 @@ $(function(){initNavTree('d2/d84/_status_effect_executor_8cs_source.html','../..
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [SerializeField] <span class="keyword">private</span> TargetType targetType = TargetType.ToTarget;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">bool</span> requireTaker;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">bool</span> executePerTaker;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a> statusEffectCode;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        [SerializeField] <span class="keyword">private</span> DataIndex statusEffectCode;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">bool</span> setCustomDuration;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">float</span> customDuration;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        [SerializeField] <span class="keyword">private</span> Pool&lt;StatusEffect&gt; pool;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#aa35c65165f58e8569d5369ce0640488e">   20</a></span>        <span class="keyword">public</span> <a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a> <a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a> =&gt; statusEffectCode;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#af64429df378729d1fc62536c90d332e4">   21</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">StatusEffect</a> <a class="code hl_property" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#af64429df378729d1fc62536c90d332e4">Effect</a> =&gt; pool.Get();</div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#ad0e146eea22762c00312525e7a80b261">   22</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#ad0e146eea22762c00312525e7a80b261">CustomDuration</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">public</span> DataIndex DataIndex =&gt; statusEffectCode;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">StatusEffect</a> Effect =&gt; pool.Get();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">public</span> <span class="keywordtype">float</span> CustomDuration</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keyword">get</span> =&gt; customDuration; </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keyword">set</span> =&gt; customDuration = value;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
-</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> HasExecuted { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">private</span> GameObject Self =&gt; <a class="code hl_property" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html#a675136236739d5e839ed750ce7a2ce00">Provider</a>.<a class="code hl_property" href="../../d8/d8b/interface_common_1_1_i_unit.html#a2ca74a8a9a8e98bfee6898eac58afbc9">gameObject</a>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">private</span> <span class="keyword">enum</span> TargetType { <a class="code hl_enumvalue" href="../../d8/da2/_canvas_hierarchy_type_8cs.html#a66143eb1e62a66da4cc0e20cef9acf66a6adf97f83acf6453d4a6a4b1070f3754">None</a> = 0, ProviderSelf, ToTarget }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">private</span> GameObject Self =&gt; Provider.gameObject;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">private</span> <span class="keyword">enum</span> TargetType { None = 0, ProviderSelf, ToTarget }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a4b58d386395242885d15095ea95d77fd">   33</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a4b58d386395242885d15095ea95d77fd">Initialize</a>(<a class="code hl_interface" href="../../db/dee/interface_common_1_1_i_combat_provider.html">ICombatProvider</a> combatProvider)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Initialize(<a class="code hl_interface" href="../../db/dee/interface_common_1_1_i_combat_provider.html">ICombatProvider</a> combatProvider)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            base.Initialize(combatProvider);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
@@ -142,11 +140,9 @@ $(function(){initNavTree('d2/d84/_status_effect_executor_8cs_source.html','../..
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                .AddOnGet(<span class="stringliteral">&quot;SetCustomDuration&quot;</span>, GetPool)</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                ;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
-</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a99af63e8172a928db3d88bab30ed95a7">   44</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a99af63e8172a928db3d88bab30ed95a7">ExecuteToTarget</a>(GameObject target)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ExecuteToTarget(GameObject target)</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">switch</span> (targetType)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            {</div>
@@ -155,10 +151,8 @@ $(function(){initNavTree('d2/d84/_status_effect_executor_8cs_source.html','../..
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                default :                     <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
-</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a30cf293e07fdad3da62bea9abd3c8bd4">   54</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a30cf293e07fdad3da62bea9abd3c8bd4">ExecutesToTargets</a>(List&lt;GameObject&gt; targets)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ExecutesToTargets(List&lt;GameObject&gt; targets)</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">switch</span> (targetType)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            {</div>
@@ -167,12 +161,11 @@ $(function(){initNavTree('d2/d84/_status_effect_executor_8cs_source.html','../..
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                default :                     <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            }</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
-</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> ExecuteToTaker(GameObject target)</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html#afb729ebd300fcec4d99d086fae3d2747">Conditions</a>.HasFalse(target)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">if</span> (Conditions.HasFalse(target)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">if</span> (target.IsNullOrDestroyed()) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">if</span> (!target.TryGetComponent(out <a class="code hl_interface" href="../../de/ddb/interface_common_1_1_i_status_effect_taker.html">IStatusEffectTaker</a> taker)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            </div>
@@ -184,7 +177,7 @@ $(function(){initNavTree('d2/d84/_status_effect_executor_8cs_source.html','../..
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">if</span> (HasExecuted) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (requireTaker &amp;&amp; target is <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">if</span> (!target.TryGetComponent(out <a class="code hl_interface" href="../../de/ddb/interface_common_1_1_i_status_effect_taker.html">IStatusEffectTaker</a> _)) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">if</span> (!<a class="code hl_property" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html#a675136236739d5e839ed750ce7a2ce00">Provider</a>.<a class="code hl_property" href="../../d8/d8b/interface_common_1_1_i_unit.html#a2ca74a8a9a8e98bfee6898eac58afbc9">gameObject</a>.TryGetComponent(out <a class="code hl_interface" href="../../de/ddb/interface_common_1_1_i_status_effect_taker.html">IStatusEffectTaker</a> <span class="keyword">self</span>)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">if</span> (!Provider.gameObject.TryGetComponent(out <a class="code hl_interface" href="../../de/ddb/interface_common_1_1_i_status_effect_taker.html">IStatusEffectTaker</a> <span class="keyword">self</span>)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keyword">self</span>.TakeStatusEffect(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
@@ -206,16 +199,16 @@ $(function(){initNavTree('d2/d84/_status_effect_executor_8cs_source.html','../..
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                <span class="keywordflow">if</span> (targets.IsNullOrEmpty()) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keywordflow">if</span> (executePerTaker)</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                    targets.ForEach(_ =&gt; <a class="code hl_function" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a99af63e8172a928db3d88bab30ed95a7">ExecuteToTarget</a>(Self));</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                    targets.ForEach(_ =&gt; ExecuteToTarget(Self));</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                    <a class="code hl_function" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a99af63e8172a928db3d88bab30ed95a7">ExecuteToTarget</a>(Self);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                    ExecuteToTarget(Self);</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                }</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            }</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <a class="code hl_function" href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a99af63e8172a928db3d88bab30ed95a7">ExecuteToTarget</a>(Self);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                ExecuteToTarget(Self);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            }</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            HasExecuted = <span class="keyword">false</span>;</div>
@@ -224,9 +217,9 @@ $(function(){initNavTree('d2/d84/_status_effect_executor_8cs_source.html','../..
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> CreateStatusEffect(<a class="code hl_class" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">StatusEffect</a> statusEffect)</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            statusEffect.<a class="code hl_function" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a7ee85f8cacb4d9a182e9136798ae0529">Initialize</a>(<a class="code hl_property" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html#a675136236739d5e839ed750ce7a2ce00">Provider</a>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            statusEffect.<a class="code hl_function" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a7ee85f8cacb4d9a182e9136798ae0529">Initialize</a>(Provider);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            statusEffect.Sections</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                        .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.End, <span class="stringliteral">&quot;ReturnToPool&quot;</span>, () =&gt; ReturnToPool(statusEffect))</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                        .Add(Section.End, <span class="stringliteral">&quot;ReturnToPool&quot;</span>, () =&gt; ReturnToPool(statusEffect))</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                        ;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
@@ -264,24 +257,13 @@ $(function(){initNavTree('d2/d84/_status_effect_executor_8cs_source.html','../..
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
 </div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>}</div>
-<div class="ttc" id="a_canvas_hierarchy_type_8cs_html_a66143eb1e62a66da4cc0e20cef9acf66a6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="../../d8/da2/_canvas_hierarchy_type_8cs.html#a66143eb1e62a66da4cc0e20cef9acf66a6adf97f83acf6453d4a6a4b1070f3754">CanvasHierarchyType.None</a></div><div class="ttdeci">@ None</div></div>
-<div class="ttc" id="a_data_index_8cs_html_acd63cd93ca0fdfe8177c88f2bb3b5343"><div class="ttname"><a href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a></div><div class="ttdeci">DataIndex</div><div class="ttdef"><b>Definition</b> <a href="../../df/dce/_data_index_8cs_source.html#l00006">DataIndex.cs:7</a></div></div>
-<div class="ttc" id="a_section_8cs_html_aa2bc2fd5a40cdb0c40963e6fe6a24cce"><div class="ttname"><a href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a></div><div class="ttdeci">Section</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d0d/_section_8cs_source.html#l00001">Section.cs:2</a></div></div>
 <div class="ttc" id="aclass_common_1_1_executors_1_1_execute_behaviour_html"><div class="ttname"><a href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d57/_execute_behaviour_8cs_source.html#l00006">ExecuteBehaviour.cs:7</a></div></div>
-<div class="ttc" id="aclass_common_1_1_executors_1_1_execute_behaviour_html_a675136236739d5e839ed750ce7a2ce00"><div class="ttname"><a href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html#a675136236739d5e839ed750ce7a2ce00">Common.Executors.ExecuteBehaviour.Provider</a></div><div class="ttdeci">ICombatProvider Provider</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d57/_execute_behaviour_8cs_source.html#l00008">ExecuteBehaviour.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_executors_1_1_execute_behaviour_html_afb729ebd300fcec4d99d086fae3d2747"><div class="ttname"><a href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html#afb729ebd300fcec4d99d086fae3d2747">Common.Executors.ExecuteBehaviour.Conditions</a></div><div class="ttdeci">ConditionTable&lt; GameObject &gt; Conditions</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d57/_execute_behaviour_8cs_source.html#l00016">ExecuteBehaviour.cs:16</a></div></div>
 <div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_status_effect_executor_html"><div class="ttname"><a href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html">Common.Executors.Variants.StatusEffectExecutor</a></div><div class="ttdoc">Usually, DeBuff to Taker.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">StatusEffectExecutor.cs:11</a></div></div>
-<div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_status_effect_executor_html_a30cf293e07fdad3da62bea9abd3c8bd4"><div class="ttname"><a href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a30cf293e07fdad3da62bea9abd3c8bd4">Common.Executors.Variants.StatusEffectExecutor.ExecutesToTargets</a></div><div class="ttdeci">override void ExecutesToTargets(List&lt; GameObject &gt; targets)</div><div class="ttdef"><b>Definition</b> <a href="#l00054">StatusEffectExecutor.cs:54</a></div></div>
-<div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_status_effect_executor_html_a4b58d386395242885d15095ea95d77fd"><div class="ttname"><a href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a4b58d386395242885d15095ea95d77fd">Common.Executors.Variants.StatusEffectExecutor.Initialize</a></div><div class="ttdeci">override void Initialize(ICombatProvider combatProvider)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">StatusEffectExecutor.cs:33</a></div></div>
-<div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_status_effect_executor_html_a99af63e8172a928db3d88bab30ed95a7"><div class="ttname"><a href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#a99af63e8172a928db3d88bab30ed95a7">Common.Executors.Variants.StatusEffectExecutor.ExecuteToTarget</a></div><div class="ttdeci">override void ExecuteToTarget(GameObject target)</div><div class="ttdef"><b>Definition</b> <a href="#l00044">StatusEffectExecutor.cs:44</a></div></div>
-<div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_status_effect_executor_html_ad0e146eea22762c00312525e7a80b261"><div class="ttname"><a href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#ad0e146eea22762c00312525e7a80b261">Common.Executors.Variants.StatusEffectExecutor.CustomDuration</a></div><div class="ttdeci">float CustomDuration</div><div class="ttdef"><b>Definition</b> <a href="#l00022">StatusEffectExecutor.cs:23</a></div></div>
-<div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_status_effect_executor_html_af64429df378729d1fc62536c90d332e4"><div class="ttname"><a href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html#af64429df378729d1fc62536c90d332e4">Common.Executors.Variants.StatusEffectExecutor.Effect</a></div><div class="ttdeci">StatusEffect Effect</div><div class="ttdef"><b>Definition</b> <a href="#l00021">StatusEffectExecutor.cs:21</a></div></div>
 <div class="ttc" id="aclass_common_1_1_status_effects_1_1_status_effect_html"><div class="ttname"><a href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">Common.StatusEffects.StatusEffect</a></div><div class="ttdoc">Active One tool Unit. Buff or DeBuff Object.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d08/_status_effect_8cs_source.html#l00008">StatusEffect.cs:9</a></div></div>
 <div class="ttc" id="aclass_common_1_1_status_effects_1_1_status_effect_html_a7ee85f8cacb4d9a182e9136798ae0529"><div class="ttname"><a href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html#a7ee85f8cacb4d9a182e9136798ae0529">Common.StatusEffects.StatusEffect.Initialize</a></div><div class="ttdeci">virtual void Initialize(ICombatProvider provider)</div><div class="ttdoc">Scene 시작과 함께 한 번 호출.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d08/_status_effect_8cs_source.html#l00035">StatusEffect.cs:35</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_combat_provider_html"><div class="ttname"><a href="../../db/dee/interface_common_1_1_i_combat_provider.html">Common.ICombatProvider</a></div><div class="ttdoc">Character, Trap.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00041">ICombats.cs:42</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_status_effect_entity_html"><div class="ttname"><a href="../../dc/dff/interface_common_1_1_i_status_effect_entity.html">Common.IStatusEffectEntity</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00066">ICombats.cs:67</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_status_effect_taker_html"><div class="ttname"><a href="../../de/ddb/interface_common_1_1_i_status_effect_taker.html">Common.IStatusEffectTaker</a></div><div class="ttdoc">Character.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00090">ICombats.cs:91</a></div></div>
-<div class="ttc" id="ainterface_common_1_1_i_unit_html_a2ca74a8a9a8e98bfee6898eac58afbc9"><div class="ttname"><a href="../../d8/d8b/interface_common_1_1_i_unit.html#a2ca74a8a9a8e98bfee6898eac58afbc9">Common.IUnit.gameObject</a></div><div class="ttdeci">GameObject gameObject</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00015">ICombats.cs:15</a></div></div>
 <div class="ttc" id="ainterface_i_data_indexer_html"><div class="ttname"><a href="../../d9/dc1/interface_i_data_indexer.html">IDataIndexer</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d78/_i_data_indexer_8cs_source.html#l00001">IDataIndexer.cs:2</a></div></div>
 <div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_executors_1_1_variants_html"><div class="ttname"><a href="../../d8/d9a/namespace_common_1_1_executors_1_1_variants.html">Common.Executors.Variants</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/ded/_damage_executor_8cs_source.html#l00003">DamageExecutor.cs:4</a></div></div>
@@ -291,7 +273,7 @@ $(function(){initNavTree('d2/d84/_status_effect_executor_8cs_source.html','../..
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_103b1203c1e1c6d27198bc3e6626ec4d.html">Executors</a></li><li class="navelem"><a class="el" href="../../dir_749f634b7181e6abbc2b07b2d5359ed8.html">Variants</a></li><li class="navelem"><a class="el" href="../../d2/d84/_status_effect_executor_8cs.html">StatusEffectExecutor.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_103b1203c1e1c6d27198bc3e6626ec4d.html">Executors</a></li><li class="navelem"><a class="el" href="../../dir_749f634b7181e6abbc2b07b2d5359ed8.html">Variants</a></li><li class="navelem"><b>StatusEffectExecutor.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

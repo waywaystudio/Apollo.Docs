@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/_Core/Managers/Inputs/InputActionEntity.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/_Core/Managers/Inputs/InputActionEntity.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d2/d72/_input_action_entity_8cs_source.html','../../')
   <div class="headertitle"><div class="title">InputActionEntity.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d2/d72/_input_action_entity_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Threading;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Cysharp.Threading.Tasks;</div>
@@ -109,7 +110,7 @@ $(function(){initNavTree('d2/d72/_input_action_entity_8cs_source.html','../../')
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/d95/namespace_inputs.html">Inputs</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../df/d95/namespace_inputs.html#a481fe2563970c2f650a7e4e948cd67b7">   10</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="../../df/d95/namespace_inputs.html#a481fe2563970c2f650a7e4e948cd67b7">Context</a> = InputAction.CallbackContext;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">using </span>Context = InputAction.CallbackContext;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    [Serializable]</div>
 <div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
@@ -120,96 +121,86 @@ $(function(){initNavTree('d2/d72/_input_action_entity_8cs_source.html','../../')
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">private</span> CancellationTokenSource addWaitUntilTask;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">private</span> CancellationTokenSource removeWaitUntilTask;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">   20</a></span>        <span class="keyword">public</span> <a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">InputAction</a> <a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">InputAction</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#ac091f84fbc31edc48d46a34f50d1deb1">   21</a></span>        <span class="keyword">public</span> List&lt;string&gt; <a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#ac091f84fbc31edc48d46a34f50d1deb1">Bindings</a> =&gt; bindings;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a3009506e6e0f92a493d4254d949f6620">   22</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a3009506e6e0f92a493d4254d949f6620">IsPressed</a> =&gt; <a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">InputAction</a>.<a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a3009506e6e0f92a493d4254d949f6620">IsPressed</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">public</span> InputAction InputAction { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">public</span> List&lt;string&gt; Bindings =&gt; bindings;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> IsPressed =&gt; InputAction.IsPressed();</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        [Sirenix.OdinInspector.ShowInInspector]</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        [ShowInPlayMode]</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table&lt;InputSection, ActionTable&lt;Context&gt;</a>&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a> { <span class="keyword">get</span>; }</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a09e560f28e4081f64afba78f6ce59410">   28</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a09e560f28e4081f64afba78f6ce59410">InputActionEntity</a>(<a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">InputAction</a> inputAction)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d4/d55/class_inputs_1_1_input_action_entity.html">InputActionEntity</a>(InputAction inputAction)</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">InputAction</a> = inputAction;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            InputAction = inputAction;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            bindings    = <span class="keyword">new</span> List&lt;string&gt;();</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table&lt;InputSection, ActionTable&lt;Context&gt;</a>&gt;();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.<a class="code hl_function" href="../../d2/d8f/class_table.html#a29330bb38f022574ec3e63e9a8d3f491">Add</a>(<a class="code hl_enumeration" href="../../df/d95/namespace_inputs.html#a4d1eb49b43325e0bb7df7c3b7ab49d3c">InputSection</a>.Start, <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Context&gt;</a>());</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.<a class="code hl_function" href="../../d2/d8f/class_table.html#a29330bb38f022574ec3e63e9a8d3f491">Add</a>(<a class="code hl_enumeration" href="../../df/d95/namespace_inputs.html#a4d1eb49b43325e0bb7df7c3b7ab49d3c">InputSection</a>.Perform, <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Context&gt;</a>());</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.<a class="code hl_function" href="../../d2/d8f/class_table.html#a29330bb38f022574ec3e63e9a8d3f491">Add</a>(<a class="code hl_enumeration" href="../../df/d95/namespace_inputs.html#a4d1eb49b43325e0bb7df7c3b7ab49d3c">InputSection</a>.Cancel, <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Context&gt;</a>());</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Add(InputSection.Start, <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Context&gt;</a>());</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Add(InputSection.Perform, <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Context&gt;</a>());</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Add(InputSection.Cancel, <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Context&gt;</a>());</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            inputAction.started   += StartInvoke;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            inputAction.canceled  += CancelInvoke;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            inputAction.performed += PerformInvoke;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_function" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a41255ab7cb885885169f088758bb2e30">SetActive</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            SetActive(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
-</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a8f86aa7150c3e9e394ef61f503c2cb22">   45</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a8f86aa7150c3e9e394ef61f503c2cb22">Add</a>(<a class="code hl_enumeration" href="../../df/d95/namespace_inputs.html#a4d1eb49b43325e0bb7df7c3b7ab49d3c">InputSection</a> section, <span class="keywordtype">string</span> key, Action action) =&gt; <a class="code hl_function" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a8f86aa7150c3e9e394ef61f503c2cb22">Add</a>(section, key, _ =&gt; action.Invoke());</div>
-<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a4189800b21a6d616314dea308c0cff87">   46</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a4189800b21a6d616314dea308c0cff87">Add</a>(<a class="code hl_enumeration" href="../../df/d95/namespace_inputs.html#a4d1eb49b43325e0bb7df7c3b7ab49d3c">InputSection</a> section, <span class="keywordtype">string</span> key, Action&lt;Context&gt; action)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Add(InputSection section, <span class="keywordtype">string</span> key, Action action) =&gt; Add(section, key, _ =&gt; action.Invoke());</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Add(InputSection section, <span class="keywordtype">string</span> key, Action&lt;Context&gt; action)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">InputAction</a>.IsInProgress())</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">if</span> (InputAction.IsInProgress())</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                CancelAddWaitTask();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                addWaitUntilTask = <span class="keyword">new</span> CancellationTokenSource();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                WaitUntilIsFinishProgress(addWaitUntilTask, () =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section].<a class="code hl_function" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a8f86aa7150c3e9e394ef61f503c2cb22">Add</a>(key, action)).Forget();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                WaitUntilIsFinishProgress(addWaitUntilTask, () =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section].Add(key, action)).Forget();</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section].<a class="code hl_function" href="../../d2/d8f/class_table.html#a29330bb38f022574ec3e63e9a8d3f491">Add</a>(key, action);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section].Add(key, action);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
-</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a9f4640cd99146b5a165d5e0a641ffa79">   61</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a9f4640cd99146b5a165d5e0a641ffa79">Remove</a>(<a class="code hl_enumeration" href="../../df/d95/namespace_inputs.html#a4d1eb49b43325e0bb7df7c3b7ab49d3c">InputSection</a> section, <span class="keywordtype">string</span> key)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Remove(InputSection section, <span class="keywordtype">string</span> key)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">InputAction</a>.IsInProgress())</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">if</span> (InputAction.IsInProgress())</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                CancelRemoveWaitTask();</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                removeWaitUntilTask = <span class="keyword">new</span> CancellationTokenSource();</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                WaitUntilIsFinishProgress(removeWaitUntilTask, () =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section]?.<a class="code hl_function" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a9f4640cd99146b5a165d5e0a641ffa79">Remove</a>(key)).Forget();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                WaitUntilIsFinishProgress(removeWaitUntilTask, () =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section]?.Remove(key)).Forget();</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section]?.<a class="code hl_function" href="../../d2/d8f/class_table.html#a96ae583f4f1b063c6f5802e106d9d6be">Remove</a>(key);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section]?.Remove(key);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
-</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        </div>
-<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a41255ab7cb885885169f088758bb2e30">   76</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a41255ab7cb885885169f088758bb2e30">SetActive</a>(<span class="keywordtype">bool</span> value)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetActive(<span class="keywordtype">bool</span> value)</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">if</span> (value)</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">InputAction</a>.Enable();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                InputAction.Enable();</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">InputAction</a>.Disable();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                InputAction.Disable();</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            }</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
-</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a88af11652fa6f0de76f2d11691beddf9">   88</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a88af11652fa6f0de76f2d11691beddf9">Clear</a>()</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Clear()</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        {</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            CancelAddWaitTask();</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            CancelRemoveWaitTask();</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.<a class="code hl_function" href="../../d2/d8f/class_table.html#aa5ceff8db5657ae3e7538277e4ed6f8d">Clear</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Clear();</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
-</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">private</span> async UniTaskVoid WaitUntilIsFinishProgress(CancellationTokenSource cts, Action callback)</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            await UniTask.WaitUntil(() =&gt; !<a class="code hl_property" href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">InputAction</a>.IsInProgress(), cancellationToken: cts.Token);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            await UniTask.WaitUntil(() =&gt; !InputAction.IsInProgress(), cancellationToken: cts.Token);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            callback?.Invoke();</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
@@ -229,36 +220,22 @@ $(function(){initNavTree('d2/d72/_input_action_entity_8cs_source.html','../../')
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            removeWaitUntilTask = <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        }</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> StartInvoke(<a class="code hl_typedef" href="../../df/d95/namespace_inputs.html#a481fe2563970c2f650a7e4e948cd67b7">Context</a> context) =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[<a class="code hl_enumeration" href="../../df/d95/namespace_inputs.html#a4d1eb49b43325e0bb7df7c3b7ab49d3c">InputSection</a>.Start]?.Invoke(context);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> PerformInvoke(<a class="code hl_typedef" href="../../df/d95/namespace_inputs.html#a481fe2563970c2f650a7e4e948cd67b7">Context</a> context) =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[<a class="code hl_enumeration" href="../../df/d95/namespace_inputs.html#a4d1eb49b43325e0bb7df7c3b7ab49d3c">InputSection</a>.Perform]?.Invoke(context); </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> CancelInvoke(<a class="code hl_typedef" href="../../df/d95/namespace_inputs.html#a481fe2563970c2f650a7e4e948cd67b7">Context</a> context) =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[<a class="code hl_enumeration" href="../../df/d95/namespace_inputs.html#a4d1eb49b43325e0bb7df7c3b7ab49d3c">InputSection</a>.Cancel]?.Invoke(context); </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> StartInvoke(Context context) =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[InputSection.Start]?.Invoke(context);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> PerformInvoke(Context context) =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[InputSection.Perform]?.Invoke(context); </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> CancelInvoke(Context context) =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[InputSection.Cancel]?.Invoke(context); </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
 </div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
 <div class="ttc" id="aclass_action_table_html"><div class="ttname"><a href="../../db/dcc/class_action_table.html">ActionTable</a></div><div class="ttdoc">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00067">ActionTable.cs:68</a></div></div>
 <div class="ttc" id="aclass_inputs_1_1_input_action_entity_html"><div class="ttname"><a href="../../d4/d55/class_inputs_1_1_input_action_entity.html">Inputs.InputActionEntity</a></div><div class="ttdef"><b>Definition</b> <a href="#l00013">InputActionEntity.cs:14</a></div></div>
-<div class="ttc" id="aclass_inputs_1_1_input_action_entity_html_a09e560f28e4081f64afba78f6ce59410"><div class="ttname"><a href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a09e560f28e4081f64afba78f6ce59410">Inputs.InputActionEntity.InputActionEntity</a></div><div class="ttdeci">InputActionEntity(InputAction inputAction)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">InputActionEntity.cs:28</a></div></div>
-<div class="ttc" id="aclass_inputs_1_1_input_action_entity_html_a0a1e9c9e030b566eb1f6ef412adb3594"><div class="ttname"><a href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a0a1e9c9e030b566eb1f6ef412adb3594">Inputs.InputActionEntity.InputAction</a></div><div class="ttdeci">InputAction InputAction</div><div class="ttdef"><b>Definition</b> <a href="#l00020">InputActionEntity.cs:20</a></div></div>
-<div class="ttc" id="aclass_inputs_1_1_input_action_entity_html_a3009506e6e0f92a493d4254d949f6620"><div class="ttname"><a href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a3009506e6e0f92a493d4254d949f6620">Inputs.InputActionEntity.IsPressed</a></div><div class="ttdeci">bool IsPressed</div><div class="ttdef"><b>Definition</b> <a href="#l00022">InputActionEntity.cs:22</a></div></div>
-<div class="ttc" id="aclass_inputs_1_1_input_action_entity_html_a41255ab7cb885885169f088758bb2e30"><div class="ttname"><a href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a41255ab7cb885885169f088758bb2e30">Inputs.InputActionEntity.SetActive</a></div><div class="ttdeci">void SetActive(bool value)</div><div class="ttdef"><b>Definition</b> <a href="#l00076">InputActionEntity.cs:76</a></div></div>
-<div class="ttc" id="aclass_inputs_1_1_input_action_entity_html_a4189800b21a6d616314dea308c0cff87"><div class="ttname"><a href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a4189800b21a6d616314dea308c0cff87">Inputs.InputActionEntity.Add</a></div><div class="ttdeci">void Add(InputSection section, string key, Action&lt; Context &gt; action)</div><div class="ttdef"><b>Definition</b> <a href="#l00046">InputActionEntity.cs:46</a></div></div>
-<div class="ttc" id="aclass_inputs_1_1_input_action_entity_html_a88af11652fa6f0de76f2d11691beddf9"><div class="ttname"><a href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a88af11652fa6f0de76f2d11691beddf9">Inputs.InputActionEntity.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition</b> <a href="#l00088">InputActionEntity.cs:88</a></div></div>
-<div class="ttc" id="aclass_inputs_1_1_input_action_entity_html_a8f86aa7150c3e9e394ef61f503c2cb22"><div class="ttname"><a href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a8f86aa7150c3e9e394ef61f503c2cb22">Inputs.InputActionEntity.Add</a></div><div class="ttdeci">void Add(InputSection section, string key, Action action)</div></div>
-<div class="ttc" id="aclass_inputs_1_1_input_action_entity_html_a9f4640cd99146b5a165d5e0a641ffa79"><div class="ttname"><a href="../../d4/d55/class_inputs_1_1_input_action_entity.html#a9f4640cd99146b5a165d5e0a641ffa79">Inputs.InputActionEntity.Remove</a></div><div class="ttdeci">void Remove(InputSection section, string key)</div><div class="ttdef"><b>Definition</b> <a href="#l00061">InputActionEntity.cs:61</a></div></div>
-<div class="ttc" id="aclass_inputs_1_1_input_action_entity_html_ac091f84fbc31edc48d46a34f50d1deb1"><div class="ttname"><a href="../../d4/d55/class_inputs_1_1_input_action_entity.html#ac091f84fbc31edc48d46a34f50d1deb1">Inputs.InputActionEntity.Bindings</a></div><div class="ttdeci">List&lt; string &gt; Bindings</div><div class="ttdef"><b>Definition</b> <a href="#l00021">InputActionEntity.cs:21</a></div></div>
 <div class="ttc" id="aclass_table_html"><div class="ttname"><a href="../../d2/d8f/class_table.html">Table</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00009">Table.cs:10</a></div></div>
-<div class="ttc" id="aclass_table_html_a29330bb38f022574ec3e63e9a8d3f491"><div class="ttname"><a href="../../d2/d8f/class_table.html#a29330bb38f022574ec3e63e9a8d3f491">Table.Add</a></div><div class="ttdeci">virtual void Add(TKey key, TValue value)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00060">Table.cs:60</a></div></div>
-<div class="ttc" id="aclass_table_html_a96ae583f4f1b063c6f5802e106d9d6be"><div class="ttname"><a href="../../d2/d8f/class_table.html#a96ae583f4f1b063c6f5802e106d9d6be">Table.Remove</a></div><div class="ttdeci">virtual bool Remove(TKey key)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00071">Table.cs:71</a></div></div>
-<div class="ttc" id="aclass_table_html_aa5ceff8db5657ae3e7538277e4ed6f8d"><div class="ttname"><a href="../../d2/d8f/class_table.html#aa5ceff8db5657ae3e7538277e4ed6f8d">Table.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00174">Table.cs:174</a></div></div>
 <div class="ttc" id="anamespace_inputs_html"><div class="ttname"><a href="../../df/d95/namespace_inputs.html">Inputs</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/ded/_action_type_8cs_source.html#l00001">ActionType.cs:2</a></div></div>
-<div class="ttc" id="anamespace_inputs_html_a481fe2563970c2f650a7e4e948cd67b7"><div class="ttname"><a href="../../df/d95/namespace_inputs.html#a481fe2563970c2f650a7e4e948cd67b7">Inputs.Context</a></div><div class="ttdeci">InputAction.CallbackContext Context</div><div class="ttdef"><b>Definition</b> <a href="#l00010">InputActionEntity.cs:10</a></div></div>
-<div class="ttc" id="anamespace_inputs_html_a4d1eb49b43325e0bb7df7c3b7ab49d3c"><div class="ttname"><a href="../../df/d95/namespace_inputs.html#a4d1eb49b43325e0bb7df7c3b7ab49d3c">Inputs.InputSection</a></div><div class="ttdeci">InputSection</div><div class="ttdef"><b>Definition</b> <a href="../../df/dbe/_input_section_8cs_source.html#l00003">InputSection.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><a class="el" href="../../dir_926e0e493f7d1e6c07fae87609bc66f7.html">Inputs</a></li><li class="navelem"><a class="el" href="../../d2/d72/_input_action_entity_8cs.html">InputActionEntity.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_c40579b2c0d396b8cf757809f483ab28.html">_Core</a></li><li class="navelem"><a class="el" href="../../dir_670cf5a0d06f59627a6a3e9f4b52c4b8.html">Managers</a></li><li class="navelem"><a class="el" href="../../dir_926e0e493f7d1e6c07fae87609bc66f7.html">Inputs</a></li><li class="navelem"><b>InputActionEntity.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

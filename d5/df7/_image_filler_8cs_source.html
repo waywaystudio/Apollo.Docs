@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/UI/ImageFiller.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/UI/ImageFiller.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d5/df7/_image_filler_8cs_source.html','../../'); initR
   <div class="headertitle"><div class="title">ImageFiller.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/df7/_image_filler_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>DG.Tweening;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine.UI;</div>
@@ -122,10 +123,9 @@ $(function(){initNavTree('d5/df7/_image_filler_8cs_source.html','../../'); initR
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d9/dba/class_observable.html">Observable&lt;float&gt;</a> TargetProgress { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">private</span> Func&lt;float&gt; MaxGetter { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#a4ef288c4cc383001549d7b246497b1e0">   22</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#a4ef288c4cc383001549d7b246497b1e0">Register</a>(<a class="code hl_class" href="../../d9/dba/class_observable.html">Observable&lt;float&gt;</a> targetProgress, Func&lt;float&gt; maxGetter)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Register(<a class="code hl_class" href="../../d9/dba/class_observable.html">Observable&lt;float&gt;</a> targetProgress, Func&lt;float&gt; maxGetter)</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">if</span> (isRegistered) <a class="code hl_function" href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#afa5b926ba7710d7414badc5cdb6e224f">Unregister</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">if</span> (isRegistered) Unregister();</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            TargetProgress   = targetProgress;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            MaxGetter        = maxGetter;</div>
@@ -133,26 +133,22 @@ $(function(){initNavTree('d5/df7/_image_filler_8cs_source.html','../../'); initR
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            progressKey      = GetInstanceID().ToString();</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            isRegistered     = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            targetProgress.<a class="code hl_function" href="../../d9/dba/class_observable.html#a1d65dfc7a1fe342a534af8f732a7e297">AddEvent</a>(progressKey, TryUpdateImage);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            targetProgress.AddEvent(progressKey, TryUpdateImage);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
-</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#a00a5223b6cdaf7e15607728c4f56a999">   35</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#a00a5223b6cdaf7e15607728c4f56a999">Register</a>(<a class="code hl_class" href="../../d2/def/class_time_trigger.html">TimeTrigger</a> timeTrigger)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Register(<a class="code hl_class" href="../../d2/def/class_time_trigger.html">TimeTrigger</a> timeTrigger)</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (isRegistered) <a class="code hl_function" href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#afa5b926ba7710d7414badc5cdb6e224f">Unregister</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (isRegistered) Unregister();</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            MaxGetter        = () =&gt; timeTrigger.<a class="code hl_property" href="../../d2/def/class_time_trigger.html#ae4453c9bd98cd3d71dccbb095ba6cca4">Duration</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            MaxGetter        = () =&gt; timeTrigger.Duration;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            image.fillAmount = timeTrigger.Progress.Value / MaxGetter.Invoke();</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            progressKey      = GetInstanceID().ToString();</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            isRegistered     = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            timeTrigger.<a class="code hl_property" href="../../d2/def/class_time_trigger.html#a4de5f91d18e82f53edfaf09cefc84398">Progress</a>.<a class="code hl_function" href="../../d9/dba/class_observable.html#a1d65dfc7a1fe342a534af8f732a7e297">AddEvent</a>(progressKey, TryUpdateImageByTimeTrigger);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            timeTrigger.Progress.AddEvent(progressKey, TryUpdateImageByTimeTrigger);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
-</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#afa5b926ba7710d7414badc5cdb6e224f">   47</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#afa5b926ba7710d7414badc5cdb6e224f">Unregister</a>()</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Unregister()</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            isRegistered     = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            image.fillAmount = 0f;</div>
@@ -163,9 +159,8 @@ $(function(){initNavTree('d5/df7/_image_filler_8cs_source.html','../../'); initR
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                updateTween = <span class="keyword">null</span>;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            TargetProgress?.<a class="code hl_function" href="../../d9/dba/class_observable.html#ad56bedff72853b508969e916ce4f0b40">RemoveEvent</a>(progressKey);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            TargetProgress?.RemoveEvent(progressKey);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
-</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> TryUpdateImage()</div>
@@ -204,7 +199,7 @@ $(function(){initNavTree('d5/df7/_image_filler_8cs_source.html','../../'); initR
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnDestroy()</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <a class="code hl_function" href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#afa5b926ba7710d7414badc5cdb6e224f">Unregister</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            Unregister();</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
@@ -218,15 +213,8 @@ $(function(){initNavTree('d5/df7/_image_filler_8cs_source.html','../../'); initR
 </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
 <div class="ttc" id="aclass_common_1_1_u_i_1_1_image_filler_html"><div class="ttname"><a href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html">Common.UI.ImageFiller</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">ImageFiller.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_u_i_1_1_image_filler_html_a00a5223b6cdaf7e15607728c4f56a999"><div class="ttname"><a href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#a00a5223b6cdaf7e15607728c4f56a999">Common.UI.ImageFiller.Register</a></div><div class="ttdeci">void Register(TimeTrigger timeTrigger)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">ImageFiller.cs:35</a></div></div>
-<div class="ttc" id="aclass_common_1_1_u_i_1_1_image_filler_html_a4ef288c4cc383001549d7b246497b1e0"><div class="ttname"><a href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#a4ef288c4cc383001549d7b246497b1e0">Common.UI.ImageFiller.Register</a></div><div class="ttdeci">void Register(Observable&lt; float &gt; targetProgress, Func&lt; float &gt; maxGetter)</div><div class="ttdef"><b>Definition</b> <a href="#l00022">ImageFiller.cs:22</a></div></div>
-<div class="ttc" id="aclass_common_1_1_u_i_1_1_image_filler_html_afa5b926ba7710d7414badc5cdb6e224f"><div class="ttname"><a href="../../de/d99/class_common_1_1_u_i_1_1_image_filler.html#afa5b926ba7710d7414badc5cdb6e224f">Common.UI.ImageFiller.Unregister</a></div><div class="ttdeci">void Unregister()</div><div class="ttdef"><b>Definition</b> <a href="#l00047">ImageFiller.cs:47</a></div></div>
 <div class="ttc" id="aclass_observable_html"><div class="ttname"><a href="../../d9/dba/class_observable.html">Observable</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d11/_observable_8cs_source.html#l00005">Observable.cs:6</a></div></div>
-<div class="ttc" id="aclass_observable_html_a1d65dfc7a1fe342a534af8f732a7e297"><div class="ttname"><a href="../../d9/dba/class_observable.html#a1d65dfc7a1fe342a534af8f732a7e297">Observable.AddEvent</a></div><div class="ttdeci">void AddEvent(string key, Action action)</div></div>
-<div class="ttc" id="aclass_observable_html_ad56bedff72853b508969e916ce4f0b40"><div class="ttname"><a href="../../d9/dba/class_observable.html#ad56bedff72853b508969e916ce4f0b40">Observable.RemoveEvent</a></div><div class="ttdeci">void RemoveEvent(Action action)</div></div>
 <div class="ttc" id="aclass_time_trigger_html"><div class="ttname"><a href="../../d2/def/class_time_trigger.html">TimeTrigger</a></div><div class="ttdoc">https://www.notion.so/salinger/TimeTrigger-e625551c3918450f961e1eebfe4b6ce1?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d37/_time_trigger_8cs_source.html#l00010">TimeTrigger.cs:11</a></div></div>
-<div class="ttc" id="aclass_time_trigger_html_a4de5f91d18e82f53edfaf09cefc84398"><div class="ttname"><a href="../../d2/def/class_time_trigger.html#a4de5f91d18e82f53edfaf09cefc84398">TimeTrigger.Progress</a></div><div class="ttdeci">Observable&lt; float &gt; Progress</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d37/_time_trigger_8cs_source.html#l00028">TimeTrigger.cs:28</a></div></div>
-<div class="ttc" id="aclass_time_trigger_html_ae4453c9bd98cd3d71dccbb095ba6cca4"><div class="ttname"><a href="../../d2/def/class_time_trigger.html#ae4453c9bd98cd3d71dccbb095ba6cca4">TimeTrigger.Duration</a></div><div class="ttdeci">float Duration</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d37/_time_trigger_8cs_source.html#l00021">TimeTrigger.cs:22</a></div></div>
 <div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_u_i_html"><div class="ttname"><a href="../../d1/ddd/namespace_common_1_1_u_i.html">Common.UI</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/ddf/_effect_canvas_8cs_source.html#l00007">EffectCanvas.cs:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -234,7 +222,7 @@ $(function(){initNavTree('d5/df7/_image_filler_8cs_source.html','../../'); initR
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><a class="el" href="../../d5/df7/_image_filler_8cs.html">ImageFiller.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><b>ImageFiller.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Challenge/ChallengeCameraDirector.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Challenge/ChallengeCameraDirector.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d2/d17/_challenge_camera_director_8cs_source.html','..
   <div class="headertitle"><div class="title">ChallengeCameraDirector.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d2/d17/_challenge_camera_director_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../dd/d35/namespace_cameras.html">Cameras</a>;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../dd/d35/namespace_cameras.html">Cameras</a>;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d9/d6d/namespace_challenge.html">Challenge</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
@@ -108,30 +109,24 @@ $(function(){initNavTree('d2/d17/_challenge_camera_director_8cs_source.html','..
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="../../d1/d31/class_challenge_1_1_challenge_camera_director.html">    5</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d1/d31/class_challenge_1_1_challenge_camera_director.html">ChallengeCameraDirector</a> : <a class="code hl_class" href="../../d7/d42/class_cameras_1_1_camera_director.html">CameraDirector</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="comment">// For Dev Method</span></div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d1/d31/class_challenge_1_1_challenge_camera_director.html#ad226a3e18e217b8ece9b514f7ade2625">    8</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d31/class_challenge_1_1_challenge_camera_director.html#ad226a3e18e217b8ece9b514f7ade2625">ToggleCamera</a>()</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ToggleCamera()</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../d7/d42/class_cameras_1_1_camera_director.html#a5b78a718cd7e6f0f459e330dce580395">CurrentCameraType</a> == <a class="code hl_enumeration" href="../../dd/da0/_virtual_camera_type_8cs.html#aa57945740cd254803023301988941fc4">VirtualCameraType</a>.Dev)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keywordflow">if</span> (CurrentCameraType == VirtualCameraType.Dev)</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                <a class="code hl_function" href="../../d7/d42/class_cameras_1_1_camera_director.html#aa15a3eba7c4c690119b12075b6c849d6">ChangeCamera</a>(<a class="code hl_enumeration" href="../../dd/da0/_virtual_camera_type_8cs.html#aa57945740cd254803023301988941fc4">VirtualCameraType</a>.Player);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                ChangeCamera(VirtualCameraType.Player);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_property" href="../../d7/d42/class_cameras_1_1_camera_director.html#a5b78a718cd7e6f0f459e330dce580395">CurrentCameraType</a> == <a class="code hl_enumeration" href="../../dd/da0/_virtual_camera_type_8cs.html#aa57945740cd254803023301988941fc4">VirtualCameraType</a>.Player)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (CurrentCameraType == VirtualCameraType.Player)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <a class="code hl_function" href="../../d7/d42/class_cameras_1_1_camera_director.html#aa15a3eba7c4c690119b12075b6c849d6">ChangeCamera</a>(<a class="code hl_enumeration" href="../../dd/da0/_virtual_camera_type_8cs.html#aa57945740cd254803023301988941fc4">VirtualCameraType</a>.Dev);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                ChangeCamera(VirtualCameraType.Dev);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            }</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
-</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
 </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
-<div class="ttc" id="a_virtual_camera_type_8cs_html_aa57945740cd254803023301988941fc4"><div class="ttname"><a href="../../dd/da0/_virtual_camera_type_8cs.html#aa57945740cd254803023301988941fc4">VirtualCameraType</a></div><div class="ttdeci">VirtualCameraType</div><div class="ttdef"><b>Definition</b> <a href="../../dd/da0/_virtual_camera_type_8cs_source.html#l00001">VirtualCameraType.cs:2</a></div></div>
 <div class="ttc" id="aclass_cameras_1_1_camera_director_html"><div class="ttname"><a href="../../d7/d42/class_cameras_1_1_camera_director.html">Cameras.CameraDirector</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/ddc/_camera_director_8cs_source.html#l00008">CameraDirector.cs:9</a></div></div>
-<div class="ttc" id="aclass_cameras_1_1_camera_director_html_a5b78a718cd7e6f0f459e330dce580395"><div class="ttname"><a href="../../d7/d42/class_cameras_1_1_camera_director.html#a5b78a718cd7e6f0f459e330dce580395">Cameras.CameraDirector.CurrentCameraType</a></div><div class="ttdeci">VirtualCameraType CurrentCameraType</div><div class="ttdef"><b>Definition</b> <a href="../../d0/ddc/_camera_director_8cs_source.html#l00020">CameraDirector.cs:20</a></div></div>
-<div class="ttc" id="aclass_cameras_1_1_camera_director_html_aa15a3eba7c4c690119b12075b6c849d6"><div class="ttname"><a href="../../d7/d42/class_cameras_1_1_camera_director.html#aa15a3eba7c4c690119b12075b6c849d6">Cameras.CameraDirector.ChangeCamera</a></div><div class="ttdeci">void ChangeCamera(VirtualCameraType cameraType, Action onBlendComplete=null)</div><div class="ttdef"><b>Definition</b> <a href="../../d0/ddc/_camera_director_8cs_source.html#l00050">CameraDirector.cs:50</a></div></div>
 <div class="ttc" id="aclass_challenge_1_1_challenge_camera_director_html"><div class="ttname"><a href="../../d1/d31/class_challenge_1_1_challenge_camera_director.html">Challenge.ChallengeCameraDirector</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">ChallengeCameraDirector.cs:6</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_challenge_camera_director_html_ad226a3e18e217b8ece9b514f7ade2625"><div class="ttname"><a href="../../d1/d31/class_challenge_1_1_challenge_camera_director.html#ad226a3e18e217b8ece9b514f7ade2625">Challenge.ChallengeCameraDirector.ToggleCamera</a></div><div class="ttdeci">void ToggleCamera()</div><div class="ttdef"><b>Definition</b> <a href="#l00008">ChallengeCameraDirector.cs:8</a></div></div>
 <div class="ttc" id="anamespace_cameras_html"><div class="ttname"><a href="../../dd/d35/namespace_cameras.html">Cameras</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/ddc/_camera_director_8cs_source.html#l00006">CameraDirector.cs:7</a></div></div>
 <div class="ttc" id="anamespace_challenge_html"><div class="ttname"><a href="../../d9/d6d/namespace_challenge.html">Challenge</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d94/_dungeon_section_type_8cs_source.html#l00001">DungeonSectionType.cs:2</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -139,7 +134,7 @@ $(function(){initNavTree('d2/d17/_challenge_camera_director_8cs_source.html','..
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../d2/d17/_challenge_camera_director_8cs.html">ChallengeCameraDirector.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><b>ChallengeCameraDirector.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

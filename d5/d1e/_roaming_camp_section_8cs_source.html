@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Lobby/Camps/Scenarios/RoamingCampSection.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Lobby/Camps/Scenarios/RoamingCampSection.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d5/d1e/_roaming_camp_section_8cs_source.html','../../'
   <div class="headertitle"><div class="title">RoamingCampSection.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/d1e/_roaming_camp_section_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d9/d43/namespace_lobby_1_1_props.html">Lobby.Props</a>;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d9/d43/namespace_lobby_1_1_props.html">Lobby.Props</a>;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d9/d94/namespace_lobby_1_1_camps_1_1_scenarios.html">Lobby.Camps.Scenarios</a></div>
@@ -111,83 +112,70 @@ $(function(){initNavTree('d5/d1e/_roaming_camp_section_8cs_source.html','../../'
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keyword">private</span> readonly <a class="code hl_class" href="../../d2/def/class_time_trigger.html">TimeTrigger</a> dredExitDelayTimer = <span class="keyword">new</span>();</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d1/d7e/class_lobby_1_1_props_1_1_hell_gate.html">HellGate</a> path1;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html#a9c10aceb51f42f4f196bca64e970cdf9">   11</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <a class="code hl_enumeration" href="../../dc/dd1/namespace_lobby.html#a148ec3edb70a385d0c4b9b31fe988e51">CampSectionType</a> <a class="code hl_property" href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html#a9c10aceb51f42f4f196bca64e970cdf9">SectionType</a> =&gt; <a class="code hl_enumeration" href="../../dc/dd1/namespace_lobby.html#a148ec3edb70a385d0c4b9b31fe988e51">CampSectionType</a>.Roaming;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html#af39e7e3695c495b8e3270f354c682696">   12</a></span>        <span class="keyword">public</span> Vector3 <a class="code hl_property" href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html#af39e7e3695c495b8e3270f354c682696">ExitPosition</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">public</span> <span class="keyword">override</span> CampSectionType SectionType =&gt; CampSectionType.Roaming;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> Vector3 ExitPosition { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html#a85b6b13558da9b35e46d68b496da9646">   15</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html#a85b6b13558da9b35e46d68b496da9646">Initialize</a>(<a class="code hl_class" href="../../d1/d6e/class_lobby_1_1_camps_1_1_camp_scenario.html">CampScenario</a> scenario)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Initialize(<a class="code hl_class" href="../../d1/d6e/class_lobby_1_1_camps_1_1_camp_scenario.html">CampScenario</a> scenario)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            base.Initialize(scenario);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            path1 = <a class="code hl_typedef" href="../../d8/d11/_camp_map_8cs.html#af3e343bb7a5a6bf80e88bc9ba6e6bc3b">Map</a>.EnterGate1;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            path1 = Map.EnterGate1;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            Sections</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Active, <span class="stringliteral">&quot;ShowCombatGate&quot;</span>, () =&gt; path1.<a class="code hl_function" href="../../d1/d7e/class_lobby_1_1_props_1_1_hell_gate.html#a7446bf9848568abcb5d5ecd07b4d02dd">TryActiveInteraction</a>())</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Complete, <span class="stringliteral">&quot;NeutralizeInput&quot;</span>, NeutralizeInput)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Complete, <span class="stringliteral">&quot;CancelDredBehaviour&quot;</span>, CancelDredBehaviour)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Complete, <span class="stringliteral">&quot;ExitDred&quot;</span>, dredExitDelayTimer.Play)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                .Add(<a class="code hl_enumeration" href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a>.Dispose, <span class="stringliteral">&quot;DisposeDredExitDelayTimer&quot;</span>, dredExitDelayTimer.Dispose)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                .Add(Section.Active, <span class="stringliteral">&quot;ShowCombatGate&quot;</span>, () =&gt; path1.TryActiveInteraction())</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                .Add(Section.Complete, <span class="stringliteral">&quot;NeutralizeInput&quot;</span>, NeutralizeInput)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                .Add(Section.Complete, <span class="stringliteral">&quot;CancelDredBehaviour&quot;</span>, CancelDredBehaviour)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                .Add(Section.Complete, <span class="stringliteral">&quot;ExitDred&quot;</span>, dredExitDelayTimer.Play)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;DisposeDredExitDelayTimer&quot;</span>, dredExitDelayTimer.Dispose)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                ;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            dredExitDelayTimer</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                .SetDuration(0.5f)</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                .AddCallBack(<span class="stringliteral">&quot;ExitDred&quot;</span>, ExitDred);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            path1.<a class="code hl_function" href="../../d1/d7e/class_lobby_1_1_props_1_1_hell_gate.html#ac357e0bb66dacd19918309ee790bbb0f">Initialize</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            path1.Initialize(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
-</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> NeutralizeInput()</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_class" href="../../d7/d34/class_lobby_1_1_lobby_director.html">LobbyDirector</a>.<a class="code hl_property" href="../../d7/d34/class_lobby_1_1_lobby_director.html#a755a3ddd718dc3bed0319c5a2899fa4e">Input</a>.<a class="code hl_function" href="../../dc/d96/class_inputs_1_1_input_director.html#aed82d039cb981a13e322bfbc817c5f90">SetPlayerActivity</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_class" href="../../d7/d34/class_lobby_1_1_lobby_director.html">LobbyDirector</a>.Input.SetPlayerActivity(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            LobbyDirector.Dred.Controller.DirectValue = Vector2.zero;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> CancelDredBehaviour()</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d34/class_lobby_1_1_lobby_director.html">LobbyDirector</a>.<a class="code hl_property" href="../../d7/d34/class_lobby_1_1_lobby_director.html#aae06c8f3238112dc26200a767f0b5c90">Dred</a>.CurrentBehaviour.HasComponent())</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d7/d34/class_lobby_1_1_lobby_director.html">LobbyDirector</a>.Dred.CurrentBehaviour.HasComponent())</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <a class="code hl_class" href="../../d7/d34/class_lobby_1_1_lobby_director.html">LobbyDirector</a>.<a class="code hl_property" href="../../d7/d34/class_lobby_1_1_lobby_director.html#aae06c8f3238112dc26200a767f0b5c90">Dred</a>.CurrentBehaviour.Cancel();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <a class="code hl_class" href="../../d7/d34/class_lobby_1_1_lobby_director.html">LobbyDirector</a>.Dred.CurrentBehaviour.Cancel();</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }            </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> ExitDred()</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            var dred = <a class="code hl_class" href="../../d7/d34/class_lobby_1_1_lobby_director.html">LobbyDirector</a>.<a class="code hl_property" href="../../d7/d34/class_lobby_1_1_lobby_director.html#aae06c8f3238112dc26200a767f0b5c90">Dred</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            var dred = <a class="code hl_class" href="../../d7/d34/class_lobby_1_1_lobby_director.html">LobbyDirector</a>.Dred;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            dred.RotateInstant(<a class="code hl_property" href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html#af39e7e3695c495b8e3270f354c682696">ExitPosition</a>);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            dred.Run(<a class="code hl_property" href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html#af39e7e3695c495b8e3270f354c682696">ExitPosition</a>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            dred.RotateInstant(ExitPosition);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            dred.Run(ExitPosition);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
 </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
-<div class="ttc" id="a_camp_map_8cs_html_af3e343bb7a5a6bf80e88bc9ba6e6bc3b"><div class="ttname"><a href="../../d8/d11/_camp_map_8cs.html#af3e343bb7a5a6bf80e88bc9ba6e6bc3b">Map</a></div><div class="ttdeci">Common.Maps.Map Map</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d11/_camp_map_8cs_source.html#l00004">CampMap.cs:4</a></div></div>
-<div class="ttc" id="a_section_8cs_html_aa2bc2fd5a40cdb0c40963e6fe6a24cce"><div class="ttname"><a href="../../d5/d0d/_section_8cs.html#aa2bc2fd5a40cdb0c40963e6fe6a24cce">Section</a></div><div class="ttdeci">Section</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d0d/_section_8cs_source.html#l00001">Section.cs:2</a></div></div>
-<div class="ttc" id="aclass_inputs_1_1_input_director_html_aed82d039cb981a13e322bfbc817c5f90"><div class="ttname"><a href="../../dc/d96/class_inputs_1_1_input_director.html#aed82d039cb981a13e322bfbc817c5f90">Inputs.InputDirector.SetPlayerActivity</a></div><div class="ttdeci">void SetPlayerActivity(bool activity, bool includeInteraction=true)</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d52/_input_director_8cs_source.html#l00026">InputDirector.cs:26</a></div></div>
 <div class="ttc" id="aclass_lobby_1_1_camps_1_1_camp_scenario_html"><div class="ttname"><a href="../../d1/d6e/class_lobby_1_1_camps_1_1_camp_scenario.html">Lobby.Camps.CampScenario</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/dbf/_camp_scenario_8cs_source.html#l00005">CampScenario.cs:6</a></div></div>
 <div class="ttc" id="aclass_lobby_1_1_camps_1_1_camp_section_html"><div class="ttname"><a href="../../de/d3c/class_lobby_1_1_camps_1_1_camp_section.html">Lobby.Camps.CampSection</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/dec/_camp_section_8cs_source.html#l00005">CampSection.cs:6</a></div></div>
 <div class="ttc" id="aclass_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section_html"><div class="ttname"><a href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html">Lobby.Camps.Scenarios.RoamingCampSection</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">RoamingCampSection.cs:7</a></div></div>
-<div class="ttc" id="aclass_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section_html_a85b6b13558da9b35e46d68b496da9646"><div class="ttname"><a href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html#a85b6b13558da9b35e46d68b496da9646">Lobby.Camps.Scenarios.RoamingCampSection.Initialize</a></div><div class="ttdeci">override void Initialize(CampScenario scenario)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">RoamingCampSection.cs:15</a></div></div>
-<div class="ttc" id="aclass_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section_html_a9c10aceb51f42f4f196bca64e970cdf9"><div class="ttname"><a href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html#a9c10aceb51f42f4f196bca64e970cdf9">Lobby.Camps.Scenarios.RoamingCampSection.SectionType</a></div><div class="ttdeci">override CampSectionType SectionType</div><div class="ttdef"><b>Definition</b> <a href="#l00011">RoamingCampSection.cs:11</a></div></div>
-<div class="ttc" id="aclass_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section_html_af39e7e3695c495b8e3270f354c682696"><div class="ttname"><a href="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.html#af39e7e3695c495b8e3270f354c682696">Lobby.Camps.Scenarios.RoamingCampSection.ExitPosition</a></div><div class="ttdeci">Vector3 ExitPosition</div><div class="ttdef"><b>Definition</b> <a href="#l00012">RoamingCampSection.cs:12</a></div></div>
 <div class="ttc" id="aclass_lobby_1_1_lobby_director_html"><div class="ttname"><a href="../../d7/d34/class_lobby_1_1_lobby_director.html">Lobby.LobbyDirector</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9f/_lobby_director_8cs_source.html#l00008">LobbyDirector.cs:9</a></div></div>
-<div class="ttc" id="aclass_lobby_1_1_lobby_director_html_a755a3ddd718dc3bed0319c5a2899fa4e"><div class="ttname"><a href="../../d7/d34/class_lobby_1_1_lobby_director.html#a755a3ddd718dc3bed0319c5a2899fa4e">Lobby.LobbyDirector.Input</a></div><div class="ttdeci">static LobbyInputDirector Input</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9f/_lobby_director_8cs_source.html#l00028">LobbyDirector.cs:28</a></div></div>
-<div class="ttc" id="aclass_lobby_1_1_lobby_director_html_aae06c8f3238112dc26200a767f0b5c90"><div class="ttname"><a href="../../d7/d34/class_lobby_1_1_lobby_director.html#aae06c8f3238112dc26200a767f0b5c90">Lobby.LobbyDirector.Dred</a></div><div class="ttdeci">static Dred Dred</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9f/_lobby_director_8cs_source.html#l00035">LobbyDirector.cs:35</a></div></div>
 <div class="ttc" id="aclass_lobby_1_1_props_1_1_hell_gate_html"><div class="ttname"><a href="../../d1/d7e/class_lobby_1_1_props_1_1_hell_gate.html">Lobby.Props.HellGate</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d9e/_hell_gate_8cs_source.html#l00008">HellGate.cs:9</a></div></div>
-<div class="ttc" id="aclass_lobby_1_1_props_1_1_hell_gate_html_a7446bf9848568abcb5d5ecd07b4d02dd"><div class="ttname"><a href="../../d1/d7e/class_lobby_1_1_props_1_1_hell_gate.html#a7446bf9848568abcb5d5ecd07b4d02dd">Lobby.Props.HellGate.TryActiveInteraction</a></div><div class="ttdeci">void TryActiveInteraction()</div><div class="ttdef"><b>Definition</b> <a href="../../db/d9e/_hell_gate_8cs_source.html#l00037">HellGate.cs:37</a></div></div>
-<div class="ttc" id="aclass_lobby_1_1_props_1_1_hell_gate_html_ac357e0bb66dacd19918309ee790bbb0f"><div class="ttname"><a href="../../d1/d7e/class_lobby_1_1_props_1_1_hell_gate.html#ac357e0bb66dacd19918309ee790bbb0f">Lobby.Props.HellGate.Initialize</a></div><div class="ttdeci">void Initialize(RoamingCampSection section)</div><div class="ttdef"><b>Definition</b> <a href="../../db/d9e/_hell_gate_8cs_source.html#l00022">HellGate.cs:22</a></div></div>
 <div class="ttc" id="aclass_time_trigger_html"><div class="ttname"><a href="../../d2/def/class_time_trigger.html">TimeTrigger</a></div><div class="ttdoc">https://www.notion.so/salinger/TimeTrigger-e625551c3918450f961e1eebfe4b6ce1?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d37/_time_trigger_8cs_source.html#l00010">TimeTrigger.cs:11</a></div></div>
 <div class="ttc" id="anamespace_lobby_1_1_camps_1_1_scenarios_html"><div class="ttname"><a href="../../d9/d94/namespace_lobby_1_1_camps_1_1_scenarios.html">Lobby.Camps.Scenarios</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/ddf/_dispose_camp_section_8cs_source.html#l00003">DisposeCampSection.cs:4</a></div></div>
 <div class="ttc" id="anamespace_lobby_1_1_props_html"><div class="ttname"><a href="../../d9/d43/namespace_lobby_1_1_props.html">Lobby.Props</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d9e/_hell_gate_8cs_source.html#l00006">HellGate.cs:7</a></div></div>
-<div class="ttc" id="anamespace_lobby_html_a148ec3edb70a385d0c4b9b31fe988e51"><div class="ttname"><a href="../../dc/dd1/namespace_lobby.html#a148ec3edb70a385d0c4b9b31fe988e51">Lobby.CampSectionType</a></div><div class="ttdeci">CampSectionType</div><div class="ttdef"><b>Definition</b> <a href="../../db/df5/_camp_section_type_8cs_source.html#l00003">CampSectionType.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_cc5575b2b52e1a4c4e6baf43258babe2.html">Lobby</a></li><li class="navelem"><a class="el" href="../../dir_f2d4bd7f5964cb336133b2e6f050f761.html">Camps</a></li><li class="navelem"><a class="el" href="../../dir_9cbb93782846557e532f0f8c5eeab692.html">Scenarios</a></li><li class="navelem"><a class="el" href="../../d5/d1e/_roaming_camp_section_8cs.html">RoamingCampSection.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_cc5575b2b52e1a4c4e6baf43258babe2.html">Lobby</a></li><li class="navelem"><a class="el" href="../../dir_f2d4bd7f5964cb336133b2e6f050f761.html">Camps</a></li><li class="navelem"><a class="el" href="../../dir_9cbb93782846557e532f0f8c5eeab692.html">Scenarios</a></li><li class="navelem"><b>RoamingCampSection.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

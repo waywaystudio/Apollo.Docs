@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/_Protocol/_Component/ColliderEventHandler.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/_Protocol/_Component/ColliderEventHandler.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d4/d5f/_collider_event_handler_8cs_source.html','../..
   <div class="headertitle"><div class="title">ColliderEventHandler.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d4/d5f/_collider_event_handler_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d6/dee/namespace_common.html">Common</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
@@ -110,42 +111,36 @@ $(function(){initNavTree('d4/d5f/_collider_event_handler_8cs_source.html','../..
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keyword">private</span> Collider model;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a4bb8b1bd266c9a4ad47627fe93689b29">   10</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../dc/db1/class_condition_table.html">ConditionTable&lt;GameObject&gt;</a> <a class="code hl_property" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a4bb8b1bd266c9a4ad47627fe93689b29">Filter</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a56acb6106a3bd54482c47464ca19464d">   11</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;GameObject&gt;</a> <a class="code hl_property" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a56acb6106a3bd54482c47464ca19464d">OnEnter</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a0d366bc71348f1a978c445852024920e">   12</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;GameObject&gt;</a> <a class="code hl_property" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a0d366bc71348f1a978c445852024920e">OnExit</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a0350a37f76924dc360c4131c443260a0">   13</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable</a> <a class="code hl_property" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a0350a37f76924dc360c4131c443260a0">OnDisabled</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a52d7f3938e804f95ff45549ac1e6dc12">   14</a></span>        <span class="keyword">public</span> Collider <a class="code hl_property" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a52d7f3938e804f95ff45549ac1e6dc12">Model</a> =&gt; model ??= GetComponent&lt;Collider&gt;();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../dc/db1/class_condition_table.html">ConditionTable&lt;GameObject&gt;</a> Filter { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;GameObject&gt;</a> OnEnter { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;GameObject&gt;</a> OnExit { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable</a> OnDisabled { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">public</span> Collider Model =&gt; model ??= GetComponent&lt;Collider&gt;();</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnTriggerEnter(Collider other)</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a4bb8b1bd266c9a4ad47627fe93689b29">Filter</a>.HasFalse(other.gameObject)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">if</span> (Filter.HasFalse(other.gameObject)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <a class="code hl_property" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a56acb6106a3bd54482c47464ca19464d">OnEnter</a>.Invoke(other.gameObject);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            OnEnter.Invoke(other.gameObject);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        }</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnTriggerExit(Collider other)</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a4bb8b1bd266c9a4ad47627fe93689b29">Filter</a>.HasFalse(other.gameObject)) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">if</span> (Filter.HasFalse(other.gameObject)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <a class="code hl_property" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a0d366bc71348f1a978c445852024920e">OnExit</a>.Invoke(other.gameObject);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            OnExit.Invoke(other.gameObject);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnDisable()</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_property" href="../../d9/df8/class_common_1_1_collider_event_handler.html#a0350a37f76924dc360c4131c443260a0">OnDisabled</a>.<a class="code hl_function" href="../../db/dcc/class_action_table.html#a6a6f404afd5039c3252ba21ce53aaa39">Invoke</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            OnDisabled.Invoke();</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
 <div class="ttc" id="aclass_action_table_html"><div class="ttname"><a href="../../db/dcc/class_action_table.html">ActionTable</a></div><div class="ttdoc">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00067">ActionTable.cs:68</a></div></div>
-<div class="ttc" id="aclass_action_table_html_a6a6f404afd5039c3252ba21ce53aaa39"><div class="ttname"><a href="../../db/dcc/class_action_table.html#a6a6f404afd5039c3252ba21ce53aaa39">ActionTable.Invoke</a></div><div class="ttdeci">void Invoke()</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00036">ActionTable.cs:36</a></div></div>
 <div class="ttc" id="aclass_common_1_1_collider_event_handler_html"><div class="ttname"><a href="../../d9/df8/class_common_1_1_collider_event_handler.html">Common.ColliderEventHandler</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">ColliderEventHandler.cs:7</a></div></div>
-<div class="ttc" id="aclass_common_1_1_collider_event_handler_html_a0350a37f76924dc360c4131c443260a0"><div class="ttname"><a href="../../d9/df8/class_common_1_1_collider_event_handler.html#a0350a37f76924dc360c4131c443260a0">Common.ColliderEventHandler.OnDisabled</a></div><div class="ttdeci">ActionTable OnDisabled</div><div class="ttdef"><b>Definition</b> <a href="#l00013">ColliderEventHandler.cs:13</a></div></div>
-<div class="ttc" id="aclass_common_1_1_collider_event_handler_html_a0d366bc71348f1a978c445852024920e"><div class="ttname"><a href="../../d9/df8/class_common_1_1_collider_event_handler.html#a0d366bc71348f1a978c445852024920e">Common.ColliderEventHandler.OnExit</a></div><div class="ttdeci">ActionTable&lt; GameObject &gt; OnExit</div><div class="ttdef"><b>Definition</b> <a href="#l00012">ColliderEventHandler.cs:12</a></div></div>
-<div class="ttc" id="aclass_common_1_1_collider_event_handler_html_a4bb8b1bd266c9a4ad47627fe93689b29"><div class="ttname"><a href="../../d9/df8/class_common_1_1_collider_event_handler.html#a4bb8b1bd266c9a4ad47627fe93689b29">Common.ColliderEventHandler.Filter</a></div><div class="ttdeci">ConditionTable&lt; GameObject &gt; Filter</div><div class="ttdef"><b>Definition</b> <a href="#l00010">ColliderEventHandler.cs:10</a></div></div>
-<div class="ttc" id="aclass_common_1_1_collider_event_handler_html_a52d7f3938e804f95ff45549ac1e6dc12"><div class="ttname"><a href="../../d9/df8/class_common_1_1_collider_event_handler.html#a52d7f3938e804f95ff45549ac1e6dc12">Common.ColliderEventHandler.Model</a></div><div class="ttdeci">Collider Model</div><div class="ttdef"><b>Definition</b> <a href="#l00014">ColliderEventHandler.cs:14</a></div></div>
-<div class="ttc" id="aclass_common_1_1_collider_event_handler_html_a56acb6106a3bd54482c47464ca19464d"><div class="ttname"><a href="../../d9/df8/class_common_1_1_collider_event_handler.html#a56acb6106a3bd54482c47464ca19464d">Common.ColliderEventHandler.OnEnter</a></div><div class="ttdeci">ActionTable&lt; GameObject &gt; OnEnter</div><div class="ttdef"><b>Definition</b> <a href="#l00011">ColliderEventHandler.cs:11</a></div></div>
 <div class="ttc" id="aclass_condition_table_html"><div class="ttname"><a href="../../dc/db1/class_condition_table.html">ConditionTable</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6d/_condition_table_8cs_source.html#l00076">ConditionTable.cs:77</a></div></div>
 <div class="ttc" id="anamespace_common_html"><div class="ttname"><a href="../../d6/dee/namespace_common.html">Common</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/daf/_animation_player_8cs_source.html#l00010">AnimationPlayer.cs:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -153,7 +148,7 @@ $(function(){initNavTree('d4/d5f/_collider_event_handler_8cs_source.html','../..
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_547b28521cdc02a37de6858d1bab3178.html">_Component</a></li><li class="navelem"><a class="el" href="../../d4/d5f/_collider_event_handler_8cs.html">ColliderEventHandler.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_f5294aa7f9645d8bd3a1b06c324b7586.html">_Protocol</a></li><li class="navelem"><a class="el" href="../../dir_547b28521cdc02a37de6858d1bab3178.html">_Component</a></li><li class="navelem"><b>ColliderEventHandler.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

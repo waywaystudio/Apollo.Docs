@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Systems/DetectModel.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Systems/DetectModel.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d4/ded/_detect_model_8cs_source.html','../../'); initR
   <div class="headertitle"><div class="title">DetectModel.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d4/ded/_detect_model_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -123,18 +124,15 @@ $(function(){initNavTree('d4/ded/_detect_model_8cs_source.html','../../'); initR
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">private</span> RaycastHit[] RayBuffer =&gt; rayBuffer ??= <span class="keyword">new</span> RaycastHit[bufferCount];</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">private</span> List&lt;GameObject&gt; ObjectList =&gt; objectList ??= <span class="keyword">new</span> List&lt;GameObject&gt;(bufferCount);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#af027f663e9be2521d27f3e42c9e4f828">   22</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#af027f663e9be2521d27f3e42c9e4f828">DetectModel</a>(Transform master, <span class="keywordtype">int</span> bufferCount = 32)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">DetectModel</a>(Transform master, <span class="keywordtype">int</span> bufferCount = 32)</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            this.master      = master;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            this.bufferCount = bufferCount;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
-</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#adcca88d710cecd78f378f3936d3fcafb">   28</a></span>        <span class="keyword">public</span> List&lt;T&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#adcca88d710cecd78f378f3936d3fcafb">Get&lt;T&gt;</a>(<a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">public</span> List&lt;T&gt; Get&lt;T&gt;(<a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property)</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            var objects = <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#ae559036ad61c4ac82eedca2f1f3a95c9">GetObjects</a>(property);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            var objects = GetObjects(property);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            var result = <span class="keyword">new</span> List&lt;T&gt;();</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (objects.IsNullOrEmpty()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
@@ -150,12 +148,10 @@ $(function(){initNavTree('d4/ded/_detect_model_8cs_source.html','../../'); initR
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
-</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        </div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a6a4eddb50ee75cb3168b35886fc175b8">   47</a></span>        <span class="keyword">public</span> List&lt;T&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#adcca88d710cecd78f378f3936d3fcafb">Get&lt;T&gt;</a>(<a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property, Predicate&lt;T&gt; filter)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">public</span> List&lt;T&gt; Get&lt;T&gt;(<a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property, Predicate&lt;T&gt; filter)</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            var objects = <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#ae559036ad61c4ac82eedca2f1f3a95c9">GetObjects</a>(property);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            var objects = GetObjects(property);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            var result = <span class="keyword">new</span> List&lt;T&gt;();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">if</span> (objects.IsNullOrEmpty()) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
@@ -171,62 +167,52 @@ $(function(){initNavTree('d4/ded/_detect_model_8cs_source.html','../../'); initR
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
-</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        </div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#af73cb12a2bc871231577f025b61ec9ae">   66</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#af73cb12a2bc871231577f025b61ec9ae">TryGet&lt;T&gt;</a>(<a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property, out List&lt;T&gt; result)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> TryGet&lt;T&gt;(<a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property, out List&lt;T&gt; result)</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            result = <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#adcca88d710cecd78f378f3936d3fcafb">Get&lt;T&gt;</a>(property);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            result = Get&lt;T&gt;(property);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">return</span> result.HasElement();</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
-</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a4fdc7c6c517846797fe9b9f2db9f28de">   73</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#af73cb12a2bc871231577f025b61ec9ae">TryGet&lt;T&gt;</a>(<a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property, Predicate&lt;T&gt; filter, out List&lt;T&gt; result)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> TryGet&lt;T&gt;(<a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property, Predicate&lt;T&gt; filter, out List&lt;T&gt; result)</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            result = Get(property, filter);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">return</span> result.HasElement();</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
-</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a75467bfdd74ec433140f26609f179e6b">   80</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a75467bfdd74ec433140f26609f179e6b">TryGetObjects</a>(out List&lt;GameObject&gt; result, <a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> TryGetObjects(out List&lt;GameObject&gt; result, <a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property)</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            result = <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#ae559036ad61c4ac82eedca2f1f3a95c9">GetObjects</a>(property);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            result = GetObjects(property);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">return</span> result.HasElement();</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
-</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        </div>
-<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#ae559036ad61c4ac82eedca2f1f3a95c9">   87</a></span>        <span class="keyword">public</span> List&lt;GameObject&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#ae559036ad61c4ac82eedca2f1f3a95c9">GetObjects</a>(<a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">public</span> List&lt;GameObject&gt; GetObjects(<a class="code hl_class" href="../../dc/d03/class_common_1_1_detect_property.html">DetectProperty</a> property)</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        {</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            var pivot = master.position + <span class="keyword">property</span>.Offset;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            var forward = master.forward;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            var detectedObjects = property.TargetType <span class="keywordflow">switch</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                TargetingType.Self      =&gt; <span class="keyword">new</span> List&lt;GameObject&gt; { master.gameObject },</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                TargetingType.Circle    =&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a0b3b83dc2fa093328e33ba4958a86e31">InSphere</a>(pivot, forward, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#ad6958310e95b20bdbab01c47404c19a4">TargetLayer</a>, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#adf070a97106734871a19b30f707e2984">SizeEntity</a>.<a class="code hl_property" href="../../db/d21/class_common_1_1_size_entity.html#a09f2ac08846e45b28a849fa90c9a7ab3">Y</a>),</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                TargetingType.Arc       =&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a98814c61e69645eb95558272872bb4c2">InAngle</a>(pivot, forward, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#ad6958310e95b20bdbab01c47404c19a4">TargetLayer</a>, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#adf070a97106734871a19b30f707e2984">SizeEntity</a>.<a class="code hl_property" href="../../db/d21/class_common_1_1_size_entity.html#a09f2ac08846e45b28a849fa90c9a7ab3">Y</a>, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#adf070a97106734871a19b30f707e2984">SizeEntity</a>.<a class="code hl_property" href="../../db/d21/class_common_1_1_size_entity.html#a23acc1d30ab14b9bde6a9e7335d71ef4">Z</a>),</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                TargetingType.Rect      =&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#abfefeeafe565172aabcb710a970daba0">InRect</a>(pivot, forward, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#ad6958310e95b20bdbab01c47404c19a4">TargetLayer</a>, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#adf070a97106734871a19b30f707e2984">SizeEntity</a>.<a class="code hl_property" href="../../db/d21/class_common_1_1_size_entity.html#a23acc1d30ab14b9bde6a9e7335d71ef4">Z</a>, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#adf070a97106734871a19b30f707e2984">SizeEntity</a>.<a class="code hl_property" href="../../db/d21/class_common_1_1_size_entity.html#a09f2ac08846e45b28a849fa90c9a7ab3">Y</a>),</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                TargetingType.Donut     =&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a7e765502f96b05f583db2ca379af83b9">InDonut</a>(pivot, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#ad6958310e95b20bdbab01c47404c19a4">TargetLayer</a>, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#adf070a97106734871a19b30f707e2984">SizeEntity</a>),</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                TargetingType.Raycast   =&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a9dd9cb18772cae2416cd4f431e83a18f">CastRay</a>(pivot, forward, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#ad6958310e95b20bdbab01c47404c19a4">TargetLayer</a>, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#adf070a97106734871a19b30f707e2984">SizeEntity</a>.<a class="code hl_property" href="../../db/d21/class_common_1_1_size_entity.html#a09f2ac08846e45b28a849fa90c9a7ab3">Y</a>),</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                TargetingType.Line      =&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a9dd9cb18772cae2416cd4f431e83a18f">CastRay</a>(pivot, forward, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#ad6958310e95b20bdbab01c47404c19a4">TargetLayer</a>, property.<a class="code hl_property" href="../../dc/d03/class_common_1_1_detect_property.html#adf070a97106734871a19b30f707e2984">SizeEntity</a>.<a class="code hl_property" href="../../db/d21/class_common_1_1_size_entity.html#a09f2ac08846e45b28a849fa90c9a7ab3">Y</a>),</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                TargetingType.Circle    =&gt; InSphere(pivot, forward, property.TargetLayer, property.SizeEntity.Y),</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                TargetingType.Arc       =&gt; InAngle(pivot, forward, property.TargetLayer, property.SizeEntity.Y, property.SizeEntity.Z),</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                TargetingType.Rect      =&gt; InRect(pivot, forward, property.TargetLayer, property.SizeEntity.Z, property.SizeEntity.Y),</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                TargetingType.Donut     =&gt; InDonut(pivot, property.TargetLayer, property.SizeEntity),</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                TargetingType.Raycast   =&gt; CastRay(pivot, forward, property.TargetLayer, property.SizeEntity.Y),</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                TargetingType.Line      =&gt; CastRay(pivot, forward, property.TargetLayer, property.SizeEntity.Y),</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                TargetingType.Colliding =&gt; <span class="keyword">null</span>,</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                _                       =&gt; <span class="keyword">null</span>,</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            };</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">return</span> detectedObjects;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        }</div>
-</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a0b3b83dc2fa093328e33ba4958a86e31">  107</a></span>        <span class="keyword">public</span> List&lt;GameObject&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a0b3b83dc2fa093328e33ba4958a86e31">InSphere</a>(Vector3 center, Vector3 forward, LayerMask layerMask, <span class="keywordtype">float</span> radius) </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            =&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a98814c61e69645eb95558272872bb4c2">InAngle</a>(center, forward, layerMask, radius, 360f);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keyword">public</span> List&lt;GameObject&gt; InSphere(Vector3 center, Vector3 forward, LayerMask layerMask, <span class="keywordtype">float</span> radius) </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            =&gt; InAngle(center, forward, layerMask, radius, 360f);</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        </div>
-<div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a98814c61e69645eb95558272872bb4c2">  110</a></span>        <span class="keyword">public</span> List&lt;GameObject&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a98814c61e69645eb95558272872bb4c2">InAngle</a>(Vector3 center, Vector3 forward, LayerMask layerMask, <span class="keywordtype">float</span> radius, <span class="keywordtype">float</span> angle)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keyword">public</span> List&lt;GameObject&gt; InAngle(Vector3 center, Vector3 forward, LayerMask layerMask, <span class="keywordtype">float</span> radius, <span class="keywordtype">float</span> angle)</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        {</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            Array.Clear(ColliderBuffer, 0, ColliderBuffer.Length);</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            </div>
@@ -249,10 +235,8 @@ $(function(){initNavTree('d4/ded/_detect_model_8cs_source.html','../../'); initR
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        </div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keywordflow">return</span> ObjectList;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        }</div>
-</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        </div>
-<div class="foldopen" id="foldopen00134" data-start="{" data-end="}">
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#abfefeeafe565172aabcb710a970daba0">  134</a></span>        <span class="keyword">public</span> List&lt;GameObject&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#abfefeeafe565172aabcb710a970daba0">InRect</a>(Vector3 pivot, Vector3 forward, LayerMask layer, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keyword">public</span> List&lt;GameObject&gt; InRect(Vector3 pivot, Vector3 forward, LayerMask layer, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height)</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        {</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            Array.Clear(ColliderBuffer, 0, ColliderBuffer.Length);</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
@@ -282,13 +266,11 @@ $(function(){initNavTree('d4/ded/_detect_model_8cs_source.html','../../'); initR
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">return</span> ObjectList;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        }</div>
-</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        </div>
-<div class="foldopen" id="foldopen00165" data-start="{" data-end="}">
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a7e765502f96b05f583db2ca379af83b9">  165</a></span>        <span class="keyword">public</span> List&lt;GameObject&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a7e765502f96b05f583db2ca379af83b9">InDonut</a>(Vector3 pivot, LayerMask layerMask, <a class="code hl_class" href="../../db/d21/class_common_1_1_size_entity.html">SizeEntity</a> entity)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keyword">public</span> List&lt;GameObject&gt; InDonut(Vector3 pivot, LayerMask layerMask, <a class="code hl_class" href="../../db/d21/class_common_1_1_size_entity.html">SizeEntity</a> entity)</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            var outerRadius = entity.<a class="code hl_property" href="../../db/d21/class_common_1_1_size_entity.html#a23acc1d30ab14b9bde6a9e7335d71ef4">Z</a>;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            var innerRadius = entity.<a class="code hl_property" href="../../db/d21/class_common_1_1_size_entity.html#a09f2ac08846e45b28a849fa90c9a7ab3">Y</a>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            var outerRadius = entity.Z;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            var innerRadius = entity.Y;</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="comment">// Get all targets within the larger sphere.</span></div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            var outerCount = Physics.OverlapSphereNonAlloc(pivot, outerRadius, ColliderBuffer, layerMask);</div>
@@ -316,10 +298,8 @@ $(function(){initNavTree('d4/ded/_detect_model_8cs_source.html','../../'); initR
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <span class="keywordflow">return</span> ObjectList;</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        }</div>
-</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        </div>
-<div class="foldopen" id="foldopen00197" data-start="{" data-end="}">
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a5e5dc8f683822c02fbe10f51cb60c787">  197</a></span>        <span class="keyword">public</span> List&lt;GameObject&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a5e5dc8f683822c02fbe10f51cb60c787">InLine</a>(Vector3 pivot, Vector3 forward, LayerMask layer, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height)</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keyword">public</span> List&lt;GameObject&gt; InLine(Vector3 pivot, Vector3 forward, LayerMask layer, <span class="keywordtype">float</span> width, <span class="keywordtype">float</span> height)</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        {</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            Array.Clear(RayBuffer, 0, RayBuffer.Length);</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
@@ -339,14 +319,12 @@ $(function(){initNavTree('d4/ded/_detect_model_8cs_source.html','../../'); initR
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                ObjectList.Add(hit.collider.gameObject);</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            }</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            ObjectList.Sort(pivot, <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9">SortingType</a>.DistanceAscending);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            ObjectList.Sort(pivot, SortingType.DistanceAscending);</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">return</span> ObjectList;</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        }</div>
-</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        </div>
-<div class="foldopen" id="foldopen00222" data-start="{" data-end="}">
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a9dd9cb18772cae2416cd4f431e83a18f">  222</a></span>        <span class="keyword">public</span> List&lt;GameObject&gt; <a class="code hl_function" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a9dd9cb18772cae2416cd4f431e83a18f">CastRay</a>(Vector3 pivot, Vector3 forward, LayerMask layer, <span class="keywordtype">float</span> distance)</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="keyword">public</span> List&lt;GameObject&gt; CastRay(Vector3 pivot, Vector3 forward, LayerMask layer, <span class="keywordtype">float</span> distance)</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        {</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            Array.Clear(RayBuffer, 0, RayBuffer.Length);</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            </div>
@@ -359,41 +337,24 @@ $(function(){initNavTree('d4/ded/_detect_model_8cs_source.html','../../'); initR
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                ObjectList.Add(RayBuffer[i].collider.gameObject);</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            }</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            ObjectList.Sort(pivot, <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9">SortingType</a>.DistanceAscending);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            ObjectList.Sort(pivot, SortingType.DistanceAscending);</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            <span class="keywordflow">return</span> ObjectList;</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        }</div>
-</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    }</div>
 </div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
 </div>
 <div class="ttc" id="aclass_common_1_1_detect_property_html"><div class="ttname"><a href="../../dc/d03/class_common_1_1_detect_property.html">Common.DetectProperty</a></div><div class="ttdef"><b>Definition</b> <a href="../../d3/d38/_detect_property_8cs_source.html#l00007">DetectProperty.cs:8</a></div></div>
-<div class="ttc" id="aclass_common_1_1_detect_property_html_ad6958310e95b20bdbab01c47404c19a4"><div class="ttname"><a href="../../dc/d03/class_common_1_1_detect_property.html#ad6958310e95b20bdbab01c47404c19a4">Common.DetectProperty.TargetLayer</a></div><div class="ttdeci">LayerMask TargetLayer</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d38/_detect_property_8cs_source.html#l00015">DetectProperty.cs:15</a></div></div>
-<div class="ttc" id="aclass_common_1_1_detect_property_html_adf070a97106734871a19b30f707e2984"><div class="ttname"><a href="../../dc/d03/class_common_1_1_detect_property.html#adf070a97106734871a19b30f707e2984">Common.DetectProperty.SizeEntity</a></div><div class="ttdeci">SizeEntity SizeEntity</div><div class="ttdef"><b>Definition</b> <a href="../../d3/d38/_detect_property_8cs_source.html#l00014">DetectProperty.cs:14</a></div></div>
 <div class="ttc" id="aclass_common_1_1_size_entity_html"><div class="ttname"><a href="../../db/d21/class_common_1_1_size_entity.html">Common.SizeEntity</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d35/_size_entity_8cs_source.html#l00008">SizeEntity.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_size_entity_html_a09f2ac08846e45b28a849fa90c9a7ab3"><div class="ttname"><a href="../../db/d21/class_common_1_1_size_entity.html#a09f2ac08846e45b28a849fa90c9a7ab3">Common.SizeEntity.Y</a></div><div class="ttdeci">float Y</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d35/_size_entity_8cs_source.html#l00016">SizeEntity.cs:16</a></div></div>
-<div class="ttc" id="aclass_common_1_1_size_entity_html_a23acc1d30ab14b9bde6a9e7335d71ef4"><div class="ttname"><a href="../../db/d21/class_common_1_1_size_entity.html#a23acc1d30ab14b9bde6a9e7335d71ef4">Common.SizeEntity.Z</a></div><div class="ttdeci">float Z</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d35/_size_entity_8cs_source.html#l00017">SizeEntity.cs:17</a></div></div>
 <div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">Common.Systems.DetectModel</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">DetectModel.cs:9</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_a0b3b83dc2fa093328e33ba4958a86e31"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a0b3b83dc2fa093328e33ba4958a86e31">Common.Systems.DetectModel.InSphere</a></div><div class="ttdeci">List&lt; GameObject &gt; InSphere(Vector3 center, Vector3 forward, LayerMask layerMask, float radius)</div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_a5e5dc8f683822c02fbe10f51cb60c787"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a5e5dc8f683822c02fbe10f51cb60c787">Common.Systems.DetectModel.InLine</a></div><div class="ttdeci">List&lt; GameObject &gt; InLine(Vector3 pivot, Vector3 forward, LayerMask layer, float width, float height)</div><div class="ttdef"><b>Definition</b> <a href="#l00197">DetectModel.cs:197</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_a75467bfdd74ec433140f26609f179e6b"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a75467bfdd74ec433140f26609f179e6b">Common.Systems.DetectModel.TryGetObjects</a></div><div class="ttdeci">bool TryGetObjects(out List&lt; GameObject &gt; result, DetectProperty property)</div><div class="ttdef"><b>Definition</b> <a href="#l00080">DetectModel.cs:80</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_a7e765502f96b05f583db2ca379af83b9"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a7e765502f96b05f583db2ca379af83b9">Common.Systems.DetectModel.InDonut</a></div><div class="ttdeci">List&lt; GameObject &gt; InDonut(Vector3 pivot, LayerMask layerMask, SizeEntity entity)</div><div class="ttdef"><b>Definition</b> <a href="#l00165">DetectModel.cs:165</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_a98814c61e69645eb95558272872bb4c2"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a98814c61e69645eb95558272872bb4c2">Common.Systems.DetectModel.InAngle</a></div><div class="ttdeci">List&lt; GameObject &gt; InAngle(Vector3 center, Vector3 forward, LayerMask layerMask, float radius, float angle)</div><div class="ttdef"><b>Definition</b> <a href="#l00110">DetectModel.cs:110</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_a9dd9cb18772cae2416cd4f431e83a18f"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#a9dd9cb18772cae2416cd4f431e83a18f">Common.Systems.DetectModel.CastRay</a></div><div class="ttdeci">List&lt; GameObject &gt; CastRay(Vector3 pivot, Vector3 forward, LayerMask layer, float distance)</div><div class="ttdef"><b>Definition</b> <a href="#l00222">DetectModel.cs:222</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_abfefeeafe565172aabcb710a970daba0"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#abfefeeafe565172aabcb710a970daba0">Common.Systems.DetectModel.InRect</a></div><div class="ttdeci">List&lt; GameObject &gt; InRect(Vector3 pivot, Vector3 forward, LayerMask layer, float width, float height)</div><div class="ttdef"><b>Definition</b> <a href="#l00134">DetectModel.cs:134</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_adcca88d710cecd78f378f3936d3fcafb"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#adcca88d710cecd78f378f3936d3fcafb">Common.Systems.DetectModel.Get&lt; T &gt;</a></div><div class="ttdeci">List&lt; T &gt; Get&lt; T &gt;(DetectProperty property)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">DetectModel.cs:28</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_ae559036ad61c4ac82eedca2f1f3a95c9"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#ae559036ad61c4ac82eedca2f1f3a95c9">Common.Systems.DetectModel.GetObjects</a></div><div class="ttdeci">List&lt; GameObject &gt; GetObjects(DetectProperty property)</div><div class="ttdef"><b>Definition</b> <a href="#l00087">DetectModel.cs:87</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_af027f663e9be2521d27f3e42c9e4f828"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#af027f663e9be2521d27f3e42c9e4f828">Common.Systems.DetectModel.DetectModel</a></div><div class="ttdeci">DetectModel(Transform master, int bufferCount=32)</div><div class="ttdef"><b>Definition</b> <a href="#l00022">DetectModel.cs:22</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html_af73cb12a2bc871231577f025b61ec9ae"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html#af73cb12a2bc871231577f025b61ec9ae">Common.Systems.DetectModel.TryGet&lt; T &gt;</a></div><div class="ttdeci">bool TryGet&lt; T &gt;(DetectProperty property, out List&lt; T &gt; result)</div><div class="ttdef"><b>Definition</b> <a href="#l00066">DetectModel.cs:66</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_systems_html"><div class="ttname"><a href="../../df/db6/namespace_common_1_1_systems.html">Common.Systems</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">DetectModel.cs:6</a></div></div>
-<div class="ttc" id="anamespace_common_html_a8ca768b5259e0ae2f8baaae4fcb8c5f9"><div class="ttname"><a href="../../d6/dee/namespace_common.html#a8ca768b5259e0ae2f8baaae4fcb8c5f9">Common.SortingType</a></div><div class="ttdeci">SortingType</div><div class="ttdef"><b>Definition</b> <a href="../../de/d11/_sorting_type_8cs_source.html#l00003">SortingType.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_0f2f04a3ba9907eba6d31bc21884c9c4.html">Systems</a></li><li class="navelem"><a class="el" href="../../d4/ded/_detect_model_8cs.html">DetectModel.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_0f2f04a3ba9907eba6d31bc21884c9c4.html">Systems</a></li><li class="navelem"><b>DetectModel.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

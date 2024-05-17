@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Masteries/Blade/Cutters/CutterExecutor.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Masteries/Blade/Cutters/CutterExecutor.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d9/d1f/_cutter_executor_8cs_source.html','../../'); in
   <div class="headertitle"><div class="title">CutterExecutor.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d9/d1f/_cutter_executor_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../da/d8a/namespace_common_1_1_characters_1_1_dreds.html">Common.Characters.Dreds</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d0/db4/namespace_common_1_1_executors.html">Common.Executors</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="../../dc/ded/namespace_common_1_1_skills.html">Common.Skills</a>;</div>
@@ -116,13 +117,12 @@ $(function(){initNavTree('d9/d1f/_cutter_executor_8cs_source.html','../../'); in
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> dred;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d0/d8d/class_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor.html#a1c602ed746b42d1db5fc6cb55959d36b">   15</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="../../d0/d8d/class_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor.html#a1c602ed746b42d1db5fc6cb55959d36b">ReduceCoolDownTime</a> { <span class="keyword">get</span> =&gt; reduceCoolDownTime; <span class="keyword">set</span> =&gt; reduceCoolDownTime = value; }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">public</span> <span class="keywordtype">float</span> ReduceCoolDownTime { <span class="keyword">get</span> =&gt; reduceCoolDownTime; <span class="keyword">set</span> =&gt; reduceCoolDownTime = value; }</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">private</span> List&lt;SkillBehaviour&gt; FirstWeaponBehaviours =&gt; dred.<a class="code hl_property" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html#a682ddf6accb5916ed698e38d313ab7ef">CombatActionSet</a>.<a class="code hl_property" href="../../d8/d88/class_common_1_1_characters_1_1_dreds_1_1_dred_combat_action_set.html#af95d9cf772e5c082f93d4a28cacd3145">MainWeapon</a>.<a class="code hl_property" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#a6f8669e888494f2f8b50a85fd9dc072c">AllSkillBehaviour</a>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">private</span> List&lt;SkillBehaviour&gt; SecondWeaponBehaviours =&gt; dred.<a class="code hl_property" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html#a682ddf6accb5916ed698e38d313ab7ef">CombatActionSet</a>.<a class="code hl_property" href="../../d8/d88/class_common_1_1_characters_1_1_dreds_1_1_dred_combat_action_set.html#a32a48c747d6435d6f642bbc3c557bd52">SubWeapon</a>.<a class="code hl_property" href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#a6f8669e888494f2f8b50a85fd9dc072c">AllSkillBehaviour</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">private</span> List&lt;SkillBehaviour&gt; FirstWeaponBehaviours =&gt; dred.CombatActionSet.MainWeapon.AllSkillBehaviour;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">private</span> List&lt;SkillBehaviour&gt; SecondWeaponBehaviours =&gt; dred.CombatActionSet.SubWeapon.AllSkillBehaviour;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        </div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d0/d8d/class_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor.html#a2d4a0cc2df73290b8e1c9f4f974cc1b7">   20</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8d/class_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor.html#a2d4a0cc2df73290b8e1c9f4f974cc1b7">Initialize</a>(<a class="code hl_interface" href="../../db/dee/interface_common_1_1_i_combat_provider.html">ICombatProvider</a> provider)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Initialize(<a class="code hl_interface" href="../../db/dee/interface_common_1_1_i_combat_provider.html">ICombatProvider</a> provider)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            base.Initialize(provider);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
@@ -130,22 +130,19 @@ $(function(){initNavTree('d9/d1f/_cutter_executor_8cs_source.html','../../'); in
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            dred = player;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
-</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d0/d8d/class_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor.html#a558d9f05d32091fd137b700eee4f0695">   29</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8d/class_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor.html#a558d9f05d32091fd137b700eee4f0695">ExecuteToTarget</a>(GameObject target)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> ExecuteToTarget(GameObject target)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">if</span> (!target.TryGetComponent(out <a class="code hl_interface" href="../../d0/db6/interface_common_1_1_i_damage_taker.html">IDamageTaker</a> _)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            FirstWeaponBehaviours.ForEach(ApplyCoolTimeReduction);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            SecondWeaponBehaviours.ForEach(ApplyCoolTimeReduction);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
-</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> ApplyCoolTimeReduction(<a class="code hl_class" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">SkillBehaviour</a> skillBehaviour)</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            var coolTimeProperty = skillBehaviour.<a class="code hl_property" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html#aa53f1ce753e016226a74d62cd26687b2">CoolTimer</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            var coolTimeProperty = skillBehaviour.CoolTimer;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">if</span> (!coolTimeProperty.HasCoolTime) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
@@ -155,18 +152,10 @@ $(function(){initNavTree('d9/d1f/_cutter_executor_8cs_source.html','../../'); in
 </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 </div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_combat_action_set_html_a32a48c747d6435d6f642bbc3c557bd52"><div class="ttname"><a href="../../d8/d88/class_common_1_1_characters_1_1_dreds_1_1_dred_combat_action_set.html#a32a48c747d6435d6f642bbc3c557bd52">Common.Characters.Dreds.DredCombatActionSet.SubWeapon</a></div><div class="ttdeci">DredWeapon SubWeapon</div><div class="ttdef"><b>Definition</b> <a href="../../da/d90/_dred_combat_action_set_8cs_source.html#l00024">DredCombatActionSet.cs:24</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_combat_action_set_html_af95d9cf772e5c082f93d4a28cacd3145"><div class="ttname"><a href="../../d8/d88/class_common_1_1_characters_1_1_dreds_1_1_dred_combat_action_set.html#af95d9cf772e5c082f93d4a28cacd3145">Common.Characters.Dreds.DredCombatActionSet.MainWeapon</a></div><div class="ttdeci">DredWeapon MainWeapon</div><div class="ttdef"><b>Definition</b> <a href="../../da/d90/_dred_combat_action_set_8cs_source.html#l00023">DredCombatActionSet.cs:23</a></div></div>
 <div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Common.Characters.Dreds.Dred</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00005">Dred.cs:6</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html_a682ddf6accb5916ed698e38d313ab7ef"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html#a682ddf6accb5916ed698e38d313ab7ef">Common.Characters.Dreds.Dred.CombatActionSet</a></div><div class="ttdeci">DredCombatActionSet CombatActionSet</div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00018">Dred.cs:18</a></div></div>
-<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_weapon_html_a6f8669e888494f2f8b50a85fd9dc072c"><div class="ttname"><a href="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.html#a6f8669e888494f2f8b50a85fd9dc072c">Common.Characters.Dreds.DredWeapon.AllSkillBehaviour</a></div><div class="ttdeci">List&lt; SkillBehaviour &gt; AllSkillBehaviour</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d43/_dred_weapon_8cs_source.html#l00019">DredWeapon.cs:20</a></div></div>
 <div class="ttc" id="aclass_common_1_1_executors_1_1_execute_behaviour_html"><div class="ttname"><a href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d57/_execute_behaviour_8cs_source.html#l00006">ExecuteBehaviour.cs:7</a></div></div>
 <div class="ttc" id="aclass_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor_html"><div class="ttname"><a href="../../d0/d8d/class_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor.html">Common.Masteries.Blade.Cutters.CutterExecutor</a></div><div class="ttdef"><b>Definition</b> <a href="#l00009">CutterExecutor.cs:10</a></div></div>
-<div class="ttc" id="aclass_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor_html_a1c602ed746b42d1db5fc6cb55959d36b"><div class="ttname"><a href="../../d0/d8d/class_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor.html#a1c602ed746b42d1db5fc6cb55959d36b">Common.Masteries.Blade.Cutters.CutterExecutor.ReduceCoolDownTime</a></div><div class="ttdeci">float ReduceCoolDownTime</div><div class="ttdef"><b>Definition</b> <a href="#l00015">CutterExecutor.cs:15</a></div></div>
-<div class="ttc" id="aclass_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor_html_a2d4a0cc2df73290b8e1c9f4f974cc1b7"><div class="ttname"><a href="../../d0/d8d/class_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor.html#a2d4a0cc2df73290b8e1c9f4f974cc1b7">Common.Masteries.Blade.Cutters.CutterExecutor.Initialize</a></div><div class="ttdeci">override void Initialize(ICombatProvider provider)</div><div class="ttdef"><b>Definition</b> <a href="#l00020">CutterExecutor.cs:20</a></div></div>
-<div class="ttc" id="aclass_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor_html_a558d9f05d32091fd137b700eee4f0695"><div class="ttname"><a href="../../d0/d8d/class_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor.html#a558d9f05d32091fd137b700eee4f0695">Common.Masteries.Blade.Cutters.CutterExecutor.ExecuteToTarget</a></div><div class="ttdeci">override void ExecuteToTarget(GameObject target)</div><div class="ttdef"><b>Definition</b> <a href="#l00029">CutterExecutor.cs:29</a></div></div>
 <div class="ttc" id="aclass_common_1_1_skills_1_1_skill_behaviour_html"><div class="ttname"><a href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d13/_skill_behaviour_8cs_source.html#l00006">SkillBehaviour.cs:7</a></div></div>
-<div class="ttc" id="aclass_common_1_1_skills_1_1_skill_behaviour_html_aa53f1ce753e016226a74d62cd26687b2"><div class="ttname"><a href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html#aa53f1ce753e016226a74d62cd26687b2">Common.Skills.SkillBehaviour.CoolTimer</a></div><div class="ttdeci">CoolTimer CoolTimer</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d13/_skill_behaviour_8cs_source.html#l00016">SkillBehaviour.cs:16</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_combat_provider_html"><div class="ttname"><a href="../../db/dee/interface_common_1_1_i_combat_provider.html">Common.ICombatProvider</a></div><div class="ttdoc">Character, Trap.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00041">ICombats.cs:42</a></div></div>
 <div class="ttc" id="ainterface_common_1_1_i_damage_taker_html"><div class="ttname"><a href="../../d0/db6/interface_common_1_1_i_damage_taker.html">Common.IDamageTaker</a></div><div class="ttdoc">Character, Projectile, Trap, Prop.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/df3/_i_combats_8cs_source.html#l00074">ICombats.cs:75</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_characters_1_1_dreds_html"><div class="ttname"><a href="../../da/d8a/namespace_common_1_1_characters_1_1_dreds.html">Common.Characters.Dreds</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00003">Dred.cs:4</a></div></div>
@@ -178,7 +167,7 @@ $(function(){initNavTree('d9/d1f/_cutter_executor_8cs_source.html','../../'); in
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_e4b6c65017730d334e40e89b6ad817dd.html">Masteries</a></li><li class="navelem"><a class="el" href="../../dir_8d97a6fcffdec005b45824a15c78753f.html">Blade</a></li><li class="navelem"><a class="el" href="../../dir_7227b491ab976cc65da9ca7cc1ea87f9.html">Cutters</a></li><li class="navelem"><a class="el" href="../../d9/d1f/_cutter_executor_8cs.html">CutterExecutor.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_e4b6c65017730d334e40e89b6ad817dd.html">Masteries</a></li><li class="navelem"><a class="el" href="../../dir_8d97a6fcffdec005b45824a15c78753f.html">Blade</a></li><li class="navelem"><a class="el" href="../../dir_7227b491ab976cc65da9ca7cc1ea87f9.html">Cutters</a></li><li class="navelem"><b>CutterExecutor.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

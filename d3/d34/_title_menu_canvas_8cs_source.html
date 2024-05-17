@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Title/UI/TitleMenuCanvas.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Title/UI/TitleMenuCanvas.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d3/d34/_title_menu_canvas_8cs_source.html','../../'); 
   <div class="headertitle"><div class="title">TitleMenuCanvas.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d3/d34/_title_menu_canvas_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../db/dd0/namespace_title_1_1_u_i_1_1_menus.html">Title.UI.Menus</a>;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../db/dd0/namespace_title_1_1_u_i_1_1_menus.html">Title.UI.Menus</a>;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d8/d4c/namespace_u_is.html">UIs</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine.EventSystems;</div>
@@ -116,15 +117,14 @@ $(function(){initNavTree('d3/d34/_title_menu_canvas_8cs_source.html','../../'); 
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        [SerializeField] <span class="keyword">private</span> <a class="code hl_class" href="../../db/d0b/class_title_1_1_u_i_1_1_menus_1_1_quit_selection.html">QuitSelection</a> quitSelection;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../da/d29/class_title_1_1_u_i_1_1_title_menu_canvas.html#ae260df798b5048f24f8c9ef957c16879">   16</a></span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d29/class_title_1_1_u_i_1_1_title_menu_canvas.html#ae260df798b5048f24f8c9ef957c16879">Initialize</a>()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Initialize()</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            base.Initialize();</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            continueSelection.<a class="code hl_function" href="../../d7/d1e/class_title_1_1_u_i_1_1_menus_1_1_continue_selection.html#a30dbf8039c66fe15b16ad3aa48ce4ee5">Initialize</a>();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            startGameSelection.<a class="code hl_function" href="../../d1/dc6/class_common_1_1_u_i_element.html#a000349f8508cdd8b7117ef804df4035c">Initialize</a>();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            settingSelection.<a class="code hl_function" href="../../d1/dc6/class_common_1_1_u_i_element.html#a000349f8508cdd8b7117ef804df4035c">Initialize</a>();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            quitSelection.<a class="code hl_function" href="../../d1/dc6/class_common_1_1_u_i_element.html#a000349f8508cdd8b7117ef804df4035c">Initialize</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            continueSelection.Initialize();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            startGameSelection.Initialize();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            settingSelection.Initialize();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            quitSelection.Initialize();</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            var firstSelectObject = continueSelection.gameObject.activeSelf</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                ? continueSelection.gameObject</div>
@@ -132,13 +132,12 @@ $(function(){initNavTree('d3/d34/_title_menu_canvas_8cs_source.html','../../'); 
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            EventSystem.current.SetSelectedGameObject(firstSelectObject);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
-</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> EditorSetUp()</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_variable" href="../../d3/d94/class_u_is_1_1_canvas_matrix.html#a390e60e7e4ae6b185b3485ffc5d05820">hierarchy</a>          = <a class="code hl_enumeration" href="../../d8/da2/_canvas_hierarchy_type_8cs.html#a66143eb1e62a66da4cc0e20cef9acf66">CanvasHierarchyType</a>.Background;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            hierarchy          = CanvasHierarchyType.Background;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            continueSelection  = GetComponentInChildren&lt;ContinueSelection&gt;(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            startGameSelection = GetComponentInChildren&lt;StartGameSelection&gt;(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            settingSelection   = GetComponentInChildren&lt;SettingSelection&gt;(<span class="keyword">true</span>);</div>
@@ -148,17 +147,12 @@ $(function(){initNavTree('d3/d34/_title_menu_canvas_8cs_source.html','../../'); 
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
 </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
-<div class="ttc" id="a_canvas_hierarchy_type_8cs_html_a66143eb1e62a66da4cc0e20cef9acf66"><div class="ttname"><a href="../../d8/da2/_canvas_hierarchy_type_8cs.html#a66143eb1e62a66da4cc0e20cef9acf66">CanvasHierarchyType</a></div><div class="ttdeci">CanvasHierarchyType</div><div class="ttdef"><b>Definition</b> <a href="../../d8/da2/_canvas_hierarchy_type_8cs_source.html#l00001">CanvasHierarchyType.cs:2</a></div></div>
-<div class="ttc" id="aclass_common_1_1_u_i_element_html_a000349f8508cdd8b7117ef804df4035c"><div class="ttname"><a href="../../d1/dc6/class_common_1_1_u_i_element.html#a000349f8508cdd8b7117ef804df4035c">Common.UIElement.Initialize</a></div><div class="ttdeci">virtual void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d33/_u_i_element_8cs_source.html#l00015">UIElement.cs:15</a></div></div>
 <div class="ttc" id="aclass_title_1_1_u_i_1_1_menus_1_1_continue_selection_html"><div class="ttname"><a href="../../d7/d1e/class_title_1_1_u_i_1_1_menus_1_1_continue_selection.html">Title.UI.Menus.ContinueSelection</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/dbc/_continue_selection_8cs_source.html#l00007">ContinueSelection.cs:8</a></div></div>
-<div class="ttc" id="aclass_title_1_1_u_i_1_1_menus_1_1_continue_selection_html_a30dbf8039c66fe15b16ad3aa48ce4ee5"><div class="ttname"><a href="../../d7/d1e/class_title_1_1_u_i_1_1_menus_1_1_continue_selection.html#a30dbf8039c66fe15b16ad3aa48ce4ee5">Title.UI.Menus.ContinueSelection.Initialize</a></div><div class="ttdeci">override void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="../../dd/dbc/_continue_selection_8cs_source.html#l00013">ContinueSelection.cs:13</a></div></div>
 <div class="ttc" id="aclass_title_1_1_u_i_1_1_menus_1_1_quit_selection_html"><div class="ttname"><a href="../../db/d0b/class_title_1_1_u_i_1_1_menus_1_1_quit_selection.html">Title.UI.Menus.QuitSelection</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d89/_quit_selection_8cs_source.html#l00005">QuitSelection.cs:6</a></div></div>
 <div class="ttc" id="aclass_title_1_1_u_i_1_1_menus_1_1_setting_selection_html"><div class="ttname"><a href="../../d9/db0/class_title_1_1_u_i_1_1_menus_1_1_setting_selection.html">Title.UI.Menus.SettingSelection</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d17/_setting_selection_8cs_source.html#l00005">SettingSelection.cs:6</a></div></div>
 <div class="ttc" id="aclass_title_1_1_u_i_1_1_menus_1_1_start_game_selection_html"><div class="ttname"><a href="../../d1/d36/class_title_1_1_u_i_1_1_menus_1_1_start_game_selection.html">Title.UI.Menus.StartGameSelection</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/de6/_start_game_selection_8cs_source.html#l00005">StartGameSelection.cs:6</a></div></div>
 <div class="ttc" id="aclass_title_1_1_u_i_1_1_title_menu_canvas_html"><div class="ttname"><a href="../../da/d29/class_title_1_1_u_i_1_1_title_menu_canvas.html">Title.UI.TitleMenuCanvas</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">TitleMenuCanvas.cs:9</a></div></div>
-<div class="ttc" id="aclass_title_1_1_u_i_1_1_title_menu_canvas_html_ae260df798b5048f24f8c9ef957c16879"><div class="ttname"><a href="../../da/d29/class_title_1_1_u_i_1_1_title_menu_canvas.html#ae260df798b5048f24f8c9ef957c16879">Title.UI.TitleMenuCanvas.Initialize</a></div><div class="ttdeci">override void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="#l00016">TitleMenuCanvas.cs:16</a></div></div>
 <div class="ttc" id="aclass_u_is_1_1_canvas_matrix_html"><div class="ttname"><a href="../../d3/d94/class_u_is_1_1_canvas_matrix.html">UIs.CanvasMatrix</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d15/_canvas_matrix_8cs_source.html#l00005">CanvasMatrix.cs:6</a></div></div>
-<div class="ttc" id="aclass_u_is_1_1_canvas_matrix_html_a390e60e7e4ae6b185b3485ffc5d05820"><div class="ttname"><a href="../../d3/d94/class_u_is_1_1_canvas_matrix.html#a390e60e7e4ae6b185b3485ffc5d05820">UIs.CanvasMatrix.hierarchy</a></div><div class="ttdeci">CanvasHierarchyType hierarchy</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d15/_canvas_matrix_8cs_source.html#l00007">CanvasMatrix.cs:7</a></div></div>
 <div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_title_1_1_u_i_1_1_menus_html"><div class="ttname"><a href="../../db/dd0/namespace_title_1_1_u_i_1_1_menus.html">Title.UI.Menus</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/dbc/_continue_selection_8cs_source.html#l00005">ContinueSelection.cs:6</a></div></div>
 <div class="ttc" id="anamespace_title_1_1_u_i_html"><div class="ttname"><a href="../../d5/d66/namespace_title_1_1_u_i.html">Title.UI</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/dbc/_continue_selection_8cs_source.html#l00005">ContinueSelection.cs:6</a></div></div>
@@ -168,7 +162,7 @@ $(function(){initNavTree('d3/d34/_title_menu_canvas_8cs_source.html','../../'); 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_59d6c0dc7360223d04953a0a6c86fe9f.html">Title</a></li><li class="navelem"><a class="el" href="../../dir_ce4f12dd86c72afbba0dc9a90b284cfd.html">UI</a></li><li class="navelem"><a class="el" href="../../d3/d34/_title_menu_canvas_8cs.html">TitleMenuCanvas.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_59d6c0dc7360223d04953a0a6c86fe9f.html">Title</a></li><li class="navelem"><a class="el" href="../../dir_ce4f12dd86c72afbba0dc9a90b284cfd.html">UI</a></li><li class="navelem"><b>TitleMenuCanvas.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

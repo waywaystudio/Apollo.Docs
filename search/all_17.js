@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['X',['../d3/d21/class_vector2_range.html#a19226f1fab42bccad1c7977edc17f434',1,'Vector2Range.X'],['../d3/d12/class_vector2_int_range.html#a1fb1f26a48475ba15953162c238e0e3b',1,'Vector2IntRange.X'],['../dc/d51/struct_apollo_input_1_1_player_controls_actions.html#a87fe31cfb099378023dec153ab9eb5f9',1,'ApolloInput.PlayerControlsActions.X'],['../db/d21/class_common_1_1_size_entity.html#ae2ce041d93fd018aeeec1ae404ffb75a',1,'Common.SizeEntity.X'],['../df/d95/namespace_inputs.html#a13f9ab8601ef79b5658f0b4d68aeab70a02129bb861061d1a052c592e2dc6b383',1,'Inputs.X']]]
+  ['yposition_0',['YPosition',['../d1/dde/class_common_1_1_projections_1_1_decals_1_1_body_decal.html#a7261f94a24a4128fe0a64955a566dad1',1,'Common.Projections.Decals.BodyDecal.YPosition'],['../df/d7b/class_common_1_1_projections_1_1_decals_1_1_head_decal.html#a64619e15cf2d3d1ce070effbc784b769',1,'Common.Projections.Decals.HeadDecal.YPosition']]]
 ];

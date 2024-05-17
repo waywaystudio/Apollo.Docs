@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/UI/EventClips/WindowEditor/UIElementWindowEditor.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/UI/EventClips/WindowEditor/UIElementWindowEditor.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('dd/d37/_u_i_element_window_editor_8cs_source.html','..
   <div class="headertitle"><div class="title">UIElementWindowEditor.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../dd/d37/_u_i_element_window_editor_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>Sirenix.OdinInspector;</div>
@@ -132,7 +133,7 @@ $(function(){initNavTree('dd/d37/_u_i_element_window_editor_8cs_source.html','..
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                var clipList = eventSourceTransform.GetComponentsInChildren&lt;UIEventClip&gt;().ToList();</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#aa9209426a6fdf134d1be75b12ac1923e">UIEventType</a>.PointerEnter.Iterate(uiType =&gt;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                UIEventType.PointerEnter.Iterate(uiType =&gt;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    clipCreateList.Add(<span class="keyword">new</span> EventTriggerGenerator(uiElement, uiType, clipList.TryGetElement(e =&gt; e.Type == uiType)));</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                });         </div>
@@ -141,7 +142,7 @@ $(function(){initNavTree('dd/d37/_u_i_element_window_editor_8cs_source.html','..
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            [Serializable]</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keyword">public</span> <span class="keyword">class </span>EventTriggerGenerator</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                [TableColumnWidth(130), DisplayAsString] <span class="keyword">public</span> <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#aa9209426a6fdf134d1be75b12ac1923e">UIEventType</a> Type;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                [TableColumnWidth(130), DisplayAsString] <span class="keyword">public</span> UIEventType Type;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                [HideInTables] <span class="keyword">private</span> <span class="keywordtype">bool</span> has;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <span class="keyword">private</span> UIElement uiElement;</div>
@@ -193,24 +194,24 @@ $(function(){initNavTree('dd/d37/_u_i_element_window_editor_8cs_source.html','..
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    UIEventClip uiEventClip = Type <span class="keywordflow">switch</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                        UIEventType.PointerEnter =&gt; clipTransform.gameObject.GetOrAddComponent&lt;PointerEnterUIEventClip&gt;(),</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                        <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#aa9209426a6fdf134d1be75b12ac1923e">UIEventType</a>.PointerExit  =&gt; clipTransform.gameObject.GetOrAddComponent&lt;PointerExitUIEventClip&gt;(),</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                        UIEventType.PointerExit  =&gt; clipTransform.gameObject.GetOrAddComponent&lt;PointerExitUIEventClip&gt;(),</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                        UIEventType.PointerDown  =&gt; clipTransform.gameObject.GetOrAddComponent&lt;PointerDownUIEventClip&gt;(),</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                        <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#aa9209426a6fdf134d1be75b12ac1923e">UIEventType</a>.PointerUp    =&gt; clipTransform.gameObject.GetOrAddComponent&lt;PointerUpUIEventClip&gt;(),</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                        UIEventType.PointerUp    =&gt; clipTransform.gameObject.GetOrAddComponent&lt;PointerUpUIEventClip&gt;(),</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                        UIEventType.PointerClick =&gt; clipTransform.gameObject.GetOrAddComponent&lt;PointerClickUIEventClip&gt;(),</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                        <span class="comment">// UIEventType.Drag                    =&gt; expr,</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                        <span class="comment">// UIEventType.Drop                    =&gt; expr,</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                        <span class="comment">// UIEventType.Scroll                  =&gt; expr,</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                        <span class="comment">// UIEventType.UpdateSelected          =&gt; expr,</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                        <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#aa9209426a6fdf134d1be75b12ac1923e">UIEventType</a>.Select   =&gt; clipTransform.gameObject.GetOrAddComponent&lt;SelectUIEventClip&gt;(),</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                        UIEventType.Select   =&gt; clipTransform.gameObject.GetOrAddComponent&lt;SelectUIEventClip&gt;(),</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                        UIEventType.Deselect =&gt; clipTransform.gameObject.GetOrAddComponent&lt;DeSelectUIEventClip&gt;(),</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                        <span class="comment">// UIEventType.Move                    =&gt; expr,</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                        <span class="comment">// UIEventType.InitializePotentialDrag =&gt; expr,</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                        <span class="comment">// UIEventType.BeginDrag               =&gt; expr,</span></div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                        <span class="comment">// UIEventType.EndDrag                 =&gt; expr,</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                        <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#aa9209426a6fdf134d1be75b12ac1923e">UIEventType</a>.Submit =&gt; clipTransform.gameObject.GetOrAddComponent&lt;SubmitUIEventClip&gt;(),</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                        UIEventType.Submit =&gt; clipTransform.gameObject.GetOrAddComponent&lt;SubmitUIEventClip&gt;(),</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                        <span class="comment">// UIEventType.Cancel                  =&gt; expr,</span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                        UIEventType.Open  =&gt; clipTransform.gameObject.GetOrAddComponent&lt;OpenUIEventClip&gt;(),</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                        <a class="code hl_enumeration" href="../../d6/dee/namespace_common.html#aa9209426a6fdf134d1be75b12ac1923e">UIEventType</a>.Close =&gt; clipTransform.gameObject.GetOrAddComponent&lt;CloseUIEventClip&gt;(),</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                        UIEventType.Close =&gt; clipTransform.gameObject.GetOrAddComponent&lt;CloseUIEventClip&gt;(),</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                        _                 =&gt; <span class="keyword">null</span>,</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                    };</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
@@ -227,7 +228,7 @@ $(function(){initNavTree('dd/d37/_u_i_element_window_editor_8cs_source.html','..
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                    <span class="keywordflow">if</span> (clipTransform.TryGetChildGameObject(<span class="stringliteral">&quot;Effector&quot;</span>, out var effectorTransform)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                        </div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    effectorTransform = clipTransform.GetOrAddChildGameObject(<span class="stringliteral">&quot;Effector&quot;</span>);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    effectorTransform.gameObject.AddComponent&lt;<a class="code hl_enumvalue" href="../../dd/da0/_virtual_camera_type_8cs.html#aa57945740cd254803023301988941fc4aed0d5a0e77becdeb7a0c9b37e6fd17c9">Effector</a>&gt;();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    effectorTransform.gameObject.AddComponent&lt;Effector&gt;();</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                    uiEventClip.EditorSetUp();</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    </div>
@@ -248,14 +249,12 @@ $(function(){initNavTree('dd/d37/_u_i_element_window_editor_8cs_source.html','..
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="a_virtual_camera_type_8cs_html_aa57945740cd254803023301988941fc4aed0d5a0e77becdeb7a0c9b37e6fd17c9"><div class="ttname"><a href="../../dd/da0/_virtual_camera_type_8cs.html#aa57945740cd254803023301988941fc4aed0d5a0e77becdeb7a0c9b37e6fd17c9">VirtualCameraType.Effector</a></div><div class="ttdeci">@ Effector</div></div>
-<div class="ttc" id="anamespace_common_html_aa9209426a6fdf134d1be75b12ac1923e"><div class="ttname"><a href="../../d6/dee/namespace_common.html#aa9209426a6fdf134d1be75b12ac1923e">Common.UIEventType</a></div><div class="ttdeci">UIEventType</div><div class="ttdef"><b>Definition</b> <a href="../../d9/dcd/_u_i_event_type_8cs_source.html#l00006">UIEventType.cs:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><a class="el" href="../../dir_8b5440d16733f371b4ec1ed7f112f08a.html">EventClips</a></li><li class="navelem"><a class="el" href="../../dir_419a4a6abf4c50c401fcbecd56873fa7.html">WindowEditor</a></li><li class="navelem"><a class="el" href="../../dd/d37/_u_i_element_window_editor_8cs.html">UIElementWindowEditor.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_3425bc254d27e49ce3b876adb57c26a3.html">UI</a></li><li class="navelem"><a class="el" href="../../dir_8b5440d16733f371b4ec1ed7f112f08a.html">EventClips</a></li><li class="navelem"><a class="el" href="../../dir_419a4a6abf4c50c401fcbecd56873fa7.html">WindowEditor</a></li><li class="navelem"><b>UIElementWindowEditor.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

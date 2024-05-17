@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Challenge/Combats/MasteryAbility.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Challenge/Combats/MasteryAbility.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('dd/dae/_mastery_ability_8cs_source.html','../../'); in
   <div class="headertitle"><div class="title">MasteryAbility.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../dd/dae/_mastery_ability_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d6/db7/namespace_common_1_1_masteries.html">Common.Masteries</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -113,43 +114,41 @@ $(function(){initNavTree('dd/dae/_mastery_ability_8cs_source.html','../../'); in
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">int</span> ultimateMasteryOrder = 6;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        [SerializeField] <span class="keyword">private</span> Transform masteryHierarchy;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a3332dfe8e5d962d386bb3f535bc61554">   12</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html">Mastery</a> <span class="keyword">this</span>[<a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a> index] =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[index];</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a9ceffba309a6b120b055b38a246c875d">   13</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a9ceffba309a6b120b055b38a246c875d">TotalMasteryGet</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html">Mastery</a> <span class="keyword">this</span>[DataIndex index] =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[index];</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> <span class="keywordtype">int</span> TotalMasteryGet { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table&lt;DataIndex, Mastery&gt;</a> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a6505f54411e4a21d4e09d73e1377b05d">   18</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a6505f54411e4a21d4e09d73e1377b05d">Initialize</a>()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize()</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.<a class="code hl_function" href="../../d2/d8f/class_table.html#aa5ceff8db5657ae3e7538277e4ed6f8d">Clear</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Clear();</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            var masteryPrefabData = <a class="code hl_class" href="../../dc/d83/class_database.html">Database</a>.<a class="code hl_property" href="../../dc/d83/class_database.html#ac6a4c81bc98ba6544855e4099c881ff1">MasteryPrefabs</a>.GetPrefabs&lt;<a class="code hl_class" href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html">Mastery</a>&gt;();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            var masteryPrefabData = <a class="code hl_class" href="../../dc/d83/class_database.html">Database</a>.MasteryPrefabs.GetPrefabs&lt;<a class="code hl_class" href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html">Mastery</a>&gt;();</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            masteryPrefabData.ForEach(prefab =&gt;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                var mastery = Instantiate(prefab, Vector3.zero, Quaternion.identity, masteryHierarchy);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.<a class="code hl_function" href="../../d2/d8f/class_table.html#a29330bb38f022574ec3e63e9a8d3f491">Add</a>(mastery.DataIndex, mastery);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Add(mastery.DataIndex, mastery);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            });</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
-</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a90c36e67ee8963e67d6f3526f97c1dd6">   35</a></span>        <span class="keyword">public</span> List&lt;DataIndex&gt; <a class="code hl_function" href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a90c36e67ee8963e67d6f3526f97c1dd6">GetRandomMasteriesExceptDredHas</a>(<span class="keywordtype">int</span> count)</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            var tempArray = <span class="keyword">new</span> List&lt;DataIndex&gt;();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            var dred = <a class="code hl_class" href="../../df/df8/class_challenge_1_1_challenge_director.html">ChallengeDirector</a>.<a class="code hl_property" href="../../df/df8/class_challenge_1_1_challenge_director.html#ab51fe30a01b8f0c78996c017f388c937">Dred</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            var dred = <a class="code hl_class" href="../../df/df8/class_challenge_1_1_challenge_director.html">ChallengeDirector</a>.Dred;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            var dredWeapon1 = (int)dred.CombatActionSet.MainWeapon.WeaponType;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            var dredWeapon2 = (int)dred.CombatActionSet.SubWeapon.WeaponType;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            var randomWeapon = <a class="code hl_typedef" href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a>.Range(0.1f, 1.0f) &gt; 0.5f</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            var randomWeapon = Random.Range(0.1f, 1.0f) &gt; 0.5f</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                ? dredWeapon1</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                : dredWeapon2;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="comment">// Get Ultimate Mastery</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a9ceffba309a6b120b055b38a246c875d">TotalMasteryGet</a> == ultimateMasteryOrder)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">if</span> (TotalMasteryGet == ultimateMasteryOrder)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.<a class="code hl_property" href="../../d2/d8f/class_table.html#aff475c7731aa4c465bdc355b22af30a3">KeyList</a>.ForEach(masteryCode =&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.KeyList.ForEach(masteryCode =&gt;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                    <span class="comment">// var masteryWeaponType = masteryCode.GetSecondBar();</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                    <span class="comment">// if (masteryWeaponType         != randomWeapon) return;</span></div>
@@ -162,7 +161,7 @@ $(function(){initNavTree('dd/dae/_mastery_ability_8cs_source.html','../../'); in
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="comment">// Get General Mastery</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.<a class="code hl_property" href="../../d2/d8f/class_table.html#aff475c7731aa4c465bdc355b22af30a3">KeyList</a>.ForEach(masteryCode =&gt;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.KeyList.ForEach(masteryCode =&gt;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    var masteryWeaponType = masteryCode.GetSecondBar();</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
@@ -176,26 +175,25 @@ $(function(){initNavTree('dd/dae/_mastery_ability_8cs_source.html','../../'); in
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">if</span> (tempArray.Count &lt;= 1)</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                tempArray.Add(<a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a>.EmptyMastery);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                tempArray.Add(DataIndex.EmptyMastery);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            }</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            var result = tempArray.GetRandomElements(count);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <a class="code hl_property" href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a9ceffba309a6b120b055b38a246c875d">TotalMasteryGet</a>++;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            TotalMasteryGet++;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
 </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a1be81f472cfc3a24d70f7a2e4a6ef8e4">   85</a></span>        <span class="keyword">public</span> List&lt;DataIndex&gt; <a class="code hl_function" href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a1be81f472cfc3a24d70f7a2e4a6ef8e4">GetRandomMasteriesWithinDredHas</a>(<span class="keywordtype">int</span> count)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keyword">public</span> List&lt;DataIndex&gt; GetRandomMasteriesWithinDredHas(<span class="keywordtype">int</span> count)</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        {</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            var tempArray = <span class="keyword">new</span> List&lt;DataIndex&gt;();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            var dred = <a class="code hl_class" href="../../df/df8/class_challenge_1_1_challenge_director.html">ChallengeDirector</a>.<a class="code hl_property" href="../../df/df8/class_challenge_1_1_challenge_director.html#ab51fe30a01b8f0c78996c017f388c937">Dred</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            var dred = <a class="code hl_class" href="../../df/df8/class_challenge_1_1_challenge_director.html">ChallengeDirector</a>.Dred;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            var dredWeapon1 = (int)dred.CombatActionSet.MainWeapon.WeaponType;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            var dredWeapon2 = (int)dred.CombatActionSet.SubWeapon.WeaponType;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.<a class="code hl_property" href="../../d2/d8f/class_table.html#aff475c7731aa4c465bdc355b22af30a3">KeyList</a>.ForEach(masteryCode =&gt;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.KeyList.ForEach(masteryCode =&gt;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            {</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                var masteryWeaponType = masteryCode.GetSecondBar();</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
@@ -208,7 +206,7 @@ $(function(){initNavTree('dd/dae/_mastery_ability_8cs_source.html','../../'); in
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">if</span> (tempArray.Count &lt;= 1)</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                tempArray.Add(<a class="code hl_enumeration" href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a>.EmptyMastery);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                tempArray.Add(DataIndex.EmptyMastery);</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                <span class="keywordflow">return</span> tempArray;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            } </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
@@ -216,27 +214,16 @@ $(function(){initNavTree('dd/dae/_mastery_ability_8cs_source.html','../../'); in
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        }</div>
-</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
 </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
 </div>
-<div class="ttc" id="a_data_index_8cs_html_acd63cd93ca0fdfe8177c88f2bb3b5343"><div class="ttname"><a href="../../df/dce/_data_index_8cs.html#acd63cd93ca0fdfe8177c88f2bb3b5343">DataIndex</a></div><div class="ttdeci">DataIndex</div><div class="ttdef"><b>Definition</b> <a href="../../df/dce/_data_index_8cs_source.html#l00006">DataIndex.cs:7</a></div></div>
-<div class="ttc" id="a_number_extension_8cs_html_a832e8f52fca5a678819ec96269dcb532"><div class="ttname"><a href="../../d1/d1a/_number_extension_8cs.html#a832e8f52fca5a678819ec96269dcb532">Random</a></div><div class="ttdeci">UnityEngine.Random Random</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d1a/_number_extension_8cs_source.html#l00005">NumberExtension.cs:5</a></div></div>
 <div class="ttc" id="aclass_challenge_1_1_challenge_director_html"><div class="ttname"><a href="../../df/df8/class_challenge_1_1_challenge_director.html">Challenge.ChallengeDirector</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d01/_challenge_director_8cs_source.html#l00008">ChallengeDirector.cs:9</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_challenge_director_html_ab51fe30a01b8f0c78996c017f388c937"><div class="ttname"><a href="../../df/df8/class_challenge_1_1_challenge_director.html#ab51fe30a01b8f0c78996c017f388c937">Challenge.ChallengeDirector.Dred</a></div><div class="ttdeci">static Dred Dred</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d01/_challenge_director_8cs_source.html#l00035">ChallengeDirector.cs:35</a></div></div>
 <div class="ttc" id="aclass_challenge_1_1_combats_1_1_mastery_ability_html"><div class="ttname"><a href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html">Challenge.Combats.MasteryAbility</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">MasteryAbility.cs:8</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_mastery_ability_html_a1be81f472cfc3a24d70f7a2e4a6ef8e4"><div class="ttname"><a href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a1be81f472cfc3a24d70f7a2e4a6ef8e4">Challenge.Combats.MasteryAbility.GetRandomMasteriesWithinDredHas</a></div><div class="ttdeci">List&lt; DataIndex &gt; GetRandomMasteriesWithinDredHas(int count)</div><div class="ttdef"><b>Definition</b> <a href="#l00085">MasteryAbility.cs:85</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_mastery_ability_html_a6505f54411e4a21d4e09d73e1377b05d"><div class="ttname"><a href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a6505f54411e4a21d4e09d73e1377b05d">Challenge.Combats.MasteryAbility.Initialize</a></div><div class="ttdeci">void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="#l00018">MasteryAbility.cs:18</a></div></div>
 <div class="ttc" id="aclass_challenge_1_1_combats_1_1_mastery_ability_html_a90c36e67ee8963e67d6f3526f97c1dd6"><div class="ttname"><a href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a90c36e67ee8963e67d6f3526f97c1dd6">Challenge.Combats.MasteryAbility.GetRandomMasteriesExceptDredHas</a></div><div class="ttdeci">List&lt; DataIndex &gt; GetRandomMasteriesExceptDredHas(int count)</div><div class="ttdoc">https://www.notion.so/salinger/Mastery-SelectAlgorithm-c9b3eaa8e2b8482298996ffdd65bd3e2</div><div class="ttdef"><b>Definition</b> <a href="#l00035">MasteryAbility.cs:35</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_combats_1_1_mastery_ability_html_a9ceffba309a6b120b055b38a246c875d"><div class="ttname"><a href="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.html#a9ceffba309a6b120b055b38a246c875d">Challenge.Combats.MasteryAbility.TotalMasteryGet</a></div><div class="ttdeci">int TotalMasteryGet</div><div class="ttdef"><b>Definition</b> <a href="#l00013">MasteryAbility.cs:13</a></div></div>
 <div class="ttc" id="aclass_common_1_1_masteries_1_1_mastery_html"><div class="ttname"><a href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html">Common.Masteries.Mastery</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d21/_mastery_8cs_source.html#l00007">Mastery.cs:8</a></div></div>
 <div class="ttc" id="aclass_database_html"><div class="ttname"><a href="../../dc/d83/class_database.html">Database</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/d16/_database_8cs_source.html#l00026">Database.cs:27</a></div></div>
-<div class="ttc" id="aclass_database_html_ac6a4c81bc98ba6544855e4099c881ff1"><div class="ttname"><a href="../../dc/d83/class_database.html#ac6a4c81bc98ba6544855e4099c881ff1">Database.MasteryPrefabs</a></div><div class="ttdeci">static MasteryPrefabData MasteryPrefabs</div><div class="ttdef"><b>Definition</b> <a href="../../d0/d16/_database_8cs_source.html#l00074">Database.cs:74</a></div></div>
 <div class="ttc" id="aclass_table_html"><div class="ttname"><a href="../../d2/d8f/class_table.html">Table</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00009">Table.cs:10</a></div></div>
-<div class="ttc" id="aclass_table_html_a29330bb38f022574ec3e63e9a8d3f491"><div class="ttname"><a href="../../d2/d8f/class_table.html#a29330bb38f022574ec3e63e9a8d3f491">Table.Add</a></div><div class="ttdeci">virtual void Add(TKey key, TValue value)</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00060">Table.cs:60</a></div></div>
-<div class="ttc" id="aclass_table_html_aa5ceff8db5657ae3e7538277e4ed6f8d"><div class="ttname"><a href="../../d2/d8f/class_table.html#aa5ceff8db5657ae3e7538277e4ed6f8d">Table.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00174">Table.cs:174</a></div></div>
-<div class="ttc" id="aclass_table_html_aff475c7731aa4c465bdc355b22af30a3"><div class="ttname"><a href="../../d2/d8f/class_table.html#aff475c7731aa4c465bdc355b22af30a3">Table.KeyList</a></div><div class="ttdeci">List&lt; TKey &gt; KeyList</div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00014">Table.cs:14</a></div></div>
 <div class="ttc" id="anamespace_challenge_1_1_combats_html"><div class="ttname"><a href="../../da/d61/namespace_challenge_1_1_combats.html">Challenge.Combats</a></div><div class="ttdef"><b>Definition</b> <a href="#l00005">MasteryAbility.cs:6</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_masteries_html"><div class="ttname"><a href="../../d6/db7/namespace_common_1_1_masteries.html">Common.Masteries</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d39/_bell_veer_ultimate_8cs_source.html#l00004">BellVeerUltimate.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -244,7 +231,7 @@ $(function(){initNavTree('dd/dae/_mastery_ability_8cs_source.html','../../'); in
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_6d233b363695a672988938dc921ffc8d.html">Combats</a></li><li class="navelem"><a class="el" href="../../dd/dae/_mastery_ability_8cs.html">MasteryAbility.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_6d233b363695a672988938dc921ffc8d.html">Combats</a></li><li class="navelem"><b>MasteryAbility.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

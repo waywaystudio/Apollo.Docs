@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Common/Systems/SearchingSystem.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Common/Systems/SearchingSystem.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d4/dfd/_searching_system_8cs_source.html','../../'); i
   <div class="headertitle"><div class="title">SearchingSystem.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d4/dfd/_searching_system_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/db6/namespace_common_1_1_systems.html">Common.Systems</a></div>
@@ -115,26 +116,24 @@ $(function(){initNavTree('d4/dfd/_searching_system_8cs_source.html','../../'); i
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [SerializeField] <span class="keyword">private</span> GameObject RootObject;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        [SerializeField] <span class="keyword">private</span> LayerMask targetLayerMask;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#acb1007f95f1eefc83ae77c5f92a5a27d">   15</a></span>        <span class="keyword">public</span> List&lt;GameObject&gt; <span class="keyword">this</span>[<span class="keywordtype">int</span> layer] =&gt; SearchedTable[layer];</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#ab99d224ddabd9abf53676f5c8319b0cf">   16</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Collider&gt;</a> <a class="code hl_property" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#ab99d224ddabd9abf53676f5c8319b0cf">OnTriggerEnterTable</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#a475cfd8580a1e1be7b4bfe1b053683c5">   17</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Collider&gt;</a> <a class="code hl_property" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#a475cfd8580a1e1be7b4bfe1b053683c5">OnTriggerExitTable</a> { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">public</span> List&lt;GameObject&gt; <span class="keyword">this</span>[<span class="keywordtype">int</span> layer] =&gt; SearchedTable[layer];</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Collider&gt;</a> OnTriggerEnterTable { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Collider&gt;</a> OnTriggerExitTable { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">private</span> Dictionary&lt;int, List&lt;GameObject&gt;&gt; SearchedTable { <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#a299e20d89586d6db09f2c7ce9dd539cd">   22</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#a299e20d89586d6db09f2c7ce9dd539cd">Has</a>(<span class="keywordtype">int</span> layer) =&gt; SearchedTable.ContainsKey(layer);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> Has(<span class="keywordtype">int</span> layer) =&gt; SearchedTable.ContainsKey(layer);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#a4876385e6122e20367ff1f3275cc80bb">   24</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#a4876385e6122e20367ff1f3275cc80bb">AddTarget</a>(GameObject target)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> AddTarget(GameObject target)</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            var targetLayerIndex = target.layer;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#a299e20d89586d6db09f2c7ce9dd539cd">Has</a>(targetLayerIndex))</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">if</span> (Has(targetLayerIndex))</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                <span class="keyword">this</span>[targetLayerIndex].AddUniquely(target);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            }</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
-</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnTriggerEnter(Collider other)</div>
@@ -145,7 +144,7 @@ $(function(){initNavTree('d4/dfd/_searching_system_8cs_source.html','../../'); i
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">if</span> (!enteredObject.IsInLayerMask(targetLayerMask)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            SearchedTable[enteredComponentLayer]?.AddUniquely(enteredObject);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_property" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#ab99d224ddabd9abf53676f5c8319b0cf">OnTriggerEnterTable</a>.Invoke(other);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            OnTriggerEnterTable.Invoke(other);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> OnTriggerExit(Collider other)</div>
@@ -160,7 +159,7 @@ $(function(){initNavTree('d4/dfd/_searching_system_8cs_source.html','../../'); i
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                value.RemoveSafely(enteredObject);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_property" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#a475cfd8580a1e1be7b4bfe1b053683c5">OnTriggerExitTable</a>.Invoke(other);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            OnTriggerExitTable.Invoke(other);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
@@ -207,10 +206,6 @@ $(function(){initNavTree('d4/dfd/_searching_system_8cs_source.html','../../'); i
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
 <div class="ttc" id="aclass_action_table_html"><div class="ttname"><a href="../../db/dcc/class_action_table.html">ActionTable</a></div><div class="ttdoc">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00067">ActionTable.cs:68</a></div></div>
 <div class="ttc" id="aclass_common_1_1_systems_1_1_searching_system_html"><div class="ttname"><a href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html">Common.Systems.SearchingSystem</a></div><div class="ttdef"><b>Definition</b> <a href="#l00006">SearchingSystem.cs:7</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_searching_system_html_a299e20d89586d6db09f2c7ce9dd539cd"><div class="ttname"><a href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#a299e20d89586d6db09f2c7ce9dd539cd">Common.Systems.SearchingSystem.Has</a></div><div class="ttdeci">bool Has(int layer)</div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_searching_system_html_a475cfd8580a1e1be7b4bfe1b053683c5"><div class="ttname"><a href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#a475cfd8580a1e1be7b4bfe1b053683c5">Common.Systems.SearchingSystem.OnTriggerExitTable</a></div><div class="ttdeci">ActionTable&lt; Collider &gt; OnTriggerExitTable</div><div class="ttdef"><b>Definition</b> <a href="#l00017">SearchingSystem.cs:17</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_searching_system_html_a4876385e6122e20367ff1f3275cc80bb"><div class="ttname"><a href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#a4876385e6122e20367ff1f3275cc80bb">Common.Systems.SearchingSystem.AddTarget</a></div><div class="ttdeci">void AddTarget(GameObject target)</div><div class="ttdef"><b>Definition</b> <a href="#l00024">SearchingSystem.cs:24</a></div></div>
-<div class="ttc" id="aclass_common_1_1_systems_1_1_searching_system_html_ab99d224ddabd9abf53676f5c8319b0cf"><div class="ttname"><a href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html#ab99d224ddabd9abf53676f5c8319b0cf">Common.Systems.SearchingSystem.OnTriggerEnterTable</a></div><div class="ttdeci">ActionTable&lt; Collider &gt; OnTriggerEnterTable</div><div class="ttdef"><b>Definition</b> <a href="#l00016">SearchingSystem.cs:16</a></div></div>
 <div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_common_1_1_systems_html"><div class="ttname"><a href="../../df/db6/namespace_common_1_1_systems.html">Common.Systems</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00005">DetectModel.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -218,7 +213,7 @@ $(function(){initNavTree('d4/dfd/_searching_system_8cs_source.html','../../'); i
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_0f2f04a3ba9907eba6d31bc21884c9c4.html">Systems</a></li><li class="navelem"><a class="el" href="../../d4/dfd/_searching_system_8cs.html">SearchingSystem.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_876c6ae435fa6d5e69fa0f473d26710a.html">Common</a></li><li class="navelem"><a class="el" href="../../dir_0f2f04a3ba9907eba6d31bc21884c9c4.html">Systems</a></li><li class="navelem"><b>SearchingSystem.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

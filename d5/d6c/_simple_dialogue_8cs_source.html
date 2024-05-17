@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dreds Crossing: C:/Project/Apollo/Assets/Scripts/Challenge/UI/Dialogue/SimpleDialogue.cs Source File</title>
+<title>Dred&#39;s Crossing: C:/Project/Apollo/Assets/Scripts/Challenge/UI/Dialogue/SimpleDialogue.cs Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Dreds Crossing<span id="projectnumber">&#160;0.6</span>
+   <div id="projectname">Dred&#39;s Crossing<span id="projectnumber">&#160;0.6</span>
    </div>
-   <div id="projectbrief">dreds crossing programming documentation</div>
+   <div id="projectbrief">Programming Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -100,7 +101,7 @@ $(function(){initNavTree('d5/d6c/_simple_dialogue_8cs_source.html','../../'); in
   <div class="headertitle"><div class="title">SimpleDialogue.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/d6c/_simple_dialogue_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>DG.Tweening;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>TMPro;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine;</div>
@@ -117,29 +118,25 @@ $(function(){initNavTree('d5/d6c/_simple_dialogue_8cs_source.html','../../'); in
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        [SerializeField] <span class="keyword">private</span> TextMeshProUGUI textMesh;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        [SerializeField] <span class="keyword">private</span> List&lt;DOTweenAnimation&gt; tweenAnimations;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html#ac5fa4c859c7cf12124e2b9d943623fe1">   16</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html#ac5fa4c859c7cf12124e2b9d943623fe1">OnShow</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> OnShow { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html#a8f346b7308b10c4e49dd00e16ac0419b">   18</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html#a8f346b7308b10c4e49dd00e16ac0419b">ShowDialogue</a>(<span class="keywordtype">string</span> message)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ShowDialogue(<span class="keywordtype">string</span> message)</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            textMesh.text = message;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <a class="code hl_property" href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html#ac5fa4c859c7cf12124e2b9d943623fe1">OnShow</a>        = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            OnShow        = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            gameObject.SetActive(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            EventSystem.current.SetSelectedGameObject(gameObject);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            tweenAnimations.ForEach(anim =&gt; anim.DOPlay());</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
-</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html#a058808d509c7305af827c1e66c7f28f6">   28</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html#a058808d509c7305af827c1e66c7f28f6">HideDialogue</a>()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> HideDialogue()</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <a class="code hl_property" href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html#ac5fa4c859c7cf12124e2b9d943623fe1">OnShow</a>        = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            OnShow        = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            textMesh.text = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            gameObject.SetActive(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
-</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
@@ -156,9 +153,6 @@ $(function(){initNavTree('d5/d6c/_simple_dialogue_8cs_source.html','../../'); in
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 </div>
 <div class="ttc" id="aclass_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_html"><div class="ttname"><a href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html">Challenge.UI.Dialogue.SimpleDialogue</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">SimpleDialogue.cs:11</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_html_a058808d509c7305af827c1e66c7f28f6"><div class="ttname"><a href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html#a058808d509c7305af827c1e66c7f28f6">Challenge.UI.Dialogue.SimpleDialogue.HideDialogue</a></div><div class="ttdeci">void HideDialogue()</div><div class="ttdef"><b>Definition</b> <a href="#l00028">SimpleDialogue.cs:28</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_html_a8f346b7308b10c4e49dd00e16ac0419b"><div class="ttname"><a href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html#a8f346b7308b10c4e49dd00e16ac0419b">Challenge.UI.Dialogue.SimpleDialogue.ShowDialogue</a></div><div class="ttdeci">void ShowDialogue(string message)</div><div class="ttdef"><b>Definition</b> <a href="#l00018">SimpleDialogue.cs:18</a></div></div>
-<div class="ttc" id="aclass_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue_html_ac5fa4c859c7cf12124e2b9d943623fe1"><div class="ttname"><a href="../../da/d4e/class_challenge_1_1_u_i_1_1_dialogue_1_1_simple_dialogue.html#ac5fa4c859c7cf12124e2b9d943623fe1">Challenge.UI.Dialogue.SimpleDialogue.OnShow</a></div><div class="ttdeci">bool OnShow</div><div class="ttdef"><b>Definition</b> <a href="#l00016">SimpleDialogue.cs:16</a></div></div>
 <div class="ttc" id="ainterface_i_editable_html"><div class="ttname"><a href="../../d3/de8/interface_i_editable.html">IEditable</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d80/_i_editable_8cs_source.html#l00001">IEditable.cs:2</a></div></div>
 <div class="ttc" id="anamespace_challenge_1_1_u_i_1_1_dialogue_html"><div class="ttname"><a href="../../d6/d43/namespace_challenge_1_1_u_i_1_1_dialogue.html">Challenge.UI.Dialogue</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">SimpleDialogue.cs:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -166,7 +160,7 @@ $(function(){initNavTree('d5/d6c/_simple_dialogue_8cs_source.html','../../'); in
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_12abb7915f57923dd60d85eb2df22f20.html">UI</a></li><li class="navelem"><a class="el" href="../../dir_018c9bea8c6a14f3234aede135a518de.html">Dialogue</a></li><li class="navelem"><a class="el" href="../../d5/d6c/_simple_dialogue_8cs.html">SimpleDialogue.cs</a></li>
+    <li class="navelem"><a class="el" href="../../dir_0917eabbb25fcec79c18b0b84ad92892.html">Apollo</a></li><li class="navelem"><a class="el" href="../../dir_893a127ee737df0a48d85ceb05d586c3.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_c4e870771ff5e68d5f71ae416b84d92f.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_b906f27f7f24b85fc8e30d6f59a5c97e.html">Challenge</a></li><li class="navelem"><a class="el" href="../../dir_12abb7915f57923dd60d85eb2df22f20.html">UI</a></li><li class="navelem"><a class="el" href="../../dir_018c9bea8c6a14f3234aede135a518de.html">Dialogue</a></li><li class="navelem"><b>SimpleDialogue.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
