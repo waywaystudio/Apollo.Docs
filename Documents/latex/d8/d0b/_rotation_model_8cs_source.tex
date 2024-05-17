@@ -1,0 +1,41 @@
+\doxysection{Rotation\+Model.\+cs}
+\hypertarget{_rotation_model_8cs_source}{}\label{_rotation_model_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/RotationModel.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/RotationModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters}{Common.Characters}};}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_modules}{Common.Skills.Modules}}}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00008}00008\ \ \ \ \ [Serializable]}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }RotationModel}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ instantRotate\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ preventRotateOnSkill\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dred\ dred;}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(CharacterBehaviour\ behaviour)}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (behaviour.Unit\ is\ not\ Dred\ player)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ dred\ =\ player;}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ behaviour.Sections}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddIf(instantRotate,\ Section.Active,\ \textcolor{stringliteral}{"{}InstantRotate"{}},\ InstantRotate)}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddIf(preventRotateOnSkill,\ Section.Active,\ \textcolor{stringliteral}{"{}PreventRotate"{}},\ PreventRotate)}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddIf(preventRotateOnSkill,Section.RigidEnd,\ \textcolor{stringliteral}{"{}ReleaseRotate"{}},\ ReleaseRotate)}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddIf(preventRotateOnSkill,Section.End,\ \textcolor{stringliteral}{"{}ReleaseRotate"{}},\ ReleaseRotate)}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ InstantRotate()\ =>\ dred.Controller.RotateInstantly();}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ PreventRotate()\ =>\ dred.Controller.RotateCondition.Add(\textcolor{stringliteral}{"{}PreventFromBladeStrike"{}},\ ()\ =>\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ReleaseRotate()\ =>\ dred.Controller.RotateCondition.Remove(\textcolor{stringliteral}{"{}PreventFromBladeStrike"{}});}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rotation_model_8cs_source_l00035}00035\ \}}
+
+\end{DoxyCode}

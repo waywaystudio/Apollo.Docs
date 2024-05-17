@@ -1,0 +1,194 @@
+\doxysection{Time\+Director.\+cs}
+\hypertarget{_time_director_8cs_source}{}\label{_time_director_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Times/TimeDirector.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Times/TimeDirector.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }DG.Tweening;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_u_is}{UIs}};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00006}\mbox{\hyperlink{namespace_times}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_times}{Times}}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TimeDirector\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ TimeManager\ timeManager;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ PostProcessManager\ ppManager;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ blurFadeOutDuration\ =\ 0.5f;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ blurFadeInDuration\ =\ 0.5f;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ PreviousTimeScale;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ Tween\ BulletTimeTween;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ Tween\ HitStopTween;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsPaused\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{protected}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable}}\ OnPaused\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable}}\ OnResumed\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ timeManager.Director\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ IsPaused\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ PreviousTimeScale\ \ \ \ =\ Time.timeScale;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ OnPaused.Add(\textcolor{stringliteral}{"{}FadeOut"{}},\ ()\ =>\ ppManager.FadeOut(VolumeType.Main,\ blurFadeOutDuration));}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ OnPaused.Add(\textcolor{stringliteral}{"{}BlurIn"{}},\ ()\ =>\ ppManager.BlurIn(VolumeType.Main,\ blurFadeOutDuration));}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ OnResumed.Add(\textcolor{stringliteral}{"{}FadeIn"{}},\ ()\ =>\ ppManager.FadeIn(VolumeType.Main,\ blurFadeInDuration));}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ OnResumed.Add(\textcolor{stringliteral}{"{}BlurOut"{}},\ ()\ =>\ ppManager.BlurOut(VolumeType.Main,\ blurFadeInDuration));}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Pause()\ =>\ Pause(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Pause(Action\ callback)}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsPaused)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ IsPaused\ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ PreviousTimeScale\ =\ Time.timeScale;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ Time.timeScale\ \ \ \ =\ 0f;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pause\ Bullet\ Time\ Effect}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (BulletTimeTween\ !=\ \textcolor{keyword}{null}\ \&\&\ BulletTimeTween.IsActive()\ \&\&\ BulletTimeTween.IsPlaying())}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BulletTimeTween.Pause();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cancel\ HitStop\ Effect}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (HitStopTween\ !=\ \textcolor{keyword}{null}\ \&\&\ HitStopTween.IsActive()\ \&\&\ HitStopTween.IsPlaying())}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RemoveHitStop();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ OnPaused.Invoke();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ callback?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Resume()\ =>\ Resume(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Resume(Action\ callback)}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!IsPaused)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ IsPaused\ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ Time.timeScale\ =\ PreviousTimeScale;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ OnResumed.Invoke();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ BulletTimeTween?.Play();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ callback?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TogglePausing()}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (timeManager.IsPaused)}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Resume();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Pause();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Pause(\textcolor{keywordtype}{float}\ pauseDuration)}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsPaused)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (BulletTimeTween\ !=\ \textcolor{keyword}{null}\ \&\&\ BulletTimeTween.IsActive())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ PreviousTimeScale\ =\ Time.timeScale;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO.잠시끄기.}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ OnPaused.Invoke();}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ HitStopTween?.Kill();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ HitStopTween\ =\ DOTween.Sequence()}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Append(DOTween.To(()\ =>\ Time.timeScale,\ x\ =>\ Time.timeScale\ =\ x,\ 0f,\ 0f)}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(\textcolor{keyword}{true}))}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AppendInterval(pauseDuration)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Append(DOTween.To(()\ =>\ Time.timeScale,\ x\ =>\ Time.timeScale\ =\ x,\ PreviousTimeScale,\ 0f).SetUpdate(\textcolor{keyword}{true}))}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ BulletTime(\textcolor{keywordtype}{float}\ peakTime,\ \textcolor{keywordtype}{float}\ duration,\ Ease\ toPeakEaseType\ =\ Ease.OutExpo,\ Ease\ toResumeEaseType\ =\ Ease.Linear,\ Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsPaused)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (HitStopTween\ !=\ \textcolor{keyword}{null}\ \&\&\ HitStopTween.IsActive())}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RemoveHitStop();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ BulletTimeTween?.Kill();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ var\ effectDuration\ =\ duration\ *\ 0.9f\ *\ peakTime;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ var\ restDuration\ =\ duration\ *\ peakTime\ -\/\ effectDuration;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ PreviousTimeScale\ =\ Time.timeScale;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ BulletTimeTween\ =\ DOTween.Sequence()}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Append(DOTween.To(()\ =>\ Time.timeScale,\ x\ =>\ Time.timeScale\ =\ x,\ peakTime,\ effectDuration)}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(toPeakEaseType)}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(DG.Tweening.UpdateType.Fixed,\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnUpdate(()\ =>\ Time.fixedDeltaTime\ =\ Time.timeScale\ *\ 0.02f))}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Append(DOTween.To(()\ =>\ Time.timeScale,\ x\ =>\ Time.timeScale\ =\ x,\ 1f,\ restDuration)}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(toResumeEaseType)}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(DG.Tweening.UpdateType.Fixed,\ \textcolor{keyword}{true})\ \textcolor{comment}{//\ Ignore\ time\ scale}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnUpdate(()\ =>\ Time.fixedDeltaTime\ =\ Time.timeScale\ *\ 0.02f))}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnKill(()\ =>\ BulletTimeTween\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StopBulletTime();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ callback?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \})}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ResetTimeScale()}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsPaused)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ Time.timeScale\ =\ 1f;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ StopBulletTime()}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (BulletTimeTween\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ BulletTimeTween.Kill();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ BulletTimeTween\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ Time.timeScale\ \ \ \ \ \ =\ 1f;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ Time.fixedDeltaTime\ =\ Time.timeScale\ *\ 0.02f;}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Dispose()}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ StopBulletTime();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ RemoveHitStop();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ OnPaused.Remove(\textcolor{stringliteral}{"{}FadeOut"{}});}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ OnPaused.Remove(\textcolor{stringliteral}{"{}BlurIn"{}});}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ OnResumed.Remove(\textcolor{stringliteral}{"{}FadeIn"{}});}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ OnResumed.Remove(\textcolor{stringliteral}{"{}BlurOut"{}});}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RemoveHitStop()}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (HitStopTween\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ HitStopTween.Kill();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ HitStopTween\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ Dispose();}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00184}00184\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ timeManager);}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ ppManager);}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00190}00190\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00191}00191\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_time_director_8cs_source_l00192}00192\ \}}
+
+\end{DoxyCode}

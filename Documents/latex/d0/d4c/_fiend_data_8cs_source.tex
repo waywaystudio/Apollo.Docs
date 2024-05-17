@@ -1,0 +1,69 @@
+\doxysection{Fiend\+Data.\+cs}
+\hypertarget{_fiend_data_8cs_source}{}\label{_fiend_data_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/SheetData/CharacterData/FiendData.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/SheetData/CharacterData/FiendData.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00001}00001\ \textcolor{comment}{/*\ \ \ \ \ =====\ Do\ not\ touch\ this.\ Auto\ Generated\ Code.\ =====\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00002}00002\ \textcolor{comment}{/*\ \ \ \ \ If\ you\ want\ custom\ code\ generation\ modify\ this\ =>\ 'CodeGeneratorScriptableObject.cs'\ \ */}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00003}00003\ \textcolor{comment}{//\ \ \ \ \ ReSharper\ disable\ BuiltInTypeReferenceStyle}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00004}00004\ \textcolor{comment}{//\ \ \ \ \ ReSharper\ disable\ PartialTypeWithSinglePart}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_character_data}{Databases.SheetData.CharacterData}}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00011}00011\ \{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }FiendData\ :\ DataObject<FiendData.Fiend>}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [Serializable]}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Fiend\ :\ IIdentifier}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Int32\ id;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ String\ name;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Single\ hitPoints;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Single\ basePower;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Single\ baseAttackSpeed;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Single\ criticalChance;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Single\ criticalDamage;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Single\ moveSpeed;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Int32\ ID\ =>\ id;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ String\ Name\ =>\ name;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Single\ HitPoints\ =>\ hitPoints;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Single\ BasePower\ =>\ basePower;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Single\ BaseAttackSpeed\ =>\ baseAttackSpeed;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Single\ CriticalChance\ =>\ criticalChance;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Single\ CriticalDamage\ =>\ criticalDamage;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Single\ MoveSpeed\ =>\ moveSpeed;}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00037}00037\ \textcolor{preprocessor}{\#region\ Editor\ Functions.}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00038}00038\ \textcolor{preprocessor}{\ \ \ \ \#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ SpreadSheetID\ =\ \textcolor{stringliteral}{"{}1z8rVzhlWcP9ftdD6nr2mdexrsIJJxMMpus6Q4OoJIkE"{}};}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ SpreadSheetName\ =\ \textcolor{stringliteral}{"{}CharacterData"{}};}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ WorkSheetName\ =\ \textcolor{stringliteral}{"{}Fiend"{}};\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00042}00042\ \ \ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ LoadFromJson()}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00045}00045\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ List\ =\ UnityGoogleSheet.Editor.Core.UgsEditorUtility}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .LoadFromJson<Fiend>(\textcolor{stringliteral}{"{}CharacterData"{}});\ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ LoadFromGoogleSpreadSheet()}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ UnityGoogleSheet.Editor.Core.UgsExplorer}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ParseSpreadSheet(SpreadSheetID,\ \textcolor{stringliteral}{"{}Fiend"{}});}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ LoadFromJson();}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEditor.EditorUtility.SetDirty(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEditor.AssetDatabase.Refresh();}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00060}00060\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00061}00061\ \textcolor{preprocessor}{\#endregion}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_fiend_data_8cs_source_l00063}00063\ \}}
+
+\end{DoxyCode}

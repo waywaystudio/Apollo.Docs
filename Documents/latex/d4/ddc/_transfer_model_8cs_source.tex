@@ -1,0 +1,268 @@
+\doxysection{Transfer\+Model.\+cs}
+\hypertarget{_transfer_model_8cs_source}{}\label{_transfer_model_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Systems/TransferModel.cs@{C:/Project/Apollo/Assets/Scripts/Common/Systems/TransferModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }DG.Tweening;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_systems}{Common.Systems}}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00007}00007\ \ \ \ \ [Serializable]}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TransferModel}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Transform\ master;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Tween\ transferTween;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Tween\ rotateTween;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Sequence\ jumpSequence;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Vector3\ RootPosition\ =>\ master.position;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Vector3\ Forward\ =>\ master.forward;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ LayerMask\ WalkableLayer\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ LayerMask\ UnsafeLayer\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ TransferModel(Transform\ master,\ LayerMask\ walkableLayer,\ LayerMask\ unsafeLayer)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ this.master\ \ \ =\ master;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ WalkableLayer\ =\ walkableLayer;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ UnsafeLayer\ \ \ =\ unsafeLayer;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Move(\textcolor{keywordtype}{float}\ distance,\ \textcolor{keywordtype}{float}\ duration,\ Ease\ easeType\ =\ Ease.InSine)\ =>\ Move(Forward,\ distance,\ duration,\ easeType);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Move(Vector3\ direction,\ \textcolor{keywordtype}{float}\ distance,\ \textcolor{keywordtype}{float}\ duration,\ Ease\ easeType\ =\ Ease.InSine)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ var\ walkableDestination\ =\ PathfindingUtility.GetWalkablePosition(RootPosition,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ direction,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnsafeLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WalkableLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distance);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ transferTween\ =\ master.DOMove(walkableDestination,\ duration)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(DG.Tweening.UpdateType.Fixed)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(easeType);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Jump(Vector3\ destination,\ \textcolor{keywordtype}{float}\ jumpPower,\ \textcolor{keywordtype}{float}\ duration,\ Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ Cancel();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ var\ distance\ =\ Vector3.Distance(RootPosition,\ destination);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ var\ jumpDestination\ =\ PathfindingUtility.GetAcrossPosition(RootPosition,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Forward,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnsafeLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WalkableLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distance);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ jumpSequence\ =\ master.DOJump(jumpDestination,\ jumpPower,\ 1,\ duration)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>\ callback?.Invoke())}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(DG.Tweening.UpdateType.Normal)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(Ease.InSine)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Jump(Vector3\ direction,\ \textcolor{keywordtype}{float}\ distance,\ \textcolor{keywordtype}{float}\ jumpPower,\ \textcolor{keywordtype}{float}\ duration,\ Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ var\ jumpDestination\ =\ PathfindingUtility.GetWalkablePosition(RootPosition,\ direction,\ UnsafeLayer,\ WalkableLayer,\ distance);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ transferTween\ =\ master.DOJump(jumpDestination,\ jumpPower,\ 1,\ duration)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(DG.Tweening.UpdateType.Normal)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(Ease.InSine)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>\ callback?.Invoke())}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Dash(Vector3\ direction,\ DashProperty\ property,\ Action\ callback\ =\ \textcolor{keyword}{null})\ =>\ Dash(direction,\ property.Distance,\ property.Duration,\ property.Threshold,\ property.EaseType,\ callback);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Dash(Vector3\ direction,\ \textcolor{keywordtype}{float}\ distance,\ \textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ farThreshold\ =\ 0f,\ Ease\ easeType\ =\ Ease.Unset,\ Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ Cancel();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ var\ dashDestination\ =\ PathfindingUtility.GetAcrossPosition(RootPosition,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ direction,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnsafeLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WalkableLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distance,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ farThreshold);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ transferTween\ =\ master.DOMove(dashDestination,\ duration)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(DG.Tweening.UpdateType.Fixed)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(easeType)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ callback?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Dash(Vector3\ destination,\ \textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ farThreshold\ =\ 0f,\ Ease\ easeType\ =\ Ease.Unset,\ Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ Cancel();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ var\ distance\ =\ Vector3.Distance(RootPosition,\ destination);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ var\ dashDestination\ =\ PathfindingUtility.GetAcrossPosition(RootPosition,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Forward,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnsafeLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WalkableLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distance,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ farThreshold);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ transferTween\ =\ master.DOMove(dashDestination,\ duration)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(DG.Tweening.UpdateType.Fixed)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(easeType)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ callback?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Note.Dash\ OnComplete에,\ 또\ Dash를\ 넣는\ 경우,\ 두\ 번째\ Dash\ 실행\ 이후에\ 아래에\ Kill이\ 실행되어,\ 두\ 번째\ Dash\ 실행\ 멈춤}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ transferTween.Kill();}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ transferTween\ =\ null;}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ RotateToTarget(Vector3\ lookTarget,\ \textcolor{keywordtype}{float}\ rotatePerFrame,\ Action\ callback)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ CancelRotate();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ var\ characterTransform\ =\ master.transform;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ var\ directionToLookTarget\ =\ (lookTarget\ -\/\ characterTransform.position).normalized;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetRotation\ =\ Quaternion.LookRotation(directionToLookTarget);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ var\ totalAngleDifference\ =\ Quaternion.Angle(characterTransform.rotation,\ targetRotation);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ var\ totalFrames\ =\ Mathf.CeilToInt(totalAngleDifference\ /\ rotatePerFrame);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ var\ totalDuration\ =\ totalFrames\ *\ Time.fixedDeltaTime;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ rotateTween\ =\ characterTransform.DORotateQuaternion(targetRotation,\ totalDuration)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(Ease.Linear)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(DG.Tweening.UpdateType.Fixed)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>\ callback?.Invoke())}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetAutoKill()}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SpiralDash(Vector3\ target,\ \textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ speed,\ \textcolor{keywordtype}{float}\ frequency,\ Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ Cancel();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ var\ axis\ =\ (\textcolor{keyword}{new}\ Vector3(target.x,\ target.y\ +\ 1,\ target.z)\ -\/\ target).normalized;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ transferTween\ =\ master.DOSpiral(duration,\ axis,\ SpiralMode.Expand,\ speed,\ frequency)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>\ callback?.Invoke())}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ KnockBack(Vector3\ from,\ Vector3\ direction,\ KnockBackProperty\ property,\ Action\ callback\ =\ \textcolor{keyword}{null})\ =>\ KnockBack(from,\ direction,\ property.Distance,\ property.Duration,\ property.EaseType,\ callback);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ KnockBack(Vector3\ from,\ Vector3\ direction,\ \textcolor{keywordtype}{float}\ distance,\ \textcolor{keywordtype}{float}\ duration,\ Ease\ easeType,\ Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ Cancel();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ var\ knockBackDestination\ =\ PathfindingUtility.GetWalkablePosition(RootPosition,\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ direction,\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnsafeLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WalkableLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distance);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ transferTween\ =\ master.DOMove(knockBackDestination,\ duration)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(DG.Tweening.UpdateType.Fixed)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(easeType)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>\ callback?.Invoke());}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vector3\ Source\ Drawer}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Drawn(Vector3\ source,\ \textcolor{keywordtype}{float}\ maxDistance,\ \textcolor{keywordtype}{float}\ speed,\ Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ var\ drawDirection\ =\ source\ -\/\ RootPosition;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ var\ distanceEachOther\ =\ Vector3.Distance(source,\ RootPosition);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ var\ drawDistance\ =\ Mathf.Min(distanceEachOther,\ maxDistance);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ var\ drawDestination\ =\ PathfindingUtility.GetWalkablePosition(RootPosition,\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ drawDirection,\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnsafeLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WalkableLayer,}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ drawDistance);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ transferTween\ =\ master.DOMove(drawDestination,\ drawDistance\ /\ speed)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetUpdate(DG.Tweening.UpdateType.Normal)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>\ callback?.Invoke());}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Drawn(Transform\ source,\ \textcolor{keywordtype}{float}\ duration,\ Action\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ var\ startTime\ =\ Time.time;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ var\ initialPosition\ =\ master.position;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ transferTween\ =\ DOTween.To(()\ =>\ 0f,\ \_\ =>\ \{\ \},\ 1f,\ duration)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnUpdate(()\ =>}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (source\ is\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ transferTween.Kill();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ t\ =\ (Time.time\ -\/\ startTime)\ /\ duration;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetPosition\ =\ source.position;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ newPosition\ =\ Vector3.Lerp(initialPosition,\ targetPosition,\ t);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ master.position\ =\ newPosition;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>\ callback?.Invoke());}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ CancelDash(Vector3\ originalDestination,\ out\ \textcolor{keywordtype}{float}\ remainingDistance,\ out\ \textcolor{keywordtype}{float}\ remainingDuration)}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (transferTween\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ remainingDistance\ =\ 0f;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ remainingDuration\ =\ 0f;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ the\ progress\ of\ the\ tween}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ var\ progress\ =\ transferTween.ElapsedPercentage();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ remainingDuration\ =\ transferTween.Duration()\ *\ (1\ -\/\ progress);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ the\ remaining\ distance}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ var\ currentPosition\ =\ master.position;}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ remainingDistance\ =\ Vector3.Distance(currentPosition,\ originalDestination)\ *\ (1\ -\/\ progress);}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cancel\ the\ dash}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ transferTween.Kill();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ transferTween\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (transferTween\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ transferTween.Kill();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ transferTween\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rotateTween\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rotateTween.Kill();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rotateTween\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (jumpSequence\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ jumpSequence.Kill();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ jumpSequence\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Dispose()}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ Cancel();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ CancelRotate();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00257}00257\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00258}00258\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00259}00259\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00260}00260\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CancelRotate()}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00261}00261\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ rotateTween?.Kill();}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ rotateTween\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00264}00264\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00265}00265\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_transfer_model_8cs_source_l00266}00266\ \}}
+
+\end{DoxyCode}

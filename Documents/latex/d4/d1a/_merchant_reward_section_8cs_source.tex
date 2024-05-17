@@ -1,0 +1,104 @@
+\doxysection{Merchant\+Reward\+Section.\+cs}
+\hypertarget{_merchant_reward_section_8cs_source}{}\label{_merchant_reward_section_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/Dungeons/Sections/MerchantRewardSection.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/Dungeons/Sections/MerchantRewardSection.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_dungeons_1_1_sections}{Challenge.Dungeons.Sections}}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MerchantRewardSection\ :\ RewardSection}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<GoodWeightProperty>\ goodsPrefabs;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<Transform>\ spawnTransformList;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [Serializable]}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }GoodWeightProperty}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ Goods;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Weight;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(DungeonScenarios\ scenario)}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(scenario);}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ var\ merchantGoodsTransform\ =\ Map.PrePositionTable[MapPrepositionType.MerchantGoods];}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ spawnTransformList\ =\ merchantGoodsTransform.GetComponentsInOnlyChildren<Transform>(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Active,\ \textcolor{stringliteral}{"{}SpawnSource"{}})}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}SpawnGoods"{}},\ SpawnGoods)}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SpawnGoods()}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ var\ numberOfGoodsToSpawn\ =\ spawnTransformList.Count;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ var\ selectedGoods\ =\ \textcolor{keyword}{new}\ List<GoodWeightProperty>();}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 모든\ 상품을\ 최소\ 한\ 번씩\ 선택}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (numberOfGoodsToSpawn\ >=\ goodsPrefabs.Count)}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectedGoods.AddRange(goodsPrefabs);}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numberOfGoodsToSpawn\ -\/=\ goodsPrefabs.Count;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 남은\ 수량만큼\ 추가로\ 상품을\ 선택}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (numberOfGoodsToSpawn\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ additionalGoods\ =\ WeightedRandomSelection(goodsPrefabs,\ Math.Min(numberOfGoodsToSpawn,\ goodsPrefabs.Count));}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectedGoods.AddRange(additionalGoods);}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numberOfGoodsToSpawn\ -\/=\ additionalGoods.Count;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ spawnTransformList.Count;\ i++)}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ goodsPrefab\ =\ Instantiate(selectedGoods[i].Goods,\ spawnTransformList[i]);}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!goodsPrefab.TryGetComponent(out\ Props.MerchantGoods.MerchantGoods\ goods))\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ goods.Initialize();}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<GoodWeightProperty>\ WeightedRandomSelection(IEnumerable<GoodWeightProperty>\ goods,\ \textcolor{keywordtype}{int}\ count)}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ var\ selectedGoods\ =\ \textcolor{keyword}{new}\ List<GoodWeightProperty>();}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ var\ availableGoods\ =\ \textcolor{keyword}{new}\ List<GoodWeightProperty>(goods);}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ count\ \&\&\ availableGoods.Count\ >\ 0;\ i++)}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ totalWeight\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ good\ \textcolor{keywordflow}{in}\ availableGoods)}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ totalWeight\ +=\ good.Weight;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ randomPoint\ =\ UnityEngine.Random.value\ *\ totalWeight;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ currentPoint\ =\ 0f;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ j\ =\ 0;\ j\ <\ availableGoods.Count;\ j++)}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentPoint\ +=\ availableGoods[j].Weight;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentPoint\ >=\ randomPoint)}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectedGoods.Add(availableGoods[j]);}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ availableGoods.RemoveAt(j);}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ selectedGoods;}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_merchant_reward_section_8cs_source_l00098}00098\ \}}
+
+\end{DoxyCode}

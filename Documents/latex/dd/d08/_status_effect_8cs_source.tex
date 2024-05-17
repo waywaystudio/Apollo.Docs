@@ -1,0 +1,103 @@
+\doxysection{Status\+Effect.\+cs}
+\hypertarget{_status_effect_8cs_source}{}\label{_status_effect_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/StatusEffects/StatusEffect.cs@{C:/Project/Apollo/Assets/Scripts/Common/StatusEffects/StatusEffect.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_status_effects}{Common.StatusEffects}}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00008}\mbox{\hyperlink{class_common_1_1_status_effects_1_1_status_effect}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_status_effects_1_1_status_effect}{StatusEffect}}\ :\ MonoBehaviour,\ IUnitSequencer,\ IDataIndexer,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ DataIndex\ statusEffectCode;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ PrePositionType\ visualEffectPivot\ =\ PrePositionType.Body;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Sprite\ icon;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Executor\ executor;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Effector\ effector;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ StatusEffectSpawnEvent\ spawnEvent;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ OverrideModule\ overrideModule;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ ExecuteTimer\ executeTimer;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DataIndex\ DataIndex\ =>\ statusEffectCode;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ Unit\ =>\ Target;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ PrePositionType\ VisualEffectPivot\ =>\ visualEffectPivot;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ Provider\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{protected}\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{/*\ Effect\ Provider\ */}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Character\ Target\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{/*\ Affected\ Target\ */}\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Sprite\ Icon\ =>\ icon;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DataIndex\ DispelCode\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Executor\ Executor\ =>\ executor;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ExecuteTimer\ ExecuteTimer\ =>\ executeTimer;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00035}\mbox{\hyperlink{class_common_1_1_status_effects_1_1_status_effect_a7ee85f8cacb4d9a182e9136798ae0529}{00035}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_common_1_1_status_effects_1_1_status_effect_a7ee85f8cacb4d9a182e9136798ae0529}{Initialize}}(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider)}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ Provider\ =\ provider;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ \ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}AddStatusEffectTable"{}},\ AddTable)}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Execute,\ \textcolor{stringliteral}{"{}MainExecution"{}},\ MainExecution)}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}UnregisterTable"{}},\ RemoveTable)}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ executor.Initialize(Provider);}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ executor.SetSender(Unit);}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ effector.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ overrideModule.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ executeTimer.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.Invoke(statusEffectCode,\ \textcolor{keyword}{this});\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00052}00052\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active(Character\ target)}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ Target\ =\ target;}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ effector.SetTarget(target.gameObject);}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Target.StatusEffectTable.Has(statusEffectCode))}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Override();}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ MainExecution()}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Target.IsNullOrDestroyed())}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Executor.Execute(Target.gameObject);}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddTable()\ =>\ Target.StatusEffectTable.Add(DataIndex,\ \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RemoveTable()\ =>\ Target.StatusEffectTable.Remove(DataIndex);}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ Invoker.Dispose();}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00085}00085\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ statusEffectCode\ =\ \$\textcolor{stringliteral}{"{}\{gameObject.name\}StatusEffect"{}}.ToEnum<DataIndex>();}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ var\ effectData\ =\ Database.StatusEffectSheetData(statusEffectCode);}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ icon\ \ \ \ \ =\ Database.SpriteData(statusEffectCode);}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ executor\ =\ GetComponentInChildren<Executor>();}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ =\ GetComponentInChildren<Effector>();}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ executor.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ effector.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ spawnEvent);}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00101}00101\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00102}00102\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_8cs_source_l00103}00103\ \}}
+
+\end{DoxyCode}

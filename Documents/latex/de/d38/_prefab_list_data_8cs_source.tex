@@ -1,0 +1,45 @@
+\doxysection{Prefab\+List\+Data.\+cs}
+\hypertarget{_prefab_list_data_8cs_source}{}\label{_prefab_list_data_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/PrefabListData.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/PrefabListData.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Sirenix.OdinInspector;}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_databases}{Databases}}}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }PrefabListData\ :\ ScriptableObject,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [FolderPath]}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{string}\ prefabPath;}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ List<GameObject>\ list;}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<GameObject>\ List\ =>\ list;}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00016}00016\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Finder.TryGetObjectList(prefabPath,\ \textcolor{stringliteral}{"{}"{}},\ out\ List<GameObject>\ prefabs,\ \textcolor{keyword}{true}))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ list.Clear();}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Exclude\ Prefab\ Name\ start\ "{}\_"{}.}}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ "{}\_"{}\ means\ abstract\ prefab;}}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ prefabs.RemoveNull();}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ prefabs.RemoveAll(prefab\ =>\ prefab.name.StartsWith(\textcolor{stringliteral}{"{}\_"{}}));}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ prefabs.ForEach(prefab\ =>}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ list.Add(prefab);}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEditor.AssetDatabase.Refresh();}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ [Button(ButtonSizes.Large)]}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ResetList()\ =>\ list.Clear();}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00037}00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_prefab_list_data_8cs_source_l00039}00039\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,37 @@
+\doxysection{State\+Mask.\+cs}
+\hypertarget{_state_mask_8cs_source}{}\label{_state_mask_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Enum/StateMask.cs@{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Enum/StateMask.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common}{Common}}}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00005}00005\ \ \ \ \ \textcolor{comment}{//\ superArmor:}}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00006}00006\ \ \ \ \ \textcolor{comment}{//\ paralysis\ Immunity\ -\/\ 경직\ 면역}}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ push\ Immunity\ -\/\ 피격\ 면역\ (넉백,\ 드로우)}}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//\ crowd\ control\ Immunity\ -\/\ 군중제어\ 면역\ (기절,\ 공포)}}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00009}00009\ \ \ \ \ \textcolor{comment}{//\ all\ immunity\ -\/\ 모든\ 면역}}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00010}00010\ \ \ \ \ [Flags]}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ StateMask}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ None\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ Yield\ =\ 1\ <<\ 0,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ ImmuneParalysis\ =\ 1\ <<\ 1,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ ImmunePush\ =\ 1\ <<\ 2,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ ImmuneCrowdControl\ =\ 1\ <<\ 3,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ Immunable\ =\ ImmuneParalysis\ |\ ImmunePush\ |\ ImmuneCrowdControl,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ Soft\ =\ 1\ <<\ 4,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_common}{Common}}\ =\ 1\ <<\ 5,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ Power\ =\ 1\ <<\ 6,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ Rigid\ =\ 1\ <<\ 7,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ Paralysis\ \ =\ 1\ <<\ 11,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ Push\ =\ 1\ <<\ 12,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ CrowdControl\ =\ 1\ <<\ 13,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ Dead\ =\ 1\ <<\ 30,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ All\ =\ \textcolor{keywordtype}{int}.MaxValue,}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_state_mask_8cs_source_l00031}00031\ \}}
+
+\end{DoxyCode}

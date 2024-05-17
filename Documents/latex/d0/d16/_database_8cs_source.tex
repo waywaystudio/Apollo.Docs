@@ -1,0 +1,156 @@
+\doxysection{Database.\+cs}
+\hypertarget{_database_8cs_source}{}\label{_database_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/Database.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/Database.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00001}00001\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Reflection;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEditor;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00004}00004\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.IO;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_databases}{Databases}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_databases_1_1_prefabs}{Databases.Prefabs}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_databases_1_1_resource_data}{Databases.ResourceData}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00011}00011\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_singleton}{Singleton}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00012}00012\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00013}00013\ \textcolor{keyword}{using\ }Fiend\ =\ \mbox{\hyperlink{namespace_databases}{Databases}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data}{SheetData}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_character_data}{CharacterData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_character_data_1_1_fiend_data}{FiendData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_character_data_1_1_fiend_data_1_1_fiend}{Fiend}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00014}00014\ \textcolor{keyword}{using\ }Stat\ =\ \mbox{\hyperlink{namespace_databases}{Databases}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data}{SheetData}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_combat_data}{CombatData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_stat_data}{StatData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_stat_data_1_1_stat}{Stat}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00015}00015\ \textcolor{keyword}{using\ }DredSkill\ =\ \mbox{\hyperlink{namespace_databases}{Databases}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data}{SheetData}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_combat_data}{CombatData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_dred_skill_data}{DredSkillData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_dred_skill_data_1_1_dred_skill}{DredSkill}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00016}00016\ \textcolor{keyword}{using\ }NonPlayerSkill\ =\ \mbox{\hyperlink{namespace_databases}{Databases}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data}{SheetData}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_combat_data}{CombatData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_non_player_skill_data}{NonPlayerSkillData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_non_player_skill_data_1_1_non_player_skill}{NonPlayerSkill}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00017}00017\ \textcolor{keyword}{using\ }Projectile\ =\ \mbox{\hyperlink{namespace_databases}{Databases}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data}{SheetData}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_combat_data}{CombatData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_projectile_data}{ProjectileData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_projectile_data_1_1_projectile}{Projectile}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00018}00018\ \textcolor{keyword}{using\ }StatusEffect\ =\ \mbox{\hyperlink{namespace_databases}{Databases}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data}{SheetData}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_combat_data}{CombatData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data}{StatusEffectData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_combat_data_1_1_status_effect_data_1_1_status_effect}{StatusEffect}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00019}00019\ \textcolor{keyword}{using\ }Equipment\ =\ \mbox{\hyperlink{namespace_databases}{Databases}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data}{SheetData}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_item_data}{ItemData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_item_data_1_1_equipment_data}{EquipmentData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_item_data_1_1_equipment_data_1_1_equipment}{Equipment}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00020}00020\ \textcolor{keyword}{using\ }Mastery\ =\ \mbox{\hyperlink{namespace_databases}{Databases}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data}{SheetData}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_ability_data}{AbilityData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_ability_data_1_1_mastery_data}{MasteryData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_ability_data_1_1_mastery_data_1_1_mastery}{Mastery}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00021}00021\ \textcolor{keyword}{using\ }WeaponSkill\ =\ \mbox{\hyperlink{namespace_databases}{Databases}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data}{SheetData}}.\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_ability_data}{AbilityData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_ability_data_1_1_weapon_skill_data}{WeaponSkillData}}.\mbox{\hyperlink{class_databases_1_1_sheet_data_1_1_ability_data_1_1_weapon_skill_data_1_1_weapon_skill}{WeaponSkill}};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00024}00024\ \textcolor{comment}{//\ ReSharper\ disable\ CheckNamespace}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00026}00026\ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }Database\ :\ MonoSingleton<Database>,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00028}00028\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<DataObject>\ sheetDataList\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00029}00029\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00030}00030\ \ \ \ \ \textcolor{comment}{/*\ Prefabs\ */}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00031}00031\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ StatusEffectPrefabData\ statusEffectPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00032}00032\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ProjectilePrefabData\ projectilePrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00033}00033\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ MasteryPrefabData\ masteryPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00034}00034\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ WhisperPrefabData\ whisperPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00035}00035\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ FiendPrefabData\ fiendPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00036}00036\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DungeonMapPrefabData\ DungeonMapPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00037}00037\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ RewardPrefabData\ rewardPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00038}00038\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GameObject\ spiritPrefab;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00039}00039\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GameObject\ dredPrefab;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00040}00040\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00041}00041\ \ \ \ \ \textcolor{comment}{/*\ Resources\ */}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00042}00042\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpriteData\ spriteData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00043}00043\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00044}00044\ \ \ \ \ \textcolor{comment}{/*\ Path\ */}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00045}00045\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ idCodePath;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00046}00046\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ dataScriptPath;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00047}00047\ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ dataObjectPath;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00048}00048\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00049}00049\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ Dictionary<DataIndex,\ DataObject>\ sheetDataTable\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<DataObject>\ SheetDataList\ =>\ Instance.sheetDataList;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00052}00052\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Dictionary<DataIndex,\ DataObject>\ SheetDataTable}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00053}00053\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Instance.sheetDataTable.IsNullOrEmpty())\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Instance.sheetDataList.ForEach(x\ =>\ Instance.sheetDataTable.TryAdd(x.Index,\ x));}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Instance.sheetDataTable;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00061}00061\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00062}00062\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Fiend\ FiendSheetData(DataIndex\ dataIndex)\ =>\ SheetDataTable[DataIndex.Fiend].Get<Fiend>(dataIndex);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00063}00063\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Stat\ StatSheetData(DataIndex\ dataIndex)\ =>\ SheetDataTable[DataIndex.Stat].Get<Stat>(dataIndex);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00064}00064\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ DredSkill\ DredSkillSheetData(DataIndex\ dataIndex)\ =>\ SheetDataTable[DataIndex.DredSkill].Get<DredSkill>(dataIndex);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00065}00065\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ NonPlayerSkill\ NonPlayerSkillSheetData(DataIndex\ dataIndex)\ =>\ SheetDataTable[DataIndex.NonPlayerSkill].Get<NonPlayerSkill>(dataIndex);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Projectile\ ProjectileSheetData(DataIndex\ dataIndex)\ =>\ SheetDataTable[DataIndex.Projectile].Get<Projectile>(dataIndex);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00067}00067\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ StatusEffect\ StatusEffectSheetData(DataIndex\ dataIndex)\ =>\ SheetDataTable[DataIndex.StatusEffect].Get<StatusEffect>(dataIndex);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00068}00068\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Equipment\ EquipmentSheetData(DataIndex\ dataIndex)\ =>\ SheetDataTable[DataIndex.Equipment].Get<Equipment>(dataIndex);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00069}00069\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Mastery\ MasterySheetData(DataIndex\ dataIndex)\ =>\ SheetDataTable[DataIndex.Mastery].Get<Mastery>(dataIndex);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00070}00070\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ WeaponSkill\ WeaponSkillSheetData(DataIndex\ dataIndex)\ =>\ SheetDataTable[DataIndex.WeaponSkill].Get<WeaponSkill>(dataIndex);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00071}00071\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00072}00072\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ StatusEffectPrefabData\ StatusEffectPrefabs\ =>\ Instance.statusEffectPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00073}00073\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ ProjectilePrefabData\ ProjectilePrefabs\ =>\ Instance.projectilePrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00074}00074\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ MasteryPrefabData\ MasteryPrefabs\ =>\ Instance.masteryPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00075}00075\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ WhisperPrefabData\ GourdPrefabs\ =>\ Instance.whisperPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00076}00076\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ FiendPrefabData\ FiendPrefabs\ =>\ Instance.fiendPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00077}00077\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ DungeonMapPrefabData\ DungeonMapPrefabs\ =>\ Instance.DungeonMapPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00078}00078\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ RewardPrefabData\ RewardPrefabs\ =>\ Instance.rewardPrefabData;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00079}00079\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ GameObject\ SpiritPrefab\ =>\ Instance.spiritPrefab;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00080}00080\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ GameObject\ DredPrefab\ =>\ Instance.dredPrefab;}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00082}00082\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Sprite\ SpriteData(DataIndex\ dataIndex)\ =>\ Instance.spriteData.Get(dataIndex);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00085}00085\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00086}00086\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00087}00087\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ CreateAndUpdateDataObjects();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ GenerateIDCode();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ ReloadResourceData();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00092}00092\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00093}00093\ \ \ \ \ \textcolor{comment}{//\ SheetData\ Generator}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00094}00094\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CreateAndUpdateDataObjects()}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00095}00095\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ Finder.TryGetObjectList(dataScriptPath,\ \$\textcolor{stringliteral}{"{}t:MonoScript,\ Data"{}},\ out\ List<MonoScript>\ monoList);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00097}00097\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ monoList.ForEach(x\ =>}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!x.name.EndsWith(\textcolor{stringliteral}{"{}Data"{}}))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Finder.TryGetObject(dataObjectPath,\ x.name,\ out\ ScriptableObject\ dataObject))}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dataObject\ =\ Finder.CreateScriptableObject(dataObjectPath,\ x.name,\ x.name);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ var\ dataObjectType\ =\ dataObject.GetType();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ var\ info\ =\ dataObjectType.GetMethod(\textcolor{stringliteral}{"{}LoadFromJson"{}},\ BindingFlags.NonPublic\ |\ BindingFlags.Instance);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (info\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ info.Invoke(dataObject,\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ EditorUtility.SetDirty(dataObject);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ Finder.TryGetObjectList(out\ sheetDataList);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ sheetDataList.ForEach(x\ =>\ x.Index\ =\ x.name.Replace(\textcolor{stringliteral}{"{}Data"{}},\ \textcolor{stringliteral}{"{}"{}}).ToEnum<DataIndex>());}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ sheetDataList.Sort((dataA,\ dataB)\ =>\ dataA.Index.CompareTo(dataB.Index));}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ AssetDatabase.Refresh();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00123}00123\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00124}00124\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00125}00125\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ GenerateIDCode()}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00126}00126\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Directory.Exists(idCodePath))}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ Directory.CreateDirectory(idCodePath);}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ File.WriteAllText(\$\textcolor{stringliteral}{"{}\{idCodePath\}/DataIndex.cs"{}},\ DataIndexGenerator.Generate());}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00132}00132\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00133}00133\ \ \ \ \ \textcolor{comment}{//\ ReSharper\ disable\ once\ UnusedMember.Local}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00134}00134\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OpenSpreadSheetPanel()\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ =>\ EditorApplication.ExecuteMenuItem(\textcolor{stringliteral}{"{}Tools/UnityGoogleSheet"{}});}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00137}00137\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ReloadResourceData()}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00138}00138\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ spriteData.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00140}00140\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00141}00141\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00142}00142\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00143}00143\ \ \ \ \ [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00144}00144\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ ResetSingleton()}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00145}00145\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Instance.IsNullOrDestroyed())}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ Instance.SetInstanceNull();}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00148}00148\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00149}00149\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_database_8cs_source_l00150}00150\ \}}
+
+\end{DoxyCode}

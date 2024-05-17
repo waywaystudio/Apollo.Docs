@@ -1,0 +1,79 @@
+\doxysection{Health\+Indicator.\+cs}
+\hypertarget{_health_indicator_8cs_source}{}\label{_health_indicator_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Huds/Bottoms/HealthIndicator.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Huds/Bottoms/HealthIndicator.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_u_i_1_1_huds_1_1_bottoms}{Challenge.UI.Huds.Bottoms}}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{using\ }HealthIndicators;}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00009}00009\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }HealthIndicator\ :\ UIElement}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CombatValueCircle\ healthCircle;}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CombatValueCircle\ darkAmorCircle;}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ healthText;}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ darkAmorText;}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CombatValue\ HitPoints\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CombatValue\ DarkArmor\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ HitPoints\ =\ dred.HitPoints;}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ HitPoints.AddEvent(\textcolor{stringliteral}{"{}UpdateCurrentHealthTextValue"{}},\ UpdateCurrentHealthTextValue);}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ HitPoints.Max.AddEvent(\textcolor{stringliteral}{"{}UpdateMaxHealthTextValue"{}},\ UpdateMaxHealthTextValue);}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ healthCircle.Register(HitPoints);}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateCurrentHealthTextValue(dred.HitPoints.Value);}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateMaxHealthTextValue(dred.HitPoints.Max.Value);}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ DarkArmor\ =\ dred.DarkArmorPoints;}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ DarkArmor.AddEvent(\textcolor{stringliteral}{"{}UpdateCurrentDarAmorTextValue"{}},\ UpdateCurrentDarAmorTextValue);}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ DarkArmor.Max.AddEvent(\textcolor{stringliteral}{"{}UpdateMaxDarAmorTextValue"{}},\ UpdateMaxDarAmorTextValue);}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ darkAmorCircle.Register(DarkArmor);}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateCurrentDarAmorTextValue(dred.DarkArmorPoints.Value);}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateMaxDarAmorTextValue(dred.DarkArmorPoints.Max.Value);}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ UpdateCurrentHealthTextValue(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ healthText.text\ =\ \$\textcolor{stringliteral}{"{}\{value:F0\}<size=24><color=\#A69E96ff>/\{HitPoints.Max.Value:F0\}</color></size>"{}};}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ UpdateMaxHealthTextValue(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ healthText.text\ =\ \$\textcolor{stringliteral}{"{}\{HitPoints.Value:F0\}<size=24><color=\#A69E96ff>/\{value:F0\}</color></size>"{}};}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ UpdateCurrentDarAmorTextValue(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ darkAmorText.text\ =\ \$\textcolor{stringliteral}{"{}\{value:F0\}<size=24><color=\#A69E96ff>/\{DarkArmor.Max.Value:F0\}</color></size>"{}};}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ UpdateMaxDarAmorTextValue(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ darkAmorText.text\ =\ \$\textcolor{stringliteral}{"{}\{DarkArmor.Value:F0\}<size=24><color=\#A69E96ff>/\{value:F0\}</color></size>"{}};}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00061}00061\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ healthCircle\ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}FillHP"{}}).GetComponent<CombatValueCircle>();}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ darkAmorCircle\ =\ transform.Find(\textcolor{stringliteral}{"{}FillDarkArmor"{}}).GetComponent<CombatValueCircle>();}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ healthText\ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}FillHP"{}}).Find(\textcolor{stringliteral}{"{}TextHP"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ darkAmorText\ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}FillDarkArmor"{}}).Find(\textcolor{stringliteral}{"{}TextDA"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00071}00071\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_health_indicator_8cs_source_l00073}00073\ \}}
+
+\end{DoxyCode}

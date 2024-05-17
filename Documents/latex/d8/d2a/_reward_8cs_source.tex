@@ -1,0 +1,108 @@
+\doxysection{Reward.\+cs}
+\hypertarget{_reward_8cs_source}{}\label{_reward_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/Props/Rewards/Reward.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/Props/Rewards/Reward.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_challenge_1_1_dungeons_1_1_sections}{Challenge.Dungeons.Sections}};}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_props_1_1_rewards}{Challenge.Props.Rewards}}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }Reward\ :\ MonoBehaviour,\ ISequencer,\ IDataIndexer,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Collider\ interactTriggerCollider;}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ spawnDelayTimer;}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ delayDestroyTimer;}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ SourceInteractEffector\ interactEffector;}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Effector\ effector;}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ InteractionComponent\ interactable;}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ DataIndex\ DataIndex\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{protected}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_sections_1_1_reward_section}{RewardSection}}\ parentSequence\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ IsRevealed\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_sections_1_1_reward_section}{RewardSection}}\ sourceSequence)}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ parentSequence\ =\ sourceSequence;}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ \ \ \ \ \ \ \ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Spawn,\ \textcolor{stringliteral}{"{}PlaySpawnDelayTimer"{}},\ spawnDelayTimer.Play)}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}EnableCollider"{}},\ EnableCollider)}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Execute,\ \textcolor{stringliteral}{"{}Reveal"{}},\ Reveal)}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}GetReward"{}},\ GetReward)}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}EnablePlayerControl"{}},\ EnablePlayerControl)}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}CompleteRewardSequence"{}},\ CompleteParentSequence)}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}DestroyRewardSourceObject"{}},\ DestroyRewardSourceObject)}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}delayDestroyTimer.Dispose"{}},\ delayDestroyTimer.Dispose)}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}spawnDelayTimer.Dispose"{}},\ spawnDelayTimer.Dispose)}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ spawnDelayTimer.AddCallBack(\textcolor{stringliteral}{"{}Active"{}},\ Active);}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ effector.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ interactEffector.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ interactable.Initialize();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ interactable.Sections.Add(Section.Complete,\ \textcolor{stringliteral}{"{}RewardSourceExecute"{}},\ Invoker.Execute);}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ delayDestroyTimer.AddCallBack(\textcolor{stringliteral}{"{}Destroy"{}},\ ()\ =>\ Destroy(gameObject));}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Spawn()}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Spawn();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker?.Cancel();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Reveal()}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsRevealed)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ IsRevealed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ interactEffector.Active();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ DisablePlayerControl();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{void}\ GetReward();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DisablePlayerControl()\ =>\ ChallengeDirector.Input.SetPlayerActivity(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ EnablePlayerControl()\ =>\ ChallengeDirector.Input.SetPlayerActivity(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ EnableCollider()\ =>\ interactTriggerCollider.enabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ DestroyRewardSourceObject()\ =>\ Destroy(gameObject);}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CompleteParentSequence()}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parentSequence.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ parentSequence.Invoker.Complete();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()\ =>\ Invoker.Dispose();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00090}00090\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ transform.GetComponentInChildrenWithDepth<Effector>(1);}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ interactable\ \ \ \ \ \ \ \ \ \ \ \ =\ GetComponent<InteractionComponent>();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ interactEffector\ \ \ \ \ \ \ \ =\ GetComponentInChildren<SourceInteractEffector>(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ interactTriggerCollider\ =\ GetComponent<Collider>();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ effector.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00100}00100\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_reward_8cs_source_l00102}00102\ \}}
+
+\end{DoxyCode}

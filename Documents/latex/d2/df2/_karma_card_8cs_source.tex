@@ -1,0 +1,127 @@
+\doxysection{Karma\+Card.\+cs}
+\hypertarget{_karma_card_8cs_source}{}\label{_karma_card_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/UI/KarmaCard.cs@{C:/Project/Apollo/Assets/Scripts/Common/UI/KarmaCard.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Sirenix.OdinInspector;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine.EventSystems;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }KarmaCard\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ KarmaType\ type;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CanvasGroup\ front;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CanvasGroup\ back;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Image\ cardPanel;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Image\ pattern;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Image\ outline;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Image\ illustration;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ nameText;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<Sprite>\ panelSpriteList\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<Sprite>\ backOutlineSpriteList\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Color\ defaultPatternColor;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ [SerializeField]\ private\ KarmaColorPreset\ colorPreset;}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ [SerializeField]\ private\ KarmaIllustrationPreset\ illustrationPreset;}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Button\ selectable;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ autoRotate;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ KarmaType\ Type\ =>\ type;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<KarmaCard>}}\ OnSelected\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Button\ Selectable\ =>\ selectable;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ IsFront\ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ yAngle\ =\ transform.localRotation.eulerAngles.y\ \%\ 360f;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ yAngle\ =\ yAngle\ <\ 0\ ?\ yAngle\ +\ 360f\ :\ yAngle;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ yAngle\ is\ <\ 90f\ or\ >\ 270f;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Vanish()}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ DeSelect()}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ EventSystem.current.SetSelectedGameObject(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnSelect()}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ OnSelected.Invoke(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ [Button]}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ UpdateBackByType()}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ illustration.sprite\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ type\ !=\ KarmaType.None\ ?\ illustrationPreset.GetValue(type)\ :\ null;}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ nameText.text\ =\ type.ToString();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ [Button]}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ UpdateFrontByType()}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ pattern.color\ =\ defaultPatternColor;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ type\ !=\ KarmaType.None\ ?\ colorPreset.GetValue(type)\ :\ defaultPatternColor;}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ResetPatternColor()}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ pattern.color\ =\ defaultPatternColor;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!panelSpriteList.IsNullOrEmpty())}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cardPanel.sprite\ =\ panelSpriteList.Random();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!backOutlineSpriteList.IsNullOrEmpty())}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outline.sprite\ =\ backOutlineSpriteList.Random();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateBackByType();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ transform.Rotate(Vector3.up\ *\ Random.value\ *\ 15);}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (autoRotate)}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ transform.Rotate(Vector3.up\ *\ 2);}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ front.alpha\ =\ IsFront\ ?\ 1\ :\ 0;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ back.alpha\ \ =\ IsFront\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00108}00108\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ cardPanel\ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}CardPanel"{}}).GetComponent<Image>();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ front\ \ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}CardPanel/Front"{}}).GetComponent<CanvasGroup>();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ back\ \ \ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}CardPanel/Back"{}}).GetComponent<CanvasGroup>();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ pattern\ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}CardPanel/Front/Pattern"{}}).GetComponent<Image>();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ outline\ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}CardPanel/Back/Outline"{}}).GetComponent<Image>();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ illustration\ \ =\ transform.Find(\textcolor{stringliteral}{"{}CardPanel/Back/Mask/Illustration"{}}).GetComponent<Image>();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ nameText\ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}CardPanel/Back/NameText"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00119}00119\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00120}00120\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_karma_card_8cs_source_l00121}00121\ \}}
+
+\end{DoxyCode}

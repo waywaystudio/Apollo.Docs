@@ -1,0 +1,39 @@
+\doxysection{Ignited.\+cs}
+\hypertarget{_ignited_8cs_source}{}\label{_ignited_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/StatusEffects/Variants/Ignited.cs@{C:/Project/Apollo/Assets/Scripts/Common/StatusEffects/Variants/Ignited.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_executors_1_1_variants}{Common.Executors.Variants}};}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_status_effects_1_1_variants}{Common.StatusEffects.Variants}}}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00006}00006\ \ \ \ \ \textcolor{comment}{//\ 3초\ 동안\ 매\ 1초\ 마다\ 10의\ 피해를\ 준다(DPS).\ 최대\ 3회\ 중첩됨.\ 중첩\ 당\ 추가\ 초당\ 5\ 피해(DPS)}}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Ignited\ :\ StatusEffect}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ StatEntity\ stackPower;}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ originalDamage;}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider)}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(provider);}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Executor.TryGetExecution(out\ DamageExecutor\ damageExecutor))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ stackPower\ =\ damageExecutor.DamageTable[StatType.BaseDamage,\ \textcolor{stringliteral}{"{}IgnitionStackPower"{}}];}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ originalDamage\ =\ damageExecutor.DamageTable[StatType.BaseDamage];}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ overrideModule.StackValue.AddEvent(\textcolor{stringliteral}{"{}IncreaseStackPowerEntity"{}},\ OnStackChanged);}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnStackChanged(\textcolor{keywordtype}{int}\ stack)}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ var\ extraPower\ =\ Mathf.Abs(stack\ -\/\ 1)\ *\ 5f\ *\ executeTimer.Interval;}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ stackPower.Value\ =\ originalDamage\ +\ extraPower;}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ignited_8cs_source_l00033}00033\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,58 @@
+\doxysection{Weapon\+Selection\+Panel.\+cs}
+\hypertarget{_weapon_selection_panel_8cs_source}{}\label{_weapon_selection_panel_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Lobby/UI/PopUps/WeaponSelections/WeaponSelectionPanel.cs@{C:/Project/Apollo/Assets/Scripts/Lobby/UI/PopUps/WeaponSelections/WeaponSelectionPanel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}};}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00006}\mbox{\hyperlink{namespace_lobby_1_1_u_i_1_1_pop_ups_1_1_weapon_selections}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_lobby_1_1_u_i_1_1_pop_ups_1_1_weapon_selections}{Lobby.UI.PopUps.WeaponSelections}}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }WeaponSelectionPanel\ :\ Panel}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Image\ selectFrame;}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ WeaponType\ targetWeapon;}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ WeaponSelectionGroup\ group;}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(WeaponSelectionGroup\ group)}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ Initialize();}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ this.group\ =\ group;}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ WeaponSubmit()}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ var\ currentActivity\ =\ selectFrame.gameObject.activeSelf;}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentActivity)\ \textcolor{comment}{//\ Release\ Weapon}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ group.ReleaseWeapon(targetWeapon);}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectFrame.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{comment}{//\ Select\ Weapon}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (group.SelectWeapon(targetWeapon))}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectFrame.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00043}00043\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ selectFrame\ =\ transform.Find(\textcolor{stringliteral}{"{}SelectFrame"{}}).GetComponent<Image>();}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00050}00050\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_weapon_selection_panel_8cs_source_l00052}00052\ \}}
+
+\end{DoxyCode}

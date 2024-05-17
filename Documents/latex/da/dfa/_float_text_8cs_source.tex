@@ -1,0 +1,125 @@
+\doxysection{Float\+Text.\+cs}
+\hypertarget{_float_text_8cs_source}{}\label{_float_text_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/UI/FloatText.cs@{C:/Project/Apollo/Assets/Scripts/Common/UI/FloatText.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i_1_1_floating_texts}{Common.UI.FloatingTexts}};}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }DG.Tweening;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Sequence\ =\ DG.Tweening.Sequence;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }FloatingText\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CameraManager\ cameraManager;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ RectTransform\ textTransform;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ textMesh;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ impactScale\ =\ 2.0f;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ impactDuration\ =\ 0.45f;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ moveUpDistance\ =\ 0.35f;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ moveUpDuration\ =\ 0.35f;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ fadeDuration\ =\ 0.35f;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Ease\ moveUpEase\ =\ Ease.InCubic;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Vector3\ randomPivot;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Vector3\ initialPosition;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ RectTransform\ canvasRectTransform;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CombatLog\ CurrentEntity\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Sequence\ EffectTween\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable}}\ OnEnd\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ImportProperty(FloatingTextEntity\ entity,\ \textcolor{keywordtype}{string}\ text)}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ textMesh.color\ =\ entity.TextColor;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ impactScale\ \ \ \ =\ entity.ImpactScale;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ impactDuration\ =\ entity.ImpactDuration;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ moveUpDistance\ =\ entity.MoveUpDistance;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ moveUpDuration\ =\ entity.MoveUpDuration;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ fadeDuration\ \ \ =\ entity.FadeDuration;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ moveUpEase\ \ \ \ \ =\ entity.MoveUpEase;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ textMesh.text\ \ =\ text;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ randomPivot\ \ \ \ =\ Random.insideUnitSphere\ *\ entity.PivotSpreadRange;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ShowValue(CombatLog\ combatEntity)}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ CurrentEntity\ \ \ \ \ \ \ =\ \ \ combatEntity;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ initialPosition\ \ \ \ \ =\ \ \ combatEntity.Taker.PrePosition(PrePositionType.Top).position;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ canvasRectTransform\ ??=\ GetComponentInParent<Canvas>().GetComponent<RectTransform>();}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ StopTween();}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ EffectTween\ =\ DOTween.Sequence()}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetAutoKill(\textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Append(textMesh.transform}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .DOLocalMove(randomPivot,\ 0f)}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetRelative())}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Append(textMesh.transform}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .DOLocalMoveY(moveUpDistance,\ impactDuration\ +\ moveUpDuration)}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetRelative()}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(moveUpEase))}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Join(textTransform.DOScale(impactScale,\ impactDuration))}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Append(textMesh.DOFade(0.0f,\ fadeDuration))}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnEnd.Invoke();}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textMesh.transform.localPosition\ =\ Vector3.zero;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ SetTextPosition();}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ textTransform.position\ =\ transform.position;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ StopTween()}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (EffectTween\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ EffectTween.Kill();}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ EffectTween\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SetTextPosition()}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CurrentEntity?.Taker\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetPosition\ =\ initialPosition\ +\ Vector3.up;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ var\ viewportPosition\ =\ cameraManager.MainCamera.WorldToViewportPoint(targetPosition);}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Viewport\ 좌표를\ 캔버스\ 좌표로\ 변환}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ var\ sizeDelta\ =\ canvasRectTransform.sizeDelta;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ var\ worldPosition\ =\ \textcolor{keyword}{new}\ Vector2}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ (}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ viewportPosition.x\ *\ sizeDelta.x\ -\/\ sizeDelta.x\ *\ 0.5f,}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ viewportPosition.y\ *\ sizeDelta.y\ -\/\ sizeDelta.y\ *\ 0.5f}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ textTransform.anchoredPosition\ =\ worldPosition;}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ SetTextPosition();}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ StopTween();}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00112}00112\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ cameraManager);}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00117}00117\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00118}00118\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_float_text_8cs_source_l00119}00119\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,80 @@
+\doxysection{Data\+Index\+Generator.\+cs}
+\hypertarget{_data_index_generator_8cs_source}{}\label{_data_index_generator_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/DataIndexGenerator.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/DataIndexGenerator.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00003}\mbox{\hyperlink{namespace_databases}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_databases}{Databases}}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }DataIndexGenerator}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00006}00006\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00007}00007\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ ProtocolForm\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}\ =\ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ \$\textcolor{stringliteral}{@"{}/*\ \ \ \ \ =====\ Do\ not\ touch\ this.\ Auto\ Generated\ Code.\ =====\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00010}00010\ \textcolor{stringliteral}{/*\ \ \ \ \ If\ you\ want\ custom\ code\ generation\ modify\ this\ =>\ 'DataProtocol.cs'\ \ */}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00011}00011\ \textcolor{stringliteral}{//\ ReSharper\ disable\ IdentifierTypo}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00012}00012\ \textcolor{stringliteral}{//\ ReSharper\ disable\ CheckNamespace}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00013}00013\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00014}00014\ \textcolor{stringliteral}{public\ enum\ DataIndex}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00015}00015\ \textcolor{stringliteral}{\{\{\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00016}00016\ \textcolor{stringliteral}{@IDCode\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00017}00017\ \textcolor{stringliteral}{\}\}}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00018}00018\ \textcolor{stringliteral}{"{}};}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ GenerateForm\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}\ =\ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00021}00021\ \$\textcolor{stringliteral}{@"{}/*\ \ \ \ \ =====\ Do\ not\ touch\ this.\ Auto\ Generated\ Code.\ =====\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00022}00022\ \textcolor{stringliteral}{/*\ \ \ \ \ If\ you\ want\ custom\ code\ generation\ modify\ this\ =>\ 'IDCodeGenerator.cs'\ \ */}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00023}00023\ \textcolor{stringliteral}{//\ ReSharper\ disable\ IdentifierTypo}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00024}00024\ \textcolor{stringliteral}{//\ ReSharper\ disable\ CheckNamespace}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00025}00025\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00026}00026\ \textcolor{stringliteral}{public\ enum\ DataIndex}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00027}00027\ \textcolor{stringliteral}{\{\{\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00028}00028\ \textcolor{stringliteral}{@IDCode\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00029}00029\ \textcolor{stringliteral}{\}\}}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00030}00030\ \textcolor{stringliteral}{"{}};}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ Generate()}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ WriteIDCode();}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GenerateForm;}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ WriteIDCode()}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ var\ dataList\ =\ Database.SheetDataList;}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ var\ builder\ \ =\ \textcolor{keyword}{new}\ StringBuilder();}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ builder.AppendLine(\textcolor{stringliteral}{"{}\(\backslash\)tNone\ =\ 0,"{}});}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ builder.AppendLine(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ dataList.ForEach(x\ =>}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ builder.AppendLine(\$\textcolor{stringliteral}{"{}\(\backslash\)t/*\ \{x.name\}\ */"{}});}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x.KeyList.ForEach(y\ =>}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ builder.AppendLine(\$\textcolor{stringliteral}{"{}\(\backslash\)t\{DataIndexConvention(y.Name)\}\ =\ \{y.ID\},"{}});}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ builder.AppendLine(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ builder.AppendLine(\textcolor{stringliteral}{"{}\(\backslash\)tEnd\ =\ int.MaxValue"{}});}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ GenerateForm\ =\ GenerateForm.Replace(\textcolor{stringliteral}{"{}@IDCode"{}},\ builder.ToString());}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ DataIndexConvention(\textcolor{keywordtype}{string}\ original)}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ original.Replace(\textcolor{stringliteral}{"{}\ "{}},\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Replace(\textcolor{stringliteral}{"{}'"{}},\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Replace(\textcolor{stringliteral}{"{}\&"{}},\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToPascalCase();}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00070}00070\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00072}00072\ \}}
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_data_index_generator_8cs_source_l00074}00074\ }
+
+\end{DoxyCode}

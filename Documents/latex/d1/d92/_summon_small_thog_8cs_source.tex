@@ -1,0 +1,93 @@
+\doxysection{Summon\+Small\+Thog.\+cs}
+\hypertarget{_summon_small_thog_8cs_source}{}\label{_summon_small_thog_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Unsorted/SummonSmallThog.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Unsorted/SummonSmallThog.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players_1_1_fiends}{Common.Characters.NonPlayers.Fiends}};}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players_1_1_unsorted}{Common.Skills.NonPlayers.Unsorted}}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SummonSmallThog\ :\ NonPlayerSkillBehaviour}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ FiendSpawner\ spawner;}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DataIndex\ smallThogCode;}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ spawnLimit\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ rotatePerFrame\ =\ 10f;}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ List<Fiend>\ summonedSmallThogList\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}WithInSpawnLimit"{}},\ WithInSpawnLimit)}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Execute,\ \textcolor{stringliteral}{"{}SpawnSmallThog"{}},\ SpawnSmallThog)}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Cancel,\ \textcolor{stringliteral}{"{}StopTransfer"{}},\ ()\ =>\ Character.Pathfinding.Stop())}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ Character.Behaviours.Dead.Sections}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}DeadAllSmallThog"{}},\ DeadAllSmallThog);}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ spawner.Initialize();}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!PathfindingUtility.IsValidCombatRotation(Character,\ SkillTarget,\ 5f))}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Character.Rotate(SkillTarget.Position,\ rotatePerFrame,\ Invoker.Active);}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SmallThog\ 소환\ 제한하기.}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ WithInSpawnLimit()}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ spawnLimit\ >\ summonedSmallThogList.CountIf(fiend\ =>\ fiend.IsAlive);}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SpawnSmallThog()}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ var\ randomPosition\ =\ transform.position\ +\ Random.insideUnitCircle.ToVector3XZ()\ *\ 4f;}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ var\ destination\ =\ PathfindingUtility.GetNearestSafePosition(randomPosition,\ 1f);}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ spawner.Spawn(smallThogCode,\ destination,\ \textcolor{keyword}{null},\ summonedSmallThogList.AddUniquely);}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ BigThog가\ 죽었을\ 때,\ SmallThog모두\ 죽이기.}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ DeadAllSmallThog()}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ fiend\ \textcolor{keywordflow}{in}\ summonedSmallThogList)}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fiend.IsAlive)}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fiend.Behaviours.Dead.Active(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Execute()}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ executor.Execute(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00078}00078\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ spawner\ =\ GetComponent<FiendSpawner>();}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00085}00085\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_summon_small_thog_8cs_source_l00087}00087\ \}}
+
+\end{DoxyCode}

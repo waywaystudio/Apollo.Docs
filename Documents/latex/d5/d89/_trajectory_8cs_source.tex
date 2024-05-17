@@ -1,0 +1,60 @@
+\doxysection{Trajectory.\+cs}
+\hypertarget{_trajectory_8cs_source}{}\label{_trajectory_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Trajectory.cs@{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Trajectory.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_projectiles}{Common.Projectiles}}}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }Trajectory\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00006}00006\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ speed\ =\ 10f;}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{float}\ distance\ =\ 35f;}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Vector3\ destination\ =\ Vector3.zero;}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Speed\ \{\ \textcolor{keyword}{get}\ =>\ speed;\ \textcolor{keyword}{set}\ =>\ speed\ \ \ \ \ \ \ \ \ \ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Distance\ \{\ \textcolor{keyword}{get}\ =>\ distance;\ \textcolor{keyword}{set}\ =>\ distance\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ Destination}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ destination\ ==\ Vector3.zero}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ transform.position}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ destination;}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ =>\ destination\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ Projectile\ Projectile\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ Vector3\ Direction\ =>\ Projectile\ is\ \textcolor{keyword}{null}\ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ ?\ Vector3.zero\ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Projectile.transform.forward;}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Initialize(IUnitSequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sequencer\ is\ not\ Projectile\ projectileSequence)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ Projectile\ =\ projectileSequence;}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ Projectile.Sections}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}ProjectileFlying"{}},\ Flying)}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}ProjectileCancelFlying"{}},\ Cancel)}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}DisposeTrajectory"{}},\ Cancel)}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ DeInitialize(IUnitSequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ sequencer.Sections}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Active,\ \textcolor{stringliteral}{"{}ProjectileFlying"{}})}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.End,\ \textcolor{stringliteral}{"{}ProjectileCancelFlying"{}})}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.Dispose,\ \textcolor{stringliteral}{"{}DisposeTrajectory"{}})}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ Projectile\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{void}\ Flying();}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{void}\ Cancel();}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_trajectory_8cs_source_l00054}00054\ \}}
+
+\end{DoxyCode}

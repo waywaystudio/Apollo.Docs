@@ -1,0 +1,100 @@
+\doxysection{Drop\+Spirit\+Action.\+cs}
+\hypertarget{_drop_spirit_action_8cs_source}{}\label{_drop_spirit_action_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Spirits/DropSpiritAction.cs@{C:/Project/Apollo/Assets/Scripts/Common/Spirits/DropSpiritAction.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }DG.Tweening;}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Random\ =\ UnityEngine.Random;}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_spirits}{Common.Spirits}}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DropSpiritAction\ :\ MonoBehaviour,\ IUnitSequencer,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GameObject\ spiritPrefab;}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Effector\ effector;}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Tween\ spawnTween;}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ Collider[]\ buffer\ =\ \textcolor{keyword}{new}\ Collider[4];}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dred\ dred;}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ Unit\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{/*\ Actual\ Dropper\ */}\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ unit)}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ Unit\ \ \ \ =\ unit;}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ effector.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active(Vector2Range\ range)\ =>\ Active(Random.Range(range.X,\ range.Y));}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active(\textcolor{keywordtype}{float}\ chance)}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Spawn(chance);}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Spawn(\textcolor{keywordtype}{float}\ chance)}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spawnCount\ =\ GetSpawnCountByChance(chance);}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (spawnCount\ <=\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!TryFindDred(out\ dred))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ spawnCount;\ i++)}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SpawnSingleSpirit(dred);}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SpawnSingleSpirit(Dred\ provider)}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!spiritPrefab.ValidInstantiate(out\ Spirit\ spirit,\ transform.position,\ Quaternion.identity,\ \textcolor{keyword}{null}))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ spirit.Initialize(provider);}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ spirit.Spawn();}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ TryFindDred(out\ Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetList\ =\ TargetUtility.GetTargetsInSphere<Dred>(transform.position,\ LayerMask.GetMask(\textcolor{stringliteral}{"{}Player"{}}),\ 100f,\ buffer);}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ dred\ =\ targetList.FirstOrNull();}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dred\ is\ not\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ GetSpawnCountByChance(\textcolor{keywordtype}{float}\ chance)}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ Mathf.FloorToInt(chance);}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (chance\ <=\ 0)\ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Random.Range(0.0f,\ 1.0f)\ <\ chance\ \%\ 1)}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result++;}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00086}00086\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ =\ GetComponentInChildren<Effector>();}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ effector.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00092}00092\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_drop_spirit_action_8cs_source_l00094}00094\ \}}
+
+\end{DoxyCode}

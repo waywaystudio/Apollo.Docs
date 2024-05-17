@@ -1,0 +1,104 @@
+\doxysection{Shredded\+Silk\+Trajectory\+II.\+cs}
+\hypertarget{_shredded_silk_trajectory_i_i_8cs_source}{}\label{_shredded_silk_trajectory_i_i_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/SilkStrings/SilkTwisters/ShreddedSilkTrajectoryII.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/SilkStrings/SilkTwisters/ShreddedSilkTrajectoryII.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Threading;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_projectiles}{Common.Projectiles}};}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Cysharp.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }DG.Tweening;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Random\ =\ UnityEngine.Random;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_silk_strings_1_1_silk_twisters}{Common.Skills.SilkStrings.SilkTwisters}}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ShreddedSilkTrajectoryII\ :\ Trajectory}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ flutterStrength\ =\ 2f;\ \textcolor{comment}{//\ 나풀거림의\ 강도}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ flutterFrequency\ =\ 5;\ \ \ \textcolor{comment}{//\ 나풀거림의\ 빈도}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ duration\ =\ 5f;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 전체\ 이동\ 시간}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Ease\ flutterEase;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ trajectoryTask;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Flying()}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ trajectoryTask\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ FlutterTowardsTarget(trajectoryTask).Forget();}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Cancel()}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ trajectoryTask?.Cancel();}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ trajectoryTask\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ UniTaskVoid\ FlutterTowardsTarget(CancellationTokenSource\ cts)}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ var\ strengthPitch\ =\ Random.Range(flutterStrength\ *\ 0.8f,\ flutterStrength\ *\ 1.2f);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ var\ frequencyPitch\ =\ Random.Range(flutterFrequency\ -\/\ 1,\ flutterFrequency\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ var\ durationPitch\ =\ Random.Range(duration\ *\ 0.8f,\ duration\ *\ 1.2f);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ var\ path\ =\ GenerateFlutterPath(Destination,\ frequencyPitch,\ strengthPitch);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ var\ timeElapsed\ =\ 0f;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ DOTween을\ 사용하여\ 경로를\ 따라\ 오브젝트를\ 이동시킵니다.}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ Projectile.transform.DOPath(path,\ durationPitch,\ PathType.CatmullRom)}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetOptions(\textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(flutterEase)}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>\ Projectile.Invoker.Complete());}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ UniTask를\ 사용하여\ 비동기적으로\ 대기합니다.}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!cts.IsCancellationRequested\ \&\&\ timeElapsed\ <\ duration)}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeElapsed\ +=\ Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Yield(PlayerLoopTiming.Update,\ cts.Token);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 목표\ 위치까지\ 나풀거리며\ 이동할\ 경로를\ 생성합니다.}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Vector3[]\ GenerateFlutterPath(Vector3\ destination,\ \textcolor{keywordtype}{int}\ frequency,\ \textcolor{keywordtype}{float}\ strength)}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ var\ path\ =\ \textcolor{keyword}{new}\ Vector3[(frequency\ +\ 1)\ *\ 2];\ \textcolor{comment}{//\ 각\ 지점\ 사이에\ 중간\ 지점을\ 추가하기\ 위해\ 배열\ 크기\ 조정}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ path[0]\ =\ transform.position;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 시작\ 위치}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ frequency;\ i++)}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ ratio\ =\ (float)i\ /\ frequency;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ position\ =\ transform.position;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ linearPointStart\ =\ Vector3.Lerp(position,\ destination,\ ratio);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ linearPointEnd\ =\ Vector3.Lerp(position,\ destination,\ ratio\ +\ 1f\ /\ frequency);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 시작점과\ 끝점\ 사이의\ 중간\ 지점을\ 계산합니다.}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ midPoint\ =\ Vector3.Lerp(linearPointStart,\ linearPointEnd,\ 0.5f);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 중간\ 지점의\ 높이를\ 증가시켜\ 포물선의\ 볼록한\ 부분을\ 만듭니다.}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ midPoint\ +=\ Vector3.up\ *\ Random.Range(1f,\ strength);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 경로\ 배열에\ 시작점,\ 중간\ 포물선\ 지점,\ 끝점을\ 추가합니다.}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ path[i\ *\ 2\ +\ 1]\ =\ midPoint;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ path[i\ *\ 2\ +\ 2]\ =\ linearPointEnd;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ path[\string^1]\ =\ destination;\ \textcolor{comment}{//\ 목표\ 위치}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ path;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ var\ path\ =\ new\ Vector3[frequency\ +\ 2];}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ path[0]\ \ =\ transform.position;\ //\ 시작\ 위치}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ path[\string^1]\ =\ destination;\ \ \ \ \ \ \ \ //\ 목표\ 위치}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ (var\ i\ =\ 1;\ i\ <=\ frequency;\ i++)}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ var\ ratio\ =\ (float)i\ /\ (frequency\ +\ 1);}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ var\ linearPoint\ =\ Vector3.Lerp(transform.position,\ destination,\ ratio);}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ var\ flutter\ =\ new\ Vector3(Random.Range(-\/strength,\ strength),\ Random.Range(-\/strength,\ strength),\ Random.Range(-\/strength,\ strength));}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ path[i]\ =\ linearPoint\ +\ flutter;}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ path;}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_trajectory_i_i_8cs_source_l00098}00098\ \}\ \ }
+
+\end{DoxyCode}

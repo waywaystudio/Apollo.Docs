@@ -1,0 +1,57 @@
+\doxysection{Animation\+Effect.\+cs}
+\hypertarget{_animation_effect_8cs_source}{}\label{_animation_effect_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Graphics/AnimationEffect.cs@{C:/Project/Apollo/Assets/Scripts/Common/Graphics/AnimationEffect.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Sirenix.OdinInspector;}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine.Events;}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00005}\mbox{\hyperlink{namespace_common_1_1_graphics}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_graphics}{Common.Graphics}}}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00007}00007\ \ \ \ \ [RequireComponent(typeof(Animator))]}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }AnimationEffect\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Animator\ animator;}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ delayTimer;}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ UnityEvent\ showAction;}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ UnityEvent\ loopAction;}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ UnityEvent\ hideAction;}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ \textcolor{keywordtype}{int}\ ShowTriggerString\ =\ Animator.StringToHash(\textcolor{stringliteral}{"{}Show"{}});}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ \textcolor{keywordtype}{int}\ LoopTriggerString\ =\ Animator.StringToHash(\textcolor{stringliteral}{"{}Loop"{}});}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ \textcolor{keywordtype}{int}\ HideTriggerString\ =\ Animator.StringToHash(\textcolor{stringliteral}{"{}Hide"{}});}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(ISequencer\ sequence)}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ delayTimer.AddCallBack(\textcolor{stringliteral}{"{}ExecuteSequence"{}},\ sequence.Invoker.Execute);}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ delayTimer.Play();}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ [Button]}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Show()}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ animator.SetTrigger(ShowTriggerString);}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ showAction?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ [Button]}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Loop()}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ animator.SetTrigger(LoopTriggerString);}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ loopAction?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ [Button]}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Hide()}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ animator.SetTrigger(HideTriggerString);}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ hideAction?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(gameObject,\ 3f);}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_animation_effect_8cs_source_l00051}00051\ \}}
+
+\end{DoxyCode}

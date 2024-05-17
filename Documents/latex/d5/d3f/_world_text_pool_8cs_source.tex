@@ -1,0 +1,52 @@
+\doxysection{World\+Text\+Pool.\+cs}
+\hypertarget{_world_text_pool_8cs_source}{}\label{_world_text_pool_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Fields/WorldTextPool.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Fields/WorldTextPool.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_challenge_1_1_props_1_1_merchant_goods}{Challenge.Props.MerchantGoods}};}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_u_i_1_1_fields}{Challenge.UI.Fields}}}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }WorldTextPool\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00007}00007\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ MerchantGoodsSpawnEvent\ spawnEvent;}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_pool}{Pool<GoodsCostPlate>}}\ pool;}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ var\ wordTextPoolTransform\ =\ transform;}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ pool.\mbox{\hyperlink{class_pool_af50a06eba43889ccb513fe8aa5f6c6b3}{Initialize}}(\textcolor{keyword}{null},\ wordTextPoolTransform,\ wordTextPoolTransform)}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ .AddOnGet("{}SetPlatePosition"{},\ plate\ =>\ plate.SetPlatePosition())}}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddOnRelease(\textcolor{stringliteral}{"{}DeActive"{}},\ plate\ =>\ plate.DeActive())}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.Add(\textcolor{stringliteral}{"{}ShowCostPlate"{}},\ SetGoodsCost);}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SetGoodsCost(MerchantGoods\ goods)}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ var\ costPlate\ =\ pool.Get();}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ goods.Sections}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}HideCostPlate"{}},\ ()\ =>\ pool.Release(costPlate))}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}HideCostPlate"{}},\ ()\ =>\ pool.Release(costPlate))}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ costPlate.Active(goods);}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ costPlate.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00039}00039\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ spawnEvent);}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00044}00044\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_world_text_pool_8cs_source_l00046}00046\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,43 @@
+\doxysection{Character\+Behaviour.\+cs}
+\hypertarget{_character_behaviour_8cs_source}{}\label{_character_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/CharacterBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/CharacterBehaviour.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_units}{Common.Units}};}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters}{Common.Characters}}}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }CharacterBehaviour\ :\ UnitBehaviour}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00006}00006\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Character\ Character\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ Character\ =\ ConvertUnitTo<Character>();}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}CharacterIsAlive"{}},\ ()\ =>\ Character.IsAlive)}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Cancel,\ \textcolor{stringliteral}{"{}StopBehaviour"{}},\ Character.Stop)}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}StopAnimation"{}},\ StopAnimation)}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ animationPlayer.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ StopAnimation()}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (idleOnComplete)}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Character.IdleRigid();}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Character.Stop();}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_character_behaviour_8cs_source_l00037}00037\ \}}
+
+\end{DoxyCode}

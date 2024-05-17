@@ -1,0 +1,107 @@
+\doxysection{Unit\+Behaviour\+Layered\+Animation\+Player.\+cs}
+\hypertarget{_unit_behaviour_layered_animation_player_8cs_source}{}\label{_unit_behaviour_layered_animation_player_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Units/UnitBehaviourLayeredAnimationPlayer.cs@{C:/Project/Apollo/Assets/Scripts/Common/Units/UnitBehaviourLayeredAnimationPlayer.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Threading;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Animancer;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Cysharp.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00007}00007\ \textcolor{preprocessor}{\#pragma\ warning\ disable\ 4014}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00009}00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_units}{Common.Units}}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00014}\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_layered_animation_player}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_units_1_1_unit_behaviour_layered_animation_player}{UnitBehaviourLayeredAnimationPlayer}}\ :\ UnitBehaviourAnimationPlayer}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ClipTransition\ baseRunClip;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ClipTransition\ targetCopyClip;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ AvatarMask\ actionMask;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ AnimancerLayer\ baseLayer;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ AnimancerLayer\ actionLayer;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ runTask;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dred\ dred;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ isOnRunning;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(UnitBehaviour\ behaviour)}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (behaviour.Unit\ is\ not\ Dred\ red)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ dred\ =\ red;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaviour);}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ behaviour.Sections}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}ResetIsOnRunning"{}},\ ()\ =>\ isOnRunning\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}StopActionMask"{}},\ ()\ =>\ actionLayer.Stop())}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\textcolor{stringliteral}{"{}CancelRunTask"{}},\ CancelRunTask)}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\textcolor{stringliteral}{"{}CancelRunTask"{}},\ CancelRunTask)}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ baseLayer\ \ \ =\ animancer.Layers[0];}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ actionLayer\ =\ animancer.Layers[1];}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ actionLayer.SetMask(actionMask);}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ actionLayer.SetDebugName(\textcolor{stringliteral}{"{}Action\ Layer"{}});}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Play()}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (targetClip.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ Resume();}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Overwrite}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (animancer.States.Current\ is\ not\ \textcolor{keyword}{null}\ \&\&\ animancer.States.Current.Clip\ ==\ targetClip.Clip)}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}AnimationOverwrite:\{targetClip.Name\}.\{gameObject.name\}"{}});}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State.Stop();}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ actionLayer.Play(targetClip);}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ runTask\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ RunTask(runTask).Forget();}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ UniTaskVoid\ RunTask(CancellationTokenSource\ cts)}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!cts.IsCancellationRequested)}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ directionInput\ =\ dred.Controller.DirectValue;}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (directionInput\ !=\ Vector2.zero)}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Play\ Run\ Clip}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isOnRunning)}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isOnRunning\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ baseLayer.Play(baseRunClip);}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOTE.만약\ 안움직일\ 때\ targetClip을\ 사용하면,\ targetClip에\ 있는\ 이벤트가\ 중복되어\ 호출된다.}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 따라서\ 같은\ 클립이지만,\ 이벤트\ 정보가\ 다른\ 클립(targetCopyClip)을\ 사용하도록\ 하자.}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isOnRunning\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ baseLayer.Play(targetCopyClip);}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Yield(PlayerLoopTiming.FixedUpdate,\ cts.Token);}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CancelRunTask()}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (runTask\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ runTask.Cancel();}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ runTask\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_unit_behaviour_layered_animation_player_8cs_source_l00104}00104\ \}}
+
+\end{DoxyCode}

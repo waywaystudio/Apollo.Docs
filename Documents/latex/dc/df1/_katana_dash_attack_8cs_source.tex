@@ -1,0 +1,43 @@
+\doxysection{Katana\+Dash\+Attack.\+cs}
+\hypertarget{_katana_dash_attack_8cs_source}{}\label{_katana_dash_attack_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/\_Legacy/KatanaDashAttack.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/\_Legacy/KatanaDashAttack.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00001}00001\ \textcolor{comment}{//\ using\ Common.Characters.Behaviours;}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00002}00002\ \textcolor{comment}{//\ using\ DG.Tweening;}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00004}00004\ \textcolor{comment}{//\ namespace\ Common.Skills.Katanas}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00005}00005\ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00006}00006\ \textcolor{comment}{//\ \ \ \ \ public\ class\ KatanaDashAttack\ :\ SkillBehaviour}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00007}00007\ \textcolor{comment}{//\ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00008}00008\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ private\ DashBehaviour\ DashBehaviour\ \{\ get;\ set;\ \}}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00009}00009\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00010}00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00011}00011\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ public\ override\ void\ Initialize(Character\ character)}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00012}00012\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00013}00013\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(character);}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00014}00014\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00015}00015\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ DashBehaviour\ =\ character.Behaviours.Dash;}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00016}00016\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00017}00017\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00018}00018\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ "{}StopDashing"{},\ MainCharacter.Pathfinding.Cancel)}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00019}00019\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00020}00020\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00021}00021\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ DashBehaviour.DashCollider.Initialize(this);}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00022}00022\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00023}00023\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00024}00024\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ public\ override\ void\ Active()}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00025}00025\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00026}00026\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ if\ (!Invoker.IsAbleToActive)\ return;}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00027}00027\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00028}00028\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00029}00029\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00030}00030\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ Order\ Important,\ After\ Invoker.Active();}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00031}00031\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ var\ destination\ =\ DashBehaviour.DashDestination;}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00032}00032\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ var\ dashDuration\ =\ DashBehaviour.RemainDuration;}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00033}00033\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00034}00034\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ MainCharacter.Pathfinding.Dash(destination,\ dashDuration,\ 1f,\ Ease.Unset);}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00035}00035\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00036}00036\ \textcolor{comment}{//\ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_katana_dash_attack_8cs_source_l00037}00037\ \textcolor{comment}{//\ \}}}
+
+\end{DoxyCode}

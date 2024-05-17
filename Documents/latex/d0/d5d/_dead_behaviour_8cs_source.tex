@@ -1,0 +1,54 @@
+\doxysection{Dead\+Behaviour.\+cs}
+\hypertarget{_dead_behaviour_8cs_source}{}\label{_dead_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/Behaviours/DeadBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/Behaviours/DeadBehaviour.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_behaviours}{Common.Characters.Behaviours}}}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00002}00002\ \{}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00003}00003\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DeadBehaviour\ :\ CharacterBehaviour}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00004}00004\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00005}00005\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ CombatLog\ DeadLog\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00006}00006\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}StopPathfinding"{}},\ Character.Pathfinding.Stop)}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}CancelPathfinding"{}},\ Character.Pathfinding.Cancel)}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}DeadTrue"{}},\ ()\ =>\ Character.IsAlive\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}SetActiveFalse"{}},\ ()\ =>\ Character.gameObject.SetActive(\textcolor{keyword}{false}))}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Active(CombatLog\ log)}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ DeadLog\ =\ log;}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00029}00029\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Reset()}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ behaviourCode\ \ \ \ \ \ \ \ \ \ \ \ \ =\ DataIndex.Dead;}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.StateMask\ \ \ \ \ =\ StateMask.Dead;}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.IgnorableMask\ =\ StateMask.All;}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ behaviourCode\ \ \ \ \ \ \ \ \ \ \ \ \ =\ DataIndex.Dead;}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.StateMask\ \ \ \ \ =\ StateMask.Dead;}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ StateMatrix.IgnorableMask\ =\ StateMask.All;}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ idleOnComplete\ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00046}00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dead_behaviour_8cs_source_l00048}00048\ \}}
+
+\end{DoxyCode}

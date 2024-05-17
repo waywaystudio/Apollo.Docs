@@ -1,0 +1,86 @@
+\doxysection{Dash\+Of\+Lust.\+cs}
+\hypertarget{_dash_of_lust_8cs_source}{}\label{_dash_of_lust_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/PawnOfPains/DashOfLust.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/PawnOfPains/DashOfLust.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_projections}{Common.Projections}};}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_module}{Common.Skills.Module}};}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_modules}{Common.Skills.Modules}};}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00007}\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players_1_1_pawn_of_pains}{00007}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players_1_1_pawn_of_pains}{Common.Skills.NonPlayers.PawnOfPains}}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DashOfLust\ :\ NonPlayerSkillBehaviour,\ IProjectableSequencer}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DashProperty\ dashProperty;}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ rotatePerFrame\ =\ 30f;}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SkillCollider\ skillCollider;}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ RvoModel\ rvoModel;}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ RectProjection\ indicator;}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ List<Character>\ takerCacheList\ =\ \textcolor{keyword}{new}\ ();}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ CastingTime\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Cancel,\ \textcolor{stringliteral}{"{}StopTransfer"{}},\ ()\ =>\ Character.Pathfinding.Stop())}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}ClearCache"{}},\ takerCacheList.Clear)}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ CastingTime\ =\ animationPlayer.GetInterval(Section.Execute);}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ skillCollider.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ rvoModel.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ indicator.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Active()}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Invoker.IsAbleToActive)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!PathfindingUtility.IsValidCombatRotation(Character,\ SkillTarget,\ 5f))}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Character.Rotate(SkillTarget.Position,\ rotatePerFrame,\ Invoker.Active);}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Active();}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Execute()}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ Character.Pathfinding.Dash(Character.Forward,\ dashProperty,\ Invoker.TweenEnd);}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnTriggerEnter(Collider\ other)}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ var\ enteredObject\ =\ other.gameObject;}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!enteredObject.IsInLayerMask(DetectProperty.TargetLayer))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enteredObject.TryGetComponent(out\ Character\ character)\ \&\&}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ character.IsAlive\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !takerCacheList.Exists(element\ =>\ element\ ==\ character))}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Executor.Execute(character.gameObject);}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ takerCacheList.AddUniquely(character);}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00070}00070\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ skillCollider\ =\ GetComponent<SkillCollider>();}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ indicator\ \ \ \ \ =\ GetComponentInChildren<RectProjection>();}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00078}00078\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dash_of_lust_8cs_source_l00080}00080\ \}}
+
+\end{DoxyCode}

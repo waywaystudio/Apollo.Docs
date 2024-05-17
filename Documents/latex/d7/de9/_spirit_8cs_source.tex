@@ -1,0 +1,92 @@
+\doxysection{Spirit.\+cs}
+\hypertarget{_spirit_8cs_source}{}\label{_spirit_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Spirits/Spirit.cs@{C:/Project/Apollo/Assets/Scripts/Common/Spirits/Spirit.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_spirits_1_1_actions}{Common.Spirits.Actions}};}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_systems}{Common.Systems}};}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_spirits}{Common.Spirits}}}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Spirit\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_common_1_1_i_damage_taker}{IDamageTaker}},\ IEditable}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpiritSpawn\ spawnAction;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpiritPowerUp\ powerUp;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpiritDisappear\ disappearAction;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpiritDraw\ drawer;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpiritFollow\ follow;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpiritTakeDamage\ takeDamage;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ PathfindingSystem\ pathfindingSystem;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Collider\ spiritCollider;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SpiritSpawnEvent\ spawnEvent;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DataIndex\ DataIndex\ =>\ DataIndex.DredSkill;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ Position\ =>\ transform.position;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ Forward\ =>\ transform.forward;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SpiritTakeDamage\ TakeDamageAction\ =>\ takeDamage;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Dred\ Dred\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DetectModel\ Detector\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ PathfindingSystem\ Pathfinding\ =>\ pathfindingSystem;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SpiritDraw\ DrawAction\ =>\ drawer;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Collider\ SpiritCollider\ =>\ spiritCollider;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ StatTable\ SpiritBuffTable\ =>\ powerUp.SpiritBuffTable;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SpiritSpawn\ SpawnAction\ =>\ spawnAction;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsSpawned\ =>\ spawnAction.IsSpawned;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ Dred\ \ \ \ \ =\ dred;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ Detector\ =\ \textcolor{keyword}{new}\ DetectModel(transform);}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ spawnAction.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ powerUp.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ disappearAction.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ drawer.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ follow.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ takeDamage.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ pathfindingSystem.SetAIMove(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ pathfindingSystem.SetRvo(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.Invoke(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Main\ Actions\ */}}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Spawn()\ =>\ spawnAction.Active();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ PowerUp()\ =>\ powerUp.Active();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Disappear()\ =>\ disappearAction.Active();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Draw(Transform\ absorberTransform,\ \textcolor{keywordtype}{float}\ duration,\ Action\ callback)\ =>\ drawer.Active(absorberTransform,\ duration,\ callback);}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ FollowDred()\ =>\ follow.FollowDred();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ FollowEnemy()\ =>\ follow.FollowEnemy();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TakeDamage(IDamageEntity\ executor)\ =>\ takeDamage.TakeDamage(executor);}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Change\ Property\ */}}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ChangeBasePower(\textcolor{keywordtype}{float}\ value)\ =>\ powerUp.ChangeBasePower(value);}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ChangeFollowSpeed(\textcolor{keywordtype}{float}\ value)\ =>\ follow.Speed\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ChangeProlongTime(\textcolor{keywordtype}{float}\ value)\ =>\ powerUp.SpiritProlongTime\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00069}00069\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ spawnAction\ \ \ \ \ \ \ =\ GetComponentInChildren<SpiritSpawn>();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ powerUp\ \ \ \ \ \ \ \ \ \ \ =\ GetComponentInChildren<SpiritPowerUp>();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ disappearAction\ \ \ =\ GetComponentInChildren<SpiritDisappear>();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ drawer\ \ \ \ \ \ \ \ \ \ \ \ =\ GetComponentInChildren<SpiritDraw>();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ follow\ \ \ \ \ \ \ \ \ \ \ \ =\ GetComponentInChildren<SpiritFollow>();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ takeDamage\ \ \ \ \ \ \ \ =\ GetComponentInChildren<SpiritTakeDamage>();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ pathfindingSystem\ =\ GetComponentInChildren<PathfindingSystem>();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ spiritCollider\ \ \ \ =\ GetComponent<Collider>();}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ spawnEvent);}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00083}00083\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_8cs_source_l00086}00086\ \}}
+
+\end{DoxyCode}

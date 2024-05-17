@@ -1,0 +1,59 @@
+\doxysection{Status\+Effect\+Data.\+cs}
+\hypertarget{_status_effect_data_8cs_source}{}\label{_status_effect_data_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/SheetData/CombatData/StatusEffectData.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/SheetData/CombatData/StatusEffectData.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00001}00001\ \textcolor{comment}{/*\ \ \ \ \ =====\ Do\ not\ touch\ this.\ Auto\ Generated\ Code.\ =====\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00002}00002\ \textcolor{comment}{/*\ \ \ \ \ If\ you\ want\ custom\ code\ generation\ modify\ this\ =>\ 'CodeGeneratorScriptableObject.cs'\ \ */}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00003}00003\ \textcolor{comment}{//\ \ \ \ \ ReSharper\ disable\ BuiltInTypeReferenceStyle}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00004}00004\ \textcolor{comment}{//\ \ \ \ \ ReSharper\ disable\ PartialTypeWithSinglePart}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_databases_1_1_sheet_data_1_1_combat_data}{Databases.SheetData.CombatData}}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00011}00011\ \{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }StatusEffectData\ :\ DataObject<StatusEffectData.StatusEffect>}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [Serializable]}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }StatusEffect\ :\ IIdentifier}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Int32\ id;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ String\ name;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ String\ iconPath;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Int32\ ID\ =>\ id;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ String\ Name\ =>\ name;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ String\ IconPath\ =>\ iconPath;}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00027}00027\ \textcolor{preprocessor}{\#region\ Editor\ Functions.}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00028}00028\ \textcolor{preprocessor}{\ \ \ \ \#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ SpreadSheetID\ =\ \textcolor{stringliteral}{"{}1eTCgtF0zV7vMK95Z820Db5jJ8mWI790hUL8KwaI-\/uJc"{}};}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ SpreadSheetName\ =\ \textcolor{stringliteral}{"{}CombatData"{}};}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{string}\ WorkSheetName\ =\ \textcolor{stringliteral}{"{}StatusEffect"{}};\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00032}00032\ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ LoadFromJson()}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00035}00035\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ List\ =\ UnityGoogleSheet.Editor.Core.UgsEditorUtility}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .LoadFromJson<StatusEffect>(\textcolor{stringliteral}{"{}CombatData"{}});\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ LoadFromGoogleSpreadSheet()}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ UnityGoogleSheet.Editor.Core.UgsExplorer}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ParseSpreadSheet(SpreadSheetID,\ \textcolor{stringliteral}{"{}StatusEffect"{}});}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ LoadFromJson();}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEditor.EditorUtility.SetDirty(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEditor.AssetDatabase.Refresh();}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00050}00050\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00051}00051\ \textcolor{preprocessor}{\#endregion}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_status_effect_data_8cs_source_l00053}00053\ \}}
+
+\end{DoxyCode}

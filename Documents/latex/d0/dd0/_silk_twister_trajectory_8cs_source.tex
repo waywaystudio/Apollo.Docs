@@ -1,0 +1,43 @@
+\doxysection{Silk\+Twister\+Trajectory.\+cs}
+\hypertarget{_silk_twister_trajectory_8cs_source}{}\label{_silk_twister_trajectory_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Trajectories/SilkTwisterTrajectory.cs@{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Trajectories/SilkTwisterTrajectory.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Threading;}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Cysharp.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_projectiles_1_1_trajectories}{Common.Projectiles.Trajectories}}}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SilkTwisterTrajectory\ :\ RevolveTrajectory}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ frequency\ =\ 1.5f;}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ height\ =\ .4f;}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ async\ UniTaskVoid\ Revolve(CancellationTokenSource\ cts)}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ var\ angle\ =\ InitialAngle\ *\ (Mathf.PI\ /\ 180);}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!cts.IsCancellationRequested)}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ cp\ =\ Projectile.Provider.PrePosition(centerPosition).position;}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ angle\ +=\ speed\ *\ Time.fixedDeltaTime;}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ x\ =\ cp.x\ +\ Mathf.Cos(angle)\ *\ distance;}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ y\ =\ cp.y\ +\ Mathf.Sin(Time.time\ *\ 6.28f\ *\ frequency\ *\ distance\ *\ 0.5f)\ *\ height;}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ z\ =\ cp.z\ +\ Mathf.Sin(angle)\ *\ distance;}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetPos\ =\ \textcolor{keyword}{new}\ Vector3(x,\ y,\ z);}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ transform.LookAt(targetPos);}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ transform.position\ =\ targetPos;}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Yield(PlayerLoopTiming.FixedUpdate,\ cts.Token);}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ Projectile.Invoker.Complete();}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_silk_twister_trajectory_8cs_source_l00037}00037\ \}}
+
+\end{DoxyCode}

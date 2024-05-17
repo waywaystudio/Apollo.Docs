@@ -1,0 +1,127 @@
+\doxysection{Variant\+Select.\+cs}
+\hypertarget{_karma_select_2_variant_select_8cs_source}{}\label{_karma_select_2_variant_select_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/UI/KarmaSelect/VariantSelect.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/UI/KarmaSelect/VariantSelect.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}};}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }DG.Tweening;}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEngine.EventSystems;}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_u_i_1_1_karma_select}{Challenge.UI.KarmaSelect}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00010}00010\ \textcolor{comment}{//\ \ \ \ \ public\ class\ VariantSelect\ :\ MonoBehaviour,\ ISequencer,\ IEditable}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00011}00011\ \textcolor{comment}{//\ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00012}00012\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ [SerializeField]\ private\ CanvasGroup\ canvasGroup;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00013}00013\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ [SerializeField]\ private\ GameObject\ optionsObject;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00014}00014\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ [SerializeField]\ private\ List<MasterySelection>\ selectionList;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00015}00015\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00016}00016\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ private\ Tween\ alphaFadeTween;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00017}00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00018}00018\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ public\ SectionTable\ Sections\ \{\ get;\ \}\ =\ new();}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00019}00019\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ public\ SectionInvoker\ Invoker\ \{\ get;\ private\ set;\ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00020}00020\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ public\ DataIndex\ SelectedKarmaCode\ \{\ get;\ private\ set;\ \}\ =\ DataIndex.None;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00021}00021\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00022}00022\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ private\ CanvasKarmaSelect\ KarmaSelect\ \{\ get;\ set;\ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00023}00023\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00024}00024\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00025}00025\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ public\ void\ Initialize(CanvasKarmaSelect\ karmaSelect)}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00026}00026\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00027}00027\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ KarmaSelect\ =\ karmaSelect;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00028}00028\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ \ \ \ \ =\ new\ SectionInvoker(Sections);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00029}00029\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00030}00030\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ Sections}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00031}00031\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ .Add(Section.Spawn,\ "{}SetKarmaSelections"{},\ SetKarmaSelections)}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00032}00032\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ .Add(Section.Spawn,\ "{}OptionCanvasAlphaFade"{},\ OptionCanvasAlphaFade)}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00033}00033\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ .Add(Section.Spawn,\ "{}ActiveOptions"{},\ ActiveOptions)}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00034}00034\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ .Add(Section.Active,\ "{}FirstKarmaSelect"{},\ FirstKarmaSelect)}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00035}00035\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ .Add(Section.Cancel,\ "{}CancelAlphaFade"{},\ CancelAlphaFade)}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00036}00036\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ .Add(Section.End,\ "{}CancelAlphaFade"{},\ CancelAlphaFade)}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00037}00037\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ .Add(Section.Dispose,\ "{}CancelAlphaFade"{},\ CancelAlphaFade)}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00038}00038\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ \ \ \ \ ;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00039}00039\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00040}00040\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00041}00041\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ public\ void\ ResetProperty()}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00042}00042\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00043}00043\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ optionsObject.SetActive(false);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00044}00044\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00045}00045\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00046}00046\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ public\ void\ Spawn()}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00047}00047\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00048}00048\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ if\ (!Invoker.IsAbleToActive)\ return;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00049}00049\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00050}00050\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ Invoker.Spawn();}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00051}00051\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00052}00052\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00053}00053\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ public\ void\ Cancel()\ =>\ Invoker.Cancel();}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00054}00054\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00055}00055\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00056}00056\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ private\ void\ SetKarmaSelections()}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00057}00057\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00058}00058\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ var\ karmaType\ =\ KarmaSelect.SelectedKarmaCard.Type;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00059}00059\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ var\ pickThree\ =\ ChallengeDirector.Combat.MasteryAbility.OldGenerateMasteryList(karmaType,\ 3);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00060}00060\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00061}00061\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ selectionList.ForEach((selection,\ index)\ =>}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00062}00062\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00063}00063\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ \ \ \ \ if\ (index\ >\ pickThree.Count)\ return;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00064}00064\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00065}00065\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ \ \ \ \ selection.Initialize(pickThree[index]);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00066}00066\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ \ \ \ \ selection.OnSubmitted.Add("{}SelectedKarmaCode"{},\ code\ =>\ SelectedKarmaCode\ =\ code);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00067}00067\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ \ \ \ \ selection.OnSubmitted.Add("{}Complete"{},\ \_\ =>\ Invoker.Complete());}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00068}00068\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ \ \ \ \ selection.OnSelected.Add("{}MoveKarmaIcon"{},\ MoveKarmaIcon);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00069}00069\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ \});}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00070}00070\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00071}00071\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00072}00072\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ private\ void\ OptionCanvasAlphaFade()}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00073}00073\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00074}00074\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ canvasGroup.alpha\ =\ 0f;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00075}00075\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ alphaFadeTween\ =\ canvasGroup.DOFade(1f,\ 0.5f)}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00076}00076\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(Invoker.Active);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00077}00077\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00078}00078\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ gameObject.SetActive(true);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00079}00079\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00080}00080\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00081}00081\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ private\ void\ ActiveOptions()}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00082}00082\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00083}00083\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ optionsObject.SetActive(true);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00084}00084\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00085}00085\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00086}00086\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ private\ void\ FirstKarmaSelect()}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00087}00087\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00088}00088\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ var\ firstKarma\ =\ selectionList.FirstOrDefault();\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00089}00089\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00090}00090\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ EventSystem.current.SetSelectedGameObject(firstKarma.gameObject);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00091}00091\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00092}00092\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00093}00093\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ private\ void\ CancelAlphaFade()}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00094}00094\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00095}00095\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ if\ (alphaFadeTween\ is\ null)\ return;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00096}00096\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00097}00097\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ alphaFadeTween.Kill();}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00098}00098\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ alphaFadeTween\ =\ null;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00099}00099\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00100}00100\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00101}00101\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ private\ void\ MoveKarmaIcon(MasterySelection\ masterySelection)}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00102}00102\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00103}00103\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ var\ indicator\ =\ KarmaSelect.KarmaIcon;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00104}00104\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00105}00105\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \ \ \ \ indicator.Move(masterySelection.IndicatorHierarchy.transform.position);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00106}00106\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ //\ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00107}00107\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00108}00108\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ private\ void\ OnDestroy()\ =>\ Invoker.Dispose();\ }}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00109}00109\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00110}00110\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00111}00111\ \textcolor{comment}{//\ \#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00112}00112\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ public\ void\ EditorSetUp()}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00113}00113\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00114}00114\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ GetComponentsInChildren(true,\ selectionList);}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00115}00115\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00116}00116\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ optionsObject\ =\ transform.Find("{}Options"{}).gameObject;}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00117}00117\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ //\ canvasGroup\ \ \ =\ optionsObject.GetComponent<CanvasGroup>();}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00118}00118\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00119}00119\ \textcolor{comment}{//\ \#endif}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00120}00120\ \textcolor{comment}{//\ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_karma_select_2_variant_select_8cs_source_l00121}00121\ \}}
+
+\end{DoxyCode}

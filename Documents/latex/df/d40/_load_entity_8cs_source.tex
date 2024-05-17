@@ -1,0 +1,132 @@
+\doxysection{Load\+Entity.\+cs}
+\hypertarget{_load_entity_8cs_source}{}\label{_load_entity_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Clouds/LoadEntity.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Clouds/LoadEntity.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Threading;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Cysharp.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }PlayFab;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }PlayFab.ClientModels;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00009}\mbox{\hyperlink{namespace_clouds}{00009}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_clouds}{Clouds}}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00011}00011\ \ \ \ \ [Serializable]}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }LoadEntity}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CloudManager\ cloudManager;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ loadCanceller;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ LoadEntity(CloudManager\ cloudManager)}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ this.cloudManager\ =\ cloudManager;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsDone\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ async\ UniTaskVoid\ Load<T>(\textcolor{keywordtype}{string}\ key,\ T\ defaultValue\ =\ \textcolor{keywordflow}{default},\ Action<T>\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ loadCanceller\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ IsDone\ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ var\ resultAsString\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ defaultValue;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ PlayFabClientAPI.GetUserData(CreateUserDataRequest(key),\ OnLoadSuccess,\ OnLoadFailed);}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.WaitUntil(()\ =>\ IsDone,\ cancellationToken:\ loadCanceller.Token);}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!resultAsString.IsNullOrEmpty())}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ JsonUtility.FromJson<T>(resultAsString);}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ callback?.Invoke(result);}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ OnLoadSuccess(GetUserDataResult\ userDataResult)}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userDataResult.Data\ !=\ \textcolor{keyword}{null}\ \&\&\ userDataResult.Data.TryGetValue(key,\ out\ var\ value))}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ resultAsString\ =\ value.Value;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}NotExist\ \{key\}"{}});}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsDone\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ OnLoadFailed(PlayFabError\ error)}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Got\ error\ retrieving\ user\ data:"{}});}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(error.GenerateErrorReport());}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsDone\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ async\ UniTask<T>\ ASyncLoad<T>(\textcolor{keywordtype}{string}\ key,\ T\ defaultValue\ =\ \textcolor{keywordflow}{default},\ Action<T>\ callback\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ loadCanceller\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ IsDone\ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ var\ resultAsString\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ defaultValue;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ PlayFabClientAPI.GetUserData(CreateUserDataRequest(key),\ OnLoadSuccess,\ OnLoadFailed);}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.WaitUntil(()\ =>\ IsDone,\ cancellationToken:\ loadCanceller.Token);}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!resultAsString.IsNullOrEmpty())}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ JsonUtility.FromJson<T>(resultAsString);}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ callback?.Invoke(result);}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ OnLoadSuccess(GetUserDataResult\ userDataResult)}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userDataResult.Data\ !=\ \textcolor{keyword}{null}\ \&\&\ userDataResult.Data.TryGetValue(key,\ out\ var\ value))}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ resultAsString\ =\ value.Value;}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}NotExist\ \{key\}"{}});}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsDone\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ OnLoadFailed(PlayFabError\ error)}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Got\ error\ retrieving\ user\ data:"{}});}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(error.GenerateErrorReport());}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsDone\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Clear()}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (loadCanceller\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loadCanceller.Cancel();}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loadCanceller.Dispose();}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loadCanceller\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ GetUserDataRequest\ CreateUserDataRequest(\textcolor{keywordtype}{string}\ key)\ =>\ \textcolor{keyword}{new}()}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ PlayFabId\ =\ cloudManager.PlayFabId,\ }
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ Keys\ =\ \textcolor{keyword}{new}\ List<string>\ \{\ key\ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_load_entity_8cs_source_l00126}00126\ \}}
+
+\end{DoxyCode}

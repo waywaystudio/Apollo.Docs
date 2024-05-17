@@ -1,0 +1,96 @@
+\doxysection{Hell\+Gate.\+cs}
+\hypertarget{_hell_gate_8cs_source}{}\label{_hell_gate_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Lobby/Props/HellGate.cs@{C:/Project/Apollo/Assets/Scripts/Lobby/Props/HellGate.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_props_1_1_gates}{Common.Props.Gates}};}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_lobby_1_1_camps_1_1_scenarios}{Lobby.Camps.Scenarios}};}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00006}\mbox{\hyperlink{namespace_lobby_1_1_props}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_lobby_1_1_props}{Lobby.Props}}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }HellGate\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GateModel\ gateMode;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GameObject\ flag;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GameObject\ fakeWall;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Collider\ preBlockage;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Transform\ exitTransform;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ MeshRenderer\ iconRenderer;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ InteractionComponent\ interactable;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SphereCollider\ interactableRadar;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ RoamingCampSection\ campSection;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(RoamingCampSection\ section)}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ campSection\ \ \ \ \ \ \ \ \ =\ section;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ preBlockage.enabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ gateMode.Initialize();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ gateMode.Close(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ interactable.Initialize();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ interactable.Sections}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}ShowWeaponSelectionGroupPanel"{}},\ ShowWeaponSelectionGroupPanel)}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ SetModeling();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TryActiveInteraction()}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ interactableRadar.enabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ToHell()}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ DeactivateBlockage();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ gateMode.Open();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ CompleteSelectSequence();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ShowWeaponSelectionGroupPanel()}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ LobbyDirector.UI.WeaponSelectionGroup.Open();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ DeactivateBlockage()}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ preBlockage.enabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SetModeling()}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ gateMode.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ fakeWall.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ interactableRadar.enabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CompleteSelectSequence()}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ campSection.ExitPosition\ =\ exitTransform?.position\ ??\ transform.position;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ campSection.Invoker.Complete();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00075}00075\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ gateMode\ \ \ \ \ \ \ \ \ \ =\ GetComponentInChildren<GateModel>();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ interactableRadar\ =\ GetComponent<SphereCollider>();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ interactable\ \ \ \ \ \ =\ GetComponent<InteractionComponent>();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ exitTransform\ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Exit"{}});}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ flag\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Flag"{}}).gameObject;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ preBlockage\ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}PreBlockage"{}}).GetComponent<Collider>();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ iconRenderer\ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Icon"{}}).GetComponent<MeshRenderer>();}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ fakeWall\ \ \ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}FakeWall"{}}).gameObject;}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00088}00088\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_hell_gate_8cs_source_l00090}00090\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,141 @@
+\doxysection{Number\+Extension.\+cs}
+\hypertarget{_number_extension_8cs_source}{}\label{_number_extension_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/\_Protocol/\_Extension/NumberExtension.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/\_Protocol/\_Extension/NumberExtension.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00001}00001\ \textcolor{comment}{//\ ReSharper\ disable\ UnusedMember.Global}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Random\ =\ UnityEngine.Random;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00007}00007\ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }NumberExtension}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ DefaultEpsilon\ =\ 1e-\/5f;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ \textcolor{keywordtype}{string}[]\ Thousands\ =\ \{\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{stringliteral}{"{}M"{}},\ \textcolor{stringliteral}{"{}MM"{}},\ \textcolor{stringliteral}{"{}MMM"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ \textcolor{keywordtype}{string}[]\ Hundreds\ \ =\ \{\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{stringliteral}{"{}C"{}},\ \textcolor{stringliteral}{"{}CC"{}},\ \textcolor{stringliteral}{"{}CCC"{}},\ \textcolor{stringliteral}{"{}CD"{}},\ \textcolor{stringliteral}{"{}D"{}},\ \textcolor{stringliteral}{"{}DC"{}},\ \textcolor{stringliteral}{"{}DCC"{}},\ \textcolor{stringliteral}{"{}DCCC"{}},\ \textcolor{stringliteral}{"{}CM"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ \textcolor{keywordtype}{string}[]\ Tens\ \ \ \ \ \ =\ \{\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{stringliteral}{"{}X"{}},\ \textcolor{stringliteral}{"{}XX"{}},\ \textcolor{stringliteral}{"{}XXX"{}},\ \textcolor{stringliteral}{"{}XL"{}},\ \textcolor{stringliteral}{"{}L"{}},\ \textcolor{stringliteral}{"{}LX"{}},\ \textcolor{stringliteral}{"{}LXX"{}},\ \textcolor{stringliteral}{"{}LXXX"{}},\ \textcolor{stringliteral}{"{}XC"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ \textcolor{keywordtype}{string}[]\ Ones\ \ \ \ \ \ =\ \{\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{stringliteral}{"{}I"{}},\ \textcolor{stringliteral}{"{}II"{}},\ \textcolor{stringliteral}{"{}III"{}},\ \textcolor{stringliteral}{"{}IV"{}},\ \textcolor{stringliteral}{"{}V"{}},\ \textcolor{stringliteral}{"{}VI"{}},\ \textcolor{stringliteral}{"{}VII"{}},\ \textcolor{stringliteral}{"{}VIII"{}},\ \textcolor{stringliteral}{"{}IX"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00014}00014\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ ToKmbt(\textcolor{keyword}{this}\ \textcolor{keywordtype}{int}\ number)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ number\ \textcolor{keywordflow}{switch}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 100000000\ =>\ (number\ /\ 1000000D).ToString(\textcolor{stringliteral}{"{}0.\#M"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 10000000\ \ =>\ (number\ /\ 1000000D).ToString(\textcolor{stringliteral}{"{}0.\#\#M"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 1000000\ \ \ =>\ (number\ /\ 1000000D).ToString(\textcolor{stringliteral}{"{}0.\#\#\#M"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 100000\ \ \ \ =>\ (number\ /\ 1000D).ToString(\textcolor{stringliteral}{"{}0.\#K"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 10000\ \ \ \ \ =>\ (number\ /\ 1000D).ToString(\textcolor{stringliteral}{"{}0.\#\#K"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ =>\ number.ToString(\textcolor{stringliteral}{"{}\#,0"{}})}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ ToKmbt(\textcolor{keyword}{this}\ \textcolor{keywordtype}{long}\ number)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00029}00029\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ number\ \textcolor{keywordflow}{switch}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 100000000000000000\ =>\ (number\ /\ 1000000000000000D).ToString(\textcolor{stringliteral}{"{}0.\#Q"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 10000000000000000\ \ =>\ (number\ /\ 1000000000000000D).ToString(\textcolor{stringliteral}{"{}0.\#\#Q"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 1000000000000000\ \ \ =>\ (number\ /\ 1000000000000000D).ToString(\textcolor{stringliteral}{"{}0.\#\#\#Q"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 100000000000000\ \ \ \ =>\ (number\ /\ 1000000000000D).ToString(\textcolor{stringliteral}{"{}0.\#T"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 10000000000000\ \ \ \ \ =>\ (number\ /\ 1000000000000D).ToString(\textcolor{stringliteral}{"{}0.\#\#T"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 1000000000000\ \ \ \ \ \ =>\ (number\ /\ 1000000000000D).ToString(\textcolor{stringliteral}{"{}0.\#\#\#T"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 100000000000\ \ \ \ \ \ \ =>\ (number\ /\ 1000000000D).ToString(\textcolor{stringliteral}{"{}0.\#B"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 10000000000\ \ \ \ \ \ \ \ =>\ (number\ /\ 1000000000D).ToString(\textcolor{stringliteral}{"{}0.\#\#B"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 1000000000\ \ \ \ \ \ \ \ \ =>\ (number\ /\ 1000000000D).ToString(\textcolor{stringliteral}{"{}0.\#\#\#B"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 100000000\ \ \ \ \ \ \ \ \ \ =>\ (number\ /\ 1000000D).ToString(\textcolor{stringliteral}{"{}0.\#M"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 10000000\ \ \ \ \ \ \ \ \ \ \ =>\ (number\ /\ 1000000D).ToString(\textcolor{stringliteral}{"{}0.\#\#M"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 1000000\ \ \ \ \ \ \ \ \ \ \ \ =>\ (number\ /\ 1000000D).ToString(\textcolor{stringliteral}{"{}0.\#\#\#M"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 100000\ \ \ \ \ \ \ \ \ \ \ \ \ =>\ (number\ /\ 1000D).ToString(\textcolor{stringliteral}{"{}0.\#K"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 10000\ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ (number\ /\ 1000D).ToString(\textcolor{stringliteral}{"{}0.\#\#K"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ number.ToString(\textcolor{stringliteral}{"{}\#,0"{}})}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00049}00049\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ ToKmbt(\textcolor{keyword}{this}\ \textcolor{keywordtype}{float}\ number)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00051}00051\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ number\ \textcolor{keywordflow}{switch}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 1\_000\_000\_000\ =>\ (number\ /\ 1\_000\_000\_000D).ToString(\textcolor{stringliteral}{"{}0.00B"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 1\_000\_000\ \ \ \ \ =>\ (number\ /\ 1\_000\_000D).ToString(\textcolor{stringliteral}{"{}0.00M"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ >=\ 1\_000\ \ \ \ \ \ \ \ \ =>\ (number\ /\ 1\_000D).ToString(\textcolor{stringliteral}{"{}0.00K"{}}),}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ number.ToString(\textcolor{stringliteral}{"{}0"{}})}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00062}00062\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00063}00063\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ GetNumberOfDigits(\textcolor{keyword}{this}\ \textcolor{keywordtype}{int}\ original,\ \textcolor{keywordtype}{int}\ digit)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00064}00064\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (digit\ <\ 1)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEngine.Debug.LogError(\$\textcolor{stringliteral}{"{}The\ digit\ argument\ is\ not\ valid\ for\ the\ given\ number.\ input\ \{original\}"{}});}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 1;\ i\ <\ digit;\ i++)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ original\ /=\ 10;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ original\ \%\ 10;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00076}00076\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00077}00077\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ GetNumberOfFromToDestDigits(\textcolor{keyword}{this}\ \textcolor{keywordtype}{int}\ original,\ \textcolor{keywordtype}{int}\ startDigit,\ \textcolor{keywordtype}{int}\ endDigit)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00078}00078\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (startDigit\ <=\ 0\ ||\ endDigit\ <=\ 0)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEngine.Debug.LogError(\$\textcolor{stringliteral}{"{}startDigit\ and\ endDigit\ must\ be\ greater\ than\ 0.\ InputStart:\{startDigit\},\ InputEnd:\{endDigit\}.\ return\ 0"{}});}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (startDigit\ >\ endDigit)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEngine.Debug.LogError(\$\textcolor{stringliteral}{"{}startDigit\ must\ be\ less\ than\ or\ equal\ to\ endDigit.\ InputStart:\{startDigit\},\ InputEnd:\{endDigit\}.\ return\ 0"{}});}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ the\ divisor\ to\ isolate\ the\ start\ digit.}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ var\ startDivisor\ =\ (int)UnityEngine.Mathf.Pow(10,\ startDigit\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ var\ endDivisor\ =\ (int)UnityEngine.Mathf.Pow(10,\ endDigit\ -\/\ (startDigit\ -\/\ 1));}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00094}00094\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Remove\ the\ numbers\ to\ the\ right\ of\ the\ start\ digit.}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ var\ result\ =\ original\ /\ startDivisor;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00097}00097\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Keep\ only\ the\ numbers\ up\ to\ the\ end\ digit.}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ result\ =\ result\ \%\ endDivisor;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00102}00102\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00103}00103\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00104}00104\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ ToRoman(\textcolor{keyword}{this}\ \textcolor{keywordtype}{int}\ number)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00105}00105\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (number)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}0"{}};}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ <\ 0:}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ >\ 3999:}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}Can't\ Convert\ \{number\}\ to\ Roman\ Number.\ return\ 0\ as\ string"{}});}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}0"{}};}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Thousands[number\ \ \ \ \ \ \ /\ 1000]\ +\ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Hundreds[number\ \%\ 1000\ /\ 100]\ \ +\ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Tens[number\ \ \ \ \ \%\ 100\ \ /\ 10]\ \ \ +\ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ones[number\ \ \ \ \ \ \ \ \ \ \ \ \%\ 10];}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00121}00121\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ ToInt(\textcolor{keyword}{this}\ \textcolor{keywordtype}{float}\ number)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00122}00122\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{int})Math.Round(number);}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00124}00124\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00125}00125\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00126}00126\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ Chance(\textcolor{keyword}{this}\ \textcolor{keywordtype}{float}\ number)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00127}00127\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Random.Range(0f,\ 1f)\ <=\ number;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00129}00129\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00131}00131\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ Approximately(\textcolor{keyword}{this}\ \textcolor{keywordtype}{float}\ number,\ \textcolor{keywordtype}{float}\ target)}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00132}00132\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Mathf.Abs(number\ -\/\ target)\ <=\ DefaultEpsilon;}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00134}00134\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_number_extension_8cs_source_l00135}00135\ \}}
+
+\end{DoxyCode}

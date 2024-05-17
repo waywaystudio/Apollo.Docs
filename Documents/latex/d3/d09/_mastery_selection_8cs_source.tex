@@ -1,0 +1,142 @@
+\doxysection{Mastery\+Selection.\+cs}
+\hypertarget{_mastery_selection_8cs_source}{}\label{_mastery_selection_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/UI/MasterySelection.cs@{C:/Project/Apollo/Assets/Scripts/Common/UI/MasterySelection.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_masteries}{Common.Masteries}};}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MasterySelection\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Transform\ indicatorHierarchy;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Image\ selectedOutline;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Image\ iconImage;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Image\ selectedGlow;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ nameTextValue;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ descriptionTextValue;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GameObject\ upgradeTextObject;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ upgradeKeyTextValue;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ upgradeValueTextValue;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Sprite\ defaultIconSprite;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Transform\ tooltipHierarchy;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_pool}{Pool<Tooltip>}}\ masteryTooltipPool;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Mastery\ targetMaster;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dred\ dred;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ isInitialized;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DataIndex\ AssignedMasteryCode\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<DataIndex>}}\ OnSubmitted\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<MasterySelection>}}\ OnSelected\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<MasterySelection>}}\ OnDeSelected\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform\ IndicatorHierarchy\ =>\ indicatorHierarchy;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isInitialized)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ masteryTooltipPool.\mbox{\hyperlink{class_pool_af50a06eba43889ccb513fe8aa5f6c6b3}{Initialize}}(\textcolor{keyword}{null},\ tooltipHierarchy,\ tooltipHierarchy);}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ShowForAdd(DataIndex\ masteryCode)}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Verify.IsTrue(Database.MasteryPrefabs[masteryCode].TryGetComponent(out\ targetMaster)))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ Initialize();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ SetMasterySelection(masteryCode);}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ upgradeTextObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ShowForUpgrade(DataIndex\ masteryCode)}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ targetMaster\ =\ masteryCode\ ==\ DataIndex.EmptyMastery\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ Database.MasteryPrefabs[masteryCode].GetComponent<Mastery>()\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ dred.MasteryTable[masteryCode];}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ Initialize();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ SetMasterySelection(masteryCode);}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ upgradeTextObject.SetActive(masteryCode\ !=\ DataIndex.EmptyMastery);}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetDred(Dred\ dred)\ =>\ this.dred\ =\ dred;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnSelect()}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ selectedOutline.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ selectedGlow.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ SpawnToolTips(targetMaster.ToolTips);}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ OnSelected.Invoke(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnDeSelect()}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ selectedOutline.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ selectedGlow.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ masteryTooltipPool.ReleaseAll();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ OnDeSelected.Invoke(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnSubmit()}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ masteryTooltipPool.ReleaseAll();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ OnSubmitted.Invoke(AssignedMasteryCode);}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SetMasterySelection(DataIndex\ masteryCode)}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ AssignedMasteryCode\ \ \ \ \ \ \ \ =\ masteryCode;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ iconImage.sprite\ \ \ \ \ \ \ \ \ \ \ =\ targetMaster.Icon.HasComponent()\ ?\ targetMaster.Icon\ :\ defaultIconSprite;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ nameTextValue.text\ \ \ \ \ \ \ \ \ =\ targetMaster.DataIndex.ToString().ToDivideWords();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ descriptionTextValue.text\ \ =\ targetMaster.Description;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ upgradeKeyTextValue.text\ \ \ =\ targetMaster.UpgradeKeyword;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ upgradeValueTextValue.text\ =\ targetMaster.UpgradeValueChanger;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ masteryTooltipPool.\mbox{\hyperlink{class_pool_af50a06eba43889ccb513fe8aa5f6c6b3}{Initialize}}(\textcolor{keyword}{null},\ tooltipHierarchy,\ tooltipHierarchy);}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ upgradeTextObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SpawnToolTips(List<string>\ tooltipKeys)}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ tooltipKeys?.ForEach(key\ =>}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ tooltip\ =\ masteryTooltipPool.Get();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tooltip.Initialize(key);}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00126}00126\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ indicatorHierarchy\ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Panel/IndicatorTransform"{}});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ selectedOutline\ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}SelectedOutline"{}}).GetComponent<Image>();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ iconImage\ \ \ \ \ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Panel/Icon"{}}).GetComponent<Image>();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ selectedGlow\ \ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Panel/SelectedGlow"{}}).GetComponent<Image>();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ nameTextValue\ \ \ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Panel/TextContainer/NameText"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ descriptionTextValue\ =\ transform.Find(\textcolor{stringliteral}{"{}Panel/TextContainer/DescText"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ tooltipHierarchy\ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}ToolTipScrollView/Viewport/Content"{}});}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ upgradeTextObject\ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}Panel/TextContainer/UpgradeText"{}}).gameObject;}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ upgradeKeyTextValue\ \ \ =\ upgradeTextObject.transform.Find(\textcolor{stringliteral}{"{}KeywordText"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ upgradeValueTextValue\ =\ upgradeTextObject.transform.Find(\textcolor{stringliteral}{"{}ValueChangeText"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00140}00140\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00141}00141\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mastery_selection_8cs_source_l00142}00142\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,81 @@
+\doxysection{Lobby\+Character\+Director.\+cs}
+\hypertarget{_lobby_character_director_8cs_source}{}\label{_lobby_character_director_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Lobby/LobbyCharacterDirector.cs@{C:/Project/Apollo/Assets/Scripts/Lobby/LobbyCharacterDirector.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players_1_1_allies}{Common.Characters.NonPlayers.Allies}};}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_lobby}{Lobby}}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }LobbyCharacterDirector\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GameObject\ npcSample1Prefab;}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DredSpawnEvent\ dredSpawnEvent;}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ AllySpawnEvent\ allySpawnEvent;}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Dred\ Dred\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SpawnDred(Vector3.zero,\ Quaternion.identity);}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Ally\ SpawnNpcSample1(Vector3\ position)}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Verify.IsTrue(npcSample1Prefab.ValidInstantiate(out\ Ally\ npc,\ position,\ npcSample1Prefab.transform.rotation,\ transform)))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ npc.Initialize();}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ npc.Interaction.AddInteraction(\textcolor{stringliteral}{"{}OpenEnforceWeaponPanel"{}},\ OpenEnforceWeaponPanel);}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ npc.Behaviours.Dead.Sections}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}RemoveInteraction"{}},\ ()\ =>}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ npc.Interaction.RemoveInteraction(\textcolor{stringliteral}{"{}OpenEnforceWeaponPanel"{}});}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \})}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ npc;}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SpawnDred(Vector3\ position,\ Quaternion\ rotation)}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Dred\ is\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ dredPrefab\ =\ Database.DredPrefab;}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dredPrefab\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Verify.IsTrue(dredPrefab.ValidInstantiate(out\ Dred\ dred,\ position,\ rotation,\ transform)))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dred.Initialize();}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Dred\ =\ dred;}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LobbyDirector.Dred.Teleport(position);}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ OpenEnforceWeaponPanel()}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ LobbyDirector.\mbox{\hyperlink{namespace_lobby_1_1_u_i}{UI}}.EnforceWeapon.Open();}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ dredSpawnEvent.Dispose();}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ allySpawnEvent.Dispose();}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00067}00067\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ dredSpawnEvent);}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ allySpawnEvent);}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00073}00073\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_character_director_8cs_source_l00075}00075\ \}}
+
+\end{DoxyCode}

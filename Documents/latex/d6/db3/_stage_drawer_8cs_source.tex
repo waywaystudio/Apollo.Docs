@@ -1,0 +1,80 @@
+\doxysection{Stage\+Drawer.\+cs}
+\hypertarget{_stage_drawer_8cs_source}{}\label{_stage_drawer_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/Editor/StageDrawer.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/Editor/StageDrawer.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Reflection;}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_challenge_1_1_dungeons_1_1_scenarios}{Challenge.Dungeons.Scenarios}};}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Sirenix.OdinInspector;}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Sirenix.OdinInspector.Editor;}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_editor}{Challenge.Editor}}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }StageDrawer\ :\ OdinAttributeProcessor<StageBuildEntity>}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}RewardProtocol"{}})}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ InlineEditorAttribute(InlineEditorObjectFieldModes.Boxed));}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}MapPrefabData"{}})}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ HideLabelAttribute());}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ InlineEditorAttribute(InlineEditorObjectFieldModes.Boxed));}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00026}00026\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ChapterThemeStagePrefabDataDrawer\ :\ OdinAttributeProcessor<MapPrefabData>}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}stagePrefabList"{}})}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ attributes.Add(new\ ListDrawerSettingsAttribute}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ IsReadOnly\ =\ true,}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \});}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}PrefabData"{}})}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ InlineEditorAttribute(InlineEditorObjectFieldModes.Boxed));}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00045}00045\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ChallengeStageDirectorDrawer\ :\ OdinAttributeProcessor<ChallengeDungeonDirector>}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}stageBuildEntities"{}})}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ TableListAttribute}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AlwaysExpanded\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}RewardSetList"{}})}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowInInspectorAttribute());}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ TableListAttribute}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AlwaysExpanded\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsReadOnly\ =\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}Simulate"{}})}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ButtonAttribute(ButtonSizes.Medium));}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_stage_drawer_8cs_source_l00074}00074\ \}}
+
+\end{DoxyCode}

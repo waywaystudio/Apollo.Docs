@@ -1,0 +1,61 @@
+\doxysection{Gourd.\+cs}
+\hypertarget{_gourd_8cs_source}{}\label{_gourd_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/Props/Rewards/Gourd.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/Props/Rewards/Gourd.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_challenge_1_1_dungeons_1_1_sections}{Challenge.Dungeons.Sections}};}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_masteries}{Common.Masteries}};}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_props_1_1_rewards}{Challenge.Props.Rewards}}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Gourd\ :\ Reward,\ IMasteryCanvasCaller}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00007}00007\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ DataIndex\ DataIndex\ =>\ DataIndex.GourdSource;}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ MasteryCanvasCallType\ CallType\ =>\ MasteryCanvasCallType.Upgrade;}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{class_challenge_1_1_dungeons_1_1_sections_1_1_reward_section}{RewardSection}}\ sourceSequence)}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(sourceSequence);}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Open\ Mastery\ Select\ PopUp\ UI}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ interactEffector.Sections.Add(Section.Complete,\ \textcolor{stringliteral}{"{}PopupMasterySelectCanvas"{}},\ PopupMasterySelectCanvas);}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ GetReward()}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ var\ dred\ =\ ChallengeDirector.Dred;}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ var\ selectedMasteryCode\ =\ ChallengeDirector.UI.CanvasMasterySelect.SelectedMasteryCode;}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetMastery\ =\ dred.MasteryTable[selectedMasteryCode];}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Empty\ Mastery\ -\/>\ Gold\ Up}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (selectedMasteryCode\ ==\ DataIndex.EmptyMastery)}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Mastery.GetRewardOfEmptyMaster(dred);}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (targetMastery\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ targetMastery.Quality.UpGrade();}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ PopupMasterySelectCanvas()}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ ChallengeDirector.UI.CanvasMasterySelect.Active(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00045}00045\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ interactEffector\ =\ GetComponentInChildren<SourceInteractEffector>(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00052}00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_gourd_8cs_source_l00055}00055\ \}}
+
+\end{DoxyCode}

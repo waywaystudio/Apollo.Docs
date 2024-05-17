@@ -1,0 +1,48 @@
+\doxysection{Prop\+Take\+Damage.\+cs}
+\hypertarget{_prop_take_damage_8cs_source}{}\label{_prop_take_damage_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Props/Actions/PropTakeDamage.cs@{C:/Project/Apollo/Assets/Scripts/Common/Props/Actions/PropTakeDamage.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_particles}{Common.Effects.Particles}};}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00005}\mbox{\hyperlink{namespace_common_1_1_props}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_props_1_1_actions}{Common.Props.Actions}}}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }PropTakeDamage\ :\ MonoBehaviour,\ ISequencer,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Effector\ effector;}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionTable\ Sections\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SectionInvoker\ Invoker\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ CombatValue\ HitPoints\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Prop\ Prop\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<CombatLog>}}\ OnTakeDamage\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Initialize(Prop\ prop)}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ Prop\ \ \ \ =\ prop;}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker\ =\ \textcolor{keyword}{new}\ SectionInvoker(Sections);}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ effector.Initialize(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ TakeDamage(IDamageEntity\ executor)}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Cancel()\ =>\ Invoker.Cancel();}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00034}00034\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ effector\ =\ GetComponent<Effector>();}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ effector.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00040}00040\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_prop_take_damage_8cs_source_l00042}00042\ \}}
+
+\end{DoxyCode}

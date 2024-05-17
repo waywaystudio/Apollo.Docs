@@ -1,0 +1,27 @@
+\doxysection{Cunning\+Of\+Fox\+Trajectory.\+cs}
+\hypertarget{_cunning_of_fox_trajectory_8cs_source}{}\label{_cunning_of_fox_trajectory_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Kimmihohs/CunningOfFoxTrajectory.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/NonPlayers/Kimmihohs/CunningOfFoxTrajectory.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_projectiles_1_1_trajectories}{Common.Projectiles.Trajectories}};}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }DG.Tweening;}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players_1_1_kimmihohs}{Common.Skills.NonPlayers.Kimmihohs}}}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CunningOfFoxTrajectory\ :\ ParabolaTrajectory}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ duration\ =\ 1.65f;}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Flying()}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ var\ destinationNaturalize\ =\ Destination\ +\ Random.insideUnitCircle.ToVector3XZ()\ *\ 2f;}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ ParabolaTween\ =\ Projectile.transform.DOJump(destinationNaturalize,\ jumpHeight,\ numJumps,\ duration)}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(()\ =>\ Projectile.Invoker.Complete())}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SetEase(ease);}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cunning_of_fox_trajectory_8cs_source_l00021}00021\ \}}
+
+\end{DoxyCode}

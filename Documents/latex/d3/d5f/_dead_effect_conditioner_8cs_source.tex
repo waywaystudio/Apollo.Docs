@@ -1,0 +1,40 @@
+\doxysection{Dead\+Effect\+Conditioner.\+cs}
+\hypertarget{_dead_effect_conditioner_8cs_source}{}\label{_dead_effect_conditioner_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Effects/Decorator/DeadEffectConditioner.cs@{C:/Project/Apollo/Assets/Scripts/Common/Effects/Decorator/DeadEffectConditioner.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_behaviours}{Common.Characters.Behaviours}};}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00004}\mbox{\hyperlink{namespace_common_1_1_effects_1_1_decorator}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_decorator}{Common.Effects.Decorator}}}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DeadEffectConditioner\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00007}00007\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DamageTypeMask\ damageMask;}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DeadBehaviour\ deadBehaviour;}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ EffectBehaviour\ targetEffect;}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ targetEffect\ =\ GetComponent<EffectBehaviour>();}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ targetEffect.Conditions.Add(\textcolor{stringliteral}{"{}IsProperMask"{}},\ IsProperCondition);}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ IsProperCondition()}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ deadBehaviour.DeadLog\ is\ not\ \textcolor{keyword}{null}\ \&\&\ }
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (deadBehaviour.DeadLog.DamageMask\ |\ damageMask)\ ==\ deadBehaviour.DeadLog.DamageMask;}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00027}00027\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ transform.FindInParents(out\ deadBehaviour);}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00032}00032\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dead_effect_conditioner_8cs_source_l00034}00034\ \}}
+
+\end{DoxyCode}

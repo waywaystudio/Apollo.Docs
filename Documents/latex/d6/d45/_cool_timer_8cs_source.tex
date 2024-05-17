@@ -1,0 +1,43 @@
+\doxysection{Cool\+Timer.\+cs}
+\hypertarget{_cool_timer_8cs_source}{}\label{_cool_timer_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_DataStruct/CoolTimer.cs@{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_DataStruct/CoolTimer.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common}{Common}}}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00006}00006\ \ \ \ \ [Serializable]}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CoolTimer}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Section\ invokeSection;}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ timeTrigger;}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ \mbox{\hyperlink{class_time_trigger}{TimeTrigger}}\ =>\ timeTrigger;}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ HasCoolTime\ =>\ HasSection\ \&\&\ timeTrigger.Duration\ !=\ 0f;}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Progression}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ timeTrigger.Progress.Value;}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ =>\ timeTrigger.Progress.Value\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ HasSection\ =>\ invokeSection\ !=\ Section.None;\ \textcolor{comment}{//\ for\ Drawer}}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Initialize(ISequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (invokeSection\ ==\ Section.None)\ \textcolor{keywordflow}{return};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ sequencer.Sections}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}CompleteCooling"{}},\ IsTimerReady)}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(invokeSection,\ \textcolor{stringliteral}{"{}PlayCoolTimer"{}},\ timeTrigger.Play)}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Dispose,\ \textcolor{stringliteral}{"{}DisposeCoolTimer"{}},\ timeTrigger.Dispose)}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{bool}\ IsTimerReady()\ =>\ !timeTrigger.IsRunning;}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cool_timer_8cs_source_l00037}00037\ \}}
+
+\end{DoxyCode}

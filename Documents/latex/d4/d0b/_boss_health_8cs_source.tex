@@ -1,0 +1,77 @@
+\doxysection{Boss\+Health.\+cs}
+\hypertarget{_boss_health_8cs_source}{}\label{_boss_health_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Huds/Tops/BossHealth.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Huds/Tops/BossHealth.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players_1_1_bosses}{Common.Characters.NonPlayers.Bosses}};}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i_1_1_name_plates}{Common.UI.NamePlates}};}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00007}\mbox{\hyperlink{namespace_challenge_1_1_u_i_1_1_huds_1_1_tops}{00007}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_u_i_1_1_huds_1_1_tops}{Challenge.UI.Huds.Tops}}}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }BossHealth\ :\ UIElement}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CombatValueBar\ healthPointWhite;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CombatValueBar\ healthPoint;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TextMeshProUGUI\ bossNameTextMesh;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Boss\ boss;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CombatValue\ hitPoints;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize();}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[UIEventType.Open].Sections}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .AddCondition(\textcolor{stringliteral}{"{}HasBoss"{}},\ ()\ =>\ boss.HasComponent())}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}RegisterHealthPoint"{}},\ RegisterHealthPoint)}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[UIEventType.Close].Sections}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}UnregisterHealthPoint"{}},\ UnregisterHealthPoint)}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetBossHealth(Boss\ boss)}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SetBoss}}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ this.boss\ \ \ \ \ \ \ \ \ \ \ \ \ =\ boss;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ hitPoints\ \ \ \ \ \ \ \ \ \ \ \ \ =\ boss.HitPoints;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ bossNameTextMesh.text\ =\ boss.Name.ToDivideWords();}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ boss.Behaviours.Dead}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Sections}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}CloseBossHealthUI"{}},\ Close)}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RegisterHealthPoint()}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ healthPointWhite.Register(hitPoints);}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ healthPoint.Register(hitPoints);}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ UnregisterHealthPoint()}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ healthPointWhite.Unregister();}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ healthPoint.Unregister();}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00060}00060\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ healthPointWhite\ =\ transform.Find(\textcolor{stringliteral}{"{}HealthPoint.White"{}}).GetComponent<CombatValueBar>();}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ healthPoint\ \ \ \ \ \ =\ transform.Find(\textcolor{stringliteral}{"{}HealthPoint"{}}).GetComponent<CombatValueBar>();}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ bossNameTextMesh\ =\ transform.Find(\textcolor{stringliteral}{"{}Name"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00069}00069\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_boss_health_8cs_source_l00071}00071\ \}}
+
+\end{DoxyCode}

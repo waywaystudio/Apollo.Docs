@@ -1,0 +1,44 @@
+\doxysection{Auto\+Bot\+Model.\+cs}
+\hypertarget{_auto_bot_model_8cs_source}{}\label{_auto_bot_model_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/AutoBotModel.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/Modules/AutoBotModel.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_modules}{Common.Skills.Modules}}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00006}00006\ \ \ \ \ [Serializable]}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }AutoBotModel}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ enable;}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ priority;}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ awareRange;}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ LayerMask\ targetLayer;\ \ \ }
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ AwareRange\ =>\ awareRange;}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Priority\ =>\ priority;}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ public\ Character\ SkillTarget}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ get}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ var\ searchList\ =\ enemy.SearchingSystem[targetLayer.ToIndex()];}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ foreach\ (var\ target\ in\ searchList)}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ if\ (target.TryGetComponent(out\ Character\ character)\ \&\&\ character.IsAlive)\ return\ character;}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ return\ null;}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!enable)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_auto_bot_model_8cs_source_l00038}00038\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,108 @@
+\doxysection{Camera\+Director.\+cs}
+\hypertarget{_camera_director_8cs_source}{}\label{_camera_director_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Cameras/CameraDirector.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Cameras/CameraDirector.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Cinemachine;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Cysharp.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00006}\mbox{\hyperlink{namespace_cameras}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_cameras}{Cameras}}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CameraDirector\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ CameraManager\ manager;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Camera\ mainCamera;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Camera\ uiCamera;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ CinemachineBrain\ brain;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{protected}\ Table<VirtualCameraType,\ CinemachineVirtualCamera>\ subCameraTable;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Camera\ MainCamera\ =>\ mainCamera;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Camera\ UICamera\ =>\ uiCamera;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ CinemachineBrain\ Brain\ =>\ brain;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ CinemachineVirtualCamera\ \textcolor{keyword}{this}[VirtualCameraType\ key]\ =>\ subCameraTable[key];}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ VirtualCameraType\ CurrentCameraType\ =>\ Brain.ActiveVirtualCamera.Name.ToEnum<VirtualCameraType>();}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ manager.Director\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ FollowTarget(VirtualCameraType\ cameraType,\ Transform\ transform)}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[cameraType].Follow\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ transform;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[cameraType].LookAt\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ transform;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[VirtualCameraType.Effector].Follow\ =\ transform;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[VirtualCameraType.Effector].LookAt\ =\ transform;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00035}00035\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO.Dev\ 카메라\ 계속\ 사용할\ 예정이라면,\ 아래\ 파트\ 위치\ 변경\ 필요.}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ var\ dredTransform\ =\ ChallengeDirector.Dred.transform;}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this[VirtualCameraType.Dev].Follow\ =\ dredTransform;}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this[VirtualCameraType.Dev].LookAt\ =\ dredTransform;}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00041}00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ StopFollow(VirtualCameraType\ cameraType)}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[cameraType].Follow\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}[cameraType].LookAt\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ChangeCamera(VirtualCameraType\ cameraType,\ Action\ onBlendComplete\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ var\ activeVirtualCamera\ =\ brain.ActiveVirtualCamera;}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (activeVirtualCamera\ is\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\textcolor{stringliteral}{"{}VirtualCamera\ None"{}});}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ var\ activeCamera\ =\ activeVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (activeCamera.Equals(\textcolor{keyword}{this}[cameraType]))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ (activeVirtualCamera.Priority,\ \textcolor{keyword}{this}[cameraType].Priority)\ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ (\textcolor{keyword}{this}[cameraType].Priority,\ activeVirtualCamera.Priority);}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (onBlendComplete\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnCameraBlendFinished(onBlendComplete).Forget();}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ UniTaskVoid\ OnCameraBlendFinished(Action\ callback)}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.WaitUntil(()\ =>\ !brain.IsBlending,\ PlayerLoopTiming.Update,\ \textcolor{keyword}{this}.GetCancellationTokenOnDestroy());}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ callback?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnDestroy()}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ manager.Director\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00086}00086\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ subCameraTable.Clear();}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ var\ virtualCameraList\ =\ GetComponentsInChildren<CinemachineVirtualCamera>().ToList();}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ virtualCameraList.ForEach(vc\ =>}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subCameraTable.Add(vc.gameObject.name.Replace(\textcolor{stringliteral}{"{}Camera"{}},\ \textcolor{stringliteral}{"{}"{}}).ToEnum<VirtualCameraType>(),\ vc);}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ manager);}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00100}00100\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_camera_director_8cs_source_l00102}00102\ \}}
+
+\end{DoxyCode}

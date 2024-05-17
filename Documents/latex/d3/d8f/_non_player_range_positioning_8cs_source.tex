@@ -1,0 +1,87 @@
+\doxysection{Non\+Player\+Range\+Positioning.\+cs}
+\hypertarget{_non_player_range_positioning_8cs_source}{}\label{_non_player_range_positioning_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/AI/NonPlayerRangePositioning.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/AI/NonPlayerRangePositioning.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }BehaviorDesigner.Runtime.Tasks;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players}{Common.Characters.NonPlayers}};}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_non_players}{Common.Skills.NonPlayers}};}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_a_i}{Common.Characters.AI}}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00008}00008\ \ \ \ \ [TaskCategory(\textcolor{stringliteral}{"{}Characters"{}})]}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }NonPlayerRangePositioning\ :\ Action}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ NonPlayer\ nonPlayer;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ NonPlayerSkillTable\ skillTable;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ NonPlayerSkillBehaviour\ PrioritySkill\ =>\ skillTable.MostPrioritySkill;\ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnAwake()}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ nonPlayer\ \ =\ gameObject.GetComponentInParent<NonPlayer>();}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ skillTable\ =\ nonPlayer.Skills;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ TaskStatus\ OnUpdate()}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (PrioritySkill\ is\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TaskStatus.Failure;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!IsValidCombatPosition(nonPlayer,\ PrioritySkill.SkillTarget,\ PrioritySkill.AwareRange,\ out\ var\ dest))}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nonPlayer.Run();}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nonPlayer.MoveControl.Active(dest);}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TaskStatus.Failure;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TaskStatus.Success;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ IsValidCombatPosition(\mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ fiend,\ \mbox{\hyperlink{interface_common_1_1_i_unit}{IUnit}}\ taker,\ \textcolor{keywordtype}{float}\ range,\ out\ Vector3\ combatPosition)}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ combatPosition\ =\ Vector3.positiveInfinity;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fiend\ is\ \textcolor{keyword}{null}\ ||\ taker\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ var\ targetPosition\ \ \ \ =\ taker.Position;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ var\ characterPosition\ =\ fiend.Position;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ var\ currentDistance\ =\ Vector3.Distance(targetPosition,\ characterPosition);}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentDistance\ <=\ 5f)}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ reverse\ Vector}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ direction\ =\ (characterPosition\ -\/\ targetPosition).normalized;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ magnitude\ =\ Random.Range(10f,\ 15f)\ -\/\ currentDistance;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ Behind\ space\ for\ Flee}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Against\ Player\ in\ current\ Point}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!AbleToFlee(characterPosition,\ direction))}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combatPosition\ =\ characterPosition;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Try\ to\ Flee}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combatPosition\ =\ characterPosition\ +\ direction\ *\ magnitude;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combatPosition\ =\ characterPosition;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ AbleToFlee(Vector3\ pivot,\ Vector3\ direction)}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ var\ checkPoint\ =\ pivot\ +\ direction\ *\ 2f;}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ PathfindingUtility.IsSafePosition(checkPoint);}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_range_positioning_8cs_source_l00081}00081\ \}}
+
+\end{DoxyCode}

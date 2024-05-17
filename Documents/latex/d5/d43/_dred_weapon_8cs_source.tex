@@ -1,0 +1,67 @@
+\doxysection{Dred\+Weapon.\+cs}
+\hypertarget{_dred_weapon_8cs_source}{}\label{_dred_weapon_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/Dreds/DredWeapon.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/Dreds/DredWeapon.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills}{Common.Skills}};}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}}}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DredWeapon\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ WeaponType\ type;}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Table<SkillType,\ SkillSet>\ skillLibrary;}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<DredWeaponModel>\ modelList;}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ List<SkillBehaviour>\ allSkillBehaviour\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ WeaponType\ WeaponType\ =>\ type;}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ \textcolor{keyword}{this}[SkillType\ type]\ =>\ skillLibrary[type];}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<SkillSet>\ SkillSets\ =>\ skillLibrary.ValueList;}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<SkillBehaviour>\ AllSkillBehaviour}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (allSkillBehaviour.IsNullOrEmpty())}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ skillLibrary.ValueList.ForEach(skillSet\ =>}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allSkillBehaviour.AddRange(skillSet.BehaviourList);}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ allSkillBehaviour;}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ modelList.ForEach(model\ =>\ model.Initialize(dred));}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ShowWeapons()\ =>\ modelList.ForEach(model\ =>\ model.ShowWeapon());}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ HideWeapons()\ =>\ modelList.ForEach(model\ =>\ model.HideWeapon());}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ HideWeaponsInstantly()\ =>\ modelList.ForEach(model\ =>\ model.HideWeaponInstantly());}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ProlongHideDelay()\ =>\ modelList.ForEach(model\ =>\ model.ProlongHideDelay());}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ AddOnWeaponModelHidden(\textcolor{keywordtype}{string}\ key,\ Action\ action)\ =>\ modelList.ForEach(model\ =>\ model.AddOnWeaponModelHidden(key,\ action));}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00048}00048\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ skillLibrary.Clear();}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ skillLibrary.CreateTable(GetComponentsInChildren<SkillSet>(),\ ss\ =>\ ss.SkillType);}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ modelList\ =\ transform.root}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .GetComponentsInChildren<DredWeaponModel>(\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToList()}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FindAll(model\ =>\ model.WeaponType\ ==\ type);}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00059}00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dred_weapon_8cs_source_l00061}00061\ \}}
+
+\end{DoxyCode}

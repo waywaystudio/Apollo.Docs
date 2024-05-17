@@ -1,0 +1,155 @@
+\doxysection{Effect\+Behaviour\+Drawer.\+cs}
+\hypertarget{_effect_behaviour_drawer_8cs_source}{}\label{_effect_behaviour_drawer_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Editor/EffectBehaviourDrawer.cs@{C:/Project/Apollo/Assets/Scripts/Common/Editor/EffectBehaviourDrawer.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Reflection;}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_effects}{Common.Effects}};}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_cameras}{Common.Effects.Cameras}};}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_particles}{Common.Effects.Particles}};}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_sounds}{Common.Effects.Sounds}};}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_times}{Common.Effects.Times}};}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }Sirenix.OdinInspector;}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }Sirenix.OdinInspector.Editor;}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00012}00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_editor}{Common.Editor}}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }EffectBehaviourDrawer\ :\ OdinAttributeProcessor<EffectBehaviour>}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}playSection"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Life\ Cycle"{}},\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}stopStyle"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Life\ Cycle"{}},\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}stopSection"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Life\ Cycle"{}},\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.stopStyle\ ==\ StopType.ParentSection"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}stopTimer"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Life\ Cycle"{}},\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.stopStyle\ ==\ StopType.Timer"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}requireTarget"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Target\ Controller"{}},\ \textcolor{keyword}{true}));\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}perTarget"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Target\ Controller"{}},\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.requireTarget\ ==\ true"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}Conditions"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowInInspectorAttribute());}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowInPlayModeAttribute());}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00058}00058\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00059}00059\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ParticleEffectDrawer\ :\ OdinAttributeProcessor<ParticleEffect>}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00060}00060\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}spawnParent"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Spawning\ Attributes"{}},\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}homeParent"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Spawning\ Attributes"{}},\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}customHomeTransform"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Spawning\ Attributes"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.homeParent\ ==\ SpawnParent.Custom"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}preTransformType"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Spawning\ Attributes"{}},\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.spawnParent\ ==\ SpawnParent.ProviderPreTransform\ ||\ this.spawnParent\ ==\ SpawnParent.TargetPreTransform"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}customSpawnTransform"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Spawning\ Attributes"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.spawnParent\ ==\ SpawnParent.Custom"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}spawnPosition"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Spawning\ Attributes"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}prePosition"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Spawning\ Attributes"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.spawnPosition\ ==\ SpawnPosition.ProviderPreposition\ ||\ this.spawnPosition\ ==\ SpawnPosition.TargetPreposition"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}spawnRotation"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Spawning\ Attributes"{}}));\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}offset"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Spawning\ Attributes"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}pool"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ FoldoutGroupAttribute(\textcolor{stringliteral}{"{}Spawning\ Attributes"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00118}00118\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00119}00119\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }HitStopDrawer\ :\ OdinAttributeProcessor<HitStop>}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00120}00120\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00126}00126\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00127}00127\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CameraImpulseDrawer\ :\ OdinAttributeProcessor<CameraImpulse>}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00128}00128\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}impulseForce"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ PropertyRangeAttribute(0,\ 10f));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00136}00136\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00137}00137\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00138}00138\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SoundEffectDrawer\ :\ OdinAttributeProcessor<SoundEffect>}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00139}00139\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}randomPitchPercent"{}})}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ HideIfAttribute(\textcolor{stringliteral}{"{}@this.useRandomPitch\ ==\ false"{}}));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ PropertyRangeAttribute(0,\ 0.5f));}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00148}00148\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_behaviour_drawer_8cs_source_l00149}00149\ \}}
+
+\end{DoxyCode}

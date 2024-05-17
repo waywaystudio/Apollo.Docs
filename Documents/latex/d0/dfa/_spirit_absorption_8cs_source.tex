@@ -1,0 +1,49 @@
+\doxysection{Spirit\+Absorption.\+cs}
+\hypertarget{_spirit_absorption_8cs_source}{}\label{_spirit_absorption_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/Blade/SpiritAbsorption.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/Blade/SpiritAbsorption.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_blade_1_1_spirit_absorptions}{Common.Masteries.Blade.SpiritAbsorptions}};}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_blade}{Common.Masteries.Blade}}}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ SPECIAL로\ SPIRIT\ 타격시\ 타격된\ SPIRIT당\ 3\ 체력을\ 회복한다.}}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SpiritAbsorption\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Executor\ executor;}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ dred.Skills.BladeSpecialSet.CommonExecutor.Register(executor);}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ OnQualityChanged();}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ dred.Skills.BladeSpecialSet.CommonExecutor.Unregister(executor);}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (executor.TryGetExecution<SpiritAbsorptionExecutor>(out\ var\ absorbExecutor))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ absorbExecutor.HealPoints\ =\ quality.Value;}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00033}00033\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ executor\ =\ GetComponentInChildren<Executor>();}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ executor.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00041}00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spirit_absorption_8cs_source_l00043}00043\ \}}
+
+\end{DoxyCode}

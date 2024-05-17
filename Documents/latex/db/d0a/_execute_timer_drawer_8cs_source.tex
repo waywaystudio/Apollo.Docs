@@ -1,0 +1,93 @@
+\doxysection{Execute\+Timer\+Drawer.\+cs}
+\hypertarget{_execute_timer_drawer_8cs_source}{}\label{_execute_timer_drawer_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Editor/ExecuteTimerDrawer.cs@{C:/Project/Apollo/Assets/Scripts/Common/Editor/ExecuteTimerDrawer.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Reflection;}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_status_effects}{Common.StatusEffects}};}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }Sirenix.OdinInspector;}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Sirenix.OdinInspector.Editor;}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_editor}{Common.Editor}}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ExecuteTimerDrawer\ :\ OdinAttributeProcessor<ExecuteTimer>}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessSelfAttributes(InspectorProperty\ property,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ HideLabelAttribute());}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ var\ group\ =\ \textcolor{keyword}{new}\ ModuleGroupAttribute(\textcolor{stringliteral}{"{}Execute\ Timer"{}},\ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ documentLink:\textcolor{stringliteral}{"{}https://www.notion.so/salinger/Core-\/Manager-\/ea7839f3cd9e42d6a4d756b00086d453?pvs=4"{}},\ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ expanded:true);}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(group);}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}type"{}})}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ EnumPagingAttribute());}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}updateType"{}})}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.type\ !=\ TimerType.Permanent"{}}));}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ EnumPagingAttribute());}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}duration"{}})}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.type\ !=\ TimerType.Permanent\ \&\&\ this.isInfinity\ ==\ false"{}}));}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ PropertyRangeAttribute(0,\ 360));}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}interval"{}})}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.type\ ==\ TimerType.ExecuteOverTime"{}}));}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ PropertyRangeAttribute(0,\ 360));}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}isInfinity"{}})}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.type\ ==\ TimerType.ExecuteOverTime"{}}));}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }OverrideModuleDrawer\ :\ OdinAttributeProcessor<OverrideModule>}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00056}00056\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessSelfAttributes(InspectorProperty\ property,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ HideLabelAttribute());}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ProcessChildMemberAttributes(InspectorProperty\ parentProperty,\ MemberInfo\ member,\ List<Attribute>\ attributes)}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ var\ group\ =\ \textcolor{keyword}{new}\ ModuleGroupAttribute(\textcolor{stringliteral}{"{}Override\ Module"{}},\ expanded:true,\ order:1000f);}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(group);}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}mask"{}})}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ HideLabelAttribute());}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ EnumToggleButtonsAttribute());}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}onProlongMultiplier"{}})}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.mask.HasFlag(OverrideMask.ResetDuration)"{}}));}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ PropertyRangeAttribute(1,\ 2));}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (member.Name\ ==\ \textcolor{stringliteral}{"{}maxStack"{}})}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ ShowIfAttribute(\textcolor{stringliteral}{"{}@this.mask.HasFlag(OverrideMask.Stack)"{}}));}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ attributes.Add(\textcolor{keyword}{new}\ PropertyRangeAttribute(1,\ 999));}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_execute_timer_drawer_8cs_source_l00087}00087\ \}}
+
+\end{DoxyCode}

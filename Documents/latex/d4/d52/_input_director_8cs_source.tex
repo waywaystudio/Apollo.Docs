@@ -1,0 +1,76 @@
+\doxysection{Input\+Director.\+cs}
+\hypertarget{_input_director_8cs_source}{}\label{_input_director_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Inputs/InputDirector.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Managers/Inputs/InputDirector.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine.EventSystems;}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine.InputSystem;}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_inputs}{Inputs}}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }InputDirector\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ InputManager\ inputManager;}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ PlayerInput\ playerInput;}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ PointerEventData\ PointerEventData\ =\ \textcolor{keyword}{new}(EventSystem.current);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ List<RaycastResult>\ RayCastResultsList\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action_table}{ActionTable<PlayerInput>}}\ OnControllerChanged\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ CurrentScheme\ =>\ playerInput.currentControlScheme;}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager.Director\ \ \ \ \ \ \ \ \ =\ \ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ playerInput.onControlsChanged\ +=\ OnControllerChanged.Invoke;}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetPlayerActivity(\textcolor{keywordtype}{bool}\ activity,\ \textcolor{keywordtype}{bool}\ includeInteraction\ =\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[ActionType.Weapon1Attack].SetActive(activity);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[ActionType.Weapon1Special].SetActive(activity);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[ActionType.Weapon2Attack].SetActive(activity);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[ActionType.Weapon2Special].SetActive(activity);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[ActionType.Ultimate].SetActive(activity);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[ActionType.Dash].SetActive(activity);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[ActionType.Mastery].SetActive(activity);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[ActionType.Move].SetActive(activity);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[ActionType.Spell].SetActive(activity);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (includeInteraction)}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inputManager[ActionType.Interact].SetActive(activity);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ Clear()}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ playerInput.onControlsChanged\ -\/=\ OnControllerChanged.Invoke;}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ OnControllerChanged.Clear();}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ Clear();}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00056}00056\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ playerInput\ =\ GetComponent<PlayerInput>();}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ inputManager);}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00062}00062\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00066}00066\ \textcolor{comment}{//\ InputSystem.onDeviceChange\ \ \ \ +=\ OnDeviceChanged;}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00067}00067\ \textcolor{comment}{//\ private\ void\ OnDeviceChanged(InputDevice\ device,\ InputDeviceChange\ change)}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00068}00068\ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00069}00069\ \textcolor{comment}{//\ \ \ \ \ Debug.Log(\$"{}DeviceChanged!\ \{device.name\}"{});}}
+\DoxyCodeLine{\Hypertarget{_input_director_8cs_source_l00070}00070\ \textcolor{comment}{//\ \}}}
+
+\end{DoxyCode}

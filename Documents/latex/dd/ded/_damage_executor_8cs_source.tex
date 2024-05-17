@@ -1,0 +1,75 @@
+\doxysection{Damage\+Executor.\+cs}
+\hypertarget{_damage_executor_8cs_source}{}\label{_damage_executor_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Executors/Variants/DamageExecutor.cs@{C:/Project/Apollo/Assets/Scripts/Common/Executors/Variants/DamageExecutor.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00003}\mbox{\hyperlink{namespace_common_1_1_executors_1_1_variants}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_executors_1_1_variants}{Common.Executors.Variants}}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DamageExecutor\ :\ ExecuteBehaviour,\ IDamageEntity,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00006}00006\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DataIndex\ damageCode;}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DamageTypeMask\ damageMask;}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ syncWithProvider\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ StatTable\ damageTable;}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DataIndex\ DataIndex\ =>\ damageCode;}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DamageTypeMask\ Mask\ =>\ damageMask;}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ StatTable\ DamageTable\ =>\ damageTable;}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DamageFilter\ DamageFilter\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider)}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(provider);}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ damageTable.Initialize();}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (syncWithProvider)}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageTable.RegisterTable(Provider.StatTable);}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ DeInitialize()}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (syncWithProvider)}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageTable.UnregisterTable(Provider.StatTable);}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ExecuteToTarget(GameObject\ target)}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Conditions.HasFalse(target))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (target.IsNullOrDestroyed()\ ||\ !target.TryGetComponent(out\ \mbox{\hyperlink{interface_common_1_1_i_damage_taker}{IDamageTaker}}\ taker))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ DamageFilter.Initialize(taker);}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ taker.TakeDamage(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00050}00050\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (transform.FindInParents(out\ IDataIndexer\ dataIndexer))}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ code\ =\ dataIndexer.DataIndex;}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ codeName\ =\ code.ToString();}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageCode\ \ \ \ \ \ =\ code;}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageTable.Key\ =\ \$\textcolor{stringliteral}{"{}\{codeName\}.StatTable"{}};}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ damageTable.InitialStats?.ForEach(initStat\ =>\ initStat.StatKey\ =\ \$\textcolor{stringliteral}{"{}\{codeName\}.Initial.\{initStat.StatType\}"{}});}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}Can't\ Find\ IDataIndexer\ Object,\ return\ DamageExecutor"{}});}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00067}00067\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_executor_8cs_source_l00069}00069\ \}}
+
+\end{DoxyCode}

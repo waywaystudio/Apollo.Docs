@@ -1,0 +1,43 @@
+\doxysection{Detect\+Property.\+cs}
+\hypertarget{_detect_property_8cs_source}{}\label{_detect_property_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_DataStruct/DetectProperty.cs@{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_DataStruct/DetectProperty.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common}{Common}}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00006}00006\ \ \ \ \ [Serializable]}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DetectProperty}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SizeEntity\ sizeEntity;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ LayerMask\ detectLayer;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00011}00011\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ Offset\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ Vector3.zero;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ TargetingType\ TargetType\ =>\ sizeEntity.TargetType;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SizeEntity\ SizeEntity\ =>\ sizeEntity;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ LayerMask\ TargetLayer\ =>\ detectLayer;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00017}00017\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Preset}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Radius\ \{\ \textcolor{keyword}{get}\ =>\ sizeEntity.Y;\ \textcolor{keyword}{set}\ =>\ sizeEntity.Y\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Length\ \{\ \textcolor{keyword}{get}\ =>\ sizeEntity.Y;\ \textcolor{keyword}{set}\ =>\ sizeEntity.Y\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Height\ \{\ \textcolor{keyword}{get}\ =>\ sizeEntity.Y;\ \textcolor{keyword}{set}\ =>\ sizeEntity.Y\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ InnerRadius\ \{\ \textcolor{keyword}{get}\ =>\ sizeEntity.Y;\ \textcolor{keyword}{set}\ =>\ sizeEntity.Y\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Angle\ \{\ \textcolor{keyword}{get}\ =>\ sizeEntity.Z;\ \textcolor{keyword}{set}\ =>\ sizeEntity.Z\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Width\ \{\ \textcolor{keyword}{get}\ =>\ sizeEntity.Z;\ \textcolor{keyword}{set}\ =>\ sizeEntity.Z\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ OuterRadius\ \{\ \textcolor{keyword}{get}\ =>\ sizeEntity.Z;\ \textcolor{keyword}{set}\ =>\ sizeEntity.Z\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00025}00025\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ AddLayer(LayerMask\ mask)\ =>\ detectLayer\ |=\ mask;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ RemoveLayer(LayerMask\ mask)\ =>\ detectLayer\ \&=\ mask;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DetectProperty()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DetectProperty(DetectProperty\ reference)}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ sizeEntity\ \ =\ reference.sizeEntity;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ detectLayer\ =\ reference.TargetLayer;}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_detect_property_8cs_source_l00037}00037\ \}}
+
+\end{DoxyCode}

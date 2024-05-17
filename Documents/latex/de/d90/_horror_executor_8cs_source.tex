@@ -1,0 +1,23 @@
+\doxysection{Horror\+Executor.\+cs}
+\hypertarget{_horror_executor_8cs_source}{}\label{_horror_executor_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Executors/Variants/HorrorExecutor.cs@{C:/Project/Apollo/Assets/Scripts/Common/Executors/Variants/HorrorExecutor.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_executors_1_1_variants}{Common.Executors.Variants}}}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }HorrorExecutor\ :\ ExecuteBehaviour}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00006}00006\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ duration;}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ExecuteToTarget(GameObject\ target)}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!target.TryGetComponent(out\ IHorrorTaker\ taker))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ taker.TakeHorror(duration);}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00016}00016\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_horror_executor_8cs_source_l00017}00017\ \}}
+
+\end{DoxyCode}

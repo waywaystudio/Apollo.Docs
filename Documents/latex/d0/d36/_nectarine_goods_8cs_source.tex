@@ -1,0 +1,33 @@
+\doxysection{Nectarine\+Goods.\+cs}
+\hypertarget{_nectarine_goods_8cs_source}{}\label{_nectarine_goods_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/Props/MerchantGoods/NectarineGoods.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/Props/MerchantGoods/NectarineGoods.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_props_1_1_merchant_goods}{Challenge.Props.MerchantGoods}}}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }NectarineGoods\ :\ MerchantGoods}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00006}00006\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ hitPointsMaxIncrement\ =\ 30;}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ DataIndex\ DataIndex\ =>\ DataIndex.LegendaryNectarineGoods;}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Deal()}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ Invoker.Complete();}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ GetReward()}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ var\ dred\ =\ ChallengeDirector.Dred;}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ var\ dredMaxHealth\ =\ dred.HitPoints.Max.Value;}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ var\ currentHitPoints\ =\ dred.HitPoints.Value;}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ dred.HitPoints.SetMax(dredMaxHealth\ +\ hitPointsMaxIncrement);}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ dred.HitPoints.Value\ =\ currentHitPoints\ +\ hitPointsMaxIncrement;}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_nectarine_goods_8cs_source_l00027}00027\ \}}
+
+\end{DoxyCode}

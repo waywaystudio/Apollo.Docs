@@ -1,0 +1,36 @@
+\doxysection{Non\+Player\+Skill\+Activation.\+cs}
+\hypertarget{_non_player_skill_activation_8cs_source}{}\label{_non_player_skill_activation_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/AI/NonPlayerSkillActivation.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/AI/NonPlayerSkillActivation.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }BehaviorDesigner.Runtime.Tasks;}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players}{Common.Characters.NonPlayers}};}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_a_i}{Common.Characters.AI}}}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00006}00006\ \ \ \ \ [TaskCategory(\textcolor{stringliteral}{"{}Characters"{}})]}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }NonPlayerSkillActivation\ :\ Action}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ NonPlayer\ nonPlayer;}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ NonPlayerSkillTable\ skillTable;}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00012}00012\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnAwake()}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ nonPlayer\ \ =\ gameObject.GetComponentInParent<NonPlayer>();}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ skillTable\ =\ nonPlayer.Skills;}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ TaskStatus\ OnUpdate()}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ var\ mostPrioritySkill\ =\ skillTable.MostPrioritySkill;}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mostPrioritySkill\ is\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TaskStatus.Failure;}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ mostPrioritySkill.Active();}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TaskStatus.Success;}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_non_player_skill_activation_8cs_source_l00030}00030\ \}}
+
+\end{DoxyCode}

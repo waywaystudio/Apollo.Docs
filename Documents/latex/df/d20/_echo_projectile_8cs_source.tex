@@ -1,0 +1,101 @@
+\doxysection{Echo\+Projectile.\+cs}
+\hypertarget{_echo_projectile_8cs_source}{}\label{_echo_projectile_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Variants/EchoProjectile.cs@{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Variants/EchoProjectile.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players}{Common.Characters.NonPlayers}};}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_executors_1_1_variants}{Common.Executors.Variants}};}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_systems}{Common.Systems}};}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_projectiles_1_1_variants}{Common.Projectiles.Variants}}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//\ BellVeer\ Main\ Projectile}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }EchoProjectile\ :\ Projectile}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DamageExecutor\ damageExecutor;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ HealExecutor\ healExecutor;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Executor\ soulBoundExecutor;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ StatEntity\ empowermentEntity;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ StatEntity\ healEntity;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ LayerMask\ enemyLayer;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ LayerMask\ allyLayer;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DetectModel\ Detector\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ CombatIntValue\ EmpowermentStack\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ AStackPowerIncrement\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ 0.1f;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{interface_common_1_1_i_combat_provider}{ICombatProvider}}\ provider)}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(provider);}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ empowermentEntity\ =\ \textcolor{keyword}{new}\ StatEntity(StatType.DamageIncreaseRate,\ \textcolor{stringliteral}{"{}EchoProjectile.Empowerment.DamageIncreaseRate"{}},\ 0f);}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ Detector\ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{new}\ DetectModel(transform);}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ enemyLayer\ \ \ \ \ \ \ \ =\ LayerMask.GetMask(\textcolor{stringliteral}{"{}Enemy"{}});}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ allyLayer\ \ \ \ \ \ \ \ \ =\ LayerMask.GetMask(\textcolor{stringliteral}{"{}Ally"{}});}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}GroundExplosion"{}},\ GroundExplosion)}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Order\ */}\ soulBoundExecutor.Initialize(Provider);}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ soulBoundExecutor.SetSender(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ damageExecutor.DamageTable.Add(empowermentEntity);}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ EmpowermentStack.AddEvent(\textcolor{stringliteral}{"{}EmpowermentDamageIncrease"{}},\ OnEmpowermentStackChanged);}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Order\ */}\ healEntity\ =\ healExecutor.HealTable[StatType.BaseDamage,\ \textcolor{stringliteral}{"{}EchoProjectile.Initial.BaseDamage"{}}];}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetHealValue(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ healEntity.Value\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnEmpowermentStackChanged(\textcolor{keywordtype}{int}\ stack)}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ empowermentEntity.Value\ =\ stack\ *\ AStackPowerIncrement;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ GroundExplosion()}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Detector.TryGet<NonPlayer>(detectProperty,\ npc\ =>\ npc.IsAlive,\ out\ var\ takers))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ takers.Sort((x,\ y)\ =>}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ position\ =\ transform.position;}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ xDistance\ =\ Vector3.Distance(position,\ x.gameObject.transform.position);}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ yDistance\ =\ Vector3.Distance(position,\ y.gameObject.transform.position);}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ xDistance.CompareTo(yDistance);}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ var\ mainTarget\ =\ takers.FirstOrDefault();}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mainTarget.IsNullOrDestroyed())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mainTarget.gameObject.IsInLayerMask(enemyLayer))}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ executor.Execute(mainTarget.gameObject);}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mainTarget.gameObject.IsInLayerMask(allyLayer))}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ soulBoundExecutor.Execute(mainTarget.gameObject);}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00084}00084\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ damageExecutor\ \ \ \ =\ GetComponentInChildren<DamageExecutor>();}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ healExecutor\ \ \ \ \ \ =\ GetComponentInChildren<HealExecutor>();}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ soulBoundExecutor\ =\ transform.Find(\textcolor{stringliteral}{"{}SoulBoundExecutor"{}}).GetComponent<Executor>();}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00093}00093\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_echo_projectile_8cs_source_l00095}00095\ \}}
+
+\end{DoxyCode}

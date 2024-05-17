@@ -1,0 +1,82 @@
+\doxysection{Dred\+Skills.\+cs}
+\hypertarget{_dred_skills_8cs_source}{}\label{_dred_skills_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Characters/Dreds/DredSkills.cs@{C:/Project/Apollo/Assets/Scripts/Common/Characters/Dreds/DredSkills.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills}{Common.Skills}};}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_bell_veers}{Common.Skills.BellVeers}};}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_blades}{Common.Skills.Blades}};}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_silk_strings}{Common.Skills.SilkStrings}};}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_split_tridents}{Common.Skills.SplitTridents}};}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}}}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }DredSkills\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ DredWeaponTable\ weaponTable;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DredWeapon\ Blade\ =>\ weaponTable[WeaponType.Blade];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DredWeapon\ SplitTrident\ =>\ weaponTable[WeaponType.SplitTrident];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DredWeapon\ BellVeer\ =>\ weaponTable[WeaponType.BellVeer];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DredWeapon\ SilkStrings\ =>\ weaponTable[WeaponType.SilkStrings];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ BladeAttackSet\ =>\ Blade[SkillType.Attack];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ BladeSpecialSet\ =>\ Blade[SkillType.Special];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ BladeUltimateSet\ =>\ Blade[SkillType.Ultimate];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ SplitTridentAttackSet\ =>\ SplitTrident[SkillType.Attack];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ SplitTridentSpecialSet\ =>\ SplitTrident[SkillType.Special];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ SplitTridentUltimateSet\ =>\ SplitTrident[SkillType.Ultimate];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ BellVeerAttackSet\ =>\ BellVeer[SkillType.Attack];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ BellVeerSpecialSet\ =>\ BellVeer[SkillType.Special];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ BellVeerUltimateSet\ =>\ BellVeer[SkillType.Ultimate];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ SilkStringsAttackSet\ =>\ SilkStrings[SkillType.Attack];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ SilkStringsSpecialSet\ =>\ SilkStrings[SkillType.Special];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillSet\ SilkStringsUltimateSet\ =>\ SilkStrings[SkillType.Ultimate];}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ShinKendo\ ShinKendo\ =>\ BladeAttackSet[DataIndex.ShinKendo]\ as\ ShinKendo;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SkillBehaviour\ SpinStrike\ =>\ BladeAttackSet[DataIndex.SpinStrike].MainBehaviour;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ShinBurst\ ShinBurst\ =>\ BladeSpecialSet[DataIndex.ShinBurst].MainBehaviour\ as\ ShinBurst;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ FocusStrike\ FocusStrike\ =>\ BladeSpecialSet[DataIndex.FocusStrike].MainBehaviour\ as\ FocusStrike;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SevenHwanins\ SevenHwanins\ =>\ BladeUltimateSet[DataIndex.SevenHwanins].MainBehaviour\ as\ SevenHwanins;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SpearTechnic\ SpearTechnic\ =>\ SplitTridentAttackSet[DataIndex.SpearTechnic]\ as\ SpearTechnic;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SpearThrowBehaviour\ SpearThrow\ =>\ SplitTridentAttackSet[DataIndex.SpearThrow].MainBehaviour\ as\ SpearThrowBehaviour;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SpearRetrieveBehaviour\ SpearRetrieve\ =>\ SplitTridentAttackSet[DataIndex.SpearRetrieve].MainBehaviour\ as\ SpearRetrieveBehaviour;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Narakmoon\ Narakmoon\ =>\ SplitTridentSpecialSet[DataIndex.Narakmoon].MainBehaviour\ as\ Narakmoon;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ public\ UnderworldSoldiers\ UnderworldSoldiers\ =>\ SplitTridentUltimateSet[DataIndex.UnderworldSoldiers].MainBehaviour\ as\ UnderworldSoldiers;}}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ WhirlingEchoes\ WhirlingEchoes\ =>\ BellVeerAttackSet[DataIndex.WhirlingEchoes].MainBehaviour\ as\ WhirlingEchoes;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SpectralDance\ SpectralDance\ =>\ BellVeerSpecialSet[DataIndex.SpectralDance].MainBehaviour\ as\ SpectralDance;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ThreeBuddas\ ThreeBuddas\ =>\ BellVeerUltimateSet[DataIndex.ThreeBuddas].MainBehaviour\ as\ ThreeBuddas;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ SilkTwister\ SilkTwister\ =>\ SilkStringsAttackSet[DataIndex.SilkTwister].MainBehaviour\ as\ SilkTwister;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ThreadedSanctum\ ThreadedSanctum\ =>\ SilkStringsSpecialSet[DataIndex.ThreadedSanctum].MainBehaviour\ as\ ThreadedSanctum;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ThousandNeedles\ ThousandNeedles\ =>\ SilkStringsUltimateSet[DataIndex.ThousandNeedles].MainBehaviour\ as\ ThousandNeedles;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ TryGetSkillBehaviour(DataIndex\ skillCode,\ out\ SkillBehaviour\ skillBehaviour)}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ skillBehaviour\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ var\ weaponType\ =\ (WeaponType)skillCode.GetSecondBar();}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ var\ skillType\ =\ (SkillType)skillCode.GetThirdBar();}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!weaponTable.ContainsKey(weaponType))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (weaponTable[weaponType][skillType].IsNullOrDestroyed())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ skillBehaviour\ =\ weaponTable[weaponType][skillType][skillCode]?.MainBehaviour;}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ skillBehaviour.HasComponent();}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00069}00069\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ weaponTable\ =\ GetComponent<DredWeaponTable>();}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00074}00074\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_dred_skills_8cs_source_l00076}00076\ \}}
+
+\end{DoxyCode}

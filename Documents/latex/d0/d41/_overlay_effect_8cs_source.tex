@@ -1,0 +1,44 @@
+\doxysection{Overlay\+Effect.\+cs}
+\hypertarget{_overlay_effect_8cs_source}{}\label{_overlay_effect_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Effects/UIs/OverlayEffect.cs@{C:/Project/Apollo/Assets/Scripts/Common/Effects/UIs/OverlayEffect.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}};}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_u_is}{Common.Effects.UIs}}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }OverlayEffect\ :\ EffectBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00007}00007\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ UIManager\ uiManager;}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ Overlay\ Property}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ [SerializeField]\ private\ Sprite\ sprite;}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ [SerializeField]\ private\ Color\ color;}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ [SerializeField]\ private\ float\ alpha;}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ [SerializeField]\ private\ float\ duration;}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ PlayEffect()}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!uiManager.TryGetCanvasMatrix(CanvasHierarchyType.Effect,\ out\ var\ matrix))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (matrix\ is\ not\ EffectCanvas\ effectCanvas)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ effectCanvas.\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_overlay_effect}{OverlayEffect}}.Play();}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ StopEffect()}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NoStop...}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00031}00031\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ uiManager);}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00036}00036\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_overlay_effect_8cs_source_l00038}00038\ \}}
+
+\end{DoxyCode}

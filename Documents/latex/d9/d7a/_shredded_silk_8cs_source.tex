@@ -1,0 +1,90 @@
+\doxysection{Shredded\+Silk.\+cs}
+\hypertarget{_shredded_silk_8cs_source}{}\label{_shredded_silk_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SilkStrings/ShreddedSilk.cs@{C:/Project/Apollo/Assets/Scripts/Common/Masteries/SilkStrings/ShreddedSilk.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_executors_1_1_variants}{Common.Executors.Variants}};}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_projectiles}{Common.Projectiles}};}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills}{Common.Skills}};}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_silk_strings}{Common.Skills.SilkStrings}};}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00009}00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_masteries_1_1_silk_strings}{Common.Masteries.SilkStrings}}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00011}00011\ \ \ \ \ \textcolor{comment}{//\ 타\ 무기\ ATTACK\ 사용시\ 가까운\ 적에게\ 현재\ 가진\ 비단의\ 수\ 만큼\ 날아가\ 비단\ 공격의\ 40\%\ 피해를\ 입힌다.}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ShreddedSilk\ :\ Mastery}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ProjectileSpawnEvent\ spawnEvent;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ List<SkillBehaviour>\ othersAttackBehaviours\ =\ \textcolor{keyword}{new}\ ();}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ SilkTwister\ silkTwister;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Injection(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ silkTwister\ =\ dred.Skills.SilkTwister;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ AddSilkStrings(dred);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ var\ otherWeapons\ =\ dred.WeaponTable.WeaponList}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FindAll(weapon\ =>\ weapon.WeaponType\ !=\ WeaponType.SilkStrings\ \&\&\ weapon);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ otherWeapons.ForEach(weapon\ =>\ othersAttackBehaviours.AddRange(weapon[SkillType.Attack].BehaviourList));}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ othersAttackBehaviours.ForEach(ab\ =>}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ab.Sections}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}ShreddedSilk"{}},\ FireShreddedSilk)}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ 40\%\ ProvidePower\ to\ ShreddedSilkProjectile's\ DamageTable}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.Add(DataIndex.ShreddedSilkProjectile,\ \textcolor{stringliteral}{"{}ShreddedSilk"{}},\ AddProvidePower);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Abolition(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ RemoveSilkStrings(dred);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ othersAttackBehaviours.ForEach(ab\ =>\ ab.Sections.Remove(Section.Active,\ \textcolor{stringliteral}{"{}ShreddedSilk"{}}));}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.Remove(DataIndex.ShreddedSilkProjectile,\ \textcolor{stringliteral}{"{}ShreddedSilk"{}});}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnQualityChanged()}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ spawnEvent.SpawnedList.ForEach(projectile\ =>}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (projectile.DataIndex\ !=\ DataIndex.ShreddedSilkProjectile)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AddProvidePower(projectile);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ FireShreddedSilk()}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ silkTwister.ActivatedProjectiles?.ForEach(silk\ =>\ silk.FireShreddedSilk());}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddProvidePower(Projectile\ projectile)}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (projectile.DataIndex\ !=\ DataIndex.ShreddedSilkProjectile)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!projectile.Executor.TryGetExecution(out\ DamageExecutor\ dmgExe))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ var\ reducePower\ =\ -\/1\ +\ quality.Value;\ \textcolor{comment}{//\ 40\%\ -\/>\ -\/0.6,\ 60\%\ -\/>\ -\/0.4}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ dmgExe.DamageTable.Change(StatType.DamageIncreaseRate,\ \$\textcolor{stringliteral}{"{}\{projectile.DataIndex\}.Initial.\{StatType.DamageIncreaseRate\}"{}},\ reducePower);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00075}00075\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ spawnEvent);}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00082}00082\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_shredded_silk_8cs_source_l00084}00084\ \}}
+
+\end{DoxyCode}

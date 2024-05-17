@@ -1,0 +1,41 @@
+\doxysection{Map\+Editor\+Prefab\+Data.\+cs}
+\hypertarget{_map_editor_prefab_data_8cs_source}{}\label{_map_editor_prefab_data_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/Props/MapEditorPrefabData.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/Props/MapEditorPrefabData.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }Sirenix.OdinInspector;}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00005}\mbox{\hyperlink{namespace_challenge_1_1_props}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_props}{Challenge.Props}}}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MapEditorPrefabData\ :\ ScriptableObject,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ [ListDrawerSettings(IsReadOnly\ =\ \textcolor{keyword}{true},\ ShowFoldout\ =\ \textcolor{keyword}{true})]}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ List<GameObject>\ list;}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<GameObject>\ GetThemeObjects(ChapterMask\ chapter,\ ChapterThemeMask\ theme,\ PropType\ type)}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ list.FindAll(prop\ =>\ prop.TryGetComponent(out\ PropObject\ po)}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ po.ChapterMask.HasFlag(chapter)}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ po.ThemeMask.HasFlag(theme)}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ po.PropType\ ==\ type);}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00022}00022\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Finder.TryGetObjectList(\textcolor{stringliteral}{"{}Assets/"{}},\ \textcolor{stringliteral}{"{}l:MapEditor"{}},\ out\ list,\ \textcolor{keyword}{true}))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEditor.EditorUtility.SetDirty(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ UnityEditor.AssetDatabase.Refresh();}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ [Button(ButtonSizes.Large)]}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ResetTable()\ =>\ list.Clear();}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00033}00033\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_map_editor_prefab_data_8cs_source_l00035}00035\ \}}
+
+\end{DoxyCode}

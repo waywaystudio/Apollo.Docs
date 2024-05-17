@@ -1,0 +1,85 @@
+\doxysection{Narakmoon\+Trajectory.\+cs}
+\hypertarget{_narakmoon_trajectory_8cs_source}{}\label{_narakmoon_trajectory_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Trajectories/NarakmoonTrajectory.cs@{C:/Project/Apollo/Assets/Scripts/Common/Projectiles/Trajectories/NarakmoonTrajectory.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Threading;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_executors_1_1_variants}{Common.Executors.Variants}};}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Cysharp.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_projectiles_1_1_trajectories}{Common.Projectiles.Trajectories}}}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }NarakmoonTrajectory\ :\ Trajectory}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ makeFireWall;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ intervalDistance\ =\ 0.25f;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ SnareExecutor\ snareExecutor;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CancellationTokenSource\ flyingCanceller;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ MakeFireWall}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ makeFireWall;\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ =>\ makeFireWall\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IUnitSequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(sequencer);}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ snareExecutor.Initialize(Projectile.Provider);}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ snareExecutor.Sender\ =\ Projectile;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Flying()}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ flyingCanceller\ =\ \textcolor{keyword}{new}\ CancellationTokenSource();}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Straight(flyingCanceller).Forget();}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Cancel()}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ flyingCanceller?.Cancel();}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ flyingCanceller\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ UniTaskVoid\ Straight(CancellationTokenSource\ cts)}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ var\ departLength\ =\ 0f;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ var\ distanceBuffer\ =\ 0f;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (departLength\ <\ distance\ \&\&\ !cts.IsCancellationRequested)}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ forward\ =\ Direction;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ step\ =\ forward\ *\ (speed\ *\ Time.fixedDeltaTime);}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ projectileTransform\ =\ Projectile.transform;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ position\ =\ projectileTransform.position;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +=\ step;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ departLength\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +=\ step.magnitude;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ projectileTransform.position\ =\ \ position;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (makeFireWall)}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distanceBuffer\ +=\ step.magnitude;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (distanceBuffer\ >\ intervalDistance)}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ snareExecutor.Execute(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distanceBuffer\ -\/=\ intervalDistance;}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ UniTask.Yield(PlayerLoopTiming.FixedUpdate,\ cts.Token);}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ Projectile.Invoker.Complete();}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_narakmoon_trajectory_8cs_source_l00079}00079\ \}}
+
+\end{DoxyCode}

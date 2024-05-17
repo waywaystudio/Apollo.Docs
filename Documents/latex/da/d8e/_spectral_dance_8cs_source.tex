@@ -1,0 +1,85 @@
+\doxysection{Spectral\+Dance.\+cs}
+\hypertarget{_spectral_dance_8cs_source}{}\label{_spectral_dance_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Skills/BellVeers/SpectralDance.cs@{C:/Project/Apollo/Assets/Scripts/Common/Skills/BellVeers/SpectralDance.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_non_players_1_1_summons}{Common.Characters.NonPlayers.Summons}};}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }Sirenix.OdinInspector;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00007}\mbox{\hyperlink{namespace_common_1_1_skills_1_1_bell_veers}{00007}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_skills_1_1_bell_veers}{Common.Skills.BellVeers}}}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SpectralDance\ :\ SkillBehaviour}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ Pool<SpectralSpirit>\ spectralSpiritPool;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ maxSummonCount\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dred\ dred;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ [ShowInInspector]}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<SpectralSpirit>\ SpectralSpirits\ \{\ \textcolor{keyword}{get};\ \}\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ MaxCount}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ maxSummonCount;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ =>\ maxSummonCount\ =\ Mathf.Max(3,\ value);}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(IBehaver\ behaver)}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (behaver\ is\ not\ Dred\ red)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ dred\ =\ red;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(behaver);}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ Sections}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}ClearPreviousSummons"{}},\ ClearPreviousSummons)}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Execute,\ \textcolor{stringliteral}{"{}SummonSpectralSpirits"{}},\ Summon)}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ spectralSpiritPool.Initialize(\textcolor{keyword}{null},\ \textcolor{keyword}{null},\ transform);}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ClearPreviousSummons()}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ SpectralSpirits.ForEach(spectralSpirit\ =>}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spectralSpirit.Dead(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ SpectralSpirits.Clear();}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Summon()}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ var\ angleUnit\ =\ 360\ /\ maxSummonCount;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ maxSummonCount;\ i++)}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ angle\ =\ angleUnit\ *\ i;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ rotation\ =\ Quaternion.AngleAxis(-\/angle,\ dred.transform.up);}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ rotatedDirection\ =\ rotation\ *\ dred.Forward;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ newPosition\ =\ dred.Position\ +\ rotatedDirection\ *\ 4f;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ spirit\ =\ spectralSpiritPool.Get();}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spirit.transform.SetPositionAndRotation(newPosition,\ spirit.transform.rotation);}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spirit.RotateInstant(newPosition);}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spirit.Summons(dred);}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spirit.Idle();}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spirit.Behaviours}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Dead}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Sections}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}RemoveSpectralSpiritsList"{}},\ ()\ =>\ SpectralSpirits.RemoveSafely(spirit))}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}DestroySpirit"{}},\ ()\ =>\ Destroy(spirit.gameObject))}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SpectralSpirits.AddUniquely(spirit);}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spectral_dance_8cs_source_l00079}00079\ \}}
+
+\end{DoxyCode}

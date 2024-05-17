@@ -1,0 +1,113 @@
+\doxysection{Mono\+Singleton.\+cs}
+\hypertarget{_mono_singleton_8cs_source}{}\label{_mono_singleton_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Singleton/MonoSingleton.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Singleton/MonoSingleton.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00003}00003\ \textcolor{comment}{//\ ReSharper\ disable\ ClassWithVirtualMembersNeverInherited.Global}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00004}00004\ \textcolor{comment}{//\ ReSharper\ disable\ MemberCanBeProtected.Global}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_singleton}{Singleton}}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MonoSingleton<T>\ :\ MonoBehaviour\ where\ T\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ T\ instance;}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T\ Instance}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instance\ is\ not\ \textcolor{keyword}{null})\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ instances\ =\ FindObjectsByType<T>(FindObjectsInactive.Exclude,\ FindObjectsSortMode.None);}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (instances.Length)}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \textcolor{keywordflow}{return}\ instance\ =\ instances[0];}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogError(\$\textcolor{stringliteral}{"{}【\{typeof(T).Name\}\ Singleton】\ Duplication.\ Count\ :\ \{instances.Length\}"{}});}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instances[0];}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ SetInstanceNull()}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Awake()}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{this}\ as\ T;}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ OnDestroy()}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instance\ ==\ \textcolor{keyword}{null}\ ||\ instance.gameObject\ !=\ gameObject)\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Implement\ this\ Method\ each\ inherit\ class.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00052}00052\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ RuntimeInitializeOnLoadMethod\ is\ not\ work\ well\ in\ GenericType\ Class\ }}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00053}00053\ \textcolor{comment}{\ \ \ \ \ \ \ \ [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ private\ static\ void\ ResetSingleton()}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ Debug.Log("{}ResetSingleton\ from\ RuntimeInitializeOnLoadMethod"{});}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ null;}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00058}00058\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}\ }}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00059}00059\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00061}00061\ \}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00063}00063\ \textcolor{comment}{/*\ Annotation\ I}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00064}00064\ \textcolor{comment}{\ *\ MonoSingleton에\ 대한\ 자료를\ 찾아보면\ lock을\ 활용하는\ 경우가\ 많다.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00065}00065\ \textcolor{comment}{\ *\ 본\ 스크립트는\ lock을\ 사용하지\ 않으며\ 이유는\ 다음과\ 같다.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00066}00066\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00067}00067\ \textcolor{comment}{\ *\ Unity\ does\ support\ multithreading,\ but\ it\ is\ important\ to\ note\ that\ Unity's\ API}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00068}00068\ \textcolor{comment}{\ *\ (e.g.,\ MonoBehaviour\ functions\ and\ most\ of\ the\ UnityEngine\ namespace)}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00069}00069\ \textcolor{comment}{\ *\ is\ not\ thread-\/safe\ and\ should\ only\ be\ accessed\ from\ the\ main\ thread.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00070}00070\ \textcolor{comment}{\ *\ This\ means\ you\ should\ be\ cautious\ when\ using\ multithreading\ in\ your\ Unity\ projects\ to\ avoid\ unexpected\ behavior\ or\ crashes.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00071}00071\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00072}00072\ \textcolor{comment}{\ *\ That\ being\ said,\ there\ are\ still\ scenarios\ where\ you\ might\ use\ multithreading\ in\ Unity,}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00073}00073\ \textcolor{comment}{\ *\ such\ as\ loading\ resources,\ performing\ complex\ calculations,\ or\ handling\ network\ communication\ in\ the\ background.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00074}00074\ \textcolor{comment}{\ *\ In\ such\ cases,\ using\ synchronization\ mechanisms\ like\ lock\ can\ be\ useful\ to\ ensure\ thread\ safety\ when\ accessing\ shared\ resources.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00075}00075\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00076}00076\ \textcolor{comment}{\ *\ However,\ in\ the\ context\ of\ the\ Singleton\ pattern\ and\ Unity,}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00077}00077\ \textcolor{comment}{\ *\ the\ lock\ statement\ can\ be\ considered\ unnecessary\ most\ of\ the\ time.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00078}00078\ \textcolor{comment}{\ *\ This\ is\ because\ Unity's\ API\ calls,\ including\ the\ MonoBehaviour\ methods,\ run\ on\ the\ main\ thread,}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00079}00079\ \textcolor{comment}{\ *\ and\ thus\ there\ is\ no\ concurrent\ access\ to\ the\ Singleton\ instance.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00080}00080\ \textcolor{comment}{\ *\ If\ you're\ only\ accessing\ the\ Singleton\ instance\ from\ MonoBehaviour\ methods}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00081}00081\ \textcolor{comment}{\ *\ and\ not\ using\ any\ custom\ threading\ in\ your\ project,\ you\ can\ safely\ remove\ the\ lock\ statement\ without\ any\ issues.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00082}00082\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00083}00083\ \textcolor{comment}{\ *\ To\ summarize,}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00084}00084\ \textcolor{comment}{\ *\ Unity\ does\ support\ multithreading,\ but\ most\ of\ the\ Unity\ API\ is\ not\ thread-\/safe\ and\ should\ only\ be\ accessed\ from\ the\ main\ thread.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00085}00085\ \textcolor{comment}{\ *\ Using\ the\ lock\ statement\ can\ be\ useful\ in\ some\ cases,}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00086}00086\ \textcolor{comment}{\ *\ but\ it\ is\ often\ unnecessary\ for\ a\ Singleton\ implementation\ in\ Unity,}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00087}00087\ \textcolor{comment}{\ *\ given\ that\ you're\ only\ accessing\ the\ Singleton\ from\ MonoBehaviour\ methods.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00088}00088\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00089}00089\ \textcolor{comment}{\ *\ Unity는\ 멀티스레딩을\ 지원하지만\ 많은\ 유니티\ API함수들이\ 멀티\ 스레딩에\ 안전하지\ 못하다.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00090}00090\ \textcolor{comment}{\ *\ 싱글톤에\ lock을\ 사용하는\ 기조라면,\ 다른\ 많은\ API함수들도\ 스레드\ 세이프\ 하게\ 다루어야\ 하는데\ 보통\ 그렇지\ 않다.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00091}00091\ \textcolor{comment}{\ *\ 이런\ 상황에서\ 굳이\ 싱글톤만\ lock을\ 사용한다는\ 것은\ 어불성설이다.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00092}00092\ \textcolor{comment}{\ *\ 따라서\ lock을\ 사용하지\ 않는다.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00093}00093\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00094}00094\ \ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00095}00095\ \ \textcolor{comment}{/*\ Annotation\ II}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00096}00096\ \textcolor{comment}{\ \ *\ 굳이\ Awake에서\ instance\ =\ this\ as\ T;\ 를\ 활용하여\ 유니티\ 이벤트를\ 사용하는\ 이유는,}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00097}00097\ \textcolor{comment}{\ \ *\ Instance\ Property에\ FindObjectsByType\ 이하\ 구문을\ 사용하지\ 않기\ 위해서다.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00098}00098\ \textcolor{comment}{\ \ *\ 따라서\ MonoSingleton의\ Awake보다\ 먼저\ Singleton에\ 접근하여\ Instance를\ 호출하는\ 경우에는}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00099}00099\ \textcolor{comment}{\ \ *\ FindObjectsByType\ 이하\ 구문을\ 통해\ instance가\ 할당되며\ Awake에서\ 할당하는\ 의미가\ 약해진다.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00100}00100\ \textcolor{comment}{\ \ *\ 만약\ 이런\ 부분이\ 자주\ 발생하며\ 통제가\ 불가능할\ 경우\ MonoSingleton의\ 스크립트\ 실행\ 순서를\ -\/10\ \string~\ 0\ 사이로\ 잡아주거나}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00101}00101\ \textcolor{comment}{\ \ *\ 차라리\ Awake를\ 날려버리자.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00102}00102\ \textcolor{comment}{\ \ */}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00103}00103\ \ \ }
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00104}00104\ \ \ \textcolor{comment}{/*\ Annotation\ III}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00105}00105\ \textcolor{comment}{\ \ \ *\ FindObjectsByType은\ FindObjectOfType의\ 업그레이드\ 버전으로,\ 2021.3버전에서\ 추가되었다.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00106}00106\ \textcolor{comment}{\ \ \ *\ Of에\ 비해서\ 최적화\ 되었으며\ 사실상\ Of는\ Obsolete라고\ 한다.}}
+\DoxyCodeLine{\Hypertarget{_mono_singleton_8cs_source_l00107}00107\ \textcolor{comment}{\ \ \ */}}
+
+\end{DoxyCode}

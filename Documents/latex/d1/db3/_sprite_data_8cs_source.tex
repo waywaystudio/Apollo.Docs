@@ -1,0 +1,98 @@
+\doxysection{Sprite\+Data.\+cs}
+\hypertarget{_sprite_data_8cs_source}{}\label{_sprite_data_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/ResourceData/SpriteData.cs@{C:/Project/Apollo/Assets/Scripts/\_Core/Databases/ResourceData/SpriteData.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Reflection;}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00007}\mbox{\hyperlink{namespace_databases_1_1_resource_data}{00007}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_databases_1_1_resource_data}{Databases.ResourceData}}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SpriteData\ :\ ResourceData<Sprite>}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00011}00011\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00014}00014\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ Sprite\ 가져오는\ 방법이\ 일반적인\ UnityObject와\ 조금\ 다르다.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00015}00015\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ Sprite\ MultipleMode\ 일\ 때\ 하위\ 스프라이트를\ 정확한\ 이름으로\ 가져올\ 수\ 있는\ 코드로\ 오버라이드\ 하였다.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00016}00016\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ 자세한\ 내용은\ 하단\ Annotation\ 참조}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00017}00017\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ */}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ImportResource(\textcolor{keywordtype}{string}\ targetPath,\ \textcolor{keywordtype}{string}\ paramNames)}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ resourceList.Clear();}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ var\ spriteLog\ =\ \textcolor{keyword}{new}\ StringBuilder();}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ dataObject\ \textcolor{keywordflow}{in}\ Database.SheetDataList)}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ generic\ type\ of\ the\ data\ object}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ genericType\ =\ dataObject.GetType().BaseType?.GetGenericArguments().FirstOrDefault();}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Skip\ if\ there's\ no\ generic\ type\ or\ it\ doesn't\ implement\ IIdentifier}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (genericType\ ==\ \textcolor{keyword}{null}\ ||\ !typeof(IIdentifier).IsAssignableFrom(genericType))}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ generic\ type\ has\ an\ IconPath\ property}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ iconPathProperty\ =\ genericType.GetProperty(paramNames);}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ idProperty\ \ \ \ \ \ \ =\ genericType.GetProperty(\textcolor{stringliteral}{"{}ID"{}});}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Skip\ if\ there's\ no\ IconPath\ property}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (iconPathProperty\ ==\ \textcolor{keyword}{null}\ ||\ idProperty\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ list\ property\ from\ the\ data\ object}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ listProperty\ =\ dataObject.GetType().GetProperty(\textcolor{stringliteral}{"{}List"{}},\ BindingFlags.NonPublic\ |\ BindingFlags.Instance);}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Skip\ if\ there's\ no\ list\ or\ it's\ empty}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listProperty?.GetValue(dataObject)\ is\ not\ IList\ list\ ||\ list.Count\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Loop\ through\ all\ items\ in\ the\ list}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ list)}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ IconPath\ value\ and\ add\ it\ to\ the\ list}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ iconPath\ \ =\ iconPathProperty.GetValue(item)\ as\ string;}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ dataIndex\ =\ (int)idProperty.GetValue(item);}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Finder.TryGetSprite(targetPath,\ iconPath,\ out\ var\ result))}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ resourceList.Add(\textcolor{keyword}{new}\ ResourceTable((DataIndex)dataIndex,\ result));}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ spriteLog.AppendLine(\$\textcolor{stringliteral}{"{}Added\ Sprite\ file\ name\ of\ <color=green>\{iconPath\}</color>"{}});}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (spriteLog.Length\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Added\ Sprite\ file\ :\ \(\backslash\)n\{spriteLog\}"{}});}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00066}00066\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00068}00068\ \}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00070}00070\ \textcolor{comment}{/*\ Annotation}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00071}00071\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00072}00072\ \textcolor{comment}{\ *\ The\ issue\ here\ is\ due\ to\ how\ Unity's\ AssetDatabase.LoadAssetAtPath()\ function\ works.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00073}00073\ \textcolor{comment}{\ *\ When\ you\ give\ it\ a\ path\ to\ an\ asset\ that\ contains\ sub-\/assets\ (like\ your\ sprite\ sheet),}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00074}00074\ \textcolor{comment}{\ *\ it\ will\ always\ load\ the\ main\ asset\ by\ default.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00075}00075\ \textcolor{comment}{\ *\ In\ the\ case\ of\ a\ sprite\ sheet,\ the\ main\ asset\ is\ the\ full\ sprite\ sheet\ image,\ not\ the\ individual\ slices.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00076}00076\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00077}00077\ \textcolor{comment}{\ *\ To\ load\ a\ specific\ sub-\/asset\ (i.e.,\ a\ specific\ sprite\ from\ the\ sheet),}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00078}00078\ \textcolor{comment}{\ *\ you\ need\ to\ use\ the\ AssetDatabase.LoadAllAssetsAtPath()\ method\ instead,\ which\ returns\ an\ array\ of\ all\ assets\ at\ the\ given\ path.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00079}00079\ \textcolor{comment}{\ *\ Then,\ you\ can\ iterate\ through\ the\ array\ to\ find\ the\ specific\ sprite\ you're\ interested\ in.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00080}00080\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00081}00081\ \textcolor{comment}{\ *\ Finder.TryGetSprite\ 참조}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00082}00082\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00083}00083\ \textcolor{comment}{\ *\ In\ this\ version\ of\ the\ method,\ I\ specifically\ designed\ it\ for\ loading\ sprites,}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00084}00084\ \textcolor{comment}{\ *\ so\ the\ type\ parameter\ is\ removed\ and\ the\ value\ output\ parameter\ is\ specifically\ a\ Sprite.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00085}00085\ \textcolor{comment}{\ *\ You\ can\ create\ a\ similar\ function\ for\ other\ types\ of\ sub-\/assets\ if\ necessary.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00086}00086\ \textcolor{comment}{\ *\ The\ key\ change\ here\ is\ the\ usage\ of\ AssetDatabase.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00087}00087\ \textcolor{comment}{\ *\ LoadAllAssetsAtPath()\ and\ the\ subsequent\ loop\ to\ check\ each\ loaded\ asset\ until\ it\ finds\ a\ Sprite\ with\ the\ correct\ name.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00088}00088\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00089}00089\ \textcolor{comment}{\ *\ Note:\ Like\ the\ previous\ method,\ this\ assumes\ that\ sprite\ names\ within\ a\ sprite\ sheet\ are\ unique\ across\ the\ entire\ project.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00090}00090\ \textcolor{comment}{\ *\ If\ you\ have\ duplicate\ sprite\ names\ in\ different\ sprite\ sheets,\ this\ method\ might\ still\ return\ the\ wrong\ sprite.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00091}00091\ \textcolor{comment}{\ *\ If\ that's\ the\ case,\ you'll\ need\ to\ adjust\ your\ sprite\ naming\ convention\ or\ your\ search\ method\ to\ uniquely\ identify\ each\ sprite.}}
+\DoxyCodeLine{\Hypertarget{_sprite_data_8cs_source_l00092}00092\ \textcolor{comment}{\ */}}
+
+\end{DoxyCode}

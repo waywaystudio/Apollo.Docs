@@ -1,0 +1,78 @@
+\doxysection{Casting\+Bar.\+cs}
+\hypertarget{_casting_bar_8cs_source}{}\label{_casting_bar_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Huds/Bottoms/CastingBar.cs@{C:/Project/Apollo/Assets/Scripts/Challenge/UI/Huds/Bottoms/CastingBar.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}};}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00006}\mbox{\hyperlink{namespace_challenge_1_1_u_i_1_1_huds}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_challenge_1_1_u_i_1_1_huds_1_1_bottoms}{Challenge.UI.Huds.Bottoms}}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{using\ }CastingBars;}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00009}00009\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CastingBar\ :\ MonoBehaviour,\ IEditable}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ ImageFiller\ progression;}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ CastingIndicator\ indicator;}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ var\ dredSkills\ =\ dred.WeaponTable[WeaponType.Blade].AllSkillBehaviour;}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ dredSkills.ForEach(skill\ =>}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (skill\ is\ not\ ICastingSkillBehaviour\ skillBehaviour)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ +\ On\ Active,\ Register\ Progression\ and\ Indicator}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ +\ On\ Cast,\ Show\ CastingBar}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ +\ On\ Cancel,\ or\ On\ Erupt,\ Hide\ CastingBar}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ skill.Sections}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Active,\ \textcolor{stringliteral}{"{}RegisterCastingBar"{}},\ ()\ =>\ Register(skillBehaviour))}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Cast,\ \textcolor{stringliteral}{"{}ShowCastingBar"{}},\ ShowBar)}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Erupt,\ \textcolor{stringliteral}{"{}HideCastingBar"{}},\ HideBar)}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}HideCastingBar"{}},\ HideBar)}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.End,\ \textcolor{stringliteral}{"{}Unregister"{}},\ Unregister)}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Register(ICastingSkillBehaviour\ targetSkill)}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ var\ skillProgression\ =\ targetSkill.CastingModel.Progress;}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ var\ maxProgress\ =\ targetSkill.CastingModel.MaxProgress;}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ progression.Register(skillProgression,\ maxProgress);}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Unregister()}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ progression.Unregister();}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ShowBar()}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ HideBar()}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00062}00062\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ progression\ =\ GetComponentInChildren<ImageFiller>(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ indicator\ \ \ =\ GetComponentInChildren<CastingIndicator>(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ HideBar();}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00070}00070\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_casting_bar_8cs_source_l00072}00072\ \}}
+
+\end{DoxyCode}

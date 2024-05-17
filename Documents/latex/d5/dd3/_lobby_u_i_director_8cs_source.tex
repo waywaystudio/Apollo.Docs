@@ -1,0 +1,78 @@
+\doxysection{Lobby\+UIDirector.\+cs}
+\hypertarget{_lobby_u_i_director_8cs_source}{}\label{_lobby_u_i_director_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Lobby/LobbyUIDirector.cs@{C:/Project/Apollo/Assets/Scripts/Lobby/LobbyUIDirector.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common}{Common}};}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_characters_1_1_dreds}{Common.Characters.Dreds}};}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i}{Common.UI}};}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i_1_1_interact_marks}{Common.UI.InteractMarks}};}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_common_1_1_u_i_1_1_tips}{Common.UI.Tips}};}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_lobby_1_1_u_i_1_1_pop_ups}{Lobby.UI.PopUps}};}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_lobby_1_1_u_i_1_1_tree_of_awakening}{Lobby.UI.TreeOfAwakening}};}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }Sirenix.OdinInspector;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_u_is}{UIs}};}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00012}00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_lobby}{Lobby}}}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }LobbyUIDirector\ :\ UIDirector}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ CanvasField\ */}}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [TitleGroup(\textcolor{stringliteral}{"{}Field"{}},\ \textcolor{stringliteral}{"{}Floating\ Text,\ Nameplate"{}})]}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ InteractMarkPool\ interactMarkPool;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ CanvasPopUp\ */}}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ [TitleGroup(\textcolor{stringliteral}{"{}Pop\ Up"{}},\ \textcolor{stringliteral}{"{}contents"{}})]}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TreeOfAwakeningPanel\ treeOfAwakening;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ EnforceWeaponPanel\ enforceWeapon;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ WeaponSelectionGroup\ weaponSelectionGroup;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TempPanels\ for\ BIC}}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ TipsPanel\ tips;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsOpenedTreeOfAwakening\ =>\ TreeOfAwakening.gameObject.activeSelf;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ EffectCanvas\ EffectCanvas\ =>\ \textcolor{keyword}{this}[CanvasHierarchyType.Effect]\ as\ EffectCanvas;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ TreeOfAwakeningPanel\ TreeOfAwakening\ =>\ treeOfAwakening;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ EnforceWeaponPanel\ EnforceWeapon\ =>\ enforceWeapon;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ WeaponSelectionGroup\ WeaponSelectionGroup\ =>\ weaponSelectionGroup;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize();}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ treeOfAwakening.Initialize();}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ enforceWeapon.Initialize();}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ weaponSelectionGroup.Initialize();}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TempPanels\ for\ BIC}}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ tips.Initialize();}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ LobbyDirector.Camp.Scenario[CampSectionType.Initial].Sections}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Add(Section.Complete,\ \textcolor{stringliteral}{"{}OpenTipPanel"{}},\ tips.Open)}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Initialize(Dred\ dred)}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ interactMarkPool.Initialize(dred);}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00057}00057\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ EditorSetUp()}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ base.EditorSetUp();}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ interactMarkPool\ \ \ \ \ =\ GetComponentInChildren<InteractMarkPool>(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ treeOfAwakening\ \ \ \ \ \ =\ GetComponentInChildren<TreeOfAwakeningPanel>(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ enforceWeapon\ \ \ \ \ \ \ \ =\ GetComponentInChildren<EnforceWeaponPanel>(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ weaponSelectionGroup\ =\ GetComponentInChildren<WeaponSelectionGroup>(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ tips\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ GetComponentInChildren<TipsPanel>(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ Finder.TryGetObject(out\ uiManager);}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00070}00070\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_lobby_u_i_director_8cs_source_l00072}00072\ \}}
+
+\end{DoxyCode}

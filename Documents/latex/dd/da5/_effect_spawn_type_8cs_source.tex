@@ -1,0 +1,92 @@
+\doxysection{Effect\+Spawn\+Type.\+cs}
+\hypertarget{_effect_spawn_type_8cs_source}{}\label{_effect_spawn_type_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Enum/EffectSpawnType.cs@{C:/Project/Apollo/Assets/Scripts/Common/\_Protocol/\_Enum/EffectSpawnType.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common}{Common}}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ SpawnParent}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00006}00006\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ None\ =\ 0,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ ChildOfThis,\ \textcolor{comment}{//\ -\/>\ Child\ to\ ThisObject\ }}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ Provider,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ Target,\ \ \textcolor{comment}{//\ Hide\ On\ Play\ Section\ is\ not\ Execute}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ Custom,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ World,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ ProviderPreTransform,\ \textcolor{comment}{//\ -\/>\ PrePositionType\ preTransformType;}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ TargetPreTransform,\ \textcolor{comment}{//\ -\/\ Hide\ On\ Play\ Section\ is\ not\ Execute\ -\/>\ PrePositionType\ preTransformType;}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ SpawnPosition}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ None\ =\ 0,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ InheritParent,\ \textcolor{comment}{//\ Zero\ LocalPosition\ +\ Particle\ Offset}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ ProviderPreposition,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ TargetPreposition\ \textcolor{comment}{//\ Hide\ On\ Play\ Section\ is\ not\ Execute}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ SpawnRotation}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ None\ =\ 0,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ ParticleSelf,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ ProvideObject,\ \ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ TargetObject,\ \ \ \ \ \textcolor{comment}{//\ Hide\ On\ Play\ Section\ is\ not\ Execute}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ ProviderToTarget,\ \textcolor{comment}{//\ Hide\ On\ Play\ Section\ is\ not\ Execute\ }}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ TargetToProvider\ \ \textcolor{comment}{//\ Hide\ On\ Play\ Section\ is\ not\ Execute}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00035}00035\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ StartUnit}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ Provider,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ Sender}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00040}00040\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ TowardType}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ None\ =\ 0,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ StartUnitForward,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ ToTargetFromStartUnit,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ ToStartUnitFromTarget}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00048}00048\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00049}00049\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ TowardDirection}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ None\ =\ 0,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ Forward,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ Left,\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ Right,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ Backward,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ Up,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ Down,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }TowardDirectionExtension}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00061}00061\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ GetDirection(\textcolor{keyword}{this}\ TowardDirection\ direction,\ Transform\ target)}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ var\ right\ =\ target.right;}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ var\ forward\ =\ target.forward;}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ var\ up\ =\ target.up;}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ direction\ \textcolor{keywordflow}{switch}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TowardDirection.Forward\ \ =>\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ forward,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TowardDirection.Left\ \ \ \ \ =>\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ right\ *\ -\/1f,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TowardDirection.Right\ \ \ \ =>\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ right,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TowardDirection.Backward\ =>\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ forward\ *\ -\/1f,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TowardDirection.Up\ \ \ \ \ \ \ =>\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ up,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TowardDirection.Down\ \ \ \ \ =>\ }
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ up\ *\ -\/1f,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =>\ Vector3.zero,}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_effect_spawn_type_8cs_source_l00086}00086\ \}}
+
+\end{DoxyCode}

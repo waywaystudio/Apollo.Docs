@@ -1,0 +1,25 @@
+\doxysection{UIEffect\+Behaviour.\+cs}
+\hypertarget{_u_i_effect_behaviour_8cs_source}{}\label{_u_i_effect_behaviour_8cs_source}\index{C:/Project/Apollo/Assets/Scripts/Common/Effects/UIs/UIEffectBehaviour.cs@{C:/Project/Apollo/Assets/Scripts/Common/Effects/UIs/UIEffectBehaviour.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00001}00001\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_common_1_1_effects_1_1_u_is}{Common.Effects.UIs}}}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00002}00002\ \{}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00006}\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_u_i_effect_behaviour}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_common_1_1_effects_1_1_u_is_1_1_u_i_effect_behaviour}{UIEffectBehaviour}}\ :\ EffectBehaviour}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00007}00007\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(ISequencer\ sequencer)}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pre\ Set\ before\ base\ Initialize.\ }}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ playSection\ =\ Section.Active;}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ stopStyle\ \ \ =\ StopType.EffectSelf;}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ stopSection\ =\ Section.None;}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ base.Initialize(sequencer);}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ Sequencer.Sections}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Remove(Section.End,\ \$\textcolor{stringliteral}{"{}ResetTarget\{EffectKey\}"{}})}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i_effect_behaviour_8cs_source_l00022}00022\ \}}
+
+\end{DoxyCode}
