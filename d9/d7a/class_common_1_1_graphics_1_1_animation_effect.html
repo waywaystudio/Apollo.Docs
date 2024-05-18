@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d9/d7a/class_common_1_1_graphics_1_1_animation_effect.
   <div class="headertitle"><div class="title">Common.Graphics.AnimationEffect Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Graphics.AnimationEffect:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/d7a/class_common_1_1_graphics_1_1_animation_effect.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -131,7 +138,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd7/_animation_effect_8cs_source.html#l00043">43</a> of file <a class="el" href="../../dd/dd7/_animation_effect_8cs_source.html">AnimationEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            animator.SetTrigger(HideTriggerString);</div>
+<div class="line"><span class="lineno">   46</span>            hideAction?.Invoke();</div>
+<div class="line"><span class="lineno">   47</span>            </div>
+<div class="line"><span class="lineno">   48</span>            Destroy(gameObject, 3f);</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab8f8fbff9d84ad4e99e9355ff0d42dd4" name="ab8f8fbff9d84ad4e99e9355ff0d42dd4"></a>
@@ -150,7 +163,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd7/_animation_effect_8cs_source.html#l00022">22</a> of file <a class="el" href="../../dd/dd7/_animation_effect_8cs_source.html">AnimationEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            delayTimer.AddCallBack(<span class="stringliteral">&quot;ExecuteSequence&quot;</span>, sequence.Invoker.Execute);</div>
+<div class="line"><span class="lineno">   25</span>            delayTimer.Play();</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa85bee574f823163cc64f52edb5f1c3b" name="aa85bee574f823163cc64f52edb5f1c3b"></a>
@@ -169,7 +186,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd7/_animation_effect_8cs_source.html#l00036">36</a> of file <a class="el" href="../../dd/dd7/_animation_effect_8cs_source.html">AnimationEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            animator.SetTrigger(LoopTriggerString);</div>
+<div class="line"><span class="lineno">   39</span>            loopAction?.Invoke();</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab3003b845bb7294b595f36a2ea1fb420" name="ab3003b845bb7294b595f36a2ea1fb420"></a>
@@ -188,7 +209,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd7/_animation_effect_8cs_source.html#l00029">29</a> of file <a class="el" href="../../dd/dd7/_animation_effect_8cs_source.html">AnimationEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            animator.SetTrigger(ShowTriggerString);</div>
+<div class="line"><span class="lineno">   32</span>            showAction?.Invoke();</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -137,7 +138,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d40/_load_entity_8cs_source.html#l00017">17</a> of file <a class="el" href="../../df/d40/_load_entity_8cs_source.html">LoadEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            this.cloudManager = cloudManager;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -166,7 +170,47 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d40/_load_entity_8cs_source.html#l00067">67</a> of file <a class="el" href="../../df/d40/_load_entity_8cs_source.html">LoadEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            loadCanceller = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   70</span>            IsDone        = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   71</span>            </div>
+<div class="line"><span class="lineno">   72</span>            var resultAsString = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   73</span>            var result = defaultValue;</div>
+<div class="line"><span class="lineno">   74</span>        </div>
+<div class="line"><span class="lineno">   75</span>            PlayFabClientAPI.GetUserData(CreateUserDataRequest(key), OnLoadSuccess, OnLoadFailed);</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>            await UniTask.WaitUntil(() =&gt; IsDone, cancellationToken: loadCanceller.Token);</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span> (!resultAsString.IsNullOrEmpty())</div>
+<div class="line"><span class="lineno">   80</span>            {</div>
+<div class="line"><span class="lineno">   81</span>                result = JsonUtility.FromJson&lt;T&gt;(resultAsString);</div>
+<div class="line"><span class="lineno">   82</span>            }</div>
+<div class="line"><span class="lineno">   83</span>        </div>
+<div class="line"><span class="lineno">   84</span>            callback?.Invoke(result);</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordtype">void</span> OnLoadSuccess(GetUserDataResult userDataResult)</div>
+<div class="line"><span class="lineno">   88</span>            {</div>
+<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">if</span> (userDataResult.Data != <span class="keyword">null</span> &amp;&amp; userDataResult.Data.TryGetValue(key, out var value))</div>
+<div class="line"><span class="lineno">   90</span>                {</div>
+<div class="line"><span class="lineno">   91</span>                    resultAsString = value.Value;</div>
+<div class="line"><span class="lineno">   92</span>                }</div>
+<div class="line"><span class="lineno">   93</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   94</span>                {</div>
+<div class="line"><span class="lineno">   95</span>                    Debug.Log($<span class="stringliteral">&quot;NotExist {key}&quot;</span>);</div>
+<div class="line"><span class="lineno">   96</span>                }</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>                IsDone = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   99</span>            }</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordtype">void</span> OnLoadFailed(PlayFabError error)</div>
+<div class="line"><span class="lineno">  101</span>            {</div>
+<div class="line"><span class="lineno">  102</span>                Debug.Log(<span class="stringliteral">&quot;Got error retrieving user data:&quot;</span>);</div>
+<div class="line"><span class="lineno">  103</span>                Debug.Log(error.GenerateErrorReport());</div>
+<div class="line"><span class="lineno">  104</span>            </div>
+<div class="line"><span class="lineno">  105</span>                IsDone = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  106</span>            }</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abf74a506ed6b1a187c10bd66e8087a9e" name="abf74a506ed6b1a187c10bd66e8087a9e"></a>
@@ -185,7 +229,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d40/_load_entity_8cs_source.html#l00109">109</a> of file <a class="el" href="../../df/d40/_load_entity_8cs_source.html">LoadEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  110</span>        {</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (loadCanceller is not <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  112</span>            {</div>
+<div class="line"><span class="lineno">  113</span>                loadCanceller.Cancel();</div>
+<div class="line"><span class="lineno">  114</span>                loadCanceller.Dispose();</div>
+<div class="line"><span class="lineno">  115</span>                loadCanceller = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  116</span>            }</div>
+<div class="line"><span class="lineno">  117</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae31e2b09a5bc176d3fe62a9d938aaaa0" name="ae31e2b09a5bc176d3fe62a9d938aaaa0"></a>
@@ -213,7 +265,47 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d40/_load_entity_8cs_source.html#l00025">25</a> of file <a class="el" href="../../df/d40/_load_entity_8cs_source.html">LoadEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            loadCanceller = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   28</span>            IsDone        = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   29</span>            </div>
+<div class="line"><span class="lineno">   30</span>            var resultAsString = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   31</span>            var result = defaultValue;</div>
+<div class="line"><span class="lineno">   32</span>        </div>
+<div class="line"><span class="lineno">   33</span>            PlayFabClientAPI.GetUserData(CreateUserDataRequest(key), OnLoadSuccess, OnLoadFailed);</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>            await UniTask.WaitUntil(() =&gt; IsDone, cancellationToken: loadCanceller.Token);</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!resultAsString.IsNullOrEmpty())</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                result = JsonUtility.FromJson&lt;T&gt;(resultAsString);</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>        </div>
+<div class="line"><span class="lineno">   42</span>            callback?.Invoke(result);</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordtype">void</span> OnLoadSuccess(GetUserDataResult userDataResult)</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                <span class="keywordflow">if</span> (userDataResult.Data != <span class="keyword">null</span> &amp;&amp; userDataResult.Data.TryGetValue(key, out var value))</div>
+<div class="line"><span class="lineno">   48</span>                {</div>
+<div class="line"><span class="lineno">   49</span>                    resultAsString = value.Value;</div>
+<div class="line"><span class="lineno">   50</span>                }</div>
+<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   52</span>                {</div>
+<div class="line"><span class="lineno">   53</span>                    Debug.Log($<span class="stringliteral">&quot;NotExist {key}&quot;</span>);</div>
+<div class="line"><span class="lineno">   54</span>                }</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>                IsDone = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordtype">void</span> OnLoadFailed(PlayFabError error)</div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                Debug.Log(<span class="stringliteral">&quot;Got error retrieving user data:&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>                Debug.Log(error.GenerateErrorReport());</div>
+<div class="line"><span class="lineno">   62</span>            </div>
+<div class="line"><span class="lineno">   63</span>                IsDone = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -238,7 +330,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d40/_load_entity_8cs_source.html#l00022">22</a> of file <a class="el" href="../../df/d40/_load_entity_8cs_source.html">LoadEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; } = <span class="keyword">true</span>;</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -139,7 +140,28 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d77/_mastery_applier_8cs_source.html#l00067">67</a> of file <a class="el" href="../../de/d77/_mastery_applier_8cs_source.html">MasteryApplier.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            List.Clear();</div>
+<div class="line"><span class="lineno">   70</span>            </div>
+<div class="line"><span class="lineno">   71</span>            <span class="comment">// MasteryCode = 31 / Tier / Type / Index</span></div>
+<div class="line"><span class="lineno">   72</span>            DataIndex.None.Iterate(index =&gt;</div>
+<div class="line"><span class="lineno">   73</span>            {</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">if</span> (index.GetPrimeBar()            != (<span class="keywordtype">int</span>)DataIndex.Mastery) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">if</span> ((WeaponType)index.GetSecondBar() != WeaponType) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   76</span>                </div>
+<div class="line"><span class="lineno">   77</span>                var applierEntity = <span class="keyword">new</span> MasteryApplierEntity</div>
+<div class="line"><span class="lineno">   78</span>                {</div>
+<div class="line"><span class="lineno">   79</span>                    MasteryCode = index,</div>
+<div class="line"><span class="lineno">   80</span>                    Description = <a class="code hl_class" href="../../dc/d83/class_database.html">Database</a>.MasterySheetData(index).Description,</div>
+<div class="line"><span class="lineno">   81</span>                    InitialGrade = QualityGradeType.Normal,</div>
+<div class="line"><span class="lineno">   82</span>                    Has         = <span class="keyword">false</span>,</div>
+<div class="line"><span class="lineno">   83</span>                };</div>
+<div class="line"><span class="lineno">   84</span>                </div>
+<div class="line"><span class="lineno">   85</span>                List.Add(applierEntity);</div>
+<div class="line"><span class="lineno">   86</span>            });</div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="ttc" id="aclass_database_html"><div class="ttname"><a href="../../dc/d83/class_database.html">Database</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/d16/_database_8cs_source.html#l00026">Database.cs:27</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

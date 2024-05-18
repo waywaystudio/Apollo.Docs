@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,18 @@ $(function(){initNavTree('db/dfb/class_common_1_1_traps_1_1_behaviours_1_1_tree_
   <div class="headertitle"><div class="title">Common.Traps.Behaviours.TreeGroupSkewer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Traps.Behaviours.TreeGroupSkewer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/dfb/class_common_1_1_traps_1_1_behaviours_1_1_tree_group_skewer.png" usemap="#Common.Traps.Behaviours.TreeGroupSkewer_map" alt=""/>
+  <map id="Common.Traps.Behaviours.TreeGroupSkewer_map" name="Common.Traps.Behaviours.TreeGroupSkewer_map">
+<area href="../../d5/de8/class_common_1_1_units_1_1_unit_behaviour_combinator.html" alt="Common.Units.UnitBehaviourCombinator" shape="rect" coords="421,56,692,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="281,0,552,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="562,0,833,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="843,0,1114,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -149,7 +162,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/_tree_group_skewer_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d5/d5c/_tree_group_skewer_8cs_source.html">TreeGroupSkewer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   34</span>            </div>
+<div class="line"><span class="lineno">   35</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8e761653249b0fadbd1b5e90d6747e7b" name="a8e761653249b0fadbd1b5e90d6747e7b"></a>
@@ -178,7 +196,21 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/de8/class_common_1_1_units_1_1_unit_behaviour_combinator.html">Common.Units.UnitBehaviourCombinator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d5c/_tree_group_skewer_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d5/d5c/_tree_group_skewer_8cs_source.html">TreeGroupSkewer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            base.Initialize(table);</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>            delayAttack       = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d49/class_sequencer.html">Sequencer</a>();</div>
+<div class="line"><span class="lineno">   21</span>            impaleBehaviour   = table.Impale;</div>
+<div class="line"><span class="lineno">   22</span>            retrieveBehaviour = table.Retrieve;</div>
+<div class="line"><span class="lineno">   23</span>            </div>
+<div class="line"><span class="lineno">   24</span>            Sections</div>
+<div class="line"><span class="lineno">   25</span>                .Add(Section.Active, <span class="stringliteral">&quot;DelayAttack&quot;</span>, DelayAttack)</div>
+<div class="line"><span class="lineno">   26</span>                .Add(Section.End, <span class="stringliteral">&quot;CancelDelayAttack&quot;</span>, () =&gt; delayAttack.Cancel())</div>
+<div class="line"><span class="lineno">   27</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;CancelDelayAttack&quot;</span>, () =&gt; delayAttack.Cancel())</div>
+<div class="line"><span class="lineno">   28</span>                ;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="ttc" id="aclass_sequencer_html"><div class="ttname"><a href="../../d6/d49/class_sequencer.html">Sequencer</a></div><div class="ttdoc">Serial Action Invoker Which use UniTask and DOTween Combination.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/dc0/_sequencer_8cs_source.html#l00012">Sequencer.cs:13</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

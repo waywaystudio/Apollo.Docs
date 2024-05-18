@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,17 @@ $(function(){initNavTree('d6/dd9/class_common_1_1_characters_1_1_actions_1_1_cha
   <div class="headertitle"><div class="title">Common.Characters.Actions.CharacterTakeHeal Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Actions.CharacterTakeHeal:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/dd9/class_common_1_1_characters_1_1_actions_1_1_character_take_heal.png" usemap="#Common.Characters.Actions.CharacterTakeHeal_map" alt=""/>
+  <map id="Common.Characters.Actions.CharacterTakeHeal_map" name="Common.Characters.Actions.CharacterTakeHeal_map">
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="297,56,584,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="594,56,881,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="297,0,584,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -164,7 +176,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html">CharacterTakeHeal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            Character = character;</div>
+<div class="line"><span class="lineno">   19</span>            Invoker   = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>            Sections</div>
+<div class="line"><span class="lineno">   22</span>                .AddCondition(<span class="stringliteral">&quot;IsAlive&quot;</span>, () =&gt; character.IsAlive)</div>
+<div class="line"><span class="lineno">   23</span>                ;</div>
+<div class="line"><span class="lineno">   24</span>            </div>
+<div class="line"><span class="lineno">   25</span>            effector.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0e2c7e10c6e2828d5c48d305a95c8ec7" name="a0e2c7e10c6e2828d5c48d305a95c8ec7"></a>
@@ -183,7 +206,49 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html">CharacterTakeHeal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   31</span>            </div>
+<div class="line"><span class="lineno">   32</span>            var healProvider = executor.Provider;</div>
+<div class="line"><span class="lineno">   33</span>            var log = <span class="keyword">new</span> CombatLog(healProvider, executor.DataIndex, Character, DamageTypeMask.None);</div>
+<div class="line"><span class="lineno">   34</span>            var executorTable = executor.HealTable;</div>
+<div class="line"><span class="lineno">   35</span>            var healAmount = executorTable[StatType.BaseDamage];</div>
+<div class="line"><span class="lineno">   36</span>                             <span class="comment">// + executor.DamageFilter[StatType.BaseDamage];</span></div>
+<div class="line"><span class="lineno">   37</span>            </div>
+<div class="line"><span class="lineno">   38</span>            log.Type = CombatEntityType.Heal;</div>
+<div class="line"><span class="lineno">   39</span>            </div>
+<div class="line"><span class="lineno">   40</span>            <span class="comment">// Critical Calculation : CombatFormula;</span></div>
+<div class="line"><span class="lineno">   41</span>            <span class="comment">// var providerCriticalChance = executorTable[StatType.CriticalChance];</span></div>
+<div class="line"><span class="lineno">   42</span>            <span class="comment">//                              // + executor.DamageFilter[StatType.CriticalChance];</span></div>
+<div class="line"><span class="lineno">   43</span>            <span class="comment">// var takerCriticalExpose = Character.StatTable[StatType.CriticalExposure];</span></div>
+<div class="line"><span class="lineno">   44</span>            <span class="comment">// var criticalCalculation = providerCriticalChance + takerCriticalExpose;</span></div>
+<div class="line"><span class="lineno">   45</span>        </div>
+<div class="line"><span class="lineno">   46</span>            <span class="comment">// IsCritical!</span></div>
+<div class="line"><span class="lineno">   47</span>            <span class="comment">// if (Random.Range(0f, 1f) &lt; criticalCalculation)</span></div>
+<div class="line"><span class="lineno">   48</span>            <span class="comment">// {</span></div>
+<div class="line"><span class="lineno">   49</span>            <span class="comment">//     healAmount *= 1.0f + executorTable[StatType.CriticalDamage];</span></div>
+<div class="line"><span class="lineno">   50</span>            <span class="comment">//                        // + executor.DamageFilter[StatType.CriticalDamage];</span></div>
+<div class="line"><span class="lineno">   51</span>            <span class="comment">//     log.Type     =  CombatEntityType.CriticalDamage;</span></div>
+<div class="line"><span class="lineno">   52</span>            <span class="comment">// }</span></div>
+<div class="line"><span class="lineno">   53</span>            </div>
+<div class="line"><span class="lineno">   54</span>            <span class="comment">// PowerMultiplier</span></div>
+<div class="line"><span class="lineno">   55</span>            <span class="comment">// var providerPowerMultiplier = executorTable[StatType.DamageIncreaseRate] + executor.DamageFilter[StatType.DamageIncreaseRate];</span></div>
+<div class="line"><span class="lineno">   56</span>            <span class="comment">// var takerDamageMultiplier = Dred.StatTable[StatType.DamageDecreaseRate];</span></div>
+<div class="line"><span class="lineno">   57</span>            <span class="comment">// var damageMultiplier = providerPowerMultiplier + takerDamageMultiplier;</span></div>
+<div class="line"><span class="lineno">   58</span>            <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   59</span>            <span class="comment">// healAmount *= 1.0f + damageMultiplier;</span></div>
+<div class="line"><span class="lineno">   60</span>            </div>
+<div class="line"><span class="lineno">   61</span>            </div>
+<div class="line"><span class="lineno">   62</span>            <span class="comment">// Final Damage</span></div>
+<div class="line"><span class="lineno">   63</span>            log.Value = healAmount;</div>
+<div class="line"><span class="lineno">   64</span>            </div>
+<div class="line"><span class="lineno">   65</span>            Character.HitPoints.Value += healAmount;</div>
+<div class="line"><span class="lineno">   66</span>            healProvider.OnHealProvide.Invoke(log);</div>
+<div class="line"><span class="lineno">   67</span>            </div>
+<div class="line"><span class="lineno">   68</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   69</span>            OnTakeHeal.Invoke(log);</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -208,7 +273,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html">CharacterTakeHeal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac4701f96b1bf7b8ff00dbc0da1baa76d" name="ac4701f96b1bf7b8ff00dbc0da1baa76d"></a>
@@ -234,7 +300,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html#l00010">10</a> of file <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html">CharacterTakeHeal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a39c3a0aa70058c663dbb928720b0dac4" name="a39c3a0aa70058c663dbb928720b0dac4"></a>
@@ -258,7 +325,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html">CharacterTakeHeal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4e9f970ed1d734a63ccbb9d63047c690" name="a4e9f970ed1d734a63ccbb9d63047c690"></a>
@@ -284,7 +352,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html#l00009">9</a> of file <a class="el" href="../../d2/d77/_character_take_heal_8cs_source.html">CharacterTakeHeal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adff29a0cc30eb54b196b619d151234a8" name="adff29a0cc30eb54b196b619d151234a8"></a>

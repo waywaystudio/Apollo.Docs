@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,12 @@ $(function(){initNavTree('d3/d22/class_common_1_1_graphics_1_1_custom_trail.html
   <div class="headertitle"><div class="title">Common.Graphics.CustomTrail Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Graphics.CustomTrail:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d3/d22/class_common_1_1_graphics_1_1_custom_trail.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -145,7 +152,21 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dd9/_custom_trail_8cs_source.html#l00038">38</a> of file <a class="el" href="../../df/dd9/_custom_trail_8cs_source.html">CustomTrail.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            var currentPosition = transform.position;</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (points.Count == 0 || (points[0] - currentPosition).magnitude &gt; 0.1f)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">if</span> (points.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   44</span>                {</div>
+<div class="line"><span class="lineno">   45</span>                    currentLength += (points[0] - currentPosition).magnitude;</div>
+<div class="line"><span class="lineno">   46</span>                }</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>                points.Insert(0, currentPosition);</div>
+<div class="line"><span class="lineno">   49</span>                TrimPoints(); <span class="comment">// Adjust currentLength within TrimPoints</span></div>
+<div class="line"><span class="lineno">   50</span>                UpdateMesh();</div>
+<div class="line"><span class="lineno">   51</span>            }</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

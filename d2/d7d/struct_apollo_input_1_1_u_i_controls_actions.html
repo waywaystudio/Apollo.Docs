@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -175,7 +176,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01711">1711</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1711</span>{ m_Wrapper = wrapper; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -195,7 +197,50 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01730">1730</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1731</span>        {</div>
+<div class="line"><span class="lineno"> 1732</span>            <span class="keywordflow">if</span> (instance == <span class="keyword">null</span> || m_Wrapper.m_UIControlsActionsCallbackInterfaces.Contains(instance)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1733</span>            m_Wrapper.m_UIControlsActionsCallbackInterfaces.Add(instance);</div>
+<div class="line"><span class="lineno"> 1734</span>            @Escape.started += instance.OnEscape;</div>
+<div class="line"><span class="lineno"> 1735</span>            @Escape.performed += instance.OnEscape;</div>
+<div class="line"><span class="lineno"> 1736</span>            @Escape.canceled += instance.OnEscape;</div>
+<div class="line"><span class="lineno"> 1737</span>            @Navigate.started += instance.OnNavigate;</div>
+<div class="line"><span class="lineno"> 1738</span>            @Navigate.performed += instance.OnNavigate;</div>
+<div class="line"><span class="lineno"> 1739</span>            @Navigate.canceled += instance.OnNavigate;</div>
+<div class="line"><span class="lineno"> 1740</span>            @Submit.started += instance.OnSubmit;</div>
+<div class="line"><span class="lineno"> 1741</span>            @Submit.performed += instance.OnSubmit;</div>
+<div class="line"><span class="lineno"> 1742</span>            @Submit.canceled += instance.OnSubmit;</div>
+<div class="line"><span class="lineno"> 1743</span>            @Cancel.started += instance.OnCancel;</div>
+<div class="line"><span class="lineno"> 1744</span>            @Cancel.performed += instance.OnCancel;</div>
+<div class="line"><span class="lineno"> 1745</span>            @Cancel.canceled += instance.OnCancel;</div>
+<div class="line"><span class="lineno"> 1746</span>            @Point.started += instance.OnPoint;</div>
+<div class="line"><span class="lineno"> 1747</span>            @Point.performed += instance.OnPoint;</div>
+<div class="line"><span class="lineno"> 1748</span>            @Point.canceled += instance.OnPoint;</div>
+<div class="line"><span class="lineno"> 1749</span>            @Click.started += instance.OnClick;</div>
+<div class="line"><span class="lineno"> 1750</span>            @Click.performed += instance.OnClick;</div>
+<div class="line"><span class="lineno"> 1751</span>            @Click.canceled += instance.OnClick;</div>
+<div class="line"><span class="lineno"> 1752</span>            @ScrollWheel.started += instance.OnScrollWheel;</div>
+<div class="line"><span class="lineno"> 1753</span>            @ScrollWheel.performed += instance.OnScrollWheel;</div>
+<div class="line"><span class="lineno"> 1754</span>            @ScrollWheel.canceled += instance.OnScrollWheel;</div>
+<div class="line"><span class="lineno"> 1755</span>            @MiddleClick.started += instance.OnMiddleClick;</div>
+<div class="line"><span class="lineno"> 1756</span>            @MiddleClick.performed += instance.OnMiddleClick;</div>
+<div class="line"><span class="lineno"> 1757</span>            @MiddleClick.canceled += instance.OnMiddleClick;</div>
+<div class="line"><span class="lineno"> 1758</span>            @RightClick.started += instance.OnRightClick;</div>
+<div class="line"><span class="lineno"> 1759</span>            @RightClick.performed += instance.OnRightClick;</div>
+<div class="line"><span class="lineno"> 1760</span>            @RightClick.canceled += instance.OnRightClick;</div>
+<div class="line"><span class="lineno"> 1761</span>            @TrackedDevicePosition.started += instance.OnTrackedDevicePosition;</div>
+<div class="line"><span class="lineno"> 1762</span>            @TrackedDevicePosition.performed += instance.OnTrackedDevicePosition;</div>
+<div class="line"><span class="lineno"> 1763</span>            @TrackedDevicePosition.canceled += instance.OnTrackedDevicePosition;</div>
+<div class="line"><span class="lineno"> 1764</span>            @TrackedDeviceOrientation.started += instance.OnTrackedDeviceOrientation;</div>
+<div class="line"><span class="lineno"> 1765</span>            @TrackedDeviceOrientation.performed += instance.OnTrackedDeviceOrientation;</div>
+<div class="line"><span class="lineno"> 1766</span>            @TrackedDeviceOrientation.canceled += instance.OnTrackedDeviceOrientation;</div>
+<div class="line"><span class="lineno"> 1767</span>            @Dev_O.started += instance.OnDev_O;</div>
+<div class="line"><span class="lineno"> 1768</span>            @Dev_O.performed += instance.OnDev_O;</div>
+<div class="line"><span class="lineno"> 1769</span>            @Dev_O.canceled += instance.OnDev_O;</div>
+<div class="line"><span class="lineno"> 1770</span>            @Dev_P.started += instance.OnDev_P;</div>
+<div class="line"><span class="lineno"> 1771</span>            @Dev_P.performed += instance.OnDev_P;</div>
+<div class="line"><span class="lineno"> 1772</span>            @Dev_P.canceled += instance.OnDev_P;</div>
+<div class="line"><span class="lineno"> 1773</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aefe7d89eec253d22d23167b9385937a2" name="aefe7d89eec253d22d23167b9385937a2"></a>
@@ -214,7 +259,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01727">1727</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1727</span>{ Get().Disable(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adaa0f21ab2f7a79c5bd0774ddd3e1a47" name="adaa0f21ab2f7a79c5bd0774ddd3e1a47"></a>
@@ -233,7 +279,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01726">1726</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1726</span>{ Get().Enable(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac3fd626312b98012748b08b1f8ed0682" name="ac3fd626312b98012748b08b1f8ed0682"></a>
@@ -252,7 +299,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01725">1725</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1725</span>{ <span class="keywordflow">return</span> m_Wrapper.m_UIControls; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a65834c1233014537b1340b942aaf0afe" name="a65834c1233014537b1340b942aaf0afe"></a>
@@ -279,7 +327,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01729">1729</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1729</span>{ <span class="keywordflow">return</span> <span class="keyword">set</span>.Get(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a190dd225f4dfd1f797c43a8569729779" name="a190dd225f4dfd1f797c43a8569729779"></a>
@@ -298,7 +347,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01818">1818</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1819</span>        {</div>
+<div class="line"><span class="lineno"> 1820</span>            <span class="keywordflow">if</span> (m_Wrapper.m_UIControlsActionsCallbackInterfaces.Remove(instance))</div>
+<div class="line"><span class="lineno"> 1821</span>                UnregisterCallbacks(instance);</div>
+<div class="line"><span class="lineno"> 1822</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a63f31150442f65b1676983a259f7b99e" name="a63f31150442f65b1676983a259f7b99e"></a>
@@ -317,7 +370,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01824">1824</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1825</span>        {</div>
+<div class="line"><span class="lineno"> 1826</span>            <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> m_Wrapper.m_UIControlsActionsCallbackInterfaces)</div>
+<div class="line"><span class="lineno"> 1827</span>                UnregisterCallbacks(item);</div>
+<div class="line"><span class="lineno"> 1828</span>            m_Wrapper.m_UIControlsActionsCallbackInterfaces.Clear();</div>
+<div class="line"><span class="lineno"> 1829</span>            AddCallbacks(instance);</div>
+<div class="line"><span class="lineno"> 1830</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

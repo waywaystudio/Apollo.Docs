@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d1/dcf/class_common_1_1_characters_1_1_a_i_1_1_non_pla
   <div class="headertitle"><div class="title">Common.Characters.AI.NonPlayerFleePositioning Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.AI.NonPlayerFleePositioning:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/dcf/class_common_1_1_characters_1_1_a_i_1_1_non_player_flee_positioning.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,7 +134,14 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d37/_non_player_flee_positioning_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d2/d37/_non_player_flee_positioning_8cs_source.html">NonPlayerFleePositioning.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            nonPlayer          = gameObject.GetComponentInParent&lt;<a class="code hl_class" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html">NonPlayer</a>&gt;();</div>
+<div class="line"><span class="lineno">   21</span>            skillTable         = nonPlayer.Skills;</div>
+<div class="line"><span class="lineno">   22</span>            obstacleLayer      = LayerMask.GetMask(<span class="stringliteral">&quot;Obstacle&quot;</span>);</div>
+<div class="line"><span class="lineno">   23</span>            obstacleLayerIndex = LayerMask.NameToLayer(<span class="stringliteral">&quot;Obstacle&quot;</span>);</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_html"><div class="ttname"><a href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html">Common.Characters.NonPlayers.NonPlayer</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d46/_non_player_8cs_source.html#l00007">NonPlayer.cs:8</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a906e3dc5964489da84a41c02a62f4042" name="a906e3dc5964489da84a41c02a62f4042"></a>
@@ -146,7 +160,26 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d37/_non_player_flee_positioning_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d2/d37/_non_player_flee_positioning_8cs_source.html">NonPlayerFleePositioning.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (PrioritySkill is <span class="keyword">null</span> || </div>
+<div class="line"><span class="lineno">   29</span>                PrioritySkill.Invoker.IsAbleToActive)</div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                <span class="comment">// Do not Flee</span></div>
+<div class="line"><span class="lineno">   32</span>                <span class="keywordflow">return</span> TaskStatus.Success;</div>
+<div class="line"><span class="lineno">   33</span>            }</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (IsValidHidePosition(nonPlayer, PrioritySkill.<a class="code hl_property" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">SkillTarget</a>, out var dest))</div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                <span class="comment">// Do not Flee</span></div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">return</span> TaskStatus.Failure;</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>            nonPlayer.Run(dest, nonPlayer.Idle);</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">return</span> TaskStatus.Failure;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_html_af6e247ddcbea38bf346b41eb48018d05"><div class="ttname"><a href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">Common.Skills.NonPlayers.NonPlayerSkillBehaviour.SkillTarget</a></div><div class="ttdeci">virtual Character SkillTarget</div><div class="ttdoc">Designed For Enemy AI.</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_non_player_skill_behaviour_8cs_source.html#l00021">NonPlayerSkillBehaviour.cs:22</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

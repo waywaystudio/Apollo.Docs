@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('db/dd0/class_common_1_1_props_1_1_variants_1_1_ancient
   <div class="headertitle"><div class="title">Common.Props.Variants.AncientTree Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Props.Variants.AncientTree:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/dd0/class_common_1_1_props_1_1_variants_1_1_ancient_tree.png" usemap="#Common.Props.Variants.AncientTree_map" alt=""/>
+  <map id="Common.Props.Variants.AncientTree_map" name="Common.Props.Variants.AncientTree_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="231,0,452,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,7 +137,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/df8/_ancient_tree_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d3/df8/_ancient_tree_8cs_source.html">AncientTree.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">if</span> (isRuntimeGenerate)</div>
+<div class="line"><span class="lineno">   17</span>            {</div>
+<div class="line"><span class="lineno">   18</span>                SelectTheme();</div>
+<div class="line"><span class="lineno">   19</span>            }</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a76a272efe0f53ccfdda0408fa54d9f2b" name="a76a272efe0f53ccfdda0408fa54d9f2b"></a>
@@ -146,7 +162,18 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/df8/_ancient_tree_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d3/df8/_ancient_tree_8cs_source.html">AncientTree.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (propThemes.IsNullOrEmpty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   25</span>            </div>
+<div class="line"><span class="lineno">   26</span>            var currentSecond = DateTime.Now.Second;</div>
+<div class="line"><span class="lineno">   27</span>            var index = currentSecond % propThemes.Count;</div>
+<div class="line"><span class="lineno">   28</span>            var selectedTheme = propThemes[index];</div>
+<div class="line"><span class="lineno">   29</span>            </div>
+<div class="line"><span class="lineno">   30</span>            propThemes.ForEach(theme =&gt; theme.gameObject.SetActive(<span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">   31</span>            selectedTheme.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   32</span>            selectedTheme.RandomElementsActive(minMaxNormal);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

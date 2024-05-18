@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,25 @@ $(function(){initNavTree('dd/db2/class_common_1_1_snares_1_1_snare.html','../../
   <div class="headertitle"><div class="title">Common.Snares.Snare Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Snares.Snare:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/db2/class_common_1_1_snares_1_1_snare.png" usemap="#Common.Snares.Snare_map" alt=""/>
+  <map id="Common.Snares.Snare_map" name="Common.Snares.Snare_map">
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="836,56,1244,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1254,56,1662,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="1672,56,2080,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="836,0,1244,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1254,0,1662,24"/>
+<area href="../../d4/dbe/class_common_1_1_skills_1_1_silk_strings_1_1_threaded_sanctums_1_1_threaded_sanctum_snare.html" alt="Common.Skills.SilkStrings.ThreadedSanctums.ThreadedSanctumSnare" shape="rect" coords="0,168,408,192"/>
+<area href="../../df/dcc/class_common_1_1_snares_1_1_variants_1_1_cunning_of_fox_snare.html" alt="Common.Snares.Variants.CunningOfFoxSnare" shape="rect" coords="418,168,826,192"/>
+<area href="../../d1/d3e/class_common_1_1_snares_1_1_variants_1_1_flames_of_the_rift_snare.html" alt="Common.Snares.Variants.FlamesOfTheRiftSnare" shape="rect" coords="836,168,1244,192"/>
+<area href="../../d1/d79/class_common_1_1_snares_1_1_variants_1_1_flaming_poo_snare.html" alt="Common.Snares.Variants.FlamingPooSnare" shape="rect" coords="1254,168,1662,192"/>
+<area href="../../dd/d5b/class_common_1_1_snares_1_1_variants_1_1_tainted_thread_snare.html" alt="Common.Snares.Variants.TaintedThreadSnare" shape="rect" coords="1672,168,2080,192"/>
+<area href="../../d4/d38/class_common_1_1_snares_1_1_variants_1_1_unit_fire_snare.html" alt="Common.Snares.Variants.UnitFireSnare" shape="rect" coords="2090,168,2498,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -192,7 +212,17 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1c/_snare_8cs_source.html#l00053">53</a> of file <a class="el" href="../../d9/d1c/_snare_8cs_source.html">Snare.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (deployer.IsDeployed)</div>
+<div class="line"><span class="lineno">   56</span>            {</div>
+<div class="line"><span class="lineno">   57</span>                Invoker.Cancel();</div>
+<div class="line"><span class="lineno">   58</span>            }</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                deployer.StopDeploy();</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aafa4e0dbc4130c3368dc86e943b3a2bc" name="aafa4e0dbc4130c3368dc86e943b3a2bc"></a>
@@ -219,7 +249,22 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1c/_snare_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d9/d1c/_snare_8cs_source.html">Snare.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            Provider = provider;</div>
+<div class="line"><span class="lineno">   34</span>            Invoker  = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   35</span>            Detector = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">DetectModel</a>(transform);</div>
+<div class="line"><span class="lineno">   36</span>            </div>
+<div class="line"><span class="lineno">   37</span>            executor.Initialize(Provider);</div>
+<div class="line"><span class="lineno">   38</span>            executor.SetSender(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   39</span>            </div>
+<div class="line"><span class="lineno">   40</span>            effector.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   41</span>            deployer.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   42</span>            executeTimer.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   43</span>            spawnEvent.Invoke(snareCode, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">Common.Systems.DetectModel</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00008">DetectModel.cs:9</a></div></div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1174e2732ad604eaf33e820e9273312b" name="a1174e2732ad604eaf33e820e9273312b"></a>
@@ -246,7 +291,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1c/_snare_8cs_source.html#l00046">46</a> of file <a class="el" href="../../d9/d1c/_snare_8cs_source.html">Snare.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   49</span>            </div>
+<div class="line"><span class="lineno">   50</span>            Invoker.Spawn();</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -466,7 +516,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1c/_snare_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d9/d1c/_snare_8cs_source.html">Snare.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a83c20982c9e248b3c6439a06f1fcc913" name="a83c20982c9e248b3c6439a06f1fcc913"></a>
@@ -614,7 +665,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1c/_snare_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d9/d1c/_snare_8cs_source.html">Snare.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8c91c68344e7d037220a034cab5fbf6b" name="a8c91c68344e7d037220a034cab5fbf6b"></a>
@@ -664,7 +716,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1c/_snare_8cs_source.html#l00025">25</a> of file <a class="el" href="../../d9/d1c/_snare_8cs_source.html">Snare.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9a99e36a764c76b701efad207d7140c2" name="a9a99e36a764c76b701efad207d7140c2"></a>
@@ -690,7 +743,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d1c/_snare_8cs_source.html#l00027">27</a> of file <a class="el" href="../../d9/d1c/_snare_8cs_source.html">Snare.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span> ();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4724a718a392e29890b0a36997d82907" name="a4724a718a392e29890b0a36997d82907"></a>

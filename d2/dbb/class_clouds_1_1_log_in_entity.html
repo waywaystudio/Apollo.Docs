@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -139,7 +140,32 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d6f/_log_in_entity_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d7/d6f/_log_in_entity_8cs_source.html">LogInEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            loginCanceller = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   34</span>            IsLogin        = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   35</span>        </div>
+<div class="line"><span class="lineno">   36</span>            var request = <span class="keyword">new</span> LoginWithCustomIDRequest</div>
+<div class="line"><span class="lineno">   37</span>            {</div>
+<div class="line"><span class="lineno">   38</span>                CustomId      = CustomId, </div>
+<div class="line"><span class="lineno">   39</span>                CreateAccount = <span class="keyword">true</span></div>
+<div class="line"><span class="lineno">   40</span>            };</div>
+<div class="line"><span class="lineno">   41</span>        </div>
+<div class="line"><span class="lineno">   42</span>            PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, <a class="code hl_class" href="../../da/d8b/class_cloud_manager.html">CloudManager</a>.OnSharedFailure);</div>
+<div class="line"><span class="lineno">   43</span>        </div>
+<div class="line"><span class="lineno">   44</span>            await UniTask.WaitUntil(() =&gt; IsLogin, cancellationToken:loginCanceller.Token);</div>
+<div class="line"><span class="lineno">   45</span>        </div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   47</span>        </div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordtype">void</span> OnLoginSuccess(LoginResult result)</div>
+<div class="line"><span class="lineno">   49</span>            {</div>
+<div class="line"><span class="lineno">   50</span>                Debug.Log(<span class="stringliteral">&quot;Logged in successfully&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>                IsLogin   = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   53</span>                PlayFabId = result.PlayFabId;</div>
+<div class="line"><span class="lineno">   54</span>            }</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="ttc" id="aclass_cloud_manager_html"><div class="ttname"><a href="../../da/d8b/class_cloud_manager.html">CloudManager</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d48/_cloud_manager_8cs_source.html#l00009">CloudManager.cs:10</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4d685048807ab543cf4dcf77c778aded" name="a4d685048807ab543cf4dcf77c778aded"></a>
@@ -158,7 +184,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d6f/_log_in_entity_8cs_source.html#l00057">57</a> of file <a class="el" href="../../d7/d6f/_log_in_entity_8cs_source.html">LogInEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (loginCanceller is not <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                loginCanceller.Cancel();</div>
+<div class="line"><span class="lineno">   62</span>                loginCanceller.Dispose();</div>
+<div class="line"><span class="lineno">   63</span>                loginCanceller = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   64</span>            }</div>
+<div class="line"><span class="lineno">   65</span>            </div>
+<div class="line"><span class="lineno">   66</span>            PlayFabId = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   67</span>            IsLogin   = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aabe204d95b48807632b077bdad921624" name="aabe204d95b48807632b077bdad921624"></a>
@@ -177,7 +214,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d6f/_log_in_entity_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d7/d6f/_log_in_entity_8cs_source.html">LogInEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (setAutoCustomId)</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                customId = SystemInfo.deviceUniqueIdentifier;</div>
+<div class="line"><span class="lineno">   28</span>            }</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -226,7 +269,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d6f/_log_in_entity_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d7/d6f/_log_in_entity_8cs_source.html">LogInEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1dac1f6673317535fcb95ef5e5d1b897" name="a1dac1f6673317535fcb95ef5e5d1b897"></a>
@@ -250,7 +294,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d6f/_log_in_entity_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d7/d6f/_log_in_entity_8cs_source.html">LogInEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

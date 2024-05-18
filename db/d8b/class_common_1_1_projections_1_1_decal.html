@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,6 +104,16 @@ $(function(){initNavTree('db/d8b/class_common_1_1_projections_1_1_decal.html','.
   <div class="headertitle"><div class="title">Common.Projections.Decal Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projections.Decal:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/d8b/class_common_1_1_projections_1_1_decal.png" usemap="#Common.Projections.Decal_map" alt=""/>
+  <map id="Common.Projections.Decal_map" name="Common.Projections.Decal_map">
+<area href="../../d1/dde/class_common_1_1_projections_1_1_decals_1_1_body_decal.html" alt="Common.Projections.Decals.BodyDecal" shape="rect" coords="0,112,237,136"/>
+<area href="../../df/d7b/class_common_1_1_projections_1_1_decals_1_1_head_decal.html" alt="Common.Projections.Decals.HeadDecal" shape="rect" coords="247,112,484,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -197,7 +208,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d83/_decal_8cs_source.html#l00121">121</a> of file <a class="el" href="../../db/d83/_decal_8cs_source.html">Decal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  122</span>        {</div>
+<div class="line"><span class="lineno">  123</span>            ProjectionTokenSource?.Cancel();</div>
+<div class="line"><span class="lineno">  124</span>            ProjectionTokenSource = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abcefe5769eaa865c3daf483cc9d7d053" name="abcefe5769eaa865c3daf483cc9d7d053"></a>
@@ -224,7 +239,35 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d83/_decal_8cs_source.html#l00056">56</a> of file <a class="el" href="../../db/d83/_decal_8cs_source.html">Decal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            ProjectableSequence     = projectionSequence;</div>
+<div class="line"><span class="lineno">   59</span>            DetectProperty          = projectionSequence.DetectProperty;</div>
+<div class="line"><span class="lineno">   60</span>            InstanceKey             = GetInstanceID().ToString();</div>
+<div class="line"><span class="lineno">   61</span>            decalProjector.material = <span class="keyword">new</span> Material(materialReference);</div>
+<div class="line"><span class="lineno">   62</span>            decalProjector.size     = ProjectorSize;</div>
+<div class="line"><span class="lineno">   63</span>            ArcAngleNormalizer = DetectProperty.TargetType <span class="keywordflow">switch</span></div>
+<div class="line"><span class="lineno">   64</span>            {</div>
+<div class="line"><span class="lineno">   65</span>                TargetingType.Arc    =&gt; Mathf.Clamp(1f - DetectProperty.SizeEntity.Z / 360, 0f, 360f),</div>
+<div class="line"><span class="lineno">   66</span>                TargetingType.Circle =&gt; Mathf.Clamp(0F, 0f, 360f),</div>
+<div class="line"><span class="lineno">   67</span>                _                    =&gt; ArcAngleNormalizer</div>
+<div class="line"><span class="lineno">   68</span>            };</div>
+<div class="line"><span class="lineno">   69</span>            </div>
+<div class="line"><span class="lineno">   70</span>            decalProjector.material.SetFloat(FillProgressShaderID, 0f);</div>
+<div class="line"><span class="lineno">   71</span>            decalProjector.material.SetFloat(ArcShaderID, ArcAngleNormalizer);</div>
+<div class="line"><span class="lineno">   72</span>            decalProjector.material.SetColor(ColorShaderID, backgroundColor);</div>
+<div class="line"><span class="lineno">   73</span>            decalProjector.material.SetColor(FillColorShaderID, fillColor);</div>
+<div class="line"><span class="lineno">   74</span>            decalProjector.material.SetFloat(AngleShaderID, 0f);</div>
+<div class="line"><span class="lineno">   75</span>            decalProjector.material.SetFloat(InnerRadiusID, DetectProperty.SizeEntity.Y / DetectProperty.SizeEntity.Z);</div>
+<div class="line"><span class="lineno">   76</span>            </div>
+<div class="line"><span class="lineno">   77</span>            projectionSequence.Sections</div>
+<div class="line"><span class="lineno">   78</span>                              .Add(startSection, $<span class="stringliteral">&quot;{InstanceKey}.PlayProjection&quot;</span>, () =&gt; PlayProjection().Forget())</div>
+<div class="line"><span class="lineno">   79</span>                              .Add(endSection, $<span class="stringliteral">&quot;{InstanceKey}.ResetMaterial&quot;</span>, StopProjection)</div>
+<div class="line"><span class="lineno">   80</span>                              .AddIf(endSection != Section.End, Section.End, $<span class="stringliteral">&quot;{InstanceKey}.ResetMaterial&quot;</span>, StopProjection)</div>
+<div class="line"><span class="lineno">   81</span>                              ;</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>            StopProjection();</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a28dbb8a529970b0fc0d4cb1f91d96dd4" name="a28dbb8a529970b0fc0d4cb1f91d96dd4"></a>
@@ -251,7 +294,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d83/_decal_8cs_source.html#l00127">127</a> of file <a class="el" href="../../db/d83/_decal_8cs_source.html">Decal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  128</span>        {</div>
+<div class="line"><span class="lineno">  129</span>            CancelProjection();</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5f2c3a35652149965b8b5e8eee8cba61" name="a5f2c3a35652149965b8b5e8eee8cba61"></a>
@@ -278,7 +324,29 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d83/_decal_8cs_source.html#l00087">87</a> of file <a class="el" href="../../db/d83/_decal_8cs_source.html">Decal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   88</span>        {</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (!IsActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   90</span>            </div>
+<div class="line"><span class="lineno">   91</span>            gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   92</span>            decalProjector.material.SetFloat(FillProgressShaderID, 0f);</div>
+<div class="line"><span class="lineno">   93</span>            ProjectionTokenSource = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   94</span>        </div>
+<div class="line"><span class="lineno">   95</span>            var timer = 0f;</div>
+<div class="line"><span class="lineno">   96</span>            var inverseDuration = 1.0f / ProjectableSequence.CastingTime;</div>
+<div class="line"><span class="lineno">   97</span>            </div>
+<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">while</span> (timer &lt; 1f)</div>
+<div class="line"><span class="lineno">   99</span>            {</div>
+<div class="line"><span class="lineno">  100</span>                timer += Time.deltaTime * inverseDuration;</div>
+<div class="line"><span class="lineno">  101</span>                timer =  Mathf.Clamp01(timer);</div>
+<div class="line"><span class="lineno">  102</span>                </div>
+<div class="line"><span class="lineno">  103</span>                decalProjector.material.SetFloat(FillProgressShaderID, timer);</div>
+<div class="line"><span class="lineno">  104</span>            </div>
+<div class="line"><span class="lineno">  105</span>                await UniTask.Yield(ProjectionTokenSource.Token);</div>
+<div class="line"><span class="lineno">  106</span>            }</div>
+<div class="line"><span class="lineno">  107</span>            </div>
+<div class="line"><span class="lineno">  108</span>            StopProjection();</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a73950343495e0a0a79ccc1fa4083dcbd" name="a73950343495e0a0a79ccc1fa4083dcbd"></a>
@@ -305,7 +373,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d83/_decal_8cs_source.html#l00111">111</a> of file <a class="el" href="../../db/d83/_decal_8cs_source.html">Decal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  112</span>        {</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">if</span> (!IsActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  114</span>            </div>
+<div class="line"><span class="lineno">  115</span>            CancelProjection();</div>
+<div class="line"><span class="lineno">  116</span>            </div>
+<div class="line"><span class="lineno">  117</span>            decalProjector.material.SetFloat(FillProgressShaderID, 0f);</div>
+<div class="line"><span class="lineno">  118</span>            gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -739,7 +815,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d83/_decal_8cs_source.html#l00034">34</a> of file <a class="el" href="../../db/d83/_decal_8cs_source.html">Decal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aee1c5b49908cbf43b06790549811fa19" name="aee1c5b49908cbf43b06790549811fa19"></a>
@@ -763,7 +840,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d83/_decal_8cs_source.html#l00017">17</a> of file <a class="el" href="../../db/d83/_decal_8cs_source.html">Decal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">true</span>;</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae9ff65db7633d9eac431886066b96f9c" name="ae9ff65db7633d9eac431886066b96f9c"></a>
@@ -787,7 +865,25 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d83/_decal_8cs_source.html#l00035">35</a> of file <a class="el" href="../../db/d83/_decal_8cs_source.html">Decal.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                var defaultSize = <span class="keyword">new</span> Vector3(decalProjector.size.x, decalProjector.size.y, ProjectorDepth);</div>
+<div class="line"><span class="lineno">   40</span>                var sizeEntity = DetectProperty.SizeEntity;</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>                defaultSize = DetectProperty.TargetType <span class="keywordflow">switch</span></div>
+<div class="line"><span class="lineno">   43</span>                {</div>
+<div class="line"><span class="lineno">   44</span>                    TargetingType.Circle =&gt; <span class="keyword">new</span> Vector3(sizeEntity.Y * 2f, sizeEntity.Y * 2f, ProjectorDepth),</div>
+<div class="line"><span class="lineno">   45</span>                    TargetingType.Arc    =&gt; <span class="keyword">new</span> Vector3(sizeEntity.Y * 2f, sizeEntity.Y * 2f, ProjectorDepth),</div>
+<div class="line"><span class="lineno">   46</span>                    TargetingType.Rect   =&gt; <span class="keyword">new</span> Vector3(sizeEntity.Z, sizeEntity.Y, ProjectorDepth),</div>
+<div class="line"><span class="lineno">   47</span>                    TargetingType.Donut  =&gt; <span class="keyword">new</span> Vector3(sizeEntity.Y * 2f, sizeEntity.Z * 2f, ProjectorDepth),</div>
+<div class="line"><span class="lineno">   48</span>                    _                    =&gt; defaultSize</div>
+<div class="line"><span class="lineno">   49</span>                };</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">return</span> defaultSize;</div>
+<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

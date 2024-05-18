@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,16 @@ $(function(){initNavTree('db/dee/class_common_1_1_executors_1_1_variants_1_1_kno
   <div class="headertitle"><div class="title">Common.Executors.Variants.KnockBackExecutor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Executors.Variants.KnockBackExecutor:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/dee/class_common_1_1_executors_1_1_variants_1_1_knock_back_executor.png" usemap="#Common.Executors.Variants.KnockBackExecutor_map" alt=""/>
+  <map id="Common.Executors.Variants.KnockBackExecutor_map" name="Common.Executors.Variants.KnockBackExecutor_map">
+<area href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html" alt="Common.Executors.ExecuteBehaviour" shape="rect" coords="149,56,437,80"/>
+<area href="../../d7/dc1/interface_i_condition_table.html" alt="IConditionTable&lt; GameObject &gt;" shape="rect" coords="298,0,586,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -166,7 +177,21 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/df4/_knock_back_executor_8cs_source.html#l00010">10</a> of file <a class="el" href="../../d6/df4/_knock_back_executor_8cs_source.html">KnockBackExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">if</span> (!target.TryGetComponent(out IKnockBackTaker taker)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   13</span> </div>
+<div class="line"><span class="lineno">   14</span>            var targetPosition = target.transform.position;</div>
+<div class="line"><span class="lineno">   15</span>            var direction = property.Source <span class="keywordflow">switch</span></div>
+<div class="line"><span class="lineno">   16</span>            {</div>
+<div class="line"><span class="lineno">   17</span>                KnockBackProperty.SourceType.ProviderPosition =&gt; (targetPosition - Provider.Position).normalized,</div>
+<div class="line"><span class="lineno">   18</span>                KnockBackProperty.SourceType.ProviderParallel =&gt; <span class="keyword">new</span> Vector3 (Provider.Forward.x, 0f, Provider.Forward.z),</div>
+<div class="line"><span class="lineno">   19</span>                KnockBackProperty.SourceType.ProviderOpposite =&gt; <span class="keyword">new</span> Vector3 (Provider.Forward.x * -1f, 0f, Provider.Forward.z * -1f),</div>
+<div class="line"><span class="lineno">   20</span>                _                                             =&gt; (targetPosition - Provider.Position).normalized</div>
+<div class="line"><span class="lineno">   21</span>            };</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            taker.TakeKnockBack(Provider.Position, direction, property);</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

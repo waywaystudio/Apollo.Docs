@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d4/de9/class_common_1_1_snares_1_1_snare_trigger.html'
   <div class="headertitle"><div class="title">Common.Snares.SnareTrigger Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Snares.SnareTrigger:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/de9/class_common_1_1_snares_1_1_snare_trigger.png" usemap="#Common.Snares.SnareTrigger_map" alt=""/>
+  <map id="Common.Snares.SnareTrigger_map" name="Common.Snares.SnareTrigger_map">
+<area href="../../df/d42/class_common_1_1_collider_trigger.html" alt="Common.ColliderTrigger" shape="rect" coords="0,0,183,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -167,7 +177,30 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../df/d42/class_common_1_1_collider_trigger.html">Common.ColliderTrigger</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dfa/_snare_trigger_8cs_source.html#l00016">16</a> of file <a class="el" href="../../dc/dfa/_snare_trigger_8cs_source.html">SnareTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">if</span> (sequencer is not Snare snareSequence) <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   19</span>            </div>
+<div class="line"><span class="lineno">   20</span>            base.Register(snareSequence);</div>
+<div class="line"><span class="lineno">   21</span>            </div>
+<div class="line"><span class="lineno">   22</span>            snare = snareSequence;</div>
+<div class="line"><span class="lineno">   23</span>            snare.Sections</div>
+<div class="line"><span class="lineno">   24</span>                 .Add(Section.Execute, <span class="stringliteral">&quot;ExecuteToEnteredObjects&quot;</span>, ExecuteToEnteredObjects)</div>
+<div class="line"><span class="lineno">   25</span>                 .Add(Section.End, <span class="stringliteral">&quot;ClearInColliderObjects&quot;</span>, InColliderObjects.Clear)</div>
+<div class="line"><span class="lineno">   26</span>                 ;</div>
+<div class="line"><span class="lineno">   27</span>            </div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (executeOnEntered)</div>
+<div class="line"><span class="lineno">   29</span>            {</div>
+<div class="line"><span class="lineno">   30</span>                AddOnEnter(<span class="stringliteral">&quot;SnareExecution&quot;</span>, snare.Executor.Execute);</div>
+<div class="line"><span class="lineno">   31</span>            }</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (EventHandler.OnExit.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                AddOnDisable(<span class="stringliteral">&quot;SnareDisableExecution&quot;</span>, SnareDisableExecution);</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a046b8588983a19e8fdd37a446a8c5ba1" name="a046b8588983a19e8fdd37a446a8c5ba1"></a>
@@ -196,7 +229,17 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../df/d42/class_common_1_1_collider_trigger.html">Common.ColliderTrigger</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dfa/_snare_trigger_8cs_source.html#l00041">41</a> of file <a class="el" href="../../dc/dfa/_snare_trigger_8cs_source.html">SnareTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            base.Unregister(sequencer);</div>
+<div class="line"><span class="lineno">   44</span>            </div>
+<div class="line"><span class="lineno">   45</span>            snare.Sections</div>
+<div class="line"><span class="lineno">   46</span>                 .Remove(Section.Execute, <span class="stringliteral">&quot;ExecuteToEnteredObjects&quot;</span>)</div>
+<div class="line"><span class="lineno">   47</span>                 .Remove(Section.End, <span class="stringliteral">&quot;ClearInColliderObjects&quot;</span>)</div>
+<div class="line"><span class="lineno">   48</span>                 ;</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

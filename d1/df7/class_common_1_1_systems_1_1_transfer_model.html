@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -169,7 +170,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            this.master   = master;</div>
+<div class="line"><span class="lineno">   23</span>            </div>
+<div class="line"><span class="lineno">   24</span>            WalkableLayer = walkableLayer;</div>
+<div class="line"><span class="lineno">   25</span>            UnsafeLayer   = unsafeLayer;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -189,7 +196,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00232">232</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  233</span>        {</div>
+<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">if</span> (transferTween != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  235</span>            {</div>
+<div class="line"><span class="lineno">  236</span>                transferTween.Kill();</div>
+<div class="line"><span class="lineno">  237</span>                transferTween = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  238</span>            }</div>
+<div class="line"><span class="lineno">  239</span> </div>
+<div class="line"><span class="lineno">  240</span>            <span class="keywordflow">if</span> (rotateTween != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  241</span>            {</div>
+<div class="line"><span class="lineno">  242</span>                rotateTween.Kill();</div>
+<div class="line"><span class="lineno">  243</span>                rotateTween = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  244</span>            }</div>
+<div class="line"><span class="lineno">  245</span> </div>
+<div class="line"><span class="lineno">  246</span>            <span class="keywordflow">if</span> (jumpSequence != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  247</span>            {</div>
+<div class="line"><span class="lineno">  248</span>                jumpSequence.Kill();</div>
+<div class="line"><span class="lineno">  249</span>                jumpSequence = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  250</span>            }</div>
+<div class="line"><span class="lineno">  251</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2c3af1f1e7455a5eeb6f90487c379f56" name="a2c3af1f1e7455a5eeb6f90487c379f56"></a>
@@ -217,7 +243,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00208">208</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  209</span>        {</div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">if</span> (transferTween == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  211</span>            {</div>
+<div class="line"><span class="lineno">  212</span>                remainingDistance = 0f;</div>
+<div class="line"><span class="lineno">  213</span>                remainingDuration = 0f;</div>
+<div class="line"><span class="lineno">  214</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  215</span>            }</div>
+<div class="line"><span class="lineno">  216</span> </div>
+<div class="line"><span class="lineno">  217</span>            <span class="comment">// Calculate the progress of the tween</span></div>
+<div class="line"><span class="lineno">  218</span>            var progress = transferTween.ElapsedPercentage();</div>
+<div class="line"><span class="lineno">  219</span>            </div>
+<div class="line"><span class="lineno">  220</span>            remainingDuration = transferTween.Duration() * (1 - progress);</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>            <span class="comment">// Calculate the remaining distance</span></div>
+<div class="line"><span class="lineno">  223</span>            var currentPosition = master.position;</div>
+<div class="line"><span class="lineno">  224</span>            </div>
+<div class="line"><span class="lineno">  225</span>            remainingDistance = Vector3.Distance(currentPosition, originalDestination) * (1 - progress);</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>            <span class="comment">// Cancel the dash</span></div>
+<div class="line"><span class="lineno">  228</span>            transferTween.Kill();</div>
+<div class="line"><span class="lineno">  229</span>            transferTween = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a031dfc66ae9f7e820c71bdf71b363f77" name="a031dfc66ae9f7e820c71bdf71b363f77"></a>
@@ -255,7 +303,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00096">96</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            Cancel();</div>
+<div class="line"><span class="lineno">   99</span>            </div>
+<div class="line"><span class="lineno">  100</span>            var distance = Vector3.Distance(RootPosition, destination);</div>
+<div class="line"><span class="lineno">  101</span>            var dashDestination = PathfindingUtility.GetAcrossPosition(RootPosition,</div>
+<div class="line"><span class="lineno">  102</span>                                                                       Forward,</div>
+<div class="line"><span class="lineno">  103</span>                                                                       UnsafeLayer,</div>
+<div class="line"><span class="lineno">  104</span>                                                                       WalkableLayer,</div>
+<div class="line"><span class="lineno">  105</span>                                                                       distance,</div>
+<div class="line"><span class="lineno">  106</span>                                                                       farThreshold);</div>
+<div class="line"><span class="lineno">  107</span>            </div>
+<div class="line"><span class="lineno">  108</span>            transferTween = master.DOMove(dashDestination, duration)</div>
+<div class="line"><span class="lineno">  109</span>                                  .SetUpdate(DG.Tweening.UpdateType.Fixed)</div>
+<div class="line"><span class="lineno">  110</span>                                  .SetEase(easeType)</div>
+<div class="line"><span class="lineno">  111</span>                                  .OnComplete(() =&gt;</div>
+<div class="line"><span class="lineno">  112</span>                                  {</div>
+<div class="line"><span class="lineno">  113</span>                                      callback?.Invoke();</div>
+<div class="line"><span class="lineno">  114</span>                                      </div>
+<div class="line"><span class="lineno">  115</span>                                      <span class="comment">// Note.Dash OnComplete에, 또 Dash를 넣는 경우, 두 번째 Dash 실행 이후에 아래에 Kill이 실행되어, 두 번째 Dash 실행 멈춤</span></div>
+<div class="line"><span class="lineno">  116</span>                                      <span class="comment">// transferTween.Kill();</span></div>
+<div class="line"><span class="lineno">  117</span>                                      <span class="comment">// transferTween = null;</span></div>
+<div class="line"><span class="lineno">  118</span>                                  });</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa4502da76a3c554650014f305161700a" name="aa4502da76a3c554650014f305161700a"></a>
@@ -298,7 +369,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00077">77</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            Cancel();</div>
+<div class="line"><span class="lineno">   80</span>            </div>
+<div class="line"><span class="lineno">   81</span>            var dashDestination = PathfindingUtility.GetAcrossPosition(RootPosition,</div>
+<div class="line"><span class="lineno">   82</span>                                                                       direction,</div>
+<div class="line"><span class="lineno">   83</span>                                                                       UnsafeLayer,</div>
+<div class="line"><span class="lineno">   84</span>                                                                       WalkableLayer,</div>
+<div class="line"><span class="lineno">   85</span>                                                                       distance,</div>
+<div class="line"><span class="lineno">   86</span>                                                                       farThreshold);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>            transferTween = master.DOMove(dashDestination, duration)</div>
+<div class="line"><span class="lineno">   89</span>                                  .SetUpdate(DG.Tweening.UpdateType.Fixed)</div>
+<div class="line"><span class="lineno">   90</span>                                  .SetEase(easeType)</div>
+<div class="line"><span class="lineno">   91</span>                                  .OnComplete(() =&gt;</div>
+<div class="line"><span class="lineno">   92</span>                                  {</div>
+<div class="line"><span class="lineno">   93</span>                                      callback?.Invoke();</div>
+<div class="line"><span class="lineno">   94</span>                                  });</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acf9c644649059997fc2efb44a486382e" name="acf9c644649059997fc2efb44a486382e"></a>
@@ -317,7 +406,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00253">253</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  254</span>        {</div>
+<div class="line"><span class="lineno">  255</span>            Cancel();</div>
+<div class="line"><span class="lineno">  256</span>            CancelRotate();</div>
+<div class="line"><span class="lineno">  257</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a001dbadef4f38e8d2cae55c179e675b2" name="a001dbadef4f38e8d2cae55c179e675b2"></a>
@@ -345,7 +438,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00185">185</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  186</span>        {</div>
+<div class="line"><span class="lineno">  187</span>            var startTime = Time.time;</div>
+<div class="line"><span class="lineno">  188</span>            var initialPosition = master.position;</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>            transferTween = DOTween.To(() =&gt; 0f, _ =&gt; { }, 1f, duration)</div>
+<div class="line"><span class="lineno">  191</span>                                   .OnUpdate(() =&gt;</div>
+<div class="line"><span class="lineno">  192</span>                                   {</div>
+<div class="line"><span class="lineno">  193</span>                                       <span class="keywordflow">if</span> (source is <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  194</span>                                       {</div>
+<div class="line"><span class="lineno">  195</span>                                           transferTween.Kill();</div>
+<div class="line"><span class="lineno">  196</span>                                           <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  197</span>                                       }</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>                                       var t = (Time.time - startTime) / duration;</div>
+<div class="line"><span class="lineno">  200</span>                                       var targetPosition = source.position;</div>
+<div class="line"><span class="lineno">  201</span>                                       var newPosition = Vector3.Lerp(initialPosition, targetPosition, t);</div>
+<div class="line"><span class="lineno">  202</span> </div>
+<div class="line"><span class="lineno">  203</span>                                       master.position = newPosition;</div>
+<div class="line"><span class="lineno">  204</span>                                   })</div>
+<div class="line"><span class="lineno">  205</span>                                   .OnComplete(() =&gt; callback?.Invoke());</div>
+<div class="line"><span class="lineno">  206</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9289800b9d561e143db3ba26ea1503f5" name="a9289800b9d561e143db3ba26ea1503f5"></a>
@@ -378,7 +492,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00169">169</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  170</span>        {</div>
+<div class="line"><span class="lineno">  171</span>            var drawDirection = source - RootPosition;</div>
+<div class="line"><span class="lineno">  172</span>            var distanceEachOther = Vector3.Distance(source, RootPosition);</div>
+<div class="line"><span class="lineno">  173</span>            var drawDistance = Mathf.Min(distanceEachOther, maxDistance);</div>
+<div class="line"><span class="lineno">  174</span>            var drawDestination = PathfindingUtility.GetWalkablePosition(RootPosition, </div>
+<div class="line"><span class="lineno">  175</span>                                                         drawDirection, </div>
+<div class="line"><span class="lineno">  176</span>                                                         UnsafeLayer,</div>
+<div class="line"><span class="lineno">  177</span>                                                         WalkableLayer,</div>
+<div class="line"><span class="lineno">  178</span>                                                         drawDistance);</div>
+<div class="line"><span class="lineno">  179</span>            </div>
+<div class="line"><span class="lineno">  180</span>            transferTween = master.DOMove(drawDestination, drawDistance / speed)</div>
+<div class="line"><span class="lineno">  181</span>                                  .SetUpdate(DG.Tweening.UpdateType.Normal)</div>
+<div class="line"><span class="lineno">  182</span>                                  .OnComplete(() =&gt; callback?.Invoke());</div>
+<div class="line"><span class="lineno">  183</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3010ec7be6280b51faa47974de4205cc" name="a3010ec7be6280b51faa47974de4205cc"></a>
@@ -418,7 +546,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00045">45</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            Cancel();</div>
+<div class="line"><span class="lineno">   48</span>            </div>
+<div class="line"><span class="lineno">   49</span>            var distance = Vector3.Distance(RootPosition, destination);</div>
+<div class="line"><span class="lineno">   50</span>            var jumpDestination = PathfindingUtility.GetAcrossPosition(RootPosition,</div>
+<div class="line"><span class="lineno">   51</span>                                                                       Forward,</div>
+<div class="line"><span class="lineno">   52</span>                                                                       UnsafeLayer,</div>
+<div class="line"><span class="lineno">   53</span>                                                                       WalkableLayer,</div>
+<div class="line"><span class="lineno">   54</span>                                                                       distance);</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>            jumpSequence = master.DOJump(jumpDestination, jumpPower, 1, duration)</div>
+<div class="line"><span class="lineno">   57</span>                                 .OnComplete(() =&gt; callback?.Invoke())</div>
+<div class="line"><span class="lineno">   58</span>                                 .SetUpdate(DG.Tweening.UpdateType.Normal)</div>
+<div class="line"><span class="lineno">   59</span>                                 .SetEase(Ease.InSine)</div>
+<div class="line"><span class="lineno">   60</span>                                 ;</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a198109b470b3b34ef64a794278e40e02" name="a198109b470b3b34ef64a794278e40e02"></a>
@@ -463,7 +607,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00065">65</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            var jumpDestination = PathfindingUtility.GetWalkablePosition(RootPosition, direction, UnsafeLayer, WalkableLayer, distance);</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>            transferTween = master.DOJump(jumpDestination, jumpPower, 1, duration)</div>
+<div class="line"><span class="lineno">   70</span>                                  .SetUpdate(DG.Tweening.UpdateType.Normal)</div>
+<div class="line"><span class="lineno">   71</span>                                  .SetEase(Ease.InSine)</div>
+<div class="line"><span class="lineno">   72</span>                                  .OnComplete(() =&gt; callback?.Invoke())</div>
+<div class="line"><span class="lineno">   73</span>                                  ;</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af0db5b41873bc1075136fbc720158650" name="af0db5b41873bc1075136fbc720158650"></a>
@@ -506,7 +659,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00153">153</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  154</span>        {</div>
+<div class="line"><span class="lineno">  155</span>            Cancel();</div>
+<div class="line"><span class="lineno">  156</span>            var knockBackDestination = PathfindingUtility.GetWalkablePosition(RootPosition, </div>
+<div class="line"><span class="lineno">  157</span>                                                                              direction, </div>
+<div class="line"><span class="lineno">  158</span>                                                                              UnsafeLayer,</div>
+<div class="line"><span class="lineno">  159</span>                                                                              WalkableLayer,</div>
+<div class="line"><span class="lineno">  160</span>                                                                              distance);</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>            transferTween = master.DOMove(knockBackDestination, duration)</div>
+<div class="line"><span class="lineno">  163</span>                                  .SetUpdate(DG.Tweening.UpdateType.Fixed)</div>
+<div class="line"><span class="lineno">  164</span>                                  .SetEase(easeType)</div>
+<div class="line"><span class="lineno">  165</span>                                  .OnComplete(() =&gt; callback?.Invoke());</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a667051509647c1c13f0ef819179f5b93" name="a667051509647c1c13f0ef819179f5b93"></a>
@@ -539,7 +705,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00030">30</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            var walkableDestination = PathfindingUtility.GetWalkablePosition(RootPosition,</div>
+<div class="line"><span class="lineno">   33</span>                                                                             direction,</div>
+<div class="line"><span class="lineno">   34</span>                                                                             UnsafeLayer,</div>
+<div class="line"><span class="lineno">   35</span>                                                                             WalkableLayer,</div>
+<div class="line"><span class="lineno">   36</span>                                                                             distance);</div>
+<div class="line"><span class="lineno">   37</span>            </div>
+<div class="line"><span class="lineno">   38</span>            transferTween = master.DOMove(walkableDestination, duration)</div>
+<div class="line"><span class="lineno">   39</span>                                  .SetUpdate(DG.Tweening.UpdateType.Fixed)</div>
+<div class="line"><span class="lineno">   40</span>                                  .SetEase(easeType);</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae848ba7309f8a9ab69a63d56a350d213" name="ae848ba7309f8a9ab69a63d56a350d213"></a>
@@ -567,7 +744,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00121">121</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  122</span>        {</div>
+<div class="line"><span class="lineno">  123</span>            CancelRotate();</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>            var characterTransform = master.transform;</div>
+<div class="line"><span class="lineno">  126</span>            var directionToLookTarget = (lookTarget - characterTransform.position).normalized;</div>
+<div class="line"><span class="lineno">  127</span>            var targetRotation = Quaternion.LookRotation(directionToLookTarget);</div>
+<div class="line"><span class="lineno">  128</span>            var totalAngleDifference = Quaternion.Angle(characterTransform.rotation, targetRotation);</div>
+<div class="line"><span class="lineno">  129</span>            var totalFrames = Mathf.CeilToInt(totalAngleDifference / rotatePerFrame);</div>
+<div class="line"><span class="lineno">  130</span>            var totalDuration = totalFrames * Time.fixedDeltaTime;</div>
+<div class="line"><span class="lineno">  131</span>            </div>
+<div class="line"><span class="lineno">  132</span>            rotateTween = characterTransform.DORotateQuaternion(targetRotation, totalDuration)</div>
+<div class="line"><span class="lineno">  133</span>                                            .SetEase(Ease.Linear)</div>
+<div class="line"><span class="lineno">  134</span>                                            .SetUpdate(DG.Tweening.UpdateType.Fixed)</div>
+<div class="line"><span class="lineno">  135</span>                                            .OnComplete(() =&gt; callback?.Invoke())</div>
+<div class="line"><span class="lineno">  136</span>                                            .SetAutoKill()</div>
+<div class="line"><span class="lineno">  137</span>                                            ;</div>
+<div class="line"><span class="lineno">  138</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae379fe6ae091767965228c6fc2a186b8" name="ae379fe6ae091767965228c6fc2a186b8"></a>
@@ -605,7 +799,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>KnockBack</b> (Vector
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html#l00140">140</a> of file <a class="el" href="../../d4/ddc/_transfer_model_8cs_source.html">TransferModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  141</span>        {</div>
+<div class="line"><span class="lineno">  142</span>            Cancel();</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>            var axis = (<span class="keyword">new</span> Vector3(target.x, target.y + 1, target.z) - target).normalized;</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>            transferTween = master.DOSpiral(duration, axis, SpiralMode.Expand, speed, frequency)</div>
+<div class="line"><span class="lineno">  147</span>                                  .OnComplete(() =&gt; callback?.Invoke())</div>
+<div class="line"><span class="lineno">  148</span>                                  ;</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

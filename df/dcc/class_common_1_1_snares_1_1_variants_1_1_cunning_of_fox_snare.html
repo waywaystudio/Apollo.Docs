@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,23 @@ $(function(){initNavTree('df/dcc/class_common_1_1_snares_1_1_variants_1_1_cunnin
   <div class="headertitle"><div class="title">Common.Snares.Variants.CunningOfFoxSnare Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Snares.Variants.CunningOfFoxSnare:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/dcc/class_common_1_1_snares_1_1_variants_1_1_cunning_of_fox_snare.png" usemap="#Common.Snares.Variants.CunningOfFoxSnare_map" alt=""/>
+  <map id="Common.Snares.Variants.CunningOfFoxSnare_map" name="Common.Snares.Variants.CunningOfFoxSnare_map">
+<area href="../../dd/db2/class_common_1_1_snares_1_1_snare.html" alt="Common.Snares.Snare" shape="rect" coords="427,112,702,136"/>
+<area href="../../db/de5/interface_common_1_1_i_projectable_sequencer.html" alt="Common.IProjectableSequencer" shape="rect" coords="1140,112,1415,136"/>
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="285,56,560,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="570,56,845,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="855,56,1130,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1140,56,1415,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="285,0,560,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="570,0,845,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1140,0,1415,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -204,7 +222,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td>
 <p>Reimplemented from <a class="el" href="../../dd/db2/class_common_1_1_snares_1_1_snare.html">Common.Snares.Snare</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/db3/_cunning_of_fox_snare_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d3/db3/_cunning_of_fox_snare_8cs_source.html">CunningOfFoxSnare.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            base.Initialize(provider);</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>            projector.<a class="code hl_function" href="../../da/dfb/class_common_1_1_projections_1_1_arc_projection.html#a550c5a961b0f563785e499b3a07e948c">Initialize</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>            Sections</div>
+<div class="line"><span class="lineno">   21</span>                .Add(Section.Complete, <span class="stringliteral">&quot;MainExecute&quot;</span>, MainExecute)</div>
+<div class="line"><span class="lineno">   22</span>                .Add(Section.End, <span class="stringliteral">&quot;DestroySnare&quot;</span>, () =&gt; Destroy(gameObject))</div>
+<div class="line"><span class="lineno">   23</span>                ;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_projections_1_1_arc_projection_html_a550c5a961b0f563785e499b3a07e948c"><div class="ttname"><a href="../../da/dfb/class_common_1_1_projections_1_1_arc_projection.html#a550c5a961b0f563785e499b3a07e948c">Common.Projections.ArcProjection.Initialize</a></div><div class="ttdeci">void Initialize(IProjectableSequencer masterSequence)</div><div class="ttdoc">Require ISequence, DetectProperty, CastingTime.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d88/_arc_projection_8cs_source.html#l00012">ArcProjection.cs:12</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

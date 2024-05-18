@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('da/d6d/class_challenge_1_1_u_i_1_1_tooltips_1_1_dead_p
   <div class="headertitle"><div class="title">Challenge.UI.Tooltips.DeadPanel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.UI.Tooltips.DeadPanel:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/d6d/class_challenge_1_1_u_i_1_1_tooltips_1_1_dead_panel.png" usemap="#Challenge.UI.Tooltips.DeadPanel_map" alt=""/>
+  <map id="Challenge.UI.Tooltips.DeadPanel_map" name="Challenge.UI.Tooltips.DeadPanel_map">
+<area href="../../dc/d43/class_common_1_1_u_i_1_1_panel.html" alt="Common.UI.Panel" shape="rect" coords="103,112,300,136"/>
+<area href="../../d1/dc6/class_common_1_1_u_i_element.html" alt="Common.UIElement" shape="rect" coords="103,56,300,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="207,0,404,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -196,7 +208,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc6/class_common_1_1_u_i_element.html">Common.UIElement</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d5b/_dead_panel_8cs_source.html#l00011">11</a> of file <a class="el" href="../../dc/d5b/_dead_panel_8cs_source.html">DeadPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            base.Initialize();</div>
+<div class="line"><span class="lineno">   14</span> </div>
+<div class="line"><span class="lineno">   15</span>            <span class="keyword">this</span>[UIEventType.Open].Sections</div>
+<div class="line"><span class="lineno">   16</span>                                  .Add(Section.Active, <span class="stringliteral">&quot;PlayDelayCloseTimer&quot;</span>, toLobbyTimer.Play)</div>
+<div class="line"><span class="lineno">   17</span>                                  .Add(Section.Cancel, <span class="stringliteral">&quot;CancelDelayCloseTimer&quot;</span>, toLobbyTimer.Dispose)</div>
+<div class="line"><span class="lineno">   18</span>                                  ;</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>            toLobbyTimer.AddCallBack(<span class="stringliteral">&quot;Close&quot;</span>, <a class="code hl_function" href="../../d1/dc6/class_common_1_1_u_i_element.html#ab9d9ec0ed7314202889fe21be760b35d">Close</a>);</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_u_i_element_html_ab9d9ec0ed7314202889fe21be760b35d"><div class="ttname"><a href="../../d1/dc6/class_common_1_1_u_i_element.html#ab9d9ec0ed7314202889fe21be760b35d">Common.UIElement.Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">Called by the EventSystem when closed the element associated with this EventTrigger.</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d4/dbf/class_common_1_1_characters_1_1_a_i_1_1_is_aliv
   <div class="headertitle"><div class="title">Common.Characters.AI.IsAliveNode Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.AI.IsAliveNode:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/dbf/class_common_1_1_characters_1_1_a_i_1_1_is_alive_node.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,7 +134,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d72/_is_alive_node_8cs_source.html#l00010">10</a> of file <a class="el" href="../../d9/d72/_is_alive_node_8cs_source.html">IsAliveNode.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            mainCharacter = gameObject.GetComponentInParent&lt;Character&gt;();</div>
+<div class="line"><span class="lineno">   13</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af93c9a4374a7a82a608bb967a8b3b1f1" name="af93c9a4374a7a82a608bb967a8b3b1f1"></a>
@@ -146,7 +156,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d72/_is_alive_node_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d9/d72/_is_alive_node_8cs_source.html">IsAliveNode.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">return</span> mainCharacter.IsAlive</div>
+<div class="line"><span class="lineno">   18</span>                ? TaskStatus.Success</div>
+<div class="line"><span class="lineno">   19</span>                : TaskStatus.Failure;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('df/d89/class_core_editor_1_1_database_drawer.html','..
   <div class="headertitle"><div class="title">CoreEditor.DatabaseDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for CoreEditor.DatabaseDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/d89/class_core_editor_1_1_database_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -134,7 +141,71 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d3a/_database_drawer_8cs_source.html#l00011">11</a> of file <a class="el" href="../../dd/d3a/_database_drawer_8cs_source.html">DatabaseDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   14</span><span class="comment">             * SpreadSheetData</span></div>
+<div class="line"><span class="lineno">   15</span><span class="comment">             */</span> </div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;sheetDataList&quot;</span>)</div>
+<div class="line"><span class="lineno">   17</span>            {</div>
+<div class="line"><span class="lineno">   18</span>                attributes.Add(<span class="keyword">new</span> TitleGroupAttribute(<span class="stringliteral">&quot;SheetData&quot;</span>, <span class="stringliteral">&quot;dataObject and configurations&quot;</span>));</div>
+<div class="line"><span class="lineno">   19</span>                attributes.Add(<span class="keyword">new</span> PropertySpaceAttribute(0, 20f));</div>
+<div class="line"><span class="lineno">   20</span>                attributes.Add(<span class="keyword">new</span> ListDrawerSettingsAttribute</div>
+<div class="line"><span class="lineno">   21</span>                {</div>
+<div class="line"><span class="lineno">   22</span>                   ShowFoldout = <span class="keyword">true</span>,</div>
+<div class="line"><span class="lineno">   23</span>                   HideAddButton = <span class="keyword">true</span>,</div>
+<div class="line"><span class="lineno">   24</span>                   HideRemoveButton = <span class="keyword">true</span>,</div>
+<div class="line"><span class="lineno">   25</span>                   IsReadOnly = <span class="keyword">true</span>,</div>
+<div class="line"><span class="lineno">   26</span>                   NumberOfItemsPerPage = 32,</div>
+<div class="line"><span class="lineno">   27</span>                });</div>
+<div class="line"><span class="lineno">   28</span>            }</div>
+<div class="line"><span class="lineno">   29</span> </div>
+<div class="line"><span class="lineno">   30</span>            <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   31</span><span class="comment">             * PrefabData</span></div>
+<div class="line"><span class="lineno">   32</span><span class="comment">             */</span></div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (member.Name.Contains(<span class="stringliteral">&quot;PrefabData&quot;</span>))</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                attributes.Add(<span class="keyword">new</span> TitleGroupAttribute(<span class="stringliteral">&quot;PrefabData&quot;</span>, <span class="stringliteral">&quot;ScriptableObjects&quot;</span>));</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span>            </div>
+<div class="line"><span class="lineno">   38</span>            <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   39</span><span class="comment">             * ResourceData</span></div>
+<div class="line"><span class="lineno">   40</span><span class="comment">             */</span></div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (member.Name.Contains(<span class="stringliteral">&quot;spriteData&quot;</span>))</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                attributes.Add(<span class="keyword">new</span> TitleGroupAttribute(<span class="stringliteral">&quot;SpriteData&quot;</span>, <span class="stringliteral">&quot;ScriptableObjects&quot;</span>));</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>            <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   47</span><span class="comment">             * Paths</span></div>
+<div class="line"><span class="lineno">   48</span><span class="comment">             */</span></div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (member.Name.Contains(<span class="stringliteral">&quot;Path&quot;</span>))</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                attributes.Add(<span class="keyword">new</span> TitleGroupAttribute(<span class="stringliteral">&quot;Path&quot;</span>, <span class="stringliteral">&quot;Object Locate Path&quot;</span>));</div>
+<div class="line"><span class="lineno">   52</span>                attributes.Add(<span class="keyword">new</span> FolderPathAttribute());</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>            <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   56</span><span class="comment">             * Functions</span></div>
+<div class="line"><span class="lineno">   57</span><span class="comment">             */</span></div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;OpenSpreadSheetPanel&quot;</span>)</div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                attributes.Add(<span class="keyword">new</span> HorizontalGroupAttribute(<span class="stringliteral">&quot;CommonHorizontal&quot;</span>));</div>
+<div class="line"><span class="lineno">   61</span>                attributes.Add(<span class="keyword">new</span> ButtonAttribute(ButtonSizes.Large)</div>
+<div class="line"><span class="lineno">   62</span>                {</div>
+<div class="line"><span class="lineno">   63</span>                    Icon = SdfIconType.FileSpreadsheet,</div>
+<div class="line"><span class="lineno">   64</span>                });</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>            </div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;GenerateIDCode&quot;</span>)</div>
+<div class="line"><span class="lineno">   68</span>            {</div>
+<div class="line"><span class="lineno">   69</span>                attributes.Add(<span class="keyword">new</span> HorizontalGroupAttribute(<span class="stringliteral">&quot;CommonHorizontal&quot;</span>));</div>
+<div class="line"><span class="lineno">   70</span>                attributes.Add(<span class="keyword">new</span> ButtonAttribute(ButtonSizes.Large)</div>
+<div class="line"><span class="lineno">   71</span>                {</div>
+<div class="line"><span class="lineno">   72</span>                    Icon = SdfIconType.Gear,</div>
+<div class="line"><span class="lineno">   73</span>                });</div>
+<div class="line"><span class="lineno">   74</span>            }</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

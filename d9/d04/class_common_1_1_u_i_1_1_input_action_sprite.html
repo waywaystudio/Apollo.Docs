@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d9/d04/class_common_1_1_u_i_1_1_input_action_sprite.ht
   <div class="headertitle"><div class="title">Common.UI.InputActionSprite Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UI.InputActionSprite:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/d04/class_common_1_1_u_i_1_1_input_action_sprite.png" usemap="#Common.UI.InputActionSprite_map" alt=""/>
+  <map id="Common.UI.InputActionSprite_map" name="Common.UI.InputActionSprite_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="185,0,360,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -129,7 +139,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dbb/_input_action_sprite_8cs_source.html#l00024">24</a> of file <a class="el" href="../../dd/dbb/_input_action_sprite_8cs_source.html">InputActionSprite.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (inputManager.Director is <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   27</span>            </div>
+<div class="line"><span class="lineno">   28</span>            OnControllerChanged.Add($<span class="stringliteral">&quot;{GetInstanceID()}ImageChange&quot;</span>, _ =&gt; SetActionImage());</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a18552d3002a43e601c67b92a0817432b" name="a18552d3002a43e601c67b92a0817432b"></a>
@@ -148,7 +163,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dbb/_input_action_sprite_8cs_source.html#l00018">18</a> of file <a class="el" href="../../dd/dbb/_input_action_sprite_8cs_source.html">InputActionSprite.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            SetActionImage();</div>
+<div class="line"><span class="lineno">   21</span>            AddControlChangedEvent();</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7ef3125013325772e32cb81585be616b" name="a7ef3125013325772e32cb81585be616b"></a>
@@ -167,7 +186,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dbb/_input_action_sprite_8cs_source.html#l00031">31</a> of file <a class="el" href="../../dd/dbb/_input_action_sprite_8cs_source.html">InputActionSprite.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (inputManager.Director is <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   34</span>            </div>
+<div class="line"><span class="lineno">   35</span>            OnControllerChanged?.Remove($<span class="stringliteral">&quot;{GetInstanceID()}ImageChange&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

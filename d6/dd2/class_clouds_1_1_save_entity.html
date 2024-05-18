@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -137,7 +138,32 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dfc/_save_entity_8cs_source.html#l00019">19</a> of file <a class="el" href="../../dc/dfc/_save_entity_8cs_source.html">SaveEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            IsDone        = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   22</span>            saveCanceller = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   23</span>            </div>
+<div class="line"><span class="lineno">   24</span>            var json = JsonUtility.ToJson(value);</div>
+<div class="line"><span class="lineno">   25</span>        </div>
+<div class="line"><span class="lineno">   26</span>            PlayFabClientAPI.UpdateUserData(CreateUserDataRequest(key, json), OnSuccess, OnFailed);</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>            await UniTask.WaitUntil(() =&gt; IsDone, cancellationToken: saveCanceller.Token);</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordtype">void</span> OnSuccess(UpdateUserDataResult result)</div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>                Debug.Log(<span class="stringliteral">&quot;Successfully updated user data&quot;</span>);</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>                IsDone = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordtype">void</span> OnFailed(PlayFabError error)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                <a class="code hl_class" href="../../da/d8b/class_cloud_manager.html">CloudManager</a>.OnSharedFailure(error);</div>
+<div class="line"><span class="lineno">   40</span>                </div>
+<div class="line"><span class="lineno">   41</span>                IsDone = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   42</span>            }</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="ttc" id="aclass_cloud_manager_html"><div class="ttname"><a href="../../da/d8b/class_cloud_manager.html">CloudManager</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d48/_cloud_manager_8cs_source.html#l00009">CloudManager.cs:10</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9e9e577efd65f7632bed05eac20e4c99" name="a9e9e577efd65f7632bed05eac20e4c99"></a>
@@ -156,7 +182,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dfc/_save_entity_8cs_source.html#l00045">45</a> of file <a class="el" href="../../dc/dfc/_save_entity_8cs_source.html">SaveEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (saveCanceller is not <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   48</span>            {</div>
+<div class="line"><span class="lineno">   49</span>                saveCanceller.Cancel();</div>
+<div class="line"><span class="lineno">   50</span>                saveCanceller.Dispose();</div>
+<div class="line"><span class="lineno">   51</span>                saveCanceller = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -181,7 +215,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dfc/_save_entity_8cs_source.html#l00016">16</a> of file <a class="el" href="../../dc/dfc/_save_entity_8cs_source.html">SaveEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; } = <span class="keyword">true</span>;</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

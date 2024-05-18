@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,20 @@ $(function(){initNavTree('d2/d55/class_common_1_1_characters_1_1_behaviours_1_1_
   <div class="headertitle"><div class="title">Common.Characters.Behaviours.DrawBehaviour Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Behaviours.DrawBehaviour:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/d55/class_common_1_1_characters_1_1_behaviours_1_1_draw_behaviour.png" usemap="#Common.Characters.Behaviours.DrawBehaviour_map" alt=""/>
+  <map id="Common.Characters.Behaviours.DrawBehaviour_map" name="Common.Characters.Behaviours.DrawBehaviour_map">
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="445,168,732,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="445,112,732,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="297,56,584,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="594,56,881,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="891,56,1178,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="594,0,881,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -202,7 +217,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d13/_draw_behaviour_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d7/d13/_draw_behaviour_8cs_source.html">DrawBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   24</span>            Character.Pathfinding.Drawn(from, maxDistance, speed, callback);</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a80d216bb84df436c95c7346ab83fe5a5" name="a80d216bb84df436c95c7346ab83fe5a5"></a>
@@ -231,7 +252,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html">Common.Characters.CharacterBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d13/_draw_behaviour_8cs_source.html#l00010">10</a> of file <a class="el" href="../../d7/d13/_draw_behaviour_8cs_source.html">DrawBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   13</span> </div>
+<div class="line"><span class="lineno">   14</span>            Sections</div>
+<div class="line"><span class="lineno">   15</span>                .AddCondition(<span class="stringliteral">&quot;IsNotImmune&quot;</span>, () =&gt; !isImmune)</div>
+<div class="line"><span class="lineno">   16</span>                ;</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

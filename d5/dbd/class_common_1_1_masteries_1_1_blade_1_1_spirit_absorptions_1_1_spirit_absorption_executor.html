@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,16 @@ $(function(){initNavTree('d5/dbd/class_common_1_1_masteries_1_1_blade_1_1_spirit
   <div class="headertitle"><div class="title">Common.Masteries.Blade.SpiritAbsorptions.SpiritAbsorptionExecutor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.Blade.SpiritAbsorptions.SpiritAbsorptionExecutor:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/dbd/class_common_1_1_masteries_1_1_blade_1_1_spirit_absorptions_1_1_spirit_absorption_executor.png" usemap="#Common.Masteries.Blade.SpiritAbsorptions.SpiritAbsorptionExecutor_map" alt=""/>
+  <map id="Common.Masteries.Blade.SpiritAbsorptions.SpiritAbsorptionExecutor_map" name="Common.Masteries.Blade.SpiritAbsorptions.SpiritAbsorptionExecutor_map">
+<area href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html" alt="Common.Executors.ExecuteBehaviour" shape="rect" coords="204,56,603,80"/>
+<area href="../../d7/dc1/interface_i_condition_table.html" alt="IConditionTable&lt; GameObject &gt;" shape="rect" coords="409,0,808,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -173,7 +184,14 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/db2/_spirit_absorption_executor_8cs_source.html#l00031">31</a> of file <a class="el" href="../../df/db2/_spirit_absorption_executor_8cs_source.html">SpiritAbsorptionExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (!target.TryGetComponent(out <a class="code hl_class" href="../../db/d73/class_common_1_1_spirits_1_1_spirit.html">Spirit</a> spirit)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   34</span>            </div>
+<div class="line"><span class="lineno">   35</span>            spirit.Disappear();</div>
+<div class="line"><span class="lineno">   36</span>            dred.HitPoints.Value += HealPoints;</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_spirits_1_1_spirit_html"><div class="ttname"><a href="../../db/d73/class_common_1_1_spirits_1_1_spirit.html">Common.Spirits.Spirit</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/de9/_spirit_8cs_source.html#l00009">Spirit.cs:10</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaea40c555c6eccf740b847570634ead3" name="aaea40c555c6eccf740b847570634ead3"></a>
@@ -202,7 +220,15 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/db2/_spirit_absorption_executor_8cs_source.html#l00021">21</a> of file <a class="el" href="../../df/db2/_spirit_absorption_executor_8cs_source.html">SpiritAbsorptionExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            base.Initialize(provider);</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (provider is not <a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> red) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>            dred = red;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Common.Characters.Dreds.Dred</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00005">Dred.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -227,7 +253,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/db2/_spirit_absorption_executor_8cs_source.html#l00014">14</a> of file <a class="el" href="../../df/db2/_spirit_absorption_executor_8cs_source.html">SpiritAbsorptionExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keyword">get</span> =&gt; healPoints; </div>
+<div class="line"><span class="lineno">   17</span>            <span class="keyword">set</span> =&gt; healPoints = value;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

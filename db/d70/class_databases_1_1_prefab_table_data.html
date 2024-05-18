@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,21 @@ $(function(){initNavTree('db/d70/class_databases_1_1_prefab_table_data.html','..
   <div class="headertitle"><div class="title">Databases.PrefabTableData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Databases.PrefabTableData:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/d70/class_databases_1_1_prefab_table_data.png" usemap="#Databases.PrefabTableData_map" alt=""/>
+  <map id="Databases.PrefabTableData_map" name="Databases.PrefabTableData_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="792,0,1046,24"/>
+<area href="../../d3/d5b/class_databases_1_1_prefabs_1_1_fiend_prefab_data.html" alt="Databases.Prefabs.FiendPrefabData" shape="rect" coords="0,112,254,136"/>
+<area href="../../d4/d4f/class_databases_1_1_prefabs_1_1_mastery_prefab_data.html" alt="Databases.Prefabs.MasteryPrefabData" shape="rect" coords="264,112,518,136"/>
+<area href="../../d9/d1f/class_databases_1_1_prefabs_1_1_projectile_prefab_data.html" alt="Databases.Prefabs.ProjectilePrefabData" shape="rect" coords="528,112,782,136"/>
+<area href="../../d6/d3f/class_databases_1_1_prefabs_1_1_reward_prefab_data.html" alt="Databases.Prefabs.RewardPrefabData" shape="rect" coords="792,112,1046,136"/>
+<area href="../../d1/db9/class_databases_1_1_prefabs_1_1_status_effect_prefab_data.html" alt="Databases.Prefabs.StatusEffectPrefabData" shape="rect" coords="1056,112,1310,136"/>
+<area href="../../d9/d51/class_databases_1_1_prefabs_1_1_whisper_prefab_data.html" alt="Databases.Prefabs.WhisperPrefabData" shape="rect" coords="1320,112,1574,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -151,7 +167,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d4f/_prefab_table_data_8cs_source.html#l00016">16</a> of file <a class="el" href="../../db/d4f/_prefab_table_data_8cs_source.html">PrefabTableData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            prefab = table[index];</div>
+<div class="line"><span class="lineno">   19</span>            </div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span> prefab.HasObject(); </div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a584d79ff3124f85ff67f57690f3931ea" name="a584d79ff3124f85ff67f57690f3931ea"></a>
@@ -178,7 +199,21 @@ Properties</h2></td></tr>
 </div>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d4f/_prefab_table_data_8cs_source.html#l00023">23</a> of file <a class="el" href="../../db/d4f/_prefab_table_data_8cs_source.html">PrefabTableData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>                                               : Component</div>
+<div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            var result = <span class="keyword">new</span> List&lt;T&gt;();</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">foreach</span> (var gameObject <span class="keywordflow">in</span> Prefabs)</div>
+<div class="line"><span class="lineno">   28</span>            {</div>
+<div class="line"><span class="lineno">   29</span>                <span class="keywordflow">if</span> (gameObject.TryGetComponent(out T element))</div>
+<div class="line"><span class="lineno">   30</span>                {</div>
+<div class="line"><span class="lineno">   31</span>                    result.Add(element);</div>
+<div class="line"><span class="lineno">   32</span>                }</div>
+<div class="line"><span class="lineno">   33</span>            }</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa764ca0aa0a2d347d6ff4ffb44f2e3c0" name="aa764ca0aa0a2d347d6ff4ffb44f2e3c0"></a>
@@ -201,7 +236,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d4f/_prefab_table_data_8cs_source.html#l00045">45</a> of file <a class="el" href="../../db/d4f/_prefab_table_data_8cs_source.html">PrefabTableData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            var result = <span class="keyword">new</span> List&lt;GameObject&gt;();</div>
+<div class="line"><span class="lineno">   48</span>            </div>
+<div class="line"><span class="lineno">   49</span>            index.ForEach(x =&gt;</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">if</span> (!GetObject(x, out var prefab)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   52</span>                </div>
+<div class="line"><span class="lineno">   53</span>                result.Add(prefab);</div>
+<div class="line"><span class="lineno">   54</span>            });</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>            prefabs = result;</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> !prefabs.IsNullOrEmpty();</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a083833c24e00b3eb01faecae615bdc01" name="a083833c24e00b3eb01faecae615bdc01"></a>
@@ -232,7 +281,13 @@ Properties</h2></td></tr>
 </div>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d4f/_prefab_table_data_8cs_source.html#l00038">38</a> of file <a class="el" href="../../db/d4f/_prefab_table_data_8cs_source.html">PrefabTableData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                                     : <span class="keyword">class</span></div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            result = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   41</span>            </div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> table.TryGetValue(index, out var prefab) &amp;&amp; prefab.TryGetComponent(out result);</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

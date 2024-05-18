@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,16 @@ $(function(){initNavTree('df/d3b/class_common_1_1_projectiles_1_1_trajectories_1
   <div class="headertitle"><div class="title">Common.Projectiles.Trajectories.SilkTwisterTrajectory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Trajectories.SilkTwisterTrajectory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/d3b/class_common_1_1_projectiles_1_1_trajectories_1_1_silk_twister_trajectory.png" usemap="#Common.Projectiles.Trajectories.SilkTwisterTrajectory_map" alt=""/>
+  <map id="Common.Projectiles.Trajectories.SilkTwisterTrajectory_map" name="Common.Projectiles.Trajectories.SilkTwisterTrajectory_map">
+<area href="../../d8/d4d/class_common_1_1_projectiles_1_1_trajectories_1_1_revolve_trajectory.html" alt="Common.Projectiles.Trajectories.RevolveTrajectory" shape="rect" coords="0,112,316,136"/>
+<area href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html" alt="Common.Projectiles.Trajectory" shape="rect" coords="0,56,316,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -176,7 +187,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Cancel</b> ()</td></t
 <p>Reimplemented from <a class="el" href="../../d8/d4d/class_common_1_1_projectiles_1_1_trajectories_1_1_revolve_trajectory.html">Common.Projectiles.Trajectories.RevolveTrajectory</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dd0/_silk_twister_trajectory_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d0/dd0/_silk_twister_trajectory_8cs_source.html">SilkTwisterTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            var angle = InitialAngle * (Mathf.PI / 180);</div>
+<div class="line"><span class="lineno">   15</span>        </div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">while</span> (!cts.IsCancellationRequested)</div>
+<div class="line"><span class="lineno">   17</span>            {</div>
+<div class="line"><span class="lineno">   18</span>                var cp = Projectile.Provider.PrePosition(centerPosition).position;</div>
+<div class="line"><span class="lineno">   19</span>                </div>
+<div class="line"><span class="lineno">   20</span>                angle += speed * Time.fixedDeltaTime;</div>
+<div class="line"><span class="lineno">   21</span>                </div>
+<div class="line"><span class="lineno">   22</span>                var x = cp.x + Mathf.Cos(angle) * distance;</div>
+<div class="line"><span class="lineno">   23</span>                var y = cp.y + Mathf.Sin(Time.time * 6.28f * frequency * distance * 0.5f) * height;</div>
+<div class="line"><span class="lineno">   24</span>                var z = cp.z + Mathf.Sin(angle) * distance;</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>                var targetPos = <span class="keyword">new</span> Vector3(x, y, z);</div>
+<div class="line"><span class="lineno">   27</span>                </div>
+<div class="line"><span class="lineno">   28</span>                transform.LookAt(targetPos);</div>
+<div class="line"><span class="lineno">   29</span>                transform.position = targetPos;</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>                await UniTask.Yield(PlayerLoopTiming.FixedUpdate, cts.Token);</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>            Projectile.Invoker.Complete();</div>
+<div class="line"><span class="lineno">   35</span>        } </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

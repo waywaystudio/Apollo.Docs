@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('db/d37/class_common_1_1_masteries_1_1_blade_1_1_focuse
   <div class="headertitle"><div class="title">Common.Masteries.Blade.FocusedCall Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.Blade.FocusedCall:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/d37/class_common_1_1_masteries_1_1_blade_1_1_focused_call.png" usemap="#Common.Masteries.Blade.FocusedCall_map" alt=""/>
+  <map id="Common.Masteries.Blade.FocusedCall_map" name="Common.Masteries.Blade.FocusedCall_map">
+<area href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html" alt="Common.Masteries.Mastery" shape="rect" coords="240,56,470,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="240,0,470,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="480,0,710,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -206,7 +218,12 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8f/_focused_call_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d3/d8f/_focused_call_8cs_source.html">FocusedCall.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            var bladeSkillSet = dred.Skills.BladeSpecialSet;</div>
+<div class="line"><span class="lineno">   31</span>            </div>
+<div class="line"><span class="lineno">   32</span>            bladeSkillSet.ChangeCurrentSkill(previousSpecialSkillCode);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad970f4ce92c3551ed432ca1d9bc9cbcc" name="ad970f4ce92c3551ed432ca1d9bc9cbcc"></a>
@@ -233,7 +250,14 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8f/_focused_call_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d3/d8f/_focused_call_8cs_source.html">FocusedCall.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            bladeSpecialSet                                 = dred.Skills.BladeSpecialSet;</div>
+<div class="line"><span class="lineno">   22</span>            dred.Skills.FocusStrike.IncreasePowerMultiplier = quality.Value;</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>            previousSpecialSkillCode = bladeSpecialSet.CurrentSkill.DataIndex;</div>
+<div class="line"><span class="lineno">   25</span>            bladeSpecialSet.ChangeCurrentSkill(focusStrikeCode);</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3893342c68e48c7db4756c10297bd2a4" name="a3893342c68e48c7db4756c10297bd2a4"></a>
@@ -260,7 +284,14 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d8f/_focused_call_8cs_source.html#l00035">35</a> of file <a class="el" href="../../d3/d8f/_focused_call_8cs_source.html">FocusedCall.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (bladeSpecialSet[focusStrikeCode].MainBehaviour is <a class="code hl_class" href="../../d6/de4/class_common_1_1_skills_1_1_blades_1_1_focus_strike.html">FocusStrike</a> fs)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                fs.IncreasePowerMultiplier = quality.Value;</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_skills_1_1_blades_1_1_focus_strike_html"><div class="ttname"><a href="../../d6/de4/class_common_1_1_skills_1_1_blades_1_1_focus_strike.html">Common.Skills.Blades.FocusStrike</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/dfb/_focus_strike_8cs_source.html#l00007">FocusStrike.cs:8</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

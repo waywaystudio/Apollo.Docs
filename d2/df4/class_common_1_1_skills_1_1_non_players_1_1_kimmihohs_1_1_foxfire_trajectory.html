@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d2/df4/class_common_1_1_skills_1_1_non_players_1_1_kim
   <div class="headertitle"><div class="title">Common.Skills.NonPlayers.Kimmihohs.FoxfireTrajectory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.NonPlayers.Kimmihohs.FoxfireTrajectory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/df4/class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_foxfire_trajectory.png" usemap="#Common.Skills.NonPlayers.Kimmihohs.FoxfireTrajectory_map" alt=""/>
+  <map id="Common.Skills.NonPlayers.Kimmihohs.FoxfireTrajectory_map" name="Common.Skills.NonPlayers.Kimmihohs.FoxfireTrajectory_map">
+<area href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html" alt="Common.Projectiles.Trajectory" shape="rect" coords="0,56,328,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -157,7 +167,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d8c/_foxfire_trajectory_8cs_source.html#l00027">27</a> of file <a class="el" href="../../d4/d8c/_foxfire_trajectory_8cs_source.html">FoxfireTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            foxfireTween?.Kill();</div>
+<div class="line"><span class="lineno">   30</span>            foxfireTween = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a32055ae93c54b856943f992e16185b13" name="a32055ae93c54b856943f992e16185b13"></a>
@@ -176,7 +190,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d8c/_foxfire_trajectory_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d4/d8c/_foxfire_trajectory_8cs_source.html">FoxfireTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            var randomRange = Random.Range(0.85f, 1.15f);</div>
+<div class="line"><span class="lineno">   17</span>            var destination = Projectile.transform.position + Direction * (distance * randomRange);</div>
+<div class="line"><span class="lineno">   18</span>            var duration = distance / speed * randomRange;</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>            foxfireTween = <a class="code hl_class" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html">Projectile</a>.transform.DOMove(destination, duration)</div>
+<div class="line"><span class="lineno">   21</span>                                     .SetLoops(2, LoopType.Yoyo)</div>
+<div class="line"><span class="lineno">   22</span>                                     .SetEase(yoyoEase)</div>
+<div class="line"><span class="lineno">   23</span>                                     .OnComplete(<a class="code hl_class" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html">Projectile</a>.Invoker.Complete)</div>
+<div class="line"><span class="lineno">   24</span>                                     ;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_projectile_html"><div class="ttname"><a href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html">Common.Projectiles.Projectile</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d8d/_projectile_8cs_source.html#l00005">Projectile.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

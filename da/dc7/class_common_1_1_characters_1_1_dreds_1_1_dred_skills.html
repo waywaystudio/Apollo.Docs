@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('da/dc7/class_common_1_1_characters_1_1_dreds_1_1_dred_
   <div class="headertitle"><div class="title">Common.Characters.Dreds.DredSkills Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Dreds.DredSkills:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/dc7/class_common_1_1_characters_1_1_dreds_1_1_dred_skills.png" usemap="#Common.Characters.Dreds.DredSkills_map" alt=""/>
+  <map id="Common.Characters.Dreds.DredSkills_map" name="Common.Characters.Dreds.DredSkills_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="236,0,462,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -195,7 +205,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/ded/_dred_skills_8cs_source.html#l00053">53</a> of file <a class="el" href="../../d3/ded/_dred_skills_8cs_source.html">DredSkills.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            skillBehaviour = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   56</span>            </div>
+<div class="line"><span class="lineno">   57</span>            var weaponType = (WeaponType)skillCode.GetSecondBar();</div>
+<div class="line"><span class="lineno">   58</span>            var skillType = (SkillType)skillCode.GetThirdBar();</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (!weaponTable.ContainsKey(weaponType)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (weaponTable[weaponType][skillType].IsNullOrDestroyed()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>            skillBehaviour = weaponTable[weaponType][skillType][skillCode]?.MainBehaviour;</div>
+<div class="line"><span class="lineno">   64</span>            </div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span> skillBehaviour.HasComponent();</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

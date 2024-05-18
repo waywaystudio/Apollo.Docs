@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,17 @@ $(function(){initNavTree('d3/dcc/class_times_1_1_time_director.html','../../'); 
   <div class="headertitle"><div class="title">Times.TimeDirector Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Times.TimeDirector:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d3/dcc/class_times_1_1_time_director.png" usemap="#Times.TimeDirector_map" alt=""/>
+  <map id="Times.TimeDirector_map" name="Times.TimeDirector_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="212,0,414,24"/>
+<area href="../../d8/d2a/class_challenge_1_1_challenge_time_director.html" alt="Challenge.ChallengeTimeDirector" shape="rect" coords="0,112,202,136"/>
+<area href="../../dc/d4d/class_lobby_1_1_lobby_time_director.html" alt="Lobby.LobbyTimeDirector" shape="rect" coords="212,112,414,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -195,7 +207,37 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00108">108</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">if</span> (IsPaused) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">if</span> (HitStopTween != <span class="keyword">null</span> &amp;&amp; HitStopTween.IsActive())</div>
+<div class="line"><span class="lineno">  112</span>            {</div>
+<div class="line"><span class="lineno">  113</span>                RemoveHitStop();</div>
+<div class="line"><span class="lineno">  114</span>            }</div>
+<div class="line"><span class="lineno">  115</span>            </div>
+<div class="line"><span class="lineno">  116</span>            BulletTimeTween?.Kill();</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>            var effectDuration = duration * 0.9f * peakTime;</div>
+<div class="line"><span class="lineno">  119</span>            var restDuration = duration * peakTime - effectDuration;</div>
+<div class="line"><span class="lineno">  120</span>            </div>
+<div class="line"><span class="lineno">  121</span>            PreviousTimeScale = Time.timeScale;</div>
+<div class="line"><span class="lineno">  122</span>            BulletTimeTween = DOTween.Sequence()</div>
+<div class="line"><span class="lineno">  123</span>                                     .Append(DOTween.To(() =&gt; Time.timeScale, x =&gt; Time.timeScale = x, peakTime, effectDuration)</div>
+<div class="line"><span class="lineno">  124</span>                                                    .SetEase(toPeakEaseType)</div>
+<div class="line"><span class="lineno">  125</span>                                                    .SetUpdate(DG.Tweening.UpdateType.Fixed, <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  126</span>                                                    .OnUpdate(() =&gt; Time.fixedDeltaTime = Time.timeScale * 0.02f))</div>
+<div class="line"><span class="lineno">  127</span>                                     .Append(DOTween.To(() =&gt; Time.timeScale, x =&gt; Time.timeScale = x, 1f, restDuration)</div>
+<div class="line"><span class="lineno">  128</span>                                                    .SetEase(toResumeEaseType)</div>
+<div class="line"><span class="lineno">  129</span>                                                    .SetUpdate(DG.Tweening.UpdateType.Fixed, <span class="keyword">true</span>) <span class="comment">// Ignore time scale</span></div>
+<div class="line"><span class="lineno">  130</span>                                                    .OnUpdate(() =&gt; Time.fixedDeltaTime = Time.timeScale * 0.02f))</div>
+<div class="line"><span class="lineno">  131</span>                                     .OnKill(() =&gt; BulletTimeTween = <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  132</span>                                     .OnComplete(() =&gt;</div>
+<div class="line"><span class="lineno">  133</span>                                     {</div>
+<div class="line"><span class="lineno">  134</span>                                         StopBulletTime();</div>
+<div class="line"><span class="lineno">  135</span>                                         callback?.Invoke();</div>
+<div class="line"><span class="lineno">  136</span>                                     })</div>
+<div class="line"><span class="lineno">  137</span>                                     ;</div>
+<div class="line"><span class="lineno">  138</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af7c642a743552293d4cbf0f5ffb24278" name="af7c642a743552293d4cbf0f5ffb24278"></a>
@@ -214,7 +256,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00158">158</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  159</span>        {</div>
+<div class="line"><span class="lineno">  160</span>            StopBulletTime();</div>
+<div class="line"><span class="lineno">  161</span>            RemoveHitStop();</div>
+<div class="line"><span class="lineno">  162</span>            </div>
+<div class="line"><span class="lineno">  163</span>            OnPaused.Remove(<span class="stringliteral">&quot;FadeOut&quot;</span>);</div>
+<div class="line"><span class="lineno">  164</span>            OnPaused.Remove(<span class="stringliteral">&quot;BlurIn&quot;</span>);</div>
+<div class="line"><span class="lineno">  165</span>            OnResumed.Remove(<span class="stringliteral">&quot;FadeIn&quot;</span>);</div>
+<div class="line"><span class="lineno">  166</span>            OnResumed.Remove(<span class="stringliteral">&quot;BlurOut&quot;</span>);</div>
+<div class="line"><span class="lineno">  167</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7c201a510cafaa9282e5331fdc367f1e" name="a7c201a510cafaa9282e5331fdc367f1e"></a>
@@ -233,7 +284,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00024">24</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            timeManager.Director = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   27</span>            IsPaused             = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   28</span>            PreviousTimeScale    = Time.timeScale;</div>
+<div class="line"><span class="lineno">   29</span>            </div>
+<div class="line"><span class="lineno">   30</span>            OnPaused.Add(<span class="stringliteral">&quot;FadeOut&quot;</span>, () =&gt; ppManager.FadeOut(VolumeType.Main, blurFadeOutDuration));</div>
+<div class="line"><span class="lineno">   31</span>            OnPaused.Add(<span class="stringliteral">&quot;BlurIn&quot;</span>, () =&gt; ppManager.BlurIn(VolumeType.Main, blurFadeOutDuration));</div>
+<div class="line"><span class="lineno">   32</span>            OnResumed.Add(<span class="stringliteral">&quot;FadeIn&quot;</span>, () =&gt; ppManager.FadeIn(VolumeType.Main, blurFadeInDuration));</div>
+<div class="line"><span class="lineno">   33</span>            OnResumed.Add(<span class="stringliteral">&quot;BlurOut&quot;</span>, () =&gt; ppManager.BlurOut(VolumeType.Main, blurFadeInDuration));</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab514f8e440a57ff83375e38e661d64ba" name="ab514f8e440a57ff83375e38e661d64ba"></a>
@@ -260,7 +321,29 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00037">37</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (IsPaused) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>            IsPaused          = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   42</span>            PreviousTimeScale = Time.timeScale;</div>
+<div class="line"><span class="lineno">   43</span>            Time.timeScale    = 0f;</div>
+<div class="line"><span class="lineno">   44</span>            </div>
+<div class="line"><span class="lineno">   45</span>            <span class="comment">// Pause Bullet Time Effect</span></div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (BulletTimeTween != <span class="keyword">null</span> &amp;&amp; BulletTimeTween.IsActive() &amp;&amp; BulletTimeTween.IsPlaying())</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                BulletTimeTween.Pause();</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>            </div>
+<div class="line"><span class="lineno">   51</span>            <span class="comment">// Cancel HitStop Effect</span></div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (HitStopTween != <span class="keyword">null</span> &amp;&amp; HitStopTween.IsActive() &amp;&amp; HitStopTween.IsPlaying())</div>
+<div class="line"><span class="lineno">   53</span>            {</div>
+<div class="line"><span class="lineno">   54</span>                RemoveHitStop();</div>
+<div class="line"><span class="lineno">   55</span>            }</div>
+<div class="line"><span class="lineno">   56</span>            </div>
+<div class="line"><span class="lineno">   57</span>            OnPaused.Invoke();</div>
+<div class="line"><span class="lineno">   58</span>            callback?.Invoke();</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a13b426ed878f3a3dfbdd59462d24a02c" name="a13b426ed878f3a3dfbdd59462d24a02c"></a>
@@ -287,7 +370,23 @@ Properties</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00090">90</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> (IsPaused) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (BulletTimeTween != <span class="keyword">null</span> &amp;&amp; BulletTimeTween.IsActive()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   94</span>            </div>
+<div class="line"><span class="lineno">   95</span>            PreviousTimeScale = Time.timeScale;</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>            <span class="comment">// TODO.잠시끄기.</span></div>
+<div class="line"><span class="lineno">   98</span>            <span class="comment">// OnPaused.Invoke();</span></div>
+<div class="line"><span class="lineno">   99</span>            HitStopTween?.Kill();</div>
+<div class="line"><span class="lineno">  100</span>            HitStopTween = DOTween.Sequence()</div>
+<div class="line"><span class="lineno">  101</span>                                  .Append(DOTween.To(() =&gt; Time.timeScale, x =&gt; Time.timeScale = x, 0f, 0f)</div>
+<div class="line"><span class="lineno">  102</span>                                                 .SetUpdate(<span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  103</span>                                  .AppendInterval(pauseDuration)                                                                            </div>
+<div class="line"><span class="lineno">  104</span>                                  .Append(DOTween.To(() =&gt; Time.timeScale, x =&gt; Time.timeScale = x, PreviousTimeScale, 0f).SetUpdate(<span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  105</span>                                  .SetUpdate(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a935a3c77d5f65403f300b89996384414" name="a935a3c77d5f65403f300b89996384414"></a>
@@ -306,7 +405,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00140">140</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  141</span>        {</div>
+<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">if</span> (IsPaused) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>            Time.timeScale = 1f;</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1d1efd4a71d07d022341d613633a160e" name="a1d1efd4a71d07d022341d613633a160e"></a>
@@ -333,7 +437,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00062">62</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (!IsPaused) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>            IsPaused       = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   67</span>            Time.timeScale = PreviousTimeScale;</div>
+<div class="line"><span class="lineno">   68</span>            </div>
+<div class="line"><span class="lineno">   69</span>            OnResumed.Invoke();</div>
+<div class="line"><span class="lineno">   70</span>            BulletTimeTween?.Play();</div>
+<div class="line"><span class="lineno">   71</span>            callback?.Invoke();</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a645163f354033385d80952417895dab5" name="a645163f354033385d80952417895dab5"></a>
@@ -352,7 +466,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00147">147</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  148</span>        {</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">if</span> (BulletTimeTween is <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  150</span>            </div>
+<div class="line"><span class="lineno">  151</span>            BulletTimeTween.Kill();</div>
+<div class="line"><span class="lineno">  152</span>            BulletTimeTween = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  153</span>            </div>
+<div class="line"><span class="lineno">  154</span>            Time.timeScale      = 1f;</div>
+<div class="line"><span class="lineno">  155</span>            Time.fixedDeltaTime = Time.timeScale * 0.02f;</div>
+<div class="line"><span class="lineno">  156</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac6549a1e482229dee6471fde1b5fb17b" name="ac6549a1e482229dee6471fde1b5fb17b"></a>
@@ -371,7 +494,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00074">74</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (timeManager.IsPaused)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                Resume();</div>
+<div class="line"><span class="lineno">   79</span>            }</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                Pause();</div>
+<div class="line"><span class="lineno">   83</span>            }</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -565,7 +698,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00019">19</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{ <span class="keyword">get</span>; <span class="keyword">protected</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0404ced80ea86e78e1e5ee9e1de8d777" name="a0404ced80ea86e78e1e5ee9e1de8d777"></a>
@@ -589,7 +723,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00020">20</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a83e37ccfaee294f64ef7e08dbca997bc" name="a83e37ccfaee294f64ef7e08dbca997bc"></a>
@@ -613,7 +748,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d08/_time_director_8cs_source.html#l00021">21</a> of file <a class="el" href="../../de/d08/_time_director_8cs_source.html">TimeDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

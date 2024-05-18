@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d6/d1f/class_challenge_1_1_u_i_1_1_fields_1_1_goods_co
   <div class="headertitle"><div class="title">Challenge.UI.Fields.GoodsCostPlate Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.UI.Fields.GoodsCostPlate:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/d1f/class_challenge_1_1_u_i_1_1_fields_1_1_goods_cost_plate.png" usemap="#Challenge.UI.Fields.GoodsCostPlate_map" alt=""/>
+  <map id="Challenge.UI.Fields.GoodsCostPlate_map" name="Challenge.UI.Fields.GoodsCostPlate_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="225,0,440,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -131,7 +141,18 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/daf/_goods_cost_plate_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d0/daf/_goods_cost_plate_8cs_source.html">GoodsCostPlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            this.goods         =   goods;</div>
+<div class="line"><span class="lineno">   22</span>            valueTextMesh.text =   goods.Cost.ToString(<span class="stringliteral">&quot;F0&quot;</span>);</div>
+<div class="line"><span class="lineno">   23</span>            dredCoin           =   ChallengeDirector.Dred.Resource.FleshOfCoin;</div>
+<div class="line"><span class="lineno">   24</span>            rootRectTransform  ??= GetComponentInParent&lt;Canvas&gt;().GetComponent&lt;RectTransform&gt;();</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>            dredCoin.AddEvent($<span class="stringliteral">&quot;{GetInstanceID()}.UpdateCoinPlateColor&quot;</span>, UpdateTextColor);</div>
+<div class="line"><span class="lineno">   27</span>            </div>
+<div class="line"><span class="lineno">   28</span>            SetPlatePosition();</div>
+<div class="line"><span class="lineno">   29</span>            UpdateTextColor(dredCoin.Value);</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a79fd1ffc9d9baa957992a0ceb9d27974" name="a79fd1ffc9d9baa957992a0ceb9d27974"></a>
@@ -150,7 +171,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/daf/_goods_cost_plate_8cs_source.html#l00032">32</a> of file <a class="el" href="../../d0/daf/_goods_cost_plate_8cs_source.html">GoodsCostPlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            goods              = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   35</span>            valueTextMesh.text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   36</span>            </div>
+<div class="line"><span class="lineno">   37</span>            dredCoin.RemoveEvent($<span class="stringliteral">&quot;{GetInstanceID()}.UpdateCoinPlateColor&quot;</span>);</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a74aa73f57adc7ae3c1c2ef1fdaf08a3b" name="a74aa73f57adc7ae3c1c2ef1fdaf08a3b"></a>
@@ -169,7 +196,17 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/daf/_goods_cost_plate_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d0/daf/_goods_cost_plate_8cs_source.html">GoodsCostPlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (goods.IsNullOrDestroyed()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>            var targetPosition = goods.transform.position + Vector3.up * 6f;</div>
+<div class="line"><span class="lineno">   55</span>            var screenPosition = cameraManager.MainCamera.WorldToScreenPoint(targetPosition);</div>
+<div class="line"><span class="lineno">   56</span>            </div>
+<div class="line"><span class="lineno">   57</span>            RectTransformUtility.ScreenPointToLocalPointInRectangle(rootRectTransform, screenPosition, cameraManager.UICamera, out var localPoint);</div>
+<div class="line"><span class="lineno">   58</span>            </div>
+<div class="line"><span class="lineno">   59</span>            rect.anchoredPosition = localPoint;</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a448ca7b87b59a596bd93a9bac3db224a" name="a448ca7b87b59a596bd93a9bac3db224a"></a>
@@ -188,7 +225,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/daf/_goods_cost_plate_8cs_source.html#l00040">40</a> of file <a class="el" href="../../d0/daf/_goods_cost_plate_8cs_source.html">GoodsCostPlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (!gameObject.activeSelf) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   43</span>            </div>
+<div class="line"><span class="lineno">   44</span>            var dredHasEnoughCoin = coin &gt; goods.Cost;</div>
+<div class="line"><span class="lineno">   45</span>            valueTextMesh.color = dredHasEnoughCoin </div>
+<div class="line"><span class="lineno">   46</span>                ? Color.white </div>
+<div class="line"><span class="lineno">   47</span>                : Color.red;</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

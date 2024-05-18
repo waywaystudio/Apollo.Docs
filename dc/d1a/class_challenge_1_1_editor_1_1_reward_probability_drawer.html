@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('dc/d1a/class_challenge_1_1_editor_1_1_reward_probabili
   <div class="headertitle"><div class="title">Challenge.Editor.RewardProbabilityDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Editor.RewardProbabilityDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/d1a/class_challenge_1_1_editor_1_1_reward_probability_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -136,7 +143,28 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d10/_stage_reward_chunk_data_drawer_8cs_source.html#l00047">47</a> of file <a class="el" href="../../d4/d10/_stage_reward_chunk_data_drawer_8cs_source.html">StageRewardChunkDataDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;CountRange&quot;</span>)</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                attributes.Add(<span class="keyword">new</span> MinMaxSliderAttribute(0, <span class="stringliteral">&quot;MaxStageGetter&quot;</span>, <span class="keyword">true</span>));</div>
+<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="line"><span class="lineno">   53</span>            </div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;StageRange&quot;</span>)</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                attributes.Add(<span class="keyword">new</span> MinMaxSliderAttribute(0, <span class="stringliteral">&quot;MaxStageGetter&quot;</span>, <span class="keyword">true</span>));</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>            </div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;Weight&quot;</span>)</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                attributes.Add(<span class="keyword">new</span> TableColumnWidthAttribute(30));</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>            </div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;MaxStageGetter&quot;</span>)</div>
+<div class="line"><span class="lineno">   65</span>            {</div>
+<div class="line"><span class="lineno">   66</span>                attributes.Add(<span class="keyword">new</span> HideInInspector());</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ade41d792f8233e2822c0f9e5da9c8c10" name="ade41d792f8233e2822c0f9e5da9c8c10"></a>
@@ -159,7 +187,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d10/_stage_reward_chunk_data_drawer_8cs_source.html#l00042">42</a> of file <a class="el" href="../../d4/d10/_stage_reward_chunk_data_drawer_8cs_source.html">StageRewardChunkDataDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="comment">// attributes.Add(new HideLabelAttribute());</span></div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,29 @@ $(function(){initNavTree('d8/d0a/class_common_1_1_characters_1_1_non_players_1_1
   <div class="headertitle"><div class="title">Common.Characters.NonPlayers.Fiends.Fiend Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.NonPlayers.Fiends.Fiend:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.png" usemap="#Common.Characters.NonPlayers.Fiends.Fiend_map" alt=""/>
+  <map id="Common.Characters.NonPlayers.Fiends.Fiend_map" name="Common.Characters.NonPlayers.Fiends.Fiend_map">
+<area href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html" alt="Common.Characters.NonPlayers.NonPlayer" shape="rect" coords="285,728,560,752"/>
+<area href="../../dd/dff/class_common_1_1_character.html" alt="Common.Character" shape="rect" coords="285,672,560,696"/>
+<area href="../../d8/db9/interface_common_1_1_i_character.html" title="Character (Interface Packing)" alt="Common.ICharacter" shape="rect" coords="285,616,560,640"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="570,616,845,640"/>
+<area href="../../de/ddb/interface_common_1_1_i_status_effect_taker.html" title="Character." alt="Common.IStatusEffectTaker" shape="rect" coords="570,560,845,584"/>
+<area href="../../d9/d68/interface_common_1_1_i_knock_down_taker.html" title="Character." alt="Common.IKnockDownTaker" shape="rect" coords="570,504,845,528"/>
+<area href="../../de/db0/interface_common_1_1_i_stun_taker.html" title="Character." alt="Common.IStunTaker" shape="rect" coords="570,448,845,472"/>
+<area href="../../d5/d82/interface_common_1_1_i_draw_taker.html" title="Character, Prop." alt="Common.IDrawTaker" shape="rect" coords="570,392,845,416"/>
+<area href="../../d9/dfa/interface_common_1_1_i_knock_back_taker.html" title="Character, Prop." alt="Common.IKnockBackTaker" shape="rect" coords="570,336,845,360"/>
+<area href="../../df/d97/interface_common_1_1_i_horror_taker.html" title="Character." alt="Common.IHorrorTaker" shape="rect" coords="570,280,845,304"/>
+<area href="../../dc/d54/interface_common_1_1_i_paralysis_taker.html" title="Character, Prop." alt="Common.IParalysisTaker" shape="rect" coords="570,224,845,248"/>
+<area href="../../d2/dc2/interface_common_1_1_i_heal_taker.html" title="Character." alt="Common.IHealTaker" shape="rect" coords="570,168,845,192"/>
+<area href="../../d0/db6/interface_common_1_1_i_damage_taker.html" title="Character, Projectile, Trap, Prop." alt="Common.IDamageTaker" shape="rect" coords="570,112,845,136"/>
+<area href="../../d3/d68/interface_common_1_1_i_behaver.html" alt="Common.IBehaver" shape="rect" coords="570,56,845,80"/>
+<area href="../../db/dee/interface_common_1_1_i_combat_provider.html" title="Character, Trap." alt="Common.ICombatProvider" shape="rect" coords="570,0,845,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -281,7 +305,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dd/dff/class_common_1_1_character.html">Common.Character</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/de0/_fiend_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d8/de0/_fiend_8cs_source.html">Fiend.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            base.Initialize();</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            dropSpirits.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   28</span>            coinDropAction.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   29</span>            <a class="code hl_class" href="../../d2/dcf/class_common_1_1_characters_1_1_actions_1_1_await_status.html">AwaitStatus</a>.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_class" href="../../d4/dd0/class_common_1_1_characters_1_1_enemies_1_1_fiends_1_1_fiend_level.html">FiendLevel</a>.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   31</span>            spawnEvent.<a class="code hl_function" href="../../db/d31/class_common_1_1_characters_1_1_character_spawn_event.html#a2f80c590346d3b296a1f895b5620b3a3">Invoke</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>            ShieldPoints = SoulArmorPoints;</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_class" href="../../d2/dcf/class_common_1_1_characters_1_1_actions_1_1_await_status.html">AwaitStatus</a>.Active();</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_actions_1_1_await_status_html"><div class="ttname"><a href="../../d2/dcf/class_common_1_1_characters_1_1_actions_1_1_await_status.html">Common.Characters.Actions.AwaitStatus</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/db1/_await_status_8cs_source.html#l00012">AwaitStatus.cs:13</a></div></div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_character_spawn_event_html_a2f80c590346d3b296a1f895b5620b3a3"><div class="ttname"><a href="../../db/d31/class_common_1_1_characters_1_1_character_spawn_event.html#a2f80c590346d3b296a1f895b5620b3a3">Common.Characters.CharacterSpawnEvent.Invoke</a></div><div class="ttdeci">override void Invoke(T subject)</div><div class="ttdoc">Invoke Only Global Actions.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/dec/_character_spawn_event_8cs_source.html#l00005">CharacterSpawnEvent.cs:5</a></div></div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_enemies_1_1_fiends_1_1_fiend_level_html"><div class="ttname"><a href="../../d4/dd0/class_common_1_1_characters_1_1_enemies_1_1_fiends_1_1_fiend_level.html">Common.Characters.Enemies.Fiends.FiendLevel</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d6d/_fiend_level_8cs_source.html#l00006">FiendLevel.cs:7</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -402,7 +441,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/de0/_fiend_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d8/de0/_fiend_8cs_source.html">Fiend.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

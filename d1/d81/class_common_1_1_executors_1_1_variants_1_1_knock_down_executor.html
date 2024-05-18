@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,16 @@ $(function(){initNavTree('d1/d81/class_common_1_1_executors_1_1_variants_1_1_kno
   <div class="headertitle"><div class="title">Common.Executors.Variants.KnockDownExecutor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Executors.Variants.KnockDownExecutor:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/d81/class_common_1_1_executors_1_1_variants_1_1_knock_down_executor.png" usemap="#Common.Executors.Variants.KnockDownExecutor_map" alt=""/>
+  <map id="Common.Executors.Variants.KnockDownExecutor_map" name="Common.Executors.Variants.KnockDownExecutor_map">
+<area href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html" alt="Common.Executors.ExecuteBehaviour" shape="rect" coords="151,56,443,80"/>
+<area href="../../d7/dc1/interface_i_condition_table.html" alt="IConditionTable&lt; GameObject &gt;" shape="rect" coords="302,0,594,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -166,7 +177,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d8f/_knock_down_executor_8cs_source.html#l00007">7</a> of file <a class="el" href="../../d6/d8f/_knock_down_executor_8cs_source.html">KnockDownExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">if</span> (!target.TryGetComponent(out IKnockDownTaker taker)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   10</span>            </div>
+<div class="line"><span class="lineno">   11</span>            taker.TakeKnockDown(Provider.Position);</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

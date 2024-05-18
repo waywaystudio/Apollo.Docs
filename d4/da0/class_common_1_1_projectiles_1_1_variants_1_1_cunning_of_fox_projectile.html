@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,23 @@ $(function(){initNavTree('d4/da0/class_common_1_1_projectiles_1_1_variants_1_1_c
   <div class="headertitle"><div class="title">Common.Projectiles.Variants.CunningOfFoxProjectile Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Variants.CunningOfFoxProjectile:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/da0/class_common_1_1_projectiles_1_1_variants_1_1_cunning_of_fox_projectile.png" usemap="#Common.Projectiles.Variants.CunningOfFoxProjectile_map" alt=""/>
+  <map id="Common.Projectiles.Variants.CunningOfFoxProjectile_map" name="Common.Projectiles.Variants.CunningOfFoxProjectile_map">
+<area href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html" alt="Common.Projectiles.Projectile" shape="rect" coords="484,112,797,136"/>
+<area href="../../d0/db6/interface_common_1_1_i_damage_taker.html" title="Character, Projectile, Trap, Prop." alt="Common.IDamageTaker" shape="rect" coords="1292,112,1605,136"/>
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="323,56,636,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="646,56,959,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="969,56,1282,80"/>
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="1292,56,1605,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="323,0,636,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="646,0,959,24"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="1292,0,1605,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -203,7 +221,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#aae9763c6158d5d9b3b5ad983f3f325eb">Common.Projectiles.Projectile</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d19/_cunning_of_fox_projectile_8cs_source.html#l00010">10</a> of file <a class="el" href="../../dc/d19/_cunning_of_fox_projectile_8cs_source.html">CunningOfFoxProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            base.Initialize(provider);</div>
+<div class="line"><span class="lineno">   13</span>            </div>
+<div class="line"><span class="lineno">   14</span>            Sections</div>
+<div class="line"><span class="lineno">   15</span>                .Add(Section.Execute, <span class="stringliteral">&quot;InstantComplete&quot;</span>, Invoker.Complete)</div>
+<div class="line"><span class="lineno">   16</span>                ;</div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>            trigger</div>
+<div class="line"><span class="lineno">   19</span>                .Register(<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   20</span>                .AddOnEnter(<span class="stringliteral">&quot;CollideCunningOfFoxProjectile&quot;</span>, OnCollided)</div>
+<div class="line"><span class="lineno">   21</span>                ;</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a71b1644e4d43e2b4a710eb33139d7e35" name="a71b1644e4d43e2b4a710eb33139d7e35"></a>
@@ -224,7 +254,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d0/db6/interface_common_1_1_i_damage_taker.html">Common.IDamageTaker</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d19/_cunning_of_fox_projectile_8cs_source.html#l00024">24</a> of file <a class="el" href="../../dc/d19/_cunning_of_fox_projectile_8cs_source.html">CunningOfFoxProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            Cancel();</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

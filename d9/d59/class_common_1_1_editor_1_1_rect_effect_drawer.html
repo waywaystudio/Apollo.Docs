@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d9/d59/class_common_1_1_editor_1_1_rect_effect_drawer.
   <div class="headertitle"><div class="title">Common.Editor.RectEffectDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Editor.RectEffectDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/d59/class_common_1_1_editor_1_1_rect_effect_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -134,7 +141,104 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d92/_u_i_effect_behaviour_drawer_8cs_source.html#l00231">231</a> of file <a class="el" href="../../d9/d92/_u_i_effect_behaviour_drawer_8cs_source.html">UIEffectBehaviourDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  232</span>        {</div>
+<div class="line"><span class="lineno">  233</span>            var translateTweenGroup = <span class="keyword">new</span> FoldoutGroupAttribute(<span class="stringliteral">&quot;TranslateTween&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  234</span>            var scaleTweenGroup = <span class="keyword">new</span> FoldoutGroupAttribute(<span class="stringliteral">&quot;ScaleTween&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  235</span>            var resizeTweenGroup = <span class="keyword">new</span> FoldoutGroupAttribute(<span class="stringliteral">&quot;ResizeTween&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  236</span>            </div>
+<div class="line"><span class="lineno">  237</span>            var translateAble = <span class="keyword">new</span> EnableIfAttribute(<span class="stringliteral">&quot;@this.doTranslateTween&quot;</span>);</div>
+<div class="line"><span class="lineno">  238</span>            var scaleAble = <span class="keyword">new</span> EnableIfAttribute(<span class="stringliteral">&quot;@this.doScaleTween&quot;</span>);</div>
+<div class="line"><span class="lineno">  239</span>            var sizeAble = <span class="keyword">new</span> EnableIfAttribute(<span class="stringliteral">&quot;@this.doReSizeTween&quot;</span>);</div>
+<div class="line"><span class="lineno">  240</span>           </div>
+<div class="line"><span class="lineno">  241</span>            </div>
+<div class="line"><span class="lineno">  242</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;doTranslateTween&quot;</span>)</div>
+<div class="line"><span class="lineno">  243</span>            {</div>
+<div class="line"><span class="lineno">  244</span>                attributes.Add(translateTweenGroup);</div>
+<div class="line"><span class="lineno">  245</span>            }</div>
+<div class="line"><span class="lineno">  246</span>            </div>
+<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;resetPositionOnTweenComplete&quot;</span>)</div>
+<div class="line"><span class="lineno">  248</span>            {</div>
+<div class="line"><span class="lineno">  249</span>                attributes.Add(translateTweenGroup);</div>
+<div class="line"><span class="lineno">  250</span>                attributes.Add(translateTweenGroup);</div>
+<div class="line"><span class="lineno">  251</span>            }</div>
+<div class="line"><span class="lineno">  252</span>            </div>
+<div class="line"><span class="lineno">  253</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;translateType&quot;</span>)</div>
+<div class="line"><span class="lineno">  254</span>            {</div>
+<div class="line"><span class="lineno">  255</span>                attributes.Add(translateAble);</div>
+<div class="line"><span class="lineno">  256</span>                attributes.Add(translateTweenGroup);</div>
+<div class="line"><span class="lineno">  257</span>            }</div>
+<div class="line"><span class="lineno">  258</span>            </div>
+<div class="line"><span class="lineno">  259</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;translatePosition&quot;</span>)</div>
+<div class="line"><span class="lineno">  260</span>            {</div>
+<div class="line"><span class="lineno">  261</span>                attributes.Add(translateAble);</div>
+<div class="line"><span class="lineno">  262</span>                attributes.Add(translateTweenGroup);</div>
+<div class="line"><span class="lineno">  263</span>            }</div>
+<div class="line"><span class="lineno">  264</span>            </div>
+<div class="line"><span class="lineno">  265</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;translateDuration&quot;</span>)</div>
+<div class="line"><span class="lineno">  266</span>            {</div>
+<div class="line"><span class="lineno">  267</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 60));</div>
+<div class="line"><span class="lineno">  268</span>                attributes.Add(translateAble);</div>
+<div class="line"><span class="lineno">  269</span>                attributes.Add(translateTweenGroup);</div>
+<div class="line"><span class="lineno">  270</span>            }</div>
+<div class="line"><span class="lineno">  271</span>            </div>
+<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;translateEase&quot;</span>)</div>
+<div class="line"><span class="lineno">  273</span>            {</div>
+<div class="line"><span class="lineno">  274</span>                attributes.Add(translateAble);</div>
+<div class="line"><span class="lineno">  275</span>                attributes.Add(translateTweenGroup);</div>
+<div class="line"><span class="lineno">  276</span>            }</div>
+<div class="line"><span class="lineno">  277</span>            </div>
+<div class="line"><span class="lineno">  278</span>            <span class="comment">// Scale</span></div>
+<div class="line"><span class="lineno">  279</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;doScaleTween&quot;</span>)</div>
+<div class="line"><span class="lineno">  280</span>            {</div>
+<div class="line"><span class="lineno">  281</span>                attributes.Add(scaleTweenGroup);</div>
+<div class="line"><span class="lineno">  282</span>            }</div>
+<div class="line"><span class="lineno">  283</span>            </div>
+<div class="line"><span class="lineno">  284</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;targetScale&quot;</span>)</div>
+<div class="line"><span class="lineno">  285</span>            {</div>
+<div class="line"><span class="lineno">  286</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 10));</div>
+<div class="line"><span class="lineno">  287</span>                attributes.Add(scaleAble);</div>
+<div class="line"><span class="lineno">  288</span>                attributes.Add(scaleTweenGroup);</div>
+<div class="line"><span class="lineno">  289</span>            }</div>
+<div class="line"><span class="lineno">  290</span>            </div>
+<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;scaleDuration&quot;</span>)</div>
+<div class="line"><span class="lineno">  292</span>            {</div>
+<div class="line"><span class="lineno">  293</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 60));</div>
+<div class="line"><span class="lineno">  294</span>                attributes.Add(scaleAble);</div>
+<div class="line"><span class="lineno">  295</span>                attributes.Add(scaleTweenGroup);</div>
+<div class="line"><span class="lineno">  296</span>            }</div>
+<div class="line"><span class="lineno">  297</span>            </div>
+<div class="line"><span class="lineno">  298</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;scaleEase&quot;</span>)</div>
+<div class="line"><span class="lineno">  299</span>            {</div>
+<div class="line"><span class="lineno">  300</span>                attributes.Add(scaleAble);</div>
+<div class="line"><span class="lineno">  301</span>                attributes.Add(scaleTweenGroup);</div>
+<div class="line"><span class="lineno">  302</span>            }</div>
+<div class="line"><span class="lineno">  303</span>            </div>
+<div class="line"><span class="lineno">  304</span>            <span class="comment">// ReSize</span></div>
+<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;doReSizeTween&quot;</span>)</div>
+<div class="line"><span class="lineno">  306</span>            {</div>
+<div class="line"><span class="lineno">  307</span>                attributes.Add(resizeTweenGroup);</div>
+<div class="line"><span class="lineno">  308</span>            }</div>
+<div class="line"><span class="lineno">  309</span>            </div>
+<div class="line"><span class="lineno">  310</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;targetSize&quot;</span>)</div>
+<div class="line"><span class="lineno">  311</span>            {</div>
+<div class="line"><span class="lineno">  312</span>                attributes.Add(sizeAble);</div>
+<div class="line"><span class="lineno">  313</span>                attributes.Add(resizeTweenGroup);</div>
+<div class="line"><span class="lineno">  314</span>            }</div>
+<div class="line"><span class="lineno">  315</span>            </div>
+<div class="line"><span class="lineno">  316</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;resizeDuration&quot;</span>)</div>
+<div class="line"><span class="lineno">  317</span>            {</div>
+<div class="line"><span class="lineno">  318</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 60));</div>
+<div class="line"><span class="lineno">  319</span>                attributes.Add(sizeAble);</div>
+<div class="line"><span class="lineno">  320</span>                attributes.Add(resizeTweenGroup);</div>
+<div class="line"><span class="lineno">  321</span>            }</div>
+<div class="line"><span class="lineno">  322</span>            </div>
+<div class="line"><span class="lineno">  323</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;resizeEase&quot;</span>)</div>
+<div class="line"><span class="lineno">  324</span>            {</div>
+<div class="line"><span class="lineno">  325</span>                attributes.Add(sizeAble);</div>
+<div class="line"><span class="lineno">  326</span>                attributes.Add(resizeTweenGroup);</div>
+<div class="line"><span class="lineno">  327</span>            }</div>
+<div class="line"><span class="lineno">  328</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

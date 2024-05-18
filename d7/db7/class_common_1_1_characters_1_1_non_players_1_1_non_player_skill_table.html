@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d7/db7/class_common_1_1_characters_1_1_non_players_1_1
   <div class="headertitle"><div class="title">Common.Characters.NonPlayers.NonPlayerSkillTable Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.NonPlayers.NonPlayerSkillTable:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/db7/class_common_1_1_characters_1_1_non_players_1_1_non_player_skill_table.png" usemap="#Common.Characters.NonPlayers.NonPlayerSkillTable_map" alt=""/>
+  <map id="Common.Characters.NonPlayers.NonPlayerSkillTable_map" name="Common.Characters.NonPlayers.NonPlayerSkillTable_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="325,0,640,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -133,7 +143,23 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d81/_non_player_skill_table_8cs_source.html#l00033">33</a> of file <a class="el" href="../../d5/d81/_non_player_skill_table_8cs_source.html">NonPlayerSkillTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            skillTable.ValueList.ForEach(skill =&gt;</div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                skill.Initialize(character);</div>
+<div class="line"><span class="lineno">   38</span>                skill.BehaviourList.ForEach(behaviour =&gt;</div>
+<div class="line"><span class="lineno">   39</span>                {</div>
+<div class="line"><span class="lineno">   40</span>                    <span class="keywordflow">if</span> (behaviour is not <a class="code hl_class" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html">NonPlayerSkillBehaviour</a> nonPlayerSkillBehaviour) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   41</span>                    </div>
+<div class="line"><span class="lineno">   42</span>                    behaviour.Sections</div>
+<div class="line"><span class="lineno">   43</span>                             .Add(Section.Active, <span class="stringliteral">&quot;SetCurrent&quot;</span>, () =&gt; CurrentSkill  = nonPlayerSkillBehaviour)</div>
+<div class="line"><span class="lineno">   44</span>                             .Add(Section.End, <span class="stringliteral">&quot;ReleaseCurrent&quot;</span>, () =&gt; CurrentSkill = <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   45</span>                             ;</div>
+<div class="line"><span class="lineno">   46</span>                });</div>
+<div class="line"><span class="lineno">   47</span>            });</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_html"><div class="ttname"><a href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html">Common.Skills.NonPlayers.NonPlayerSkillBehaviour</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_non_player_skill_behaviour_8cs_source.html#l00007">NonPlayerSkillBehaviour.cs:8</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -158,7 +184,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d81/_non_player_skill_table_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d5/d81/_non_player_skill_table_8cs_source.html">NonPlayerSkillTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a41a9423d3dadef9c844c36b445a33519" name="a41a9423d3dadef9c844c36b445a33519"></a>
@@ -182,7 +209,25 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d81/_non_player_skill_table_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d5/d81/_non_player_skill_table_8cs_source.html">NonPlayerSkillTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   15</span>            {</div>
+<div class="line"><span class="lineno">   16</span>                <a class="code hl_class" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html">NonPlayerSkillBehaviour</a> result = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>                skillTable.ValueList.ForEach(skill =&gt;</div>
+<div class="line"><span class="lineno">   19</span>                {</div>
+<div class="line"><span class="lineno">   20</span>                    <span class="keywordflow">if</span> (skill.MainBehaviour is not <a class="code hl_class" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html">NonPlayerSkillBehaviour</a> nonPlayerSkillBehaviour) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   21</span>                    <span class="keywordflow">if</span> (!nonPlayerSkillBehaviour.Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   22</span>                    <span class="keywordflow">if</span> (result is <span class="keyword">null</span> || result.Priority &gt; nonPlayerSkillBehaviour.Priority)</div>
+<div class="line"><span class="lineno">   23</span>                    {</div>
+<div class="line"><span class="lineno">   24</span>                        result = nonPlayerSkillBehaviour;</div>
+<div class="line"><span class="lineno">   25</span>                    }</div>
+<div class="line"><span class="lineno">   26</span>                });</div>
+<div class="line"><span class="lineno">   27</span>                </div>
+<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   29</span>            }</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d0/dc1/class_core_editor_1_1_resource_table_drawer.htm
   <div class="headertitle"><div class="title">CoreEditor.ResourceTableDrawer&lt; T &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for CoreEditor.ResourceTableDrawer&lt; T &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d0/dc1/class_core_editor_1_1_resource_table_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -142,7 +149,37 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dd6/_resource_data_drawer_8cs_source.html#l00038">38</a> of file <a class="el" href="../../da/dd6/_resource_data_drawer_8cs_source.html">ResourceDataDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;DataIndex&quot;</span>)</div>
+<div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                attributes.Add(<span class="keyword">new</span> VerticalGroupAttribute(<span class="stringliteral">&quot;Table/Property&quot;</span>));</div>
+<div class="line"><span class="lineno">   43</span>                attributes.Add(<span class="keyword">new</span> PropertyOrderAttribute(1f));</div>
+<div class="line"><span class="lineno">   44</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   45</span>                attributes.Add(<span class="keyword">new</span> DisplayAsStringAttribute());</div>
+<div class="line"><span class="lineno">   46</span>            }</div>
+<div class="line"><span class="lineno">   47</span>            </div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;Category&quot;</span>)</div>
+<div class="line"><span class="lineno">   49</span>            {</div>
+<div class="line"><span class="lineno">   50</span>                attributes.Add(<span class="keyword">new</span> VerticalGroupAttribute(<span class="stringliteral">&quot;Table/Property&quot;</span>));</div>
+<div class="line"><span class="lineno">   51</span>                attributes.Add(<span class="keyword">new</span> ShowInInspectorAttribute());</div>
+<div class="line"><span class="lineno">   52</span>                attributes.Add(<span class="keyword">new</span> PropertyOrderAttribute(2f));</div>
+<div class="line"><span class="lineno">   53</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   54</span>                attributes.Add(<span class="keyword">new</span> DisplayAsStringAttribute());</div>
+<div class="line"><span class="lineno">   55</span>            }</div>
+<div class="line"><span class="lineno">   56</span>            </div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;Resource&quot;</span>)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                attributes.Add(<span class="keyword">new</span> HorizontalGroupAttribute(<span class="stringliteral">&quot;Table&quot;</span>, 0.12f));</div>
+<div class="line"><span class="lineno">   60</span>                attributes.Add(<span class="keyword">new</span> PropertyOrderAttribute(0f));</div>
+<div class="line"><span class="lineno">   61</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   62</span>                attributes.Add(<span class="keyword">new</span> PreviewFieldAttribute</div>
+<div class="line"><span class="lineno">   63</span>                {</div>
+<div class="line"><span class="lineno">   64</span>                    Height    = 40f,</div>
+<div class="line"><span class="lineno">   65</span>                    Alignment = ObjectFieldAlignment.Left</div>
+<div class="line"><span class="lineno">   66</span>                });</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

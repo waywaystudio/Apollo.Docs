@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('db/d5d/class_core_editor_1_1_resource_data_drawer.html
   <div class="headertitle"><div class="title">CoreEditor.ResourceDataDrawer&lt; T0, T1 &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for CoreEditor.ResourceDataDrawer&lt; T0, T1 &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/d5d/class_core_editor_1_1_resource_data_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -145,7 +152,23 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dd6/_resource_data_drawer_8cs_source.html#l00017">17</a> of file <a class="el" href="../../da/dd6/_resource_data_drawer_8cs_source.html">ResourceDataDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;searchingTargetPath&quot;</span>)</div>
+<div class="line"><span class="lineno">   20</span>            {</div>
+<div class="line"><span class="lineno">   21</span>                attributes.Add(<span class="keyword">new</span> FolderPathAttribute());</div>
+<div class="line"><span class="lineno">   22</span>            }</div>
+<div class="line"><span class="lineno">   23</span>            </div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;resourceList&quot;</span>)</div>
+<div class="line"><span class="lineno">   25</span>            {</div>
+<div class="line"><span class="lineno">   26</span>                attributes.Add(<span class="keyword">new</span> PropertySpaceAttribute(15f, 0f));</div>
+<div class="line"><span class="lineno">   27</span>                attributes.Add(<span class="keyword">new</span> ListDrawerSettingsAttribute</div>
+<div class="line"><span class="lineno">   28</span>                {</div>
+<div class="line"><span class="lineno">   29</span>                    IsReadOnly  = <span class="keyword">true</span>,</div>
+<div class="line"><span class="lineno">   30</span>                    ShowFoldout = <span class="keyword">true</span>,</div>
+<div class="line"><span class="lineno">   31</span>                });</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae977fb32739f7817f362648bd18427a2" name="ae977fb32739f7817f362648bd18427a2"></a>
@@ -168,7 +191,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dd6/_resource_data_drawer_8cs_source.html#l00012">12</a> of file <a class="el" href="../../da/dd6/_resource_data_drawer_8cs_source.html">ResourceDataDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            attributes.Add(<span class="keyword">new</span> SearchableAttribute());</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

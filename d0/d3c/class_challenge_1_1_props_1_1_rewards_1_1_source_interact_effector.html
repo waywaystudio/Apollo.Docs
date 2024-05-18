@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,16 @@ $(function(){initNavTree('d0/d3c/class_challenge_1_1_props_1_1_rewards_1_1_sourc
   <div class="headertitle"><div class="title">Challenge.Props.Rewards.SourceInteractEffector Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Props.Rewards.SourceInteractEffector:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d0/d3c/class_challenge_1_1_props_1_1_rewards_1_1_source_interact_effector.png" usemap="#Challenge.Props.Rewards.SourceInteractEffector_map" alt=""/>
+  <map id="Challenge.Props.Rewards.SourceInteractEffector_map" name="Challenge.Props.Rewards.SourceInteractEffector_map">
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="301,0,592,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="602,0,893,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -138,7 +149,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d12/_source_interact_effector_8cs_source.html#l00033">33</a> of file <a class="el" href="../../de/d12/_source_interact_effector_8cs_source.html">SourceInteractEffector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   36</span>            </div>
+<div class="line"><span class="lineno">   37</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa4ed71c9bad78b6477c430fefd4cbe16" name="aa4ed71c9bad78b6477c430fefd4cbe16"></a>
@@ -176,7 +192,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d12/_source_interact_effector_8cs_source.html#l00019">19</a> of file <a class="el" href="../../de/d12/_source_interact_effector_8cs_source.html">SourceInteractEffector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            this.source = source;</div>
+<div class="line"><span class="lineno">   22</span>            Invoker     = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   23</span>            sequenceTimeTrigger.AddCallBack(<span class="stringliteral">&quot;Complete&quot;</span>, Invoker.Complete);</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>            Sections</div>
+<div class="line"><span class="lineno">   26</span>                .AddCondition(<span class="stringliteral">&quot;HasSource&quot;</span>, () =&gt; this.source is not <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   27</span>                .Add(Section.Active, <span class="stringliteral">&quot;PlayTimeTrigger&quot;</span>, sequenceTimeTrigger.Play)</div>
+<div class="line"><span class="lineno">   28</span>                ;</div>
+<div class="line"><span class="lineno">   29</span>            </div>
+<div class="line"><span class="lineno">   30</span>            effector.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -203,7 +232,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d12/_source_interact_effector_8cs_source.html#l00016">16</a> of file <a class="el" href="../../de/d12/_source_interact_effector_8cs_source.html">SourceInteractEffector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa3bd0bc25f867951c190caa2056febd0" name="aa3bd0bc25f867951c190caa2056febd0"></a>
@@ -229,7 +259,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d12/_source_interact_effector_8cs_source.html#l00015">15</a> of file <a class="el" href="../../de/d12/_source_interact_effector_8cs_source.html">SourceInteractEffector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

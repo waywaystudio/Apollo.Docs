@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,19 @@ $(function(){initNavTree('d5/dd5/class_common_1_1_masteries_1_1_split_trident_1_
   <div class="headertitle"><div class="title">Common.Masteries.SplitTrident.ExplosiveDemise Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.SplitTrident.ExplosiveDemise:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/dd5/class_common_1_1_masteries_1_1_split_trident_1_1_explosive_demise.png" usemap="#Common.Masteries.SplitTrident.ExplosiveDemise_map" alt=""/>
+  <map id="Common.Masteries.SplitTrident.ExplosiveDemise_map" name="Common.Masteries.SplitTrident.ExplosiveDemise_map">
+<area href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html" alt="Common.Masteries.Mastery" shape="rect" coords="295,56,580,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="885,56,1170,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="295,0,580,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="590,0,875,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="885,0,1170,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -224,7 +238,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddb/_explosive_demise_8cs_source.html#l00037">37</a> of file <a class="el" href="../../d8/ddb/_explosive_demise_8cs_source.html">ExplosiveDemise.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            fiendSpawnEvent.Remove(<span class="stringliteral">&quot;ExplosiveDemise&quot;</span>, RemoveExplosiveDemise);</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9627f6d7096f6ab760d0df3cd541d6cf" name="a9627f6d7096f6ab760d0df3cd541d6cf"></a>
@@ -270,7 +287,17 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddb/_explosive_demise_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d8/ddb/_explosive_demise_8cs_source.html">ExplosiveDemise.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            this.dred             = dred;</div>
+<div class="line"><span class="lineno">   29</span>            Invoker               = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   30</span>            explosionDamageEntity = <span class="keyword">new</span> StatEntity(StatType.BaseDamage, <span class="stringliteral">&quot;ExplosiveDemise.BaseDamage&quot;</span>, quality.Value);</div>
+<div class="line"><span class="lineno">   31</span>            </div>
+<div class="line"><span class="lineno">   32</span>            explosiveExecutor.Initialize(dred);</div>
+<div class="line"><span class="lineno">   33</span>            explosiveExecutor.DamageTable.Add(explosionDamageEntity);</div>
+<div class="line"><span class="lineno">   34</span>            fiendSpawnEvent.Add(<span class="stringliteral">&quot;ExplosiveDemise&quot;</span>, AddExplosiveDemise);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1a8f0e7599b0ef3256b7678b1bcf1e13" name="a1a8f0e7599b0ef3256b7678b1bcf1e13"></a>
@@ -297,7 +324,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddb/_explosive_demise_8cs_source.html#l00042">42</a> of file <a class="el" href="../../d8/ddb/_explosive_demise_8cs_source.html">ExplosiveDemise.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            explosionDamageEntity.Value = quality.Value;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -324,7 +354,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddb/_explosive_demise_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d8/ddb/_explosive_demise_8cs_source.html">ExplosiveDemise.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a877fd4d50096c36ef9767450aa86d35b" name="a877fd4d50096c36ef9767450aa86d35b"></a>
@@ -350,7 +381,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/ddb/_explosive_demise_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d8/ddb/_explosive_demise_8cs_source.html">ExplosiveDemise.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9d6d6d99a9aa8605a61e09d6875a5992" name="a9d6d6d99a9aa8605a61e09d6875a5992"></a>

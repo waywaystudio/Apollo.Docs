@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,15 @@ $(function(){initNavTree('d9/d9f/class_common_1_1_units_1_1_unit_behaviour_table
   <div class="headertitle"><div class="title">Common.Units.UnitBehaviourTable Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Units.UnitBehaviourTable:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/d9f/class_common_1_1_units_1_1_unit_behaviour_table.png" usemap="#Common.Units.UnitBehaviourTable_map" alt=""/>
+  <map id="Common.Units.UnitBehaviourTable_map" name="Common.Units.UnitBehaviourTable_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="215,0,420,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -173,7 +183,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d9e/_unit_behaviour_table_8cs_source.html#l00048">48</a> of file <a class="el" href="../../d1/d9e/_unit_behaviour_table_8cs_source.html">UnitBehaviourTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> table.ContainsKey(behaviourCode);</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a806f94d9d174b65e8b14500c81e3a200" name="a806f94d9d174b65e8b14500c81e3a200"></a>
@@ -192,7 +205,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d9e/_unit_behaviour_table_8cs_source.html#l00042">42</a> of file <a class="el" href="../../d1/d9e/_unit_behaviour_table_8cs_source.html">UnitBehaviourTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            table.ValueIterate(cb =&gt; cb.Initialize(behaver));</div>
+<div class="line"><span class="lineno">   45</span>            combinationTable.ValueIterate(combinator =&gt; combinator.Initialize(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab191432e1d9b609b1d86522c2c8fd63e" name="ab191432e1d9b609b1d86522c2c8fd63e"></a>
@@ -223,7 +240,13 @@ Properties</h2></td></tr>
 </div>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d9e/_unit_behaviour_table_8cs_source.html#l00053">53</a> of file <a class="el" href="../../d1/d9e/_unit_behaviour_table_8cs_source.html">UnitBehaviourTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                                                : UnitBehaviour</div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            behaviour = table[behaviourCode] as T;</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span> behaviour is not <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abab7d8de23568ffdbf2072807855b6b5" name="abab7d8de23568ffdbf2072807855b6b5"></a>
@@ -254,7 +277,13 @@ Properties</h2></td></tr>
 </div>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d9e/_unit_behaviour_table_8cs_source.html#l00060">60</a> of file <a class="el" href="../../d1/d9e/_unit_behaviour_table_8cs_source.html">UnitBehaviourTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                                                                                           : UnitBehaviourCombinator</div>
+<div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            combinator = combinationTable[behaviourCode] as T;</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span> combinator is not <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -328,7 +357,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d9e/_unit_behaviour_table_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d1/d9e/_unit_behaviour_table_8cs_source.html">UnitBehaviourTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a927315e78f9e6d63d15eb99a4a429244" name="a927315e78f9e6d63d15eb99a4a429244"></a>

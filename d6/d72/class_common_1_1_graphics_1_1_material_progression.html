@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d6/d72/class_common_1_1_graphics_1_1_material_progress
   <div class="headertitle"><div class="title">Common.Graphics.MaterialProgression Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Graphics.MaterialProgression:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/d72/class_common_1_1_graphics_1_1_material_progression.png" usemap="#Common.Graphics.MaterialProgression_map" alt=""/>
+  <map id="Common.Graphics.MaterialProgression_map" name="Common.Graphics.MaterialProgression_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="243,0,476,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -125,7 +135,17 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d51/_material_progression_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d8/d51/_material_progression_8cs_source.html">MaterialProgression.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            meshRenderer.material.SetFloat(Progression, progression);</div>
+<div class="line"><span class="lineno">   29</span>            </div>
+<div class="line"><span class="lineno">   30</span>            lerpPropertyList?.ForEach(x =&gt;</div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                var propertyName = Shader.PropertyToID(x.propertyName);</div>
+<div class="line"><span class="lineno">   33</span>                var lerpValue = Mathf.Lerp(x.lerpFromTo.x, x.lerpFromTo.y, progression);</div>
+<div class="line"><span class="lineno">   34</span>                meshRenderer.material.SetFloat(propertyName, lerpValue);</div>
+<div class="line"><span class="lineno">   35</span>            });</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

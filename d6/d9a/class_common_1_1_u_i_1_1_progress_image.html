@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,18 @@ $(function(){initNavTree('d6/d9a/class_common_1_1_u_i_1_1_progress_image.html','
   <div class="headertitle"><div class="title">Common.UI.ProgressImage Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UI.ProgressImage:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/d9a/class_common_1_1_u_i_1_1_progress_image.png" usemap="#Common.UI.ProgressImage_map" alt=""/>
+  <map id="Common.UI.ProgressImage_map" name="Common.UI.ProgressImage_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="573,0,945,24"/>
+<area href="../../dd/dc6/class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_casting_bars_1_1_casting_progression.html" alt="Challenge.UI.Huds.Bottoms.CastingBars.CastingProgression" shape="rect" coords="0,112,372,136"/>
+<area href="../../d1/d32/class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_health_indicators_1_1_combat_value_circle.html" alt="Challenge.UI.Huds.Bottoms.HealthIndicators.CombatValueCircle" shape="rect" coords="382,112,754,136"/>
+<area href="../../d6/de7/class_common_1_1_u_i_1_1_name_plates_1_1_combat_value_bar.html" alt="Common.UI.NamePlates.CombatValueBar" shape="rect" coords="764,112,1136,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -165,7 +178,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d30/_progress_image_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d0/d30/_progress_image_8cs_source.html">ProgressImage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (IsRegistered) Unregister();</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            TargetProgress   = targetProgress;</div>
+<div class="line"><span class="lineno">   28</span>            MaxGetter        = maxGetter;</div>
+<div class="line"><span class="lineno">   29</span>            image.fillAmount = Max.Approximately(0f) ? 0 : TargetProgress.Value / Max;</div>
+<div class="line"><span class="lineno">   30</span>            ProgressKey      = GetInstanceID().ToString();</div>
+<div class="line"><span class="lineno">   31</span>            IsRegistered     = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   32</span>            </div>
+<div class="line"><span class="lineno">   33</span>            targetProgress.AddEvent(ProgressKey, TryUpdateImage);</div>
+<div class="line"><span class="lineno">   34</span>            maxGetter.AddEvent(ProgressKey, TryUpdateImage);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a06a2895bba71fdf4e3cc4e5082ffae7a" name="a06a2895bba71fdf4e3cc4e5082ffae7a"></a>
@@ -192,7 +217,24 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d30/_progress_image_8cs_source.html#l00053">53</a> of file <a class="el" href="../../d0/d30/_progress_image_8cs_source.html">ProgressImage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            var progress = Max.Approximately(0f) </div>
+<div class="line"><span class="lineno">   56</span>                ? 0 </div>
+<div class="line"><span class="lineno">   57</span>                : Mathf.Clamp01(TargetProgress.Value / Max);</div>
+<div class="line"><span class="lineno">   58</span>            </div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (hasTween)</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                UpdateTween?.Kill();</div>
+<div class="line"><span class="lineno">   62</span>                UpdateTween = DOTween.To(() =&gt; image.fillAmount, x =&gt; image.fillAmount = x, progress, tweenDuration)</div>
+<div class="line"><span class="lineno">   63</span>                                     .SetEase(easeType)</div>
+<div class="line"><span class="lineno">   64</span>                                     ;</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   67</span>            {</div>
+<div class="line"><span class="lineno">   68</span>                image.fillAmount = progress;</div>
+<div class="line"><span class="lineno">   69</span>            }</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a84b7833432e6ef31a3294481b6713138" name="a84b7833432e6ef31a3294481b6713138"></a>
@@ -211,7 +253,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d30/_progress_image_8cs_source.html#l00037">37</a> of file <a class="el" href="../../d0/d30/_progress_image_8cs_source.html">ProgressImage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            IsRegistered     = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   40</span>            image.fillAmount = 0f;</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (UpdateTween is not <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                UpdateTween.Kill();</div>
+<div class="line"><span class="lineno">   45</span>                UpdateTween = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   46</span>            }</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>            TargetProgress?.RemoveEvent(ProgressKey);</div>
+<div class="line"><span class="lineno">   49</span>            MaxGetter?.RemoveEvent(ProgressKey);</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -429,7 +484,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d30/_progress_image_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d0/d30/_progress_image_8cs_source.html">ProgressImage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa47449d1e643345cafbe2a71cfadf2d9" name="aa47449d1e643345cafbe2a71cfadf2d9"></a>
@@ -453,7 +509,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d30/_progress_image_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d0/d30/_progress_image_8cs_source.html">ProgressImage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

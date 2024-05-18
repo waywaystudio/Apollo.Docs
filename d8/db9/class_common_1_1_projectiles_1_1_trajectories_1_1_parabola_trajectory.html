@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,16 @@ $(function(){initNavTree('d8/db9/class_common_1_1_projectiles_1_1_trajectories_1
   <div class="headertitle"><div class="title">Common.Projectiles.Trajectories.ParabolaTrajectory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Trajectories.ParabolaTrajectory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/db9/class_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory.png" usemap="#Common.Projectiles.Trajectories.ParabolaTrajectory_map" alt=""/>
+  <map id="Common.Projectiles.Trajectories.ParabolaTrajectory_map" name="Common.Projectiles.Trajectories.ParabolaTrajectory_map">
+<area href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html" alt="Common.Projectiles.Trajectory" shape="rect" coords="0,56,370,80"/>
+<area href="../../d6/d03/class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_cunning_of_fox_trajectory.html" alt="Common.Skills.NonPlayers.Kimmihohs.CunningOfFoxTrajectory" shape="rect" coords="0,168,370,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -169,7 +180,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d55/_parabola_trajectory_8cs_source.html#l00030">30</a> of file <a class="el" href="../../db/d55/_parabola_trajectory_8cs_source.html">ParabolaTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            ParabolaTween?.Kill();</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3809f59a7e1e42c403abde6ed41d954c" name="a3809f59a7e1e42c403abde6ed41d954c"></a>
@@ -188,7 +202,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d55/_parabola_trajectory_8cs_source.html#l00014">14</a> of file <a class="el" href="../../db/d55/_parabola_trajectory_8cs_source.html">ParabolaTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            var endPosition = Projectile.transform.position + Direction * distance;</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">if</span> (Vector3.Distance(Destination, transform.position) &gt; 0.0001f)</div>
+<div class="line"><span class="lineno">   19</span>            {</div>
+<div class="line"><span class="lineno">   20</span>                endPosition = Destination;</div>
+<div class="line"><span class="lineno">   21</span>            }</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            var duration = distance / Speed;</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>            ParabolaTween = Projectile.transform.DOJump(endPosition, jumpHeight, numJumps, duration)</div>
+<div class="line"><span class="lineno">   26</span>                                      .OnComplete(Projectile.Invoker.Execute)</div>
+<div class="line"><span class="lineno">   27</span>                                      .SetEase(ease);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

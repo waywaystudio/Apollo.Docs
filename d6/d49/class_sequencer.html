@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -172,7 +173,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00046">46</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> Append(() =&gt; </div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            action.Invoke();</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">return</span> UniTask.CompletedTask;</div>
+<div class="line"><span class="lineno">   52</span>        });</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a37ba78b2a0ba195e159897f880bc07a6" name="a37ba78b2a0ba195e159897f880bc07a6"></a>
@@ -191,7 +199,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        SequenceSteps.Add(() =&gt; asyncMethod().AttachExternalCancellation(canceller.Token));</div>
+<div class="line"><span class="lineno">   24</span>        </div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a28b76b5b3db8d159296b1ca786b84d3a" name="a28b76b5b3db8d159296b1ca786b84d3a"></a>
@@ -210,7 +223,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00055">55</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   56</span>    {</div>
+<div class="line"><span class="lineno">   57</span>        SequenceSteps.Add(() =&gt; tween.ToUniTask(cancellationToken: canceller.Token));</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a54d39b00068e1b9828a28b2229fd8031" name="a54d39b00068e1b9828a28b2229fd8031"></a>
@@ -233,7 +251,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00117">117</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  118</span>    {</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> Append(async () =&gt; await UniTask.Delay(TimeSpan.FromSeconds(seconds), DelayType.Realtime, loopTiming, cancellationToken: canceller.Token));</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a919c11a029f0aeaa0d8b262b3df102e1" name="a919c11a029f0aeaa0d8b262b3df102e1"></a>
@@ -254,7 +275,17 @@ Properties</h2></td></tr>
 <p>example like this sequencer.AppendWithCallback(callback =&gt;; SomeMethodWhichContainsEndCallback(destinationA, callback)) .AppendWithCallback(callback =&gt;; SomeMethodWhichContainsEndCallback(destinationB, callback)) .Play(); </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00034">34</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> Append(() =&gt;</div>
+<div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            var tcs = <span class="keyword">new</span> UniTaskCompletionSource();</div>
+<div class="line"><span class="lineno">   39</span>            </div>
+<div class="line"><span class="lineno">   40</span>            actionWithCallback(() =&gt; tcs.TrySetResult());</div>
+<div class="line"><span class="lineno">   41</span>            </div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> tcs.Task;</div>
+<div class="line"><span class="lineno">   43</span>        });</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acfddf15dca56bc31d71e606b2b94f235" name="acfddf15dca56bc31d71e606b2b94f235"></a>
@@ -273,7 +304,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00129">129</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  130</span>    {</div>
+<div class="line"><span class="lineno">  131</span>        canceller?.Cancel();</div>
+<div class="line"><span class="lineno">  132</span>        SequenceSteps.Clear();</div>
+<div class="line"><span class="lineno">  133</span>        isPlaying = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  134</span>        IsEnd = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a29340cd5e12a0dc57e398bdbe4da2080" name="a29340cd5e12a0dc57e398bdbe4da2080"></a>
@@ -292,7 +329,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00137">137</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>        Cancel();</div>
+<div class="line"><span class="lineno">  140</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5935d466e1eb28f06cc0b8f92a62f190" name="a5935d466e1eb28f06cc0b8f92a62f190"></a>
@@ -311,7 +351,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00092">92</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">return</span> Join(() =&gt; </div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            action.Invoke();</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">return</span> UniTask.CompletedTask;</div>
+<div class="line"><span class="lineno">   98</span>        });</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad1830d597a97f0e2af1003f038253bc4" name="ad1830d597a97f0e2af1003f038253bc4"></a>
@@ -330,7 +377,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00078">78</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   79</span>    {</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">if</span> (SequenceSteps.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            var lastStep = SequenceSteps[^1];</div>
+<div class="line"><span class="lineno">   83</span>            SequenceSteps[^1] = () =&gt; UniTask.WhenAll(lastStep(), asyncMethod().AttachExternalCancellation(canceller.Token));</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   86</span>        {</div>
+<div class="line"><span class="lineno">   87</span>            Append(asyncMethod);</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7d1fcd13f73ef8d8ddb6a07db455a4d9" name="a7d1fcd13f73ef8d8ddb6a07db455a4d9"></a>
@@ -349,7 +408,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00101">101</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  102</span>    {</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">if</span> (SequenceSteps.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            var lastStep = SequenceSteps[^1];</div>
+<div class="line"><span class="lineno">  106</span>            SequenceSteps[^1] = () =&gt; UniTask.WhenAll(lastStep(), tween.ToUniTask(cancellationToken: canceller.Token));</div>
+<div class="line"><span class="lineno">  107</span>        }</div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            Append(tween);</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae44127b184a62f70248f86329ff7edd5" name="ae44127b184a62f70248f86329ff7edd5"></a>
@@ -368,7 +439,26 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00143">143</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  144</span>    {</div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">if</span> (isPlaying) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  146</span>        </div>
+<div class="line"><span class="lineno">  147</span>        isPlaying = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  148</span>        canceller = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">foreach</span> (var step <span class="keywordflow">in</span> SequenceSteps)</div>
+<div class="line"><span class="lineno">  151</span>        {</div>
+<div class="line"><span class="lineno">  152</span>            await step.Invoke();</div>
+<div class="line"><span class="lineno">  153</span>            </div>
+<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">if</span> (canceller.IsCancellationRequested)</div>
+<div class="line"><span class="lineno">  155</span>            {</div>
+<div class="line"><span class="lineno">  156</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  157</span>            }</div>
+<div class="line"><span class="lineno">  158</span>        }</div>
+<div class="line"><span class="lineno">  159</span> </div>
+<div class="line"><span class="lineno">  160</span>        IsEnd     = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  161</span>        isPlaying = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  162</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6b0b496c90acc5f4f6dab4dd8d1ac00c" name="a6b0b496c90acc5f4f6dab4dd8d1ac00c"></a>
@@ -387,7 +477,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00067">67</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        SequenceSteps.Insert(0, () =&gt; UniTask.Create(() =&gt; { action(); return UniTask.CompletedTask; })</div>
+<div class="line"><span class="lineno">   70</span>                                             .AttachExternalCancellation(canceller.Token));</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa52cb2dc89f6ea40eebdc7bff0c87855" name="aa52cb2dc89f6ea40eebdc7bff0c87855"></a>
@@ -406,7 +500,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00062">62</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        SequenceSteps.Insert(0, () =&gt; asyncMethod().AttachExternalCancellation(canceller.Token));</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa21f6efc22f1c61e40d460098fdb46bd" name="aa21f6efc22f1c61e40d460098fdb46bd"></a>
@@ -425,7 +522,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00073">73</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>        SequenceSteps.Insert(0, () =&gt; tween.ToUniTask(cancellationToken: canceller.Token));</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a37a5c4d3b9034385bee0d5caa2485275" name="a37a5c4d3b9034385bee0d5caa2485275"></a>
@@ -444,7 +544,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00122">122</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  123</span>    {</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> Append(() =&gt; UniTask.WaitUntil(condition, cancellationToken: canceller.Token));</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -469,7 +572,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad732709b0a3310c5fa7867774d61f71b" name="ad732709b0a3310c5fa7867774d61f71b"></a>
@@ -493,7 +597,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html#l00017">17</a> of file <a class="el" href="../../d9/dc0/_sequencer_8cs_source.html">Sequencer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

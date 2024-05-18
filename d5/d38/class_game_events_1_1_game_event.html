@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,12 @@ $(function(){initNavTree('d5/d38/class_game_events_1_1_game_event.html','../../'
   <div class="headertitle"><div class="title">GameEvents.GameEvent&lt; T0, T1 &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for GameEvents.GameEvent&lt; T0, T1 &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/d38/class_game_events_1_1_game_event.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -164,7 +171,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/ddd/_game_event_8cs_source.html#l00024">24</a> of file <a class="el" href="../../de/ddd/_game_event_8cs_source.html">GameEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (!ListenerList.Contains(listener))</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                ListenerList.Add(listener);</div>
+<div class="line"><span class="lineno">   29</span>                ListenerList = ListenerList.OrderByDescending(x =&gt; x.Priority)</div>
+<div class="line"><span class="lineno">   30</span>                                           .ToList();</div>
+<div class="line"><span class="lineno">   31</span>            }</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeea295511aca440f2a982be6610aa3c7" name="aeea295511aca440f2a982be6610aa3c7"></a>
@@ -183,7 +198,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html">GameEventParameter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">if</span> (!ListenerList.Contains(listener))</div>
+<div class="line"><span class="lineno">   21</span>            {</div>
+<div class="line"><span class="lineno">   22</span>                ListenerList.Add(listener);</div>
+<div class="line"><span class="lineno">   23</span>                ListenerList = ListenerList.OrderByDescending(x =&gt; x.Priority)</div>
+<div class="line"><span class="lineno">   24</span>                    .ToList();</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a472a40ea9aef3d30e65be4e7f4c1f9d6" name="a472a40ea9aef3d30e65be4e7f4c1f9d6"></a>
@@ -202,7 +225,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html#l00064">64</a> of file <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html">GameEventParameter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (!ListenerList.Contains(listener))</div>
+<div class="line"><span class="lineno">   67</span>            {</div>
+<div class="line"><span class="lineno">   68</span>                ListenerList.Add(listener);</div>
+<div class="line"><span class="lineno">   69</span>                ListenerList = ListenerList.OrderByDescending(x =&gt; x.Priority)</div>
+<div class="line"><span class="lineno">   70</span>                    .ToList();</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa97f68b2eb8861697f5fa2c567cd13ce" name="aa97f68b2eb8861697f5fa2c567cd13ce"></a>
@@ -221,7 +252,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/ddd/_game_event_8cs_source.html#l00034">34</a> of file <a class="el" href="../../de/ddd/_game_event_8cs_source.html">GameEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (ListenerList.Contains(listener)) </div>
+<div class="line"><span class="lineno">   37</span>                ListenerList.Remove(listener);</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1c3f989651d6cf9032740ee6607d31fd" name="a1c3f989651d6cf9032740ee6607d31fd"></a>
@@ -240,7 +275,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html">GameEventParameter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (ListenerList.Contains(listener)) </div>
+<div class="line"><span class="lineno">   31</span>                ListenerList.Remove(listener);</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af478712e6308a9cf0b3ea142baaaee6e" name="af478712e6308a9cf0b3ea142baaaee6e"></a>
@@ -259,7 +298,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html#l00074">74</a> of file <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html">GameEventParameter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (ListenerList.Contains(listener)) </div>
+<div class="line"><span class="lineno">   77</span>                ListenerList.Remove(listener);</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -357,7 +400,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/ddd/_game_event_8cs_source.html#l00018">18</a> of file <a class="el" href="../../de/ddd/_game_event_8cs_source.html">GameEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keyword">get</span> =&gt; listenerList;</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keyword">set</span> =&gt; listenerList = value;</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9671c645297054d00cd006834772fb0c" name="a9671c645297054d00cd006834772fb0c"></a>
@@ -381,7 +428,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html">GameEventParameter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keyword">get</span> =&gt; listenerList;</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keyword">set</span> =&gt; listenerList = value;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a965e68449fd2defd293447b2f394b531" name="a965e68449fd2defd293447b2f394b531"></a>
@@ -405,7 +456,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html#l00058">58</a> of file <a class="el" href="../../d8/dc4/_game_event_parameter_8cs_source.html">GameEventParameter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keyword">get</span> =&gt; listenerList;</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keyword">set</span> =&gt; listenerList = value;</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>

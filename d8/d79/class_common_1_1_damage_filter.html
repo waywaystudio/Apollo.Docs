@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -148,7 +149,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d30/_damage_filter_8cs_source.html#l00035">35</a> of file <a class="el" href="../../d8/d30/_damage_filter_8cs_source.html">DamageFilter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!Filter.ContainsKey(type)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   38</span>            </div>
+<div class="line"><span class="lineno">   39</span>            Filter[type].Add(key, mod);</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aafca452e9ea0a163832d8cd629779172" name="aafca452e9ea0a163832d8cd629779172"></a>
@@ -176,7 +182,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d30/_damage_filter_8cs_source.html#l00049">49</a> of file <a class="el" href="../../d8/d30/_damage_filter_8cs_source.html">DamageFilter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            RemoveFilter(type, key);</div>
+<div class="line"><span class="lineno">   52</span>            AddFilter(type, key, mod);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0984d63cacd92e03ac4353eaf284ffe6" name="a0984d63cacd92e03ac4353eaf284ffe6"></a>
@@ -195,7 +205,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d30/_damage_filter_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d8/d30/_damage_filter_8cs_source.html">DamageFilter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (!Filter.ContainsKey(type) || taker is <span class="keyword">null</span>) <span class="keywordflow">return</span> 0f;</div>
+<div class="line"><span class="lineno">   31</span>                </div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">return</span> Filter[type].Invoke(taker);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aba7a3d81338e439f67b6e3fd358f7a78" name="aba7a3d81338e439f67b6e3fd358f7a78"></a>
@@ -214,7 +229,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d30/_damage_filter_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d8/d30/_damage_filter_8cs_source.html">DamageFilter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            this.taker = taker;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa421500c9638c3fb0683f35ee6ccc90f" name="aa421500c9638c3fb0683f35ee6ccc90f"></a>
@@ -237,7 +255,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d30/_damage_filter_8cs_source.html#l00042">42</a> of file <a class="el" href="../../d8/d30/_damage_filter_8cs_source.html">DamageFilter.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (!Filter.ContainsKey(type)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   45</span>            </div>
+<div class="line"><span class="lineno">   46</span>            Filter[type].Remove(key);</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

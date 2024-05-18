@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d2/dcf/class_common_1_1_characters_1_1_actions_1_1_awa
   <div class="headertitle"><div class="title">Common.Characters.Actions.AwaitStatus Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Actions.AwaitStatus:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/dcf/class_common_1_1_characters_1_1_actions_1_1_await_status.png" usemap="#Common.Characters.Actions.AwaitStatus_map" alt=""/>
+  <map id="Common.Characters.Actions.AwaitStatus_map" name="Common.Characters.Actions.AwaitStatus_map">
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="252,0,494,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -140,7 +150,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/db1/_await_status_8cs_source.html#l00062">62</a> of file <a class="el" href="../../dc/db1/_await_status_8cs_source.html">AwaitStatus.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   65</span>            </div>
+<div class="line"><span class="lineno">   66</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeff37c9ad1465771739678bdf8fc0f08" name="aeff37c9ad1465771739678bdf8fc0f08"></a>
@@ -178,7 +193,30 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/db1/_await_status_8cs_source.html#l00040">40</a> of file <a class="el" href="../../dc/db1/_await_status_8cs_source.html">AwaitStatus.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a>            = fiend;</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_class" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html">SearchingSystem</a>  = fiend.SearchingSystem;</div>
+<div class="line"><span class="lineno">   44</span>            playerLayerIndex = playerLayerMask.ToIndex();</div>
+<div class="line"><span class="lineno">   45</span>            Invoker          = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   46</span>            </div>
+<div class="line"><span class="lineno">   47</span>            fiend.OnTakeDamage.Add(<span class="stringliteral">&quot;AddMainTarget&quot;</span>, AddMainTarget);</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (awaitType == AwaitType.None) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   50</span>            </div>
+<div class="line"><span class="lineno">   51</span>            <a class="code hl_class" href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html">SearchingSystem</a>.OnTriggerEnterTable.Add(<span class="stringliteral">&quot;StopPatrol&quot;</span>, StopPatrol);</div>
+<div class="line"><span class="lineno">   52</span>            Sections</div>
+<div class="line"><span class="lineno">   53</span>                .Add(Section.Active, <span class="stringliteral">&quot;RegisterPivot&quot;</span>, () =&gt; Pivot = <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a>.Position)</div>
+<div class="line"><span class="lineno">   54</span>                .Add(Section.Active, <span class="stringliteral">&quot;InvokePatrol&quot;</span>, Patrol)</div>
+<div class="line"><span class="lineno">   55</span>                .Add(Section.Active, <span class="stringliteral">&quot;PersistentActiveEventInvoke&quot;</span>, onPatrolActivated.Invoke)</div>
+<div class="line"><span class="lineno">   56</span>                .Add(Section.Cancel, <span class="stringliteral">&quot;StopPatrol&quot;</span>, fiend.IdleRigid)</div>
+<div class="line"><span class="lineno">   57</span>                .Add(Section.End, <span class="stringliteral">&quot;PersistentEndEventInvoke&quot;</span>, onPatrolStopped.Invoke)</div>
+<div class="line"><span class="lineno">   58</span>                .Cancellation(<span class="stringliteral">&quot;CancelPatrolTask&quot;</span>, cts)</div>
+<div class="line"><span class="lineno">   59</span>                ;</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend_html"><div class="ttname"><a href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Common.Characters.NonPlayers.Fiends.Fiend</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/de0/_fiend_8cs_source.html#l00008">Fiend.cs:9</a></div></div>
+<div class="ttc" id="aclass_common_1_1_systems_1_1_searching_system_html"><div class="ttname"><a href="../../df/de0/class_common_1_1_systems_1_1_searching_system.html">Common.Systems.SearchingSystem</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/dfd/_searching_system_8cs_source.html#l00006">SearchingSystem.cs:7</a></div></div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -205,7 +243,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/db1/_await_status_8cs_source.html#l00026">26</a> of file <a class="el" href="../../dc/db1/_await_status_8cs_source.html">AwaitStatus.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac3ec196a9d9e1c54d3426c004a593b58" name="ac3ec196a9d9e1c54d3426c004a593b58"></a>
@@ -229,7 +268,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/db1/_await_status_8cs_source.html#l00027">27</a> of file <a class="el" href="../../dc/db1/_await_status_8cs_source.html">AwaitStatus.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keyword">get</span> =&gt; pivot;</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keyword">set</span> =&gt; pivot = <span class="keyword">new</span> Vector3(value.x, 0f, value.z);</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a887bc6bb2335a32480f293e42b5aae0f" name="a887bc6bb2335a32480f293e42b5aae0f"></a>
@@ -255,7 +298,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/db1/_await_status_8cs_source.html#l00025">25</a> of file <a class="el" href="../../dc/db1/_await_status_8cs_source.html">AwaitStatus.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

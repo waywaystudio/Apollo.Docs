@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d5/d37/class_common_1_1_editor_1_1_dash_property_drawe
   <div class="headertitle"><div class="title">Common.Editor.DashPropertyDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Editor.DashPropertyDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/d37/class_common_1_1_editor_1_1_dash_property_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -136,7 +143,31 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0e/_dash_property_drawer_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d8/d0e/_dash_property_drawer_8cs_source.html">DashPropertyDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            attributes.Add(<span class="keyword">new</span> <a class="code hl_class" href="../../d6/d68/class_module_group_attribute.html">ModuleGroupAttribute</a>(<span class="stringliteral">&quot;Dash Property&quot;</span>));</div>
+<div class="line"><span class="lineno">   19</span>            </div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;duration&quot;</span>)</div>
+<div class="line"><span class="lineno">   21</span>            {</div>
+<div class="line"><span class="lineno">   22</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 4));</div>
+<div class="line"><span class="lineno">   23</span>            }</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;distance&quot;</span>)</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 30));</div>
+<div class="line"><span class="lineno">   28</span>            }</div>
+<div class="line"><span class="lineno">   29</span>            </div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;threshold&quot;</span>)</div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 4));</div>
+<div class="line"><span class="lineno">   33</span>            }</div>
+<div class="line"><span class="lineno">   34</span>            </div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;easeType&quot;</span>)</div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                </div>
+<div class="line"><span class="lineno">   38</span>            }</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="ttc" id="aclass_module_group_attribute_html"><div class="ttname"><a href="../../d6/d68/class_module_group_attribute.html">ModuleGroupAttribute</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00008">ModuleGroupAttribute.cs:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6d5681928e1aef1f2e40ef4adb5c6cf2" name="a6d5681928e1aef1f2e40ef4adb5c6cf2"></a>
@@ -159,7 +190,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0e/_dash_property_drawer_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d8/d0e/_dash_property_drawer_8cs_source.html">DashPropertyDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

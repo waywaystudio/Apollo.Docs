@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -136,7 +137,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTriggerMultiplier<
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d3a/_combo_model_8cs_source.html#l00021">21</a> of file <a class="el" href="../../da/d3a/_combo_model_8cs_source.html">ComboModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            targetSkillBehaviour = skillBehaviour;</div>
+<div class="line"><span class="lineno">   24</span>            tolerance            = intervalTolerance.Duration;</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">switch</span> (toleranceType)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">case</span> ToleranceType.InAnimation :</div>
+<div class="line"><span class="lineno">   29</span>                {</div>
+<div class="line"><span class="lineno">   30</span>                    skillBehaviour.Sections</div>
+<div class="line"><span class="lineno">   31</span>                                  .Add(Section.Recovery, <span class="stringliteral">&quot;RePlayToleranceTrigger&quot;</span>, () =&gt; RePlayToleranceTrigger(0f))</div>
+<div class="line"><span class="lineno">   32</span>                                  .Add(Section.End, <span class="stringliteral">&quot;RePlayToleranceTrigger&quot;</span>, () =&gt; RePlayToleranceTrigger(tolerance))</div>
+<div class="line"><span class="lineno">   33</span>                                  ;</div>
+<div class="line"><span class="lineno">   34</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   35</span>                }</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">case</span> ToleranceType.AfterAnimation:</div>
+<div class="line"><span class="lineno">   37</span>                {</div>
+<div class="line"><span class="lineno">   38</span>                    skillBehaviour.Sections</div>
+<div class="line"><span class="lineno">   39</span>                                  .Add(Section.End, <span class="stringliteral">&quot;RePlayToleranceTrigger&quot;</span>, () =&gt; RePlayToleranceTrigger(tolerance))</div>
+<div class="line"><span class="lineno">   40</span>                                  ;</div>
+<div class="line"><span class="lineno">   41</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   42</span>                }</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a122cf281579366e21946c47daaf55638" name="a122cf281579366e21946c47daaf55638"></a>
@@ -155,7 +179,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTriggerMultiplier<
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d3a/_combo_model_8cs_source.html#l00060">60</a> of file <a class="el" href="../../da/d3a/_combo_model_8cs_source.html">ComboModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="comment">/* 이 내용 무슨 말인지 기억이 안남; */</span></div>
+<div class="line"><span class="lineno">   63</span>                <span class="comment">// 다음 프레임으로 끊기는 것과, 자연스럽게 끊기는 효과를 구분하기 위해서</span></div>
+<div class="line"><span class="lineno">   64</span>                <span class="comment">// Time.fixedDeltaTime을 사용.</span></div>
+<div class="line"><span class="lineno">   65</span>                <span class="comment">// TimeTrigger Replay();기본적으로 fixedDeltaTime을 한 번 깎고 들어가기 때문에, 다음 프레임을 잡아주려면 fixedDeltaTime * 2f;</span></div>
+<div class="line"><span class="lineno">   66</span>                <span class="comment">// var duration = tolerance.Approximately(0f) </span></div>
+<div class="line"><span class="lineno">   67</span>                <span class="comment">//     ? Time.fixedDeltaTime * 2f </span></div>
+<div class="line"><span class="lineno">   68</span>                <span class="comment">//     : tolerance;</span></div>
+<div class="line"><span class="lineno">   69</span>                </div>
+<div class="line"><span class="lineno">   70</span>            intervalTolerance.SetDuration(duration);</div>
+<div class="line"><span class="lineno">   71</span>            intervalTolerance.Replay();</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2fb82e7d2217a128174fb05573a26bf3" name="a2fb82e7d2217a128174fb05573a26bf3"></a>
@@ -174,7 +210,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTriggerMultiplier<
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d3a/_combo_model_8cs_source.html#l00046">46</a> of file <a class="el" href="../../da/d3a/_combo_model_8cs_source.html">ComboModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            var startSection = toleranceType == ToleranceType.InAnimation ? Section.Recovery : Section.End;</div>
+<div class="line"><span class="lineno">   49</span>            </div>
+<div class="line"><span class="lineno">   50</span>            targetSkillBehaviour.Sections.Remove(startSection, <span class="stringliteral">&quot;RePlayToleranceTrigger&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span>            intervalTolerance = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

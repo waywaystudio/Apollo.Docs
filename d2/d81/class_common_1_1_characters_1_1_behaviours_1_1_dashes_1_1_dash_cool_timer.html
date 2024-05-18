@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d2/d81/class_common_1_1_characters_1_1_behaviours_1_1_
   <div class="headertitle"><div class="title">Common.Characters.Behaviours.Dashes.DashCoolTimer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Behaviours.Dashes.DashCoolTimer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/d81/class_common_1_1_characters_1_1_behaviours_1_1_dashes_1_1_dash_cool_timer.png" usemap="#Common.Characters.Behaviours.Dashes.DashCoolTimer_map" alt=""/>
+  <map id="Common.Characters.Behaviours.Dashes.DashCoolTimer_map" name="Common.Characters.Behaviours.Dashes.DashCoolTimer_map">
+<area href="../../de/d36/class_common_1_1_cool_timer.html" alt="Common.CoolTimer" shape="rect" coords="0,0,331,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -154,7 +164,23 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsTimerReady</b> ()</
 <p>Reimplemented from <a class="el" href="../../de/d36/class_common_1_1_cool_timer.html">Common.CoolTimer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dea/_dash_cool_timer_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d6/dea/_dash_cool_timer_8cs_source.html">DashCoolTimer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (sequencer is not DashBehaviour dash) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   25</span>            </div>
+<div class="line"><span class="lineno">   26</span>            dashBehaviour   = dash;</div>
+<div class="line"><span class="lineno">   27</span>            remainDashCount = dash.Character.StatTable[StatType.ContinuesDashCount].ToInt();</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>            dash.Sections</div>
+<div class="line"><span class="lineno">   30</span>                 .AddCondition(<span class="stringliteral">&quot;IsRemainDashCount&quot;</span>, IsRemainDashCount)</div>
+<div class="line"><span class="lineno">   31</span>                 .AddCondition(<span class="stringliteral">&quot;IsCoolTimerReady&quot;</span>, IsTimerReady)</div>
+<div class="line"><span class="lineno">   32</span>                 .Add(Section.Active, <span class="stringliteral">&quot;ActiveCoolTime&quot;</span>, ActiveCoolTime)</div>
+<div class="line"><span class="lineno">   33</span>                 .Add(Section.End, <span class="stringliteral">&quot;Cooling&quot;</span>, Cooling)</div>
+<div class="line"><span class="lineno">   34</span>                 .Add(Section.Dispose, <span class="stringliteral">&quot;DisposeTimeTrigger&quot;</span>, Dispose)</div>
+<div class="line"><span class="lineno">   35</span>                 ;</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>            timeTrigger.AddCallBack(<span class="stringliteral">&quot;ResetDash&quot;</span>, ResetDash);</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

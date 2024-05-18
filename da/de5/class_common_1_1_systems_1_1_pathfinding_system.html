@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('da/de5/class_common_1_1_systems_1_1_pathfinding_system
   <div class="headertitle"><div class="title">Common.Systems.PathfindingSystem Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Systems.PathfindingSystem:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/de5/class_common_1_1_systems_1_1_pathfinding_system.png" usemap="#Common.Systems.PathfindingSystem_map" alt=""/>
+  <map id="Common.Systems.PathfindingSystem_map" name="Common.Systems.PathfindingSystem_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="227,0,444,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -182,7 +192,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html#l00091">91</a> of file <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html">PathfindingSystem.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            CancelMovingTask();</div>
+<div class="line"><span class="lineno">   94</span>            </div>
+<div class="line"><span class="lineno">   95</span>            TransferModel.Cancel();</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2ed4e40712605f36ae3c4079c48e5418" name="a2ed4e40712605f36ae3c4079c48e5418"></a>
@@ -248,7 +263,22 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html#l00033">33</a> of file <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html">PathfindingSystem.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            aiMove.enabled        = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   36</span>            aiMove.updateRotation = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   37</span>            aiMove.maxSpeed = SpeedRetriever is not <span class="keyword">null</span> </div>
+<div class="line"><span class="lineno">   38</span>                ? SpeedRetriever.Invoke() </div>
+<div class="line"><span class="lineno">   39</span>                : defaultSpeed;</div>
+<div class="line"><span class="lineno">   40</span>            </div>
+<div class="line"><span class="lineno">   41</span>            aiMove.destination = destination; </div>
+<div class="line"><span class="lineno">   42</span>            aiMove.SearchPath();</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>            CancelMovingTask();</div>
+<div class="line"><span class="lineno">   45</span>            </div>
+<div class="line"><span class="lineno">   46</span>            movingTask = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   47</span>            DestinationCallback(callback, movingTask).Forget();</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae4ba34d01ec0f0465a75dbbe9371b6e0" name="ae4ba34d01ec0f0465a75dbbe9371b6e0"></a>
@@ -267,7 +297,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html">PathfindingSystem.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            Stop();</div>
+<div class="line"><span class="lineno">   53</span>            </div>
+<div class="line"><span class="lineno">   54</span>            aiMove.updateRotation = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   55</span>            rootTransform.LookAt(lookTarget);</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afcaebb466604c00dadfbfae378408e03" name="afcaebb466604c00dadfbfae378408e03"></a>
@@ -295,7 +331,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html#l00058">58</a> of file <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html">PathfindingSystem.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            Stop();</div>
+<div class="line"><span class="lineno">   61</span>            </div>
+<div class="line"><span class="lineno">   62</span>            aiMove.updateRotation = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   63</span>            TransferModel.RotateToTarget(lookTarget, maxDegree, callback);</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad1a719b1a6ebc32ca0148d34111aa10b" name="ad1a719b1a6ebc32ca0148d34111aa10b"></a>
@@ -314,7 +356,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html#l00068">68</a> of file <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html">PathfindingSystem.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            Cancel();</div>
+<div class="line"><span class="lineno">   71</span>            </div>
+<div class="line"><span class="lineno">   72</span>            aiMove.SetPath(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   73</span>            aiMove.destination = Vector3.positiveInfinity;</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -339,7 +387,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html#l00024">24</a> of file <a class="el" href="../../d6/d25/_pathfinding_system_8cs_source.html">PathfindingSystem.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{ <span class="keyword">get</span> =&gt; aiMove.canMove; <span class="keyword">set</span> =&gt; aiMove.canMove = value; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4dc3f7c222064d63100dc40753125a6f" name="a4dc3f7c222064d63100dc40753125a6f"></a>

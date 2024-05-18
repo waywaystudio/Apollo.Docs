@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('df/d05/class_common_1_1_masteries_1_1_bell_veer_1_1_ec
   <div class="headertitle"><div class="title">Common.Masteries.BellVeer.EchoingBarrage Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.BellVeer.EchoingBarrage:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/d05/class_common_1_1_masteries_1_1_bell_veer_1_1_echoing_barrage.png" usemap="#Common.Masteries.BellVeer.EchoingBarrage_map" alt=""/>
+  <map id="Common.Masteries.BellVeer.EchoingBarrage_map" name="Common.Masteries.BellVeer.EchoingBarrage_map">
+<area href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html" alt="Common.Masteries.Mastery" shape="rect" coords="278,56,546,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="278,0,546,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="556,0,824,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -206,7 +218,12 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d4a/_echoing_barrage_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d5/d4a/_echoing_barrage_8cs_source.html">EchoingBarrage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            RemoveSpectralSpiritCount(dred);</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            whirlingEchoes.CountPerSecond = WhirlingEchoes.DefaultCount + quality.Value.ToInt();</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0141f3e4c57fc5ab79f0195e58285e98" name="a0141f3e4c57fc5ab79f0195e58285e98"></a>
@@ -233,7 +250,13 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d4a/_echoing_barrage_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d5/d4a/_echoing_barrage_8cs_source.html">EchoingBarrage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            AddSpectralSpiritCount(dred);</div>
+<div class="line"><span class="lineno">   14</span>            </div>
+<div class="line"><span class="lineno">   15</span>            whirlingEchoes                = dred.Skills.WhirlingEchoes;</div>
+<div class="line"><span class="lineno">   16</span>            whirlingEchoes.CountPerSecond = WhirlingEchoes.DefaultCount + quality.Value.ToInt();</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a473a24295df6ec747156b4664407016e" name="a473a24295df6ec747156b4664407016e"></a>
@@ -260,7 +283,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d4a/_echoing_barrage_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d5/d4a/_echoing_barrage_8cs_source.html">EchoingBarrage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            whirlingEchoes.CountPerSecond = WhirlingEchoes.DefaultCount + quality.Value.ToInt();</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

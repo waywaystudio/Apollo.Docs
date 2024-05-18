@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,25 @@ $(function(){initNavTree('db/da6/class_common_1_1_skills_1_1_bell_veers_1_1_thre
   <div class="headertitle"><div class="title">Common.Skills.BellVeers.ThreeBuddas Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.BellVeers.ThreeBuddas:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/da6/class_common_1_1_skills_1_1_bell_veers_1_1_three_buddas.png" usemap="#Common.Skills.BellVeers.ThreeBuddas_map" alt=""/>
+  <map id="Common.Skills.BellVeers.ThreeBuddas_map" name="Common.Skills.BellVeers.ThreeBuddas_map">
+<area href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html" alt="Common.Skills.SkillBehaviour" shape="rect" coords="606,224,852,248"/>
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="384,168,630,192"/>
+<area href="../../de/de8/interface_common_1_1_i_skill_behaviour.html" alt="Common.ISkillBehaviour" shape="rect" coords="832,168,1078,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="384,112,630,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="640,112,886,136"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1024,112,1270,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="256,56,502,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="512,56,758,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="768,56,1014,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1024,56,1270,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="512,0,758,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -224,7 +244,23 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d42/_three_buddas_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d6/d42/_three_buddas_8cs_source.html">ThreeBuddas.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (behaver is not <a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> red) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>            dred = red;</div>
+<div class="line"><span class="lineno">   27</span>            </div>
+<div class="line"><span class="lineno">   28</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   29</span> </div>
+<div class="line"><span class="lineno">   30</span>            Sections</div>
+<div class="line"><span class="lineno">   31</span>                .Add(Section.Active, <span class="stringliteral">&quot;ClearPreviousSummons&quot;</span>, ClearPreviousSummons)</div>
+<div class="line"><span class="lineno">   32</span>                .Add(Section.Execute, <span class="stringliteral">&quot;SummonSpectralSpirits&quot;</span>, <a class="code hl_class" href="../../d1/d09/class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon.html">Summon</a>)</div>
+<div class="line"><span class="lineno">   33</span>                ;</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>            spectralSpiritPool.Initialize(<span class="keyword">null</span>, <span class="keyword">null</span>, transform);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Common.Characters.Dreds.Dred</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00005">Dred.cs:6</a></div></div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon_html"><div class="ttname"><a href="../../d1/d09/class_common_1_1_characters_1_1_non_players_1_1_summons_1_1_summon.html">Common.Characters.NonPlayers.Summons.Summon</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/d13/_summon_8cs_source.html#l00005">Summon.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -249,7 +285,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d42/_three_buddas_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d6/d42/_three_buddas_8cs_source.html">ThreeBuddas.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

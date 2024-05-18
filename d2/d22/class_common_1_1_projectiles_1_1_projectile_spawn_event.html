@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d2/d22/class_common_1_1_projectiles_1_1_projectile_spa
   <div class="headertitle"><div class="title">Common.Projectiles.ProjectileSpawnEvent Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.ProjectileSpawnEvent:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/d22/class_common_1_1_projectiles_1_1_projectile_spawn_event.png" usemap="#Common.Projectiles.ProjectileSpawnEvent_map" alt=""/>
+  <map id="Common.Projectiles.ProjectileSpawnEvent_map" name="Common.Projectiles.ProjectileSpawnEvent_map">
+<area href="../../d6/d4f/class_common_1_1_spawn_event_table.html" alt="Common.SpawnEventTable&lt; Projectile &gt;" shape="rect" coords="0,0,250,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -178,7 +188,12 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/d4f/class_common_1_1_spawn_event_table.html">Common.SpawnEventTable&lt; Projectile &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d66/_projectile_spawn_event_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d9/d66/_projectile_spawn_event_8cs_source.html">ProjectileSpawnEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            base.Dispose();</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>            Hierarchy = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad53abcd8966c4f49e10b7857c4170a2d" name="ad53abcd8966c4f49e10b7857c4170a2d"></a>
@@ -201,7 +216,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d66/_projectile_spawn_event_8cs_source.html#l00009">9</a> of file <a class="el" href="../../d9/d66/_projectile_spawn_event_8cs_source.html">ProjectileSpawnEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            base.Invoke(dataIndex, subject);</div>
+<div class="line"><span class="lineno">   12</span> </div>
+<div class="line"><span class="lineno">   13</span>            subject.Sections</div>
+<div class="line"><span class="lineno">   14</span>                   .Add(Section.Dispose, <span class="stringliteral">&quot;RemoveSpawnList&quot;</span>, () =&gt; SpawnedList.RemoveSafely(subject))</div>
+<div class="line"><span class="lineno">   15</span>                   ;</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -226,7 +248,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d66/_projectile_spawn_event_8cs_source.html#l00007">7</a> of file <a class="el" href="../../d9/d66/_projectile_spawn_event_8cs_source.html">ProjectileSpawnEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

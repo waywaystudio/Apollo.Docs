@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d3/d95/class_common_1_1_skills_1_1_silk_strings_1_1_si
   <div class="headertitle"><div class="title">Common.Skills.SilkStrings.SilkTwisters.ShreddedSilkTrajectory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.SilkStrings.SilkTwisters.ShreddedSilkTrajectory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d3/d95/class_common_1_1_skills_1_1_silk_strings_1_1_silk_twisters_1_1_shredded_silk_trajectory.png" usemap="#Common.Skills.SilkStrings.SilkTwisters.ShreddedSilkTrajectory_map" alt=""/>
+  <map id="Common.Skills.SilkStrings.SilkTwisters.ShreddedSilkTrajectory_map" name="Common.Skills.SilkStrings.SilkTwisters.ShreddedSilkTrajectory_map">
+<area href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html" alt="Common.Projectiles.Trajectory" shape="rect" coords="0,56,363,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -157,7 +167,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d46/_shredded_silk_trajectory_8cs_source.html#l00026">26</a> of file <a class="el" href="../../dc/d46/_shredded_silk_trajectory_8cs_source.html">ShreddedSilkTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        trajectoryTask?.Cancel();</div>
+<div class="line"><span class="lineno">   29</span>        trajectoryTask = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9bef76ce9bddd26473ddaafb4d4edc42" name="a9bef76ce9bddd26473ddaafb4d4edc42"></a>
@@ -176,7 +190,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d46/_shredded_silk_trajectory_8cs_source.html#l00019">19</a> of file <a class="el" href="../../dc/d46/_shredded_silk_trajectory_8cs_source.html">ShreddedSilkTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        trajectoryTask = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   22</span>        </div>
+<div class="line"><span class="lineno">   23</span>        FlutterTowardsTarget(trajectoryTask).Forget();</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

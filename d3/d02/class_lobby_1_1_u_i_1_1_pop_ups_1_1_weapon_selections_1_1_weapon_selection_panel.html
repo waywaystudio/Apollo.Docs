@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('d3/d02/class_lobby_1_1_u_i_1_1_pop_ups_1_1_weapon_sele
   <div class="headertitle"><div class="title">Lobby.UI.PopUps.WeaponSelections.WeaponSelectionPanel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Lobby.UI.PopUps.WeaponSelections.WeaponSelectionPanel:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d3/d02/class_lobby_1_1_u_i_1_1_pop_ups_1_1_weapon_selections_1_1_weapon_selection_panel.png" usemap="#Lobby.UI.PopUps.WeaponSelections.WeaponSelectionPanel_map" alt=""/>
+  <map id="Lobby.UI.PopUps.WeaponSelections.WeaponSelectionPanel_map" name="Lobby.UI.PopUps.WeaponSelections.WeaponSelectionPanel_map">
+<area href="../../dc/d43/class_common_1_1_u_i_1_1_panel.html" alt="Common.UI.Panel" shape="rect" coords="180,112,531,136"/>
+<area href="../../d1/dc6/class_common_1_1_u_i_element.html" alt="Common.UIElement" shape="rect" coords="180,56,531,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="361,0,712,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -190,7 +202,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d6f/_weapon_selection_panel_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d4/d6f/_weapon_selection_panel_8cs_source.html">WeaponSelectionPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            Initialize();</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>            this.group = group;</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae1a5e98b81b9eb0b182d17745013f472" name="ae1a5e98b81b9eb0b182d17745013f472"></a>
@@ -209,7 +226,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d6f/_weapon_selection_panel_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d4/d6f/_weapon_selection_panel_8cs_source.html">WeaponSelectionPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            var currentActivity = selectFrame.gameObject.activeSelf;</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">if</span> (currentActivity) <span class="comment">// Release Weapon</span></div>
+<div class="line"><span class="lineno">   28</span>            {</div>
+<div class="line"><span class="lineno">   29</span>                group.ReleaseWeapon(targetWeapon);</div>
+<div class="line"><span class="lineno">   30</span>                </div>
+<div class="line"><span class="lineno">   31</span>                selectFrame.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">else</span> <span class="comment">// Select Weapon</span></div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">if</span> (group.SelectWeapon(targetWeapon))</div>
+<div class="line"><span class="lineno">   36</span>                {</div>
+<div class="line"><span class="lineno">   37</span>                    selectFrame.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   38</span>                }</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

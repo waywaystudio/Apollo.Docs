@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,20 @@ $(function(){initNavTree('dc/dc0/class_common_1_1_characters_1_1_behaviours_1_1_
   <div class="headertitle"><div class="title">Common.Characters.Behaviours.PlayerRunBehaviour Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Behaviours.PlayerRunBehaviour:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/dc0/class_common_1_1_characters_1_1_behaviours_1_1_player_run_behaviour.png" usemap="#Common.Characters.Behaviours.PlayerRunBehaviour_map" alt=""/>
+  <map id="Common.Characters.Behaviours.PlayerRunBehaviour_map" name="Common.Characters.Behaviours.PlayerRunBehaviour_map">
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="489,168,805,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="489,112,805,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="326,56,642,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="652,56,968,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="978,56,1294,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="652,0,968,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -207,7 +222,27 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html">Common.Characters.CharacterBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d34/_player_run_behaviour_8cs_source.html#l00012">12</a> of file <a class="el" href="../../de/d34/_player_run_behaviour_8cs_source.html">PlayerRunBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   15</span>            </div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">if</span> (Character is not <a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> red) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>            dred       = red;</div>
+<div class="line"><span class="lineno">   19</span>            onRun      = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   20</span>            controller = dred.Controller;</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>            var simpleRunBehaviour = dred.Behaviours.Run;</div>
+<div class="line"><span class="lineno">   23</span>            </div>
+<div class="line"><span class="lineno">   24</span>            Sections</div>
+<div class="line"><span class="lineno">   25</span>                .AddCondition(<span class="stringliteral">&quot;CanMove&quot;</span>, () =&gt; dred.Pathfinding.CanMove)</div>
+<div class="line"><span class="lineno">   26</span>                .AddCondition(<span class="stringliteral">&quot;NotInCinematicRun&quot;</span>, () =&gt; simpleRunBehaviour.Invoker.IsEnd)</div>
+<div class="line"><span class="lineno">   27</span>                .AddCondition(<span class="stringliteral">&quot;NotInRun&quot;</span>, () =&gt; onRun == <span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   28</span>                .Add(Section.Active, <span class="stringliteral">&quot;OnRun&quot;</span>, () =&gt; onRun = <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   29</span>                .Add(Section.End, <span class="stringliteral">&quot;SetOnRunFalse&quot;</span>, () =&gt; onRun = <span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   30</span>                ;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Common.Characters.Dreds.Dred</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00005">Dred.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abed7f10ed0067f15d0aef7a76765de14" name="abed7f10ed0067f15d0aef7a76765de14"></a>
@@ -236,7 +271,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html">Common.Units.UnitBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d34/_player_run_behaviour_8cs_source.html#l00055">55</a> of file <a class="el" href="../../de/d34/_player_run_behaviour_8cs_source.html">PlayerRunBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (dred.CurrentState == stateMatrix) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (dred.CurrentBehaviour.HasComponent())</div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                dred.CurrentBehaviour.Cancel();</div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span>            </div>
+<div class="line"><span class="lineno">   63</span>            dred.CurrentBehaviour = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a30e6176600a1e57f5acd204cb7a4b597" name="a30e6176600a1e57f5acd204cb7a4b597"></a>
@@ -255,7 +299,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d34/_player_run_behaviour_8cs_source.html#l00034">34</a> of file <a class="el" href="../../de/d34/_player_run_behaviour_8cs_source.html">PlayerRunBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!controller.IsNeutral)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                Invoker.Active();</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af9cb619957502ed31216875e613ede1d" name="af9cb619957502ed31216875e613ede1d"></a>
@@ -274,7 +325,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d34/_player_run_behaviour_8cs_source.html#l00044">44</a> of file <a class="el" href="../../de/d34/_player_run_behaviour_8cs_source.html">PlayerRunBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            onRun = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   48</span>            </div>
+<div class="line"><span class="lineno">   49</span>            Invoker.Complete();</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

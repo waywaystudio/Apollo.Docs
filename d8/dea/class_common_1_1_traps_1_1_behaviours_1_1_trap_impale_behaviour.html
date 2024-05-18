@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,20 @@ $(function(){initNavTree('d8/dea/class_common_1_1_traps_1_1_behaviours_1_1_trap_
   <div class="headertitle"><div class="title">Common.Traps.Behaviours.TrapImpaleBehaviour Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Traps.Behaviours.TrapImpaleBehaviour:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/dea/class_common_1_1_traps_1_1_behaviours_1_1_trap_impale_behaviour.png" usemap="#Common.Traps.Behaviours.TrapImpaleBehaviour_map" alt=""/>
+  <map id="Common.Traps.Behaviours.TrapImpaleBehaviour_map" name="Common.Traps.Behaviours.TrapImpaleBehaviour_map">
+<area href="../../dc/d07/class_common_1_1_traps_1_1_trap_behaviour.html" alt="Common.Traps.TrapBehaviour" shape="rect" coords="447,168,735,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="447,112,735,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="298,56,586,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="596,56,884,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="894,56,1182,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="596,0,884,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -189,7 +204,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db7/_trap_impale_behaviour_8cs_source.html#l00034">34</a> of file <a class="el" href="../../d8/db7/_trap_impale_behaviour_8cs_source.html">TrapImpaleBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   37</span>            </div>
+<div class="line"><span class="lineno">   38</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7425b58ffeba21930d80498c1cda0f69" name="a7425b58ffeba21930d80498c1cda0f69"></a>
@@ -218,7 +238,24 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../dc/d07/class_common_1_1_traps_1_1_trap_behaviour.html">Common.Traps.TrapBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/db7/_trap_impale_behaviour_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d8/db7/_trap_impale_behaviour_8cs_source.html">TrapImpaleBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>            Sections</div>
+<div class="line"><span class="lineno">   20</span>                .Add(Section.End, <span class="stringliteral">&quot;ClearCache&quot;</span>, TakerListCache.Clear)</div>
+<div class="line"><span class="lineno">   21</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;DeActiveSpike&quot;</span>, DeActiveSpike)</div>
+<div class="line"><span class="lineno">   22</span>                ;</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>            trigger</div>
+<div class="line"><span class="lineno">   25</span>                .AddFilter(<span class="stringliteral">&quot;IsTrappedCharacter&quot;</span>, IsTrappedCharacter)</div>
+<div class="line"><span class="lineno">   26</span>                .AddOnEnter(<span class="stringliteral">&quot;OnCollidedSpikes&quot;</span>, OnCollided)</div>
+<div class="line"><span class="lineno">   27</span>                .Register(<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   28</span>                ;</div>
+<div class="line"><span class="lineno">   29</span>     </div>
+<div class="line"><span class="lineno">   30</span>            coolTimeProperty.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   31</span>            executor.Initialize(Trap);</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,20 @@ $(function(){initNavTree('dd/d94/class_common_1_1_projectiles_1_1_variants_1_1_t
   <div class="headertitle"><div class="title">Common.Projectiles.Variants.TridentProjectile Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Variants.TridentProjectile:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/d94/class_common_1_1_projectiles_1_1_variants_1_1_trident_projectile.png" usemap="#Common.Projectiles.Variants.TridentProjectile_map" alt=""/>
+  <map id="Common.Projectiles.Variants.TridentProjectile_map" name="Common.Projectiles.Variants.TridentProjectile_map">
+<area href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html" alt="Common.Projectiles.Projectile" shape="rect" coords="420,112,690,136"/>
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="280,56,550,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="560,56,830,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="840,56,1110,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="280,0,550,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="560,0,830,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -213,7 +228,25 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#aae9763c6158d5d9b3b5ad983f3f325eb">Common.Projectiles.Projectile</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d24/_trident_projectile_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d9/d24/_trident_projectile_8cs_source.html">TridentProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            base.Initialize(provider);</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>            Detector = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">DetectModel</a>(transform);</div>
+<div class="line"><span class="lineno">   23</span>            </div>
+<div class="line"><span class="lineno">   24</span>            Sections</div>
+<div class="line"><span class="lineno">   25</span>                .Add(Section.Active, <span class="stringliteral">&quot;AddThrowColliding&quot;</span>, () =&gt; colliderTrigger.AddOnEnter(<span class="stringliteral">&quot;MainExecution&quot;</span>, OnThrowCollided))</div>
+<div class="line"><span class="lineno">   26</span>                .Add(Section.End, <span class="stringliteral">&quot;RemoveThrowColliding&quot;</span>, () =&gt; colliderTrigger.RemoveOnEnter(<span class="stringliteral">&quot;MainExecution&quot;</span>))</div>
+<div class="line"><span class="lineno">   27</span>                ;</div>
+<div class="line"><span class="lineno">   28</span>            </div>
+<div class="line"><span class="lineno">   29</span>            <span class="comment">/* Order A1 */</span> retrieveAction.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   30</span>            <span class="comment">/* Order A2 */</span> colliderTrigger</div>
+<div class="line"><span class="lineno">   31</span>                .AddLayerFilter(<span class="stringliteral">&quot;LayerFilter&quot;</span>, DetectProperty.TargetLayer)</div>
+<div class="line"><span class="lineno">   32</span>                .Register(<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   33</span>                .Register(retrieveAction)</div>
+<div class="line"><span class="lineno">   34</span>                ;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">Common.Systems.DetectModel</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00008">DetectModel.cs:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aafed88d31a75ebcb1de9e90fd95ce475" name="aafed88d31a75ebcb1de9e90fd95ce475"></a>
@@ -232,7 +265,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d24/_trident_projectile_8cs_source.html#l00037">37</a> of file <a class="el" href="../../d9/d24/_trident_projectile_8cs_source.html">TridentProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            retrieveAction.Active(callback);</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -281,7 +317,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d24/_trident_projectile_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d9/d24/_trident_projectile_8cs_source.html">TridentProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0585c777b7f7be845323090ba57e4edb" name="a0585c777b7f7be845323090ba57e4edb"></a>

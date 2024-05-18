@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,17 @@ $(function(){initNavTree('d5/d12/class_common_1_1_unit_sequence.html','../../');
   <div class="headertitle"><div class="title">Common.UnitSequence Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UnitSequence:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/d12/class_common_1_1_unit_sequence.png" usemap="#Common.UnitSequence_map" alt=""/>
+  <map id="Common.UnitSequence_map" name="Common.UnitSequence_map">
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="159,56,308,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="318,56,467,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="159,0,308,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -203,7 +215,11 @@ Properties</h2></td></tr>
 </div>
 
 <p class="definition">Definition at line <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html#l00033">33</a> of file <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html">UnitSequence.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                                               : <span class="keyword">class</span>, IUnit</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> Unit as T;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a04fc9278d56ec704ed96f37079b01947" name="a04fc9278d56ec704ed96f37079b01947"></a>
@@ -230,7 +246,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html#l00018">18</a> of file <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html">UnitSequence.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            Invoker = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   21</span>            Unit    = unit;</div>
+<div class="line"><span class="lineno">   22</span> </div>
+<div class="line"><span class="lineno">   23</span>            Sections</div>
+<div class="line"><span class="lineno">   24</span>                .AddIf(completeOnActive, Section.Active, <span class="stringliteral">&quot;InstantComplete&quot;</span>, Invoker.Complete)</div>
+<div class="line"><span class="lineno">   25</span>                ;</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            effector.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae78e58ae2e1ba27cd927291d96707a3b" name="ae78e58ae2e1ba27cd927291d96707a3b"></a>
@@ -257,7 +284,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html#l00038">38</a> of file <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html">UnitSequence.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            Invoker?.Dispose();</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -381,7 +411,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html#l00012">12</a> of file <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html">UnitSequence.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a67905549fe1dccc4acfc592e5a76887b" name="a67905549fe1dccc4acfc592e5a76887b"></a>
@@ -407,7 +438,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html#l00011">11</a> of file <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html">UnitSequence.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae73d56e51cbd16a10c5904441ad61034" name="ae73d56e51cbd16a10c5904441ad61034"></a>
@@ -433,7 +465,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html">Common.IUnitSequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html#l00013">13</a> of file <a class="el" href="../../df/da1/_unit_sequence_8cs_source.html">UnitSequence.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keyword">get</span>; <span class="keyword">protected</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,20 @@ $(function(){initNavTree('d4/dbe/class_common_1_1_skills_1_1_silk_strings_1_1_th
   <div class="headertitle"><div class="title">Common.Skills.SilkStrings.ThreadedSanctums.ThreadedSanctumSnare Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.SilkStrings.ThreadedSanctums.ThreadedSanctumSnare:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/dbe/class_common_1_1_skills_1_1_silk_strings_1_1_threaded_sanctums_1_1_threaded_sanctum_snare.png" usemap="#Common.Skills.SilkStrings.ThreadedSanctums.ThreadedSanctumSnare_map" alt=""/>
+  <map id="Common.Skills.SilkStrings.ThreadedSanctums.ThreadedSanctumSnare_map" name="Common.Skills.SilkStrings.ThreadedSanctums.ThreadedSanctumSnare_map">
+<area href="../../dd/db2/class_common_1_1_snares_1_1_snare.html" alt="Common.Snares.Snare" shape="rect" coords="627,112,1035,136"/>
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="418,56,826,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="836,56,1244,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="1254,56,1662,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="418,0,826,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="836,0,1244,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -201,7 +216,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td>
 <p>Reimplemented from <a class="el" href="../../dd/db2/class_common_1_1_snares_1_1_snare.html">Common.Snares.Snare</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/db8/_threaded_sanctum_snare_8cs_source.html#l00019">19</a> of file <a class="el" href="../../da/db8/_threaded_sanctum_snare_8cs_source.html">ThreadedSanctumSnare.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            base.Initialize(provider);</div>
+<div class="line"><span class="lineno">   22</span> </div>
+<div class="line"><span class="lineno">   23</span>            Sections</div>
+<div class="line"><span class="lineno">   24</span>                .Add(Section.Spawn, <span class="stringliteral">&quot;PlayAnimationObject&quot;</span>, PlayAnimationObject)</div>
+<div class="line"><span class="lineno">   25</span>                .Add(Section.End, <span class="stringliteral">&quot;StopAnimationObject&quot;</span>, StopAnimationObject)</div>
+<div class="line"><span class="lineno">   26</span>                ;</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>            trigger.AddOnEnter(<span class="stringliteral">&quot;AddSlow&quot;</span>, AddSlow)</div>
+<div class="line"><span class="lineno">   29</span>                   .AddOnExit(<span class="stringliteral">&quot;RemoveSlow&quot;</span>, RemoveSlow)</div>
+<div class="line"><span class="lineno">   30</span>                   .AddLayerFilter(<span class="stringliteral">&quot;ProperLayer&quot;</span>, detectProperty.TargetLayer)</div>
+<div class="line"><span class="lineno">   31</span>                   .Register(<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   32</span>                   ;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae40917e61bc5238d6c6254bce270b35b" name="ae40917e61bc5238d6c6254bce270b35b"></a>
@@ -230,7 +259,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td>
 <p>Reimplemented from <a class="el" href="../../dd/db2/class_common_1_1_snares_1_1_snare.html">Common.Snares.Snare</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/db8/_threaded_sanctum_snare_8cs_source.html#l00035">35</a> of file <a class="el" href="../../da/db8/_threaded_sanctum_snare_8cs_source.html">ThreadedSanctumSnare.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   38</span>            </div>
+<div class="line"><span class="lineno">   39</span>            Invoker.Spawn();</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

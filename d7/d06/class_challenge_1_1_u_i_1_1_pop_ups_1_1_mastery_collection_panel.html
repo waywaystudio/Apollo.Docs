@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('d7/d06/class_challenge_1_1_u_i_1_1_pop_ups_1_1_mastery
   <div class="headertitle"><div class="title">Challenge.UI.PopUps.MasteryCollectionPanel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.UI.PopUps.MasteryCollectionPanel:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/d06/class_challenge_1_1_u_i_1_1_pop_ups_1_1_mastery_collection_panel.png" usemap="#Challenge.UI.PopUps.MasteryCollectionPanel_map" alt=""/>
+  <map id="Challenge.UI.PopUps.MasteryCollectionPanel_map" name="Challenge.UI.PopUps.MasteryCollectionPanel_map">
+<area href="../../dc/d43/class_common_1_1_u_i_1_1_panel.html" alt="Common.UI.Panel" shape="rect" coords="139,112,408,136"/>
+<area href="../../d1/dc6/class_common_1_1_u_i_element.html" alt="Common.UIElement" shape="rect" coords="139,56,408,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="279,0,548,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -188,7 +200,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d97/_mastery_collection_panel_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d5/d97/_mastery_collection_panel_8cs_source.html">MasteryCollectionPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            this.dred = dred;</div>
+<div class="line"><span class="lineno">   19</span>            </div>
+<div class="line"><span class="lineno">   20</span>            <span class="comment">// mastery</span></div>
+<div class="line"><span class="lineno">   21</span>            dred.MasteryTable.OnMasteryAdded.Add(<span class="stringliteral">&quot;UpdateMasteryList&quot;</span>, UpdateMasteryList);</div>
+<div class="line"><span class="lineno">   22</span>            dred.MasteryTable.OnMasteryRemoved.Add(<span class="stringliteral">&quot;UpdateMasteryList&quot;</span>, UpdateMasteryList);</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>            UpdateMasteryList();</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

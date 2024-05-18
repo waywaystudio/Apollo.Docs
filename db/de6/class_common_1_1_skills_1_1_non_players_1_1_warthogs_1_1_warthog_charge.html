@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,26 @@ $(function(){initNavTree('db/de6/class_common_1_1_skills_1_1_non_players_1_1_war
   <div class="headertitle"><div class="title">Common.Skills.NonPlayers.Warthogs.WarthogCharge Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.NonPlayers.Warthogs.WarthogCharge:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/de6/class_common_1_1_skills_1_1_non_players_1_1_warthogs_1_1_warthog_charge.png" usemap="#Common.Skills.NonPlayers.Warthogs.WarthogCharge_map" alt=""/>
+  <map id="Common.Skills.NonPlayers.Warthogs.WarthogCharge_map" name="Common.Skills.NonPlayers.Warthogs.WarthogCharge_map">
+<area href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html" alt="Common.Skills.NonPlayers.NonPlayerSkillBehaviour" shape="rect" coords="765,280,1078,304"/>
+<area href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html" alt="Common.Skills.SkillBehaviour" shape="rect" coords="765,224,1078,248"/>
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="484,168,797,192"/>
+<area href="../../de/de8/interface_common_1_1_i_skill_behaviour.html" alt="Common.ISkillBehaviour" shape="rect" coords="1049,168,1362,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="484,112,797,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="807,112,1120,136"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1292,112,1605,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="323,56,636,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="646,56,959,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="969,56,1282,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1292,56,1605,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="646,0,959,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -235,7 +256,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d11/_warthog_charge_8cs_source.html#l00038">38</a> of file <a class="el" href="../../d5/d11/_warthog_charge_8cs_source.html">WarthogCharge.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (!PathfindingUtility.IsValidCombatRotation(Character, <a class="code hl_property" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">SkillTarget</a>, 5f))</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                Character.Rotate(<a class="code hl_property" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">SkillTarget</a>.Position, rotatePerFrame, Invoker.Active);</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                Invoker.Active();</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_html_af6e247ddcbea38bf346b41eb48018d05"><div class="ttname"><a href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">Common.Skills.NonPlayers.NonPlayerSkillBehaviour.SkillTarget</a></div><div class="ttdeci">virtual Character SkillTarget</div><div class="ttdoc">Designed For Enemy AI.</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_non_player_skill_behaviour_8cs_source.html#l00021">NonPlayerSkillBehaviour.cs:22</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af8e18e4baa1888961c6db751bd148846" name="af8e18e4baa1888961c6db751bd148846"></a>
@@ -264,7 +297,25 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html">Common.Skills.NonPlayers.NonPlayerSkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d11/_warthog_charge_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d5/d11/_warthog_charge_8cs_source.html">WarthogCharge.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   21</span>            </div>
+<div class="line"><span class="lineno">   22</span>            dashDuration.AddCallBack(<span class="stringliteral">&quot;Complete&quot;</span>, Complete);</div>
+<div class="line"><span class="lineno">   23</span>            remoteColliderEvent.OnEntered.Add(<span class="stringliteral">&quot;WarthogCharge&quot;</span>, OnRemoteTriggerEnter);</div>
+<div class="line"><span class="lineno">   24</span>            </div>
+<div class="line"><span class="lineno">   25</span>            Sections</div>
+<div class="line"><span class="lineno">   26</span>                .Add(Section.Active, <span class="stringliteral">&quot;ActiveCollider&quot;</span>, remoteColliderEvent.ActiveCollider)</div>
+<div class="line"><span class="lineno">   27</span>                .Add(Section.Active, <span class="stringliteral">&quot;PlayDurationTimer&quot;</span>, dashDuration.Play)</div>
+<div class="line"><span class="lineno">   28</span>                .Add(Section.Active, <span class="stringliteral">&quot;MainExecution&quot;</span>, SpiralDash)                </div>
+<div class="line"><span class="lineno">   29</span>                .Add(Section.End, <span class="stringliteral">&quot;Idle&quot;</span>, Character.IdleRigid)</div>
+<div class="line"><span class="lineno">   30</span>                .Add(Section.End, <span class="stringliteral">&quot;DeActiveCollider&quot;</span>, remoteColliderEvent.DeActiveCollider)</div>
+<div class="line"><span class="lineno">   31</span>                .Add(Section.End, <span class="stringliteral">&quot;StopDurationTimer&quot;</span>, dashDuration.Stop)</div>
+<div class="line"><span class="lineno">   32</span>                .Add(Section.End, <span class="stringliteral">&quot;CancelDashTask&quot;</span>, CancelDashTask)</div>
+<div class="line"><span class="lineno">   33</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;DisposeDurationTimer&quot;</span>, dashDuration.Dispose)</div>
+<div class="line"><span class="lineno">   34</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;CancelDashTask&quot;</span>, CancelDashTask)</div>
+<div class="line"><span class="lineno">   35</span>                ;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

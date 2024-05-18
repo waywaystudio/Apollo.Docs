@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d0/df6/class_common_1_1_u_i_1_1_fiend_indicator_pool.h
   <div class="headertitle"><div class="title">Common.UI.FiendIndicatorPool Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UI.FiendIndicatorPool:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d0/df6/class_common_1_1_u_i_1_1_fiend_indicator_pool.png" usemap="#Common.UI.FiendIndicatorPool_map" alt=""/>
+  <map id="Common.UI.FiendIndicatorPool_map" name="Common.UI.FiendIndicatorPool_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="195,0,380,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -125,7 +135,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d12/_fiend_indicator_pool_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d9/d12/_fiend_indicator_pool_8cs_source.html">FiendIndicatorPool.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">if</span> (!activation) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>            var poolTransform = transform;</div>
+<div class="line"><span class="lineno">   19</span>            </div>
+<div class="line"><span class="lineno">   20</span>            fiendSpawnEvent.Add(<span class="stringliteral">&quot;ActiveFiendIndicator&quot;</span>, ActiveFiendIndicator);</div>
+<div class="line"><span class="lineno">   21</span>            pool.Initialize(CreateFiendIndicator, poolTransform, poolTransform);</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

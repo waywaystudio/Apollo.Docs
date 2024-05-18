@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,20 @@ $(function(){initNavTree('d2/d41/class_common_1_1_projectiles_1_1_variants_1_1_n
   <div class="headertitle"><div class="title">Common.Projectiles.Variants.NarakmoonProjectile Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Variants.NarakmoonProjectile:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/d41/class_common_1_1_projectiles_1_1_variants_1_1_narakmoon_projectile.png" usemap="#Common.Projectiles.Variants.NarakmoonProjectile_map" alt=""/>
+  <map id="Common.Projectiles.Variants.NarakmoonProjectile_map" name="Common.Projectiles.Variants.NarakmoonProjectile_map">
+<area href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html" alt="Common.Projectiles.Projectile" shape="rect" coords="457,112,752,136"/>
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="305,56,600,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="610,56,905,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="915,56,1210,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="305,0,600,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="610,0,905,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -201,7 +216,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html">Common.Projectiles.Projectile</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d69/_narakmoon_projectile_8cs_source.html#l00029">29</a> of file <a class="el" href="../../de/d69/_narakmoon_projectile_8cs_source.html">NarakmoonProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   32</span>            </div>
+<div class="line"><span class="lineno">   33</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2d84ae148e33924f1d74dccde2057d11" name="a2d84ae148e33924f1d74dccde2057d11"></a>
@@ -232,7 +252,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#aae9763c6158d5d9b3b5ad983f3f325eb">Common.Projectiles.Projectile</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d69/_narakmoon_projectile_8cs_source.html#l00014">14</a> of file <a class="el" href="../../de/d69/_narakmoon_projectile_8cs_source.html">NarakmoonProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            base.Initialize(provider);</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>            Sections</div>
+<div class="line"><span class="lineno">   19</span>                .Add(Section.Active, <span class="stringliteral">&quot;RotateInstantly&quot;</span>, RotateInstantly)</div>
+<div class="line"><span class="lineno">   20</span>                ;</div>
+<div class="line"><span class="lineno">   21</span>            </div>
+<div class="line"><span class="lineno">   22</span>            colliderTrigger</div>
+<div class="line"><span class="lineno">   23</span>                .AddLayerFilter(<span class="stringliteral">&quot;LayerFilter&quot;</span>, DetectProperty.TargetLayer)</div>
+<div class="line"><span class="lineno">   24</span>                .AddOnEnter(<span class="stringliteral">&quot;OnCollided&quot;</span>, OnCollided)</div>
+<div class="line"><span class="lineno">   25</span>                .Register(<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   26</span>                ;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a137427cf123551e79cd35d2da6c86b42" name="a137427cf123551e79cd35d2da6c86b42"></a>
@@ -251,7 +284,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d69/_narakmoon_projectile_8cs_source.html#l00036">36</a> of file <a class="el" href="../../de/d69/_narakmoon_projectile_8cs_source.html">NarakmoonProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (toward == TowardDirection.Left)</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                isRift      = value;</div>
+<div class="line"><span class="lineno">   41</span>                riftAngle.y = value ? -35f : 0f;</div>
+<div class="line"><span class="lineno">   42</span>            }</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (toward == TowardDirection.Right)</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                isRift      = value;</div>
+<div class="line"><span class="lineno">   47</span>                riftAngle.y = value ? 35f : 0f;</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

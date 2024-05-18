@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('df/dc2/class_common_1_1_units_1_1_unit_behaviour_anima
   <div class="headertitle"><div class="title">Common.Units.UnitBehaviourAnimationPlayer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Units.UnitBehaviourAnimationPlayer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/dc2/class_common_1_1_units_1_1_unit_behaviour_animation_player.png" usemap="#Common.Units.UnitBehaviourAnimationPlayer_map" alt=""/>
+  <map id="Common.Units.UnitBehaviourAnimationPlayer_map" name="Common.Units.UnitBehaviourAnimationPlayer_map">
+<area href="../../d8/d1b/class_common_1_1_animation_player.html" alt="Common.AnimationPlayer" shape="rect" coords="0,56,313,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="323,56,636,80"/>
+<area href="../../d1/d28/class_common_1_1_units_1_1_unit_behaviour_layered_animation_player.html" title="Invoke Skill Animation (Upper Body) with Run Animation (Lower Body)" alt="Common.Units.UnitBehaviourLayeredAnimationPlayer" shape="rect" coords="161,168,474,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -202,7 +214,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d71/_unit_behaviour_animation_player_8cs_source.html#l00048">48</a> of file <a class="el" href="../../dd/d71/_unit_behaviour_animation_player_8cs_source.html">UnitBehaviourAnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (TryGetEventNormalizedTime(Section.Recast, out var castTime))</div>
+<div class="line"><span class="lineno">   51</span>            {   </div>
+<div class="line"><span class="lineno">   52</span>                targetClip.State.NormalizedTime = castTime + Time.deltaTime;</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7c4c97d12bbe433d89b421221bdf89d6" name="a7c4c97d12bbe433d89b421221bdf89d6"></a>
@@ -229,7 +247,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d71/_unit_behaviour_animation_player_8cs_source.html#l00011">11</a> of file <a class="el" href="../../dd/d71/_unit_behaviour_animation_player_8cs_source.html">UnitBehaviourAnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            Invoker       = behaviour.Invoker;</div>
+<div class="line"><span class="lineno">   14</span>            originalSpeed = targetClip.Speed;</div>
+<div class="line"><span class="lineno">   15</span>            </div>
+<div class="line"><span class="lineno">   16</span>            var hasRigid = HasEvent(Section.RigidEnd);</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>            behaviour.Sections</div>
+<div class="line"><span class="lineno">   19</span>              .Add(Section.Active, <span class="stringliteral">&quot;PlayAnimation&quot;</span>, Play)</div>
+<div class="line"><span class="lineno">   20</span>              .Add(Section.Erupt, <span class="stringliteral">&quot;EruptAnimation&quot;</span>, Erupt)</div>
+<div class="line"><span class="lineno">   21</span>              .Add(Section.End, <span class="stringliteral">&quot;ResumeAnimation&quot;</span>, Resume)</div>
+<div class="line"><span class="lineno">   22</span>              .AddIf(hasRigid, Section.RigidEnd, <span class="stringliteral">&quot;AddYield&quot;</span>, behaviour.AddYield)</div>
+<div class="line"><span class="lineno">   23</span>              .AddIf(hasRigid, Section.End, <span class="stringliteral">&quot;RemoveYield&quot;</span>, behaviour.RemoveYield)</div>
+<div class="line"><span class="lineno">   24</span>              ;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeb9a94560791dc27bc92e690841e6977" name="aeb9a94560791dc27bc92e690841e6977"></a>
@@ -248,7 +280,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d71/_unit_behaviour_animation_player_8cs_source.html#l00027">27</a> of file <a class="el" href="../../dd/d71/_unit_behaviour_animation_player_8cs_source.html">UnitBehaviourAnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (TryGetEventNormalizedTime(Section.Cast, out var castTime))</div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                targetClip.State.NormalizedTime = castTime;</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab4dc676d1bfa2d7bb8f7c3afa051ca14" name="ab4dc676d1bfa2d7bb8f7c3afa051ca14"></a>
@@ -267,7 +305,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d71/_unit_behaviour_animation_player_8cs_source.html#l00056">56</a> of file <a class="el" href="../../dd/d71/_unit_behaviour_animation_player_8cs_source.html">UnitBehaviourAnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            var eventKey = $<span class="stringliteral">&quot;{GetInstanceID()}.ChangeAnimationSpeed&quot;</span>;</div>
+<div class="line"><span class="lineno">   59</span>            </div>
+<div class="line"><span class="lineno">   60</span>            statTable.AddStatEvent(StatType.BaseAttackSpeed, eventKey, value =&gt;</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                targetClip.Speed = originalSpeed * (1 + value);</div>
+<div class="line"><span class="lineno">   63</span>            });</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

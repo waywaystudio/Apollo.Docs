@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,12 @@ $(function(){initNavTree('d6/d68/class_module_group_attribute.html','../../'); i
   <div class="headertitle"><div class="title">ModuleGroupAttribute Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for ModuleGroupAttribute:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/d68/class_module_group_attribute.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -163,7 +170,10 @@ Properties</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00034">34</a> of file <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html">ModuleGroupAttribute.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>      : base(groupName, order)</div>
+<div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7ba8252fa8cec4dab18647d318a87782" name="a7ba8252fa8cec4dab18647d318a87782"></a>
@@ -201,7 +211,12 @@ Properties</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00043">43</a> of file <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html">ModuleGroupAttribute.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   44</span>      : base(groupName, order)</div>
+<div class="line"><span class="lineno">   45</span>    {</div>
+<div class="line"><span class="lineno">   46</span>      this.expanded = expanded;</div>
+<div class="line"><span class="lineno">   47</span>      this.HasDefinedExpanded = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6b5d1ada7f7d1c2712009677c0e2d670" name="a6b5d1ada7f7d1c2712009677c0e2d670"></a>
@@ -234,7 +249,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html">ModuleGroupAttribute.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   51</span>        : <span class="keyword">this</span>(groupName, expanded, order)</div>
+<div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        DocumentLink = documentLink;</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -270,7 +289,27 @@ Properties</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00058">58</a> of file <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html">ModuleGroupAttribute.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>        var groupAttribute = other as <a class="code hl_function" href="#ac656cdcf456f8282f6577a64130d729e">ModuleGroupAttribute</a>;</div>
+<div class="line"><span class="lineno">   61</span>      </div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (groupAttribute is { <a class="code hl_property" href="#adf493c10ec4148079e36012b0a19b21a">HasDefinedExpanded</a>: <span class="keyword">true</span> })</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>          <a class="code hl_property" href="#adf493c10ec4148079e36012b0a19b21a">HasDefinedExpanded</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   65</span>          <a class="code hl_property" href="#ac4eab18ff810eddfdd0da3e52ce3fc62">Expanded</a> = groupAttribute.Expanded;</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="line"><span class="lineno">   67</span>        </div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (!<a class="code hl_property" href="#adf493c10ec4148079e36012b0a19b21a">HasDefinedExpanded</a>)</div>
+<div class="line"><span class="lineno">   69</span>          <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   70</span>  </div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">if</span> (groupAttribute == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   72</span>        </div>
+<div class="line"><span class="lineno">   73</span>        groupAttribute.HasDefinedExpanded = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   74</span>        groupAttribute.Expanded           = <a class="code hl_property" href="#ac4eab18ff810eddfdd0da3e52ce3fc62">Expanded</a>;</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+<div class="ttc" id="aclass_module_group_attribute_html_ac4eab18ff810eddfdd0da3e52ce3fc62"><div class="ttname"><a href="#ac4eab18ff810eddfdd0da3e52ce3fc62">ModuleGroupAttribute.Expanded</a></div><div class="ttdeci">bool Expanded</div><div class="ttdoc">Gets a value indicating whether or not the foldout should be expanded by default.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00016">ModuleGroupAttribute.cs:17</a></div></div>
+<div class="ttc" id="aclass_module_group_attribute_html_ac656cdcf456f8282f6577a64130d729e"><div class="ttname"><a href="#ac656cdcf456f8282f6577a64130d729e">ModuleGroupAttribute.ModuleGroupAttribute</a></div><div class="ttdeci">ModuleGroupAttribute(string groupName, float order=0.0f)</div><div class="ttdoc">Adds the property to the specified foldout group.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00034">ModuleGroupAttribute.cs:34</a></div></div>
+<div class="ttc" id="aclass_module_group_attribute_html_adf493c10ec4148079e36012b0a19b21a"><div class="ttname"><a href="#adf493c10ec4148079e36012b0a19b21a">ModuleGroupAttribute.HasDefinedExpanded</a></div><div class="ttdeci">bool HasDefinedExpanded</div><div class="ttdoc">Gets a value indicating whether or not the Expanded property has been set.</div><div class="ttdef"><b>Definition</b> <a href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00029">ModuleGroupAttribute.cs:29</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -295,7 +334,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html">ModuleGroupAttribute.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; } = <span class="stringliteral">&quot;&quot;</span>;</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac4eab18ff810eddfdd0da3e52ce3fc62" name="ac4eab18ff810eddfdd0da3e52ce3fc62"></a>
@@ -321,7 +361,15 @@ Properties</h2></td></tr>
 <p>Gets a value indicating whether or not the foldout should be expanded by default. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html">ModuleGroupAttribute.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keyword">get</span> =&gt; expanded;</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            expanded           = value;</div>
+<div class="line"><span class="lineno">   22</span>            <a class="code hl_property" href="#adf493c10ec4148079e36012b0a19b21a">HasDefinedExpanded</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adf493c10ec4148079e36012b0a19b21a" name="adf493c10ec4148079e36012b0a19b21a"></a>
@@ -347,7 +395,8 @@ Properties</h2></td></tr>
 <p>Gets a value indicating whether or not the Expanded property has been set. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00029">29</a> of file <a class="el" href="../../d0/dc7/_module_group_attribute_8cs_source.html">ModuleGroupAttribute.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

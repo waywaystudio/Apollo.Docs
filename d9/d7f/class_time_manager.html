@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,12 @@ $(function(){initNavTree('d9/d7f/class_time_manager.html','../../'); initResizab
   <div class="headertitle"><div class="title">TimeManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for TimeManager:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/d7f/class_time_manager.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -143,7 +150,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html#l00047">47</a> of file <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html">TimeManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>        Director = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adde843fbc1873e82dc2b965704f0841d" name="adde843fbc1873e82dc2b965704f0841d"></a>
@@ -170,7 +180,12 @@ Properties</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html">TimeManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(Director)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   18</span>        </div>
+<div class="line"><span class="lineno">   19</span>        Director.Pause(callback);</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab33749afbedcaf6ca80bbb464ef34be0" name="ab33749afbedcaf6ca80bbb464ef34be0"></a>
@@ -197,7 +212,12 @@ Properties</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html">TimeManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(Director)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   29</span>        </div>
+<div class="line"><span class="lineno">   30</span>        Director.Pause(pauseDuration);</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a17db4f64d380343633904cb2da40dffa" name="a17db4f64d380343633904cb2da40dffa"></a>
@@ -216,7 +236,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html#l00040">40</a> of file <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html">TimeManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(Director)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   43</span>        </div>
+<div class="line"><span class="lineno">   44</span>        Director.ResetTimeScale();</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa1767ec25d342e1db37a4e20f8e8c7de" name="aa1767ec25d342e1db37a4e20f8e8c7de"></a>
@@ -235,7 +260,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html#l00033">33</a> of file <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html">TimeManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (!Verify.IsNotNull(Director)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   36</span>        </div>
+<div class="line"><span class="lineno">   37</span>        Director.Resume(callback);</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -260,7 +290,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html#l00007">7</a> of file <a class="el" href="../../d0/d9a/_time_manager_8cs_source.html">TimeManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af2072e9048d854f66fc5b7eb48d3c4af" name="af2072e9048d854f66fc5b7eb48d3c4af"></a>

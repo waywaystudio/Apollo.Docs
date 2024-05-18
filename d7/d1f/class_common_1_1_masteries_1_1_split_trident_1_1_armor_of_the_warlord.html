@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('d7/d1f/class_common_1_1_masteries_1_1_split_trident_1_
   <div class="headertitle"><div class="title">Common.Masteries.SplitTrident.ArmorOfTheWarlord Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.SplitTrident.ArmorOfTheWarlord:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/d1f/class_common_1_1_masteries_1_1_split_trident_1_1_armor_of_the_warlord.png" usemap="#Common.Masteries.SplitTrident.ArmorOfTheWarlord_map" alt=""/>
+  <map id="Common.Masteries.SplitTrident.ArmorOfTheWarlord_map" name="Common.Masteries.SplitTrident.ArmorOfTheWarlord_map">
+<area href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html" alt="Common.Masteries.Mastery" shape="rect" coords="315,56,620,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="315,0,620,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="630,0,935,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -206,7 +218,15 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db1/_armor_of_the_warlord_8cs_source.html#l00033">33</a> of file <a class="el" href="../../d4/db1/_armor_of_the_warlord_8cs_source.html">ArmorOfTheWarlord.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            narakmoon.Sections</div>
+<div class="line"><span class="lineno">   36</span>                     .Remove(Section.Execute, <span class="stringliteral">&quot;PlayBuffTimer&quot;</span>)    </div>
+<div class="line"><span class="lineno">   37</span>                     .Remove(Section.Execute, <span class="stringliteral">&quot;ArmorOfTheWarlord&quot;</span>)</div>
+<div class="line"><span class="lineno">   38</span>                     ;</div>
+<div class="line"><span class="lineno">   39</span>            </div>
+<div class="line"><span class="lineno">   40</span>            buffTimer.Stop();</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a052c2bc14f635739873736e9c87c54f8" name="a052c2bc14f635739873736e9c87c54f8"></a>
@@ -233,7 +253,23 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db1/_armor_of_the_warlord_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d4/db1/_armor_of_the_warlord_8cs_source.html">ArmorOfTheWarlord.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            armorEntity = <span class="keyword">new</span> StatEntity(StatType.DamageDecreaseRate, <span class="stringliteral">&quot;ArmorOfTheWarLoad.DamageDecreaseRate&quot;</span>, quality.Value);</div>
+<div class="line"><span class="lineno">   18</span>            narakmoon   = dred.Skills.Narakmoon;</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>            narakmoon.Sections</div>
+<div class="line"><span class="lineno">   21</span>                     .Add(Section.Execute, <span class="stringliteral">&quot;PlayBuffTimer&quot;</span>, buffTimer.Play)    </div>
+<div class="line"><span class="lineno">   22</span>                     .Add(Section.Execute, <span class="stringliteral">&quot;ArmorOfTheWarlord&quot;</span>, () =&gt; dred.StatTable.Add(armorEntity))</div>
+<div class="line"><span class="lineno">   23</span>                     ;</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>            buffTimer.AddCallBack(<span class="stringliteral">&quot;RemoveArmorEntity&quot;</span>, () =&gt;</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                <span class="keywordflow">if</span> (dred.IsNullOrDestroyed()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>                dred.StatTable.Remove(armorEntity);</div>
+<div class="line"><span class="lineno">   30</span>            });</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5a0a130d386a200087def2b618913dde" name="a5a0a130d386a200087def2b618913dde"></a>
@@ -260,7 +296,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/db1/_armor_of_the_warlord_8cs_source.html#l00043">43</a> of file <a class="el" href="../../d4/db1/_armor_of_the_warlord_8cs_source.html">ArmorOfTheWarlord.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            armorEntity.Value = quality.Value;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

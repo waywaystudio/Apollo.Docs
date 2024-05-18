@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('d8/d45/class_common_1_1_masteries_1_1_blade_1_1_critic
   <div class="headertitle"><div class="title">Common.Masteries.Blade.CriticalBleed Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.Blade.CriticalBleed:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/d45/class_common_1_1_masteries_1_1_blade_1_1_critical_bleed.png" usemap="#Common.Masteries.Blade.CriticalBleed_map" alt=""/>
+  <map id="Common.Masteries.Blade.CriticalBleed_map" name="Common.Masteries.Blade.CriticalBleed_map">
+<area href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html" alt="Common.Masteries.Mastery" shape="rect" coords="241,56,472,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="241,0,472,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="482,0,713,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -206,7 +218,20 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d0e/_critical_bleed_8cs_source.html#l00031">31</a> of file <a class="el" href="../../dd/d0e/_critical_bleed_8cs_source.html">CriticalBleed.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            BladeAttackSkillBehaviours.ForEach(sb =&gt;</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">if</span> (sb.Executor.TryGetExecutions&lt;<a class="code hl_class" href="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.html">DamageExecutor</a>&gt;(out var damageExecutors))</div>
+<div class="line"><span class="lineno">   36</span>                {</div>
+<div class="line"><span class="lineno">   37</span>                    damageExecutors.ForEach(exe =&gt;</div>
+<div class="line"><span class="lineno">   38</span>                    {</div>
+<div class="line"><span class="lineno">   39</span>                        exe.DamageFilter.RemoveFilter(StatType.CriticalChance, <span class="stringliteral">&quot;CriticalBleed&quot;</span>);</div>
+<div class="line"><span class="lineno">   40</span>                    });</div>
+<div class="line"><span class="lineno">   41</span>                }</div>
+<div class="line"><span class="lineno">   42</span>            });</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_damage_executor_html"><div class="ttname"><a href="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.html">Common.Executors.Variants.DamageExecutor</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/ded/_damage_executor_8cs_source.html#l00005">DamageExecutor.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a218b1b175d7ddb720a74ea7b178c4f1a" name="a218b1b175d7ddb720a74ea7b178c4f1a"></a>
@@ -233,7 +258,21 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d0e/_critical_bleed_8cs_source.html#l00015">15</a> of file <a class="el" href="../../dd/d0e/_critical_bleed_8cs_source.html">CriticalBleed.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            bladeAttackSet = dred.Skills.BladeAttackSet;</div>
+<div class="line"><span class="lineno">   18</span>            </div>
+<div class="line"><span class="lineno">   19</span>            BladeAttackSkillBehaviours.ForEach(sb =&gt;</div>
+<div class="line"><span class="lineno">   20</span>            {</div>
+<div class="line"><span class="lineno">   21</span>                <span class="keywordflow">if</span> (sb.Executor.TryGetExecutions&lt;<a class="code hl_class" href="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.html">DamageExecutor</a>&gt;(out var damageExecutors))</div>
+<div class="line"><span class="lineno">   22</span>                {</div>
+<div class="line"><span class="lineno">   23</span>                    damageExecutors.ForEach(exe =&gt;</div>
+<div class="line"><span class="lineno">   24</span>                    {</div>
+<div class="line"><span class="lineno">   25</span>                        exe.DamageFilter.AddFilter(StatType.CriticalChance, <span class="stringliteral">&quot;CriticalBleed&quot;</span>, IncreaseCriticalChance);</div>
+<div class="line"><span class="lineno">   26</span>                    });</div>
+<div class="line"><span class="lineno">   27</span>                }</div>
+<div class="line"><span class="lineno">   28</span>            });</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae9ad53f100a6d530985e3cb9f806dda9" name="ae9ad53f100a6d530985e3cb9f806dda9"></a>
@@ -260,7 +299,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d0e/_critical_bleed_8cs_source.html#l00045">45</a> of file <a class="el" href="../../dd/d0e/_critical_bleed_8cs_source.html">CriticalBleed.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            </div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

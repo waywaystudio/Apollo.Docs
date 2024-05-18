@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,16 @@ $(function(){initNavTree('de/def/class_common_1_1_executors_1_1_variants_1_1_dra
   <div class="headertitle"><div class="title">Common.Executors.Variants.DrawExecutor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Executors.Variants.DrawExecutor:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/def/class_common_1_1_executors_1_1_variants_1_1_draw_executor.png" usemap="#Common.Executors.Variants.DrawExecutor_map" alt=""/>
+  <map id="Common.Executors.Variants.DrawExecutor_map" name="Common.Executors.Variants.DrawExecutor_map">
+<area href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html" alt="Common.Executors.ExecuteBehaviour" shape="rect" coords="132,56,387,80"/>
+<area href="../../d7/dc1/interface_i_condition_table.html" alt="IConditionTable&lt; GameObject &gt;" shape="rect" coords="265,0,520,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -166,7 +177,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dcc/_draw_executor_8cs_source.html#l00012">12</a> of file <a class="el" href="../../dd/dcc/_draw_executor_8cs_source.html">DrawExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">if</span> (!target.TryGetComponent(out IDrawTaker taker)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   15</span> </div>
+<div class="line"><span class="lineno">   16</span>            var randomPoint = (Random.insideUnitCircle * randomSpread).ToVector3XZ();</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>            taker.TakeDraw(Provider.Position + randomPoint, maxDistance, drawSpeed);</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

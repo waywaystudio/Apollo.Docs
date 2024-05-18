@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,20 @@ $(function(){initNavTree('d5/d5c/class_common_1_1_characters_1_1_behaviours_1_1_
   <div class="headertitle"><div class="title">Common.Characters.Behaviours.HorrorBehaviour Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Behaviours.HorrorBehaviour:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/d5c/class_common_1_1_characters_1_1_behaviours_1_1_horror_behaviour.png" usemap="#Common.Characters.Behaviours.HorrorBehaviour_map" alt=""/>
+  <map id="Common.Characters.Behaviours.HorrorBehaviour_map" name="Common.Characters.Behaviours.HorrorBehaviour_map">
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="457,168,752,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="457,112,752,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="305,56,600,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="610,56,905,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="915,56,1210,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="610,0,905,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -188,7 +203,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc6/_horror_behaviour_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d1/dc6/_horror_behaviour_8cs_source.html">HorrorBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   31</span>            </div>
+<div class="line"><span class="lineno">   32</span>            horrorTask = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   33</span>            </div>
+<div class="line"><span class="lineno">   34</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   35</span>            Horrify(duration, horrorTask).Forget();</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a56adfa3e60ef109c07a06c89f57b4b4d" name="a56adfa3e60ef109c07a06c89f57b4b4d"></a>
@@ -217,7 +240,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html">Common.Characters.CharacterBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dc6/_horror_behaviour_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d1/dc6/_horror_behaviour_8cs_source.html">HorrorBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>            Sections</div>
+<div class="line"><span class="lineno">   20</span>                .AddCondition(<span class="stringliteral">&quot;NotInHorror&quot;</span>, () =&gt; Invoker.IsEnd)</div>
+<div class="line"><span class="lineno">   21</span>                .Add(Section.Active, <span class="stringliteral">&quot;DisableAI&quot;</span>, behaviorTree.DisableBehavior)</div>
+<div class="line"><span class="lineno">   22</span>                .Add(Section.Cancel, <span class="stringliteral">&quot;EnableAI&quot;</span>, behaviorTree.EnableBehavior)</div>
+<div class="line"><span class="lineno">   23</span>                .Add(Section.End, <span class="stringliteral">&quot;EnableAI&quot;</span>, behaviorTree.EnableBehavior)</div>
+<div class="line"><span class="lineno">   24</span>                .Cancellation(<span class="stringliteral">&quot;CancelHorrorTask&quot;</span>, horrorTask)</div>
+<div class="line"><span class="lineno">   25</span>                ;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

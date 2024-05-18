@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -131,7 +132,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d5c/_override_module_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d3/d5c/_override_module_8cs_source.html">OverrideModule.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            this.effect = effect;</div>
+<div class="line"><span class="lineno">   31</span>            </div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (mask.HasFlag(OverrideMask.Stack))</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                StackInitialize(effect);</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>            </div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (mask.HasFlag(OverrideMask.ResetDuration))</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                ResetDurationInitialize(effect);</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -156,7 +170,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d5c/_override_module_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d3/d5c/_override_module_8cs_source.html">OverrideModule.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

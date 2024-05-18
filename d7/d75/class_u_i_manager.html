@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d7/d75/class_u_i_manager.html','../../'); initResizabl
   <div class="headertitle"><div class="title">UIManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for UIManager:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/d75/class_u_i_manager.png" usemap="#UIManager_map" alt=""/>
+  <map id="UIManager_map" name="UIManager_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="116,0,222,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -139,7 +149,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00045">45</a> of file <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        resolverList.AddUniquely(resolver);</div>
+<div class="line"><span class="lineno">   48</span>        </div>
+<div class="line"><span class="lineno">   49</span>        CheckRatioAction();</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a04c52ed513f9554f96d11266d01cbdc1" name="a04c52ed513f9554f96d11266d01cbdc1"></a>
@@ -158,7 +173,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00093">93</a> of file <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   94</span>    {</div>
+<div class="line"><span class="lineno">   95</span>        Director = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   96</span>        </div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">if</span> (checkRationTask is not <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   98</span>        {</div>
+<div class="line"><span class="lineno">   99</span>            checkRationTask.Cancel();</div>
+<div class="line"><span class="lineno">  100</span>            checkRationTask = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  101</span>        }</div>
+<div class="line"><span class="lineno">  102</span>        </div>
+<div class="line"><span class="lineno">  103</span>        resolverList.Clear();</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1f2684df68c32beacdd6952e37f3c730" name="a1f2684df68c32beacdd6952e37f3c730"></a>
@@ -177,7 +203,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00023">23</a> of file <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>    {</div>
+<div class="line"><span class="lineno">   25</span>        RatioConversionLimit = (float)ratio.x / ratio.y;</div>
+<div class="line"><span class="lineno">   26</span>        checkRationTask      = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   27</span>        prevAspectValues     = <span class="keyword">new</span> Vector2Int(Screen.width, Screen.height);</div>
+<div class="line"><span class="lineno">   28</span>        </div>
+<div class="line"><span class="lineno">   29</span>        CheckRatioAction();</div>
+<div class="line"><span class="lineno">   30</span>        CheckRatioTasking(checkRationTask).Forget();</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7cda19a1d626fdd5f4d2e3e13c4a275d" name="a7cda19a1d626fdd5f4d2e3e13c4a275d"></a>
@@ -196,7 +230,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00052">52</a> of file <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        resolverList.RemoveSafely(resolver);</div>
+<div class="line"><span class="lineno">   55</span>        </div>
+<div class="line"><span class="lineno">   56</span>        CheckRatioAction();</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a899d8d017b2d715e4c25fd69185364fc" name="a899d8d017b2d715e4c25fd69185364fc"></a>
@@ -219,7 +258,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00033">33</a> of file <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        matrix = Director is not <span class="keyword">null</span> </div>
+<div class="line"><span class="lineno">   36</span>            ? Director[type] </div>
+<div class="line"><span class="lineno">   37</span>            : <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> matrix is not <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -244,7 +290,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00015">15</a> of file <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

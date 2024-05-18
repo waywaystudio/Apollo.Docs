@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('de/d6e/class_challenge_1_1_dungeons_1_1_scenarios_1_1_
   <div class="headertitle"><div class="title">Challenge.Dungeons.Scenarios.MapPrefabData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Dungeons.Scenarios.MapPrefabData:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/d6e/class_challenge_1_1_dungeons_1_1_scenarios_1_1_map_prefab_data.png" usemap="#Challenge.Dungeons.Scenarios.MapPrefabData_map" alt=""/>
+  <map id="Challenge.Dungeons.Scenarios.MapPrefabData_map" name="Challenge.Dungeons.Scenarios.MapPrefabData_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="294,0,578,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -135,7 +145,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d65/_map_prefab_data_8cs_source.html#l00032">32</a> of file <a class="el" href="../../dc/d65/_map_prefab_data_8cs_source.html">MapPrefabData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">return</span> type <span class="keywordflow">switch</span></div>
+<div class="line"><span class="lineno">   35</span>            {</div>
+<div class="line"><span class="lineno">   36</span>                StageRoomType.Start    =&gt; stagePrefabTable[StageRoomType.Start].StageList.Random(),</div>
+<div class="line"><span class="lineno">   37</span>                StageRoomType.Battle   =&gt; GetBattleStagePrefab(),</div>
+<div class="line"><span class="lineno">   38</span>                StageRoomType.Merchant =&gt; stagePrefabTable[StageRoomType.Merchant].StageList.Random(),</div>
+<div class="line"><span class="lineno">   39</span>                StageRoomType.Boss     =&gt; stagePrefabTable[StageRoomType.MainBoss].StageList.Random(),</div>
+<div class="line"><span class="lineno">   40</span>                StageRoomType.MainBoss =&gt; stagePrefabTable[StageRoomType.MainBoss].StageList.Random(),</div>
+<div class="line"><span class="lineno">   41</span>                StageRoomType.Training =&gt; stagePrefabTable[StageRoomType.Training].StageList.Random(),</div>
+<div class="line"><span class="lineno">   42</span>                _                      =&gt; <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentOutOfRangeException(nameof(type), type, <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   43</span>            };</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6fd2a20ad6a3281519f027fc1ce981dd" name="a6fd2a20ad6a3281519f027fc1ce981dd"></a>
@@ -154,7 +176,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d65/_map_prefab_data_8cs_source.html#l00027">27</a> of file <a class="el" href="../../dc/d65/_map_prefab_data_8cs_source.html">MapPrefabData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            CreateBattleStageTable();</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,15 @@ $(function(){initNavTree('de/d36/class_common_1_1_cool_timer.html','../../'); in
   <div class="headertitle"><div class="title">Common.CoolTimer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.CoolTimer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/d36/class_common_1_1_cool_timer.png" usemap="#Common.CoolTimer_map" alt=""/>
+  <map id="Common.CoolTimer_map" name="Common.CoolTimer_map">
+<area href="../../d2/d81/class_common_1_1_characters_1_1_behaviours_1_1_dashes_1_1_dash_cool_timer.html" alt="Common.Characters.Behaviours.Dashes.DashCoolTimer" shape="rect" coords="0,56,331,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -158,7 +168,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d45/_cool_timer_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d6/d45/_cool_timer_8cs_source.html">CoolTimer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (invokeSection == Section.None) <span class="keywordflow">return</span>;           </div>
+<div class="line"><span class="lineno">   26</span>                </div>
+<div class="line"><span class="lineno">   27</span>            </div>
+<div class="line"><span class="lineno">   28</span>            sequencer.Sections</div>
+<div class="line"><span class="lineno">   29</span>                     .AddCondition(<span class="stringliteral">&quot;CompleteCooling&quot;</span>, IsTimerReady)</div>
+<div class="line"><span class="lineno">   30</span>                     .Add(invokeSection, <span class="stringliteral">&quot;PlayCoolTimer&quot;</span>, timeTrigger.Play)</div>
+<div class="line"><span class="lineno">   31</span>                     .Add(Section.Dispose, <span class="stringliteral">&quot;DisposeCoolTimer&quot;</span>, timeTrigger.Dispose)</div>
+<div class="line"><span class="lineno">   32</span>                     ;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -256,7 +276,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d45/_cool_timer_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d6/d45/_cool_timer_8cs_source.html">CoolTimer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keyword">get</span> =&gt; timeTrigger.Progress.Value;</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keyword">set</span> =&gt; timeTrigger.Progress.Value = value;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaa5199dd472401519b1e2bd231dfda2f" name="aaa5199dd472401519b1e2bd231dfda2f"></a>

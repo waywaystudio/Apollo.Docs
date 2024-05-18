@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d3/dff/class_challenge_1_1_u_i_1_1_challenge_hud_canva
   <div class="headertitle"><div class="title">Challenge.UI.ChallengeHudCanvas Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.UI.ChallengeHudCanvas:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d3/dff/class_challenge_1_1_u_i_1_1_challenge_hud_canvas.png" usemap="#Challenge.UI.ChallengeHudCanvas_map" alt=""/>
+  <map id="Challenge.UI.ChallengeHudCanvas_map" name="Challenge.UI.ChallengeHudCanvas_map">
+<area href="../../d3/d94/class_u_is_1_1_canvas_matrix.html" alt="UIs.CanvasMatrix" shape="rect" coords="0,56,211,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -156,7 +166,30 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d3/d94/class_u_is_1_1_canvas_matrix.html">UIs.CanvasMatrix</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d67/_challenge_hud_canvas_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d4/d67/_challenge_hud_canvas_8cs_source.html">ChallengeHudCanvas.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            base.Initialize();</div>
+<div class="line"><span class="lineno">   31</span>            </div>
+<div class="line"><span class="lineno">   32</span>            bossHealth.Initialize();</div>
+<div class="line"><span class="lineno">   33</span>            bottomHuds.Initialize();</div>
+<div class="line"><span class="lineno">   34</span>            </div>
+<div class="line"><span class="lineno">   35</span>            var activeTable = ChallengeDirector.Dungeon.OnSequenceActivated;</div>
+<div class="line"><span class="lineno">   36</span>            var initialActive = activeTable[DungeonSectionType.Initial] ??= <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable</a>();</div>
+<div class="line"><span class="lineno">   37</span>            var disposeActive = activeTable[DungeonSectionType.Dispose] ??= <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable</a>();</div>
+<div class="line"><span class="lineno">   38</span>            </div>
+<div class="line"><span class="lineno">   39</span>            initialActive.Add(<span class="stringliteral">&quot;bottomHudOn&quot;</span>, () =&gt;</div>
+<div class="line"><span class="lineno">   40</span>            {</div>
+<div class="line"><span class="lineno">   41</span>                bottomHuds.<a class="code hl_function" href="../../d1/dc6/class_common_1_1_u_i_element.html#a781e53df5c29dc4566e672bdfc8dba3c">Open</a>();</div>
+<div class="line"><span class="lineno">   42</span>            });</div>
+<div class="line"><span class="lineno">   43</span>            </div>
+<div class="line"><span class="lineno">   44</span>            disposeActive.Add(<span class="stringliteral">&quot;bottomHudOff&quot;</span>, () =&gt;</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                bottomHuds.<a class="code hl_function" href="../../d1/dc6/class_common_1_1_u_i_element.html#ab9d9ec0ed7314202889fe21be760b35d">Close</a>();</div>
+<div class="line"><span class="lineno">   47</span>            });</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="ttc" id="aclass_action_table_html"><div class="ttname"><a href="../../db/dcc/class_action_table.html">ActionTable</a></div><div class="ttdoc">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00067">ActionTable.cs:68</a></div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_element_html_a781e53df5c29dc4566e672bdfc8dba3c"><div class="ttname"><a href="../../d1/dc6/class_common_1_1_u_i_element.html#a781e53df5c29dc4566e672bdfc8dba3c">Common.UIElement.Open</a></div><div class="ttdeci">void Open()</div><div class="ttdoc">Called by the EventSystem when opened the element associated with this EventTrigger.</div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_element_html_ab9d9ec0ed7314202889fe21be760b35d"><div class="ttname"><a href="../../d1/dc6/class_common_1_1_u_i_element.html#ab9d9ec0ed7314202889fe21be760b35d">Common.UIElement.Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">Called by the EventSystem when closed the element associated with this EventTrigger.</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a58bc31a44bf83d0000031a226f0b317a" name="a58bc31a44bf83d0000031a226f0b317a"></a>
@@ -175,7 +208,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d67/_challenge_hud_canvas_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d4/d67/_challenge_hud_canvas_8cs_source.html">ChallengeHudCanvas.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            bottomHuds.Initialize(dred);</div>
+<div class="line"><span class="lineno">   53</span>            castingBar.Initialize(dred);</div>
+<div class="line"><span class="lineno">   54</span>            </div>
+<div class="line"><span class="lineno">   55</span>            <span class="comment">// DevEditor</span></div>
+<div class="line"><span class="lineno">   56</span>            devHuds.Initialize(dred);</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

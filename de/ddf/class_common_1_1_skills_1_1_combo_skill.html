@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,19 @@ $(function(){initNavTree('de/ddf/class_common_1_1_skills_1_1_combo_skill.html','
   <div class="headertitle"><div class="title">Common.Skills.ComboSkill Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.ComboSkill:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/ddf/class_common_1_1_skills_1_1_combo_skill.png" usemap="#Common.Skills.ComboSkill_map" alt=""/>
+  <map id="Common.Skills.ComboSkill_map" name="Common.Skills.ComboSkill_map">
+<area href="../../d4/d40/class_common_1_1_skills_1_1_skill.html" alt="Common.Skills.Skill" shape="rect" coords="259,56,508,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="259,0,508,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="518,0,767,24"/>
+<area href="../../d9/ddd/class_common_1_1_skills_1_1_blades_1_1_shin_kendo.html" alt="Common.Skills.Blades.ShinKendo" shape="rect" coords="129,168,378,192"/>
+<area href="../../d8/d0b/class_common_1_1_skills_1_1_split_tridents_1_1_spear_technic.html" alt="Common.Skills.SplitTridents.SpearTechnic" shape="rect" coords="388,168,637,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -176,7 +190,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/_combo_skill_8cs_source.html#l00047">47</a> of file <a class="el" href="../../d5/d20/_combo_skill_8cs_source.html">ComboSkill.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (MainBehaviour.IsNullOrDestroyed()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (!MainBehaviour.Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   51</span>            </div>
+<div class="line"><span class="lineno">   52</span>            MainBehaviour.Invoker.Active();</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3bff2a6e86b510bd81ea79a3e0d89f2d" name="a3bff2a6e86b510bd81ea79a3e0d89f2d"></a>
@@ -195,7 +215,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/_combo_skill_8cs_source.html#l00055">55</a> of file <a class="el" href="../../d5/d20/_combo_skill_8cs_source.html">ComboSkill.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (MainBehaviour is not <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                MainBehaviour.Cancel();</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afe9cb8f8ce9e65259b9446aa82aa4168" name="afe9cb8f8ce9e65259b9446aa82aa4168"></a>
@@ -214,7 +240,23 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/_combo_skill_8cs_source.html#l00029">29</a> of file <a class="el" href="../../d5/d20/_combo_skill_8cs_source.html">ComboSkill.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            intervalTolerance.AddCallBack(<span class="stringliteral">&quot;BreakCombo&quot;</span>, BreakCombo);</div>
+<div class="line"><span class="lineno">   32</span>            </div>
+<div class="line"><span class="lineno">   33</span>            comboList.ForEach(skillBehaviour =&gt;</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">if</span> (!skillBehaviour.TryGetComponent(out IComboSource source)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   36</span>                </div>
+<div class="line"><span class="lineno">   37</span>                source.ComboTolerance.SetToleranceTrigger(intervalTolerance);</div>
+<div class="line"><span class="lineno">   38</span>                </div>
+<div class="line"><span class="lineno">   39</span>                skillBehaviour.Initialize(character);</div>
+<div class="line"><span class="lineno">   40</span>                skillBehaviour.Sections</div>
+<div class="line"><span class="lineno">   41</span>                      <span class="comment">/* Order 1 */</span>.Add(Section.Active, <span class="stringliteral">&quot;PauseIntervalTolerance&quot;</span>, intervalTolerance.Pause)</div>
+<div class="line"><span class="lineno">   42</span>                      <span class="comment">/* Order 2 */</span>.Add(Section.Active, <span class="stringliteral">&quot;SetNextSkill&quot;</span>, SetNextSkill)</div>
+<div class="line"><span class="lineno">   43</span>                      ;</div>
+<div class="line"><span class="lineno">   44</span>            });</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6bbc83a43002814a659b7bfe75de75fc" name="a6bbc83a43002814a659b7bfe75de75fc"></a>
@@ -233,7 +275,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/_combo_skill_8cs_source.html#l00063">63</a> of file <a class="el" href="../../d5/d20/_combo_skill_8cs_source.html">ComboSkill.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            comboList.ForEach(action =&gt;</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">if</span> (!action.TryGetComponent(out IComboSource source)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   68</span>                </div>
+<div class="line"><span class="lineno">   69</span>                source.ComboTolerance.Resign();</div>
+<div class="line"><span class="lineno">   70</span>                action.Sections</div>
+<div class="line"><span class="lineno">   71</span>                      .Remove(Section.Active, <span class="stringliteral">&quot;PauseIntervalTolerance&quot;</span>)</div>
+<div class="line"><span class="lineno">   72</span>                      .Remove(Section.Active, <span class="stringliteral">&quot;SetNextSkill&quot;</span>)</div>
+<div class="line"><span class="lineno">   73</span>                      ;</div>
+<div class="line"><span class="lineno">   74</span>            });</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -405,7 +459,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d20/_combo_skill_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d5/d20/_combo_skill_8cs_source.html">ComboSkill.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   21</span>            {</div>
+<div class="line"><span class="lineno">   22</span>                <span class="keywordflow">if</span> (mainSkill.IsNullOrDestroyed()) currentComboIndex = 0;</div>
+<div class="line"><span class="lineno">   23</span>                </div>
+<div class="line"><span class="lineno">   24</span>                <span class="keywordflow">return</span> comboList[currentComboIndex];</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

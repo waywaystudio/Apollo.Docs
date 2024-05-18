@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d2/dc1/class_common_1_1_u_i_1_1_name_plate.html','../.
   <div class="headertitle"><div class="title">Common.UI.NamePlate Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UI.NamePlate:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/dc1/class_common_1_1_u_i_1_1_name_plate.png" usemap="#Common.UI.NamePlate_map" alt=""/>
+  <map id="Common.UI.NamePlate_map" name="Common.UI.NamePlate_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="149,0,288,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -135,7 +145,23 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d7d/_name_plate_8cs_source.html#l00043">43</a> of file <a class="el" href="../../da/d7d/_name_plate_8cs_source.html">NamePlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a>             =   fiend;</div>
+<div class="line"><span class="lineno">   46</span>            HitPoints         =   fiend.HitPoints;</div>
+<div class="line"><span class="lineno">   47</span>            SoulArmor         =   fiend.SoulArmorPoints;</div>
+<div class="line"><span class="lineno">   48</span>            rootRectTransform ??= GetComponentInParent&lt;Canvas&gt;().GetComponent&lt;RectTransform&gt;();</div>
+<div class="line"><span class="lineno">   49</span>            </div>
+<div class="line"><span class="lineno">   50</span>            healthPointWhite.Register(HitPoints);</div>
+<div class="line"><span class="lineno">   51</span>            healthPoint.Register(HitPoints);</div>
+<div class="line"><span class="lineno">   52</span>            soulArmorWhite.Register(SoulArmor);</div>
+<div class="line"><span class="lineno">   53</span>            soulArmor.Register(SoulArmor);</div>
+<div class="line"><span class="lineno">   54</span>            indicator.Active(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   55</span>            </div>
+<div class="line"><span class="lineno">   56</span>            <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a>.StatusEffectTable.OnEffectAdded.Add(<span class="stringliteral">&quot;ShowStatusEffectIcon&quot;</span>, ShowStatusEffectIcon);</div>
+<div class="line"><span class="lineno">   57</span>            <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a>.StatusEffectTable.OnEffectRemoved.Add(<span class="stringliteral">&quot;HideEffectIcon&quot;</span>, HideEffectIcon);</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend_html"><div class="ttname"><a href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Common.Characters.NonPlayers.Fiends.Fiend</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/de0/_fiend_8cs_source.html#l00008">Fiend.cs:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a13746b433d3b80f20c761bc00d0aecff" name="a13746b433d3b80f20c761bc00d0aecff"></a>
@@ -154,7 +180,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d7d/_name_plate_8cs_source.html#l00060">60</a> of file <a class="el" href="../../da/d7d/_name_plate_8cs_source.html">NamePlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a>.StatusEffectTable.OnEffectRemoved.Remove(<span class="stringliteral">&quot;HideEffectIcon&quot;</span>);</div>
+<div class="line"><span class="lineno">   63</span>            <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a>.StatusEffectTable.OnEffectAdded.Remove(<span class="stringliteral">&quot;ShowStatusEffectIcon&quot;</span>);</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -179,7 +209,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d7d/_name_plate_8cs_source.html#l00026">26</a> of file <a class="el" href="../../da/d7d/_name_plate_8cs_source.html">NamePlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4188f6c7aa41163d45947633d4307a2e" name="a4188f6c7aa41163d45947633d4307a2e"></a>
@@ -203,7 +234,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d7d/_name_plate_8cs_source.html#l00027">27</a> of file <a class="el" href="../../da/d7d/_name_plate_8cs_source.html">NamePlate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">if</span> (width == 0)</div>
+<div class="line"><span class="lineno">   32</span>                    width = healthPointWhite.GetComponent&lt;RectTransform&gt;().rect.width;</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>                <span class="keywordflow">return</span> width;</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

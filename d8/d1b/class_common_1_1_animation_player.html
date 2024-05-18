@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,16 @@ $(function(){initNavTree('d8/d1b/class_common_1_1_animation_player.html','../../
   <div class="headertitle"><div class="title">Common.AnimationPlayer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.AnimationPlayer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/d1b/class_common_1_1_animation_player.png" usemap="#Common.AnimationPlayer_map" alt=""/>
+  <map id="Common.AnimationPlayer_map" name="Common.AnimationPlayer_map">
+<area href="../../df/dc2/class_common_1_1_units_1_1_unit_behaviour_animation_player.html" alt="Common.Units.UnitBehaviourAnimationPlayer" shape="rect" coords="0,112,313,136"/>
+<area href="../../d1/d28/class_common_1_1_units_1_1_unit_behaviour_layered_animation_player.html" title="Invoke Skill Animation (Upper Body) with Run Animation (Lower Body)" alt="Common.Units.UnitBehaviourLayeredAnimationPlayer" shape="rect" coords="0,168,313,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -163,7 +174,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/daf/_animation_player_8cs_source.html#l00092">92</a> of file <a class="el" href="../../d5/daf/_animation_player_8cs_source.html">AnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   93</span>        {</div>
+<div class="line"><span class="lineno">   94</span>            var dest = 0f;</div>
+<div class="line"><span class="lineno">   95</span>            var animationLength = targetClip.Length;</div>
+<div class="line"><span class="lineno">   96</span>            </div>
+<div class="line"><span class="lineno">   97</span>            targetClip.SerializedEvents.Names.ForEach((e, index) =&gt;</div>
+<div class="line"><span class="lineno">   98</span>            {</div>
+<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">if</span> (e == a.ToString())</div>
+<div class="line"><span class="lineno">  100</span>                {</div>
+<div class="line"><span class="lineno">  101</span>                    dest = targetClip.SerializedEvents.NormalizedTimes[index];</div>
+<div class="line"><span class="lineno">  102</span>                }</div>
+<div class="line"><span class="lineno">  103</span>            });</div>
+<div class="line"><span class="lineno">  104</span>            </div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">return</span> dest * animationLength;</div>
+<div class="line"><span class="lineno">  106</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a86f7039683ea9b273b1176c40b5631f7" name="a86f7039683ea9b273b1176c40b5631f7"></a>
@@ -186,7 +211,27 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/daf/_animation_player_8cs_source.html#l00108">108</a> of file <a class="el" href="../../d5/daf/_animation_player_8cs_source.html">AnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  109</span>        {</div>
+<div class="line"><span class="lineno">  110</span>            var pre = 0f;</div>
+<div class="line"><span class="lineno">  111</span>            var suf = 0f;</div>
+<div class="line"><span class="lineno">  112</span>            var animationLength = targetClip.Length;</div>
+<div class="line"><span class="lineno">  113</span>            </div>
+<div class="line"><span class="lineno">  114</span>            targetClip.SerializedEvents.Names.ForEach((e, index) =&gt;</div>
+<div class="line"><span class="lineno">  115</span>            {</div>
+<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">if</span> (e == a.ToString())</div>
+<div class="line"><span class="lineno">  117</span>                {</div>
+<div class="line"><span class="lineno">  118</span>                    pre = targetClip.SerializedEvents.NormalizedTimes[index];</div>
+<div class="line"><span class="lineno">  119</span>                }</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>                if (e == b.ToString())</div>
+<div class="line"><span class="lineno">  122</span>                {</div>
+<div class="line"><span class="lineno">  123</span>                    suf = targetClip.SerializedEvents.NormalizedTimes[index];</div>
+<div class="line"><span class="lineno">  124</span>                }</div>
+<div class="line"><span class="lineno">  125</span>            });</div>
+<div class="line"><span class="lineno">  126</span>            </div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">return</span> Mathf.Abs(pre - suf) * animationLength;</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a22034161c54d8ca652d7a77f8ef12fba" name="a22034161c54d8ca652d7a77f8ef12fba"></a>
@@ -213,7 +258,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/daf/_animation_player_8cs_source.html#l00131">131</a> of file <a class="el" href="../../d5/daf/_animation_player_8cs_source.html">AnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  132</span>        {</div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">return</span> targetClip.SerializedEvents.Names.Any(e =&gt; e == eventName);</div>
+<div class="line"><span class="lineno">  134</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a085c17ee632d41b16ec97f91a695f561" name="a085c17ee632d41b16ec97f91a695f561"></a>
@@ -241,7 +289,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/daf/_animation_player_8cs_source.html#l00083">83</a> of file <a class="el" href="../../d5/daf/_animation_player_8cs_source.html">AnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            Play();</div>
+<div class="line"><span class="lineno">   86</span>            </div>
+<div class="line"><span class="lineno">   87</span>            targetClip.NormalizedStartTime = targetNormalTime;</div>
+<div class="line"><span class="lineno">   88</span>            </div>
+<div class="line"><span class="lineno">   89</span>            Pause(duration, callback);</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4af60d9bf830c83b5c60892a40c8a439" name="a4af60d9bf830c83b5c60892a40c8a439"></a>
@@ -260,7 +315,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/daf/_animation_player_8cs_source.html#l00064">64</a> of file <a class="el" href="../../d5/daf/_animation_player_8cs_source.html">AnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (State is not <span class="keyword">null</span>) State.IsPlaying = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a34bd4e51e053fbd130ed1e25e2776b71" name="a34bd4e51e053fbd130ed1e25e2776b71"></a>
@@ -283,7 +341,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/daf/_animation_player_8cs_source.html#l00069">69</a> of file <a class="el" href="../../d5/daf/_animation_player_8cs_source.html">AnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            pauseCanceller = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   72</span>            </div>
+<div class="line"><span class="lineno">   73</span>            PauseTask(second, pauseCanceller, callback).Forget();</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6c299d4d81a25664acb93e99722f63fa" name="a6c299d4d81a25664acb93e99722f63fa"></a>
@@ -310,7 +373,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/daf/_animation_player_8cs_source.html#l00048">48</a> of file <a class="el" href="../../d5/daf/_animation_player_8cs_source.html">AnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (targetClip.IsNullOrDestroyed()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   51</span>            </div>
+<div class="line"><span class="lineno">   52</span>            Resume();</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (IsSelfOverride)</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                animancer.Play(targetClip, 0f);</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                animancer.Play(targetClip);</div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af05e8c2f05d69d5e08bc704dd6f9cdf1" name="af05e8c2f05d69d5e08bc704dd6f9cdf1"></a>
@@ -329,7 +406,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/daf/_animation_player_8cs_source.html#l00076">76</a> of file <a class="el" href="../../d5/daf/_animation_player_8cs_source.html">AnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (State is not <span class="keyword">null</span>) State.IsPlaying = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   79</span>            </div>
+<div class="line"><span class="lineno">   80</span>            pauseCanceller?.Cancel();</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad181801c0083457dfc8ffea6cee2accf" name="ad181801c0083457dfc8ffea6cee2accf"></a>
@@ -360,7 +442,22 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/daf/_animation_player_8cs_source.html#l00136">136</a> of file <a class="el" href="../../d5/daf/_animation_player_8cs_source.html">AnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  137</span>        {</div>
+<div class="line"><span class="lineno">  138</span>            UnityEvent result = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>            targetClip.SerializedEvents.Names.ForEach((e, index) =&gt;</div>
+<div class="line"><span class="lineno">  141</span>            {</div>
+<div class="line"><span class="lineno">  142</span>                <span class="keywordflow">if</span> (e == eventName)</div>
+<div class="line"><span class="lineno">  143</span>                {</div>
+<div class="line"><span class="lineno">  144</span>                    result = targetClip.SerializedEvents.Callbacks[index];</div>
+<div class="line"><span class="lineno">  145</span>                }</div>
+<div class="line"><span class="lineno">  146</span>            });</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>            animationEvent = result;</div>
+<div class="line"><span class="lineno">  149</span>            </div>
+<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">return</span> animationEvent is not <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  151</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1438fb2ffbc1ea0fcb0d52e529a3866d" name="a1438fb2ffbc1ea0fcb0d52e529a3866d"></a>
@@ -391,7 +488,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/daf/_animation_player_8cs_source.html#l00153">153</a> of file <a class="el" href="../../d5/daf/_animation_player_8cs_source.html">AnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  154</span>        {</div>
+<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">for</span> (var i = 0; i &lt; targetClip.SerializedEvents.Names.Length; i++)</div>
+<div class="line"><span class="lineno">  156</span>            {</div>
+<div class="line"><span class="lineno">  157</span>                <span class="keywordflow">if</span> (targetClip.SerializedEvents.Names[i] != eventName) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  158</span>                </div>
+<div class="line"><span class="lineno">  159</span>                normalized = targetClip.SerializedEvents.NormalizedTimes[i]; </div>
+<div class="line"><span class="lineno">  160</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  161</span>            }</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>            normalized = 0f;</div>
+<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  165</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -465,7 +574,32 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/daf/_animation_player_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d5/daf/_animation_player_8cs_source.html">AnimationPlayer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                <span class="keywordflow">if</span> (animancer.States.Current is <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   25</span>                </div>
+<div class="line"><span class="lineno">   26</span>                <span class="comment">// A B A SelfOverride (ex. Attack - Idle - Attack)</span></div>
+<div class="line"><span class="lineno">   27</span>                <span class="keywordflow">if</span> (animancer.States.TryGet(targetClip.Clip, out var stackedState))</div>
+<div class="line"><span class="lineno">   28</span>                {</div>
+<div class="line"><span class="lineno">   29</span>                    <span class="keywordflow">if</span> (stackedState.IsPlaying)</div>
+<div class="line"><span class="lineno">   30</span>                    {</div>
+<div class="line"><span class="lineno">   31</span>                        stackedState.Stop();</div>
+<div class="line"><span class="lineno">   32</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   33</span>                    }</div>
+<div class="line"><span class="lineno">   34</span>                }</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>                <span class="comment">// A A SelfOverride (ex.Attack - Attack)</span></div>
+<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">if</span> (animancer.States.Current.Clip == targetClip.Clip &amp;&amp; !targetClip.IsLooping)</div>
+<div class="line"><span class="lineno">   38</span>                {</div>
+<div class="line"><span class="lineno">   39</span>                    animancer.Stop();</div>
+<div class="line"><span class="lineno">   40</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   41</span>                }</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5a1220ccfe2cbd422ff0bf8cb2d8d9b6" name="a5a1220ccfe2cbd422ff0bf8cb2d8d9b6"></a>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('d0/dd5/class_challenge_1_1_u_i_1_1_huds_1_1_challenge_
   <div class="headertitle"><div class="title">Challenge.UI.Huds.ChallengeBottomHuds Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.UI.Huds.ChallengeBottomHuds:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d0/dd5/class_challenge_1_1_u_i_1_1_huds_1_1_challenge_bottom_huds.png" usemap="#Challenge.UI.Huds.ChallengeBottomHuds_map" alt=""/>
+  <map id="Challenge.UI.Huds.ChallengeBottomHuds_map" name="Challenge.UI.Huds.ChallengeBottomHuds_map">
+<area href="../../dc/d43/class_common_1_1_u_i_1_1_panel.html" alt="Common.UI.Panel" shape="rect" coords="127,112,371,136"/>
+<area href="../../d1/dc6/class_common_1_1_u_i_element.html" alt="Common.UIElement" shape="rect" coords="127,56,371,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="254,0,498,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -198,7 +210,33 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc6/class_common_1_1_u_i_element.html">Common.UIElement</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/da0/_challenge_bottom_huds_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d7/da0/_challenge_bottom_huds_8cs_source.html">ChallengeBottomHuds.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            base.Initialize();</div>
+<div class="line"><span class="lineno">   24</span>            </div>
+<div class="line"><span class="lineno">   25</span>            healthIndicator.Initialize();</div>
+<div class="line"><span class="lineno">   26</span>            playerResources.Initialize();</div>
+<div class="line"><span class="lineno">   27</span>            masterySlot.Initialize();</div>
+<div class="line"><span class="lineno">   28</span>            spellSlot.Initialize();</div>
+<div class="line"><span class="lineno">   29</span>            playerCollections.Initialize();</div>
+<div class="line"><span class="lineno">   30</span>            skillSlots.ForEach(skill =&gt; skill.Initialize());</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>            <span class="keyword">this</span>[UIEventType.Open]</div>
+<div class="line"><span class="lineno">   33</span>                .Sections</div>
+<div class="line"><span class="lineno">   34</span>                .Add(Section.Active, <span class="stringliteral">&quot;OpenHudElements&quot;</span>, () =&gt;</div>
+<div class="line"><span class="lineno">   35</span>                {</div>
+<div class="line"><span class="lineno">   36</span>                    healthIndicator.Open();</div>
+<div class="line"><span class="lineno">   37</span>                });</div>
+<div class="line"><span class="lineno">   38</span>            </div>
+<div class="line"><span class="lineno">   39</span>            <span class="keyword">this</span>[UIEventType.Close]</div>
+<div class="line"><span class="lineno">   40</span>                .Sections</div>
+<div class="line"><span class="lineno">   41</span>                .Add(Section.Active, <span class="stringliteral">&quot;CloseHudElements&quot;</span>, () =&gt;</div>
+<div class="line"><span class="lineno">   42</span>                {</div>
+<div class="line"><span class="lineno">   43</span>                    healthIndicator.Close();</div>
+<div class="line"><span class="lineno">   44</span>                });</div>
+<div class="line"><span class="lineno">   45</span>            </div>
+<div class="line"><span class="lineno">   46</span>            canvasGroup.alpha = 0f;</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac2f8cdb4bb9dc958400d71f7b11abb9c" name="ac2f8cdb4bb9dc958400d71f7b11abb9c"></a>
@@ -217,7 +255,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/da0/_challenge_bottom_huds_8cs_source.html#l00049">49</a> of file <a class="el" href="../../d7/da0/_challenge_bottom_huds_8cs_source.html">ChallengeBottomHuds.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            healthIndicator.Initialize(dred);</div>
+<div class="line"><span class="lineno">   52</span>            playerResources.Initialize(dred);</div>
+<div class="line"><span class="lineno">   53</span>            playerCollections.Initialize(dred);</div>
+<div class="line"><span class="lineno">   54</span>            skillSlots.ForEach(skill =&gt; skill.Initialize(dred));</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

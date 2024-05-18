@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab
   <div class="headertitle"><div class="title">Challenge.Props.MapEditorPrefabData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Props.MapEditorPrefabData:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/d7b/class_challenge_1_1_props_1_1_map_editor_prefab_data.png" usemap="#Challenge.Props.MapEditorPrefabData_map" alt=""/>
+  <map id="Challenge.Props.MapEditorPrefabData_map" name="Challenge.Props.MapEditorPrefabData_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="242,0,474,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -134,7 +144,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d20/_map_editor_prefab_data_8cs_source.html#l00013">13</a> of file <a class="el" href="../../dd/d20/_map_editor_prefab_data_8cs_source.html">MapEditorPrefabData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">return</span> list.FindAll(prop =&gt; prop.TryGetComponent(out PropObject po)</div>
+<div class="line"><span class="lineno">   16</span>                                        &amp;&amp; po.ChapterMask.HasFlag(chapter)</div>
+<div class="line"><span class="lineno">   17</span>                                        &amp;&amp; po.ThemeMask.HasFlag(theme)</div>
+<div class="line"><span class="lineno">   18</span>                                        &amp;&amp; po.PropType == type);</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

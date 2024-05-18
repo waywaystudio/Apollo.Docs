@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,18 @@ $(function(){initNavTree('d8/d0b/class_common_1_1_skills_1_1_split_tridents_1_1_
   <div class="headertitle"><div class="title">Common.Skills.SplitTridents.SpearTechnic Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.SplitTridents.SpearTechnic:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/d0b/class_common_1_1_skills_1_1_split_tridents_1_1_spear_technic.png" usemap="#Common.Skills.SplitTridents.SpearTechnic_map" alt=""/>
+  <map id="Common.Skills.SplitTridents.SpearTechnic_map" name="Common.Skills.SplitTridents.SpearTechnic_map">
+<area href="../../de/ddf/class_common_1_1_skills_1_1_combo_skill.html" alt="Common.Skills.ComboSkill" shape="rect" coords="259,112,508,136"/>
+<area href="../../d4/d40/class_common_1_1_skills_1_1_skill.html" alt="Common.Skills.Skill" shape="rect" coords="259,56,508,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="259,0,508,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="518,0,767,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -184,7 +197,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d84/_spear_technic_8cs_source.html#l00014">14</a> of file <a class="el" href="../../de/d84/_spear_technic_8cs_source.html">SpearTechnic.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            base.Initialize(character);</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>            comboList.ForEach(sb =&gt;</div>
+<div class="line"><span class="lineno">   19</span>            {</div>
+<div class="line"><span class="lineno">   20</span>                <span class="comment">// Common Executor and Effector Registered After Self Executor </span></div>
+<div class="line"><span class="lineno">   21</span>                sb.Executor.Register(commonExecutor);</div>
+<div class="line"><span class="lineno">   22</span>                sb.Effector.Register(commonEffector);</div>
+<div class="line"><span class="lineno">   23</span>            });</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

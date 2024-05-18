@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flas
   <div class="headertitle"><div class="title">Common.Effects.Materials.FlashHit Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Effects.Materials.FlashHit:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/d1e/class_common_1_1_effects_1_1_materials_1_1_flash_hit.png" usemap="#Common.Effects.Materials.FlashHit_map" alt=""/>
+  <map id="Common.Effects.Materials.FlashHit_map" name="Common.Effects.Materials.FlashHit_map">
+<area href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html" alt="Common.Effects.EffectBehaviour" shape="rect" coords="0,56,209,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -198,7 +208,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html">Common.Effects.EffectBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d90/_flash_hit_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d5/d90/_flash_hit_8cs_source.html">FlashHit.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            base.Initialize(sequencer);</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            <span class="comment">// Ensure</span></div>
+<div class="line"><span class="lineno">   28</span>            sequencer.Sections.Add(Section.End, <span class="stringliteral">&quot;Stop&quot;</span>, Stop);</div>
+<div class="line"><span class="lineno">   29</span> </div>
+<div class="line"><span class="lineno">   30</span>            originalMaterial = objectRenderer.material;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae68981a6473234dc82f040108f780b1e" name="ae68981a6473234dc82f040108f780b1e"></a>
@@ -225,7 +243,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d90/_flash_hit_8cs_source.html#l00033">33</a> of file <a class="el" href="../../d5/d90/_flash_hit_8cs_source.html">FlashHit.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            flashTask = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   36</span>            </div>
+<div class="line"><span class="lineno">   37</span>            Flashing(flashTask).Forget();</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a32134c101d11b094b55c4b365192db0b" name="a32134c101d11b094b55c4b365192db0b"></a>
@@ -252,7 +275,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d90/_flash_hit_8cs_source.html#l00040">40</a> of file <a class="el" href="../../d5/d90/_flash_hit_8cs_source.html">FlashHit.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            objectRenderer.material = originalMaterial;</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (flashTask is <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   45</span>            </div>
+<div class="line"><span class="lineno">   46</span>            flashTask.Cancel();</div>
+<div class="line"><span class="lineno">   47</span>            flashTask = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

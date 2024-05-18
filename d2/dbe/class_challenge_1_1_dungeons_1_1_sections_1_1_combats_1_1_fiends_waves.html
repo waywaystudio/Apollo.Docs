@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,12 @@ $(function(){initNavTree('d2/dbe/class_challenge_1_1_dungeons_1_1_sections_1_1_c
   <div class="headertitle"><div class="title">Challenge.Dungeons.Sections.Combats.FiendsWaves Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Dungeons.Sections.Combats.FiendsWaves:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/dbe/class_challenge_1_1_dungeons_1_1_sections_1_1_combats_1_1_fiends_waves.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -145,7 +152,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html#l00073">73</a> of file <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html">FiendsWaves.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   74</span>        {</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (serialSpawnTask is <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   76</span>            </div>
+<div class="line"><span class="lineno">   77</span>            serialSpawnTask.Cancel();</div>
+<div class="line"><span class="lineno">   78</span>            serialSpawnTask = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acfa45d96397ebdc029e0eca1ecf320b6" name="acfa45d96397ebdc029e0eca1ecf320b6"></a>
@@ -164,7 +177,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html#l00035">35</a> of file <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html">FiendsWaves.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            this.combatSection = combatSection;</div>
+<div class="line"><span class="lineno">   38</span>            currentWave        = spawnEntityList.FirstOrDefault();</div>
+<div class="line"><span class="lineno">   39</span>            </div>
+<div class="line"><span class="lineno">   40</span>            spawnTransformList.AddRange(combatSection.PositionList);</div>
+<div class="line"><span class="lineno">   41</span>            spawnEntityList.ForEach(entity =&gt;</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                totalFiendsCount    += entity.Count;</div>
+<div class="line"><span class="lineno">   44</span>                entity.RemainCount =  entity.Count;</div>
+<div class="line"><span class="lineno">   45</span>            });</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a48e3f7b654c889126b8a0210c82fa600" name="a48e3f7b654c889126b8a0210c82fa600"></a>
@@ -183,7 +207,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html#l00066">66</a> of file <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html">FiendsWaves.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            serialSpawnTask = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   69</span>            </div>
+<div class="line"><span class="lineno">   70</span>            SerialSpawnTask(onSpawned).Forget();</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa2e12805c75d25142b2832cd37945c3e" name="aa2e12805c75d25142b2832cd37945c3e"></a>
@@ -202,7 +231,23 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html#l00048">48</a> of file <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html">FiendsWaves.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (IsSpawnEnd || totalFiendsCount == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>            spawnTransform = spawnTransformList.RandomPick();</div>
+<div class="line"><span class="lineno">   53</span>            currentWave.RemainCount--;</div>
+<div class="line"><span class="lineno">   54</span>            </div>
+<div class="line"><span class="lineno">   55</span>            ChallengeDirector.Character</div>
+<div class="line"><span class="lineno">   56</span>                             .SpawnFiend(currentWave.FiendCode, spawnTransform.position, fiend =&gt;</div>
+<div class="line"><span class="lineno">   57</span>                             {</div>
+<div class="line"><span class="lineno">   58</span>                                 CallNextGroupFiend(fiend);</div>
+<div class="line"><span class="lineno">   59</span>                                 onSpawned?.Invoke(fiend);</div>
+<div class="line"><span class="lineno">   60</span>                             })</div>
+<div class="line"><span class="lineno">   61</span>                             ;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>            SetCurrentWave();</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -227,7 +272,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html#l00031">31</a> of file <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html">FiendsWaves.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3e6cf718ee6161520930a2e369a35148" name="a3e6cf718ee6161520930a2e369a35148"></a>
@@ -251,7 +297,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html#l00030">30</a> of file <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html">FiendsWaves.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a07e38e2a6cb97fefad9c80777258ab77" name="a07e38e2a6cb97fefad9c80777258ab77"></a>
@@ -275,7 +322,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html#l00032">32</a> of file <a class="el" href="../../df/d19/_fiends_waves_8cs_source.html">FiendsWaves.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af174bc0aefe570b40ae9387687bd41b4" name="af174bc0aefe570b40ae9387687bd41b4"></a>

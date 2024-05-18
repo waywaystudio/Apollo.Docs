@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d4/d59/class_common_1_1_effects_1_1_particles_1_1_part
   <div class="headertitle"><div class="title">Common.Effects.Particles.ParticleInstance Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Effects.Particles.ParticleInstance:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/d59/class_common_1_1_effects_1_1_particles_1_1_particle_instance.png" usemap="#Common.Effects.Particles.ParticleInstance_map" alt=""/>
+  <map id="Common.Effects.Particles.ParticleInstance_map" name="Common.Effects.Particles.ParticleInstance_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="260,0,510,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -138,7 +148,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d8b/_particle_instance_8cs_source.html#l00022">22</a> of file <a class="el" href="../../da/d8b/_particle_instance_8cs_source.html">ParticleInstance.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   25</span><span class="comment">             * ParticleGameObject의 Children의 Stop Action이 None과 관계없이, 아직은 알 수 없는 이유로...</span></div>
+<div class="line"><span class="lineno">   26</span><span class="comment">             * OnParticleSystemStopped()에 영향을 미친다.</span></div>
+<div class="line"><span class="lineno">   27</span><span class="comment">             * 하위 ParticleSystem의 Duration이 다른 경우 문제가 되기에 아래와 같은 방법으로 임시해결을 한다. */</span></div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (gameObject.activeSelf == <span class="keyword">false</span>) </div>
+<div class="line"><span class="lineno">   29</span>            {</div>
+<div class="line"><span class="lineno">   30</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   31</span>            }</div>
+<div class="line"><span class="lineno">   32</span>    </div>
+<div class="line"><span class="lineno">   33</span>            <a class="code hl_class" href="../../de/da2/class_pool.html">Pool</a>?.Release(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   34</span>            OnParticleStopped.Invoke(particle);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="ttc" id="aclass_pool_html"><div class="ttname"><a href="../../de/da2/class_pool.html">Pool</a></div><div class="ttdoc">https://www.notion.so/salinger/Pool-952c1d279fa241ac9aa3f61abfa577a1?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../df/d04/_pool_8cs_source.html#l00011">Pool.cs:12</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a60cbdc8ea934fb2d7db160c86ed6dc1c" name="a60cbdc8ea934fb2d7db160c86ed6dc1c"></a>
@@ -157,7 +181,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d8b/_particle_instance_8cs_source.html#l00014">14</a> of file <a class="el" href="../../da/d8b/_particle_instance_8cs_source.html">ParticleInstance.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            particle.Stop(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -182,7 +209,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d8b/_particle_instance_8cs_source.html#l00010">10</a> of file <a class="el" href="../../da/d8b/_particle_instance_8cs_source.html">ParticleInstance.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3c2d5856de8be35da58fcadcccf8a25a" name="a3c2d5856de8be35da58fcadcccf8a25a"></a>
@@ -206,7 +234,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d8b/_particle_instance_8cs_source.html#l00009">9</a> of file <a class="el" href="../../da/d8b/_particle_instance_8cs_source.html">ParticleInstance.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

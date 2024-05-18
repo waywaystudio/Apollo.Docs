@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,17 @@ $(function(){initNavTree('db/dcc/class_action_table.html','../../'); initResizab
 
 <p><a href="https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</a>  
  <a href="#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for ActionTable&lt; T0, T1 &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/dcc/class_action_table.png" usemap="#ActionTable_3C_20T0_2C_20T1_20_3E_map" alt=""/>
+  <map id="ActionTable_3C_20T0_2C_20T1_20_3E_map" name="ActionTable_3C_20T0_2C_20T1_20_3E_map">
+<area href="../../da/dcb/class_action_table_core.html" alt="ActionTableCore&lt; Action &gt;" shape="rect" coords="0,0,228,24"/>
+<area href="../../da/dcb/class_action_table_core.html" alt="ActionTableCore&lt; Action&lt; T &gt; &gt;" shape="rect" coords="238,0,466,24"/>
+<area href="../../da/dcb/class_action_table_core.html" alt="ActionTableCore&lt; Action&lt; T0, T1 &gt; &gt;" shape="rect" coords="476,0,704,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -272,7 +284,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d69/_action_table_8cs_source.html#l00036">36</a> of file <a class="el" href="../../d2/d69/_action_table_8cs_source.html">ActionTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>    {</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Values) { action?.Invoke(); }</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+<div class="ttc" id="aclass_table_html"><div class="ttname"><a href="../../d2/d8f/class_table.html">Table</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00009">Table.cs:10</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab17b0ea87c9e9b0c6d5d5ec3484d4607" name="ab17b0ea87c9e9b0c6d5d5ec3484d4607"></a>
@@ -291,7 +307,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d69/_action_table_8cs_source.html#l00060">60</a> of file <a class="el" href="../../d2/d69/_action_table_8cs_source.html">ActionTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Values) { action?.Invoke(value); }</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a19f5521d0b36f57b791e13ad7e396629" name="a19f5521d0b36f57b791e13ad7e396629"></a>
@@ -322,7 +341,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d69/_action_table_8cs_source.html#l00073">73</a> of file <a class="el" href="../../d2/d69/_action_table_8cs_source.html">ActionTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">foreach</span> (var action <span class="keywordflow">in</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Values) action?.Invoke(value0, value1);</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

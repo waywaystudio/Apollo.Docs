@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d5/d90/class_common_1_1_u_i_1_1_name_plates_1_1_indica
   <div class="headertitle"><div class="title">Common.UI.NamePlates.Indicator Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UI.NamePlates.Indicator:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/d90/class_common_1_1_u_i_1_1_name_plates_1_1_indicator.png" usemap="#Common.UI.NamePlates.Indicator_map" alt=""/>
+  <map id="Common.UI.NamePlates.Indicator_map" name="Common.UI.NamePlates.Indicator_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="208,0,406,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -128,7 +138,18 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>ConvertToRange</b> (
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/df7/_indicator_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d8/df7/_indicator_8cs_source.html">Indicator.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            HitPoint  = namePlate.Fiend.HitPoints;</div>
+<div class="line"><span class="lineno">   21</span>            SoulArmor = namePlate.Fiend.SoulArmorPoints;</div>
+<div class="line"><span class="lineno">   22</span>            width     = namePlate.ProgressWidth; <span class="comment">// maybe 257</span></div>
+<div class="line"><span class="lineno">   23</span>            </div>
+<div class="line"><span class="lineno">   24</span>            HitPoint.AddEvent(<span class="stringliteral">&quot;IndicateHitPoints&quot;</span>, IndicateHitPoints);</div>
+<div class="line"><span class="lineno">   25</span>            SoulArmor.AddEvent(<span class="stringliteral">&quot;IndicateSoulArmor&quot;</span>, IndicateSoulArmor);</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>            IndicateHitPoints(HitPoint.Value);</div>
+<div class="line"><span class="lineno">   28</span>            IndicateSoulArmor(SoulArmor.Value);</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

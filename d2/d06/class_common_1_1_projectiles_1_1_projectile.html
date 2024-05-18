@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,32 @@ $(function(){initNavTree('d2/d06/class_common_1_1_projectiles_1_1_projectile.htm
   <div class="headertitle"><div class="title">Common.Projectiles.Projectile Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Projectile:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.png" usemap="#Common.Projectiles.Projectile_map" alt=""/>
+  <map id="Common.Projectiles.Projectile_map" name="Common.Projectiles.Projectile_map">
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="411,56,812,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="822,56,1223,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="1233,56,1634,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="411,0,812,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="822,0,1223,24"/>
+<area href="../../d1/dec/class_common_1_1_masteries_1_1_bell_veer_1_1_celestial_wraths_1_1_celestial_wrath_projectile.html" alt="Common.Masteries.BellVeer.CelestialWraths.CelestialWrathProjectile" shape="rect" coords="1027,168,1428,192"/>
+<area href="../../df/d95/class_common_1_1_masteries_1_1_blade_1_1_blood_splats_1_1_blood_splat_projectile.html" alt="Common.Masteries.Blade.BloodSplats.BloodSplatProjectile" shape="rect" coords="1027,224,1428,248"/>
+<area href="../../d4/da0/class_common_1_1_projectiles_1_1_variants_1_1_cunning_of_fox_projectile.html" alt="Common.Projectiles.Variants.CunningOfFoxProjectile" shape="rect" coords="1027,280,1428,304"/>
+<area href="../../d4/dd9/class_common_1_1_projectiles_1_1_variants_1_1_drain_soul_projectile.html" alt="Common.Projectiles.Variants.DrainSoulProjectile" shape="rect" coords="1027,336,1428,360"/>
+<area href="../../df/d84/class_common_1_1_projectiles_1_1_variants_1_1_echo_projectile.html" alt="Common.Projectiles.Variants.EchoProjectile" shape="rect" coords="1027,392,1428,416"/>
+<area href="../../d3/d1c/class_common_1_1_projectiles_1_1_variants_1_1_foxfire_projectile.html" alt="Common.Projectiles.Variants.FoxfireProjectile" shape="rect" coords="1027,448,1428,472"/>
+<area href="../../d3/d20/class_common_1_1_projectiles_1_1_variants_1_1_gaze_of_mercy_projectile.html" alt="Common.Projectiles.Variants.GazeOfMercyProjectile" shape="rect" coords="1027,504,1428,528"/>
+<area href="../../d2/d41/class_common_1_1_projectiles_1_1_variants_1_1_narakmoon_projectile.html" alt="Common.Projectiles.Variants.NarakmoonProjectile" shape="rect" coords="1027,560,1428,584"/>
+<area href="../../d5/d5b/class_common_1_1_projectiles_1_1_variants_1_1_sprint_meteor_projectile.html" alt="Common.Projectiles.Variants.SprintMeteorProjectile" shape="rect" coords="1027,616,1428,640"/>
+<area href="../../dd/d94/class_common_1_1_projectiles_1_1_variants_1_1_trident_projectile.html" alt="Common.Projectiles.Variants.TridentProjectile" shape="rect" coords="1027,672,1428,696"/>
+<area href="../../de/d4b/class_common_1_1_projectiles_1_1_variants_1_1_under_world_soldiers_projectile.html" alt="Common.Projectiles.Variants.UnderWorldSoldiersProjectile" shape="rect" coords="1027,728,1428,752"/>
+<area href="../../df/d6d/class_common_1_1_skills_1_1_silk_strings_1_1_silk_twisters_1_1_shredded_silk_projectile.html" alt="Common.Skills.SilkStrings.SilkTwisters.ShreddedSilkProjectile" shape="rect" coords="1027,784,1428,808"/>
+<area href="../../d2/dde/class_common_1_1_skills_1_1_silk_strings_1_1_silk_twisters_1_1_silk_twister_projectile.html" alt="Common.Skills.SilkStrings.SilkTwisters.SilkTwisterProjectile" shape="rect" coords="1027,840,1428,864"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -202,7 +229,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d8d/_projectile_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d6/d8d/_projectile_8cs_source.html">Projectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   53</span>            </div>
+<div class="line"><span class="lineno">   54</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa472964fccb8b340f27ffc4f020fef66" name="aa472964fccb8b340f27ffc4f020fef66"></a>
@@ -252,7 +284,22 @@ Properties</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../d1/dec/class_common_1_1_masteries_1_1_bell_veer_1_1_celestial_wraths_1_1_celestial_wrath_projectile.html#a939e21a11f53df728914d1ee44d1c061">Common.Masteries.BellVeer.CelestialWraths.CelestialWrathProjectile</a>, <a class="el" href="../../df/d95/class_common_1_1_masteries_1_1_blade_1_1_blood_splats_1_1_blood_splat_projectile.html#aa9c48251b45b1a092588d71e53dfe74e">Common.Masteries.Blade.BloodSplats.BloodSplatProjectile</a>, <a class="el" href="../../d4/da0/class_common_1_1_projectiles_1_1_variants_1_1_cunning_of_fox_projectile.html#adb2234c60193827f10cd4dc1b569cbcb">Common.Projectiles.Variants.CunningOfFoxProjectile</a>, <a class="el" href="../../d4/dd9/class_common_1_1_projectiles_1_1_variants_1_1_drain_soul_projectile.html#ac41d4e403a387e1128da85ab31d47eb9">Common.Projectiles.Variants.DrainSoulProjectile</a>, <a class="el" href="../../df/d84/class_common_1_1_projectiles_1_1_variants_1_1_echo_projectile.html#a109b027371eb15e4835384101421d414">Common.Projectiles.Variants.EchoProjectile</a>, <a class="el" href="../../d3/d1c/class_common_1_1_projectiles_1_1_variants_1_1_foxfire_projectile.html#ad3bb16233db0d0838dad38bd2701fa09">Common.Projectiles.Variants.FoxfireProjectile</a>, <a class="el" href="../../d3/d20/class_common_1_1_projectiles_1_1_variants_1_1_gaze_of_mercy_projectile.html#abf2f64ac483365648311fcfe183a183c">Common.Projectiles.Variants.GazeOfMercyProjectile</a>, <a class="el" href="../../d2/d41/class_common_1_1_projectiles_1_1_variants_1_1_narakmoon_projectile.html#a2d84ae148e33924f1d74dccde2057d11">Common.Projectiles.Variants.NarakmoonProjectile</a>, <a class="el" href="../../d5/d5b/class_common_1_1_projectiles_1_1_variants_1_1_sprint_meteor_projectile.html#aaa009c7abcbe44b5e0fc5873f8db5ab2">Common.Projectiles.Variants.SprintMeteorProjectile</a>, <a class="el" href="../../dd/d94/class_common_1_1_projectiles_1_1_variants_1_1_trident_projectile.html#a6a3f3a4522cdf5fce857ae80e8ba6442">Common.Projectiles.Variants.TridentProjectile</a>, <a class="el" href="../../de/d4b/class_common_1_1_projectiles_1_1_variants_1_1_under_world_soldiers_projectile.html#acab5ab0798abbf56b5525d2ec4ebe73a">Common.Projectiles.Variants.UnderWorldSoldiersProjectile</a>, <a class="el" href="../../df/d6d/class_common_1_1_skills_1_1_silk_strings_1_1_silk_twisters_1_1_shredded_silk_projectile.html#afc175782c96ffe6f310f6a106004c971">Common.Skills.SilkStrings.SilkTwisters.ShreddedSilkProjectile</a>, and <a class="el" href="../../d2/dde/class_common_1_1_skills_1_1_silk_strings_1_1_silk_twisters_1_1_silk_twister_projectile.html#a1bf1f68114f96b690aeaa445a704ca0d">Common.Skills.SilkStrings.SilkTwisters.SilkTwisterProjectile</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d8d/_projectile_8cs_source.html#l00034">34</a> of file <a class="el" href="../../d6/d8d/_projectile_8cs_source.html">Projectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            Provider = provider;</div>
+<div class="line"><span class="lineno">   37</span>            Invoker  = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>            Sections</div>
+<div class="line"><span class="lineno">   40</span>                .Add(Section.Execute, <span class="stringliteral">&quot;MainExecution&quot;</span>, MainExecution)</div>
+<div class="line"><span class="lineno">   41</span>                ;</div>
+<div class="line"><span class="lineno">   42</span>            </div>
+<div class="line"><span class="lineno">   43</span>            executor.Initialize(Provider);</div>
+<div class="line"><span class="lineno">   44</span>            executor.SetSender(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   45</span>            effector.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   46</span>            trajectory.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   47</span>            spawnEvent.Invoke(projectileCode,<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab10444d83c89b84c19f1d114d7b9ec5f" name="ab10444d83c89b84c19f1d114d7b9ec5f"></a>
@@ -279,7 +326,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d8d/_projectile_8cs_source.html#l00060">60</a> of file <a class="el" href="../../d6/d8d/_projectile_8cs_source.html">Projectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   61</span>        {</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (Target is not <span class="keyword">null</span> &amp;&amp; Target.IsAlive)</div>
+<div class="line"><span class="lineno">   63</span>            {</div>
+<div class="line"><span class="lineno">   64</span>                executor.Execute(Target.gameObject);</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -575,7 +628,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d8d/_projectile_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d6/d8d/_projectile_8cs_source.html">Projectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aedc6145fc9ca4c1253cfbe5608ddf639" name="aedc6145fc9ca4c1253cfbe5608ddf639"></a>
@@ -625,7 +679,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d8d/_projectile_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d6/d8d/_projectile_8cs_source.html">Projectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keyword">get</span>; <span class="keyword">protected</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad809448fcb2dac0fa901e286583006f2" name="ad809448fcb2dac0fa901e286583006f2"></a>
@@ -651,7 +706,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d8d/_projectile_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d6/d8d/_projectile_8cs_source.html">Projectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac9779ef6b78256d49e7db90ab6e18dfa" name="ac9779ef6b78256d49e7db90ab6e18dfa"></a>
@@ -675,7 +731,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d8d/_projectile_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d6/d8d/_projectile_8cs_source.html">Projectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8e9e70ddc2aac738d1f80013d27b6f7f" name="a8e9e70ddc2aac738d1f80013d27b6f7f"></a>

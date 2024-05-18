@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('dc/d43/class_common_1_1_editor_1_1_override_module_dra
   <div class="headertitle"><div class="title">Common.Editor.OverrideModuleDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Editor.OverrideModuleDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/d43/class_common_1_1_editor_1_1_override_module_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -136,7 +143,31 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d0a/_execute_timer_drawer_8cs_source.html#l00062">62</a> of file <a class="el" href="../../db/d0a/_execute_timer_drawer_8cs_source.html">ExecuteTimerDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            var group = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d68/class_module_group_attribute.html">ModuleGroupAttribute</a>(<span class="stringliteral">&quot;Override Module&quot;</span>, expanded:true, order:1000f);</div>
+<div class="line"><span class="lineno">   65</span>            </div>
+<div class="line"><span class="lineno">   66</span>            attributes.Add(group);</div>
+<div class="line"><span class="lineno">   67</span>            </div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;mask&quot;</span>)</div>
+<div class="line"><span class="lineno">   69</span>            {</div>
+<div class="line"><span class="lineno">   70</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   71</span>                attributes.Add(<span class="keyword">new</span> EnumToggleButtonsAttribute());</div>
+<div class="line"><span class="lineno">   72</span>            }</div>
+<div class="line"><span class="lineno">   73</span>            </div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;onProlongMultiplier&quot;</span>)</div>
+<div class="line"><span class="lineno">   75</span>            {</div>
+<div class="line"><span class="lineno">   76</span>                attributes.Add(<span class="keyword">new</span> ShowIfAttribute(<span class="stringliteral">&quot;@this.mask.HasFlag(OverrideMask.ResetDuration)&quot;</span>));</div>
+<div class="line"><span class="lineno">   77</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(1, 2));</div>
+<div class="line"><span class="lineno">   78</span>            }</div>
+<div class="line"><span class="lineno">   79</span>            </div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;maxStack&quot;</span>)</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                attributes.Add(<span class="keyword">new</span> ShowIfAttribute(<span class="stringliteral">&quot;@this.mask.HasFlag(OverrideMask.Stack)&quot;</span>));</div>
+<div class="line"><span class="lineno">   83</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(1, 999));</div>
+<div class="line"><span class="lineno">   84</span>            }</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="ttc" id="aclass_module_group_attribute_html"><div class="ttname"><a href="../../d6/d68/class_module_group_attribute.html">ModuleGroupAttribute</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00008">ModuleGroupAttribute.cs:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae4e00970f71e6fd0bafd736f9826ecce" name="ae4e00970f71e6fd0bafd736f9826ecce"></a>
@@ -159,7 +190,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d0a/_execute_timer_drawer_8cs_source.html#l00057">57</a> of file <a class="el" href="../../db/d0a/_execute_timer_drawer_8cs_source.html">ExecuteTimerDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

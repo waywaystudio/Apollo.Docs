@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d3/dbc/class_common_1_1_spirits_1_1_spirit_spawn_event
   <div class="headertitle"><div class="title">Common.Spirits.SpiritSpawnEvent Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Spirits.SpiritSpawnEvent:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d3/dbc/class_common_1_1_spirits_1_1_spirit_spawn_event.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -135,7 +142,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da7/_spirit_spawn_event_8cs_source.html#l00014">14</a> of file <a class="el" href="../../dd/da7/_spirit_spawn_event_8cs_source.html">SpiritSpawnEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            OnSpawned.Add(key, action);</div>
+<div class="line"><span class="lineno">   17</span>            SpawnedList.ForEach(action);</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a307254c16a020d4854cedb0f996894da" name="a307254c16a020d4854cedb0f996894da"></a>
@@ -154,7 +165,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da7/_spirit_spawn_event_8cs_source.html#l00040">40</a> of file <a class="el" href="../../dd/da7/_spirit_spawn_event_8cs_source.html">SpiritSpawnEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            OnSpawned.Clear();</div>
+<div class="line"><span class="lineno">   43</span>            SpawnedList.Clear();</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7c6ba7fb9c299fb7e452b1480f8b3f08" name="a7c6ba7fb9c299fb7e452b1480f8b3f08"></a>
@@ -173,7 +188,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da7/_spirit_spawn_event_8cs_source.html#l00030">30</a> of file <a class="el" href="../../dd/da7/_spirit_spawn_event_8cs_source.html">SpiritSpawnEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            OnSpawned.Invoke(spirit);</div>
+<div class="line"><span class="lineno">   33</span>            SpawnedList.AddUniquely(spirit);</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>            <span class="comment">// spirit.Sections</span></div>
+<div class="line"><span class="lineno">   36</span>            <span class="comment">//       .Add(Section.End, &quot;RemoveSpawnList&quot;, () =&gt; SpawnedList.RemoveSafely(spirit))</span></div>
+<div class="line"><span class="lineno">   37</span>            <span class="comment">//       ;</span></div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afce95236128bd143caf5f05a11a8c80a" name="afce95236128bd143caf5f05a11a8c80a"></a>
@@ -196,7 +219,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da7/_spirit_spawn_event_8cs_source.html#l00020">20</a> of file <a class="el" href="../../dd/da7/_spirit_spawn_event_8cs_source.html">SpiritSpawnEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">if</span> (abolishAction is not <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                SpawnedList?.ForEach(abolishAction);</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            OnSpawned.Remove(key);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

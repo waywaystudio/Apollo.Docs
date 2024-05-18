@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d0/dec/class_core_editor_1_1_save_info_drawer.html','.
   <div class="headertitle"><div class="title">CoreEditor.SaveInfoDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for CoreEditor.SaveInfoDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d0/dec/class_core_editor_1_1_save_info_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -136,7 +143,53 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d99/_save_drawer_8cs_source.html#l00020">20</a> of file <a class="el" href="../../db/d99/_save_drawer_8cs_source.html">SaveDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;filename&quot;</span>)</div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   25</span>                attributes.Add(<span class="keyword">new</span> DisplayAsStringAttribute());</div>
+<div class="line"><span class="lineno">   26</span>                attributes.Add(<span class="keyword">new</span> HorizontalGroupAttribute(<span class="stringliteral">&quot;Main&quot;</span>, 0.8f));</div>
+<div class="line"><span class="lineno">   27</span>                attributes.Add(<span class="keyword">new</span> VerticalGroupAttribute(<span class="stringliteral">&quot;Main/Left&quot;</span>));</div>
+<div class="line"><span class="lineno">   28</span>            }</div>
+<div class="line"><span class="lineno">   29</span>            </div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;saveTime&quot;</span>)</div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   33</span>                attributes.Add(<span class="keyword">new</span> DisplayAsStringAttribute());</div>
+<div class="line"><span class="lineno">   34</span>                attributes.Add(<span class="keyword">new</span> HorizontalGroupAttribute(<span class="stringliteral">&quot;Main&quot;</span>));</div>
+<div class="line"><span class="lineno">   35</span>                attributes.Add(<span class="keyword">new</span> VerticalGroupAttribute(<span class="stringliteral">&quot;Main/Left&quot;</span>));</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span>            </div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;filePath&quot;</span>)</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   41</span>                attributes.Add(<span class="keyword">new</span> DisplayAsStringAttribute());</div>
+<div class="line"><span class="lineno">   42</span>                attributes.Add(<span class="keyword">new</span> HorizontalGroupAttribute(<span class="stringliteral">&quot;Main&quot;</span>));</div>
+<div class="line"><span class="lineno">   43</span>                attributes.Add(<span class="keyword">new</span> VerticalGroupAttribute(<span class="stringliteral">&quot;Main/Left&quot;</span>));</div>
+<div class="line"><span class="lineno">   44</span>            }</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;Save&quot;</span>)</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                attributes.Add(<span class="keyword">new</span> ButtonAttribute(SdfIconType.Save));</div>
+<div class="line"><span class="lineno">   49</span>                attributes.Add(<span class="keyword">new</span> HorizontalGroupAttribute(<span class="stringliteral">&quot;Main&quot;</span>));</div>
+<div class="line"><span class="lineno">   50</span>                attributes.Add(<span class="keyword">new</span> VerticalGroupAttribute(<span class="stringliteral">&quot;Main/Right&quot;</span>));</div>
+<div class="line"><span class="lineno">   51</span>            }</div>
+<div class="line"><span class="lineno">   52</span>            </div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;Load&quot;</span>)</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                attributes.Add(<span class="keyword">new</span> ButtonAttribute(SdfIconType.Download));</div>
+<div class="line"><span class="lineno">   56</span>                attributes.Add(<span class="keyword">new</span> HorizontalGroupAttribute(<span class="stringliteral">&quot;Main&quot;</span>));</div>
+<div class="line"><span class="lineno">   57</span>                attributes.Add(<span class="keyword">new</span> VerticalGroupAttribute(<span class="stringliteral">&quot;Main/Right&quot;</span>));</div>
+<div class="line"><span class="lineno">   58</span>            }</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;Delete&quot;</span>)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                attributes.Add(<span class="keyword">new</span> ButtonAttribute(SdfIconType.Recycle));</div>
+<div class="line"><span class="lineno">   63</span>                attributes.Add(<span class="keyword">new</span> HorizontalGroupAttribute(<span class="stringliteral">&quot;Main&quot;</span>));</div>
+<div class="line"><span class="lineno">   64</span>                attributes.Add(<span class="keyword">new</span> VerticalGroupAttribute(<span class="stringliteral">&quot;Main/Right&quot;</span>));</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad8bd24518dbdc5d1ef4c8c0b9d2e70eb" name="ad8bd24518dbdc5d1ef4c8c0b9d2e70eb"></a>
@@ -159,7 +212,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d99/_save_drawer_8cs_source.html#l00015">15</a> of file <a class="el" href="../../db/d99/_save_drawer_8cs_source.html">SaveDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            attributes.Add(<span class="keyword">new</span> HideReferenceObjectPickerAttribute());</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

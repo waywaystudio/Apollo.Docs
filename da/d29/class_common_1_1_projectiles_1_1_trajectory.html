@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,26 @@ $(function(){initNavTree('da/d29/class_common_1_1_projectiles_1_1_trajectory.htm
   <div class="headertitle"><div class="title">Common.Projectiles.Trajectory Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Trajectory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.png" usemap="#Common.Projectiles.Trajectory_map" alt=""/>
+  <map id="Common.Projectiles.Trajectory_map" name="Common.Projectiles.Trajectory_map">
+<area href="../../dc/da1/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_parabola_trajectory.html" alt="Common.Projectiles.Trajectories.GuidedParabolaTrajectory" shape="rect" coords="379,112,748,136"/>
+<area href="../../d2/d5d/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_trajectory.html" alt="Common.Projectiles.Trajectories.GuidedTrajectory" shape="rect" coords="379,168,748,192"/>
+<area href="../../d9/de2/class_common_1_1_projectiles_1_1_trajectories_1_1_narakmoon_trajectory.html" alt="Common.Projectiles.Trajectories.NarakmoonTrajectory" shape="rect" coords="379,224,748,248"/>
+<area href="../../d8/db9/class_common_1_1_projectiles_1_1_trajectories_1_1_parabola_trajectory.html" alt="Common.Projectiles.Trajectories.ParabolaTrajectory" shape="rect" coords="379,280,748,304"/>
+<area href="../../d8/d4d/class_common_1_1_projectiles_1_1_trajectories_1_1_revolve_trajectory.html" alt="Common.Projectiles.Trajectories.RevolveTrajectory" shape="rect" coords="379,336,748,360"/>
+<area href="../../dd/dab/class_common_1_1_projectiles_1_1_trajectories_1_1_rift_trajectory.html" alt="Common.Projectiles.Trajectories.RiftTrajectory" shape="rect" coords="379,392,748,416"/>
+<area href="../../d1/d93/class_common_1_1_projectiles_1_1_trajectories_1_1_straight_trajectory.html" alt="Common.Projectiles.Trajectories.StraightTrajectory" shape="rect" coords="379,448,748,472"/>
+<area href="../../d8/d19/class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory.html" alt="Common.Projectiles.Trajectories.TridentRetrieveTrajectory" shape="rect" coords="379,504,748,528"/>
+<area href="../../db/de3/class_common_1_1_projectiles_1_1_trajectories_1_1_trident_throw_trajectory.html" alt="Common.Projectiles.Trajectories.TridentThrowTrajectory" shape="rect" coords="379,560,748,584"/>
+<area href="../../d2/df4/class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_foxfire_trajectory.html" alt="Common.Skills.NonPlayers.Kimmihohs.FoxfireTrajectory" shape="rect" coords="379,616,748,640"/>
+<area href="../../d3/d95/class_common_1_1_skills_1_1_silk_strings_1_1_silk_twisters_1_1_shredded_silk_trajectory.html" alt="Common.Skills.SilkStrings.SilkTwisters.ShreddedSilkTrajectory" shape="rect" coords="379,672,748,696"/>
+<area href="../../d8/def/class_common_1_1_skills_1_1_silk_strings_1_1_silk_twisters_1_1_shredded_silk_trajectory_i_i.html" alt="Common.Skills.SilkStrings.SilkTwisters.ShreddedSilkTrajectoryII" shape="rect" coords="379,728,748,752"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -155,7 +176,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d89/_trajectory_8cs_source.html#l00040">40</a> of file <a class="el" href="../../d5/d89/_trajectory_8cs_source.html">Trajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            sequencer.Sections</div>
+<div class="line"><span class="lineno">   43</span>                     .Remove(Section.Active, <span class="stringliteral">&quot;ProjectileFlying&quot;</span>)</div>
+<div class="line"><span class="lineno">   44</span>                     .Remove(Section.End, <span class="stringliteral">&quot;ProjectileCancelFlying&quot;</span>)</div>
+<div class="line"><span class="lineno">   45</span>                     .Remove(Section.Dispose, <span class="stringliteral">&quot;DisposeTrajectory&quot;</span>)</div>
+<div class="line"><span class="lineno">   46</span>                     ;</div>
+<div class="line"><span class="lineno">   47</span>            </div>
+<div class="line"><span class="lineno">   48</span>            Projectile = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7ef29f2102db487ac968b0ea6a54c0d5" name="a7ef29f2102db487ac968b0ea6a54c0d5"></a>
@@ -182,7 +212,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d89/_trajectory_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d5/d89/_trajectory_8cs_source.html">Trajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (sequencer is not Projectile projectileSequence) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   31</span>            </div>
+<div class="line"><span class="lineno">   32</span>            Projectile = projectileSequence;</div>
+<div class="line"><span class="lineno">   33</span>            Projectile.Sections</div>
+<div class="line"><span class="lineno">   34</span>                      .Add(Section.Active, <span class="stringliteral">&quot;ProjectileFlying&quot;</span>, Flying)</div>
+<div class="line"><span class="lineno">   35</span>                      .Add(Section.End, <span class="stringliteral">&quot;ProjectileCancelFlying&quot;</span>, Cancel)</div>
+<div class="line"><span class="lineno">   36</span>                      .Add(Section.Dispose, <span class="stringliteral">&quot;DisposeTrajectory&quot;</span>, Cancel)</div>
+<div class="line"><span class="lineno">   37</span>                      ;</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -256,7 +296,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d89/_trajectory_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d5/d89/_trajectory_8cs_source.html">Trajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keyword">get</span> =&gt; destination == Vector3.zero</div>
+<div class="line"><span class="lineno">   17</span>                    ? transform.position</div>
+<div class="line"><span class="lineno">   18</span>                    : destination;</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keyword">set</span> =&gt; destination = value;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af812e5d1a66fd5ee18c1ba332ce3f835" name="af812e5d1a66fd5ee18c1ba332ce3f835"></a>
@@ -304,7 +350,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d89/_trajectory_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d5/d89/_trajectory_8cs_source.html">Trajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keyword">get</span> =&gt; distance; <span class="keyword">set</span> =&gt; distance = value; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1189c39aa81922ef0967849203cfe097" name="a1189c39aa81922ef0967849203cfe097"></a>
@@ -328,7 +375,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d89/_trajectory_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d5/d89/_trajectory_8cs_source.html">Trajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa51cc7ebd5982f8e8c3a70d80070a8a9" name="aa51cc7ebd5982f8e8c3a70d80070a8a9"></a>
@@ -352,7 +400,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d89/_trajectory_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d5/d89/_trajectory_8cs_source.html">Trajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{ <span class="keyword">get</span> =&gt; speed; <span class="keyword">set</span> =&gt; speed          = value; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

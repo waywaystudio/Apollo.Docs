@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('db/de3/class_common_1_1_projectiles_1_1_trajectories_1
   <div class="headertitle"><div class="title">Common.Projectiles.Trajectories.TridentThrowTrajectory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Trajectories.TridentThrowTrajectory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/de3/class_common_1_1_projectiles_1_1_trajectories_1_1_trident_throw_trajectory.png" usemap="#Common.Projectiles.Trajectories.TridentThrowTrajectory_map" alt=""/>
+  <map id="Common.Projectiles.Trajectories.TridentThrowTrajectory_map" name="Common.Projectiles.Trajectories.TridentThrowTrajectory_map">
+<area href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html" alt="Common.Projectiles.Trajectory" shape="rect" coords="0,56,330,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -163,7 +173,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d8a/_trident_throw_trajectory_8cs_source.html#l00049">49</a> of file <a class="el" href="../../df/d8a/_trident_throw_trajectory_8cs_source.html">TridentThrowTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            flyingSequence?.Cancel();</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0bef769195a5702ffe4d255f9947d4f3" name="a0bef769195a5702ffe4d255f9947d4f3"></a>
@@ -182,7 +195,37 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d8a/_trident_throw_trajectory_8cs_source.html#l00018">18</a> of file <a class="el" href="../../df/d8a/_trident_throw_trajectory_8cs_source.html">TridentThrowTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            var destination = PathfindingUtility.GetAcrossPosition(Projectile.Position,</div>
+<div class="line"><span class="lineno">   21</span>                                                                       Projectile.Forward,</div>
+<div class="line"><span class="lineno">   22</span>                                                                       unsafeLayer,</div>
+<div class="line"><span class="lineno">   23</span>                                                                       safeLayer,</div>
+<div class="line"><span class="lineno">   24</span>                                                                       distance,</div>
+<div class="line"><span class="lineno">   25</span>                                                                       0f);</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>            var destinationOffset = destination + <span class="keyword">new</span> Vector3(0, 1, 0);</div>
+<div class="line"><span class="lineno">   28</span>            </div>
+<div class="line"><span class="lineno">   29</span>            <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   30</span><span class="comment">             * 칼날이 살짝 회전되어서 밖히는 코드. 어떻게 될지 모르니 주석처리</span></div>
+<div class="line"><span class="lineno">   31</span><span class="comment">             */</span></div>
+<div class="line"><span class="lineno">   32</span>            var projectileRotation = Projectile.transform.rotation.eulerAngles;</div>
+<div class="line"><span class="lineno">   33</span>            var destRotation = <span class="keyword">new</span> Vector3(projectileRotation.x, IsRolling ? projectileRotation.y + 1440 : projectileRotation.y, projectileRotation.z);</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>            flyingSequence?.Cancel();</div>
+<div class="line"><span class="lineno">   36</span>            flyingSequence = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d49/class_sequencer.html">Sequencer</a>();</div>
+<div class="line"><span class="lineno">   37</span>            flyingSequence.Append(Projectile.transform</div>
+<div class="line"><span class="lineno">   38</span>                                            .DOMove(destinationOffset, IsRolling ? 0.25f : 0.25f)</div>
+<div class="line"><span class="lineno">   39</span>                                            .SetEase(Ease.Unset)</div>
+<div class="line"><span class="lineno">   40</span>                                            .SetUpdate(DG.Tweening.UpdateType.Fixed))</div>
+<div class="line"><span class="lineno">   41</span>                          .Join(Projectile.transform</div>
+<div class="line"><span class="lineno">   42</span>                                          .DORotate(destRotation, IsRolling ? 0.23f : 0.23f, RotateMode.FastBeyond360)</div>
+<div class="line"><span class="lineno">   43</span>                                          .SetEase(Ease.Unset)</div>
+<div class="line"><span class="lineno">   44</span>                                          .SetUpdate(DG.Tweening.UpdateType.Fixed))</div>
+<div class="line"><span class="lineno">   45</span>                          .Append(() =&gt; Projectile.Invoker.Complete())</div>
+<div class="line"><span class="lineno">   46</span>                          .Play();</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="ttc" id="aclass_sequencer_html"><div class="ttname"><a href="../../d6/d49/class_sequencer.html">Sequencer</a></div><div class="ttdoc">Serial Action Invoker Which use UniTask and DOTween Combination.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/dc0/_sequencer_8cs_source.html#l00012">Sequencer.cs:13</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -207,7 +250,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d8a/_trident_throw_trajectory_8cs_source.html#l00015">15</a> of file <a class="el" href="../../df/d8a/_trident_throw_trajectory_8cs_source.html">TridentThrowTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

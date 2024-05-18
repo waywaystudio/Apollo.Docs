@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,20 @@ $(function(){initNavTree('de/d25/class_challenge_1_1_props_1_1_rewards_1_1_maste
   <div class="headertitle"><div class="title">Challenge.Props.Rewards.MasteryScroll Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Props.Rewards.MasteryScroll:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/d25/class_challenge_1_1_props_1_1_rewards_1_1_mastery_scroll.png" usemap="#Challenge.Props.Rewards.MasteryScroll_map" alt=""/>
+  <map id="Challenge.Props.Rewards.MasteryScroll_map" name="Challenge.Props.Rewards.MasteryScroll_map">
+<area href="../../d9/d30/class_challenge_1_1_props_1_1_rewards_1_1_reward.html" alt="Challenge.Props.Rewards.Reward" shape="rect" coords="378,56,620,80"/>
+<area href="../../d2/de2/interface_challenge_1_1_i_mastery_canvas_caller.html" alt="Challenge.IMasteryCanvasCaller" shape="rect" coords="1008,56,1250,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="252,0,494,24"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="504,0,746,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="756,0,998,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1008,0,1250,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -197,7 +212,13 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>EnablePlayerCo
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d01/_mastery_scroll_8cs_source.html#l00024">24</a> of file <a class="el" href="../../db/d01/_mastery_scroll_8cs_source.html">MasteryScroll.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            var dred = ChallengeDirector.Dred;</div>
+<div class="line"><span class="lineno">   27</span>            var selectedMasteryCode = ChallengeDirector.UI.CanvasMasterySelect.SelectedMasteryCode;</div>
+<div class="line"><span class="lineno">   28</span>            </div>
+<div class="line"><span class="lineno">   29</span>            ChallengeDirector.Combat.MasteryAbility[selectedMasteryCode].Inject(dred);</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab0c10fb4ab33f1fad5d349436e045bec" name="ab0c10fb4ab33f1fad5d349436e045bec"></a>
@@ -226,7 +247,17 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>EnablePlayerCo
 <p>Reimplemented from <a class="el" href="../../d9/d30/class_challenge_1_1_props_1_1_rewards_1_1_reward.html">Challenge.Props.Rewards.Reward</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d01/_mastery_scroll_8cs_source.html#l00011">11</a> of file <a class="el" href="../../db/d01/_mastery_scroll_8cs_source.html">MasteryScroll.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            base.Initialize(sourceSequence);</div>
+<div class="line"><span class="lineno">   14</span> </div>
+<div class="line"><span class="lineno">   15</span>            Sections</div>
+<div class="line"><span class="lineno">   16</span>                .Add(Section.Active, <span class="stringliteral">&quot;SubscribeMasterySelectCanvas&quot;</span>, <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   17</span>                ;</div>
+<div class="line"><span class="lineno">   18</span>            </div>
+<div class="line"><span class="lineno">   19</span>            <span class="comment">// Open Mastery Select PopUp UI</span></div>
+<div class="line"><span class="lineno">   20</span>            interactEffector.Sections.Add(Section.Complete, <span class="stringliteral">&quot;PopupMasterySelectCanvas&quot;</span>, PopupMasterySelectCanvas);</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -104,6 +105,21 @@ $(function(){initNavTree('d2/d6c/class_common_1_1_status_effects_1_1_status_effe
 
 <p>Active One tool Unit. Buff or DeBuff Object.  
  <a href="#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for Common.StatusEffects.StatusEffect:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.png" usemap="#Common.StatusEffects.StatusEffect_map" alt=""/>
+  <map id="Common.StatusEffects.StatusEffect_map" name="Common.StatusEffects.StatusEffect_map">
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="242,56,474,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="484,56,716,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="726,56,958,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="242,0,474,24"/>
+<area href="../../d9/df0/class_common_1_1_status_effects_1_1_variants_1_1_bleed.html" alt="Common.StatusEffects.Variants.Bleed" shape="rect" coords="121,168,353,192"/>
+<area href="../../dd/db8/class_common_1_1_status_effects_1_1_variants_1_1_fragile.html" alt="Common.StatusEffects.Variants.Fragile" shape="rect" coords="363,168,595,192"/>
+<area href="../../d4/d5b/class_common_1_1_status_effects_1_1_variants_1_1_ignited.html" alt="Common.StatusEffects.Variants.Ignited" shape="rect" coords="605,168,837,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -183,7 +199,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d08/_status_effect_8cs_source.html#l00053">53</a> of file <a class="el" href="../../dd/d08/_status_effect_8cs_source.html">StatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            Target = target;</div>
+<div class="line"><span class="lineno">   56</span>            effector.SetTarget(target.gameObject);</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (Target.StatusEffectTable.Has(statusEffectCode))</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                Invoker.Override();</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   64</span>            {</div>
+<div class="line"><span class="lineno">   65</span>                Invoker.Active();</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a88f13c5e3eb791f2b32f234da4637b2f" name="a88f13c5e3eb791f2b32f234da4637b2f"></a>
@@ -233,7 +263,24 @@ Properties</h2></td></tr>
 <p>Reimplemented in <a class="el" href="../../dd/db8/class_common_1_1_status_effects_1_1_variants_1_1_fragile.html#ab529a7b54f24648618db93eba6e3c588">Common.StatusEffects.Variants.Fragile</a>, and <a class="el" href="../../d4/d5b/class_common_1_1_status_effects_1_1_variants_1_1_ignited.html#a22c73b6e03e99ea757ebef40e3ea1fd8">Common.StatusEffects.Variants.Ignited</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d08/_status_effect_8cs_source.html#l00035">35</a> of file <a class="el" href="../../dd/d08/_status_effect_8cs_source.html">StatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            Provider = provider;</div>
+<div class="line"><span class="lineno">   38</span>            Invoker  = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   39</span>            Sections</div>
+<div class="line"><span class="lineno">   40</span>                .Add(Section.Active, <span class="stringliteral">&quot;AddStatusEffectTable&quot;</span>, AddTable)</div>
+<div class="line"><span class="lineno">   41</span>                .Add(Section.Execute, <span class="stringliteral">&quot;MainExecution&quot;</span>, MainExecution)</div>
+<div class="line"><span class="lineno">   42</span>                .Add(Section.End, <span class="stringliteral">&quot;UnregisterTable&quot;</span>, RemoveTable)</div>
+<div class="line"><span class="lineno">   43</span>                ;</div>
+<div class="line"><span class="lineno">   44</span>            </div>
+<div class="line"><span class="lineno">   45</span>            executor.Initialize(Provider);</div>
+<div class="line"><span class="lineno">   46</span>            executor.SetSender(Unit);</div>
+<div class="line"><span class="lineno">   47</span>            effector.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   48</span>            overrideModule.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   49</span>            executeTimer.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   50</span>            spawnEvent.Invoke(statusEffectCode, <span class="keyword">this</span>); </div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -477,7 +524,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d08/_status_effect_8cs_source.html#l00025">25</a> of file <a class="el" href="../../dd/d08/_status_effect_8cs_source.html">StatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a89fbcdeeea47419a46a543518dc241e9" name="a89fbcdeeea47419a46a543518dc241e9"></a>
@@ -575,7 +623,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d08/_status_effect_8cs_source.html#l00027">27</a> of file <a class="el" href="../../dd/d08/_status_effect_8cs_source.html">StatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a35bcce8cb1908f92b6d65b2f3ec2346f" name="a35bcce8cb1908f92b6d65b2f3ec2346f"></a>
@@ -599,7 +648,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d08/_status_effect_8cs_source.html#l00022">22</a> of file <a class="el" href="../../dd/d08/_status_effect_8cs_source.html">StatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>{ <span class="keyword">get</span>; <span class="keyword">protected</span> <span class="keyword">set</span>; } <span class="comment">/* Effect Provider */</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0c7abb6547dba5033824eb470116abbe" name="a0c7abb6547dba5033824eb470116abbe"></a>
@@ -625,7 +675,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d08/_status_effect_8cs_source.html#l00026">26</a> of file <a class="el" href="../../dd/d08/_status_effect_8cs_source.html">StatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a88253226a863e72babf3129a0ad6431e" name="a88253226a863e72babf3129a0ad6431e"></a>
@@ -649,7 +700,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d08/_status_effect_8cs_source.html#l00023">23</a> of file <a class="el" href="../../dd/d08/_status_effect_8cs_source.html">StatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } <span class="comment">/* Affected Target */</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a81a32e88452017701d6a29870c9fc02f" name="a81a32e88452017701d6a29870c9fc02f"></a>

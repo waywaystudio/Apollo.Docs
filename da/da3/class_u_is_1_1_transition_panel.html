@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('da/da3/class_u_is_1_1_transition_panel.html','../../')
   <div class="headertitle"><div class="title">UIs.TransitionPanel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for UIs.TransitionPanel:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/da3/class_u_is_1_1_transition_panel.png" usemap="#UIs.TransitionPanel_map" alt=""/>
+  <map id="UIs.TransitionPanel_map" name="UIs.TransitionPanel_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="130,0,250,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -135,7 +145,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da8/_transition_panel_8cs_source.html#l00015">15</a> of file <a class="el" href="../../dd/da8/_transition_panel_8cs_source.html">TransitionPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ None = 0, Black, Blur }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -155,7 +166,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da8/_transition_panel_8cs_source.html#l00114">114</a> of file <a class="el" href="../../dd/da8/_transition_panel_8cs_source.html">TransitionPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            CancelBlackFadeTween();</div>
+<div class="line"><span class="lineno">  117</span>            CancelBlurFadeTween();</div>
+<div class="line"><span class="lineno">  118</span>            </div>
+<div class="line"><span class="lineno">  119</span>            gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  120</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9db67a1dd8d8ee0055da9b0e3974ed71" name="a9db67a1dd8d8ee0055da9b0e3974ed71"></a>
@@ -183,7 +200,57 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da8/_transition_panel_8cs_source.html#l00062">62</a> of file <a class="el" href="../../dd/da8/_transition_panel_8cs_source.html">TransitionPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (!gameObject.activeSelf)</div>
+<div class="line"><span class="lineno">   65</span>            {</div>
+<div class="line"><span class="lineno">   66</span>                gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">switch</span> (mode)</div>
+<div class="line"><span class="lineno">   70</span>            {</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">case</span> TransitionMode.Black:</div>
+<div class="line"><span class="lineno">   72</span>                {</div>
+<div class="line"><span class="lineno">   73</span>                    CancelBlackFadeTween();</div>
+<div class="line"><span class="lineno">   74</span>                    </div>
+<div class="line"><span class="lineno">   75</span>                    <span class="keywordflow">if</span> (!black.gameObject.activeSelf)</div>
+<div class="line"><span class="lineno">   76</span>                    {</div>
+<div class="line"><span class="lineno">   77</span>                        black.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   78</span>                    }</div>
+<div class="line"><span class="lineno">   79</span>                    </div>
+<div class="line"><span class="lineno">   80</span>                    blackFadeTween = black.DOFade(1f, 0f);</div>
+<div class="line"><span class="lineno">   81</span>                    blackFadeTween = black.DOFade(0, duration)</div>
+<div class="line"><span class="lineno">   82</span>                                     .OnComplete(() =&gt;</div>
+<div class="line"><span class="lineno">   83</span>                                     {</div>
+<div class="line"><span class="lineno">   84</span>                                         gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   85</span>                                         callback?.Invoke();</div>
+<div class="line"><span class="lineno">   86</span>                                     })</div>
+<div class="line"><span class="lineno">   87</span>                                     ;</div>
+<div class="line"><span class="lineno">   88</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   89</span>                }</div>
+<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">case</span> TransitionMode.Blur:</div>
+<div class="line"><span class="lineno">   91</span>                {</div>
+<div class="line"><span class="lineno">   92</span>                    CancelBlurFadeTween();</div>
+<div class="line"><span class="lineno">   93</span>                    </div>
+<div class="line"><span class="lineno">   94</span>                    <span class="keywordflow">if</span> (!blur.gameObject.activeSelf)</div>
+<div class="line"><span class="lineno">   95</span>                    {</div>
+<div class="line"><span class="lineno">   96</span>                        blur.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   97</span>                    }</div>
+<div class="line"><span class="lineno">   98</span>                    </div>
+<div class="line"><span class="lineno">   99</span>                    blurFadeTween = blur.DOFade(1f, 0f);</div>
+<div class="line"><span class="lineno">  100</span>                    blurFadeTween = blur.DOFade(0, duration)</div>
+<div class="line"><span class="lineno">  101</span>                                        .SetUpdate(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  102</span>                                        .OnComplete(() =&gt;</div>
+<div class="line"><span class="lineno">  103</span>                                        {</div>
+<div class="line"><span class="lineno">  104</span>                                            gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  105</span>                                            callback?.Invoke();</div>
+<div class="line"><span class="lineno">  106</span>                                        })</div>
+<div class="line"><span class="lineno">  107</span>                                        ;</div>
+<div class="line"><span class="lineno">  108</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  109</span>                }</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">default</span>: <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentOutOfRangeException(nameof(mode), mode, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  111</span>            }</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad85d1a129ddf14837c76aa4aedfdd003" name="ad85d1a129ddf14837c76aa4aedfdd003"></a>
@@ -211,7 +278,49 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da8/_transition_panel_8cs_source.html#l00018">18</a> of file <a class="el" href="../../dd/da8/_transition_panel_8cs_source.html">TransitionPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">if</span> (!gameObject.activeSelf)</div>
+<div class="line"><span class="lineno">   21</span>            {</div>
+<div class="line"><span class="lineno">   22</span>                gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   23</span>            }</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">switch</span> (mode)</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                <span class="keywordflow">case</span> TransitionMode.Black:</div>
+<div class="line"><span class="lineno">   28</span>                {</div>
+<div class="line"><span class="lineno">   29</span>                    CancelBlackFadeTween();</div>
+<div class="line"><span class="lineno">   30</span>                    </div>
+<div class="line"><span class="lineno">   31</span>                    <span class="keywordflow">if</span> (!black.gameObject.activeSelf)</div>
+<div class="line"><span class="lineno">   32</span>                    {</div>
+<div class="line"><span class="lineno">   33</span>                        black.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   34</span>                    }</div>
+<div class="line"><span class="lineno">   35</span>                    </div>
+<div class="line"><span class="lineno">   36</span>                    black.DOFade(0f, 0f);</div>
+<div class="line"><span class="lineno">   37</span>                    blackFadeTween = black.DOFade(1, duration)</div>
+<div class="line"><span class="lineno">   38</span>                                     .OnComplete(() =&gt; callback?.Invoke())</div>
+<div class="line"><span class="lineno">   39</span>                                     ;</div>
+<div class="line"><span class="lineno">   40</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   41</span>                }</div>
+<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">case</span> TransitionMode.Blur:</div>
+<div class="line"><span class="lineno">   43</span>                {</div>
+<div class="line"><span class="lineno">   44</span>                    CancelBlurFadeTween();</div>
+<div class="line"><span class="lineno">   45</span>                    </div>
+<div class="line"><span class="lineno">   46</span>                    <span class="keywordflow">if</span> (!blur.gameObject.activeSelf)</div>
+<div class="line"><span class="lineno">   47</span>                    {</div>
+<div class="line"><span class="lineno">   48</span>                        blur.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   49</span>                    }</div>
+<div class="line"><span class="lineno">   50</span>                    </div>
+<div class="line"><span class="lineno">   51</span>                    blur.DOFade(0f, 0f);</div>
+<div class="line"><span class="lineno">   52</span>                    blurFadeTween = blur.DOFade(1, duration)</div>
+<div class="line"><span class="lineno">   53</span>                                        .SetUpdate(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   54</span>                                        .OnComplete(() =&gt; callback?.Invoke())</div>
+<div class="line"><span class="lineno">   55</span>                                        ;</div>
+<div class="line"><span class="lineno">   56</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   57</span>                }</div>
+<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">default</span>: <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentOutOfRangeException(nameof(mode), mode, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

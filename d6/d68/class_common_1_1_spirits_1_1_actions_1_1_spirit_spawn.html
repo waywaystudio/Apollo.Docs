@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,17 @@ $(function(){initNavTree('d6/d68/class_common_1_1_spirits_1_1_actions_1_1_spirit
   <div class="headertitle"><div class="title">Common.Spirits.Actions.SpiritSpawn Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Spirits.Actions.SpiritSpawn:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/d68/class_common_1_1_spirits_1_1_actions_1_1_spirit_spawn.png" usemap="#Common.Spirits.Actions.SpiritSpawn_map" alt=""/>
+  <map id="Common.Spirits.Actions.SpiritSpawn_map" name="Common.Spirits.Actions.SpiritSpawn_map">
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="226,56,442,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="452,56,668,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="226,0,442,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -149,7 +161,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html#l00044">44</a> of file <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html">SpiritSpawn.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   47</span>            </div>
+<div class="line"><span class="lineno">   48</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa8af420550cfc99c6b523c9857ae5f63" name="aa8af420550cfc99c6b523c9857ae5f63"></a>
@@ -187,7 +204,23 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html#l00027">27</a> of file <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html">SpiritSpawn.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            Spirit    = spirit;</div>
+<div class="line"><span class="lineno">   30</span>            Invoker   = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   31</span>            IsSpawned = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>            Sections</div>
+<div class="line"><span class="lineno">   34</span>                .Add(Section.Active, <span class="stringliteral">&quot;SpawnTransition&quot;</span>, SpawnTransition)</div>
+<div class="line"><span class="lineno">   35</span>                .Add(Section.Complete, <span class="stringliteral">&quot;Disappear&quot;</span>, spirit.Disappear)</div>
+<div class="line"><span class="lineno">   36</span>                .Add(Section.End, <span class="stringliteral">&quot;CancelDisappearTimer&quot;</span>, disappearTimer.Stop)</div>
+<div class="line"><span class="lineno">   37</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;CancelDisappearTimer&quot;</span>, disappearTimer.Dispose)</div>
+<div class="line"><span class="lineno">   38</span>                .CancelTween(<span class="stringliteral">&quot;SpawningTween&quot;</span>, spawningTween)</div>
+<div class="line"><span class="lineno">   39</span>                ;</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>            disappearTimer.AddCallBack(<span class="stringliteral">&quot;Complete&quot;</span>, Invoker.Complete);</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac1f60cee4bc99d0a991fe7cc69a6864f" name="ac1f60cee4bc99d0a991fe7cc69a6864f"></a>
@@ -206,7 +239,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html#l00024">24</a> of file <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html">SpiritSpawn.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{ disappearTimer.SetDuration(value); <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -257,7 +291,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html#l00017">17</a> of file <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html">SpiritSpawn.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4011cb8409b6a9eb7b7ef6e62c475b30" name="a4011cb8409b6a9eb7b7ef6e62c475b30"></a>
@@ -281,7 +316,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html#l00020">20</a> of file <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html">SpiritSpawn.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa911c0a1091ccb13ee9f9c1a0e986341" name="aa911c0a1091ccb13ee9f9c1a0e986341"></a>
@@ -307,7 +343,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html#l00016">16</a> of file <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html">SpiritSpawn.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aecb2ebcb7d277f52f9f519c489bc7947" name="aecb2ebcb7d277f52f9f519c489bc7947"></a>
@@ -331,7 +368,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html#l00018">18</a> of file <a class="el" href="../../dd/d58/_spirit_spawn_8cs_source.html">SpiritSpawn.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9d815d4ef61ddf61560863214a9ffd28" name="a9d815d4ef61ddf61560863214a9ffd28"></a>

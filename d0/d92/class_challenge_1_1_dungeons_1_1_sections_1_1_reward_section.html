@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,6 +104,17 @@ $(function(){initNavTree('d0/d92/class_challenge_1_1_dungeons_1_1_sections_1_1_r
 
 <p>Handle of Event when Stage's Fiends All Dead.  
  <a href="#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for Challenge.Dungeons.Sections.RewardSection:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d0/d92/class_challenge_1_1_dungeons_1_1_sections_1_1_reward_section.png" usemap="#Challenge.Dungeons.Sections.RewardSection_map" alt=""/>
+  <map id="Challenge.Dungeons.Sections.RewardSection_map" name="Challenge.Dungeons.Sections.RewardSection_map">
+<area href="../../d2/db9/class_challenge_1_1_dungeons_1_1_sections_1_1_dungeon_section.html" alt="Challenge.Dungeons.Sections.DungeonSection" shape="rect" coords="167,56,492,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="335,0,660,24"/>
+<area href="../../d1/d06/class_challenge_1_1_dungeons_1_1_sections_1_1_merchant_reward_section.html" alt="Challenge.Dungeons.Sections.MerchantRewardSection" shape="rect" coords="167,168,492,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -162,7 +174,16 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/db9/class_challenge_1_1_dungeons_1_1_sections_1_1_dungeon_section.html">Challenge.Dungeons.Sections.DungeonSection</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d4e/_reward_section_8cs_source.html#l00025">25</a> of file <a class="el" href="../../dd/d4e/_reward_section_8cs_source.html">RewardSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            base.Initialize(scenario);</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>            rewardType = scenario.MasterStage.RewardType;</div>
+<div class="line"><span class="lineno">   30</span>            Sections</div>
+<div class="line"><span class="lineno">   31</span>                .Add(Section.Active, <span class="stringliteral">&quot;SpawnSource&quot;</span>, SpawnSource)</div>
+<div class="line"><span class="lineno">   32</span>                .Cancellation(<span class="stringliteral">&quot;CancelDelayTask&quot;</span>, delayTask)</div>
+<div class="line"><span class="lineno">   33</span>                ;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

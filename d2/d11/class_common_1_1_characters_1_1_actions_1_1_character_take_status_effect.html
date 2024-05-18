@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,17 @@ $(function(){initNavTree('d2/d11/class_common_1_1_characters_1_1_actions_1_1_cha
   <div class="headertitle"><div class="title">Common.Characters.Actions.CharacterTakeStatusEffect Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Actions.CharacterTakeStatusEffect:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/d11/class_common_1_1_characters_1_1_actions_1_1_character_take_status_effect.png" usemap="#Common.Characters.Actions.CharacterTakeStatusEffect_map" alt=""/>
+  <map id="Common.Characters.Actions.CharacterTakeStatusEffect_map" name="Common.Characters.Actions.CharacterTakeStatusEffect_map">
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="338,56,666,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="676,56,1004,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="338,0,666,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -164,7 +176,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html#l00016">16</a> of file <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html">CharacterTakeStatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            MainCharacter     = character;</div>
+<div class="line"><span class="lineno">   19</span>            StatusEffectTable = MainCharacter.StatusEffectTable;</div>
+<div class="line"><span class="lineno">   20</span>            Invoker           = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>            Sections</div>
+<div class="line"><span class="lineno">   23</span>                .AddCondition(<span class="stringliteral">&quot;CharacterIsAlive&quot;</span>, () =&gt; MainCharacter.IsAlive)</div>
+<div class="line"><span class="lineno">   24</span>                ;</div>
+<div class="line"><span class="lineno">   25</span>            </div>
+<div class="line"><span class="lineno">   26</span>            effector.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a35e47927fac3bd72ca0ac9c09ec27a2f" name="a35e47927fac3bd72ca0ac9c09ec27a2f"></a>
@@ -183,7 +207,22 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html#l00029">29</a> of file <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html">CharacterTakeStatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (!StatusEffectTable.TryGetValue(executor.DataIndex, out var value))</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                value = executor.Effect;</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>                var attachTo = MainCharacter.PrePosition(value.VisualEffectPivot);</div>
+<div class="line"><span class="lineno">   37</span>                    </div>
+<div class="line"><span class="lineno">   38</span>                value.transform.SetParent(attachTo, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>            </div>
+<div class="line"><span class="lineno">   41</span>            value.Active(MainCharacter);</div>
+<div class="line"><span class="lineno">   42</span>            </div>
+<div class="line"><span class="lineno">   43</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -210,7 +249,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html#l00012">12</a> of file <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html">CharacterTakeStatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a04588651f95223a5075f2e82b570e8e0" name="a04588651f95223a5075f2e82b570e8e0"></a>
@@ -234,7 +274,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html#l00011">11</a> of file <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html">CharacterTakeStatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9e8e3340128806298d30faf12e9c221e" name="a9e8e3340128806298d30faf12e9c221e"></a>
@@ -260,7 +301,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html#l00010">10</a> of file <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html">CharacterTakeStatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad0690325158d58ebcfd7929d202c6730" name="ad0690325158d58ebcfd7929d202c6730"></a>
@@ -284,7 +326,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html#l00013">13</a> of file <a class="el" href="../../dc/d34/_character_take_status_effect_8cs_source.html">CharacterTakeStatusEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5b0c175d64066ad5007cff4066bb20e8" name="a5b0c175d64066ad5007cff4066bb20e8"></a>

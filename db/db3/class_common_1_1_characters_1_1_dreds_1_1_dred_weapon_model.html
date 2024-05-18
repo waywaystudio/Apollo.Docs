@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,16 @@ $(function(){initNavTree('db/db3/class_common_1_1_characters_1_1_dreds_1_1_dred_
   <div class="headertitle"><div class="title">Common.Characters.Dreds.DredWeaponModel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Dreds.DredWeaponModel:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/db3/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_model.png" usemap="#Common.Characters.Dreds.DredWeaponModel_map" alt=""/>
+  <map id="Common.Characters.Dreds.DredWeaponModel_map" name="Common.Characters.Dreds.DredWeaponModel_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="383,0,756,24"/>
+<area href="../../df/d65/class_common_1_1_characters_1_1_dreds_1_1_weapon_models_1_1_blade_weapon_model.html" alt="Common.Characters.Dreds.WeaponModels.BladeWeaponModel" shape="rect" coords="191,112,564,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -167,7 +178,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d85/_dred_weapon_model_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d9/d85/_dred_weapon_model_8cs_source.html">DredWeaponModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            Dred = dred;</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            showAction.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   24</span>            hideAction.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adb750e659237ce5a253c4a1dd58b4f9d" name="adb750e659237ce5a253c4a1dd58b4f9d"></a>
@@ -186,7 +203,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d85/_dred_weapon_model_8cs_source.html#l00027">27</a> of file <a class="el" href="../../d9/d85/_dred_weapon_model_8cs_source.html">DredWeaponModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (hideAction.Invoker.IsActive)</div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                hideAction.Active();</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>            </div>
+<div class="line"><span class="lineno">   34</span>            showAction.Active();</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -284,7 +309,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d85/_dred_weapon_model_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d9/d85/_dred_weapon_model_8cs_source.html">DredWeaponModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a78cf5aa877946f8a902a0f346929b5c2" name="a78cf5aa877946f8a902a0f346929b5c2"></a>

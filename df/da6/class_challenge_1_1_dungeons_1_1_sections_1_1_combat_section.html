@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,17 @@ $(function(){initNavTree('df/da6/class_challenge_1_1_dungeons_1_1_sections_1_1_c
   <div class="headertitle"><div class="title">Challenge.Dungeons.Sections.CombatSection Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Dungeons.Sections.CombatSection:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/da6/class_challenge_1_1_dungeons_1_1_sections_1_1_combat_section.png" usemap="#Challenge.Dungeons.Sections.CombatSection_map" alt=""/>
+  <map id="Challenge.Dungeons.Sections.CombatSection_map" name="Challenge.Dungeons.Sections.CombatSection_map">
+<area href="../../d2/db9/class_challenge_1_1_dungeons_1_1_sections_1_1_dungeon_section.html" alt="Challenge.Dungeons.Sections.DungeonSection" shape="rect" coords="144,56,423,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="433,56,712,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="289,0,568,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -162,7 +174,29 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/db9/class_challenge_1_1_dungeons_1_1_sections_1_1_dungeon_section.html">Challenge.Dungeons.Sections.DungeonSection</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d09/_combat_section_8cs_source.html#l00019">19</a> of file <a class="el" href="../../de/d09/_combat_section_8cs_source.html">CombatSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            base.Initialize(scenario);</div>
+<div class="line"><span class="lineno">   22</span> </div>
+<div class="line"><span class="lineno">   23</span>            PositionList = Map.FiendSpawnPositions;</div>
+<div class="line"><span class="lineno">   24</span>            spawnGroupList.SortAndShuffleBy(spawnGroup =&gt; spawnGroup.Priority);</div>
+<div class="line"><span class="lineno">   25</span>            spawnGroupList.ForEach((group, index) =&gt;</div>
+<div class="line"><span class="lineno">   26</span>            {</div>
+<div class="line"><span class="lineno">   27</span>                group.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   28</span>            </div>
+<div class="line"><span class="lineno">   29</span>                <span class="keywordflow">if</span> (index == spawnGroupList.Count - 1) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   30</span>            </div>
+<div class="line"><span class="lineno">   31</span>                group.NextGroupEntry = spawnGroupList[index + 1];</div>
+<div class="line"><span class="lineno">   32</span>            });</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>            Sections</div>
+<div class="line"><span class="lineno">   35</span>                .Add(Section.Active, <span class="stringliteral">&quot;StartFirstWave&quot;</span>, StartFirstWave)</div>
+<div class="line"><span class="lineno">   36</span>                .Add(Section.Cancel, <span class="stringliteral">&quot;ReleaseSerialSpawn&quot;</span>, () =&gt; spawnGroupList.ForEach(_ =&gt; Cancel()))</div>
+<div class="line"><span class="lineno">   37</span>                .Add(Section.End, <span class="stringliteral">&quot;DeActiveEnvironment&quot;</span>, scenario.MasterStage.Map.DeActiveTraps)</div>
+<div class="line"><span class="lineno">   38</span>                ;</div>
+<div class="line"><span class="lineno">   39</span>            </div>
+<div class="line"><span class="lineno">   40</span>            effector.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9a02ea75c4e74a71e15598633320bb38" name="a9a02ea75c4e74a71e15598633320bb38"></a>
@@ -181,7 +215,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d09/_combat_section_8cs_source.html#l00043">43</a> of file <a class="el" href="../../de/d09/_combat_section_8cs_source.html">CombatSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (spawnGroupList.All(group =&gt; group.IsAllDead))</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                Invoker.Complete();</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -206,7 +246,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d09/_combat_section_8cs_source.html#l00016">16</a> of file <a class="el" href="../../de/d09/_combat_section_8cs_source.html">CombatSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac7976dba41f69cb9cc9ccf3822ebd64a" name="ac7976dba41f69cb9cc9ccf3822ebd64a"></a>

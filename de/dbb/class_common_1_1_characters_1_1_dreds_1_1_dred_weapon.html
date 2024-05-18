@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_
   <div class="headertitle"><div class="title">Common.Characters.Dreds.DredWeapon Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Dreds.DredWeapon:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/dbb/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon.png" usemap="#Common.Characters.Dreds.DredWeapon_map" alt=""/>
+  <map id="Common.Characters.Dreds.DredWeapon_map" name="Common.Characters.Dreds.DredWeapon_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="253,0,496,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -152,7 +162,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d43/_dred_weapon_8cs_source.html#l00036">36</a> of file <a class="el" href="../../d5/d43/_dred_weapon_8cs_source.html">DredWeapon.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            modelList.ForEach(model =&gt; model.Initialize(dred));</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -177,7 +190,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d43/_dred_weapon_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d5/d43/_dred_weapon_8cs_source.html">DredWeapon.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                <span class="keywordflow">if</span> (allSkillBehaviour.IsNullOrEmpty())</div>
+<div class="line"><span class="lineno">   24</span>                {</div>
+<div class="line"><span class="lineno">   25</span>                    skillLibrary.ValueList.ForEach(skillSet =&gt;</div>
+<div class="line"><span class="lineno">   26</span>                    {</div>
+<div class="line"><span class="lineno">   27</span>                        allSkillBehaviour.AddRange(skillSet.BehaviourList);</div>
+<div class="line"><span class="lineno">   28</span>                    });</div>
+<div class="line"><span class="lineno">   29</span>                }</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">return</span> allSkillBehaviour;</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a16d343924ff2355babbc1a55ec9a834a" name="a16d343924ff2355babbc1a55ec9a834a"></a>

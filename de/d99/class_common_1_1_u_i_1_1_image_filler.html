@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('de/d99/class_common_1_1_u_i_1_1_image_filler.html','..
   <div class="headertitle"><div class="title">Common.UI.ImageFiller Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UI.ImageFiller:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/d99/class_common_1_1_u_i_1_1_image_filler.png" usemap="#Common.UI.ImageFiller_map" alt=""/>
+  <map id="Common.UI.ImageFiller_map" name="Common.UI.ImageFiller_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="151,0,292,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -133,7 +143,18 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/df7/_image_filler_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d5/df7/_image_filler_8cs_source.html">ImageFiller.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (isRegistered) Unregister();</div>
+<div class="line"><span class="lineno">   25</span>            </div>
+<div class="line"><span class="lineno">   26</span>            TargetProgress   = targetProgress;</div>
+<div class="line"><span class="lineno">   27</span>            MaxGetter        = maxGetter;</div>
+<div class="line"><span class="lineno">   28</span>            image.fillAmount = TargetProgress.Value / MaxGetter.Invoke();</div>
+<div class="line"><span class="lineno">   29</span>            progressKey      = GetInstanceID().ToString();</div>
+<div class="line"><span class="lineno">   30</span>            isRegistered     = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   31</span>            </div>
+<div class="line"><span class="lineno">   32</span>            targetProgress.AddEvent(progressKey, TryUpdateImage);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a00a5223b6cdaf7e15607728c4f56a999" name="a00a5223b6cdaf7e15607728c4f56a999"></a>
@@ -152,7 +173,17 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/df7/_image_filler_8cs_source.html#l00035">35</a> of file <a class="el" href="../../d5/df7/_image_filler_8cs_source.html">ImageFiller.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (isRegistered) Unregister();</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>            MaxGetter        = () =&gt; timeTrigger.Duration;</div>
+<div class="line"><span class="lineno">   40</span>            image.fillAmount = timeTrigger.Progress.Value / MaxGetter.Invoke();</div>
+<div class="line"><span class="lineno">   41</span>            progressKey      = GetInstanceID().ToString();</div>
+<div class="line"><span class="lineno">   42</span>            isRegistered     = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>            timeTrigger.Progress.AddEvent(progressKey, TryUpdateImageByTimeTrigger);</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afa5b926ba7710d7414badc5cdb6e224f" name="afa5b926ba7710d7414badc5cdb6e224f"></a>
@@ -171,7 +202,19 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/df7/_image_filler_8cs_source.html#l00047">47</a> of file <a class="el" href="../../d5/df7/_image_filler_8cs_source.html">ImageFiller.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            isRegistered     = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   50</span>            image.fillAmount = 0f;</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">if</span> (updateTween is not <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   53</span>            {</div>
+<div class="line"><span class="lineno">   54</span>                updateTween.Kill();</div>
+<div class="line"><span class="lineno">   55</span>                updateTween = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   56</span>            }</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>            TargetProgress?.RemoveEvent(progressKey);</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

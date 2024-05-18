@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,16 @@ $(function(){initNavTree('d4/dd0/class_common_1_1_characters_1_1_enemies_1_1_fie
   <div class="headertitle"><div class="title">Common.Characters.Enemies.Fiends.FiendLevel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Enemies.Fiends.FiendLevel:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/dd0/class_common_1_1_characters_1_1_enemies_1_1_fiends_1_1_fiend_level.png" usemap="#Common.Characters.Enemies.Fiends.FiendLevel_map" alt=""/>
+  <map id="Common.Characters.Enemies.Fiends.FiendLevel_map" name="Common.Characters.Enemies.Fiends.FiendLevel_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="376,0,742,24"/>
+<area href="../../da/d69/class_common_1_1_characters_1_1_enemies_1_1_fiends_1_1_levels_1_1_pawn_of_pain_level.html" alt="Common.Characters.Enemies.Fiends.Levels.PawnOfPainLevel" shape="rect" coords="188,112,554,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -147,7 +158,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d6d/_fiend_level_8cs_source.html#l00040">40</a> of file <a class="el" href="../../dc/d6d/_fiend_level_8cs_source.html">FiendLevel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a> = fiend;</div>
+<div class="line"><span class="lineno">   43</span>            <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a>.StatTable.Add(levelUpHealthStat);</div>
+<div class="line"><span class="lineno">   44</span>            <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a>.StatTable.Add(levelUpPowerStat);</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend_html"><div class="ttname"><a href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Common.Characters.NonPlayers.Fiends.Fiend</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/de0/_fiend_8cs_source.html#l00008">Fiend.cs:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -245,7 +262,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d6d/_fiend_level_8cs_source.html#l00034">34</a> of file <a class="el" href="../../dc/d6d/_fiend_level_8cs_source.html">FiendLevel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9f8ec47819695a178e889300844dcef2" name="a9f8ec47819695a178e889300844dcef2"></a>
@@ -293,7 +311,25 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d6d/_fiend_level_8cs_source.html#l00014">14</a> of file <a class="el" href="../../dc/d6d/_fiend_level_8cs_source.html">FiendLevel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keyword">get</span> =&gt; level;</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   18</span>            {</div>
+<div class="line"><span class="lineno">   19</span>                <span class="keywordflow">if</span> (level - value == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>                level                   =  value;</div>
+<div class="line"><span class="lineno">   22</span>                levelUpHealthStat.Value *= level;</div>
+<div class="line"><span class="lineno">   23</span>                levelUpPowerStat.Value  *= level;</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a> is not <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   26</span>                {</div>
+<div class="line"><span class="lineno">   27</span>                    var maxFixHp = <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a>.StatTable[StatType.HitPoints];</div>
+<div class="line"><span class="lineno">   28</span>                    </div>
+<div class="line"><span class="lineno">   29</span>                    <a class="code hl_class" href="../../d8/d0a/class_common_1_1_characters_1_1_non_players_1_1_fiends_1_1_fiend.html">Fiend</a>.HitPoints.SetValueWithMax(maxFixHp + levelUpHealthStat.Value);</div>
+<div class="line"><span class="lineno">   30</span>                }</div>
+<div class="line"><span class="lineno">   31</span>            }</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae204fe9d54dda61784f483a277c62842" name="ae204fe9d54dda61784f483a277c62842"></a>

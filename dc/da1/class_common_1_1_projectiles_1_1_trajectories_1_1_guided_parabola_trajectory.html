@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('dc/da1/class_common_1_1_projectiles_1_1_trajectories_1
   <div class="headertitle"><div class="title">Common.Projectiles.Trajectories.GuidedParabolaTrajectory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Trajectories.GuidedParabolaTrajectory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/da1/class_common_1_1_projectiles_1_1_trajectories_1_1_guided_parabola_trajectory.png" usemap="#Common.Projectiles.Trajectories.GuidedParabolaTrajectory_map" alt=""/>
+  <map id="Common.Projectiles.Trajectories.GuidedParabolaTrajectory_map" name="Common.Projectiles.Trajectories.GuidedParabolaTrajectory_map">
+<area href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html" alt="Common.Projectiles.Trajectory" shape="rect" coords="0,56,347,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -157,7 +167,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d39/_guided_parabola_trajectory_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d6/d39/_guided_parabola_trajectory_8cs_source.html">GuidedParabolaTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            flyingCanceller?.Cancel();</div>
+<div class="line"><span class="lineno">   24</span>            flyingCanceller = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7d80dab2d9be33023fec4169deeb5d50" name="a7d80dab2d9be33023fec4169deeb5d50"></a>
@@ -176,7 +190,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d39/_guided_parabola_trajectory_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d6/d39/_guided_parabola_trajectory_8cs_source.html">GuidedParabolaTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            flyingCanceller = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>            Guided(flyingCanceller).Forget();</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

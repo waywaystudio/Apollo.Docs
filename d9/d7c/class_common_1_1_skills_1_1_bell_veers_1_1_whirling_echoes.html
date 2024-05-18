@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,30 @@ $(function(){initNavTree('d9/d7c/class_common_1_1_skills_1_1_bell_veers_1_1_whir
   <div class="headertitle"><div class="title">Common.Skills.BellVeers.WhirlingEchoes Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.BellVeers.WhirlingEchoes:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/d7c/class_common_1_1_skills_1_1_bell_veers_1_1_whirling_echoes.png" usemap="#Common.Skills.BellVeers.WhirlingEchoes_map" alt=""/>
+  <map id="Common.Skills.BellVeers.WhirlingEchoes_map" name="Common.Skills.BellVeers.WhirlingEchoes_map">
+<area href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html" alt="Common.Skills.SkillBehaviour" shape="rect" coords="606,224,852,248"/>
+<area href="../../d7/d21/interface_common_1_1_i_casting_skill_behaviour.html" alt="Common.ICastingSkillBehaviour" shape="rect" coords="1408,224,1654,248"/>
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="384,168,630,192"/>
+<area href="../../de/de8/interface_common_1_1_i_skill_behaviour.html" alt="Common.ISkillBehaviour" shape="rect" coords="832,168,1078,192"/>
+<area href="../../de/de8/interface_common_1_1_i_skill_behaviour.html" alt="Common.ISkillBehaviour" shape="rect" coords="1408,168,1654,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="384,112,630,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="640,112,886,136"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1024,112,1270,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="1280,112,1526,136"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1536,112,1782,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="256,56,502,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="512,56,758,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="768,56,1014,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1024,56,1270,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1536,56,1782,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="512,0,758,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -237,7 +262,47 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d52/_whirling_echoes_8cs_source.html#l00055">55</a> of file <a class="el" href="../../d1/d52/_whirling_echoes_8cs_source.html">WhirlingEchoes.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            var takers = Character.Detector.GetObjects(detectProperty);</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (takers.IsNullOrEmpty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   60</span>            </div>
+<div class="line"><span class="lineno">   61</span>            takers.Sort(Character.Position, SortingType.DistanceAscending);</div>
+<div class="line"><span class="lineno">   62</span>            </div>
+<div class="line"><span class="lineno">   63</span>            GameObject taker = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (hasSoulBound)</div>
+<div class="line"><span class="lineno">   66</span>            {</div>
+<div class="line"><span class="lineno">   67</span>                <span class="comment">// Find Proper Spectral Spirit</span></div>
+<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">foreach</span> (var obj <span class="keywordflow">in</span> takers)</div>
+<div class="line"><span class="lineno">   69</span>                {</div>
+<div class="line"><span class="lineno">   70</span>                    <span class="keywordflow">if</span> (!IsProperAlly(obj)) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   71</span>                    </div>
+<div class="line"><span class="lineno">   72</span>                    taker = obj;</div>
+<div class="line"><span class="lineno">   73</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   74</span>                }</div>
+<div class="line"><span class="lineno">   75</span>                </div>
+<div class="line"><span class="lineno">   76</span>                <span class="comment">// Prepare ReTargeting for get Random Enemy</span></div>
+<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">if</span> (taker.IsNullOrDestroyed())</div>
+<div class="line"><span class="lineno">   78</span>                {</div>
+<div class="line"><span class="lineno">   79</span>                    takers.RemoveAll(obj =&gt; obj.IsInLayerMask(allyLayerMask));</div>
+<div class="line"><span class="lineno">   80</span>                    </div>
+<div class="line"><span class="lineno">   81</span>                    <span class="keywordflow">if</span> (takers.IsNullOrEmpty())</div>
+<div class="line"><span class="lineno">   82</span>                    {</div>
+<div class="line"><span class="lineno">   83</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   84</span>                    }</div>
+<div class="line"><span class="lineno">   85</span>                }</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (taker.IsNullOrDestroyed())</div>
+<div class="line"><span class="lineno">   89</span>            {</div>
+<div class="line"><span class="lineno">   90</span>                taker = takers.Random();</div>
+<div class="line"><span class="lineno">   91</span>            }</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>            executor.Execute(taker);</div>
+<div class="line"><span class="lineno">   94</span>            effector.Play(taker);</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae79f9f043432361742342d4b91702ad5" name="ae79f9f043432361742342d4b91702ad5"></a>
@@ -266,7 +331,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d52/_whirling_echoes_8cs_source.html#l00038">38</a> of file <a class="el" href="../../d1/d52/_whirling_echoes_8cs_source.html">WhirlingEchoes.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>            allyLayerMask = LayerMask.GetMask(<span class="stringliteral">&quot;Ally&quot;</span>);</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>            Sections</div>
+<div class="line"><span class="lineno">   45</span>                .Add(Section.Active, <span class="stringliteral">&quot;ExecuteOverTime&quot;</span>, ExecuteOverTime)</div>
+<div class="line"><span class="lineno">   46</span>                .Add(Section.Erupt, <span class="stringliteral">&quot;CancelOverTimeTask&quot;</span>, CancelOverTimeTask)</div>
+<div class="line"><span class="lineno">   47</span>                .Add(Section.End, <span class="stringliteral">&quot;ResetCastBoolean&quot;</span>, CancelOverTimeTask)</div>
+<div class="line"><span class="lineno">   48</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;CancelOverTimeTask&quot;</span>, CancelOverTimeTask)</div>
+<div class="line"><span class="lineno">   49</span>                ;</div>
+<div class="line"><span class="lineno">   50</span>           </div>
+<div class="line"><span class="lineno">   51</span>            moveModel.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   52</span>            holdingModel.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -342,7 +422,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d52/_whirling_echoes_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d1/d52/_whirling_echoes_8cs_source.html">WhirlingEchoes.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keyword">get</span> =&gt; countPerSecond; </div>
+<div class="line"><span class="lineno">   26</span>            <span class="keyword">set</span> =&gt; countPerSecond = value;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5dde8699659e86fa363575a861563292" name="a5dde8699659e86fa363575a861563292"></a>
@@ -366,7 +450,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d52/_whirling_echoes_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d1/d52/_whirling_echoes_8cs_source.html">WhirlingEchoes.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keyword">get</span> =&gt; hasSoulBound; </div>
+<div class="line"><span class="lineno">   31</span>            <span class="keyword">set</span> =&gt; hasSoulBound = value;</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a558be5d85d3f51643b837d2bf339817c" name="a558be5d85d3f51643b837d2bf339817c"></a>

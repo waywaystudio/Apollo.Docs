@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('db/da4/class_challenge_1_1_challenge_combat_director.h
   <div class="headertitle"><div class="title">Challenge.ChallengeCombatDirector Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.ChallengeCombatDirector:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/da4/class_challenge_1_1_challenge_combat_director.png" usemap="#Challenge.ChallengeCombatDirector_map" alt=""/>
+  <map id="Challenge.ChallengeCombatDirector_map" name="Challenge.ChallengeCombatDirector_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="228,0,446,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -136,7 +146,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dab/_challenge_combat_director_8cs_source.html#l00048">48</a> of file <a class="el" href="../../d9/dab/_challenge_combat_director_8cs_source.html">ChallengeCombatDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            spiritObjectList.ForEach(Destroy);</div>
+<div class="line"><span class="lineno">   51</span>            spiritObjectList.Clear();</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0272934abe1fb914bc7866f9625277b8" name="a0272934abe1fb914bc7866f9625277b8"></a>
@@ -155,7 +169,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dab/_challenge_combat_director_8cs_source.html#l00029">29</a> of file <a class="el" href="../../d9/dab/_challenge_combat_director_8cs_source.html">ChallengeCombatDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (isInitialized) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   32</span>            </div>
+<div class="line"><span class="lineno">   33</span>            spiritSpawnEvent.Add(<span class="stringliteral">&quot;SetInitialParent&quot;</span>, SetSpiritTransform);</div>
+<div class="line"><span class="lineno">   34</span>            masteryAbility.Initialize();</div>
+<div class="line"><span class="lineno">   35</span>        </div>
+<div class="line"><span class="lineno">   36</span>            isInitialized = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -138,7 +139,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d72/_snare_deployer_8cs_source.html#l00034">34</a> of file <a class="el" href="../../d3/d72/_snare_deployer_8cs_source.html">SnareDeployer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (snare.IsNullOrDestroyed()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   37</span>            </div>
+<div class="line"><span class="lineno">   38</span>            snare.Sections</div>
+<div class="line"><span class="lineno">   39</span>                 .Remove(Section.Active, <span class="stringliteral">&quot;IsSpawned&quot;</span>)</div>
+<div class="line"><span class="lineno">   40</span>                 ;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa5e366901c0ae4d7cfa636f23ab0e31e" name="aa5e366901c0ae4d7cfa636f23ab0e31e"></a>
@@ -157,7 +165,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d72/_snare_deployer_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d3/d72/_snare_deployer_8cs_source.html">SnareDeployer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            this.snare = snare;</div>
+<div class="line"><span class="lineno">   22</span> </div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">switch</span> (deployType)</div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">case</span> DeployType.Instant : SetInstantDeploy(); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   26</span>                <span class="keywordflow">case</span> DeployType.Timer :   SetTimerDeploy(); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   27</span>            }</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>            snare.Sections</div>
+<div class="line"><span class="lineno">   30</span>                 .Add(Section.Active, <span class="stringliteral">&quot;IsDeployed&quot;</span>, () =&gt; IsDeployed = <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   31</span>                 ;</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -206,7 +227,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d72/_snare_deployer_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d3/d72/_snare_deployer_8cs_source.html">SnareDeployer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -197,7 +198,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01492">1492</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1492</span>{ m_Wrapper = wrapper; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -217,7 +219,83 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01522">1522</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1523</span>        {</div>
+<div class="line"><span class="lineno"> 1524</span>            <span class="keywordflow">if</span> (instance == <span class="keyword">null</span> || m_Wrapper.m_PlayerControlsActionsCallbackInterfaces.Contains(instance)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1525</span>            m_Wrapper.m_PlayerControlsActionsCallbackInterfaces.Add(instance);</div>
+<div class="line"><span class="lineno"> 1526</span>            @Move.started += instance.OnMove;</div>
+<div class="line"><span class="lineno"> 1527</span>            @Move.performed += instance.OnMove;</div>
+<div class="line"><span class="lineno"> 1528</span>            @Move.canceled += instance.OnMove;</div>
+<div class="line"><span class="lineno"> 1529</span>            @Weapon1Attack.started += instance.OnWeapon1Attack;</div>
+<div class="line"><span class="lineno"> 1530</span>            @Weapon1Attack.performed += instance.OnWeapon1Attack;</div>
+<div class="line"><span class="lineno"> 1531</span>            @Weapon1Attack.canceled += instance.OnWeapon1Attack;</div>
+<div class="line"><span class="lineno"> 1532</span>            @Weapon1Special.started += instance.OnWeapon1Special;</div>
+<div class="line"><span class="lineno"> 1533</span>            @Weapon1Special.performed += instance.OnWeapon1Special;</div>
+<div class="line"><span class="lineno"> 1534</span>            @Weapon1Special.canceled += instance.OnWeapon1Special;</div>
+<div class="line"><span class="lineno"> 1535</span>            @Weapon2Attack.started += instance.OnWeapon2Attack;</div>
+<div class="line"><span class="lineno"> 1536</span>            @Weapon2Attack.performed += instance.OnWeapon2Attack;</div>
+<div class="line"><span class="lineno"> 1537</span>            @Weapon2Attack.canceled += instance.OnWeapon2Attack;</div>
+<div class="line"><span class="lineno"> 1538</span>            @Weapon2Special.started += instance.OnWeapon2Special;</div>
+<div class="line"><span class="lineno"> 1539</span>            @Weapon2Special.performed += instance.OnWeapon2Special;</div>
+<div class="line"><span class="lineno"> 1540</span>            @Weapon2Special.canceled += instance.OnWeapon2Special;</div>
+<div class="line"><span class="lineno"> 1541</span>            @Ultimate.started += instance.OnUltimate;</div>
+<div class="line"><span class="lineno"> 1542</span>            @Ultimate.performed += instance.OnUltimate;</div>
+<div class="line"><span class="lineno"> 1543</span>            @Ultimate.canceled += instance.OnUltimate;</div>
+<div class="line"><span class="lineno"> 1544</span>            @Dash.started += instance.OnDash;</div>
+<div class="line"><span class="lineno"> 1545</span>            @Dash.performed += instance.OnDash;</div>
+<div class="line"><span class="lineno"> 1546</span>            @Dash.canceled += instance.OnDash;</div>
+<div class="line"><span class="lineno"> 1547</span>            @Interact.started += instance.OnInteract;</div>
+<div class="line"><span class="lineno"> 1548</span>            @Interact.performed += instance.OnInteract;</div>
+<div class="line"><span class="lineno"> 1549</span>            @Interact.canceled += instance.OnInteract;</div>
+<div class="line"><span class="lineno"> 1550</span>            @Spell.started += instance.OnSpell;</div>
+<div class="line"><span class="lineno"> 1551</span>            @Spell.performed += instance.OnSpell;</div>
+<div class="line"><span class="lineno"> 1552</span>            @Spell.canceled += instance.OnSpell;</div>
+<div class="line"><span class="lineno"> 1553</span>            @Mastery.started += instance.OnMastery;</div>
+<div class="line"><span class="lineno"> 1554</span>            @Mastery.performed += instance.OnMastery;</div>
+<div class="line"><span class="lineno"> 1555</span>            @Mastery.canceled += instance.OnMastery;</div>
+<div class="line"><span class="lineno"> 1556</span>            @Escape.started += instance.OnEscape;</div>
+<div class="line"><span class="lineno"> 1557</span>            @Escape.performed += instance.OnEscape;</div>
+<div class="line"><span class="lineno"> 1558</span>            @Escape.canceled += instance.OnEscape;</div>
+<div class="line"><span class="lineno"> 1559</span>            @Dev0.started += instance.OnDev0;</div>
+<div class="line"><span class="lineno"> 1560</span>            @Dev0.performed += instance.OnDev0;</div>
+<div class="line"><span class="lineno"> 1561</span>            @Dev0.canceled += instance.OnDev0;</div>
+<div class="line"><span class="lineno"> 1562</span>            @Dev1.started += instance.OnDev1;</div>
+<div class="line"><span class="lineno"> 1563</span>            @Dev1.performed += instance.OnDev1;</div>
+<div class="line"><span class="lineno"> 1564</span>            @Dev1.canceled += instance.OnDev1;</div>
+<div class="line"><span class="lineno"> 1565</span>            @Dev2.started += instance.OnDev2;</div>
+<div class="line"><span class="lineno"> 1566</span>            @Dev2.performed += instance.OnDev2;</div>
+<div class="line"><span class="lineno"> 1567</span>            @Dev2.canceled += instance.OnDev2;</div>
+<div class="line"><span class="lineno"> 1568</span>            @Dev3.started += instance.OnDev3;</div>
+<div class="line"><span class="lineno"> 1569</span>            @Dev3.performed += instance.OnDev3;</div>
+<div class="line"><span class="lineno"> 1570</span>            @Dev3.canceled += instance.OnDev3;</div>
+<div class="line"><span class="lineno"> 1571</span>            @Dev4.started += instance.OnDev4;</div>
+<div class="line"><span class="lineno"> 1572</span>            @Dev4.performed += instance.OnDev4;</div>
+<div class="line"><span class="lineno"> 1573</span>            @Dev4.canceled += instance.OnDev4;</div>
+<div class="line"><span class="lineno"> 1574</span>            @Dev5.started += instance.OnDev5;</div>
+<div class="line"><span class="lineno"> 1575</span>            @Dev5.performed += instance.OnDev5;</div>
+<div class="line"><span class="lineno"> 1576</span>            @Dev5.canceled += instance.OnDev5;</div>
+<div class="line"><span class="lineno"> 1577</span>            @Dev6.started += instance.OnDev6;</div>
+<div class="line"><span class="lineno"> 1578</span>            @Dev6.performed += instance.OnDev6;</div>
+<div class="line"><span class="lineno"> 1579</span>            @Dev6.canceled += instance.OnDev6;</div>
+<div class="line"><span class="lineno"> 1580</span>            @Dev7.started += instance.OnDev7;</div>
+<div class="line"><span class="lineno"> 1581</span>            @Dev7.performed += instance.OnDev7;</div>
+<div class="line"><span class="lineno"> 1582</span>            @Dev7.canceled += instance.OnDev7;</div>
+<div class="line"><span class="lineno"> 1583</span>            @Dev8.started += instance.OnDev8;</div>
+<div class="line"><span class="lineno"> 1584</span>            @Dev8.performed += instance.OnDev8;</div>
+<div class="line"><span class="lineno"> 1585</span>            @Dev8.canceled += instance.OnDev8;</div>
+<div class="line"><span class="lineno"> 1586</span>            @Dev9.started += instance.OnDev9;</div>
+<div class="line"><span class="lineno"> 1587</span>            @Dev9.performed += instance.OnDev9;</div>
+<div class="line"><span class="lineno"> 1588</span>            @Dev9.canceled += instance.OnDev9;</div>
+<div class="line"><span class="lineno"> 1589</span>            @Z.started += instance.OnZ;</div>
+<div class="line"><span class="lineno"> 1590</span>            @Z.performed += instance.OnZ;</div>
+<div class="line"><span class="lineno"> 1591</span>            @Z.canceled += instance.OnZ;</div>
+<div class="line"><span class="lineno"> 1592</span>            @X.started += instance.OnX;</div>
+<div class="line"><span class="lineno"> 1593</span>            @X.performed += instance.OnX;</div>
+<div class="line"><span class="lineno"> 1594</span>            @X.canceled += instance.OnX;</div>
+<div class="line"><span class="lineno"> 1595</span>            @C.started += instance.OnC;</div>
+<div class="line"><span class="lineno"> 1596</span>            @C.performed += instance.OnC;</div>
+<div class="line"><span class="lineno"> 1597</span>            @C.canceled += instance.OnC;</div>
+<div class="line"><span class="lineno"> 1598</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae176fd9c690f0b21696a07c2932f334d" name="ae176fd9c690f0b21696a07c2932f334d"></a>
@@ -236,7 +314,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01519">1519</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1519</span>{ Get().Disable(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acd80283eb30ca4ff31f54a072a8852f5" name="acd80283eb30ca4ff31f54a072a8852f5"></a>
@@ -255,7 +334,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01518">1518</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1518</span>{ Get().Enable(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa596e2baad19bf5c38b59f931dee0f05" name="aa596e2baad19bf5c38b59f931dee0f05"></a>
@@ -274,7 +354,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01517">1517</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1517</span>{ <span class="keywordflow">return</span> m_Wrapper.m_PlayerControls; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5e19f075e13e210cedd4218f9691282b" name="a5e19f075e13e210cedd4218f9691282b"></a>
@@ -301,7 +382,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01521">1521</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1521</span>{ <span class="keywordflow">return</span> <span class="keyword">set</span>.Get(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad9f4eb9455cfd5ea14822c219343db14" name="ad9f4eb9455cfd5ea14822c219343db14"></a>
@@ -320,7 +402,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01676">1676</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1677</span>        {</div>
+<div class="line"><span class="lineno"> 1678</span>            <span class="keywordflow">if</span> (m_Wrapper.m_PlayerControlsActionsCallbackInterfaces.Remove(instance))</div>
+<div class="line"><span class="lineno"> 1679</span>                UnregisterCallbacks(instance);</div>
+<div class="line"><span class="lineno"> 1680</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6ea4fe03f6d2c64fe8458221959fbe13" name="a6ea4fe03f6d2c64fe8458221959fbe13"></a>
@@ -339,7 +425,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html#l01682">1682</a> of file <a class="el" href="../../d4/d24/_apollo_input_8cs_source.html">ApolloInput.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno"> 1683</span>        {</div>
+<div class="line"><span class="lineno"> 1684</span>            <span class="keywordflow">foreach</span> (var item <span class="keywordflow">in</span> m_Wrapper.m_PlayerControlsActionsCallbackInterfaces)</div>
+<div class="line"><span class="lineno"> 1685</span>                UnregisterCallbacks(item);</div>
+<div class="line"><span class="lineno"> 1686</span>            m_Wrapper.m_PlayerControlsActionsCallbackInterfaces.Clear();</div>
+<div class="line"><span class="lineno"> 1687</span>            AddCallbacks(instance);</div>
+<div class="line"><span class="lineno"> 1688</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

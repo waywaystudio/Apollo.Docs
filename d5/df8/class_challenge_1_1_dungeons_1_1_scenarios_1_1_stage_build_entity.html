@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -151,7 +152,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html#l00042">42</a> of file <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html">StageBuildEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">return</span> MapPrefabData.GetStagePrefab(RewardProtocol.EndStageType);</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a864fc785f1a0b2d92a8bfde46c19c96e" name="a864fc785f1a0b2d92a8bfde46c19c96e"></a>
@@ -170,7 +174,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html">StageBuildEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (LoadInitialStage)</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                LoadInitialStage = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">return</span> MapPrefabData.GetStagePrefab(StartStageType);</div>
+<div class="line"><span class="lineno">   37</span>            }</div>
+<div class="line"><span class="lineno">   38</span>            </div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">return</span> MapPrefabData.GetStagePrefab(type);</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a51d1ed8dcdd1fb53a7feb88ea41587ca" name="a51d1ed8dcdd1fb53a7feb88ea41587ca"></a>
@@ -189,7 +202,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html">StageBuildEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            RewardSet        = RewardProtocol.Generate();</div>
+<div class="line"><span class="lineno">   25</span>            StartStageType   = RewardProtocol.StartStageType;</div>
+<div class="line"><span class="lineno">   26</span>            LoadInitialStage = StartStageType != StageRoomType.None;</div>
+<div class="line"><span class="lineno">   27</span>            </div>
+<div class="line"><span class="lineno">   28</span>            MapPrefabData.Initialize();</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -247,7 +267,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html#l00017">17</a> of file <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html">StageBuildEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a39253902ee633f88cd2bcfe801cf44ba" name="a39253902ee633f88cd2bcfe801cf44ba"></a>
@@ -271,7 +292,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html">StageBuildEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a61f4a2243489455ee90dde791a0b2370" name="a61f4a2243489455ee90dde791a0b2370"></a>
@@ -319,7 +341,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html">StageBuildEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae45f8a860f1cde1986edab8e01b01a56" name="ae45f8a860f1cde1986edab8e01b01a56"></a>
@@ -343,7 +366,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d9/d7c/_stage_build_entity_8cs_source.html">StageBuildEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

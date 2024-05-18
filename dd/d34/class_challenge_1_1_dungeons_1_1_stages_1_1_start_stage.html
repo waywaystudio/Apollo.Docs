@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,16 @@ $(function(){initNavTree('dd/d34/class_challenge_1_1_dungeons_1_1_stages_1_1_sta
   <div class="headertitle"><div class="title">Challenge.Dungeons.Stages.StartStage Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Dungeons.Stages.StartStage:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/d34/class_challenge_1_1_dungeons_1_1_stages_1_1_start_stage.png" usemap="#Challenge.Dungeons.Stages.StartStage_map" alt=""/>
+  <map id="Challenge.Dungeons.Stages.StartStage_map" name="Challenge.Dungeons.Stages.StartStage_map">
+<area href="../../d7/d31/class_challenge_1_1_dungeons_1_1_dungeon_stage.html" alt="Challenge.Dungeons.DungeonStage" shape="rect" coords="122,56,356,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="244,0,478,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -175,7 +186,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d31/class_challenge_1_1_dungeons_1_1_dungeon_stage.html">Challenge.Dungeons.DungeonStage</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d4d/_start_stage_8cs_source.html#l00008">8</a> of file <a class="el" href="../../d5/d4d/_start_stage_8cs_source.html">StartStage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            base.Initialize(stageDirector);</div>
+<div class="line"><span class="lineno">   11</span>                    </div>
+<div class="line"><span class="lineno">   12</span>            <span class="comment">/* Assemble Sequences */</span></div>
+<div class="line"><span class="lineno">   13</span>            scenario[DungeonSectionType.Initial].Sections.Add(Section.Complete, <span class="stringliteral">&quot;StartRewardSequence&quot;</span>, scenario[DungeonSectionType.Reward].Active);</div>
+<div class="line"><span class="lineno">   14</span>            scenario[DungeonSectionType.Reward].Sections.Add(Section.Complete, <span class="stringliteral">&quot;StartSelectSequence&quot;</span>, scenario[DungeonSectionType.Select].Active);</div>
+<div class="line"><span class="lineno">   15</span>            scenario[DungeonSectionType.Select].Sections.Add(Section.Complete, <span class="stringliteral">&quot;StartDisposeSequence&quot;</span>, scenario[DungeonSectionType.Dispose].Active);</div>
+<div class="line"><span class="lineno">   16</span> </div>
+<div class="line"><span class="lineno">   17</span>            <span class="comment">// Note.Initial Stage는 Trap이 없겠지만 혹시...</span></div>
+<div class="line"><span class="lineno">   18</span>            scenario[DungeonSectionType.Reward].Sections</div>
+<div class="line"><span class="lineno">   19</span>                                               .Add(Section.Active, <span class="stringliteral">&quot;DeActiveEnvironment&quot;</span>, Map.DeActiveTraps)</div>
+<div class="line"><span class="lineno">   20</span>                                               ;</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

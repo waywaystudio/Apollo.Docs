@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('db/d75/class_common_1_1_traps_1_1_trap_spawn_event.htm
   <div class="headertitle"><div class="title">Common.Traps.TrapSpawnEvent Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Traps.TrapSpawnEvent:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/d75/class_common_1_1_traps_1_1_trap_spawn_event.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -138,7 +145,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SpawnedListIterate</b
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d21/_trap_spawn_event_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d3/d21/_trap_spawn_event_8cs_source.html">TrapSpawnEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            OnSpawned.Add(key, action);</div>
+<div class="line"><span class="lineno">   16</span>            SpawnedList.ForEach(action);</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a30270a86739cbdae1f10b0e6a65e0ba3" name="a30270a86739cbdae1f10b0e6a65e0ba3"></a>
@@ -157,7 +168,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SpawnedListIterate</b
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d21/_trap_spawn_event_8cs_source.html#l00037">37</a> of file <a class="el" href="../../d3/d21/_trap_spawn_event_8cs_source.html">TrapSpawnEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            OnSpawned.Clear();</div>
+<div class="line"><span class="lineno">   40</span>            SpawnedList.Clear();</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aad592b122a7e1677fc66ea0823196b39" name="aad592b122a7e1677fc66ea0823196b39"></a>
@@ -176,7 +191,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SpawnedListIterate</b
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d21/_trap_spawn_event_8cs_source.html#l00029">29</a> of file <a class="el" href="../../d3/d21/_trap_spawn_event_8cs_source.html">TrapSpawnEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            OnSpawned.Invoke(trap);</div>
+<div class="line"><span class="lineno">   32</span>            SpawnedList.AddUniquely(trap);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab772041ec9cc93b4bd340816ba04c771" name="ab772041ec9cc93b4bd340816ba04c771"></a>
@@ -199,7 +218,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SpawnedListIterate</b
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d21/_trap_spawn_event_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d3/d21/_trap_spawn_event_8cs_source.html">TrapSpawnEvent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> (removeAction is not <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                SpawnedList?.ForEach(removeAction);</div>
+<div class="line"><span class="lineno">   24</span>            }</div>
+<div class="line"><span class="lineno">   25</span>            </div>
+<div class="line"><span class="lineno">   26</span>            OnSpawned.Remove(key);</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

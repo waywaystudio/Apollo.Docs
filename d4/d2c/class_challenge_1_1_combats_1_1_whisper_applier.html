@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier
   <div class="headertitle"><div class="title">Challenge.Combats.WhisperApplier Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Combats.WhisperApplier:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/d2c/class_challenge_1_1_combats_1_1_whisper_applier.png" usemap="#Challenge.Combats.WhisperApplier_map" alt=""/>
+  <map id="Challenge.Combats.WhisperApplier_map" name="Challenge.Combats.WhisperApplier_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="0,0,212,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -139,7 +149,25 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d40/_whisper_applier_8cs_source.html#l00028">28</a> of file <a class="el" href="../../db/d40/_whisper_applier_8cs_source.html">WhisperApplier.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="comment">// List.Clear();</span></div>
+<div class="line"><span class="lineno">   31</span>            <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   32</span>            <span class="comment">// // KarmaCode = 31 / Tier / Type / Index</span></div>
+<div class="line"><span class="lineno">   33</span>            <span class="comment">// DataIndex.None.Iterate(index =&gt;</span></div>
+<div class="line"><span class="lineno">   34</span>            <span class="comment">// {</span></div>
+<div class="line"><span class="lineno">   35</span>            <span class="comment">//     if (index.GetPrimeBar() != (int)DataIndex.Whisper) return;</span></div>
+<div class="line"><span class="lineno">   36</span>            <span class="comment">//     </span></div>
+<div class="line"><span class="lineno">   37</span>            <span class="comment">//     var applierEntity = new WhisperApplierEntity</span></div>
+<div class="line"><span class="lineno">   38</span>            <span class="comment">//     {</span></div>
+<div class="line"><span class="lineno">   39</span>            <span class="comment">//         WhisperCode   = index,</span></div>
+<div class="line"><span class="lineno">   40</span>            <span class="comment">//         Description = Database.WhisperSheetData(index).Description,</span></div>
+<div class="line"><span class="lineno">   41</span>            <span class="comment">//         Has         = false,</span></div>
+<div class="line"><span class="lineno">   42</span>            <span class="comment">//     };</span></div>
+<div class="line"><span class="lineno">   43</span>            <span class="comment">//     </span></div>
+<div class="line"><span class="lineno">   44</span>            <span class="comment">//     List.Add(applierEntity);</span></div>
+<div class="line"><span class="lineno">   45</span>            <span class="comment">// });</span></div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af0cf72a3b0cc4da5a79f4e7bd97e06fc" name="af0cf72a3b0cc4da5a79f4e7bd97e06fc"></a>
@@ -158,7 +186,16 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d40/_whisper_applier_8cs_source.html#l00014">14</a> of file <a class="el" href="../../db/d40/_whisper_applier_8cs_source.html">WhisperApplier.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            List.ForEach(applier =&gt;</div>
+<div class="line"><span class="lineno">   17</span>            {</div>
+<div class="line"><span class="lineno">   18</span>                <span class="keywordflow">if</span> (applier.Has)</div>
+<div class="line"><span class="lineno">   19</span>                {</div>
+<div class="line"><span class="lineno">   20</span>                    applier.Inject();</div>
+<div class="line"><span class="lineno">   21</span>                }</div>
+<div class="line"><span class="lineno">   22</span>            });</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

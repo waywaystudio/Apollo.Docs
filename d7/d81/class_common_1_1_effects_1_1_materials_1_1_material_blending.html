@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d7/d81/class_common_1_1_effects_1_1_materials_1_1_mate
   <div class="headertitle"><div class="title">Common.Effects.Materials.MaterialBlending Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Effects.Materials.MaterialBlending:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/d81/class_common_1_1_effects_1_1_materials_1_1_material_blending.png" usemap="#Common.Effects.Materials.MaterialBlending_map" alt=""/>
+  <map id="Common.Effects.Materials.MaterialBlending_map" name="Common.Effects.Materials.MaterialBlending_map">
+<area href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html" alt="Common.Effects.EffectBehaviour" shape="rect" coords="0,56,258,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -198,7 +208,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html">Common.Effects.EffectBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d83/_material_blending_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d7/d83/_material_blending_8cs_source.html">MaterialBlending.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            base.Initialize(sequencer);</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>            blendMaterial           = <span class="keyword">new</span> Material(originalBlendMaterial);</div>
+<div class="line"><span class="lineno">   23</span>            overlayRenderer.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   24</span>            endAlpha                = Mathf.Min(endAlpha, 1f);</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a35b5b97a9b93b4c8bbfb4b8f788a6785" name="a35b5b97a9b93b4c8bbfb4b8f788a6785"></a>
@@ -225,7 +242,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d83/_material_blending_8cs_source.html#l00027">27</a> of file <a class="el" href="../../d7/d83/_material_blending_8cs_source.html">MaterialBlending.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            Blending();</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a52a082ca01542644e4d710c3c7cbc19d" name="a52a082ca01542644e4d710c3c7cbc19d"></a>
@@ -252,7 +272,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d83/_material_blending_8cs_source.html#l00032">32</a> of file <a class="el" href="../../d7/d83/_material_blending_8cs_source.html">MaterialBlending.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            var endColor = blendMaterial.color;</div>
+<div class="line"><span class="lineno">   35</span>            </div>
+<div class="line"><span class="lineno">   36</span>            endColor.a                     = 1f;</div>
+<div class="line"><span class="lineno">   37</span>            blendMaterial.color            = endColor;</div>
+<div class="line"><span class="lineno">   38</span>            overlayRenderer.material.color = endColor;</div>
+<div class="line"><span class="lineno">   39</span>            overlayRenderer.enabled        = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>            ReleaseBlending();</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('dc/d9a/class_common_1_1_masteries_1_1_silk_strings_1_1
   <div class="headertitle"><div class="title">Common.Masteries.SilkStrings.SilkUltimate Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.SilkStrings.SilkUltimate:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/d9a/class_common_1_1_masteries_1_1_silk_strings_1_1_silk_ultimate.png" usemap="#Common.Masteries.SilkStrings.SilkUltimate_map" alt=""/>
+  <map id="Common.Masteries.SilkStrings.SilkUltimate_map" name="Common.Masteries.SilkStrings.SilkUltimate_map">
+<area href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html" alt="Common.Masteries.Mastery" shape="rect" coords="259,56,508,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="259,0,508,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="518,0,767,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -206,7 +218,12 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/dc4/_silk_ultimate_8cs_source.html#l00020">20</a> of file <a class="el" href="../../db/dc4/_silk_ultimate_8cs_source.html">SilkUltimate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            RemoveSilkStrings(dred);</div>
+<div class="line"><span class="lineno">   23</span>            </div>
+<div class="line"><span class="lineno">   24</span>            dred.CombatActionSet.UltimateWeaponType = WeaponType.None;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a23cfaa82d23e97eafce5bdbc4c1e8ee9" name="a23cfaa82d23e97eafce5bdbc4c1e8ee9"></a>
@@ -233,7 +250,13 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/dc4/_silk_ultimate_8cs_source.html#l00012">12</a> of file <a class="el" href="../../db/dc4/_silk_ultimate_8cs_source.html">SilkUltimate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            AddSilkStrings(dred);</div>
+<div class="line"><span class="lineno">   15</span>            </div>
+<div class="line"><span class="lineno">   16</span>            dred.CombatActionSet.UltimateWeaponType = silkStringsWeaponType;</div>
+<div class="line"><span class="lineno">   17</span>            dred.CombatActionSet.ChangeSkill(WeaponActionSlotType.Ultimate, silkStringsWeaponType, thousandNeedleCode);</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1f244aa42c085923b4089d6960a2a161" name="a1f244aa42c085923b4089d6960a2a161"></a>
@@ -260,7 +283,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/dc4/_silk_ultimate_8cs_source.html#l00027">27</a> of file <a class="el" href="../../db/dc4/_silk_ultimate_8cs_source.html">SilkUltimate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{ }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

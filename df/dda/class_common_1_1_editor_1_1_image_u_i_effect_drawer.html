@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('df/dda/class_common_1_1_editor_1_1_image_u_i_effect_dr
   <div class="headertitle"><div class="title">Common.Editor.ImageUIEffectDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Editor.ImageUIEffectDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/dda/class_common_1_1_editor_1_1_image_u_i_effect_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -134,7 +141,116 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d92/_u_i_effect_behaviour_drawer_8cs_source.html#l00044">44</a> of file <a class="el" href="../../d9/d92/_u_i_effect_behaviour_drawer_8cs_source.html">UIEffectBehaviourDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            var alphaTweenGroup = <span class="keyword">new</span> FoldoutGroupAttribute(<span class="stringliteral">&quot;AlphaTween&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   47</span>            var colorTweenGroup = <span class="keyword">new</span> FoldoutGroupAttribute(<span class="stringliteral">&quot;ColorTween&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   48</span>            var fillTweenGroup = <span class="keyword">new</span> FoldoutGroupAttribute(<span class="stringliteral">&quot;FillTween&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   49</span>            </div>
+<div class="line"><span class="lineno">   50</span>            var alphaAble = <span class="keyword">new</span> EnableIfAttribute(<span class="stringliteral">&quot;@this.doAlphaTween&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span>            var colorAble = <span class="keyword">new</span> EnableIfAttribute(<span class="stringliteral">&quot;@this.doColorTween&quot;</span>);</div>
+<div class="line"><span class="lineno">   52</span>            var fillAble = <span class="keyword">new</span> EnableIfAttribute(<span class="stringliteral">&quot;@this.doFillTween&quot;</span>);</div>
+<div class="line"><span class="lineno">   53</span>            </div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;targetImage&quot;</span>)</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   57</span>                attributes.Add(<span class="keyword">new</span> PreviewFieldAttribute</div>
+<div class="line"><span class="lineno">   58</span>                {</div>
+<div class="line"><span class="lineno">   59</span>                    Alignment = ObjectFieldAlignment.Center,</div>
+<div class="line"><span class="lineno">   60</span>                    Height = 256,</div>
+<div class="line"><span class="lineno">   61</span>                });</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>            </div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;doAlphaTween&quot;</span>)</div>
+<div class="line"><span class="lineno">   65</span>            {</div>
+<div class="line"><span class="lineno">   66</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span>            </div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;alphaDuration&quot;</span>)</div>
+<div class="line"><span class="lineno">   70</span>            {</div>
+<div class="line"><span class="lineno">   71</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 60));</div>
+<div class="line"><span class="lineno">   72</span>                attributes.Add(alphaAble);</div>
+<div class="line"><span class="lineno">   73</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">   74</span>            }</div>
+<div class="line"><span class="lineno">   75</span>            </div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;startAlpha&quot;</span>)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                attributes.Add(alphaAble);</div>
+<div class="line"><span class="lineno">   79</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span>            </div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;endAlpha&quot;</span>)</div>
+<div class="line"><span class="lineno">   83</span>            {</div>
+<div class="line"><span class="lineno">   84</span>                attributes.Add(alphaAble);</div>
+<div class="line"><span class="lineno">   85</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>            </div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;alphaEase&quot;</span>)</div>
+<div class="line"><span class="lineno">   89</span>            {</div>
+<div class="line"><span class="lineno">   90</span>                attributes.Add(alphaAble);</div>
+<div class="line"><span class="lineno">   91</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">   92</span>            }</div>
+<div class="line"><span class="lineno">   93</span>            <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;doColorTween&quot;</span>)</div>
+<div class="line"><span class="lineno">   95</span>            {</div>
+<div class="line"><span class="lineno">   96</span>                attributes.Add(colorTweenGroup);</div>
+<div class="line"><span class="lineno">   97</span>            }</div>
+<div class="line"><span class="lineno">   98</span>            </div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;colorDuration&quot;</span>)</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 60));</div>
+<div class="line"><span class="lineno">  102</span>                attributes.Add(colorAble);</div>
+<div class="line"><span class="lineno">  103</span>                attributes.Add(colorTweenGroup);</div>
+<div class="line"><span class="lineno">  104</span>            }</div>
+<div class="line"><span class="lineno">  105</span>            </div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;startColor&quot;</span>)</div>
+<div class="line"><span class="lineno">  107</span>            {</div>
+<div class="line"><span class="lineno">  108</span>                attributes.Add(colorAble);</div>
+<div class="line"><span class="lineno">  109</span>                attributes.Add(colorTweenGroup);</div>
+<div class="line"><span class="lineno">  110</span>            }</div>
+<div class="line"><span class="lineno">  111</span>            </div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;endColor&quot;</span>)</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                attributes.Add(colorAble);</div>
+<div class="line"><span class="lineno">  115</span>                attributes.Add(colorTweenGroup);</div>
+<div class="line"><span class="lineno">  116</span>            }</div>
+<div class="line"><span class="lineno">  117</span>            </div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;colorEase&quot;</span>)</div>
+<div class="line"><span class="lineno">  119</span>            {</div>
+<div class="line"><span class="lineno">  120</span>                attributes.Add(colorAble);</div>
+<div class="line"><span class="lineno">  121</span>                attributes.Add(colorTweenGroup);</div>
+<div class="line"><span class="lineno">  122</span>            }</div>
+<div class="line"><span class="lineno">  123</span>            <span class="comment">//</span></div>
+<div class="line"><span class="lineno">  124</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;doFillTween&quot;</span>)</div>
+<div class="line"><span class="lineno">  125</span>            {</div>
+<div class="line"><span class="lineno">  126</span>                attributes.Add(fillTweenGroup);</div>
+<div class="line"><span class="lineno">  127</span>            }</div>
+<div class="line"><span class="lineno">  128</span>            </div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;fillDuration&quot;</span>)</div>
+<div class="line"><span class="lineno">  130</span>            {</div>
+<div class="line"><span class="lineno">  131</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 60));</div>
+<div class="line"><span class="lineno">  132</span>                attributes.Add(fillAble);</div>
+<div class="line"><span class="lineno">  133</span>                attributes.Add(fillTweenGroup);</div>
+<div class="line"><span class="lineno">  134</span>            }</div>
+<div class="line"><span class="lineno">  135</span>            </div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;startFillAmount&quot;</span>)</div>
+<div class="line"><span class="lineno">  137</span>            {</div>
+<div class="line"><span class="lineno">  138</span>                attributes.Add(fillAble);</div>
+<div class="line"><span class="lineno">  139</span>                attributes.Add(fillTweenGroup);</div>
+<div class="line"><span class="lineno">  140</span>            }</div>
+<div class="line"><span class="lineno">  141</span>            </div>
+<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;endFillAmount&quot;</span>)</div>
+<div class="line"><span class="lineno">  143</span>            {</div>
+<div class="line"><span class="lineno">  144</span>                attributes.Add(fillAble);</div>
+<div class="line"><span class="lineno">  145</span>                attributes.Add(fillTweenGroup);</div>
+<div class="line"><span class="lineno">  146</span>            }</div>
+<div class="line"><span class="lineno">  147</span>            </div>
+<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;fillEase&quot;</span>)</div>
+<div class="line"><span class="lineno">  149</span>            {</div>
+<div class="line"><span class="lineno">  150</span>                attributes.Add(fillAble);</div>
+<div class="line"><span class="lineno">  151</span>                attributes.Add(fillTweenGroup);</div>
+<div class="line"><span class="lineno">  152</span>            }</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

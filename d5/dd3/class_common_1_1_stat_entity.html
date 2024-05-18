@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -151,7 +152,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d3b/_stat_entity_8cs_source.html#l00031">31</a> of file <a class="el" href="../../df/d3b/_stat_entity_8cs_source.html">StatEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>: <span class="keyword">this</span>(reference.statType, reference.StatKey, reference.Value) { }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac960cb7b045c0e3623ae0c15b21d559f" name="ac960cb7b045c0e3623ae0c15b21d559f"></a>
@@ -179,7 +181,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d3b/_stat_entity_8cs_source.html#l00032">32</a> of file <a class="el" href="../../df/d3b/_stat_entity_8cs_source.html">StatEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            this.statType = statType;</div>
+<div class="line"><span class="lineno">   35</span>            this.statKey  = statKey;</div>
+<div class="line"><span class="lineno">   36</span>            this.value    = value;</div>
+<div class="line"><span class="lineno">   37</span>            </div>
+<div class="line"><span class="lineno">   38</span>            Condition      = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/db1/class_condition_table.html">ConditionTable</a>();</div>
+<div class="line"><span class="lineno">   39</span>            onValueChanged = <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;float&gt;</a>();</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="ttc" id="aclass_action_table_html"><div class="ttname"><a href="../../db/dcc/class_action_table.html">ActionTable</a></div><div class="ttdoc">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00067">ActionTable.cs:68</a></div></div>
+<div class="ttc" id="aclass_condition_table_html"><div class="ttname"><a href="../../dc/db1/class_condition_table.html">ConditionTable</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6d/_condition_table_8cs_source.html#l00076">ConditionTable.cs:77</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -203,7 +215,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d3b/_stat_entity_8cs_source.html#l00043">43</a> of file <a class="el" href="../../df/d3b/_stat_entity_8cs_source.html">StatEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (Condition.IsNullOrDestroyed()) Condition = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/db1/class_condition_table.html">ConditionTable</a>();</div>
+<div class="line"><span class="lineno">   46</span>            </div>
+<div class="line"><span class="lineno">   47</span>            Condition.Add(key, condition);</div>
+<div class="line"><span class="lineno">   48</span>        } </div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -325,7 +342,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d3b/_stat_entity_8cs_source.html#l00018">18</a> of file <a class="el" href="../../df/d3b/_stat_entity_8cs_source.html">StatEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span> =&gt; statKey; <span class="keyword">set</span> =&gt; statKey = value; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab459e0a854519498145554eba1e04ef9" name="ab459e0a854519498145554eba1e04ef9"></a>
@@ -373,7 +391,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d3b/_stat_entity_8cs_source.html#l00019">19</a> of file <a class="el" href="../../df/d3b/_stat_entity_8cs_source.html">StatEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keyword">get</span> =&gt; Condition is <span class="keyword">null</span> || Condition.IsAllTrue ? value : 0f;</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                this.value = value;</div>
+<div class="line"><span class="lineno">   25</span>                OnValueChanged?.Invoke(this.value);</div>
+<div class="line"><span class="lineno">   26</span>            }</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

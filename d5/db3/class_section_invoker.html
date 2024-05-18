@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -205,7 +206,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d14/_section_invoker_8cs_source.html#l00013">13</a> of file <a class="el" href="../../de/d14/_section_invoker_8cs_source.html">SectionInvoker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        IsEnd    = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   16</span>        IsActive = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   17</span>        </div>
+<div class="line"><span class="lineno">   18</span>        Sequence[Section.Active].Invoke();</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>        <span class="comment">// Handle Active Just once and than disappear Action.</span></div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (Sequence.Table.Remove(Section.ActiveOnce, out var onceAction))</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            onceAction.Invoke();</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="line"><span class="lineno">   25</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa26adf36e80006bc7458495a349c3b7e" name="aa26adf36e80006bc7458495a349c3b7e"></a>
@@ -224,7 +237,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d14/_section_invoker_8cs_source.html#l00027">27</a> of file <a class="el" href="../../de/d14/_section_invoker_8cs_source.html">SectionInvoker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        IsActive = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   30</span>        </div>
+<div class="line"><span class="lineno">   31</span>        Sequence[Section.Cancel].Invoke();</div>
+<div class="line"><span class="lineno">   32</span>        End();</div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a255a206040518c3d4dbaaaa6b643096a" name="a255a206040518c3d4dbaaaa6b643096a"></a>
@@ -243,7 +262,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d14/_section_invoker_8cs_source.html#l00035">35</a> of file <a class="el" href="../../de/d14/_section_invoker_8cs_source.html">SectionInvoker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        IsActive = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   38</span>        </div>
+<div class="line"><span class="lineno">   39</span>        Sequence[Section.Complete].Invoke();</div>
+<div class="line"><span class="lineno">   40</span>        End();</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6062e5e18b03eb514b2fde87721fa690" name="a6062e5e18b03eb514b2fde87721fa690"></a>
@@ -262,7 +287,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d14/_section_invoker_8cs_source.html#l00050">50</a> of file <a class="el" href="../../de/d14/_section_invoker_8cs_source.html">SectionInvoker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        IsActive = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   53</span>        IsEnd    = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   54</span>        </div>
+<div class="line"><span class="lineno">   55</span>        Sequence[Section.Dispose].Invoke();</div>
+<div class="line"><span class="lineno">   56</span>        Sequence.Clear();</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a95765ea8b66cca3b5b80d66f6b54c4fc" name="a95765ea8b66cca3b5b80d66f6b54c4fc"></a>
@@ -281,7 +313,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d14/_section_invoker_8cs_source.html#l00043">43</a> of file <a class="el" href="../../de/d14/_section_invoker_8cs_source.html">SectionInvoker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        IsEnd = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   46</span>        </div>
+<div class="line"><span class="lineno">   47</span>        Sequence[Section.End].Invoke();</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -355,7 +392,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d14/_section_invoker_8cs_source.html#l00009">9</a> of file <a class="el" href="../../de/d14/_section_invoker_8cs_source.html">SectionInvoker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>{ <span class="keyword">get</span>; <span class="keyword">protected</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab08def51d0ec9f00a78b7d4d121e522e" name="ab08def51d0ec9f00a78b7d4d121e522e"></a>
@@ -379,7 +417,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d14/_section_invoker_8cs_source.html#l00010">10</a> of file <a class="el" href="../../de/d14/_section_invoker_8cs_source.html">SectionInvoker.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{ <span class="keyword">get</span>; <span class="keyword">protected</span> <span class="keyword">set</span>; } = <span class="keyword">true</span>;</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a83d7e4fcadbb93ab99ac151eb30966ad" name="a83d7e4fcadbb93ab99ac151eb30966ad"></a>

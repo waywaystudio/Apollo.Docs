@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('d4/d6a/class_common_1_1_masteries_1_1_bell_veer_1_1_so
   <div class="headertitle"><div class="title">Common.Masteries.BellVeer.SoulBoundHealing Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.BellVeer.SoulBoundHealing:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/d6a/class_common_1_1_masteries_1_1_bell_veer_1_1_soul_bound_healing.png" usemap="#Common.Masteries.BellVeer.SoulBoundHealing_map" alt=""/>
+  <map id="Common.Masteries.BellVeer.SoulBoundHealing_map" name="Common.Masteries.BellVeer.SoulBoundHealing_map">
+<area href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html" alt="Common.Masteries.Mastery" shape="rect" coords="290,56,570,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="290,0,570,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="580,0,860,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -206,7 +218,18 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db8/_soul_bound_healing_8cs_source.html#l00031">31</a> of file <a class="el" href="../../da/db8/_soul_bound_healing_8cs_source.html">SoulBoundHealing.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            RemoveSpectralSpiritCount(dred);</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (whirlingEchoes.IsNullOrDestroyed()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   36</span>            </div>
+<div class="line"><span class="lineno">   37</span>            whirlingEchoes.DetectProperty.RemoveLayer(allyLayerMask);</div>
+<div class="line"><span class="lineno">   38</span>            whirlingEchoes.HasSoulBound = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   39</span>            </div>
+<div class="line"><span class="lineno">   40</span>            projectileSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a9949ebd2ab1adcb67a2e7b3b53c93cca">Remove</a>(echoProjectileCode, <span class="stringliteral">&quot;AddAllyLayer&quot;</span>, RemoveSummonLayer);</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_spawn_event_table_html_a9949ebd2ab1adcb67a2e7b3b53c93cca"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a9949ebd2ab1adcb67a2e7b3b53c93cca">Common.SpawnEventTable.Remove</a></div><div class="ttdeci">void Remove(DataIndex dataIndex, string spawnActionKey, Action&lt; T &gt; callback=null)</div><div class="ttdoc">Remove Specific Target Spawn Event.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/da4/_spawn_event_table_8cs_source.html#l00081">SpawnEventTable.cs:81</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae40ac80aeb715e8df503123b544b40c0" name="ae40ac80aeb715e8df503123b544b40c0"></a>
@@ -233,7 +256,17 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db8/_soul_bound_healing_8cs_source.html#l00020">20</a> of file <a class="el" href="../../da/db8/_soul_bound_healing_8cs_source.html">SoulBoundHealing.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            AddSpectralSpiritCount(dred);</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>            whirlingEchoes = dred.Skills.WhirlingEchoes;</div>
+<div class="line"><span class="lineno">   25</span>            whirlingEchoes.DetectProperty.AddLayer(allyLayerMask);</div>
+<div class="line"><span class="lineno">   26</span>            whirlingEchoes.HasSoulBound = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   27</span>            </div>
+<div class="line"><span class="lineno">   28</span>            projectileSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Add</a>(echoProjectileCode, <span class="stringliteral">&quot;AddAllyLayer&quot;</span>, AddSummonLayer);</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_spawn_event_table_html_ac8c1e472bcbad1c5493cff1ec02b1a98"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Common.SpawnEventTable.Add</a></div><div class="ttdeci">void Add(DataIndex dataIndex, string spawnActionKey, Action action)</div><div class="ttdoc">Add Specific Target Spawn event.</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a16db41bc417ebbc66796256ffefb47a2" name="a16db41bc417ebbc66796256ffefb47a2"></a>
@@ -260,7 +293,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/db8/_soul_bound_healing_8cs_source.html#l00043">43</a> of file <a class="el" href="../../da/db8/_soul_bound_healing_8cs_source.html">SoulBoundHealing.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{ }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

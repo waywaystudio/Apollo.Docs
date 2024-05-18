@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,17 @@ $(function(){initNavTree('dd/dd3/class_lobby_1_1_camps_1_1_scenarios_1_1_dispose
   <div class="headertitle"><div class="title">Lobby.Camps.Scenarios.DisposeCampSection Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Lobby.Camps.Scenarios.DisposeCampSection:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/dd3/class_lobby_1_1_camps_1_1_scenarios_1_1_dispose_camp_section.png" usemap="#Lobby.Camps.Scenarios.DisposeCampSection_map" alt=""/>
+  <map id="Lobby.Camps.Scenarios.DisposeCampSection_map" name="Lobby.Camps.Scenarios.DisposeCampSection_map">
+<area href="../../de/d3c/class_lobby_1_1_camps_1_1_camp_section.html" alt="Lobby.Camps.CampSection" shape="rect" coords="141,56,414,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="424,56,697,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="283,0,556,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -156,7 +168,18 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/d3c/class_lobby_1_1_camps_1_1_camp_section.html">Lobby.Camps.CampSection</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/ddf/_dispose_camp_section_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d1/ddf/_dispose_camp_section_8cs_source.html">DisposeCampSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            base.Initialize(scenario);</div>
+<div class="line"><span class="lineno">   16</span> </div>
+<div class="line"><span class="lineno">   17</span>            Sections</div>
+<div class="line"><span class="lineno">   18</span>                .Add(Section.Active, <span class="stringliteral">&quot;DeActiveEntranceCollider&quot;</span>, DeActiveEntranceCollider)</div>
+<div class="line"><span class="lineno">   19</span>                .Add(Section.Active, <span class="stringliteral">&quot;FadeOut&quot;</span>, () =&gt; ppManager.FadeOut(VolumeType.Main, fadeOutDuration, Invoker.Complete))</div>
+<div class="line"><span class="lineno">   20</span>                .Add(Section.Active, <span class="stringliteral">&quot;StopFollowCamera&quot;</span>, () =&gt; LobbyDirector.Camera.StopFollow(VirtualCameraType.Player))</div>
+<div class="line"><span class="lineno">   21</span>                .Add(Section.Complete, <span class="stringliteral">&quot;DeActiveStageModeling&quot;</span>, DeActiveStageModeling)</div>
+<div class="line"><span class="lineno">   22</span>                .Add(Section.Complete, <span class="stringliteral">&quot;ActiveChallenge&quot;</span>, ActiveChallenge)</div>
+<div class="line"><span class="lineno">   23</span>                ;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d8/d88/class_common_1_1_characters_1_1_dreds_1_1_dred_
   <div class="headertitle"><div class="title">Common.Characters.Dreds.DredCombatActionSet Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Dreds.DredCombatActionSet:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/d88/class_common_1_1_characters_1_1_dreds_1_1_dred_combat_action_set.png" usemap="#Common.Characters.Dreds.DredCombatActionSet_map" alt=""/>
+  <map id="Common.Characters.Dreds.DredCombatActionSet_map" name="Common.Characters.Dreds.DredCombatActionSet_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="303,0,596,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -188,7 +198,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html#l00074">74</a> of file <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html">DredCombatActionSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   75</span>        {</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">switch</span> (targetSlot)</div>
+<div class="line"><span class="lineno">   77</span>            {</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">case</span> WeaponActionSlotType.Weapon1Attack: { MainWeaponType = newWeapon; <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">case</span> WeaponActionSlotType.Weapon1Special: { MainWeaponType = newWeapon; <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">case</span> WeaponActionSlotType.Weapon2Attack: { SubWeaponType = newWeapon; <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">case</span> WeaponActionSlotType.Weapon2Special: { SubWeaponType = newWeapon; <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">case</span> WeaponActionSlotType.Ultimate: { UltimateWeaponType = newWeapon; <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno">   83</span>            }</div>
+<div class="line"><span class="lineno">   84</span>            </div>
+<div class="line"><span class="lineno">   85</span>            OnSkillChangedTable[targetSlot].Invoke(GetSkillSet(targetSlot).CurrentSkill);</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5bb4fd37864086dd9109ba6ddc5a77f2" name="a5bb4fd37864086dd9109ba6ddc5a77f2"></a>
@@ -211,7 +233,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html#l00089">89</a> of file <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html">DredCombatActionSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span> (MainWeaponType == weapon &amp;&amp; skillType == SkillType.Attack) <span class="keywordflow">return</span> ActionType.Weapon1Attack;</div>
+<div class="line"><span class="lineno">   92</span>            <span class="keywordflow">if</span> (MainWeaponType == weapon &amp;&amp; skillType == SkillType.Special) <span class="keywordflow">return</span> ActionType.Weapon1Special;</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> (SubWeaponType  == weapon &amp;&amp; skillType == SkillType.Attack) <span class="keywordflow">return</span> ActionType.Weapon2Attack;</div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (SubWeaponType  == weapon &amp;&amp; skillType == SkillType.Special) <span class="keywordflow">return</span> ActionType.Weapon2Special;</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keywordflow">if</span> (UltimateWeaponType  == weapon &amp;&amp; skillType == SkillType.Ultimate) <span class="keywordflow">return</span> ActionType.Ultimate;</div>
+<div class="line"><span class="lineno">   96</span>            </div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">return</span> ActionType.None;</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a32ae7522873f6f5cb4662e787a1f1fe4" name="a32ae7522873f6f5cb4662e787a1f1fe4"></a>
@@ -230,7 +261,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html#l00112">112</a> of file <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html">DredCombatActionSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">return</span> actionType <span class="keywordflow">switch</span></div>
+<div class="line"><span class="lineno">  115</span>            {</div>
+<div class="line"><span class="lineno">  116</span>                WeaponActionSlotType.Weapon1Attack  =&gt; weaponTable[MainWeaponType][SkillType.Attack],</div>
+<div class="line"><span class="lineno">  117</span>                WeaponActionSlotType.Weapon1Special =&gt; weaponTable[MainWeaponType][SkillType.Special],</div>
+<div class="line"><span class="lineno">  118</span>                WeaponActionSlotType.Weapon2Attack  =&gt; weaponTable[SubWeaponType][SkillType.Attack],</div>
+<div class="line"><span class="lineno">  119</span>                WeaponActionSlotType.Weapon2Special =&gt; weaponTable[SubWeaponType][SkillType.Special],</div>
+<div class="line"><span class="lineno">  120</span>                WeaponActionSlotType.Ultimate       =&gt; weaponTable[UltimateWeaponType]?[SkillType.Ultimate],</div>
+<div class="line"><span class="lineno">  121</span>                _                                   =&gt; <span class="keyword">null</span></div>
+<div class="line"><span class="lineno">  122</span>            };</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a66996facaea62733ba7cafcec42840b4" name="a66996facaea62733ba7cafcec42840b4"></a>
@@ -249,7 +291,40 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html#l00040">40</a> of file <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html">DredCombatActionSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            MainWeaponType = spawnEvent.MainWeapon;</div>
+<div class="line"><span class="lineno">   43</span>            SubWeaponType  = spawnEvent.SubWeapon;</div>
+<div class="line"><span class="lineno">   44</span>            dashBehaviour  = dred.Behaviours.Dash;</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>            OnSkillChangedTable[WeaponActionSlotType.Weapon1Attack] = <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Skill&gt;</a>();</div>
+<div class="line"><span class="lineno">   47</span>            OnSkillChangedTable[WeaponActionSlotType.Weapon1Special] = <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Skill&gt;</a>();</div>
+<div class="line"><span class="lineno">   48</span>            OnSkillChangedTable[WeaponActionSlotType.Weapon2Attack] = <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Skill&gt;</a>();</div>
+<div class="line"><span class="lineno">   49</span>            OnSkillChangedTable[WeaponActionSlotType.Weapon2Special] = <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Skill&gt;</a>();</div>
+<div class="line"><span class="lineno">   50</span>            OnSkillChangedTable[WeaponActionSlotType.Ultimate] = <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Skill&gt;</a>();</div>
+<div class="line"><span class="lineno">   51</span>            </div>
+<div class="line"><span class="lineno">   52</span>            weaponTable.WeaponList.ForEach(weapon =&gt;</div>
+<div class="line"><span class="lineno">   53</span>            {</div>
+<div class="line"><span class="lineno">   54</span>                weapon.SkillSets.ForEach(skillSet =&gt;</div>
+<div class="line"><span class="lineno">   55</span>                {</div>
+<div class="line"><span class="lineno">   56</span>                    skillSet.Initialize(dred);</div>
+<div class="line"><span class="lineno">   57</span>                    skillSet.OnSkillChanged.Add(<span class="stringliteral">&quot;ChangeActionSet&quot;</span>, OnSkillSetChanged);</div>
+<div class="line"><span class="lineno">   58</span>                    skillSet.BehaviourList.ForEach(sb =&gt;</div>
+<div class="line"><span class="lineno">   59</span>                    {</div>
+<div class="line"><span class="lineno">   60</span>                        sb.Sections</div>
+<div class="line"><span class="lineno">   61</span>                          .Add(Section.Active, <span class="stringliteral">&quot;SetCurrentSkillBehaviour&quot;</span>, () =&gt; CurrentSkillBehaviour  = sb)</div>
+<div class="line"><span class="lineno">   62</span>                          .Add(Section.End, <span class="stringliteral">&quot;ReleaseCurrentSkillBehaviour&quot;</span>, () =&gt; CurrentSkillBehaviour = <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   63</span>                            ;</div>
+<div class="line"><span class="lineno">   64</span>                    });</div>
+<div class="line"><span class="lineno">   65</span>                });</div>
+<div class="line"><span class="lineno">   66</span>            });</div>
+<div class="line"><span class="lineno">   67</span>            </div>
+<div class="line"><span class="lineno">   68</span>            dashBehaviour.Sections</div>
+<div class="line"><span class="lineno">   69</span>                         .Add(Section.Active, <span class="stringliteral">&quot;SetCurrentSkillBehaviour&quot;</span>, () =&gt; CurrentSkillBehaviour  = dashBehaviour)</div>
+<div class="line"><span class="lineno">   70</span>                         .Add(Section.End, <span class="stringliteral">&quot;ReleaseCurrentSkillBehaviour&quot;</span>, () =&gt; CurrentSkillBehaviour = <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   71</span>                         ;</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="ttc" id="aclass_action_table_html"><div class="ttname"><a href="../../db/dcc/class_action_table.html">ActionTable</a></div><div class="ttdoc">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00067">ActionTable.cs:68</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8096cc139190b522a03ca64effe36b35" name="a8096cc139190b522a03ca64effe36b35"></a>
@@ -268,7 +343,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html#l00105">105</a> of file <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html">DredCombatActionSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  106</span>        {</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">if</span> (UltimateWeaponType is WeaponType.None) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  108</span>            </div>
+<div class="line"><span class="lineno">  109</span>            TryInvokeSkill(UltimateSkill.MainBehaviour);</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -365,7 +445,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html#l00020">20</a> of file <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html">DredCombatActionSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae52ba281e44a08b16f57736b354973b8" name="ae52ba281e44a08b16f57736b354973b8"></a>
@@ -389,7 +470,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html#l00031">31</a> of file <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html">DredCombatActionSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0b54813ee9f7d0c1598cc976760b4638" name="a0b54813ee9f7d0c1598cc976760b4638"></a>
@@ -485,7 +567,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html#l00021">21</a> of file <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html">DredCombatActionSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5d753657533694df44974e433e1ed760" name="a5d753657533694df44974e433e1ed760"></a>
@@ -557,7 +640,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html#l00022">22</a> of file <a class="el" href="../../da/d90/_dred_combat_action_set_8cs_source.html">DredCombatActionSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

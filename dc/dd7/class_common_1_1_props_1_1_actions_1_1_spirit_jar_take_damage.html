@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,17 @@ $(function(){initNavTree('dc/dd7/class_common_1_1_props_1_1_actions_1_1_spirit_j
   <div class="headertitle"><div class="title">Common.Props.Actions.SpiritJarTakeDamage Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Props.Actions.SpiritJarTakeDamage:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/dd7/class_common_1_1_props_1_1_actions_1_1_spirit_jar_take_damage.png" usemap="#Common.Props.Actions.SpiritJarTakeDamage_map" alt=""/>
+  <map id="Common.Props.Actions.SpiritJarTakeDamage_map" name="Common.Props.Actions.SpiritJarTakeDamage_map">
+<area href="../../d5/d72/class_common_1_1_props_1_1_actions_1_1_prop_take_damage.html" alt="Common.Props.Actions.PropTakeDamage" shape="rect" coords="278,56,546,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="278,0,546,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="556,0,824,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -158,7 +170,28 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d72/class_common_1_1_props_1_1_actions_1_1_prop_take_damage.html">Common.Props.Actions.PropTakeDamage</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d51/_spirit_jar_take_damage_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d5/d51/_spirit_jar_take_damage_8cs_source.html">SpiritJarTakeDamage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (prop is not <a class="code hl_class" href="../../df/de7/class_common_1_1_props_1_1_variants_1_1_spirit_jar.html">SpiritJar</a> jar) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   29</span>            </div>
+<div class="line"><span class="lineno">   30</span>            base.Initialize(prop);</div>
+<div class="line"><span class="lineno">   31</span>            </div>
+<div class="line"><span class="lineno">   32</span>            maxHitPoints          = hitPoint;</div>
+<div class="line"><span class="lineno">   33</span>            OriginalEmissionColor = EmissionMaterial.GetColor(EmissionColor);</div>
+<div class="line"><span class="lineno">   34</span>            </div>
+<div class="line"><span class="lineno">   35</span>            Sections</div>
+<div class="line"><span class="lineno">   36</span>                .AddCondition(<span class="stringliteral">&quot;RemainHitPoints&quot;</span>, () =&gt; HitPoints.Value &gt; 0)</div>
+<div class="line"><span class="lineno">   37</span>                .Add(Section.Active, <span class="stringliteral">&quot;DropSpirits&quot;</span>, DropSpirits)</div>
+<div class="line"><span class="lineno">   38</span>                .Add(Section.Active, <span class="stringliteral">&quot;ReduceHitPoints&quot;</span>, ReduceHitPoints)</div>
+<div class="line"><span class="lineno">   39</span>                .Add(Section.Active, <span class="stringliteral">&quot;EmissionColorLerp&quot;</span>, EmissionColorLerp)</div>
+<div class="line"><span class="lineno">   40</span>                .Add(Section.Active, <span class="stringliteral">&quot;FlatRimSize&quot;</span>, FlatRimSize)</div>
+<div class="line"><span class="lineno">   41</span>                ;</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>            SpiritDropModel = jar.SpiritDropModel;</div>
+<div class="line"><span class="lineno">   44</span>            EmissionMaterial.SetColor(EmissionColor, OriginalEmissionColor * Mathf.Pow(2, 9f));</div>
+<div class="line"><span class="lineno">   45</span>            HitPoints.SetValueWithMax(hitPoint);</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_props_1_1_variants_1_1_spirit_jar_html"><div class="ttname"><a href="../../df/de7/class_common_1_1_props_1_1_variants_1_1_spirit_jar.html">Common.Props.Variants.SpiritJar</a></div><div class="ttdef"><b>Definition</b> <a href="../../d7/d26/_spirit_jar_8cs_source.html#l00007">SpiritJar.cs:8</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0269f0c16d0b09e0e1b635b4d1fe3018" name="a0269f0c16d0b09e0e1b635b4d1fe3018"></a>
@@ -187,7 +220,14 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/d72/class_common_1_1_props_1_1_actions_1_1_prop_take_damage.html">Common.Props.Actions.PropTakeDamage</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d51/_spirit_jar_take_damage_8cs_source.html#l00048">48</a> of file <a class="el" href="../../d5/d51/_spirit_jar_take_damage_8cs_source.html">SpiritJarTakeDamage.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (executor.Provider is not Characters.Dreds.Dred) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   52</span>            </div>
+<div class="line"><span class="lineno">   53</span>            <span class="comment">// TODO.Prop에 HitUnitParticle을 붙히려면 추가적인 작업 필요.</span></div>
+<div class="line"><span class="lineno">   54</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

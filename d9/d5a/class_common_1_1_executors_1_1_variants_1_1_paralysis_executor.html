@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,16 @@ $(function(){initNavTree('d9/d5a/class_common_1_1_executors_1_1_variants_1_1_par
   <div class="headertitle"><div class="title">Common.Executors.Variants.ParalysisExecutor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Executors.Variants.ParalysisExecutor:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/d5a/class_common_1_1_executors_1_1_variants_1_1_paralysis_executor.png" usemap="#Common.Executors.Variants.ParalysisExecutor_map" alt=""/>
+  <map id="Common.Executors.Variants.ParalysisExecutor_map" name="Common.Executors.Variants.ParalysisExecutor_map">
+<area href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html" alt="Common.Executors.ExecuteBehaviour" shape="rect" coords="143,56,420,80"/>
+<area href="../../d7/dc1/interface_i_condition_table.html" alt="IConditionTable&lt; GameObject &gt;" shape="rect" coords="287,0,564,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -166,7 +177,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3f/_paralysis_executor_8cs_source.html#l00009">9</a> of file <a class="el" href="../../d2/d3f/_paralysis_executor_8cs_source.html">ParalysisExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">if</span> (!target.TryGetComponent(out IParalysisTaker taker)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   12</span>            </div>
+<div class="line"><span class="lineno">   13</span>            taker.TakeParalysis(duration);</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

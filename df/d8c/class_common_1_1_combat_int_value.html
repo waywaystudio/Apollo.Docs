@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,15 @@ $(function(){initNavTree('df/d8c/class_common_1_1_combat_int_value.html','../../
   <div class="headertitle"><div class="title">Common.CombatIntValue Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.CombatIntValue:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/d8c/class_common_1_1_combat_int_value.png" usemap="#Common.CombatIntValue_map" alt=""/>
+  <map id="Common.CombatIntValue_map" name="Common.CombatIntValue_map">
+<area href="../../d9/dba/class_observable.html" alt="Observable&lt; int &gt;" shape="rect" coords="0,0,152,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -178,7 +188,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html#l00075">75</a> of file <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html">CombatValue.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            c.Value++;</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">return</span> c;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab694ba16096915dd56f86094c6dc40f5" name="ab694ba16096915dd56f86094c6dc40f5"></a>
@@ -205,7 +219,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html#l00081">81</a> of file <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html">CombatValue.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   82</span>        {</div>
+<div class="line"><span class="lineno">   83</span>            c.Value--;</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">return</span> c;</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8e7d2fdfda1597038219b7edc12c7ffe" name="a8e7d2fdfda1597038219b7edc12c7ffe"></a>
@@ -224,7 +242,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html#l00062">62</a> of file <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html">CombatValue.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            Max       ??= <span class="keyword">new</span> <a class="code hl_class" href="../../d9/dba/class_observable.html">Observable&lt;int&gt;</a>();</div>
+<div class="line"><span class="lineno">   65</span>            Max.Value =   value;</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="ttc" id="aclass_observable_html"><div class="ttname"><a href="../../d9/dba/class_observable.html">Observable</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d11/_observable_8cs_source.html#l00005">Observable.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1311450d856963fe2027ef0ca7d00181" name="a1311450d856963fe2027ef0ca7d00181"></a>
@@ -243,7 +266,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html#l00068">68</a> of file <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html">CombatValue.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            SetMax(value);</div>
+<div class="line"><span class="lineno">   71</span>            </div>
+<div class="line"><span class="lineno">   72</span>            Value = value;</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -268,7 +296,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html#l00049">49</a> of file <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html">CombatValue.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   49</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; } = <span class="keyword">new</span>() { Value = int.MaxValue };</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="affb41ef863def75eb0bdacf864d25e5a" name="affb41ef863def75eb0bdacf864d25e5a"></a>
@@ -292,7 +321,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d8/d5b/_combat_value_8cs_source.html">CombatValue.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keyword">get</span> =&gt; value;</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">if</span> (Value == value) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   56</span>                </div>
+<div class="line"><span class="lineno">   57</span>                this.value = Mathf.Clamp(value, 0, Max.Value);</div>
+<div class="line"><span class="lineno">   58</span>                OnValueChanged.Invoke(this.value);</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

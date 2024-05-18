@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('de/df0/class_common_1_1_masteries_1_1_silk_strings_1_1
   <div class="headertitle"><div class="title">Common.Masteries.SilkStrings.Conflagration Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.SilkStrings.Conflagration:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/df0/class_common_1_1_masteries_1_1_silk_strings_1_1_conflagration.png" usemap="#Common.Masteries.SilkStrings.Conflagration_map" alt=""/>
+  <map id="Common.Masteries.SilkStrings.Conflagration_map" name="Common.Masteries.SilkStrings.Conflagration_map">
+<area href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html" alt="Common.Masteries.Mastery" shape="rect" coords="272,56,534,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="272,0,534,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="544,0,806,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -206,7 +218,13 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/df7/_conflagration_8cs_source.html#l00035">35</a> of file <a class="el" href="../../de/df7/_conflagration_8cs_source.html">Conflagration.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            RemoveSilkStrings(dred);</div>
+<div class="line"><span class="lineno">   38</span>            </div>
+<div class="line"><span class="lineno">   39</span>            snareSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a9949ebd2ab1adcb67a2e7b3b53c93cca">Remove</a>(DataIndex.ThreadedSanctumSnare, <span class="stringliteral">&quot;Conflagration&quot;</span>, RemoveIgnitedForceFromProjectile);</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_spawn_event_table_html_a9949ebd2ab1adcb67a2e7b3b53c93cca"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a9949ebd2ab1adcb67a2e7b3b53c93cca">Common.SpawnEventTable.Remove</a></div><div class="ttdeci">void Remove(DataIndex dataIndex, string spawnActionKey, Action&lt; T &gt; callback=null)</div><div class="ttdoc">Remove Specific Target Spawn Event.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/da4/_spawn_event_table_8cs_source.html#l00081">SpawnEventTable.cs:81</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab250eb42a55f7522fc5d18d06789800a" name="ab250eb42a55f7522fc5d18d06789800a"></a>
@@ -233,7 +251,14 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/df7/_conflagration_8cs_source.html#l00027">27</a> of file <a class="el" href="../../de/df7/_conflagration_8cs_source.html">Conflagration.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            AddSilkStrings(dred);</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>            silkTwister = dred.Skills.SilkTwister;</div>
+<div class="line"><span class="lineno">   32</span>            snareSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Add</a>(DataIndex.ThreadedSanctumSnare, <span class="stringliteral">&quot;Conflagration&quot;</span>, AddIgnitedForceToProjectile);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_spawn_event_table_html_ac8c1e472bcbad1c5493cff1ec02b1a98"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Common.SpawnEventTable.Add</a></div><div class="ttdeci">void Add(DataIndex dataIndex, string spawnActionKey, Action action)</div><div class="ttdoc">Add Specific Target Spawn event.</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab6210f2ba3a790cbf1da09088067d61b" name="ab6210f2ba3a790cbf1da09088067d61b"></a>
@@ -260,7 +285,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/df7/_conflagration_8cs_source.html#l00042">42</a> of file <a class="el" href="../../de/df7/_conflagration_8cs_source.html">Conflagration.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            </div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('dd/d39/class_challenge_1_1_challenge_prop_director.htm
   <div class="headertitle"><div class="title">Challenge.ChallengePropDirector Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.ChallengePropDirector:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/d39/class_challenge_1_1_challenge_prop_director.png" usemap="#Challenge.ChallengePropDirector_map" alt=""/>
+  <map id="Challenge.ChallengePropDirector_map" name="Challenge.ChallengePropDirector_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="213,0,416,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -137,7 +147,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html">ChallengePropDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5e678ac0e769bdab173fb290fc864a71" name="a5e678ac0e769bdab173fb290fc864a71"></a>
@@ -165,7 +178,16 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html#l00056">56</a> of file <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html">ChallengePropDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (!Verify.IsTrue(rewardPrefabTable[DataIndex.FleshCoinSource].ValidInstantiate(out <a class="code hl_class" href="../../d7/d45/class_challenge_1_1_props_1_1_rewards_1_1_flesh_coin.html">FleshCoin</a> coin, position, rotation, parent))) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   59</span>            </div>
+<div class="line"><span class="lineno">   60</span>            rewardSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a87a3a79fa02ca1e0ebe23f6441e7d20d">Invoke</a>(coin);</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span> coin;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="ttc" id="aclass_challenge_1_1_props_1_1_rewards_1_1_flesh_coin_html"><div class="ttname"><a href="../../d7/d45/class_challenge_1_1_props_1_1_rewards_1_1_flesh_coin.html">Challenge.Props.Rewards.FleshCoin</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/dc5/_flesh_coin_8cs_source.html#l00005">FleshCoin.cs:6</a></div></div>
+<div class="ttc" id="aclass_common_1_1_spawn_event_table_html_a87a3a79fa02ca1e0ebe23f6441e7d20d"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a87a3a79fa02ca1e0ebe23f6441e7d20d">Common.SpawnEventTable.Invoke</a></div><div class="ttdeci">virtual void Invoke(DataIndex dataIndex, T subject)</div><div class="ttdoc">Invoke Specific Target Actions with Global Actions.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/da4/_spawn_event_table_8cs_source.html#l00020">SpawnEventTable.cs:20</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8ebb373d0496862092b8a47f2fc3cdd9" name="a8ebb373d0496862092b8a47f2fc3cdd9"></a>
@@ -193,7 +215,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html#l00029">29</a> of file <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html">ChallengePropDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (!Verify.IsTrue(rewardPrefabTable[DataIndex.GourdSource].ValidInstantiate(out <a class="code hl_class" href="../../dc/d0b/class_challenge_1_1_props_1_1_rewards_1_1_gourd.html">Gourd</a> gourd, position, rotation, parent))) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   32</span>            </div>
+<div class="line"><span class="lineno">   33</span>            rewardSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a87a3a79fa02ca1e0ebe23f6441e7d20d">Invoke</a>(gourd);</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">return</span> gourd;</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="ttc" id="aclass_challenge_1_1_props_1_1_rewards_1_1_gourd_html"><div class="ttname"><a href="../../dc/d0b/class_challenge_1_1_props_1_1_rewards_1_1_gourd.html">Challenge.Props.Rewards.Gourd</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d83/_gourd_8cs_source.html#l00006">Gourd.cs:7</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abbcc297f1bc6902c193de623002b260b" name="abbcc297f1bc6902c193de623002b260b"></a>
@@ -221,7 +251,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html#l00047">47</a> of file <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html">ChallengePropDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (!Verify.IsTrue(rewardPrefabTable[DataIndex.IncenseCandleSource].ValidInstantiate(out <a class="code hl_class" href="../../da/dc7/class_challenge_1_1_props_1_1_rewards_1_1_incense_candle.html">IncenseCandle</a> candle, position, rotation, parent))) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   50</span>            </div>
+<div class="line"><span class="lineno">   51</span>            rewardSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a87a3a79fa02ca1e0ebe23f6441e7d20d">Invoke</a>(candle);</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">return</span> candle;</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="ttc" id="aclass_challenge_1_1_props_1_1_rewards_1_1_incense_candle_html"><div class="ttname"><a href="../../da/dc7/class_challenge_1_1_props_1_1_rewards_1_1_incense_candle.html">Challenge.Props.Rewards.IncenseCandle</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/dcf/_incense_candle_8cs_source.html#l00005">IncenseCandle.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a090971730a8b530a58ab4258c9bf60da" name="a090971730a8b530a58ab4258c9bf60da"></a>
@@ -249,7 +287,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html">ChallengePropDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">if</span> (!Verify.IsTrue(rewardPrefabTable[DataIndex.MasteryScrollSource].ValidInstantiate(out <a class="code hl_class" href="../../de/d25/class_challenge_1_1_props_1_1_rewards_1_1_mastery_scroll.html">MasteryScroll</a> scroll, position, rotation, parent))) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   23</span>            </div>
+<div class="line"><span class="lineno">   24</span>            rewardSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a87a3a79fa02ca1e0ebe23f6441e7d20d">Invoke</a>(scroll);</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">return</span> scroll;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="ttc" id="aclass_challenge_1_1_props_1_1_rewards_1_1_mastery_scroll_html"><div class="ttname"><a href="../../de/d25/class_challenge_1_1_props_1_1_rewards_1_1_mastery_scroll.html">Challenge.Props.Rewards.MasteryScroll</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d01/_mastery_scroll_8cs_source.html#l00005">MasteryScroll.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a544e0fc815bb4a3ae8e9073b1a5531de" name="a544e0fc815bb4a3ae8e9073b1a5531de"></a>
@@ -277,7 +323,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html#l00038">38</a> of file <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html">ChallengePropDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (!Verify.IsTrue(rewardPrefabTable[DataIndex.NectarineSource].ValidInstantiate(out <a class="code hl_class" href="../../df/de9/class_challenge_1_1_props_1_1_rewards_1_1_nectarine.html">Nectarine</a> nectarine, position, rotation, parent))) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   41</span>            </div>
+<div class="line"><span class="lineno">   42</span>            rewardSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a87a3a79fa02ca1e0ebe23f6441e7d20d">Invoke</a>(nectarine);</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">return</span> nectarine;</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="ttc" id="aclass_challenge_1_1_props_1_1_rewards_1_1_nectarine_html"><div class="ttname"><a href="../../df/de9/class_challenge_1_1_props_1_1_rewards_1_1_nectarine.html">Challenge.Props.Rewards.Nectarine</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/d61/_nectarine_8cs_source.html#l00006">Nectarine.cs:7</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeb55dcf516b0d06668e927d35933e3f5" name="aeb55dcf516b0d06668e927d35933e3f5"></a>
@@ -305,7 +359,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html#l00065">65</a> of file <a class="el" href="../../d6/de3/_challenge_prop_director_8cs_source.html">ChallengePropDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (!Verify.IsTrue(rewardPrefabTable[DataIndex.SamsaraStoneSource].ValidInstantiate(out <a class="code hl_class" href="../../d0/d4e/class_challenge_1_1_props_1_1_rewards_1_1_samsara_stone.html">SamsaraStone</a> stone, position, rotation, parent))) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   68</span>            </div>
+<div class="line"><span class="lineno">   69</span>            rewardSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a87a3a79fa02ca1e0ebe23f6441e7d20d">Invoke</a>(stone);</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">return</span> stone;</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="ttc" id="aclass_challenge_1_1_props_1_1_rewards_1_1_samsara_stone_html"><div class="ttname"><a href="../../d0/d4e/class_challenge_1_1_props_1_1_rewards_1_1_samsara_stone.html">Challenge.Props.Rewards.SamsaraStone</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d9a/_samsara_stone_8cs_source.html#l00005">SamsaraStone.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

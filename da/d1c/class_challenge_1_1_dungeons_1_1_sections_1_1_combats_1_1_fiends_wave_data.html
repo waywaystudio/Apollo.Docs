@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,12 @@ $(function(){initNavTree('da/d1c/class_challenge_1_1_dungeons_1_1_sections_1_1_c
   <div class="headertitle"><div class="title">Challenge.Dungeons.Sections.Combats.FiendsWaveData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Dungeons.Sections.Combats.FiendsWaveData:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/d1c/class_challenge_1_1_dungeons_1_1_sections_1_1_combats_1_1_fiends_wave_data.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -149,7 +156,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html#l00064">64</a> of file <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html">FiendsWaveData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (serialSpawnTask is <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   67</span>            </div>
+<div class="line"><span class="lineno">   68</span>            serialSpawnTask.Cancel();</div>
+<div class="line"><span class="lineno">   69</span>            serialSpawnTask = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3317f0ec47d339fa850861dc6953db65" name="a3317f0ec47d339fa850861dc6953db65"></a>
@@ -168,7 +181,26 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html#l00036">36</a> of file <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html">FiendsWaveData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="comment">// this.combatSection = combatSection;</span></div>
+<div class="line"><span class="lineno">   39</span>            currentWave = spawnEntityList.FirstOrDefault();</div>
+<div class="line"><span class="lineno">   40</span>            </div>
+<div class="line"><span class="lineno">   41</span>            spawnTransformList.AddRange(spawnPositions);</div>
+<div class="line"><span class="lineno">   42</span>            spawnEntityList.ForEach(entity =&gt;</div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                totalFiendsCount   += entity.Count;</div>
+<div class="line"><span class="lineno">   45</span>                entity.RemainCount =  entity.Count;</div>
+<div class="line"><span class="lineno">   46</span>            });</div>
+<div class="line"><span class="lineno">   47</span>            </div>
+<div class="line"><span class="lineno">   48</span>            OnFiendSpawned.Add(<span class="stringliteral">&quot;AddOnDead&quot;</span>, AddOnDead);</div>
+<div class="line"><span class="lineno">   49</span>            OnSpawnedFiendDead.Add(<span class="stringliteral">&quot;CheckIsAllDead&quot;</span>, TrySpawnNextWave);</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (KnowDred)</div>
+<div class="line"><span class="lineno">   52</span>            {</div>
+<div class="line"><span class="lineno">   53</span>                OnFiendSpawned.Add(<span class="stringliteral">&quot;TellWhereIsDred&quot;</span>, TellWhereIsDred);</div>
+<div class="line"><span class="lineno">   54</span>            }</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a615557b8dc250e79db35914e8a0621e2" name="a615557b8dc250e79db35914e8a0621e2"></a>
@@ -187,7 +219,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html#l00057">57</a> of file <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html">FiendsWaveData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            serialSpawnTask = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   60</span>            </div>
+<div class="line"><span class="lineno">   61</span>            SerialSpawnTask(serialSpawnTask).Forget();</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -212,7 +249,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html#l00029">29</a> of file <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html">FiendsWaveData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afa9c183bb5d46bfd69951d4af08a03cc" name="afa9c183bb5d46bfd69951d4af08a03cc"></a>
@@ -236,7 +274,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html">FiendsWaveData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a62ffb35c69f3323480205f78cf02ce25" name="a62ffb35c69f3323480205f78cf02ce25"></a>
@@ -284,7 +323,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html#l00030">30</a> of file <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html">FiendsWaveData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae90f35014f26a79fb4d4087457ea80ac" name="ae90f35014f26a79fb4d4087457ea80ac"></a>
@@ -308,7 +348,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html#l00032">32</a> of file <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html">FiendsWaveData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaec00e1df9c8195ecf66c5d0bd9291b8" name="aaec00e1df9c8195ecf66c5d0bd9291b8"></a>
@@ -332,7 +373,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html#l00033">33</a> of file <a class="el" href="../../d1/da1/_fiends_wave_data_8cs_source.html">FiendsWaveData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8b65f66633c40d5f7201582e9302ed7c" name="a8b65f66633c40d5f7201582e9302ed7c"></a>

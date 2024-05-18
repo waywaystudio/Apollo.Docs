@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d1/d7e/class_lobby_1_1_props_1_1_hell_gate.html','../.
   <div class="headertitle"><div class="title">Lobby.Props.HellGate Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Lobby.Props.HellGate:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/d7e/class_lobby_1_1_props_1_1_hell_gate.png" usemap="#Lobby.Props.HellGate_map" alt=""/>
+  <map id="Lobby.Props.HellGate_map" name="Lobby.Props.HellGate_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="146,0,282,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -129,7 +139,20 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d9e/_hell_gate_8cs_source.html#l00022">22</a> of file <a class="el" href="../../db/d9e/_hell_gate_8cs_source.html">HellGate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            campSection         = section;</div>
+<div class="line"><span class="lineno">   25</span>            preBlockage.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>            gateMode.Initialize();</div>
+<div class="line"><span class="lineno">   28</span>            gateMode.Close(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   29</span>            interactable.Initialize();</div>
+<div class="line"><span class="lineno">   30</span>            interactable.Sections</div>
+<div class="line"><span class="lineno">   31</span>                        .Add(Section.Complete, <span class="stringliteral">&quot;ShowWeaponSelectionGroupPanel&quot;</span>, ShowWeaponSelectionGroupPanel)</div>
+<div class="line"><span class="lineno">   32</span>                         ;</div>
+<div class="line"><span class="lineno">   33</span>            </div>
+<div class="line"><span class="lineno">   34</span>            SetModeling();</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7b2d8cfbfa3f805cbdb98a65f7a6078a" name="a7b2d8cfbfa3f805cbdb98a65f7a6078a"></a>
@@ -148,7 +171,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d9e/_hell_gate_8cs_source.html#l00042">42</a> of file <a class="el" href="../../db/d9e/_hell_gate_8cs_source.html">HellGate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            DeactivateBlockage();</div>
+<div class="line"><span class="lineno">   45</span>            gateMode.Open();</div>
+<div class="line"><span class="lineno">   46</span>            CompleteSelectSequence();</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7446bf9848568abcb5d5ecd07b4d02dd" name="a7446bf9848568abcb5d5ecd07b4d02dd"></a>
@@ -167,7 +195,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d9e/_hell_gate_8cs_source.html#l00037">37</a> of file <a class="el" href="../../db/d9e/_hell_gate_8cs_source.html">HellGate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            interactableRadar.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

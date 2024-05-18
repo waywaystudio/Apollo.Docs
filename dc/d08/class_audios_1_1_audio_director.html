@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,17 @@ $(function(){initNavTree('dc/d08/class_audios_1_1_audio_director.html','../../')
   <div class="headertitle"><div class="title">Audios.AudioDirector Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Audios.AudioDirector:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/d08/class_audios_1_1_audio_director.png" usemap="#Audios.AudioDirector_map" alt=""/>
+  <map id="Audios.AudioDirector_map" name="Audios.AudioDirector_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="219,0,428,24"/>
+<area href="../../d9/d87/class_challenge_1_1_challenge_audio_director.html" alt="Challenge.ChallengeAudioDirector" shape="rect" coords="0,112,209,136"/>
+<area href="../../d0/de9/class_lobby_1_1_lobby_audio_director.html" alt="Lobby.LobbyAudioDirector" shape="rect" coords="219,112,428,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -142,7 +154,13 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/dfd/_audio_director_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d5/dfd/_audio_director_8cs_source.html">AudioDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            audioManager.Director = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   21</span>            </div>
+<div class="line"><span class="lineno">   22</span>            BgmTable.Clear();</div>
+<div class="line"><span class="lineno">   23</span>            bgmList.ForEach(item =&gt; BgmTable.Add(item.Title, item.Clip));</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5d7e5dbe8fa1f069640fd9e94b21925f" name="a5d7e5dbe8fa1f069640fd9e94b21925f"></a>
@@ -161,7 +179,17 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/dfd/_audio_director_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d5/dfd/_audio_director_8cs_source.html">AudioDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (!BgmTable.ContainsKey(title)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (audioSource.isPlaying)</div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                Stop();</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>            </div>
+<div class="line"><span class="lineno">   34</span>            audioSource.clip = BgmTable[title];</div>
+<div class="line"><span class="lineno">   35</span>            audioSource.Play();</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

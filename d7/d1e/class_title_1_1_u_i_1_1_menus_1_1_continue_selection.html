@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,16 @@ $(function(){initNavTree('d7/d1e/class_title_1_1_u_i_1_1_menus_1_1_continue_sele
   <div class="headertitle"><div class="title">Title.UI.Menus.ContinueSelection Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Title.UI.Menus.ContinueSelection:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/d1e/class_title_1_1_u_i_1_1_menus_1_1_continue_selection.png" usemap="#Title.UI.Menus.ContinueSelection_map" alt=""/>
+  <map id="Title.UI.Menus.ContinueSelection_map" name="Title.UI.Menus.ContinueSelection_map">
+<area href="../../d1/dc6/class_common_1_1_u_i_element.html" alt="Common.UIElement" shape="rect" coords="104,56,302,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="208,0,406,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -193,7 +204,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc6/class_common_1_1_u_i_element.html">Common.UIElement</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dbc/_continue_selection_8cs_source.html#l00013">13</a> of file <a class="el" href="../../dd/dbc/_continue_selection_8cs_source.html">ContinueSelection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            base.Initialize();</div>
+<div class="line"><span class="lineno">   16</span>            </div>
+<div class="line"><span class="lineno">   17</span>            var saveInfoList = saveManager.SaveInfoList;</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>            gameObject.SetActive(saveInfoList.HasElement());</div>
+<div class="line"><span class="lineno">   20</span>            </div>
+<div class="line"><span class="lineno">   21</span>            saveInfoList.Sort((x, y) =&gt; <span class="keywordtype">string</span>.Compare(x.SaveTime, y.SaveTime, StringComparison.Ordinal));</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            <span class="comment">// Submit Active에 saveInfoList.First()값으로 불러오기.</span></div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

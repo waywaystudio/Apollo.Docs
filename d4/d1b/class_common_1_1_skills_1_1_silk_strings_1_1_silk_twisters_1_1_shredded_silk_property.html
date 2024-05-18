@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -127,7 +128,35 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/df8/_shredded_silk_property_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d0/df8/_shredded_silk_property_8cs_source.html">ShreddedSilkProperty.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            var takers = silkTwisterProjectile.Detector.Get&lt;Character&gt;(detectProperty, character =&gt; character.IsAlive);</div>
+<div class="line"><span class="lineno">   26</span>            var taker = takers?.Random();</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (takers.IsNullOrEmpty() || taker is <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   29</span>            {</div>
+<div class="line"><span class="lineno">   30</span>                <span class="comment">// 사방으로 퍼지는 효과 구현</span></div>
+<div class="line"><span class="lineno">   31</span>            }</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                var projectile = pool.Get(); <span class="comment">// Actual ShreddedSilkProjectile Fire</span></div>
+<div class="line"><span class="lineno">   35</span>                var projectileTransform = projectile.transform;</div>
+<div class="line"><span class="lineno">   36</span>                var destination = taker.Position;</div>
+<div class="line"><span class="lineno">   37</span>                var silkTwisterPosition = silkTwisterProjectile.transform.position;</div>
+<div class="line"><span class="lineno">   38</span>                </div>
+<div class="line"><span class="lineno">   39</span>                projectileTransform.SetParent(<span class="keyword">null</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   40</span>                projectileTransform.SetPositionAndRotation(silkTwisterPosition, Quaternion.Euler((destination - silkTwisterPosition).normalized));</div>
+<div class="line"><span class="lineno">   41</span>                projectile.SetDestination(destination);</div>
+<div class="line"><span class="lineno">   42</span>                projectile.Active();</div>
+<div class="line"><span class="lineno">   43</span>                </div>
+<div class="line"><span class="lineno">   44</span>                <span class="comment">// Sync ShreddedSilkProjectile&#39;s DamageTable with SilkTwisterProjectile</span></div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">if</span> (!silkTwisterProjectile.Executor.TryGetExecution(out <a class="code hl_class" href="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.html">DamageExecutor</a> twisterDmgExe)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (!projectile.Executor.TryGetExecution(out <a class="code hl_class" href="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.html">DamageExecutor</a> shreddedDmgExe)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   47</span>                </div>
+<div class="line"><span class="lineno">   48</span>                shreddedDmgExe.DamageTable.RegisterTable(twisterDmgExe.DamageTable);</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_damage_executor_html"><div class="ttname"><a href="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.html">Common.Executors.Variants.DamageExecutor</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/ded/_damage_executor_8cs_source.html#l00005">DamageExecutor.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa2656860757e327756db583f358104b0" name="aa2656860757e327756db583f358104b0"></a>
@@ -146,7 +175,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/df8/_shredded_silk_property_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d0/df8/_shredded_silk_property_8cs_source.html">ShreddedSilkProperty.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            silkTwisterProjectile = projectile;</div>
+<div class="line"><span class="lineno">   19</span>            </div>
+<div class="line"><span class="lineno">   20</span>            pool.Initialize(CreateProjectile, <span class="keyword">null</span>, projectile.transform);</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

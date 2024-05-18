@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d1/d6c/class_common_1_1_editor_1_1_canvas_group_effect
   <div class="headertitle"><div class="title">Common.Editor.CanvasGroupEffectDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Editor.CanvasGroupEffectDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/d6c/class_common_1_1_editor_1_1_canvas_group_effect_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -134,7 +141,60 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d92/_u_i_effect_behaviour_drawer_8cs_source.html#l00333">333</a> of file <a class="el" href="../../d9/d92/_u_i_effect_behaviour_drawer_8cs_source.html">UIEffectBehaviourDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  334</span>        {</div>
+<div class="line"><span class="lineno">  335</span>            var alphaTweenGroup = <span class="keyword">new</span> FoldoutGroupAttribute(<span class="stringliteral">&quot;AlphaTween&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  336</span>            var alphaAble = <span class="keyword">new</span> EnableIfAttribute(<span class="stringliteral">&quot;@this.doAlphaTween&quot;</span>);</div>
+<div class="line"><span class="lineno">  337</span>            </div>
+<div class="line"><span class="lineno">  338</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;targetCanvasGroup&quot;</span>)</div>
+<div class="line"><span class="lineno">  339</span>            {</div>
+<div class="line"><span class="lineno">  340</span>                attributes.Add(<span class="keyword">new</span> TitleGroupAttribute(<span class="stringliteral">&quot;MainTarget&quot;</span>));</div>
+<div class="line"><span class="lineno">  341</span>                attributes.Add(<span class="keyword">new</span> PropertySpaceAttribute(0, 15));</div>
+<div class="line"><span class="lineno">  342</span>            }</div>
+<div class="line"><span class="lineno">  343</span>            </div>
+<div class="line"><span class="lineno">  344</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;doAlphaTween&quot;</span>)</div>
+<div class="line"><span class="lineno">  345</span>            {</div>
+<div class="line"><span class="lineno">  346</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">  347</span>            }</div>
+<div class="line"><span class="lineno">  348</span>            </div>
+<div class="line"><span class="lineno">  349</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;resetAlphaOnTweenComplete&quot;</span>)</div>
+<div class="line"><span class="lineno">  350</span>            {</div>
+<div class="line"><span class="lineno">  351</span>                attributes.Add(alphaAble);</div>
+<div class="line"><span class="lineno">  352</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">  353</span>            }</div>
+<div class="line"><span class="lineno">  354</span>            </div>
+<div class="line"><span class="lineno">  355</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;alphaDuration&quot;</span>)</div>
+<div class="line"><span class="lineno">  356</span>            {</div>
+<div class="line"><span class="lineno">  357</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(0, 60));</div>
+<div class="line"><span class="lineno">  358</span>                attributes.Add(alphaAble);</div>
+<div class="line"><span class="lineno">  359</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">  360</span>            }</div>
+<div class="line"><span class="lineno">  361</span>            </div>
+<div class="line"><span class="lineno">  362</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;startAlphaType&quot;</span>)</div>
+<div class="line"><span class="lineno">  363</span>            {</div>
+<div class="line"><span class="lineno">  364</span>                attributes.Add(alphaAble);</div>
+<div class="line"><span class="lineno">  365</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">  366</span>            }</div>
+<div class="line"><span class="lineno">  367</span>            </div>
+<div class="line"><span class="lineno">  368</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;startAlpha&quot;</span>)</div>
+<div class="line"><span class="lineno">  369</span>            {</div>
+<div class="line"><span class="lineno">  370</span>                attributes.Add(<span class="keyword">new</span> ShowIfAttribute(<span class="stringliteral">&quot;@this.startAlphaType == StartAlphaType.Static&quot;</span>));</div>
+<div class="line"><span class="lineno">  371</span>                attributes.Add(alphaAble);</div>
+<div class="line"><span class="lineno">  372</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">  373</span>            }</div>
+<div class="line"><span class="lineno">  374</span>            </div>
+<div class="line"><span class="lineno">  375</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;endAlpha&quot;</span>)</div>
+<div class="line"><span class="lineno">  376</span>            {</div>
+<div class="line"><span class="lineno">  377</span>                attributes.Add(alphaAble);</div>
+<div class="line"><span class="lineno">  378</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">  379</span>            }</div>
+<div class="line"><span class="lineno">  380</span>            </div>
+<div class="line"><span class="lineno">  381</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;alphaEase&quot;</span>)</div>
+<div class="line"><span class="lineno">  382</span>            {</div>
+<div class="line"><span class="lineno">  383</span>                attributes.Add(alphaAble);</div>
+<div class="line"><span class="lineno">  384</span>                attributes.Add(alphaTweenGroup);</div>
+<div class="line"><span class="lineno">  385</span>            }</div>
+<div class="line"><span class="lineno">  386</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

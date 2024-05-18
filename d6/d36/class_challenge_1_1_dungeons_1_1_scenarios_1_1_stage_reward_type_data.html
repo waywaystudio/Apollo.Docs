@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d6/d36/class_challenge_1_1_dungeons_1_1_scenarios_1_1_
   <div class="headertitle"><div class="title">Challenge.Dungeons.Scenarios.StageRewardTypeData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Dungeons.Scenarios.StageRewardTypeData:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/d36/class_challenge_1_1_dungeons_1_1_scenarios_1_1_stage_reward_type_data.png" usemap="#Challenge.Dungeons.Scenarios.StageRewardTypeData_map" alt=""/>
+  <map id="Challenge.Dungeons.Scenarios.StageRewardTypeData_map" name="Challenge.Dungeons.Scenarios.StageRewardTypeData_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="334,0,658,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -135,7 +145,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d3c/_stage_reward_type_data_8cs_source.html#l00039">39</a> of file <a class="el" href="../../d2/d3c/_stage_reward_type_data_8cs_source.html">StageRewardTypeData.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            History.Clear();</div>
+<div class="line"><span class="lineno">   42</span>            </div>
+<div class="line"><span class="lineno">   43</span>            var result = <span class="keyword">new</span> List&lt;RewardSet&gt;(stageCount);</div>
+<div class="line"><span class="lineno">   44</span>            </div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">for</span> (var i = 1; i &lt;= stageCount ; i++)</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                var rewardSet = GetRewardSet(i);</div>
+<div class="line"><span class="lineno">   48</span>                </div>
+<div class="line"><span class="lineno">   49</span>                result.Add(rewardSet);</div>
+<div class="line"><span class="lineno">   50</span>            }</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

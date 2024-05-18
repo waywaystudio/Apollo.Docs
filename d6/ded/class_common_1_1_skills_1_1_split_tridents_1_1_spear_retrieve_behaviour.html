@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,26 @@ $(function(){initNavTree('d6/ded/class_common_1_1_skills_1_1_split_tridents_1_1_
   <div class="headertitle"><div class="title">Common.Skills.SplitTridents.SpearRetrieveBehaviour Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.SplitTridents.SpearRetrieveBehaviour:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/ded/class_common_1_1_skills_1_1_split_tridents_1_1_spear_retrieve_behaviour.png" usemap="#Common.Skills.SplitTridents.SpearRetrieveBehaviour_map" alt=""/>
+  <map id="Common.Skills.SplitTridents.SpearRetrieveBehaviour_map" name="Common.Skills.SplitTridents.SpearRetrieveBehaviour_map">
+<area href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html" alt="Common.Skills.SkillBehaviour" shape="rect" coords="756,224,1065,248"/>
+<area href="../../d2/dc3/interface_common_1_1_i_combo_source.html" alt="Common.IComboSource" shape="rect" coords="1075,224,1384,248"/>
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="478,168,787,192"/>
+<area href="../../de/de8/interface_common_1_1_i_skill_behaviour.html" alt="Common.ISkillBehaviour" shape="rect" coords="1036,168,1345,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="478,112,787,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="797,112,1106,136"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1276,112,1585,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="319,56,628,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="638,56,947,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="957,56,1266,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1276,56,1585,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="638,0,947,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -225,7 +246,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d63/_spear_retrieve_behaviour_8cs_source.html#l00017">17</a> of file <a class="el" href="../../d2/d63/_spear_retrieve_behaviour_8cs_source.html">SpearRetrieveBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>            Sections</div>
+<div class="line"><span class="lineno">   22</span>                .Add(Section.Active, <span class="stringliteral">&quot;TryShowWeapon&quot;</span>, <span class="keyword">null</span>) <span class="comment">// Do Not Show Weapon On Active Section;</span></div>
+<div class="line"><span class="lineno">   23</span>                .Add(Section.Active, <span class="stringliteral">&quot;TryRetrieveTridentProjectile&quot;</span>, TryRetrieveTridentProjectile)</div>
+<div class="line"><span class="lineno">   24</span>                .Add(Section.Complete, <span class="stringliteral">&quot;TryShowWeapon&quot;</span>, TryShowWeapon)</div>
+<div class="line"><span class="lineno">   25</span>                ;</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            comboTolerance.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   28</span>            rotationModel.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

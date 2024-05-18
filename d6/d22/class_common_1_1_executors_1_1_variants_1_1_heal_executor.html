@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,19 @@ $(function(){initNavTree('d6/d22/class_common_1_1_executors_1_1_variants_1_1_hea
   <div class="headertitle"><div class="title">Common.Executors.Variants.HealExecutor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Executors.Variants.HealExecutor:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/d22/class_common_1_1_executors_1_1_variants_1_1_heal_executor.png" usemap="#Common.Executors.Variants.HealExecutor_map" alt=""/>
+  <map id="Common.Executors.Variants.HealExecutor_map" name="Common.Executors.Variants.HealExecutor_map">
+<area href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html" alt="Common.Executors.ExecuteBehaviour" shape="rect" coords="130,56,381,80"/>
+<area href="../../db/df8/interface_common_1_1_i_heal_entity.html" alt="Common.IHealEntity" shape="rect" coords="522,56,773,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="783,56,1034,80"/>
+<area href="../../d7/dc1/interface_i_condition_table.html" alt="IConditionTable&lt; GameObject &gt;" shape="rect" coords="261,0,512,24"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="522,0,773,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -179,7 +193,13 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d13/_heal_executor_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d6/d13/_heal_executor_8cs_source.html">HealExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span> (syncWithProvider)</div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                healTable.UnregisterTable(Provider.StatTable);</div>
+<div class="line"><span class="lineno">   33</span>            }</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aef10326327d8046855d42b6bc7e21475" name="aef10326327d8046855d42b6bc7e21475"></a>
@@ -208,7 +228,14 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d13/_heal_executor_8cs_source.html#l00037">37</a> of file <a class="el" href="../../d6/d13/_heal_executor_8cs_source.html">HealExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (Conditions.HasFalse(target)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (target.IsNullOrDestroyed() || !target.TryGetComponent(out IHealTaker taker)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   41</span>            </div>
+<div class="line"><span class="lineno">   42</span>            <span class="comment">// HealFilter.Initialize(taker);</span></div>
+<div class="line"><span class="lineno">   43</span>            taker.TakeHeal(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac6e12dbe209eab22cdf61bba7fa96c6d" name="ac6e12dbe209eab22cdf61bba7fa96c6d"></a>
@@ -237,7 +264,17 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d13/_heal_executor_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d6/d13/_heal_executor_8cs_source.html">HealExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            base.Initialize(provider);</div>
+<div class="line"><span class="lineno">   19</span>            </div>
+<div class="line"><span class="lineno">   20</span>            healTable.Initialize();</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">if</span> (syncWithProvider)</div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                healTable.RegisterTable(Provider.StatTable);</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

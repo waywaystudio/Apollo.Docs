@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('da/d6a/class_common_1_1_u_i_1_1_floating_text.html','.
   <div class="headertitle"><div class="title">Common.UI.FloatingText Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UI.FloatingText:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/d6a/class_common_1_1_u_i_1_1_floating_text.png" usemap="#Common.UI.FloatingText_map" alt=""/>
+  <map id="Common.UI.FloatingText_map" name="Common.UI.FloatingText_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="157,0,304,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -137,7 +147,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dfa/_float_text_8cs_source.html#l00030">30</a> of file <a class="el" href="../../da/dfa/_float_text_8cs_source.html">FloatText.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (entity == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>            textMesh.color = entity.TextColor;</div>
+<div class="line"><span class="lineno">   35</span>            impactScale    = entity.ImpactScale;</div>
+<div class="line"><span class="lineno">   36</span>            impactDuration = entity.ImpactDuration;</div>
+<div class="line"><span class="lineno">   37</span>            moveUpDistance = entity.MoveUpDistance;</div>
+<div class="line"><span class="lineno">   38</span>            moveUpDuration = entity.MoveUpDuration;</div>
+<div class="line"><span class="lineno">   39</span>            fadeDuration   = entity.FadeDuration;</div>
+<div class="line"><span class="lineno">   40</span>            moveUpEase     = entity.MoveUpEase;</div>
+<div class="line"><span class="lineno">   41</span>            textMesh.text  = text;</div>
+<div class="line"><span class="lineno">   42</span>            randomPivot    = Random.insideUnitSphere * entity.PivotSpreadRange;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6248a9331071dd32cf285b877f4cf6cd" name="a6248a9331071dd32cf285b877f4cf6cd"></a>
@@ -156,7 +179,34 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dfa/_float_text_8cs_source.html#l00045">45</a> of file <a class="el" href="../../da/dfa/_float_text_8cs_source.html">FloatText.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            CurrentEntity       =   combatEntity;</div>
+<div class="line"><span class="lineno">   48</span>            initialPosition     =   combatEntity.Taker.PrePosition(PrePositionType.Top).position;</div>
+<div class="line"><span class="lineno">   49</span>            canvasRectTransform ??= GetComponentInParent&lt;Canvas&gt;().GetComponent&lt;RectTransform&gt;();</div>
+<div class="line"><span class="lineno">   50</span>            </div>
+<div class="line"><span class="lineno">   51</span>            StopTween();</div>
+<div class="line"><span class="lineno">   52</span>            </div>
+<div class="line"><span class="lineno">   53</span>            EffectTween = DOTween.Sequence()</div>
+<div class="line"><span class="lineno">   54</span>                                 .SetAutoKill(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   55</span>                                 .Append(textMesh.transform</div>
+<div class="line"><span class="lineno">   56</span>                                                 .DOLocalMove(randomPivot, 0f)</div>
+<div class="line"><span class="lineno">   57</span>                                                 .SetRelative())</div>
+<div class="line"><span class="lineno">   58</span>                                 .Append(textMesh.transform</div>
+<div class="line"><span class="lineno">   59</span>                                                 .DOLocalMoveY(moveUpDistance, impactDuration + moveUpDuration)</div>
+<div class="line"><span class="lineno">   60</span>                                                 .SetRelative()</div>
+<div class="line"><span class="lineno">   61</span>                                                 .SetEase(moveUpEase))</div>
+<div class="line"><span class="lineno">   62</span>                                 .Join(textTransform.DOScale(impactScale, impactDuration))</div>
+<div class="line"><span class="lineno">   63</span>                                 .Append(textMesh.DOFade(0.0f, fadeDuration))</div>
+<div class="line"><span class="lineno">   64</span>                                 .OnComplete(() =&gt; </div>
+<div class="line"><span class="lineno">   65</span>                                 {</div>
+<div class="line"><span class="lineno">   66</span>                                     OnEnd.Invoke();</div>
+<div class="line"><span class="lineno">   67</span>                                     textMesh.transform.localPosition = Vector3.zero;</div>
+<div class="line"><span class="lineno">   68</span>                                 });</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>            SetTextPosition();</div>
+<div class="line"><span class="lineno">   71</span>            textTransform.position = transform.position;</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -181,7 +231,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/dfa/_float_text_8cs_source.html#l00027">27</a> of file <a class="el" href="../../da/dfa/_float_text_8cs_source.html">FloatText.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

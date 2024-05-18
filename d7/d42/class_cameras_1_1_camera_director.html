@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,18 @@ $(function(){initNavTree('d7/d42/class_cameras_1_1_camera_director.html','../../
   <div class="headertitle"><div class="title">Cameras.CameraDirector Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Cameras.CameraDirector:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/d42/class_cameras_1_1_camera_director.png" usemap="#Cameras.CameraDirector_map" alt=""/>
+  <map id="Cameras.CameraDirector_map" name="Cameras.CameraDirector_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="345,0,565,24"/>
+<area href="../../d1/d31/class_challenge_1_1_challenge_camera_director.html" alt="Challenge.ChallengeCameraDirector" shape="rect" coords="0,112,220,136"/>
+<area href="../../d3/dd6/class_lobby_1_1_lobby_camera_director.html" alt="Lobby.LobbyCameraDirector" shape="rect" coords="230,112,450,136"/>
+<area href="../../d8/da5/class_title_1_1_title_camera_director.html" alt="Title.TitleCameraDirector" shape="rect" coords="460,112,680,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -169,7 +182,27 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/ddc/_camera_director_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d0/ddc/_camera_director_8cs_source.html">CameraDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            var activeVirtualCamera = brain.ActiveVirtualCamera;</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (activeVirtualCamera is <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                Debug.LogWarning(<span class="stringliteral">&quot;VirtualCamera None&quot;</span>);</div>
+<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   58</span>            }</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>            var activeCamera = activeVirtualCamera.VirtualCameraGameObject.GetComponent&lt;CinemachineVirtualCamera&gt;();</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (activeCamera.Equals(<span class="keyword">this</span>[cameraType])) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   62</span>        </div>
+<div class="line"><span class="lineno">   63</span>            (activeVirtualCamera.Priority, <span class="keyword">this</span>[cameraType].Priority) </div>
+<div class="line"><span class="lineno">   64</span>                = (<span class="keyword">this</span>[cameraType].Priority, activeVirtualCamera.Priority);</div>
+<div class="line"><span class="lineno">   65</span>            </div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (onBlendComplete != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   67</span>            {</div>
+<div class="line"><span class="lineno">   68</span>                OnCameraBlendFinished(onBlendComplete).Forget();</div>
+<div class="line"><span class="lineno">   69</span>            }</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5c9a99db02f4314fe572014fc41c7ae4" name="a5c9a99db02f4314fe572014fc41c7ae4"></a>
@@ -192,7 +225,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/ddc/_camera_director_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d0/ddc/_camera_director_8cs_source.html">CameraDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keyword">this</span>[cameraType].Follow                 = transform;</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keyword">this</span>[cameraType].LookAt                 = transform;</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keyword">this</span>[VirtualCameraType.Effector].Follow = transform;</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keyword">this</span>[VirtualCameraType.Effector].LookAt = transform;</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span><span class="preprocessor">#if UNITY_EDITOR</span></div>
+<div class="line"><span class="lineno">   36</span>            <span class="comment">// TODO.Dev 카메라 계속 사용할 예정이라면, 아래 파트 위치 변경 필요.</span></div>
+<div class="line"><span class="lineno">   37</span>            <span class="comment">// var dredTransform = ChallengeDirector.Dred.transform;</span></div>
+<div class="line"><span class="lineno">   38</span>            <span class="comment">//</span></div>
+<div class="line"><span class="lineno">   39</span>            <span class="comment">// this[VirtualCameraType.Dev].Follow = dredTransform;</span></div>
+<div class="line"><span class="lineno">   40</span>            <span class="comment">// this[VirtualCameraType.Dev].LookAt = dredTransform;</span></div>
+<div class="line"><span class="lineno">   41</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa95051101aba5fa6639a56b0dcf35b19" name="aa95051101aba5fa6639a56b0dcf35b19"></a>
@@ -219,7 +266,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/ddc/_camera_director_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d0/ddc/_camera_director_8cs_source.html">CameraDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            manager.Director = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa15403b9933b052928359f217b708e4e" name="aa15403b9933b052928359f217b708e4e"></a>
@@ -246,7 +296,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/ddc/_camera_director_8cs_source.html#l00080">80</a> of file <a class="el" href="../../d0/ddc/_camera_director_8cs_source.html">CameraDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            manager.Director = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af6e4ca537515d103e04bf5882d332dac" name="af6e4ca537515d103e04bf5882d332dac"></a>
@@ -265,7 +318,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/ddc/_camera_director_8cs_source.html#l00044">44</a> of file <a class="el" href="../../d0/ddc/_camera_director_8cs_source.html">CameraDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keyword">this</span>[cameraType].Follow = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keyword">this</span>[cameraType].LookAt = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

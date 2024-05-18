@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -125,7 +126,20 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d0b/_rotation_model_8cs_source.html#l00017">17</a> of file <a class="el" href="../../d8/d0b/_rotation_model_8cs_source.html">RotationModel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">if</span> (behaviour.Unit is not <a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a> player) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   20</span>            </div>
+<div class="line"><span class="lineno">   21</span>            dred = player;</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            behaviour.Sections</div>
+<div class="line"><span class="lineno">   24</span>                          .AddIf(instantRotate, Section.Active, <span class="stringliteral">&quot;InstantRotate&quot;</span>, InstantRotate)</div>
+<div class="line"><span class="lineno">   25</span>                          .AddIf(preventRotateOnSkill, Section.Active, <span class="stringliteral">&quot;PreventRotate&quot;</span>, PreventRotate)</div>
+<div class="line"><span class="lineno">   26</span>                          .AddIf(preventRotateOnSkill,Section.RigidEnd, <span class="stringliteral">&quot;ReleaseRotate&quot;</span>, ReleaseRotate)</div>
+<div class="line"><span class="lineno">   27</span>                          .AddIf(preventRotateOnSkill,Section.End, <span class="stringliteral">&quot;ReleaseRotate&quot;</span>, ReleaseRotate)</div>
+<div class="line"><span class="lineno">   28</span>                          ;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Common.Characters.Dreds.Dred</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00005">Dred.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

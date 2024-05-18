@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,12 @@ $(function(){initNavTree('d5/d8d/class_common_1_1_u_i_1_1_image_flipper.html','.
   <div class="headertitle"><div class="title">Common.UI.ImageFlipper Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UI.ImageFlipper:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/d8d/class_common_1_1_u_i_1_1_image_flipper.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -139,7 +146,25 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dbe/_image_flipper_8cs_source.html#l00048">48</a> of file <a class="el" href="../../df/dbe/_image_flipper_8cs_source.html">ImageFlipper.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">if</span> (!enabled)</div>
+<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>            var list = <span class="keyword">new</span> List&lt;UIVertex&gt;();</div>
+<div class="line"><span class="lineno">   54</span>            <span class="keyword">using</span> (var vertexHelper = <span class="keyword">new</span> VertexHelper(mesh))</div>
+<div class="line"><span class="lineno">   55</span>            {</div>
+<div class="line"><span class="lineno">   56</span>                vertexHelper.GetUIVertexStream(list);</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>            ModifyVertices(list); <span class="comment">// calls the old ModifyVertices which was used on pre 5.2</span></div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>            <span class="keyword">using</span> (var vertexHelper2 = <span class="keyword">new</span> VertexHelper())</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                vertexHelper2.AddUIVertexTriangleStream(list);</div>
+<div class="line"><span class="lineno">   64</span>                vertexHelper2.FillMesh(mesh);</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af08bea31c04bf40359e780c4f20d6fdb" name="af08bea31c04bf40359e780c4f20d6fdb"></a>
@@ -158,7 +183,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dbe/_image_flipper_8cs_source.html#l00034">34</a> of file <a class="el" href="../../df/dbe/_image_flipper_8cs_source.html">ImageFlipper.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (!enabled)</div>
+<div class="line"><span class="lineno">   37</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   38</span>        </div>
+<div class="line"><span class="lineno">   39</span>            var list = <span class="keyword">new</span> List&lt;UIVertex&gt;();</div>
+<div class="line"><span class="lineno">   40</span>            vertexHelper.GetUIVertexStream(list);</div>
+<div class="line"><span class="lineno">   41</span>        </div>
+<div class="line"><span class="lineno">   42</span>            ModifyVertices(list); <span class="comment">// calls the old ModifyVertices which was used on pre 5.2</span></div>
+<div class="line"><span class="lineno">   43</span>        </div>
+<div class="line"><span class="lineno">   44</span>            vertexHelper.Clear();</div>
+<div class="line"><span class="lineno">   45</span>            vertexHelper.AddUIVertexTriangleStream(list);</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa6b728fcf592681d5aa9fa79333f31e2" name="aa6b728fcf592681d5aa9fa79333f31e2"></a>
@@ -177,7 +214,28 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dbe/_image_flipper_8cs_source.html#l00068">68</a> of file <a class="el" href="../../df/dbe/_image_flipper_8cs_source.html">ImageFlipper.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (!enabled)</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>            var rt = transform as RectTransform;</div>
+<div class="line"><span class="lineno">   74</span>        </div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">for</span> (var i = 0; i &lt; verts.Count; ++i)</div>
+<div class="line"><span class="lineno">   76</span>            {</div>
+<div class="line"><span class="lineno">   77</span>                var v = verts[i];</div>
+<div class="line"><span class="lineno">   78</span>            </div>
+<div class="line"><span class="lineno">   79</span>                <span class="comment">// Modify positions</span></div>
+<div class="line"><span class="lineno">   80</span>                v.position = <span class="keyword">new</span> Vector3(</div>
+<div class="line"><span class="lineno">   81</span>                    (horizontal ? (v.position.x + (rt.rect.center.x - v.position.x) * 2) : v.position.x),</div>
+<div class="line"><span class="lineno">   82</span>                    (vertical ?  (v.position.y + (rt.rect.center.y - v.position.y) * 2) : v.position.y),</div>
+<div class="line"><span class="lineno">   83</span>                    v.position.z</div>
+<div class="line"><span class="lineno">   84</span>                );</div>
+<div class="line"><span class="lineno">   85</span>            </div>
+<div class="line"><span class="lineno">   86</span>                <span class="comment">// Apply</span></div>
+<div class="line"><span class="lineno">   87</span>                verts[i] = v;</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -205,7 +263,11 @@ Properties</h2></td></tr>
 <p><code>true</code> if horizontal; otherwise, <code>false</code>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/dbe/_image_flipper_8cs_source.html#l00018">18</a> of file <a class="el" href="../../df/dbe/_image_flipper_8cs_source.html">ImageFlipper.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keyword">get</span> =&gt; horizontal;</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keyword">set</span> { horizontal = value; GetComponent&lt;Graphic&gt;().SetVerticesDirty(); }</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1d058fece9898e46df2cc6ef46887264" name="a1d058fece9898e46df2cc6ef46887264"></a>
@@ -232,7 +294,11 @@ Properties</h2></td></tr>
 <p><code>true</code> if vertical; otherwise, <code>false</code>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/dbe/_image_flipper_8cs_source.html#l00028">28</a> of file <a class="el" href="../../df/dbe/_image_flipper_8cs_source.html">ImageFlipper.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keyword">get</span> =&gt; vertical;</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keyword">set</span> { vertical = value; GetComponent&lt;Graphic&gt;().SetVerticesDirty(); }</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

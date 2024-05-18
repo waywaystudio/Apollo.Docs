@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -125,7 +126,15 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d69/_stat_changer_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d5/d69/_stat_changer_8cs_source.html">StatChanger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            this.effect = effect;</div>
+<div class="line"><span class="lineno">   23</span>            </div>
+<div class="line"><span class="lineno">   24</span>            effect.Sections</div>
+<div class="line"><span class="lineno">   25</span>                  .Add(Section.Active, <span class="stringliteral">&quot;ChangeStat&quot;</span>, ChangeStat)</div>
+<div class="line"><span class="lineno">   26</span>                  .Add(Section.End, <span class="stringliteral">&quot;ResetStat&quot;</span>, ResetStat)</div>
+<div class="line"><span class="lineno">   27</span>                  ;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

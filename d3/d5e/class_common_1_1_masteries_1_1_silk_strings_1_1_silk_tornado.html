@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('d3/d5e/class_common_1_1_masteries_1_1_silk_strings_1_1
   <div class="headertitle"><div class="title">Common.Masteries.SilkStrings.SilkTornado Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.SilkStrings.SilkTornado:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d3/d5e/class_common_1_1_masteries_1_1_silk_strings_1_1_silk_tornado.png" usemap="#Common.Masteries.SilkStrings.SilkTornado_map" alt=""/>
+  <map id="Common.Masteries.SilkStrings.SilkTornado_map" name="Common.Masteries.SilkStrings.SilkTornado_map">
+<area href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html" alt="Common.Masteries.Mastery" shape="rect" coords="263,56,516,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="263,0,516,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="526,0,779,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -206,7 +218,19 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/dbc/_silk_tornado_8cs_source.html#l00037">37</a> of file <a class="el" href="../../db/dbc/_silk_tornado_8cs_source.html">SilkTornado.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            RemoveSilkStrings(dred);</div>
+<div class="line"><span class="lineno">   40</span>            </div>
+<div class="line"><span class="lineno">   41</span>            dred.Skills.SilkTwister.ActivatedProjectiles.ForEach(projectile =&gt;</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                projectile.Trajectory.Speed    = originalRevolveSpeed;</div>
+<div class="line"><span class="lineno">   44</span>                projectile.Trajectory.Distance = originalRevolveDistance;</div>
+<div class="line"><span class="lineno">   45</span>            });</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>            spawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a9949ebd2ab1adcb67a2e7b3b53c93cca">Remove</a>(DataIndex.SilkTwisterProjectile, <span class="stringliteral">&quot;SilkTornado&quot;</span>);</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_spawn_event_table_html_a9949ebd2ab1adcb67a2e7b3b53c93cca"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a9949ebd2ab1adcb67a2e7b3b53c93cca">Common.SpawnEventTable.Remove</a></div><div class="ttdeci">void Remove(DataIndex dataIndex, string spawnActionKey, Action&lt; T &gt; callback=null)</div><div class="ttdoc">Remove Specific Target Spawn Event.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/da4/_spawn_event_table_8cs_source.html#l00081">SpawnEventTable.cs:81</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1b216cf451cb8842bf812e79d885d147" name="a1b216cf451cb8842bf812e79d885d147"></a>
@@ -233,7 +257,26 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/dbc/_silk_tornado_8cs_source.html#l00019">19</a> of file <a class="el" href="../../db/dbc/_silk_tornado_8cs_source.html">SilkTornado.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            this.dred = dred;</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            AddSilkStrings(dred);</div>
+<div class="line"><span class="lineno">   24</span>            </div>
+<div class="line"><span class="lineno">   25</span><span class="preprocessor">            #region Save Original Traject Properties</span></div>
+<div class="line"><span class="lineno">   26</span>            var projectileDB = <a class="code hl_class" href="../../dc/d83/class_database.html">Database</a>.ProjectilePrefabs[DataIndex.SilkTwisterProjectile];</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (!projectileDB.TryGetComponent(out <a class="code hl_class" href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html">Trajectory</a> trajectory)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   29</span> </div>
+<div class="line"><span class="lineno">   30</span>            originalRevolveSpeed    = trajectory.Speed;</div>
+<div class="line"><span class="lineno">   31</span>            originalRevolveDistance = trajectory.Distance;</div>
+<div class="line"><span class="lineno">   32</span><span class="preprocessor">            #endregion</span></div>
+<div class="line"><span class="lineno">   33</span>            </div>
+<div class="line"><span class="lineno">   34</span>            spawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Add</a>(DataIndex.SilkTwisterProjectile, <span class="stringliteral">&quot;SilkTornado&quot;</span>, ChangeRevolveProperty);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectory_html"><div class="ttname"><a href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html">Common.Projectiles.Trajectory</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d89/_trajectory_8cs_source.html#l00005">Trajectory.cs:6</a></div></div>
+<div class="ttc" id="aclass_common_1_1_spawn_event_table_html_ac8c1e472bcbad1c5493cff1ec02b1a98"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Common.SpawnEventTable.Add</a></div><div class="ttdeci">void Add(DataIndex dataIndex, string spawnActionKey, Action action)</div><div class="ttdoc">Add Specific Target Spawn event.</div></div>
+<div class="ttc" id="aclass_database_html"><div class="ttname"><a href="../../dc/d83/class_database.html">Database</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/d16/_database_8cs_source.html#l00026">Database.cs:27</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a007800faf13cb6294434a20b7f319f20" name="a007800faf13cb6294434a20b7f319f20"></a>
@@ -260,7 +303,19 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/dbc/_silk_tornado_8cs_source.html#l00050">50</a> of file <a class="el" href="../../db/dbc/_silk_tornado_8cs_source.html">SilkTornado.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            var silkTwisterSkill = dred.WeaponTable[WeaponType.SilkStrings][SkillType.Attack][DataIndex.SilkTwister];</div>
+<div class="line"><span class="lineno">   53</span>            var mainBehaviour = silkTwisterSkill.MainBehaviour;</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (mainBehaviour is not <a class="code hl_class" href="../../d3/dc0/class_common_1_1_skills_1_1_silk_strings_1_1_silk_twister.html">SilkTwister</a> silkTwister) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   56</span>            </div>
+<div class="line"><span class="lineno">   57</span>            silkTwister.ActivatedProjectiles.ForEach(projectile =&gt;</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                projectile.Trajectory.Distance = originalRevolveDistance * (1 + quality.Value);</div>
+<div class="line"><span class="lineno">   60</span>            });</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_skills_1_1_silk_strings_1_1_silk_twister_html"><div class="ttname"><a href="../../d3/dc0/class_common_1_1_skills_1_1_silk_strings_1_1_silk_twister.html">Common.Skills.SilkStrings.SilkTwister</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/da6/_silk_twister_8cs_source.html#l00007">SilkTwister.cs:8</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

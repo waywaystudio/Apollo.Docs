@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,17 @@ $(function(){initNavTree('da/daf/class_common_1_1_effects_1_1_sounds_1_1_random_
   <div class="headertitle"><div class="title">Common.Effects.Sounds.RandomSoundEffect Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Effects.Sounds.RandomSoundEffect:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/daf/class_common_1_1_effects_1_1_sounds_1_1_random_sound_effect.png" usemap="#Common.Effects.Sounds.RandomSoundEffect_map" alt=""/>
+  <map id="Common.Effects.Sounds.RandomSoundEffect_map" name="Common.Effects.Sounds.RandomSoundEffect_map">
+<area href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html" alt="Common.Effects.EffectBehaviour" shape="rect" coords="0,56,267,80"/>
+<area href="../../db/d99/interface_audios_1_1_i_sound_effect_property.html" alt="Audios.ISoundEffectProperty" shape="rect" coords="277,56,544,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="554,56,821,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -207,7 +219,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html">Common.Effects.EffectBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d88/_random_sound_effect_8cs_source.html#l00027">27</a> of file <a class="el" href="../../db/d88/_random_sound_effect_8cs_source.html">RandomSoundEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            base.Initialize(sequencer);</div>
+<div class="line"><span class="lineno">   30</span>            </div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (!syncWithGameObject)</div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>                OriginalParent = transform.parent;</div>
+<div class="line"><span class="lineno">   34</span>            }</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8b462acb88f0e9f65b6fd79bb825e677" name="a8b462acb88f0e9f65b6fd79bb825e677"></a>
@@ -234,7 +254,37 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d88/_random_sound_effect_8cs_source.html#l00037">37</a> of file <a class="el" href="../../db/d88/_random_sound_effect_8cs_source.html">RandomSoundEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (!audioManager.IsPermitPlay(<span class="keyword">this</span>)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (useRandomPitch)</div>
+<div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                source.pitch = 1 + Random.Range(-randomPitchPercent, randomPitchPercent);</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>            </div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (!syncWithGameObject)</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                transform.SetParent(<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>                <span class="keywordflow">if</span> (OriginalParent.IsNullOrDestroyed())</div>
+<div class="line"><span class="lineno">   50</span>                {</div>
+<div class="line"><span class="lineno">   51</span>                    StopCallback(() =&gt; Destroy(gameObject)).Forget();</div>
+<div class="line"><span class="lineno">   52</span>                }</div>
+<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   54</span>                {</div>
+<div class="line"><span class="lineno">   55</span>                    StopCallback(() =&gt;</div>
+<div class="line"><span class="lineno">   56</span>                    {</div>
+<div class="line"><span class="lineno">   57</span>                        transform.SetParent(OriginalParent);</div>
+<div class="line"><span class="lineno">   58</span>                        transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);</div>
+<div class="line"><span class="lineno">   59</span>                    }).Forget();</div>
+<div class="line"><span class="lineno">   60</span>                }</div>
+<div class="line"><span class="lineno">   61</span>            }</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>            var selectedClip = clipList.Random();</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>            source.clip = selectedClip;</div>
+<div class="line"><span class="lineno">   66</span>            source.Play();</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a150165bb587fc77019d8bf0cfddb0fad" name="a150165bb587fc77019d8bf0cfddb0fad"></a>
@@ -261,7 +311,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d88/_random_sound_effect_8cs_source.html#l00069">69</a> of file <a class="el" href="../../db/d88/_random_sound_effect_8cs_source.html">RandomSoundEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            source.Stop();</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

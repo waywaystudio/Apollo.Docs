@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('df/ddc/class_common_1_1_props_1_1_prop_selector.html',
   <div class="headertitle"><div class="title">Common.Props.PropSelector Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Props.PropSelector:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/ddc/class_common_1_1_props_1_1_prop_selector.png" usemap="#Common.Props.PropSelector_map" alt=""/>
+  <map id="Common.Props.PropSelector_map" name="Common.Props.PropSelector_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="185,0,360,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -125,7 +135,14 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d90/_prop_selector_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d0/d90/_prop_selector_8cs_source.html">PropSelector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            var randomValue = Random.Range(minMaxNormal.x, minMaxNormal.y);</div>
+<div class="line"><span class="lineno">   14</span>            var onCount = (elements.Count * randomValue).ToInt();</div>
+<div class="line"><span class="lineno">   15</span>            </div>
+<div class="line"><span class="lineno">   16</span>            elements.Shuffle();</div>
+<div class="line"><span class="lineno">   17</span>            elements.ForEach((e, index) =&gt; { e.SetActive(index &lt; onCount); });</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

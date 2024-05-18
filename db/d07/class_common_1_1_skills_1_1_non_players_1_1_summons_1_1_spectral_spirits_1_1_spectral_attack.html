@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,26 @@ $(function(){initNavTree('db/d07/class_common_1_1_skills_1_1_non_players_1_1_sum
   <div class="headertitle"><div class="title">Common.Skills.NonPlayers.Summons.SpectralSpirits.SpectralAttack Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.NonPlayers.Summons.SpectralSpirits.SpectralAttack:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/d07/class_common_1_1_skills_1_1_non_players_1_1_summons_1_1_spectral_spirits_1_1_spectral_attack.png" usemap="#Common.Skills.NonPlayers.Summons.SpectralSpirits.SpectralAttack_map" alt=""/>
+  <map id="Common.Skills.NonPlayers.Summons.SpectralSpirits.SpectralAttack_map" name="Common.Skills.NonPlayers.Summons.SpectralSpirits.SpectralAttack_map">
+<area href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html" alt="Common.Skills.NonPlayers.NonPlayerSkillBehaviour" shape="rect" coords="952,280,1344,304"/>
+<area href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html" alt="Common.Skills.SkillBehaviour" shape="rect" coords="952,224,1344,248"/>
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="603,168,995,192"/>
+<area href="../../de/de8/interface_common_1_1_i_skill_behaviour.html" alt="Common.ISkillBehaviour" shape="rect" coords="1306,168,1698,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="603,112,995,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="1005,112,1397,136"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1608,112,2000,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="402,56,794,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="804,56,1196,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="1206,56,1598,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1608,56,2000,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="804,0,1196,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -236,7 +257,14 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html">Common.Skills.NonPlayers.NonPlayerSkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d76/_spectral_attack_8cs_source.html#l00007">7</a> of file <a class="el" href="../../dd/d76/_spectral_attack_8cs_source.html">SpectralAttack.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>        {</div>
+<div class="line"><span class="lineno">    9</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   10</span> </div>
+<div class="line"><span class="lineno">   11</span>            Sections</div>
+<div class="line"><span class="lineno">   12</span>                .Add(Section.Active, <span class="stringliteral">&quot;RotateInstantly&quot;</span>, InstantRotate)</div>
+<div class="line"><span class="lineno">   13</span>                ;</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

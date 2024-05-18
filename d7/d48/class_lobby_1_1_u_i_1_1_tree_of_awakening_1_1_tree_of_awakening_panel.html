@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('d7/d48/class_lobby_1_1_u_i_1_1_tree_of_awakening_1_1_t
   <div class="headertitle"><div class="title">Lobby.UI.TreeOfAwakening.TreeOfAwakeningPanel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Lobby.UI.TreeOfAwakening.TreeOfAwakeningPanel:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/d48/class_lobby_1_1_u_i_1_1_tree_of_awakening_1_1_tree_of_awakening_panel.png" usemap="#Lobby.UI.TreeOfAwakening.TreeOfAwakeningPanel_map" alt=""/>
+  <map id="Lobby.UI.TreeOfAwakening.TreeOfAwakeningPanel_map" name="Lobby.UI.TreeOfAwakening.TreeOfAwakeningPanel_map">
+<area href="../../dc/d43/class_common_1_1_u_i_1_1_panel.html" alt="Common.UI.Panel" shape="rect" coords="158,112,464,136"/>
+<area href="../../d1/dc6/class_common_1_1_u_i_element.html" alt="Common.UIElement" shape="rect" coords="158,56,464,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="316,0,622,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -196,7 +208,23 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc6/class_common_1_1_u_i_element.html">Common.UIElement</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d19/_tree_of_awakening_panel_8cs_source.html#l00015">15</a> of file <a class="el" href="../../dd/d19/_tree_of_awakening_panel_8cs_source.html">TreeOfAwakeningPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            base.Initialize();</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>            <span class="keyword">this</span>[UIEventType.Open].Sections</div>
+<div class="line"><span class="lineno">   20</span>                                  .Add(Section.Active, <span class="stringliteral">&quot;DisablePlayerControl&quot;</span>, DisablePlayerControl)</div>
+<div class="line"><span class="lineno">   21</span>                                  .Add(Section.Active, <span class="stringliteral">&quot;SamsaraStone.AddEvent&quot;</span>, () =&gt; outGameResourceData.SamsaraStone.AddEvent(<span class="stringliteral">&quot;TreeOfAwakeningUIUpdate&quot;</span>, WriteStoneCount))</div>
+<div class="line"><span class="lineno">   22</span>                                  .Add(Section.Active, <span class="stringliteral">&quot;SetStoneCountText&quot;</span>, () =&gt; stoneCountTextMesh.text = outGameResourceData.SamsaraStone.Value.ToString())</div>
+<div class="line"><span class="lineno">   23</span>                                  ;</div>
+<div class="line"><span class="lineno">   24</span>            </div>
+<div class="line"><span class="lineno">   25</span>            <span class="keyword">this</span>[UIEventType.Close].Sections</div>
+<div class="line"><span class="lineno">   26</span>                                  .Add(Section.Active, <span class="stringliteral">&quot;EnablePlayerControl&quot;</span>, EnablePlayerControl)</div>
+<div class="line"><span class="lineno">   27</span>                                  .Add(Section.Active, <span class="stringliteral">&quot;SamsaraStone.RemoveEvent&quot;</span>, () =&gt; outGameResourceData.SamsaraStone.RemoveEvent(<span class="stringliteral">&quot;TreeOfAwakeningUIUpdate&quot;</span>))</div>
+<div class="line"><span class="lineno">   28</span>                                  ;</div>
+<div class="line"><span class="lineno">   29</span>            </div>
+<div class="line"><span class="lineno">   30</span>            outGameResourceData.SamsaraStone.AddEvent(<span class="stringliteral">&quot;TreeOfAwakeningUIUpdate&quot;</span>, WriteStoneCount);</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

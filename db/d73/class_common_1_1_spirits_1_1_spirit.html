@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,18 @@ $(function(){initNavTree('db/d73/class_common_1_1_spirits_1_1_spirit.html','../.
   <div class="headertitle"><div class="title">Common.Spirits.Spirit Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Spirits.Spirit:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/d73/class_common_1_1_spirits_1_1_spirit.png" usemap="#Common.Spirits.Spirit_map" alt=""/>
+  <map id="Common.Spirits.Spirit_map" name="Common.Spirits.Spirit_map">
+<area href="../../d0/db6/interface_common_1_1_i_damage_taker.html" title="Character, Projectile, Trap, Prop." alt="Common.IDamageTaker" shape="rect" coords="155,112,300,136"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="310,112,455,136"/>
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="155,56,300,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="155,0,300,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -188,7 +201,24 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/de9/_spirit_8cs_source.html#l00037">37</a> of file <a class="el" href="../../d7/de9/_spirit_8cs_source.html">Spirit.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a>     = dred;</div>
+<div class="line"><span class="lineno">   40</span>            Detector = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">DetectModel</a>(transform);</div>
+<div class="line"><span class="lineno">   41</span>            </div>
+<div class="line"><span class="lineno">   42</span>            spawnAction.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   43</span>            powerUp.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   44</span>            disappearAction.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   45</span>            drawer.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   46</span>            follow.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   47</span>            takeDamage.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   48</span>            </div>
+<div class="line"><span class="lineno">   49</span>            pathfindingSystem.SetAIMove(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   50</span>            pathfindingSystem.SetRvo(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   51</span>            spawnEvent.Invoke(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Common.Characters.Dreds.Dred</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00005">Dred.cs:6</a></div></div>
+<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">Common.Systems.DetectModel</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00008">DetectModel.cs:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a83072fb5a85f195a3fcac858bf9aed33" name="a83072fb5a85f195a3fcac858bf9aed33"></a>
@@ -258,7 +288,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/de9/_spirit_8cs_source.html#l00027">27</a> of file <a class="el" href="../../d7/de9/_spirit_8cs_source.html">Spirit.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae7014322741b6af316131280466ad204" name="ae7014322741b6af316131280466ad204"></a>
@@ -306,7 +337,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/de9/_spirit_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d7/de9/_spirit_8cs_source.html">Spirit.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a447ec5b2c6223ad0915deab0d04a3cee" name="a447ec5b2c6223ad0915deab0d04a3cee"></a>

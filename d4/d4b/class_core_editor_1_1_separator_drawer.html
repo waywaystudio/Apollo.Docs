@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d4/d4b/class_core_editor_1_1_separator_drawer.html','.
   <div class="headertitle"><div class="title">CoreEditor.SeparatorDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for CoreEditor.SeparatorDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/d4b/class_core_editor_1_1_separator_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,7 +134,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d6e/_separator_drawer_8cs_source.html#l00009">9</a> of file <a class="el" href="../../db/d6e/_separator_drawer_8cs_source.html">SeparatorDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            var separatorAttribute = (<a class="code hl_class" href="../../d4/d2f/class_separator_attribute.html">SeparatorAttribute</a>)attribute;</div>
+<div class="line"><span class="lineno">   12</span> </div>
+<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">return</span> EditorGUIUtility.singleLineHeight + separatorAttribute.Height;</div>
+<div class="line"><span class="lineno">   14</span>        }</div>
+<div class="ttc" id="aclass_separator_attribute_html"><div class="ttname"><a href="../../d4/d2f/class_separator_attribute.html">SeparatorAttribute</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/da7/_separator_attribute_8cs_source.html#l00007">SeparatorAttribute.cs:8</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a89d4ca770258f84715f404f7d57c73ad" name="a89d4ca770258f84715f404f7d57c73ad"></a>
@@ -146,7 +159,16 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d6e/_separator_drawer_8cs_source.html#l00016">16</a> of file <a class="el" href="../../db/d6e/_separator_drawer_8cs_source.html">SeparatorDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            var rect = EditorGUI.IndentedRect(position);</div>
+<div class="line"><span class="lineno">   19</span>            var separatorAttribute = (<a class="code hl_class" href="../../d4/d2f/class_separator_attribute.html">SeparatorAttribute</a>)attribute;</div>
+<div class="line"><span class="lineno">   20</span>            </div>
+<div class="line"><span class="lineno">   21</span>            rect.y      += EditorGUIUtility.singleLineHeight / 3.0f;</div>
+<div class="line"><span class="lineno">   22</span>            rect.height =  separatorAttribute.Height;</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>            EditorGUI.DrawRect(rect, separatorAttribute.Color);</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

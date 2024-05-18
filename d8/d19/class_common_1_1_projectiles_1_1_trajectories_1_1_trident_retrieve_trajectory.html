@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d8/d19/class_common_1_1_projectiles_1_1_trajectories_1
   <div class="headertitle"><div class="title">Common.Projectiles.Trajectories.TridentRetrieveTrajectory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Trajectories.TridentRetrieveTrajectory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/d19/class_common_1_1_projectiles_1_1_trajectories_1_1_trident_retrieve_trajectory.png" usemap="#Common.Projectiles.Trajectories.TridentRetrieveTrajectory_map" alt=""/>
+  <map id="Common.Projectiles.Trajectories.TridentRetrieveTrajectory_map" name="Common.Projectiles.Trajectories.TridentRetrieveTrajectory_map">
+<area href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html" alt="Common.Projectiles.Trajectory" shape="rect" coords="0,56,342,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -165,7 +175,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd8/_trident_retrieve_trajectory_8cs_source.html#l00055">55</a> of file <a class="el" href="../../dd/dd8/_trident_retrieve_trajectory_8cs_source.html">TridentRetrieveTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            retrieveCanceller?.Cancel();</div>
+<div class="line"><span class="lineno">   58</span>            retrieveCanceller = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a72ec15621679497a7877754ef830a76f" name="a72ec15621679497a7877754ef830a76f"></a>
@@ -184,7 +198,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd8/_trident_retrieve_trajectory_8cs_source.html#l00041">41</a> of file <a class="el" href="../../dd/dd8/_trident_retrieve_trajectory_8cs_source.html">TridentRetrieveTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            retrieveCanceller = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (IsBounce)</div>
+<div class="line"><span class="lineno">   46</span>            {   </div>
+<div class="line"><span class="lineno">   47</span>                BounceRetrieve(retrieveCanceller).Forget();</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                DirectRetrieve(retrieveCanceller).Forget();</div>
+<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7986c8685cb38ab88f0ac515f3f171e4" name="a7986c8685cb38ab88f0ac515f3f171e4"></a>
@@ -213,7 +239,24 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html">Common.Projectiles.Trajectory</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd8/_trident_retrieve_trajectory_8cs_source.html#l00023">23</a> of file <a class="el" href="../../dd/dd8/_trident_retrieve_trajectory_8cs_source.html">TridentRetrieveTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">if</span> (sequencer is not <a class="code hl_class" href="../../df/dc8/class_common_1_1_projectiles_1_1_variants_1_1_tridents_1_1_retrieve_action.html">RetrieveAction</a> retrieve) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>            retrieveAction = retrieve;</div>
+<div class="line"><span class="lineno">   28</span>            Projectile     = retrieveAction.Projectile;</div>
+<div class="line"><span class="lineno">   29</span>            provider       = Projectile.Provider;</div>
+<div class="line"><span class="lineno">   30</span>            MaxBounceCount = bounceCount;</div>
+<div class="line"><span class="lineno">   31</span>            </div>
+<div class="line"><span class="lineno">   32</span>            </div>
+<div class="line"><span class="lineno">   33</span>            retrieve.Sections</div>
+<div class="line"><span class="lineno">   34</span>                    .Add(Section.Active, <span class="stringliteral">&quot;ProjectileFlying&quot;</span>, Flying)</div>
+<div class="line"><span class="lineno">   35</span>                    .Add(Section.End, <span class="stringliteral">&quot;ProjectileCancelFlying&quot;</span>, Cancel)</div>
+<div class="line"><span class="lineno">   36</span>                    .Add(Section.End, <span class="stringliteral">&quot;ResetBounceCount&quot;</span>, () =&gt; currentBounceCount = 0)</div>
+<div class="line"><span class="lineno">   37</span>                    .Add(Section.Dispose, <span class="stringliteral">&quot;DisposeTrajectory&quot;</span>, Cancel)</div>
+<div class="line"><span class="lineno">   38</span>                    ;</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_variants_1_1_tridents_1_1_retrieve_action_html"><div class="ttname"><a href="../../df/dc8/class_common_1_1_projectiles_1_1_variants_1_1_tridents_1_1_retrieve_action.html">Common.Projectiles.Variants.Tridents.RetrieveAction</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/d8b/_retrieve_action_8cs_source.html#l00007">RetrieveAction.cs:8</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -238,7 +281,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd8/_trident_retrieve_trajectory_8cs_source.html#l00020">20</a> of file <a class="el" href="../../dd/dd8/_trident_retrieve_trajectory_8cs_source.html">TridentRetrieveTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9cda7fbd81819eb131c05f8abcd50382" name="a9cda7fbd81819eb131c05f8abcd50382"></a>
@@ -262,7 +306,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dd8/_trident_retrieve_trajectory_8cs_source.html#l00019">19</a> of file <a class="el" href="../../dd/dd8/_trident_retrieve_trajectory_8cs_source.html">TridentRetrieveTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

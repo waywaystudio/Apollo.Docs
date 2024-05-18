@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('dc/da9/class_challenge_1_1_props_1_1_variants_1_1_dung
   <div class="headertitle"><div class="title">Challenge.Props.Variants.DungeonGate Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Props.Variants.DungeonGate:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/da9/class_challenge_1_1_props_1_1_variants_1_1_dungeon_gate.png" usemap="#Challenge.Props.Variants.DungeonGate_map" alt=""/>
+  <map id="Challenge.Props.Variants.DungeonGate_map" name="Challenge.Props.Variants.DungeonGate_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="248,0,486,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -131,7 +141,24 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d65/_dungeon_gate_8cs_source.html#l00026">26</a> of file <a class="el" href="../../df/d65/_dungeon_gate_8cs_source.html">DungeonGate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            this.selectSequence = selectSequence;</div>
+<div class="line"><span class="lineno">   29</span>            stageRewardType     = rewardType;</div>
+<div class="line"><span class="lineno">   30</span>            preBlockage.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>            gateMode.Initialize();</div>
+<div class="line"><span class="lineno">   33</span>            gateMode.Close(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   34</span>            interactable.Initialize();</div>
+<div class="line"><span class="lineno">   35</span>            interactable.Sections</div>
+<div class="line"><span class="lineno">   36</span>                        .Add(Section.Complete, <span class="stringliteral">&quot;DeactivateBlockage&quot;</span>, DeactivateBlockage)</div>
+<div class="line"><span class="lineno">   37</span>                        .Add(Section.Complete, <span class="stringliteral">&quot;OpenTheGate&quot;</span>, () =&gt; gateMode.Open())</div>
+<div class="line"><span class="lineno">   38</span>                        .Add(Section.Complete, <span class="stringliteral">&quot;DecideNextStage&quot;</span>, DecideNextStage)</div>
+<div class="line"><span class="lineno">   39</span>                        .Add(Section.Complete, <span class="stringliteral">&quot;CompleteSelectSequence&quot;</span>, CompleteSelectSequence)</div>
+<div class="line"><span class="lineno">   40</span>                        ;</div>
+<div class="line"><span class="lineno">   41</span>            </div>
+<div class="line"><span class="lineno">   42</span>            SetModeling();</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac447abfd408e9557c422713a8f65f111" name="ac447abfd408e9557c422713a8f65f111"></a>
@@ -150,7 +177,22 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d65/_dungeon_gate_8cs_source.html#l00045">45</a> of file <a class="el" href="../../df/d65/_dungeon_gate_8cs_source.html">DungeonGate.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (!TrySetNextStageRewardType()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>            var rewardTransform = transform;</div>
+<div class="line"><span class="lineno">   50</span>            var particle = pool.Get();</div>
+<div class="line"><span class="lineno">   51</span>            </div>
+<div class="line"><span class="lineno">   52</span>            particle.transform.SetPositionAndRotation(rewardTransform.position, particle.transform.rotation);</div>
+<div class="line"><span class="lineno">   53</span>            particle.transform.SetParent(rewardTransform);</div>
+<div class="line"><span class="lineno">   54</span>            </div>
+<div class="line"><span class="lineno">   55</span>            flag.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   56</span>            iconRenderer.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   57</span>            interactableRadar.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   58</span>            </div>
+<div class="line"><span class="lineno">   59</span>            pool.Get().Play();</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

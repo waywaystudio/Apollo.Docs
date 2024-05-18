@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,22 @@ $(function(){initNavTree('d2/db9/class_challenge_1_1_dungeons_1_1_sections_1_1_d
   <div class="headertitle"><div class="title">Challenge.Dungeons.Sections.DungeonSection Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Dungeons.Sections.DungeonSection:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/db9/class_challenge_1_1_dungeons_1_1_sections_1_1_dungeon_section.png" usemap="#Challenge.Dungeons.Sections.DungeonSection_map" alt=""/>
+  <map id="Challenge.Dungeons.Sections.DungeonSection_map" name="Challenge.Dungeons.Sections.DungeonSection_map">
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1005,0,1330,24"/>
+<area href="../../d6/d29/class_challenge_1_1_dungeons_1_1_sections_1_1_boss_combat_section.html" alt="Challenge.Dungeons.Sections.BossCombatSection" shape="rect" coords="0,112,325,136"/>
+<area href="../../df/da6/class_challenge_1_1_dungeons_1_1_sections_1_1_combat_section.html" alt="Challenge.Dungeons.Sections.CombatSection" shape="rect" coords="335,112,660,136"/>
+<area href="../../d7/d65/class_challenge_1_1_dungeons_1_1_sections_1_1_dispose_section.html" alt="Challenge.Dungeons.Sections.DisposeSection" shape="rect" coords="670,112,995,136"/>
+<area href="../../d4/d3a/class_challenge_1_1_dungeons_1_1_sections_1_1_initial_section.html" alt="Challenge.Dungeons.Sections.InitialSection" shape="rect" coords="1005,112,1330,136"/>
+<area href="../../d0/d92/class_challenge_1_1_dungeons_1_1_sections_1_1_reward_section.html" title="Handle of Event when Stage&#39;s Fiends All Dead." alt="Challenge.Dungeons.Sections.RewardSection" shape="rect" coords="1340,112,1665,136"/>
+<area href="../../de/da0/class_challenge_1_1_dungeons_1_1_sections_1_1_select_section.html" alt="Challenge.Dungeons.Sections.SelectSection" shape="rect" coords="1675,112,2000,136"/>
+<area href="../../d1/d06/class_challenge_1_1_dungeons_1_1_sections_1_1_merchant_reward_section.html" alt="Challenge.Dungeons.Sections.MerchantRewardSection" shape="rect" coords="1340,168,1665,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -144,7 +161,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html#l00026">26</a> of file <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html">DungeonSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   29</span>            </div>
+<div class="line"><span class="lineno">   30</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0d738aa088980e62a85cd78b87774fb4" name="a0d738aa088980e62a85cd78b87774fb4"></a>
@@ -190,7 +212,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html#l00014">14</a> of file <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html">DungeonSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            MainScenarios = scenario;</div>
+<div class="line"><span class="lineno">   17</span>            Map          = MainScenarios.MasterStage.Map;</div>
+<div class="line"><span class="lineno">   18</span>            Invoker      = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   19</span>            </div>
+<div class="line"><span class="lineno">   20</span>            Sections</div>
+<div class="line"><span class="lineno">   21</span>                .Add(Section.Active, <span class="stringliteral">&quot;RegisterSequence&quot;</span>, () =&gt; MainScenarios.CurrentSection = <span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   22</span>                .Add(Section.Active, <span class="stringliteral">&quot;RewardSequenceInvoke&quot;</span>, () =&gt; scenario.MasterStage[SequenceType]?.Invoke())</div>
+<div class="line"><span class="lineno">   23</span>                ;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -217,7 +250,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html#l00009">9</a> of file <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html">DungeonSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>{ <span class="keyword">get</span>; <span class="keyword">protected</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aabdde52fd5948cfd675c6bfaab30fd6f" name="aabdde52fd5948cfd675c6bfaab30fd6f"></a>
@@ -241,7 +275,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html#l00010">10</a> of file <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html">DungeonSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a763960a3f334355fea2cee73ea8e856f" name="a763960a3f334355fea2cee73ea8e856f"></a>
@@ -265,7 +300,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html#l00011">11</a> of file <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html">DungeonSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a92128dbe96ff3da2f417023660bfa676" name="a92128dbe96ff3da2f417023660bfa676"></a>
@@ -291,7 +327,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html#l00008">8</a> of file <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html">DungeonSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a87d652476fab08a1324bdd225fd1444d" name="a87d652476fab08a1324bdd225fd1444d"></a>
@@ -315,7 +352,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html#l00007">7</a> of file <a class="el" href="../../df/dad/_dungeon_section_8cs_source.html">DungeonSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>{ <span class="keyword">get</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

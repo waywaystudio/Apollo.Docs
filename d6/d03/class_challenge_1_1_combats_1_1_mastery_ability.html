@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,12 @@ $(function(){initNavTree('d6/d03/class_challenge_1_1_combats_1_1_mastery_ability
   <div class="headertitle"><div class="title">Challenge.Combats.MasteryAbility Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Combats.MasteryAbility:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/d03/class_challenge_1_1_combats_1_1_mastery_ability.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -140,7 +147,56 @@ Properties</h2></td></tr>
 <p><a href="https://www.notion.so/salinger/Mastery-SelectAlgorithm-c9b3eaa8e2b8482298996ffdd65bd3e2">https://www.notion.so/salinger/Mastery-SelectAlgorithm-c9b3eaa8e2b8482298996ffdd65bd3e2</a> </p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dae/_mastery_ability_8cs_source.html#l00035">35</a> of file <a class="el" href="../../dd/dae/_mastery_ability_8cs_source.html">MasteryAbility.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            var tempArray = <span class="keyword">new</span> List&lt;DataIndex&gt;();</div>
+<div class="line"><span class="lineno">   38</span>            var dred = ChallengeDirector.Dred;</div>
+<div class="line"><span class="lineno">   39</span>            var dredWeapon1 = (int)dred.CombatActionSet.MainWeapon.WeaponType;</div>
+<div class="line"><span class="lineno">   40</span>            var dredWeapon2 = (int)dred.CombatActionSet.SubWeapon.WeaponType;</div>
+<div class="line"><span class="lineno">   41</span>            var randomWeapon = Random.Range(0.1f, 1.0f) &gt; 0.5f</div>
+<div class="line"><span class="lineno">   42</span>                ? dredWeapon1</div>
+<div class="line"><span class="lineno">   43</span>                : dredWeapon2;</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>            <span class="comment">// Get Ultimate Mastery</span></div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (TotalMasteryGet == ultimateMasteryOrder)</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.KeyList.ForEach(masteryCode =&gt;</div>
+<div class="line"><span class="lineno">   49</span>                {</div>
+<div class="line"><span class="lineno">   50</span>                    <span class="comment">// var masteryWeaponType = masteryCode.GetSecondBar();</span></div>
+<div class="line"><span class="lineno">   51</span>                    <span class="comment">// if (masteryWeaponType         != randomWeapon) return;</span></div>
+<div class="line"><span class="lineno">   52</span>                    <span class="keywordflow">if</span> (masteryCode.GetThirdBar() != 05) <span class="keywordflow">return</span>; <span class="comment">// Pass Not Ultimate Mastery</span></div>
+<div class="line"><span class="lineno">   53</span>                    <span class="keywordflow">if</span> (dred.MasteryTable.Has(masteryCode)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   54</span>                </div>
+<div class="line"><span class="lineno">   55</span>                    tempArray.Add(masteryCode);</div>
+<div class="line"><span class="lineno">   56</span>                });</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span>            <span class="comment">// Get General Mastery</span></div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.KeyList.ForEach(masteryCode =&gt;</div>
+<div class="line"><span class="lineno">   62</span>                {</div>
+<div class="line"><span class="lineno">   63</span>                    var masteryWeaponType = masteryCode.GetSecondBar();</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>                    <span class="keywordflow">if</span> (masteryWeaponType         != randomWeapon) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   66</span>                    <span class="keywordflow">if</span> (masteryCode.GetThirdBar() == 05) <span class="keywordflow">return</span>; <span class="comment">// Pass Ultimate Mastery</span></div>
+<div class="line"><span class="lineno">   67</span>                    <span class="keywordflow">if</span> (dred.MasteryTable.Has(masteryCode)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   68</span>                </div>
+<div class="line"><span class="lineno">   69</span>                    tempArray.Add(masteryCode);</div>
+<div class="line"><span class="lineno">   70</span>                });</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>            </div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (tempArray.Count &lt;= 1)</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                tempArray.Add(DataIndex.EmptyMastery);</div>
+<div class="line"><span class="lineno">   76</span>            }</div>
+<div class="line"><span class="lineno">   77</span>            </div>
+<div class="line"><span class="lineno">   78</span>            var result = tempArray.GetRandomElements(count);</div>
+<div class="line"><span class="lineno">   79</span>            </div>
+<div class="line"><span class="lineno">   80</span>            TotalMasteryGet++;</div>
+<div class="line"><span class="lineno">   81</span>            </div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
+<div class="ttc" id="aclass_table_html"><div class="ttname"><a href="../../d2/d8f/class_table.html">Table</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00009">Table.cs:10</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1be81f472cfc3a24d70f7a2e4a6ef8e4" name="a1be81f472cfc3a24d70f7a2e4a6ef8e4"></a>
@@ -159,7 +215,34 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dae/_mastery_ability_8cs_source.html#l00085">85</a> of file <a class="el" href="../../dd/dae/_mastery_ability_8cs_source.html">MasteryAbility.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   86</span>        {</div>
+<div class="line"><span class="lineno">   87</span>            var tempArray = <span class="keyword">new</span> List&lt;DataIndex&gt;();</div>
+<div class="line"><span class="lineno">   88</span>            var dred = ChallengeDirector.Dred;</div>
+<div class="line"><span class="lineno">   89</span>            var dredWeapon1 = (int)dred.CombatActionSet.MainWeapon.WeaponType;</div>
+<div class="line"><span class="lineno">   90</span>            var dredWeapon2 = (int)dred.CombatActionSet.SubWeapon.WeaponType;</div>
+<div class="line"><span class="lineno">   91</span>            </div>
+<div class="line"><span class="lineno">   92</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.KeyList.ForEach(masteryCode =&gt;</div>
+<div class="line"><span class="lineno">   93</span>            {</div>
+<div class="line"><span class="lineno">   94</span>                var masteryWeaponType = masteryCode.GetSecondBar();</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">if</span> (!(masteryWeaponType == dredWeapon1 || masteryWeaponType == dredWeapon2)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   97</span>                <span class="keywordflow">if</span> (!dred.MasteryTable.Has(masteryCode)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   98</span>                <span class="keywordflow">if</span> (masteryCode.GetThirdBar() == 05) <span class="keywordflow">return</span>; <span class="comment">// Pass Ultimate Mastery</span></div>
+<div class="line"><span class="lineno">   99</span>                </div>
+<div class="line"><span class="lineno">  100</span>                tempArray.Add(masteryCode);</div>
+<div class="line"><span class="lineno">  101</span>            });</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (tempArray.Count &lt;= 1)</div>
+<div class="line"><span class="lineno">  104</span>            {</div>
+<div class="line"><span class="lineno">  105</span>                tempArray.Add(DataIndex.EmptyMastery);</div>
+<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">return</span> tempArray;</div>
+<div class="line"><span class="lineno">  107</span>            } </div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>            var result = tempArray.GetRandomElements(count);</div>
+<div class="line"><span class="lineno">  110</span>            </div>
+<div class="line"><span class="lineno">  111</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6505f54411e4a21d4e09d73e1377b05d" name="a6505f54411e4a21d4e09d73e1377b05d"></a>
@@ -178,7 +261,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dae/_mastery_ability_8cs_source.html#l00018">18</a> of file <a class="el" href="../../dd/dae/_mastery_ability_8cs_source.html">MasteryAbility.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Clear();</div>
+<div class="line"><span class="lineno">   21</span>            </div>
+<div class="line"><span class="lineno">   22</span>            var masteryPrefabData = <a class="code hl_class" href="../../dc/d83/class_database.html">Database</a>.MasteryPrefabs.GetPrefabs&lt;<a class="code hl_class" href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html">Mastery</a>&gt;();</div>
+<div class="line"><span class="lineno">   23</span>            </div>
+<div class="line"><span class="lineno">   24</span>            masteryPrefabData.ForEach(prefab =&gt;</div>
+<div class="line"><span class="lineno">   25</span>            {</div>
+<div class="line"><span class="lineno">   26</span>                var mastery = Instantiate(prefab, Vector3.zero, Quaternion.identity, masteryHierarchy);</div>
+<div class="line"><span class="lineno">   27</span>                </div>
+<div class="line"><span class="lineno">   28</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Add(mastery.DataIndex, mastery);</div>
+<div class="line"><span class="lineno">   29</span>            });</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_masteries_1_1_mastery_html"><div class="ttname"><a href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html">Common.Masteries.Mastery</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d21/_mastery_8cs_source.html#l00007">Mastery.cs:8</a></div></div>
+<div class="ttc" id="aclass_database_html"><div class="ttname"><a href="../../dc/d83/class_database.html">Database</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/d16/_database_8cs_source.html#l00026">Database.cs:27</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -227,7 +324,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/dae/_mastery_ability_8cs_source.html#l00013">13</a> of file <a class="el" href="../../dd/dae/_mastery_ability_8cs_source.html">MasteryAbility.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

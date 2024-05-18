@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,16 @@ $(function(){initNavTree('d5/d29/class_common_1_1_effects_1_1_cameras_1_1_camera
   <div class="headertitle"><div class="title">Common.Effects.Cameras.CameraZoom Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Effects.Cameras.CameraZoom:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/d29/class_common_1_1_effects_1_1_cameras_1_1_camera_zoom.png" usemap="#Common.Effects.Cameras.CameraZoom_map" alt=""/>
+  <map id="Common.Effects.Cameras.CameraZoom_map" name="Common.Effects.Cameras.CameraZoom_map">
+<area href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html" alt="Common.Effects.EffectBehaviour" shape="rect" coords="0,56,237,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="247,56,484,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -192,7 +203,21 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dcd/_camera_zoom_8cs_source.html#l00014">14</a> of file <a class="el" href="../../df/dcd/_camera_zoom_8cs_source.html">CameraZoom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {   </div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">if</span> (targetCamera != cameraManager.ActiveCameraType) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>            var effectorCamera = cameraManager.Director[VirtualCameraType.Effector];</div>
+<div class="line"><span class="lineno">   19</span>            var playerCameraFov = cameraManager.Director[VirtualCameraType.Player].m_Lens.FieldOfView;</div>
+<div class="line"><span class="lineno">   20</span>            var selfTransform = transform;</div>
+<div class="line"><span class="lineno">   21</span>            </div>
+<div class="line"><span class="lineno">   22</span>            effectorCamera.m_Lens.FieldOfView = playerCameraFov * magnification;</div>
+<div class="line"><span class="lineno">   23</span>            effectorCamera.Follow             = selfTransform;</div>
+<div class="line"><span class="lineno">   24</span>            effectorCamera.LookAt             = selfTransform;</div>
+<div class="line"><span class="lineno">   25</span>            </div>
+<div class="line"><span class="lineno">   26</span>            cameraManager.SetPlayerToEffectorBlend(blend);</div>
+<div class="line"><span class="lineno">   27</span>            cameraManager.Director.ChangeCamera(VirtualCameraType.Effector);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8969f78b898e147ebce78fe1c145e836" name="a8969f78b898e147ebce78fe1c145e836"></a>
@@ -219,7 +244,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dcd/_camera_zoom_8cs_source.html#l00030">30</a> of file <a class="el" href="../../df/dcd/_camera_zoom_8cs_source.html">CameraZoom.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            cameraManager.Director.ChangeCamera(VirtualCameraType.Player);</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

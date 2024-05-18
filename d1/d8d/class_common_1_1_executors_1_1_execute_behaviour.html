@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,29 @@ $(function(){initNavTree('d1/d8d/class_common_1_1_executors_1_1_execute_behaviou
   <div class="headertitle"><div class="title">Common.Executors.ExecuteBehaviour Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Executors.ExecuteBehaviour:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.png" usemap="#Common.Executors.ExecuteBehaviour_map" alt=""/>
+  <map id="Common.Executors.ExecuteBehaviour_map" name="Common.Executors.ExecuteBehaviour_map">
+<area href="../../d7/dc1/interface_i_condition_table.html" alt="IConditionTable&lt; GameObject &gt;" shape="rect" coords="409,0,808,24"/>
+<area href="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.html" alt="Common.Executors.Variants.DamageExecutor" shape="rect" coords="613,112,1012,136"/>
+<area href="../../de/def/class_common_1_1_executors_1_1_variants_1_1_draw_executor.html" alt="Common.Executors.Variants.DrawExecutor" shape="rect" coords="613,168,1012,192"/>
+<area href="../../d6/d22/class_common_1_1_executors_1_1_variants_1_1_heal_executor.html" alt="Common.Executors.Variants.HealExecutor" shape="rect" coords="613,224,1012,248"/>
+<area href="../../d6/dbb/class_common_1_1_executors_1_1_variants_1_1_horror_executor.html" alt="Common.Executors.Variants.HorrorExecutor" shape="rect" coords="613,280,1012,304"/>
+<area href="../../db/dee/class_common_1_1_executors_1_1_variants_1_1_knock_back_executor.html" alt="Common.Executors.Variants.KnockBackExecutor" shape="rect" coords="613,336,1012,360"/>
+<area href="../../d1/d81/class_common_1_1_executors_1_1_variants_1_1_knock_down_executor.html" alt="Common.Executors.Variants.KnockDownExecutor" shape="rect" coords="613,392,1012,416"/>
+<area href="../../d9/d5a/class_common_1_1_executors_1_1_variants_1_1_paralysis_executor.html" alt="Common.Executors.Variants.ParalysisExecutor" shape="rect" coords="613,448,1012,472"/>
+<area href="../../d8/d35/class_common_1_1_executors_1_1_variants_1_1_projectile_executor.html" alt="Common.Executors.Variants.ProjectileExecutor" shape="rect" coords="613,504,1012,528"/>
+<area href="../../de/d5c/class_common_1_1_executors_1_1_variants_1_1_snare_executor.html" alt="Common.Executors.Variants.SnareExecutor" shape="rect" coords="613,560,1012,584"/>
+<area href="../../d0/d3e/class_common_1_1_executors_1_1_variants_1_1_status_effect_executor.html" title="Usually, DeBuff to Taker." alt="Common.Executors.Variants.StatusEffectExecutor" shape="rect" coords="613,616,1012,640"/>
+<area href="../../d9/d03/class_common_1_1_executors_1_1_variants_1_1_stun_executor.html" alt="Common.Executors.Variants.StunExecutor" shape="rect" coords="613,672,1012,696"/>
+<area href="../../d0/d8d/class_common_1_1_masteries_1_1_blade_1_1_cutters_1_1_cutter_executor.html" alt="Common.Masteries.Blade.Cutters.CutterExecutor" shape="rect" coords="613,728,1012,752"/>
+<area href="../../df/d49/class_common_1_1_masteries_1_1_blade_1_1_shin_chargings_1_1_shin_charging_executor.html" alt="Common.Masteries.Blade.ShinChargings.ShinChargingExecutor" shape="rect" coords="613,784,1012,808"/>
+<area href="../../d5/dbd/class_common_1_1_masteries_1_1_blade_1_1_spirit_absorptions_1_1_spirit_absorption_executor.html" alt="Common.Masteries.Blade.SpiritAbsorptions.SpiritAbsorptionExecutor" shape="rect" coords="613,840,1012,864"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -166,7 +190,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html#l00043">43</a> of file <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html">ExecuteBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{ }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa7c0ffd22f64d11a97b3580171c963ae" name="aa7c0ffd22f64d11a97b3580171c963ae"></a>
@@ -185,7 +210,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html#l00045">45</a> of file <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html">ExecuteBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (Conditions.HasFalse(target)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>            ExecuteToTarget(target);</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="acb930b3e2c0c50cada259a1a2af68551" name="acb930b3e2c0c50cada259a1a2af68551"></a>
@@ -204,7 +234,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html#l00052">52</a> of file <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html">ExecuteBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            ExecutesToTargets(targets);</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae02062bc7a37ed5b3835ce92e2871353" name="ae02062bc7a37ed5b3835ce92e2871353"></a>
@@ -231,7 +264,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html#l00058">58</a> of file <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html">ExecuteBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{ }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9c6c06378b9d217c1b6170d378808577" name="a9c6c06378b9d217c1b6170d378808577"></a>
@@ -258,7 +292,24 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html#l00024">24</a> of file <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html">ExecuteBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (Provider is <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                Provider = provider;</div>
+<div class="line"><span class="lineno">   29</span>                Conditions.Add(<span class="stringliteral">&quot;Activation&quot;</span>, _ =&gt; Activation);</div>
+<div class="line"><span class="lineno">   30</span>            }</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>                <span class="keywordflow">if</span> (Provider == provider) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   34</span>                </div>
+<div class="line"><span class="lineno">   35</span>                Debug.LogWarning($<span class="stringliteral">&quot;{gameObject.name}&#39;s {GetType().Name} has already Provider.&quot;</span></div>
+<div class="line"><span class="lineno">   36</span>                                 + $<span class="stringliteral">&quot;New Initialize Provider is not same with previous. &quot;</span></div>
+<div class="line"><span class="lineno">   37</span>                                 + $<span class="stringliteral">&quot;it can be a huge problem, so Register or Initialize ignored&quot;</span>);</div>
+<div class="line"><span class="lineno">   38</span>                </div>
+<div class="line"><span class="lineno">   39</span>                Activation = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -283,7 +334,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html#l00017">17</a> of file <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html">ExecuteBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keyword">get</span> =&gt; gameObject.activeSelf; </div>
+<div class="line"><span class="lineno">   20</span>            <span class="keyword">set</span> =&gt; gameObject.SetActive(value);</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afb729ebd300fcec4d99d086fae3d2747" name="afb729ebd300fcec4d99d086fae3d2747"></a>
@@ -307,7 +362,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html">ExecuteBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a675136236739d5e839ed750ce7a2ce00" name="a675136236739d5e839ed750ce7a2ce00"></a>
@@ -331,7 +387,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html#l00008">8</a> of file <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html">ExecuteBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    8</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a773be19e2a5b8c5cc8ae4257ff660ae1" name="a773be19e2a5b8c5cc8ae4257ff660ae1"></a>
@@ -357,7 +414,8 @@ Properties</h2></td></tr>
 <p>Projectile to Projectile, Projectile To Snare 등 Instantiate 포지션을 전달받기 위해서 필요하다. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d2/d57/_execute_behaviour_8cs_source.html">ExecuteBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

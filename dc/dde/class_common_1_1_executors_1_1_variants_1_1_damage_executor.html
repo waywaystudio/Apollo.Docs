@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,19 @@ $(function(){initNavTree('dc/dde/class_common_1_1_executors_1_1_variants_1_1_dam
   <div class="headertitle"><div class="title">Common.Executors.Variants.DamageExecutor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Executors.Variants.DamageExecutor:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.png" usemap="#Common.Executors.Variants.DamageExecutor_map" alt=""/>
+  <map id="Common.Executors.Variants.DamageExecutor_map" name="Common.Executors.Variants.DamageExecutor_map">
+<area href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html" alt="Common.Executors.ExecuteBehaviour" shape="rect" coords="140,56,411,80"/>
+<area href="../../d6/d40/interface_common_1_1_i_damage_entity.html" alt="Common.IDamageEntity" shape="rect" coords="562,56,833,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="843,56,1114,80"/>
+<area href="../../d7/dc1/interface_i_condition_table.html" alt="IConditionTable&lt; GameObject &gt;" shape="rect" coords="281,0,552,24"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="562,0,833,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -183,7 +197,13 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/ded/_damage_executor_8cs_source.html#l00030">30</a> of file <a class="el" href="../../dd/ded/_damage_executor_8cs_source.html">DamageExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (syncWithProvider)</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                damageTable.UnregisterTable(Provider.StatTable);</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afaa6d8ca28e2a1d26c66c55fa5371771" name="afaa6d8ca28e2a1d26c66c55fa5371771"></a>
@@ -212,7 +232,15 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/ded/_damage_executor_8cs_source.html#l00039">39</a> of file <a class="el" href="../../dd/ded/_damage_executor_8cs_source.html">DamageExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (Conditions.HasFalse(target)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (target.IsNullOrDestroyed() || !target.TryGetComponent(out IDamageTaker taker)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   43</span>            </div>
+<div class="line"><span class="lineno">   44</span>            DamageFilter.Initialize(taker);</div>
+<div class="line"><span class="lineno">   45</span>            </div>
+<div class="line"><span class="lineno">   46</span>            taker.TakeDamage(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="add7129e4ae4a035e67dcfab7a03e7d99" name="add7129e4ae4a035e67dcfab7a03e7d99"></a>
@@ -241,7 +269,17 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/d8d/class_common_1_1_executors_1_1_execute_behaviour.html">Common.Executors.ExecuteBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/ded/_damage_executor_8cs_source.html#l00018">18</a> of file <a class="el" href="../../dd/ded/_damage_executor_8cs_source.html">DamageExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            base.Initialize(provider);</div>
+<div class="line"><span class="lineno">   21</span>            </div>
+<div class="line"><span class="lineno">   22</span>            damageTable.Initialize();</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (syncWithProvider)</div>
+<div class="line"><span class="lineno">   25</span>            {</div>
+<div class="line"><span class="lineno">   26</span>                damageTable.RegisterTable(Provider.StatTable);</div>
+<div class="line"><span class="lineno">   27</span>            }</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -268,7 +306,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/d40/interface_common_1_1_i_damage_entity.html">Common.IDamageEntity</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/ded/_damage_executor_8cs_source.html#l00015">15</a> of file <a class="el" href="../../dd/ded/_damage_executor_8cs_source.html">DamageExecutor.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab223c3876c0db75cadfc409f2138993a" name="ab223c3876c0db75cadfc409f2138993a"></a>

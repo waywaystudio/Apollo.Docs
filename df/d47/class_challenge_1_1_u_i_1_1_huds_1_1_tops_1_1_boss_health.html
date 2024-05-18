@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,16 @@ $(function(){initNavTree('df/d47/class_challenge_1_1_u_i_1_1_huds_1_1_tops_1_1_b
   <div class="headertitle"><div class="title">Challenge.UI.Huds.Tops.BossHealth Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.UI.Huds.Tops.BossHealth:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/d47/class_challenge_1_1_u_i_1_1_huds_1_1_tops_1_1_boss_health.png" usemap="#Challenge.UI.Huds.Tops.BossHealth_map" alt=""/>
+  <map id="Challenge.UI.Huds.Tops.BossHealth_map" name="Challenge.UI.Huds.Tops.BossHealth_map">
+<area href="../../d1/dc6/class_common_1_1_u_i_element.html" alt="Common.UIElement" shape="rect" coords="112,56,327,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="225,0,440,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -195,7 +206,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc6/class_common_1_1_u_i_element.html">Common.UIElement</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d0b/_boss_health_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d4/d0b/_boss_health_8cs_source.html">BossHealth.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            base.Initialize();</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            <span class="keyword">this</span>[UIEventType.Open].Sections</div>
+<div class="line"><span class="lineno">   24</span>                                  .AddCondition(<span class="stringliteral">&quot;HasBoss&quot;</span>, () =&gt; boss.HasComponent())</div>
+<div class="line"><span class="lineno">   25</span>                                  .Add(Section.Active, <span class="stringliteral">&quot;RegisterHealthPoint&quot;</span>, RegisterHealthPoint)</div>
+<div class="line"><span class="lineno">   26</span>                                  ;</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>            <span class="keyword">this</span>[UIEventType.Close].Sections</div>
+<div class="line"><span class="lineno">   29</span>                                   .Add(Section.Active, <span class="stringliteral">&quot;UnregisterHealthPoint&quot;</span>, UnregisterHealthPoint)</div>
+<div class="line"><span class="lineno">   30</span>                                   ;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a77de87830d1ca2c107f74e944349f8c2" name="a77de87830d1ca2c107f74e944349f8c2"></a>
@@ -214,7 +237,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d0b/_boss_health_8cs_source.html#l00033">33</a> of file <a class="el" href="../../d4/d0b/_boss_health_8cs_source.html">BossHealth.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="comment">// SetBoss</span></div>
+<div class="line"><span class="lineno">   36</span>            this.boss             = boss;</div>
+<div class="line"><span class="lineno">   37</span>            hitPoints             = boss.HitPoints;</div>
+<div class="line"><span class="lineno">   38</span>            bossNameTextMesh.text = boss.Name.ToDivideWords();</div>
+<div class="line"><span class="lineno">   39</span>            </div>
+<div class="line"><span class="lineno">   40</span>            boss.Behaviours.Dead</div>
+<div class="line"><span class="lineno">   41</span>                .Sections</div>
+<div class="line"><span class="lineno">   42</span>                .Add(Section.Complete, <span class="stringliteral">&quot;CloseBossHealthUI&quot;</span>, <a class="code hl_function" href="../../d1/dc6/class_common_1_1_u_i_element.html#ab9d9ec0ed7314202889fe21be760b35d">Close</a>)</div>
+<div class="line"><span class="lineno">   43</span>                ;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_u_i_element_html_ab9d9ec0ed7314202889fe21be760b35d"><div class="ttname"><a href="../../d1/dc6/class_common_1_1_u_i_element.html#ab9d9ec0ed7314202889fe21be760b35d">Common.UIElement.Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">Called by the EventSystem when closed the element associated with this EventTrigger.</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

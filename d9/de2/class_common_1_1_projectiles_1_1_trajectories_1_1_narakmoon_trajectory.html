@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d9/de2/class_common_1_1_projectiles_1_1_trajectories_1
   <div class="headertitle"><div class="title">Common.Projectiles.Trajectories.NarakmoonTrajectory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Trajectories.NarakmoonTrajectory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/de2/class_common_1_1_projectiles_1_1_trajectories_1_1_narakmoon_trajectory.png" usemap="#Common.Projectiles.Trajectories.NarakmoonTrajectory_map" alt=""/>
+  <map id="Common.Projectiles.Trajectories.NarakmoonTrajectory_map" name="Common.Projectiles.Trajectories.NarakmoonTrajectory_map">
+<area href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html" alt="Common.Projectiles.Trajectory" shape="rect" coords="0,56,320,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -163,7 +173,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dff/_narakmoon_trajectory_8cs_source.html#l00038">38</a> of file <a class="el" href="../../d8/dff/_narakmoon_trajectory_8cs_source.html">NarakmoonTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            flyingCanceller?.Cancel();</div>
+<div class="line"><span class="lineno">   41</span>            flyingCanceller = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5e3e434d0276f02b0583464b2e51ff3a" name="a5e3e434d0276f02b0583464b2e51ff3a"></a>
@@ -182,7 +196,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dff/_narakmoon_trajectory_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d8/dff/_narakmoon_trajectory_8cs_source.html">NarakmoonTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            flyingCanceller = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   34</span>            </div>
+<div class="line"><span class="lineno">   35</span>            Straight(flyingCanceller).Forget();</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5444078ffffacca9631e13c9fdcf882b" name="a5444078ffffacca9631e13c9fdcf882b"></a>
@@ -211,7 +230,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html">Common.Projectiles.Trajectory</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dff/_narakmoon_trajectory_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d8/dff/_narakmoon_trajectory_8cs_source.html">NarakmoonTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            base.Initialize(sequencer);</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            snareExecutor.Initialize(Projectile.Provider);</div>
+<div class="line"><span class="lineno">   28</span>            snareExecutor.Sender = Projectile;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -236,7 +261,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/dff/_narakmoon_trajectory_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d8/dff/_narakmoon_trajectory_8cs_source.html">NarakmoonTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keyword">get</span> =&gt; makeFireWall; </div>
+<div class="line"><span class="lineno">   19</span>            <span class="keyword">set</span> =&gt; makeFireWall = value;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

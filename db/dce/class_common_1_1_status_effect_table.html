@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('db/dce/class_common_1_1_status_effect_table.html','../
   <div class="headertitle"><div class="title">Common.StatusEffectTable Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.StatusEffectTable:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/dce/class_common_1_1_status_effect_table.png" usemap="#Common.StatusEffectTable_map" alt=""/>
+  <map id="Common.StatusEffectTable_map" name="Common.StatusEffectTable_map">
+<area href="../../d2/d8f/class_table.html" alt="Table&lt; DataIndex, StatusEffect &gt;" shape="rect" coords="0,0,199,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -204,7 +214,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html">StatusEffectTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            base.Add(effectCode, statusEffect);</div>
+<div class="line"><span class="lineno">   18</span>            </div>
+<div class="line"><span class="lineno">   19</span>            OnEffectAdded?.Invoke(statusEffect);</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a51b689a0bae729857499f11830d14f35" name="a51b689a0bae729857499f11830d14f35"></a>
@@ -236,7 +251,13 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html#l00027">27</a> of file <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html">StatusEffectTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (!TryGetValue(effectCode, out var effect)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>            effect.DispelCode = dispelCode;</div>
+<div class="line"><span class="lineno">   32</span>            effect.Cancel();</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4a78983c3f5bcff9df361f3814270147" name="a4a78983c3f5bcff9df361f3814270147"></a>
@@ -255,7 +276,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html#l00035">35</a> of file <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html">StatusEffectTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (!TryGetValue(effectCode, out var effect)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   38</span>            </div>
+<div class="line"><span class="lineno">   39</span>            OnEffectRemoved?.Invoke(effect);</div>
+<div class="line"><span class="lineno">   40</span>            </div>
+<div class="line"><span class="lineno">   41</span>            base.Remove(effectCode);</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0634c32e07a3dbfe67b643e11398dac7" name="a0634c32e07a3dbfe67b643e11398dac7"></a>
@@ -274,7 +303,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html#l00059">59</a> of file <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html">StatusEffectTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            ValueList?.ForReverse(effect =&gt; effect.Cancel());</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a19a12a72d2e51df737a9a9eddff8620a" name="a19a12a72d2e51df737a9a9eddff8620a"></a>
@@ -305,7 +337,21 @@ Additional Inherited Members</h2></td></tr>
 </div>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html#l00045">45</a> of file <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html">StatusEffectTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                                                : <a class="code hl_class" href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">StatusEffect</a></div>
+<div class="line"><span class="lineno">   46</span>        {</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (Map.TryGetValue(effectCode, out var value))</div>
+<div class="line"><span class="lineno">   48</span>            {</div>
+<div class="line"><span class="lineno">   49</span>                var result = value as T;</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>                effect = result;</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>            effect = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_status_effects_1_1_status_effect_html"><div class="ttname"><a href="../../d2/d6c/class_common_1_1_status_effects_1_1_status_effect.html">Common.StatusEffects.StatusEffect</a></div><div class="ttdoc">Active One tool Unit. Buff or DeBuff Object.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d08/_status_effect_8cs_source.html#l00008">StatusEffect.cs:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -330,7 +376,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html#l00009">9</a> of file <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html">StatusEffectTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a743bad5c59d999292f6748b2fc2d387e" name="a743bad5c59d999292f6748b2fc2d387e"></a>
@@ -354,7 +401,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html#l00010">10</a> of file <a class="el" href="../../d1/d92/_status_effect_table_8cs_source.html">StatusEffectTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,16 @@ $(function(){initNavTree('dc/d83/class_database.html','../../'); initResizable()
   <div class="headertitle"><div class="title">Database Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Database:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/d83/class_database.png" usemap="#Database_map" alt=""/>
+  <map id="Database_map" name="Database_map">
+<area href="../../d8/d30/class_singleton_1_1_mono_singleton.html" alt="Singleton.MonoSingleton&lt; Database &gt;" shape="rect" coords="0,0,229,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="239,0,468,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -389,7 +400,15 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d16/_database_8cs_source.html#l00052">52</a> of file <a class="el" href="../../d0/d16/_database_8cs_source.html">Database.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keyword">get</span></div>
+<div class="line"><span class="lineno">   55</span>        {</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (Instance.sheetDataTable.IsNullOrEmpty()) </div>
+<div class="line"><span class="lineno">   57</span>                Instance.sheetDataList.ForEach(x =&gt; Instance.sheetDataTable.TryAdd(x.Index, x));</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">return</span> Instance.sheetDataTable;</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af1e10853d40c9183491ed6833a6b5752" name="af1e10853d40c9183491ed6833a6b5752"></a>

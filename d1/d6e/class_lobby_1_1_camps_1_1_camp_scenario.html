@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d1/d6e/class_lobby_1_1_camps_1_1_camp_scenario.html','
   <div class="headertitle"><div class="title">Lobby.Camps.CampScenario Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Lobby.Camps.CampScenario:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/d6e/class_lobby_1_1_camps_1_1_camp_scenario.png" usemap="#Lobby.Camps.CampScenario_map" alt=""/>
+  <map id="Lobby.Camps.CampScenario_map" name="Lobby.Camps.CampScenario_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="186,0,362,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -135,7 +145,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbf/_camp_scenario_8cs_source.html#l00024">24</a> of file <a class="el" href="../../d2/dbf/_camp_scenario_8cs_source.html">CampScenario.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            campSectionTable.ValueList.FirstOrDefault()?.Active();            </div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac1231851e85e2118c2e3b6ccc8019984" name="ac1231851e85e2118c2e3b6ccc8019984"></a>
@@ -154,7 +167,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbf/_camp_scenario_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d2/dbf/_camp_scenario_8cs_source.html">CampScenario.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            Map = camp.Map;</div>
+<div class="line"><span class="lineno">   16</span>            campSectionTable.ValueList.ForEach(section =&gt; section.Initialize(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>            <span class="keyword">this</span>[CampSectionType.Initial].Sections.Add(Section.Complete, <span class="stringliteral">&quot;ToRoamingSection&quot;</span>, () =&gt; <span class="keyword">this</span>[CampSectionType.Roaming].Active());</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keyword">this</span>[CampSectionType.Roaming].Sections.Add(Section.Complete, <span class="stringliteral">&quot;ToDisposeSection&quot;</span>, () =&gt; <span class="keyword">this</span>[CampSectionType.Dispose].Active());</div>
+<div class="line"><span class="lineno">   20</span>            </div>
+<div class="line"><span class="lineno">   21</span>            <span class="comment">// To Challenge Scene from last Section&#39;s EndSection</span></div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -179,7 +201,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/dbf/_camp_scenario_8cs_source.html#l00010">10</a> of file <a class="el" href="../../d2/dbf/_camp_scenario_8cs_source.html">CampScenario.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a24d56d9dc2fd4306961532216054c2dc" name="a24d56d9dc2fd4306961532216054c2dc"></a>

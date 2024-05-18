@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('d4/d7b/class_common_1_1_masteries_1_1_blade_1_1_blood_
   <div class="headertitle"><div class="title">Common.Masteries.Blade.BloodSplat Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.Blade.BloodSplat:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/d7b/class_common_1_1_masteries_1_1_blade_1_1_blood_splat.png" usemap="#Common.Masteries.Blade.BloodSplat_map" alt=""/>
+  <map id="Common.Masteries.Blade.BloodSplat_map" name="Common.Masteries.Blade.BloodSplat_map">
+<area href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html" alt="Common.Masteries.Mastery" shape="rect" coords="229,56,448,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="229,0,448,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="458,0,677,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -206,7 +218,15 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d6a/_blood_splat_8cs_source.html#l00036">36</a> of file <a class="el" href="../../d7/d6a/_blood_splat_8cs_source.html">BloodSplat.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            bladeAttackSkillSet.BehaviourList.ForEach(sb =&gt;</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                sb.Sections</div>
+<div class="line"><span class="lineno">   41</span>                  .Remove(Section.Execute, <span class="stringliteral">&quot;TrySpreadBleed&quot;</span>)</div>
+<div class="line"><span class="lineno">   42</span>                  ;</div>
+<div class="line"><span class="lineno">   43</span>            });</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac43c514d1c621ba54391d495d458847d" name="ac43c514d1c621ba54391d495d458847d"></a>
@@ -233,7 +253,23 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d6a/_blood_splat_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d7/d6a/_blood_splat_8cs_source.html">BloodSplat.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            this.dred = dred;</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>            bladeAttackSkillSet = dred.Skills.BladeAttackSet;</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (!Verify.IsNotNull(bladeAttackSkillSet)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   25</span>            </div>
+<div class="line"><span class="lineno">   26</span>            bladeAttackSkillSet.BehaviourList.ForEach(sb =&gt;</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                sb.Sections</div>
+<div class="line"><span class="lineno">   29</span>                  .Add(Section.Execute, <span class="stringliteral">&quot;TrySpreadBleed&quot;</span>, () =&gt; SpreadBleedToNeutralEnemy(sb))</div>
+<div class="line"><span class="lineno">   30</span>                  ;</div>
+<div class="line"><span class="lineno">   31</span>            });</div>
+<div class="line"><span class="lineno">   32</span>            </div>
+<div class="line"><span class="lineno">   33</span>            pool.Initialize(CreateProjectile, <span class="keyword">null</span>, transform);</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aad66ed9770aa7b9ce1659904bd70b8d4" name="aad66ed9770aa7b9ce1659904bd70b8d4"></a>
@@ -260,7 +296,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d6a/_blood_splat_8cs_source.html#l00046">46</a> of file <a class="el" href="../../d7/d6a/_blood_splat_8cs_source.html">BloodSplat.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            </div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

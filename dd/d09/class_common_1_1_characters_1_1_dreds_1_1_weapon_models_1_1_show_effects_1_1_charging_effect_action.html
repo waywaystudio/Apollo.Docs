@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,17 @@ $(function(){initNavTree('dd/d09/class_common_1_1_characters_1_1_dreds_1_1_weapo
   <div class="headertitle"><div class="title">Common.Characters.Dreds.WeaponModels.ShowEffects.ChargingEffectAction Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Dreds.WeaponModels.ShowEffects.ChargingEffectAction:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/d09/class_common_1_1_characters_1_1_dreds_1_1_weapon_models_1_1_show_effects_1_1_charging_effect_action.png" usemap="#Common.Characters.Dreds.WeaponModels.ShowEffects.ChargingEffectAction_map" alt=""/>
+  <map id="Common.Characters.Dreds.WeaponModels.ShowEffects.ChargingEffectAction_map" name="Common.Characters.Dreds.WeaponModels.ShowEffects.ChargingEffectAction_map">
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="465,56,920,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="930,56,1385,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="465,0,920,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -141,7 +153,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d61/_charging_effect_action_8cs_source.html#l00038">38</a> of file <a class="el" href="../../db/d61/_charging_effect_action_8cs_source.html">ChargingEffectAction.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   41</span>            </div>
+<div class="line"><span class="lineno">   42</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af7e01cc4479b82d194dad518cb33dfeb" name="af7e01cc4479b82d194dad518cb33dfeb"></a>
@@ -179,7 +196,25 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d61/_charging_effect_action_8cs_source.html#l00019">19</a> of file <a class="el" href="../../db/d61/_charging_effect_action_8cs_source.html">ChargingEffectAction.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> (chargeMasteryCode == DataIndex.None) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            Unit               = model.Dred;</div>
+<div class="line"><span class="lineno">   24</span>            dred               = model.Dred;</div>
+<div class="line"><span class="lineno">   25</span>            Invoker            = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   26</span>            isChargingFromZero = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>            Sections</div>
+<div class="line"><span class="lineno">   29</span>                .AddCondition(<span class="stringliteral">&quot;FromZeroCharge&quot;</span>, () =&gt; isChargingFromZero)</div>
+<div class="line"><span class="lineno">   30</span>                .Add(Section.Active, <span class="stringliteral">&quot;UptoZero&quot;</span>, () =&gt; isChargingFromZero    = <span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   31</span>                .Add(Section.Cancel, <span class="stringliteral">&quot;toZeroValue&quot;</span>, () =&gt; isChargingFromZero = <span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   32</span>                ;</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>            effector.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   35</span>            dred.MasteryTable.OnMasteryAdded.Add($<span class="stringliteral">&quot;{GetInstanceID()}.AddBladeChargeEffect&quot;</span>, AddChangeEffect);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -206,7 +241,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d61/_charging_effect_action_8cs_source.html#l00012">12</a> of file <a class="el" href="../../db/d61/_charging_effect_action_8cs_source.html">ChargingEffectAction.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af37ed7360d387ee0784aff158722115b" name="af37ed7360d387ee0784aff158722115b"></a>
@@ -232,7 +268,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d61/_charging_effect_action_8cs_source.html#l00011">11</a> of file <a class="el" href="../../db/d61/_charging_effect_action_8cs_source.html">ChargingEffectAction.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a01aa7d498e16db356c03ff2f8c6abb50" name="a01aa7d498e16db356c03ff2f8c6abb50"></a>
@@ -258,7 +295,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html">Common.IUnitSequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d61/_charging_effect_action_8cs_source.html#l00013">13</a> of file <a class="el" href="../../db/d61/_charging_effect_action_8cs_source.html">ChargingEffectAction.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

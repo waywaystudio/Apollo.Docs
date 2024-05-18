@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d0/d75/class_common_1_1_u_i_1_1_mastery_selection.html
   <div class="headertitle"><div class="title">Common.UI.MasterySelection Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UI.MasterySelection:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d0/d75/class_common_1_1_u_i_1_1_mastery_selection.png" usemap="#Common.UI.MasterySelection_map" alt=""/>
+  <map id="Common.UI.MasterySelection_map" name="Common.UI.MasterySelection_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="187,0,364,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -152,7 +162,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html#l00036">36</a> of file <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html">MasterySelection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (isInitialized) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   39</span>            </div>
+<div class="line"><span class="lineno">   40</span>            masteryTooltipPool.Initialize(<span class="keyword">null</span>, tooltipHierarchy, tooltipHierarchy);</div>
+<div class="line"><span class="lineno">   41</span>            gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4f86ea6c8edc164301b51a55382dba52" name="a4f86ea6c8edc164301b51a55382dba52"></a>
@@ -171,7 +187,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html#l00086">86</a> of file <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html">MasterySelection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   87</span>        {</div>
+<div class="line"><span class="lineno">   88</span>            selectedOutline.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   89</span>            selectedGlow.gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   90</span>            </div>
+<div class="line"><span class="lineno">   91</span>            masteryTooltipPool.ReleaseAll();</div>
+<div class="line"><span class="lineno">   92</span>            OnDeSelected.Invoke(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac7d4026edbcd392672ce88666e9c917a" name="ac7d4026edbcd392672ce88666e9c917a"></a>
@@ -190,7 +213,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html#l00077">77</a> of file <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html">MasterySelection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            selectedOutline.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   80</span>            selectedGlow.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   81</span>            </div>
+<div class="line"><span class="lineno">   82</span>            SpawnToolTips(targetMaster.<a class="code hl_property" href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html#ac7234c40f339c894317925a3669f2221">ToolTips</a>);</div>
+<div class="line"><span class="lineno">   83</span>            OnSelected.Invoke(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_masteries_1_1_mastery_html_ac7234c40f339c894317925a3669f2221"><div class="ttname"><a href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html#ac7234c40f339c894317925a3669f2221">Common.Masteries.Mastery.ToolTips</a></div><div class="ttdeci">List&lt; string &gt; ToolTips</div><div class="ttdoc">Mastery 설명에 필요한 Tooltips.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d21/_mastery_8cs_source.html#l00030">Mastery.cs:30</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aef50759b153db70bd3451df885fee744" name="aef50759b153db70bd3451df885fee744"></a>
@@ -209,7 +240,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html#l00095">95</a> of file <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html">MasterySelection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            masteryTooltipPool.ReleaseAll();</div>
+<div class="line"><span class="lineno">   98</span>            OnSubmitted.Invoke(AssignedMasteryCode);</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a10616784d8d41b2897dc7f869d82b927" name="a10616784d8d41b2897dc7f869d82b927"></a>
@@ -253,7 +288,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html#l00044">44</a> of file <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html">MasterySelection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (!Verify.IsTrue(<a class="code hl_class" href="../../dc/d83/class_database.html">Database</a>.MasteryPrefabs[masteryCode].TryGetComponent(out targetMaster))) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>            Initialize();</div>
+<div class="line"><span class="lineno">   49</span>            SetMasterySelection(masteryCode);</div>
+<div class="line"><span class="lineno">   50</span>            </div>
+<div class="line"><span class="lineno">   51</span>            upgradeTextObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   52</span>            gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="ttc" id="aclass_database_html"><div class="ttname"><a href="../../dc/d83/class_database.html">Database</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/d16/_database_8cs_source.html#l00026">Database.cs:27</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a749c13e9e29c0d8132e27e063c8aab9b" name="a749c13e9e29c0d8132e27e063c8aab9b"></a>
@@ -272,7 +317,19 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html#l00055">55</a> of file <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html">MasterySelection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            targetMaster = masteryCode == DataIndex.EmptyMastery </div>
+<div class="line"><span class="lineno">   58</span>                ? <a class="code hl_class" href="../../dc/d83/class_database.html">Database</a>.MasteryPrefabs[masteryCode].GetComponent&lt;<a class="code hl_class" href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html">Mastery</a>&gt;() </div>
+<div class="line"><span class="lineno">   59</span>                : dred.MasteryTable[masteryCode];</div>
+<div class="line"><span class="lineno">   60</span>            </div>
+<div class="line"><span class="lineno">   61</span>            Initialize();</div>
+<div class="line"><span class="lineno">   62</span>            SetMasterySelection(masteryCode);</div>
+<div class="line"><span class="lineno">   63</span>            </div>
+<div class="line"><span class="lineno">   64</span>            upgradeTextObject.SetActive(masteryCode != DataIndex.EmptyMastery);</div>
+<div class="line"><span class="lineno">   65</span>            gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_masteries_1_1_mastery_html"><div class="ttname"><a href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html">Common.Masteries.Mastery</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d21/_mastery_8cs_source.html#l00007">Mastery.cs:8</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -297,7 +354,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html#l00029">29</a> of file <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html">MasterySelection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab2031959d05bd0455e9db71cddba872d" name="ab2031959d05bd0455e9db71cddba872d"></a>
@@ -345,7 +403,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html#l00032">32</a> of file <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html">MasterySelection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af270ada0b8f1933e037e9d3edca90f55" name="af270ada0b8f1933e037e9d3edca90f55"></a>
@@ -369,7 +428,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html">MasterySelection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a011af57060560341bbac22eebb392d04" name="a011af57060560341bbac22eebb392d04"></a>
@@ -393,7 +453,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html#l00030">30</a> of file <a class="el" href="../../d3/d09/_mastery_selection_8cs_source.html">MasterySelection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

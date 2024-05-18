@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,18 @@ $(function(){initNavTree('db/d1b/class_common_1_1_spirits_1_1_actions_1_1_spirit
   <div class="headertitle"><div class="title">Common.Spirits.Actions.SpiritReap Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Spirits.Actions.SpiritReap:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/d1b/class_common_1_1_spirits_1_1_actions_1_1_spirit_reap.png" usemap="#Common.Spirits.Actions.SpiritReap_map" alt=""/>
+  <map id="Common.Spirits.Actions.SpiritReap_map" name="Common.Spirits.Actions.SpiritReap_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="465,0,765,24"/>
+<area href="../../d0/d4d/class_common_1_1_spirits_1_1_actions_1_1_reapers_1_1_spirit_painful_reap.html" alt="Common.Spirits.Actions.Reapers.SpiritPainfulReap" shape="rect" coords="0,112,300,136"/>
+<area href="../../de/d56/class_common_1_1_spirits_1_1_actions_1_1_reapers_1_1_spirit_reap_of_grief.html" alt="Common.Spirits.Actions.Reapers.SpiritReapOfGrief" shape="rect" coords="310,112,610,136"/>
+<area href="../../d3/d1d/class_common_1_1_spirits_1_1_actions_1_1_reapers_1_1_spirit_spiteful_reap.html" alt="Common.Spirits.Actions.Reapers.SpiritSpitefulReap" shape="rect" coords="620,112,920,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -162,7 +175,18 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d54/_spirit_reap_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d0/d54/_spirit_reap_8cs_source.html">SpiritReap.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            Spirit  = spirit;</div>
+<div class="line"><span class="lineno">   21</span>            Invoker = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            Sections</div>
+<div class="line"><span class="lineno">   24</span>                .Add(Section.Active, <span class="stringliteral">&quot;ActiveExecution&quot;</span>, ActiveExecution)</div>
+<div class="line"><span class="lineno">   25</span>                ;</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            executor.Initialize(Spirit.Dred);</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -236,7 +260,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d54/_spirit_reap_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d0/d54/_spirit_reap_8cs_source.html">SpiritReap.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac8eb6395959ab21af047ffd12ed6c969" name="ac8eb6395959ab21af047ffd12ed6c969"></a>
@@ -284,7 +309,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d54/_spirit_reap_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d0/d54/_spirit_reap_8cs_source.html">SpiritReap.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9a3aad5106774e1ea41f7fb56857f8a5" name="a9a3aad5106774e1ea41f7fb56857f8a5"></a>
@@ -308,7 +334,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d54/_spirit_reap_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d0/d54/_spirit_reap_8cs_source.html">SpiritReap.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a61e28e2a806793acf877f5bb6e8169e1" name="a61e28e2a806793acf877f5bb6e8169e1"></a>

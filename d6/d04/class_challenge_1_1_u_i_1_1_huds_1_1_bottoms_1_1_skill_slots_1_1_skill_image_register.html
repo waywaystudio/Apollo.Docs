@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d6/d04/class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_
   <div class="headertitle"><div class="title">Challenge.UI.Huds.Bottoms.SkillSlots.SkillImageRegister Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.UI.Huds.Bottoms.SkillSlots.SkillImageRegister:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/d04/class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_skill_slots_1_1_skill_image_register.png" usemap="#Challenge.UI.Huds.Bottoms.SkillSlots.SkillImageRegister_map" alt=""/>
+  <map id="Challenge.UI.Huds.Bottoms.SkillSlots.SkillImageRegister_map" name="Challenge.UI.Huds.Bottoms.SkillSlots.SkillImageRegister_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="334,0,658,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -125,7 +135,18 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d4a/_skill_image_register_8cs_source.html#l00021">21</a> of file <a class="el" href="../../db/d4a/_skill_image_register_8cs_source.html">SkillImageRegister.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (!isActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>            targetSkill = dred.CombatActionSet[slotType];</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            <span class="comment">// Icon</span></div>
+<div class="line"><span class="lineno">   28</span>            UpdateTargetImage(targetSkill);</div>
+<div class="line"><span class="lineno">   29</span>            UpdateCoolTimer(targetSkill);</div>
+<div class="line"><span class="lineno">   30</span>            </div>
+<div class="line"><span class="lineno">   31</span>            dred.CombatActionSet.OnSkillChangedTable[slotType].Add($<span class="stringliteral">&quot;{GetInstanceID()}.Change{slotType}&quot;</span>, OnSkillChange);</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

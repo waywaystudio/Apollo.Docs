@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -146,7 +147,24 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html">InputActionEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            InputAction = inputAction;</div>
+<div class="line"><span class="lineno">   31</span>            bindings    = <span class="keyword">new</span> List&lt;string&gt;();</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d2/d8f/class_table.html">Table&lt;InputSection, ActionTable&lt;Context&gt;</a>&gt;();</div>
+<div class="line"><span class="lineno">   34</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Add(InputSection.Start, <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Context&gt;</a>());</div>
+<div class="line"><span class="lineno">   35</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Add(InputSection.Perform, <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Context&gt;</a>());</div>
+<div class="line"><span class="lineno">   36</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Add(InputSection.Cancel, <span class="keyword">new</span> <a class="code hl_class" href="../../db/dcc/class_action_table.html">ActionTable&lt;Context&gt;</a>());</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>            inputAction.started   += StartInvoke;</div>
+<div class="line"><span class="lineno">   39</span>            inputAction.canceled  += CancelInvoke;</div>
+<div class="line"><span class="lineno">   40</span>            inputAction.performed += PerformInvoke;</div>
+<div class="line"><span class="lineno">   41</span>            </div>
+<div class="line"><span class="lineno">   42</span>            SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   43</span>        }</div>
+<div class="ttc" id="aclass_action_table_html"><div class="ttname"><a href="../../db/dcc/class_action_table.html">ActionTable</a></div><div class="ttdoc">https://www.notion.so/salinger/ActionTable-f57731f9cd124c4887a9bab1fe78f090?pvs=4</div><div class="ttdef"><b>Definition</b> <a href="../../d2/d69/_action_table_8cs_source.html#l00067">ActionTable.cs:68</a></div></div>
+<div class="ttc" id="aclass_table_html"><div class="ttname"><a href="../../d2/d8f/class_table.html">Table</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/ddb/_table_8cs_source.html#l00009">Table.cs:10</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -175,7 +193,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html#l00046">46</a> of file <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html">InputActionEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (InputAction.IsInProgress())</div>
+<div class="line"><span class="lineno">   49</span>            {</div>
+<div class="line"><span class="lineno">   50</span>                CancelAddWaitTask();</div>
+<div class="line"><span class="lineno">   51</span>                addWaitUntilTask = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   52</span>                </div>
+<div class="line"><span class="lineno">   53</span>                WaitUntilIsFinishProgress(addWaitUntilTask, () =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section].Add(key, action)).Forget();</div>
+<div class="line"><span class="lineno">   54</span>            }</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   56</span>            {</div>
+<div class="line"><span class="lineno">   57</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section].Add(key, action);</div>
+<div class="line"><span class="lineno">   58</span>            }</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a88af11652fa6f0de76f2d11691beddf9" name="a88af11652fa6f0de76f2d11691beddf9"></a>
@@ -194,7 +225,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html#l00088">88</a> of file <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html">InputActionEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   89</span>        {</div>
+<div class="line"><span class="lineno">   90</span>            CancelAddWaitTask();</div>
+<div class="line"><span class="lineno">   91</span>            CancelRemoveWaitTask();</div>
+<div class="line"><span class="lineno">   92</span>            </div>
+<div class="line"><span class="lineno">   93</span>            <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>.Clear();</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9f4640cd99146b5a165d5e0a641ffa79" name="a9f4640cd99146b5a165d5e0a641ffa79"></a>
@@ -217,7 +254,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html#l00061">61</a> of file <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html">InputActionEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   62</span>        {</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (InputAction.IsInProgress())</div>
+<div class="line"><span class="lineno">   64</span>            {</div>
+<div class="line"><span class="lineno">   65</span>                CancelRemoveWaitTask();</div>
+<div class="line"><span class="lineno">   66</span>                removeWaitUntilTask = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   67</span>                </div>
+<div class="line"><span class="lineno">   68</span>                WaitUntilIsFinishProgress(removeWaitUntilTask, () =&gt; <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section]?.Remove(key)).Forget();</div>
+<div class="line"><span class="lineno">   69</span>            }</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   71</span>            {</div>
+<div class="line"><span class="lineno">   72</span>                <a class="code hl_class" href="../../d2/d8f/class_table.html">Table</a>[section]?.Remove(key);</div>
+<div class="line"><span class="lineno">   73</span>            }</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a41255ab7cb885885169f088758bb2e30" name="a41255ab7cb885885169f088758bb2e30"></a>
@@ -236,7 +286,17 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html#l00076">76</a> of file <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html">InputActionEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (value)</div>
+<div class="line"><span class="lineno">   79</span>            {</div>
+<div class="line"><span class="lineno">   80</span>                InputAction.Enable();</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   83</span>            {</div>
+<div class="line"><span class="lineno">   84</span>                InputAction.Disable();</div>
+<div class="line"><span class="lineno">   85</span>            }</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -285,7 +345,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d2/d72/_input_action_entity_8cs_source.html">InputActionEntity.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3009506e6e0f92a493d4254d949f6620" name="a3009506e6e0f92a493d4254d949f6620"></a>

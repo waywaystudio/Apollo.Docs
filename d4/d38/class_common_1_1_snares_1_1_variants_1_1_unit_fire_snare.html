@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,20 @@ $(function(){initNavTree('d4/d38/class_common_1_1_snares_1_1_variants_1_1_unit_f
   <div class="headertitle"><div class="title">Common.Snares.Variants.UnitFireSnare Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Snares.Variants.UnitFireSnare:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/d38/class_common_1_1_snares_1_1_variants_1_1_unit_fire_snare.png" usemap="#Common.Snares.Variants.UnitFireSnare_map" alt=""/>
+  <map id="Common.Snares.Variants.UnitFireSnare_map" name="Common.Snares.Variants.UnitFireSnare_map">
+<area href="../../dd/db2/class_common_1_1_snares_1_1_snare.html" alt="Common.Snares.Snare" shape="rect" coords="370,112,607,136"/>
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="247,56,484,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="494,56,731,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="741,56,978,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="247,0,484,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="494,0,731,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -195,7 +210,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td>
 <p>Reimplemented from <a class="el" href="../../dd/db2/class_common_1_1_snares_1_1_snare.html">Common.Snares.Snare</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d7/de1/_unit_fire_snare_8cs_source.html#l00005">5</a> of file <a class="el" href="../../d7/de1/_unit_fire_snare_8cs_source.html">UnitFireSnare.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>        {</div>
+<div class="line"><span class="lineno">    7</span>            base.Initialize(provider);</div>
+<div class="line"><span class="lineno">    8</span> </div>
+<div class="line"><span class="lineno">    9</span>            Sections</div>
+<div class="line"><span class="lineno">   10</span>                .Add(Section.Execute, <span class="stringliteral">&quot;MainExecute&quot;</span>, MainExecute)</div>
+<div class="line"><span class="lineno">   11</span>                ;</div>
+<div class="line"><span class="lineno">   12</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

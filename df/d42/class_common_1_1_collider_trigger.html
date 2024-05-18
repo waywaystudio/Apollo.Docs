@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,15 @@ $(function(){initNavTree('df/d42/class_common_1_1_collider_trigger.html','../../
   <div class="headertitle"><div class="title">Common.ColliderTrigger Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.ColliderTrigger:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../df/d42/class_common_1_1_collider_trigger.png" usemap="#Common.ColliderTrigger_map" alt=""/>
+  <map id="Common.ColliderTrigger_map" name="Common.ColliderTrigger_map">
+<area href="../../d4/de9/class_common_1_1_snares_1_1_snare_trigger.html" alt="Common.Snares.SnareTrigger" shape="rect" coords="0,56,183,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -163,7 +173,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ eventHandler.Filter.Add(key, condition); <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a20ba1e97271005dfaf2a30b6b1a268a3" name="a20ba1e97271005dfaf2a30b6b1a268a3"></a>
@@ -186,7 +197,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00027">27</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            eventHandler.Filter.Add(key, obj =&gt; obj.IsInLayerMask(layerMask)); </div>
+<div class="line"><span class="lineno">   30</span>            </div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a741c59d877271c88f6677403d5e6e2e3" name="a741c59d877271c88f6677403d5e6e2e3"></a>
@@ -209,7 +225,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>{ eventHandler.OnDisabled.Add(key, action); <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aba7d84d77fb8489ee47288ae94afaf1d" name="aba7d84d77fb8489ee47288ae94afaf1d"></a>
@@ -232,7 +249,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{ eventHandler.OnEnter.Add(key, action); <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aee8a3bb438c01f53d49edeee9a1571f7" name="aee8a3bb438c01f53d49edeee9a1571f7"></a>
@@ -255,7 +273,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>{ eventHandler.OnExit.Add(key, action); <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a38e7d91c0b4ffdfa7544f66de6eddaff" name="a38e7d91c0b4ffdfa7544f66de6eddaff"></a>
@@ -282,7 +301,25 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00035">35</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            eventHandler.enabled       = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   38</span>            eventHandler.Model.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>            sequencer.Sections</div>
+<div class="line"><span class="lineno">   41</span>                     .Add(enableFrame, <span class="stringliteral">&quot;EnableCollider&quot;</span>, ActiveCollider)</div>
+<div class="line"><span class="lineno">   42</span>                     .Add(disableFrame, <span class="stringliteral">&quot;DisableCollider&quot;</span>, DeActiveCollider)</div>
+<div class="line"><span class="lineno">   43</span>                     .AddIf(disableFrame != Section.End, Section.End, <span class="stringliteral">&quot;DisableCollider&quot;</span>, DeActiveCollider)</div>
+<div class="line"><span class="lineno">   44</span>                     ;</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (isCollectEnteredObject)</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                AddOnEnter(<span class="stringliteral">&quot;AddEnteredObject&quot;</span>, AddInColliderObject);</div>
+<div class="line"><span class="lineno">   49</span>                AddOnExit(<span class="stringliteral">&quot;RemoveInColliderObject&quot;</span>, RemoveInColliderObject);</div>
+<div class="line"><span class="lineno">   50</span>            }</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adac14736977c8594d5fe90104411bb1f" name="adac14736977c8594d5fe90104411bb1f"></a>
@@ -301,7 +338,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>{ eventHandler.Filter.Remove(key); <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaf6768ea9bba2fa8dd47927cf7f55408" name="aaf6768ea9bba2fa8dd47927cf7f55408"></a>
@@ -320,7 +358,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00025">25</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>{ eventHandler.OnDisabled.Remove(key); <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab18c48e481e81799630c7a9da1eeb8fc" name="ab18c48e481e81799630c7a9da1eeb8fc"></a>
@@ -339,7 +378,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{ eventHandler.OnEnter.Remove(key); <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8166fcde8e341d74e04ea691402f4d8c" name="a8166fcde8e341d74e04ea691402f4d8c"></a>
@@ -358,7 +398,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00024">24</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{ eventHandler.OnExit.Remove(key); <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5f0625942c96248e2f672398bc9b5568" name="a5f0625942c96248e2f672398bc9b5568"></a>
@@ -385,7 +426,26 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00055">55</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            sequencer.Sections</div>
+<div class="line"><span class="lineno">   58</span>                     .Remove(Section.Active, <span class="stringliteral">&quot;EnableCollider&quot;</span>)</div>
+<div class="line"><span class="lineno">   59</span>                     .Remove(Section.End, <span class="stringliteral">&quot;DisableCollider&quot;</span>)</div>
+<div class="line"><span class="lineno">   60</span>                     ;</div>
+<div class="line"><span class="lineno">   61</span>            </div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span> (isCollectEnteredObject)</div>
+<div class="line"><span class="lineno">   63</span>            {</div>
+<div class="line"><span class="lineno">   64</span>                RemoveOnEnter(<span class="stringliteral">&quot;AddEnteredObject&quot;</span>);</div>
+<div class="line"><span class="lineno">   65</span>                RemoveOnExit(<span class="stringliteral">&quot;RemoveInColliderObject&quot;</span>);</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>            </div>
+<div class="line"><span class="lineno">   68</span>            eventHandler.enabled               = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   69</span>            eventHandler.Model.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   70</span>            </div>
+<div class="line"><span class="lineno">   71</span>            InColliderObjects.Clear();</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -435,7 +495,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keyword">get</span> =&gt; eventHandler; <span class="keyword">set</span> =&gt; eventHandler = value; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a938048b9eab379c79bdf77a6a751610b" name="a938048b9eab379c79bdf77a6a751610b"></a>
@@ -459,7 +520,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d4/da8/_collider_trigger_8cs_source.html">ColliderTrigger.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

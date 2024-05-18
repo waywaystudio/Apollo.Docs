@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d8/dd2/class_core_editor_1_1_pool_drawer.html','../../
   <div class="headertitle"><div class="title">CoreEditor.PoolDrawer&lt; T0, T1 &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for CoreEditor.PoolDrawer&lt; T0, T1 &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/dd2/class_core_editor_1_1_pool_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -145,7 +152,29 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dba/_pool_drawer_8cs_source.html#l00017">17</a> of file <a class="el" href="../../d7/dba/_pool_drawer_8cs_source.html">PoolDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            var poolingGroup = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d68/class_module_group_attribute.html">ModuleGroupAttribute</a>(<span class="stringliteral">&quot;Pooling Property&quot;</span>, <span class="keyword">true</span>, documentLink:<span class="stringliteral">&quot;https://www.notion.so/salinger/Pool-952c1d279fa241ac9aa3f61abfa577a1?pvs=4&quot;</span>);</div>
+<div class="line"><span class="lineno">   20</span>            </div>
+<div class="line"><span class="lineno">   21</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;prefab&quot;</span>)</div>
+<div class="line"><span class="lineno">   22</span>            {</div>
+<div class="line"><span class="lineno">   23</span>                attributes.Add(poolingGroup);</div>
+<div class="line"><span class="lineno">   24</span>            }</div>
+<div class="line"><span class="lineno">   25</span>            </div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;maxCount&quot;</span>)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                attributes.Add(poolingGroup);</div>
+<div class="line"><span class="lineno">   29</span>                attributes.Add(<span class="keyword">new</span> PropertyRangeAttribute(1, 64));</div>
+<div class="line"><span class="lineno">   30</span>            }</div>
+<div class="line"><span class="lineno">   31</span>            </div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;syncObjectActivity&quot;</span>)</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                attributes.Add(poolingGroup);</div>
+<div class="line"><span class="lineno">   35</span>                attributes.Add(<span class="keyword">new</span> TooltipAttribute(<span class="stringliteral">&quot;풀링되는 게임오브젝트의 Activity를 시퀀스에 따라서 true(=OnGet), false(=OnRelease)하며 &quot;</span></div>
+<div class="line"><span class="lineno">   36</span>                                                    + <span class="stringliteral">&quot;Pool을 Clear할 때 해당 게임오브젝트를 삭제한다.&quot;</span>));</div>
+<div class="line"><span class="lineno">   37</span>            }</div>
+<div class="line"><span class="lineno">   38</span>        }</div>
+<div class="ttc" id="aclass_module_group_attribute_html"><div class="ttname"><a href="../../d6/d68/class_module_group_attribute.html">ModuleGroupAttribute</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00008">ModuleGroupAttribute.cs:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7404e7bbc37e58644fbe2cfcf7a3159f" name="a7404e7bbc37e58644fbe2cfcf7a3159f"></a>
@@ -168,7 +197,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/dba/_pool_drawer_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d7/dba/_pool_drawer_8cs_source.html">PoolDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

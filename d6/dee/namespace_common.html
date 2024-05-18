@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -559,7 +560,14 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dd7/_combat_entity_type_8cs_source.html#l00003">3</a> of file <a class="el" href="../../de/dd7/_combat_entity_type_8cs_source.html">CombatEntityType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0,</div>
+<div class="line"><span class="lineno">    6</span>        Damage,</div>
+<div class="line"><span class="lineno">    7</span>        CriticalDamage,</div>
+<div class="line"><span class="lineno">    8</span>        Heal,</div>
+<div class="line"><span class="lineno">    9</span>        Evade,</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af65c84738dec71840a559922a1c90c5b" name="af65c84738dec71840a559922a1c90c5b"></a>
@@ -575,7 +583,19 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d70/_damage_type_mask_8cs_source.html#l00006">6</a> of file <a class="el" href="../../de/d70/_damage_type_mask_8cs_source.html">DamageTypeMask.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        None = 0,</div>
+<div class="line"><span class="lineno">    9</span>        </div>
+<div class="line"><span class="lineno">   10</span>        Critical = 1 &lt;&lt; 0,</div>
+<div class="line"><span class="lineno">   11</span>        Blade = 1 &lt;&lt; 1,</div>
+<div class="line"><span class="lineno">   12</span>        PhysicalImpact = 1 &lt;&lt; 2,</div>
+<div class="line"><span class="lineno">   13</span>        Fire = 1 &lt;&lt; 3,</div>
+<div class="line"><span class="lineno">   14</span>        SpiritStrike = 1 &lt;&lt; 4, <span class="comment">//혼력 Charged 공격</span></div>
+<div class="line"><span class="lineno">   15</span>        Silk = 1 &lt;&lt; 5, </div>
+<div class="line"><span class="lineno">   16</span>        </div>
+<div class="line"><span class="lineno">   17</span>        All = Critical | Blade | PhysicalImpact | Fire | SpiritStrike | Silk,</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a044de7969cba8f2a9b9d036741a9b449" name="a044de7969cba8f2a9b9d036741a9b449"></a>
@@ -591,7 +611,14 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d52/_effect_target_type_8cs_source.html#l00003">3</a> of file <a class="el" href="../../db/d52/_effect_target_type_8cs_source.html">EffectTargetType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0,</div>
+<div class="line"><span class="lineno">    6</span>        CombatProvider,</div>
+<div class="line"><span class="lineno">    7</span>        Target,</div>
+<div class="line"><span class="lineno">    8</span>        Parent,</div>
+<div class="line"><span class="lineno">    9</span>        Unit,</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a793b578cbfd903fe3b2a65d444675515" name="a793b578cbfd903fe3b2a65d444675515"></a>
@@ -607,7 +634,16 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/da8/_karma_type_8cs_source.html#l00003">3</a> of file <a class="el" href="../../d4/da8/_karma_type_8cs_source.html">KarmaType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0,</div>
+<div class="line"><span class="lineno">    6</span>        Rage = 01,</div>
+<div class="line"><span class="lineno">    7</span>        Grief = 02,</div>
+<div class="line"><span class="lineno">    8</span>        Pain = 03,</div>
+<div class="line"><span class="lineno">    9</span>        Fear = 04,</div>
+<div class="line"><span class="lineno">   10</span>        Spite = 05,</div>
+<div class="line"><span class="lineno">   11</span>        Hate = 06,</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af570d89b4c7b26f2254acb9ef73c48a0" name="af570d89b4c7b26f2254acb9ef73c48a0"></a>
@@ -623,7 +659,19 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d1c/_map_preposition_type_8cs_source.html#l00003">3</a> of file <a class="el" href="../../d1/d1c/_map_preposition_type_8cs_source.html">MapPrepositionType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0,</div>
+<div class="line"><span class="lineno">    6</span>        FiendSpawns,</div>
+<div class="line"><span class="lineno">    7</span>        PlayerSpawn,</div>
+<div class="line"><span class="lineno">    8</span>        PlayerDestination,</div>
+<div class="line"><span class="lineno">    9</span>        Gate1,</div>
+<div class="line"><span class="lineno">   10</span>        Gate2,</div>
+<div class="line"><span class="lineno">   11</span>        Boss,</div>
+<div class="line"><span class="lineno">   12</span>        MerchantGoods,</div>
+<div class="line"><span class="lineno">   13</span>        StartReward,</div>
+<div class="line"><span class="lineno">   14</span>        NpcSample1,</div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab80c1c474806dddfa9aa5cdf5d009656" name="ab80c1c474806dddfa9aa5cdf5d009656"></a>
@@ -639,7 +687,13 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/dc2/_particle_spawn_parent_8cs_source.html#l00003">3</a> of file <a class="el" href="../../df/dc2/_particle_spawn_parent_8cs_source.html">ParticleSpawnParent.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0, </div>
+<div class="line"><span class="lineno">    6</span>        Provider, </div>
+<div class="line"><span class="lineno">    7</span>        Taker, </div>
+<div class="line"><span class="lineno">    8</span>        World</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1477a3f269f76077e23fc8292d6c4291" name="a1477a3f269f76077e23fc8292d6c4291"></a>
@@ -655,7 +709,39 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d7/d24/_pre_position_type_8cs_source.html#l00003">3</a> of file <a class="el" href="../../d7/d24/_pre_position_type_8cs_source.html">PrePositionType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0,</div>
+<div class="line"><span class="lineno">    6</span>        Top = 1,    <span class="comment">// Above Head. FloatingText</span></div>
+<div class="line"><span class="lineno">    7</span>        Head = 2,   <span class="comment">// Exactly Head.</span></div>
+<div class="line"><span class="lineno">    8</span>        Body = 3,   <span class="comment">// Center Between Head and Origin</span></div>
+<div class="line"><span class="lineno">    9</span>        Origin = 4, <span class="comment">// Ground, 0,0,0</span></div>
+<div class="line"><span class="lineno">   10</span>        </div>
+<div class="line"><span class="lineno">   11</span>        <span class="comment">//Bones are made inside the armature, All Bones are starting points of each</span></div>
+<div class="line"><span class="lineno">   12</span>        <span class="comment">//Unity Y axis is forward, forward to next bone point</span></div>
+<div class="line"><span class="lineno">   13</span>        RootBone = 10,</div>
+<div class="line"><span class="lineno">   14</span>        BackBone = 11, <span class="comment">// Just below Neck</span></div>
+<div class="line"><span class="lineno">   15</span>        NeckBone = 12,</div>
+<div class="line"><span class="lineno">   16</span>        HeadBone = 13,</div>
+<div class="line"><span class="lineno">   17</span>        RightShoulder = 21,</div>
+<div class="line"><span class="lineno">   18</span>        RightElbow = 22,</div>
+<div class="line"><span class="lineno">   19</span>        RightWrist = 23,</div>
+<div class="line"><span class="lineno">   20</span>        RightHand = 24,</div>
+<div class="line"><span class="lineno">   21</span>        LeftShoulder = 31,</div>
+<div class="line"><span class="lineno">   22</span>        LeftElbow = 32,</div>
+<div class="line"><span class="lineno">   23</span>        LeftWrist = 33,</div>
+<div class="line"><span class="lineno">   24</span>        LeftHand = 34,</div>
+<div class="line"><span class="lineno">   25</span>        RightPelvis = 41,</div>
+<div class="line"><span class="lineno">   26</span>        RightKnee = 42,</div>
+<div class="line"><span class="lineno">   27</span>        RightAnkle = 43,</div>
+<div class="line"><span class="lineno">   28</span>        RightToe = 44,</div>
+<div class="line"><span class="lineno">   29</span>        LeftPelvis = 51,</div>
+<div class="line"><span class="lineno">   30</span>        LeftKnee = 52,</div>
+<div class="line"><span class="lineno">   31</span>        LeftAnkle = 53,</div>
+<div class="line"><span class="lineno">   32</span>        LeftToe = 54,</div>
+<div class="line"><span class="lineno">   33</span>        </div>
+<div class="line"><span class="lineno">   34</span>        Gourd = 100, <span class="comment">//Special for Dred</span></div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae9ed8dc674589207675d645c71e3324b" name="ae9ed8dc674589207675d645c71e3324b"></a>
@@ -671,7 +757,14 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d15/_skill_type_8cs_source.html#l00011">11</a> of file <a class="el" href="../../dd/d15/_skill_type_8cs_source.html">SkillType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        None = 0,</div>
+<div class="line"><span class="lineno">   14</span>        Static,</div>
+<div class="line"><span class="lineno">   15</span>        Casting,</div>
+<div class="line"><span class="lineno">   16</span>        Charging,</div>
+<div class="line"><span class="lineno">   17</span>        Holding,</div>
+<div class="line"><span class="lineno">   18</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae3ae835a574e9078b418808b0f1aa82d" name="ae3ae835a574e9078b418808b0f1aa82d"></a>
@@ -687,7 +780,13 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d15/_skill_type_8cs_source.html#l00003">3</a> of file <a class="el" href="../../dd/d15/_skill_type_8cs_source.html">SkillType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0, <span class="comment">// Common</span></div>
+<div class="line"><span class="lineno">    6</span>        Attack = 1,</div>
+<div class="line"><span class="lineno">    7</span>        Special = 2,</div>
+<div class="line"><span class="lineno">    8</span>        Ultimate = 3,</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8ca768b5259e0ae2f8baaae4fcb8c5f9" name="a8ca768b5259e0ae2f8baaae4fcb8c5f9"></a>
@@ -703,7 +802,18 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d11/_sorting_type_8cs_source.html#l00003">3</a> of file <a class="el" href="../../de/d11/_sorting_type_8cs_source.html">SortingType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0,</div>
+<div class="line"><span class="lineno">    6</span>        DistanceAscending,</div>
+<div class="line"><span class="lineno">    7</span>        DistanceDescending,</div>
+<div class="line"><span class="lineno">    8</span>        HpAscending,</div>
+<div class="line"><span class="lineno">    9</span>        HpDescending,</div>
+<div class="line"><span class="lineno">   10</span>        HpRatioAscending,</div>
+<div class="line"><span class="lineno">   11</span>        HpRatioDescending,</div>
+<div class="line"><span class="lineno">   12</span>        CombatClass,</div>
+<div class="line"><span class="lineno">   13</span>        Random,</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8cd8e66b69c3eec5926ab8f964bf0e0e" name="a8cd8e66b69c3eec5926ab8f964bf0e0e"></a>
@@ -719,7 +829,17 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html#l00005">5</a> of file <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html">EffectSpawnType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        None = 0, </div>
+<div class="line"><span class="lineno">    8</span>        ChildOfThis, <span class="comment">// -&gt; Child to ThisObject </span></div>
+<div class="line"><span class="lineno">    9</span>        Provider, </div>
+<div class="line"><span class="lineno">   10</span>        Target,  <span class="comment">// Hide On Play Section is not Execute</span></div>
+<div class="line"><span class="lineno">   11</span>        Custom, </div>
+<div class="line"><span class="lineno">   12</span>        World,</div>
+<div class="line"><span class="lineno">   13</span>        ProviderPreTransform, <span class="comment">// -&gt; PrePositionType preTransformType;</span></div>
+<div class="line"><span class="lineno">   14</span>        TargetPreTransform, <span class="comment">// - Hide On Play Section is not Execute -&gt; PrePositionType preTransformType;</span></div>
+<div class="line"><span class="lineno">   15</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a83fee72a957dac78c242f94da4f50591" name="a83fee72a957dac78c242f94da4f50591"></a>
@@ -735,7 +855,13 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html#l00017">17</a> of file <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html">EffectSpawnType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        None = 0, </div>
+<div class="line"><span class="lineno">   20</span>        InheritParent, <span class="comment">// Zero LocalPosition + Particle Offset</span></div>
+<div class="line"><span class="lineno">   21</span>        ProviderPreposition, </div>
+<div class="line"><span class="lineno">   22</span>        TargetPreposition <span class="comment">// Hide On Play Section is not Execute</span></div>
+<div class="line"><span class="lineno">   23</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0aafab09dd35a8406136f9f4b3ff19d9" name="a0aafab09dd35a8406136f9f4b3ff19d9"></a>
@@ -751,7 +877,15 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html#l00025">25</a> of file <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html">EffectSpawnType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        None = 0, </div>
+<div class="line"><span class="lineno">   28</span>        ParticleSelf, </div>
+<div class="line"><span class="lineno">   29</span>        ProvideObject,  </div>
+<div class="line"><span class="lineno">   30</span>        TargetObject,     <span class="comment">// Hide On Play Section is not Execute</span></div>
+<div class="line"><span class="lineno">   31</span>        ProviderToTarget, <span class="comment">// Hide On Play Section is not Execute </span></div>
+<div class="line"><span class="lineno">   32</span>        TargetToProvider  <span class="comment">// Hide On Play Section is not Execute</span></div>
+<div class="line"><span class="lineno">   33</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9b9dde4db4210c2614baa167d50e8031" name="a9b9dde4db4210c2614baa167d50e8031"></a>
@@ -767,7 +901,11 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html#l00035">35</a> of file <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html">EffectSpawnType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        Provider, </div>
+<div class="line"><span class="lineno">   38</span>        Sender</div>
+<div class="line"><span class="lineno">   39</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a42d43f9dd990eadd77e3ecd89b27d7e3" name="a42d43f9dd990eadd77e3ecd89b27d7e3"></a>
@@ -783,7 +921,27 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/df2/_state_mask_8cs_source.html#l00011">11</a> of file <a class="el" href="../../de/df2/_state_mask_8cs_source.html">StateMask.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        None = 0,</div>
+<div class="line"><span class="lineno">   14</span>        Yield = 1 &lt;&lt; 0,</div>
+<div class="line"><span class="lineno">   15</span>        ImmuneParalysis = 1 &lt;&lt; 1,</div>
+<div class="line"><span class="lineno">   16</span>        ImmunePush = 1 &lt;&lt; 2,</div>
+<div class="line"><span class="lineno">   17</span>        ImmuneCrowdControl = 1 &lt;&lt; 3,</div>
+<div class="line"><span class="lineno">   18</span>        Immunable = ImmuneParalysis | ImmunePush | ImmuneCrowdControl,</div>
+<div class="line"><span class="lineno">   19</span>        Soft = 1 &lt;&lt; 4,</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_namespace" href="../../d6/dee/namespace_common.html">Common</a> = 1 &lt;&lt; 5,</div>
+<div class="line"><span class="lineno">   21</span>        Power = 1 &lt;&lt; 6,</div>
+<div class="line"><span class="lineno">   22</span>        Rigid = 1 &lt;&lt; 7,</div>
+<div class="line"><span class="lineno">   23</span>        </div>
+<div class="line"><span class="lineno">   24</span>        Paralysis  = 1 &lt;&lt; 11,</div>
+<div class="line"><span class="lineno">   25</span>        Push = 1 &lt;&lt; 12,</div>
+<div class="line"><span class="lineno">   26</span>        CrowdControl = 1 &lt;&lt; 13,</div>
+<div class="line"><span class="lineno">   27</span>        Dead = 1 &lt;&lt; 30,</div>
+<div class="line"><span class="lineno">   28</span>        </div>
+<div class="line"><span class="lineno">   29</span>        All = <span class="keywordtype">int</span>.MaxValue,</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="ttc" id="anamespace_common_html"><div class="ttname"><a href="../../d6/dee/namespace_common.html">Common</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/daf/_animation_player_8cs_source.html#l00010">AnimationPlayer.cs:11</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a060118192df9f745f9a772099df53c18" name="a060118192df9f745f9a772099df53c18"></a>
@@ -799,7 +957,21 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d1a/_stat_type_8cs_source.html#l00003">3</a> of file <a class="el" href="../../d5/d1a/_stat_type_8cs_source.html">StatType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0,</div>
+<div class="line"><span class="lineno">    6</span>        HitPoints = DataIndex.HitPoints,</div>
+<div class="line"><span class="lineno">    7</span>        BaseDamage = DataIndex.BaseDamage,</div>
+<div class="line"><span class="lineno">    8</span>        BaseAttackSpeed = DataIndex.BaseAttackSpeed,</div>
+<div class="line"><span class="lineno">    9</span>        CriticalChance = DataIndex.CriticalChance,</div>
+<div class="line"><span class="lineno">   10</span>        CriticalDamage = DataIndex.CriticalDamage,</div>
+<div class="line"><span class="lineno">   11</span>        MoveSpeed = DataIndex.MoveSpeed,</div>
+<div class="line"><span class="lineno">   12</span>        DashDistance = DataIndex.DashDistance,</div>
+<div class="line"><span class="lineno">   13</span>        ContinuesDashCount = DataIndex.ContinuesDashCount,</div>
+<div class="line"><span class="lineno">   14</span>        DamageIncreaseRate = DataIndex.DamageIncreaseRate,</div>
+<div class="line"><span class="lineno">   15</span>        DamageDecreaseRate = DataIndex.DamageDecreaseRate,</div>
+<div class="line"><span class="lineno">   16</span>        CriticalExposure = DataIndex.CriticalExposure,</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5388c8ec40b3daf302aa9f58e1e7b1c9" name="a5388c8ec40b3daf302aa9f58e1e7b1c9"></a>
@@ -815,7 +987,18 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dd4/_targeting_type_8cs_source.html#l00003">3</a> of file <a class="el" href="../../d1/dd4/_targeting_type_8cs_source.html">TargetingType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0, </div>
+<div class="line"><span class="lineno">    6</span>        Circle = 1, </div>
+<div class="line"><span class="lineno">    7</span>        Self = 2, </div>
+<div class="line"><span class="lineno">    8</span>        Arc = 3, </div>
+<div class="line"><span class="lineno">    9</span>        Line = 4,</div>
+<div class="line"><span class="lineno">   10</span>        Rect = 5, </div>
+<div class="line"><span class="lineno">   11</span>        Raycast = 6,</div>
+<div class="line"><span class="lineno">   12</span>        Colliding = 7,</div>
+<div class="line"><span class="lineno">   13</span>        Donut = 8,</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3c3849312910ec6b28b70d8f44f86bff" name="a3c3849312910ec6b28b70d8f44f86bff"></a>
@@ -831,7 +1014,16 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html#l00049">49</a> of file <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html">EffectSpawnType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>        None = 0, </div>
+<div class="line"><span class="lineno">   52</span>        Forward, </div>
+<div class="line"><span class="lineno">   53</span>        Left, </div>
+<div class="line"><span class="lineno">   54</span>        Right,</div>
+<div class="line"><span class="lineno">   55</span>        Backward,</div>
+<div class="line"><span class="lineno">   56</span>        Up,</div>
+<div class="line"><span class="lineno">   57</span>        Down,</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a813ee3edd13ff1143100350c2a6a4810" name="a813ee3edd13ff1143100350c2a6a4810"></a>
@@ -847,7 +1039,13 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html#l00041">41</a> of file <a class="el" href="../../dd/da5/_effect_spawn_type_8cs_source.html">EffectSpawnType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
+<div class="line"><span class="lineno">   43</span>        None = 0, </div>
+<div class="line"><span class="lineno">   44</span>        StartUnitForward, </div>
+<div class="line"><span class="lineno">   45</span>        ToTargetFromStartUnit, </div>
+<div class="line"><span class="lineno">   46</span>        ToStartUnitFromTarget</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa9209426a6fdf134d1be75b12ac1923e" name="aa9209426a6fdf134d1be75b12ac1923e"></a>
@@ -863,7 +1061,31 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/dcd/_u_i_event_type_8cs_source.html#l00006">6</a> of file <a class="el" href="../../d9/dcd/_u_i_event_type_8cs_source.html">UIEventType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="comment">// Inherit UnityEngine.EventSystem&#39;s EventTriggerType Numbering</span></div>
+<div class="line"><span class="lineno">    9</span>        PointerEnter = EventTriggerType.PointerEnter, <span class="comment">// 0</span></div>
+<div class="line"><span class="lineno">   10</span>        PointerExit = EventTriggerType.PointerExit,</div>
+<div class="line"><span class="lineno">   11</span>        PointerDown = EventTriggerType.PointerDown,</div>
+<div class="line"><span class="lineno">   12</span>        PointerUp = EventTriggerType.PointerUp,</div>
+<div class="line"><span class="lineno">   13</span>        PointerClick = EventTriggerType.PointerClick,</div>
+<div class="line"><span class="lineno">   14</span>        Drag = EventTriggerType.Drag,</div>
+<div class="line"><span class="lineno">   15</span>        Drop = EventTriggerType.Drop,</div>
+<div class="line"><span class="lineno">   16</span>        Scroll = EventTriggerType.Scroll,</div>
+<div class="line"><span class="lineno">   17</span>        UpdateSelected = EventTriggerType.UpdateSelected,</div>
+<div class="line"><span class="lineno">   18</span>        Select = EventTriggerType.Select,</div>
+<div class="line"><span class="lineno">   19</span>        Deselect = EventTriggerType.Deselect,</div>
+<div class="line"><span class="lineno">   20</span>        Move = EventTriggerType.Move,</div>
+<div class="line"><span class="lineno">   21</span>        InitializePotentialDrag = EventTriggerType.InitializePotentialDrag,</div>
+<div class="line"><span class="lineno">   22</span>        BeginDrag = EventTriggerType.BeginDrag,</div>
+<div class="line"><span class="lineno">   23</span>        EndDrag = EventTriggerType.EndDrag,</div>
+<div class="line"><span class="lineno">   24</span>        Submit = EventTriggerType.Submit,</div>
+<div class="line"><span class="lineno">   25</span>        Cancel = EventTriggerType.Cancel, <span class="comment">// 16</span></div>
+<div class="line"><span class="lineno">   26</span>        </div>
+<div class="line"><span class="lineno">   27</span>        <span class="comment">// Custom</span></div>
+<div class="line"><span class="lineno">   28</span>        Open = 101,</div>
+<div class="line"><span class="lineno">   29</span>        Close = 102,</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aac08db5fc69bb35a69e86a91debddc5d" name="aac08db5fc69bb35a69e86a91debddc5d"></a>
@@ -879,7 +1101,16 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/_weapon_action_type_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d2/d0e/_weapon_action_type_8cs_source.html">WeaponActionType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>    {</div>
+<div class="line"><span class="lineno">   13</span>        None = 0,</div>
+<div class="line"><span class="lineno">   14</span>        Weapon1Attack,</div>
+<div class="line"><span class="lineno">   15</span>        Weapon1Special,</div>
+<div class="line"><span class="lineno">   16</span>        Weapon2Attack,</div>
+<div class="line"><span class="lineno">   17</span>        Weapon2Special,</div>
+<div class="line"><span class="lineno">   18</span>        Ultimate,</div>
+<div class="line"><span class="lineno">   19</span>        DashAttack</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a31fa1d5368bb3a637f152afcd4d46719" name="a31fa1d5368bb3a637f152afcd4d46719"></a>
@@ -895,7 +1126,13 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d0e/_weapon_action_type_8cs_source.html#l00003">3</a> of file <a class="el" href="../../d2/d0e/_weapon_action_type_8cs_source.html">WeaponActionType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0,</div>
+<div class="line"><span class="lineno">    6</span>        CommonAttack,</div>
+<div class="line"><span class="lineno">    7</span>        SpecialAttack,</div>
+<div class="line"><span class="lineno">    8</span>        DashAttack</div>
+<div class="line"><span class="lineno">    9</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a68de8ffe832a377df66ceafd6cfdd6c9" name="a68de8ffe832a377df66ceafd6cfdd6c9"></a>
@@ -911,7 +1148,14 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d47/_weapon_type_8cs_source.html#l00003">3</a> of file <a class="el" href="../../de/d47/_weapon_type_8cs_source.html">WeaponType.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    4</span>    {</div>
+<div class="line"><span class="lineno">    5</span>        None = 0,</div>
+<div class="line"><span class="lineno">    6</span>        Blade = 1,</div>
+<div class="line"><span class="lineno">    7</span>        SplitTrident = 2,</div>
+<div class="line"><span class="lineno">    8</span>        BellVeer = 3,</div>
+<div class="line"><span class="lineno">    9</span>        SilkStrings = 4,</div>
+<div class="line"><span class="lineno">   10</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

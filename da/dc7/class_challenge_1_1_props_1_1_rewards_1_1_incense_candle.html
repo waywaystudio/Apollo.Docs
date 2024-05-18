@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,18 @@ $(function(){initNavTree('da/dc7/class_challenge_1_1_props_1_1_rewards_1_1_incen
   <div class="headertitle"><div class="title">Challenge.Props.Rewards.IncenseCandle Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.Props.Rewards.IncenseCandle:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/dc7/class_challenge_1_1_props_1_1_rewards_1_1_incense_candle.png" usemap="#Challenge.Props.Rewards.IncenseCandle_map" alt=""/>
+  <map id="Challenge.Props.Rewards.IncenseCandle_map" name="Challenge.Props.Rewards.IncenseCandle_map">
+<area href="../../d9/d30/class_challenge_1_1_props_1_1_rewards_1_1_reward.html" alt="Challenge.Props.Rewards.Reward" shape="rect" coords="385,56,632,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="257,0,504,24"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="514,0,761,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="771,0,1018,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -194,7 +207,13 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>EnablePlayerCo
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dcf/_incense_candle_8cs_source.html#l00019">19</a> of file <a class="el" href="../../dc/dcf/_incense_candle_8cs_source.html">IncenseCandle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            <span class="comment">// 부적, 엽전, 동동주 등 랜덤 아이템 떨어짐.</span></div>
+<div class="line"><span class="lineno">   22</span>            var dred = ChallengeDirector.Dred;</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>            dred.Resource.FleshOfCoin.Value += 150;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2c6e2c58434accf64faeb8c4bc58dcef" name="a2c6e2c58434accf64faeb8c4bc58dcef"></a>
@@ -223,7 +242,13 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>EnablePlayerCo
 <p>Reimplemented from <a class="el" href="../../d9/d30/class_challenge_1_1_props_1_1_rewards_1_1_reward.html">Challenge.Props.Rewards.Reward</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/dcf/_incense_candle_8cs_source.html#l00010">10</a> of file <a class="el" href="../../dc/dcf/_incense_candle_8cs_source.html">IncenseCandle.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            base.Initialize(sourceSequence);</div>
+<div class="line"><span class="lineno">   13</span>            </div>
+<div class="line"><span class="lineno">   14</span>            <span class="comment">// Directly Get Reward - without Any PopUp UI</span></div>
+<div class="line"><span class="lineno">   15</span>            interactEffector.Sections.Add(Section.Complete, <span class="stringliteral">&quot;CompleteFleshCoinSequence&quot;</span>, Invoker.Complete);</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

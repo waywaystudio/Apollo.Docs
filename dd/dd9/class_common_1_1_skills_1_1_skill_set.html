@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('dd/dd9/class_common_1_1_skills_1_1_skill_set.html','..
   <div class="headertitle"><div class="title">Common.Skills.SkillSet Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.SkillSet:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/dd9/class_common_1_1_skills_1_1_skill_set.png" usemap="#Common.Skills.SkillSet_map" alt=""/>
+  <map id="Common.Skills.SkillSet_map" name="Common.Skills.SkillSet_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="148,0,286,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -149,7 +159,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d12/_skill_set_8cs_source.html#l00055">55</a> of file <a class="el" href="../../dd/d12/_skill_set_8cs_source.html">SkillSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (!Verify.IsTrue(skillTable.ContainsKey(targetSkill))) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (CurrentSkill == skillTable[targetSkill]) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   59</span>            </div>
+<div class="line"><span class="lineno">   60</span>            currentSkill = skillTable[targetSkill];</div>
+<div class="line"><span class="lineno">   61</span>            OnSkillChanged.Invoke(currentSkill);</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa9650d87cd9e8d6877195f1bd8794761" name="aa9650d87cd9e8d6877195f1bd8794761"></a>
@@ -168,7 +185,30 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d12/_skill_set_8cs_source.html#l00031">31</a> of file <a class="el" href="../../dd/d12/_skill_set_8cs_source.html">SkillSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            commonExecutor.Initialize(character);</div>
+<div class="line"><span class="lineno">   34</span>            commonDamageTable.Initialize();</div>
+<div class="line"><span class="lineno">   35</span>            </div>
+<div class="line"><span class="lineno">   36</span>            skillTable.ValueList.ForEach(skill =&gt;</div>
+<div class="line"><span class="lineno">   37</span>            {</div>
+<div class="line"><span class="lineno">   38</span>                skill.Initialize(character);</div>
+<div class="line"><span class="lineno">   39</span>            });</div>
+<div class="line"><span class="lineno">   40</span>            </div>
+<div class="line"><span class="lineno">   41</span>            behaviourList.ForEach(sb =&gt;</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                sb.Executor.Register(commonExecutor);</div>
+<div class="line"><span class="lineno">   44</span>                sb.Effector.Register(commonEffector);</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (sb.Executor.TryGetExecutions&lt;<a class="code hl_class" href="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.html">DamageExecutor</a>&gt;(out var damageExecutors))</div>
+<div class="line"><span class="lineno">   47</span>                {</div>
+<div class="line"><span class="lineno">   48</span>                    damageExecutors.ForEach(exe =&gt; exe.DamageTable.RegisterTable(commonDamageTable));</div>
+<div class="line"><span class="lineno">   49</span>                }</div>
+<div class="line"><span class="lineno">   50</span>            });</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>            </div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_executors_1_1_variants_1_1_damage_executor_html"><div class="ttname"><a href="../../dc/dde/class_common_1_1_executors_1_1_variants_1_1_damage_executor.html">Common.Executors.Variants.DamageExecutor</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/ded/_damage_executor_8cs_source.html#l00005">DamageExecutor.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -313,7 +353,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d12/_skill_set_8cs_source.html#l00028">28</a> of file <a class="el" href="../../dd/d12/_skill_set_8cs_source.html">SkillSet.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab911bd58b8fe5a19b526ec2d60f663c9" name="ab911bd58b8fe5a19b526ec2d60f663c9"></a>

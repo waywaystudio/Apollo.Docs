@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,16 @@ $(function(){initNavTree('d8/d4d/class_common_1_1_projectiles_1_1_trajectories_1
   <div class="headertitle"><div class="title">Common.Projectiles.Trajectories.RevolveTrajectory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Trajectories.RevolveTrajectory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/d4d/class_common_1_1_projectiles_1_1_trajectories_1_1_revolve_trajectory.png" usemap="#Common.Projectiles.Trajectories.RevolveTrajectory_map" alt=""/>
+  <map id="Common.Projectiles.Trajectories.RevolveTrajectory_map" name="Common.Projectiles.Trajectories.RevolveTrajectory_map">
+<area href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html" alt="Common.Projectiles.Trajectory" shape="rect" coords="0,56,316,80"/>
+<area href="../../df/d3b/class_common_1_1_projectiles_1_1_trajectories_1_1_silk_twister_trajectory.html" alt="Common.Projectiles.Trajectories.SilkTwisterTrajectory" shape="rect" coords="0,168,316,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -172,7 +183,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d59/_revolve_trajectory_8cs_source.html#l00025">25</a> of file <a class="el" href="../../d2/d59/_revolve_trajectory_8cs_source.html">RevolveTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            revolveCanceller?.Cancel();</div>
+<div class="line"><span class="lineno">   28</span>            revolveCanceller = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a714c5d644db56527dd88b0a8c85306db" name="a714c5d644db56527dd88b0a8c85306db"></a>
@@ -191,7 +206,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d59/_revolve_trajectory_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d2/d59/_revolve_trajectory_8cs_source.html">RevolveTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            revolveCanceller = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   21</span>            </div>
+<div class="line"><span class="lineno">   22</span>            Revolve(revolveCanceller).Forget();</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3e410bb01b49e6b3f486d04590579a45" name="a3e410bb01b49e6b3f486d04590579a45"></a>
@@ -218,7 +238,27 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d59/_revolve_trajectory_8cs_source.html#l00032">32</a> of file <a class="el" href="../../d2/d59/_revolve_trajectory_8cs_source.html">RevolveTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            var angle = InitialAngle * (Mathf.PI / 180);</div>
+<div class="line"><span class="lineno">   35</span>        </div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">while</span> (!cts.IsCancellationRequested)</div>
+<div class="line"><span class="lineno">   37</span>            {</div>
+<div class="line"><span class="lineno">   38</span>                var cp = Projectile.Provider.PrePosition(centerPosition).position;</div>
+<div class="line"><span class="lineno">   39</span>                </div>
+<div class="line"><span class="lineno">   40</span>                angle += speed * Time.fixedDeltaTime;</div>
+<div class="line"><span class="lineno">   41</span>                </div>
+<div class="line"><span class="lineno">   42</span>                var x = cp.x + Mathf.Cos(angle) * distance;</div>
+<div class="line"><span class="lineno">   43</span>                var y = cp.y;</div>
+<div class="line"><span class="lineno">   44</span>                var z = cp.z + Mathf.Sin(angle) * distance;</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>                transform.position = <span class="keyword">new</span> Vector3(x, y, z);</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>                await UniTask.Yield(PlayerLoopTiming.FixedUpdate, cts.Token);</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>            Projectile.Invoker.Complete();</div>
+<div class="line"><span class="lineno">   52</span>        } </div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -268,7 +308,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d59/_revolve_trajectory_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d2/d59/_revolve_trajectory_8cs_source.html">RevolveTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

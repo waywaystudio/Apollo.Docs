@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,20 @@ $(function(){initNavTree('dd/d81/class_common_1_1_effects_1_1_u_is_1_1_u_i_effec
 
 <p>EffectBehaviour에서 몇 가지 변수를 인스펙터에서 숨기거나 사용하지 않는다.  
  <a href="#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for Common.Effects.UIs.UIEffectBehaviour:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/d81/class_common_1_1_effects_1_1_u_is_1_1_u_i_effect_behaviour.png" usemap="#Common.Effects.UIs.UIEffectBehaviour_map" alt=""/>
+  <map id="Common.Effects.UIs.UIEffectBehaviour_map" name="Common.Effects.UIs.UIEffectBehaviour_map">
+<area href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html" alt="Common.Effects.EffectBehaviour" shape="rect" coords="506,56,749,80"/>
+<area href="../../d6/d9b/class_common_1_1_effects_1_1_u_is_1_1_canvas_group_effect.html" alt="Common.Effects.UIs.CanvasGroupEffect" shape="rect" coords="0,168,243,192"/>
+<area href="../../d6/d3e/class_common_1_1_effects_1_1_u_is_1_1_image_u_i_blink_effect.html" alt="Common.Effects.UIs.ImageUIBlinkEffect" shape="rect" coords="253,168,496,192"/>
+<area href="../../dd/d8f/class_common_1_1_effects_1_1_u_is_1_1_image_u_i_effect.html" alt="Common.Effects.UIs.ImageUIEffect" shape="rect" coords="506,168,749,192"/>
+<area href="../../da/db2/class_common_1_1_effects_1_1_u_is_1_1_rect_transform_effect.html" alt="Common.Effects.UIs.RectTransformEffect" shape="rect" coords="759,168,1002,192"/>
+<area href="../../d2/d86/class_common_1_1_effects_1_1_u_is_1_1_text_u_i_effect.html" alt="Common.Effects.UIs.TextUIEffect" shape="rect" coords="1012,168,1255,192"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -194,7 +209,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>StopEffect</b> ()</td
 <p>Reimplemented from <a class="el" href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html">Common.Effects.EffectBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d84/_u_i_effect_behaviour_8cs_source.html#l00008">8</a> of file <a class="el" href="../../dc/d84/_u_i_effect_behaviour_8cs_source.html">UIEffectBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="comment">// Pre Set before base Initialize. </span></div>
+<div class="line"><span class="lineno">   11</span>            <a class="code hl_variable" href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html#aedfbe8734c5a38f8080f821f0d34cc9f">playSection</a> = Section.Active;</div>
+<div class="line"><span class="lineno">   12</span>            <a class="code hl_variable" href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html#ae236070f6a8dccc025f9cb772fcc3cf1">stopStyle</a>   = StopType.EffectSelf;</div>
+<div class="line"><span class="lineno">   13</span>            stopSection = Section.None;</div>
+<div class="line"><span class="lineno">   14</span>            </div>
+<div class="line"><span class="lineno">   15</span>            base.Initialize(sequencer);</div>
+<div class="line"><span class="lineno">   16</span>            </div>
+<div class="line"><span class="lineno">   17</span>            Sequencer.Sections</div>
+<div class="line"><span class="lineno">   18</span>                     .Remove(Section.End, $<span class="stringliteral">&quot;ResetTarget{EffectKey}&quot;</span>)</div>
+<div class="line"><span class="lineno">   19</span>                     ;</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_effects_1_1_effect_behaviour_html_ae236070f6a8dccc025f9cb772fcc3cf1"><div class="ttname"><a href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html#ae236070f6a8dccc025f9cb772fcc3cf1">Common.Effects.EffectBehaviour.stopStyle</a></div><div class="ttdeci">StopType stopStyle</div><div class="ttdoc">Stop Style.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d7c/_effect_behaviour_8cs_source.html#l00015">EffectBehaviour.cs:15</a></div></div>
+<div class="ttc" id="aclass_common_1_1_effects_1_1_effect_behaviour_html_aedfbe8734c5a38f8080f821f0d34cc9f"><div class="ttname"><a href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html#aedfbe8734c5a38f8080f821f0d34cc9f">Common.Effects.EffectBehaviour.playSection</a></div><div class="ttdeci">Section playSection</div><div class="ttdoc">Start Style.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d7c/_effect_behaviour_8cs_source.html#l00010">EffectBehaviour.cs:10</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

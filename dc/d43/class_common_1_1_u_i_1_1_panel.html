@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,25 @@ $(function(){initNavTree('dc/d43/class_common_1_1_u_i_1_1_panel.html','../../');
   <div class="headertitle"><div class="title">Common.UI.Panel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UI.Panel:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/d43/class_common_1_1_u_i_1_1_panel.png" usemap="#Common.UI.Panel_map" alt=""/>
+  <map id="Common.UI.Panel_map" name="Common.UI.Panel_map">
+<area href="../../d1/dc6/class_common_1_1_u_i_element.html" alt="Common.UIElement" shape="rect" coords="180,56,531,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="361,0,712,24"/>
+<area href="../../d0/dd5/class_challenge_1_1_u_i_1_1_huds_1_1_challenge_bottom_huds.html" alt="Challenge.UI.Huds.ChallengeBottomHuds" shape="rect" coords="541,168,892,192"/>
+<area href="../../d7/d06/class_challenge_1_1_u_i_1_1_pop_ups_1_1_mastery_collection_panel.html" alt="Challenge.UI.PopUps.MasteryCollectionPanel" shape="rect" coords="541,224,892,248"/>
+<area href="../../da/d6d/class_challenge_1_1_u_i_1_1_tooltips_1_1_dead_panel.html" alt="Challenge.UI.Tooltips.DeadPanel" shape="rect" coords="541,280,892,304"/>
+<area href="../../d3/d46/class_common_1_1_u_i_1_1_tips_1_1_tips_panel.html" alt="Common.UI.Tips.TipsPanel" shape="rect" coords="541,336,892,360"/>
+<area href="../../d1/df0/class_lobby_1_1_u_i_1_1_pop_ups_1_1_enforce_weapon_panel.html" alt="Lobby.UI.PopUps.EnforceWeaponPanel" shape="rect" coords="541,392,892,416"/>
+<area href="../../da/dfe/class_lobby_1_1_u_i_1_1_pop_ups_1_1_weapon_selection_group.html" alt="Lobby.UI.PopUps.WeaponSelectionGroup" shape="rect" coords="541,448,892,472"/>
+<area href="../../d3/d02/class_lobby_1_1_u_i_1_1_pop_ups_1_1_weapon_selections_1_1_weapon_selection_panel.html" alt="Lobby.UI.PopUps.WeaponSelections.WeaponSelectionPanel" shape="rect" coords="541,504,892,528"/>
+<area href="../../d7/d48/class_lobby_1_1_u_i_1_1_tree_of_awakening_1_1_tree_of_awakening_panel.html" alt="Lobby.UI.TreeOfAwakening.TreeOfAwakeningPanel" shape="rect" coords="541,560,892,584"/>
+<area href="../../dc/d0c/class_title_1_1_u_i_1_1_pop_ups_1_1_start_game_panel.html" alt="Title.UI.PopUps.StartGamePanel" shape="rect" coords="541,616,892,640"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -185,7 +205,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d0b/_panel_8cs_source.html#l00009">9</a> of file <a class="el" href="../../db/d0b/_panel_8cs_source.html">Panel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keywordflow">if</span> (gameObject.activeSelf)</div>
+<div class="line"><span class="lineno">   12</span>            {</div>
+<div class="line"><span class="lineno">   13</span>                <a class="code hl_function" href="../../d1/dc6/class_common_1_1_u_i_element.html#ab9d9ec0ed7314202889fe21be760b35d">Close</a>();</div>
+<div class="line"><span class="lineno">   14</span>            }</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   16</span>            {</div>
+<div class="line"><span class="lineno">   17</span>                <a class="code hl_function" href="../../d1/dc6/class_common_1_1_u_i_element.html#a781e53df5c29dc4566e672bdfc8dba3c">Open</a>();</div>
+<div class="line"><span class="lineno">   18</span>            }</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_u_i_element_html_a781e53df5c29dc4566e672bdfc8dba3c"><div class="ttname"><a href="../../d1/dc6/class_common_1_1_u_i_element.html#a781e53df5c29dc4566e672bdfc8dba3c">Common.UIElement.Open</a></div><div class="ttdeci">void Open()</div><div class="ttdoc">Called by the EventSystem when opened the element associated with this EventTrigger.</div></div>
+<div class="ttc" id="aclass_common_1_1_u_i_element_html_ab9d9ec0ed7314202889fe21be760b35d"><div class="ttname"><a href="../../d1/dc6/class_common_1_1_u_i_element.html#ab9d9ec0ed7314202889fe21be760b35d">Common.UIElement.Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">Called by the EventSystem when closed the element associated with this EventTrigger.</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

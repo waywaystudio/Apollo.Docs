@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('d1/df0/class_lobby_1_1_u_i_1_1_pop_ups_1_1_enforce_wea
   <div class="headertitle"><div class="title">Lobby.UI.PopUps.EnforceWeaponPanel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Lobby.UI.PopUps.EnforceWeaponPanel:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/df0/class_lobby_1_1_u_i_1_1_pop_ups_1_1_enforce_weapon_panel.png" usemap="#Lobby.UI.PopUps.EnforceWeaponPanel_map" alt=""/>
+  <map id="Lobby.UI.PopUps.EnforceWeaponPanel_map" name="Lobby.UI.PopUps.EnforceWeaponPanel_map">
+<area href="../../dc/d43/class_common_1_1_u_i_1_1_panel.html" alt="Common.UI.Panel" shape="rect" coords="123,112,359,136"/>
+<area href="../../d1/dc6/class_common_1_1_u_i_element.html" alt="Common.UIElement" shape="rect" coords="123,56,359,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="246,0,482,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -196,7 +208,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc6/class_common_1_1_u_i_element.html">Common.UIElement</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d1b/_enforce_weapon_panel_8cs_source.html#l00008">8</a> of file <a class="el" href="../../dc/d1b/_enforce_weapon_panel_8cs_source.html">EnforceWeaponPanel.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            base.Initialize();</div>
+<div class="line"><span class="lineno">   11</span>            </div>
+<div class="line"><span class="lineno">   12</span>            <span class="keyword">this</span>[UIEventType.Open].Sections</div>
+<div class="line"><span class="lineno">   13</span>                                  .Add(Section.Active, <span class="stringliteral">&quot;DisablePlayerControl&quot;</span>, DisablePlayerControl)</div>
+<div class="line"><span class="lineno">   14</span>                                  ;</div>
+<div class="line"><span class="lineno">   15</span>            </div>
+<div class="line"><span class="lineno">   16</span>            <span class="keyword">this</span>[UIEventType.Close].Sections</div>
+<div class="line"><span class="lineno">   17</span>                                   .Add(Section.Active, <span class="stringliteral">&quot;EnablePlayerControl&quot;</span>, EnablePlayerControl)</div>
+<div class="line"><span class="lineno">   18</span>                                   ;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

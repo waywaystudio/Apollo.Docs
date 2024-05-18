@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,20 @@ $(function(){initNavTree('de/d4b/class_common_1_1_projectiles_1_1_variants_1_1_u
   <div class="headertitle"><div class="title">Common.Projectiles.Variants.UnderWorldSoldiersProjectile Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Variants.UnderWorldSoldiersProjectile:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/d4b/class_common_1_1_projectiles_1_1_variants_1_1_under_world_soldiers_projectile.png" usemap="#Common.Projectiles.Variants.UnderWorldSoldiersProjectile_map" alt=""/>
+  <map id="Common.Projectiles.Variants.UnderWorldSoldiersProjectile_map" name="Common.Projectiles.Variants.UnderWorldSoldiersProjectile_map">
+<area href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html" alt="Common.Projectiles.Projectile" shape="rect" coords="531,112,875,136"/>
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="354,56,698,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="708,56,1052,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="1062,56,1406,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="354,0,698,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="708,0,1052,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -201,7 +216,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#aae9763c6158d5d9b3b5ad983f3f325eb">Common.Projectiles.Projectile</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dd7/_under_world_soldiers_projectile_8cs_source.html#l00010">10</a> of file <a class="el" href="../../d6/dd7/_under_world_soldiers_projectile_8cs_source.html">UnderWorldSoldiersProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            base.Initialize(provider);</div>
+<div class="line"><span class="lineno">   13</span>            </div>
+<div class="line"><span class="lineno">   14</span>            trigger</div>
+<div class="line"><span class="lineno">   15</span>                .AddLayerFilter(<span class="stringliteral">&quot;LayerFilter&quot;</span>, DetectProperty.TargetLayer)</div>
+<div class="line"><span class="lineno">   16</span>                .AddOnEnter(<span class="stringliteral">&quot;CollideFoxfireProjectile&quot;</span>, OnCollided)</div>
+<div class="line"><span class="lineno">   17</span>                .Register(<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   18</span>                ;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

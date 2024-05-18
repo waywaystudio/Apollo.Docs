@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,20 @@ $(function(){initNavTree('dc/dd8/class_common_1_1_characters_1_1_behaviours_1_1_
   <div class="headertitle"><div class="title">Common.Characters.Behaviours.ParalysisBehaviour Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Behaviours.ParalysisBehaviour:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/dd8/class_common_1_1_characters_1_1_behaviours_1_1_paralysis_behaviour.png" usemap="#Common.Characters.Behaviours.ParalysisBehaviour_map" alt=""/>
+  <map id="Common.Characters.Behaviours.ParalysisBehaviour_map" name="Common.Characters.Behaviours.ParalysisBehaviour_map">
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="478,168,787,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="478,112,787,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="319,56,628,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="638,56,947,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="957,56,1266,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="638,0,947,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -191,7 +206,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Paralysis Character with specific duration. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da5/_paralysis_behaviour_8cs_source.html#l00024">24</a> of file <a class="el" href="../../d5/da5/_paralysis_behaviour_8cs_source.html">ParalysisBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive)</div>
+<div class="line"><span class="lineno">   27</span>            {</div>
+<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   29</span>            }</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>            var randomStamp = Mathf.Clamp01(Random.Range(clipTimeStamp.x, clipTimeStamp.y));</div>
+<div class="line"><span class="lineno">   32</span>            </div>
+<div class="line"><span class="lineno">   33</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   34</span>            animationPlayer.Paralysis(randomStamp, duration, Invoker.Complete);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6846a9c6e4f221074dc33aad77c67b70" name="a6846a9c6e4f221074dc33aad77c67b70"></a>
@@ -220,7 +246,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html">Common.Characters.CharacterBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/da5/_paralysis_behaviour_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d5/da5/_paralysis_behaviour_8cs_source.html">ParalysisBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   14</span>            </div>
+<div class="line"><span class="lineno">   15</span>            Sections</div>
+<div class="line"><span class="lineno">   16</span>                .Remove(Section.Active, <span class="stringliteral">&quot;PlayAnimation&quot;</span>)</div>
+<div class="line"><span class="lineno">   17</span>                .AddCondition(<span class="stringliteral">&quot;IsNotImmune&quot;</span>, () =&gt; !isImmune)</div>
+<div class="line"><span class="lineno">   18</span>                ;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('da/dfe/class_lobby_1_1_u_i_1_1_pop_ups_1_1_weapon_sele
   <div class="headertitle"><div class="title">Lobby.UI.PopUps.WeaponSelectionGroup Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Lobby.UI.PopUps.WeaponSelectionGroup:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/dfe/class_lobby_1_1_u_i_1_1_pop_ups_1_1_weapon_selection_group.png" usemap="#Lobby.UI.PopUps.WeaponSelectionGroup_map" alt=""/>
+  <map id="Lobby.UI.PopUps.WeaponSelectionGroup_map" name="Lobby.UI.PopUps.WeaponSelectionGroup_map">
+<area href="../../dc/d43/class_common_1_1_u_i_1_1_panel.html" alt="Common.UI.Panel" shape="rect" coords="128,112,374,136"/>
+<area href="../../d1/dc6/class_common_1_1_u_i_element.html" alt="Common.UIElement" shape="rect" coords="128,56,374,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="256,0,502,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -196,7 +208,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html#l00071">71</a> of file <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html">WeaponSelectionGroup.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            panelList.ForEach(panel =&gt; panel.Close());</div>
+<div class="line"><span class="lineno">   74</span>            </div>
+<div class="line"><span class="lineno">   75</span>            <span class="comment">// TEMP</span></div>
+<div class="line"><span class="lineno">   76</span>            LobbyDirector.Input.SetPlayerActivity(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6a1d2895f882ba506351d34d14927265" name="a6a1d2895f882ba506351d34d14927265"></a>
@@ -225,7 +243,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d1/dc6/class_common_1_1_u_i_element.html">Common.UIElement</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html#l00023">23</a> of file <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html">WeaponSelectionGroup.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            base.Initialize();</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            panelList.ForEach(panel =&gt; panel.Initialize(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">   28</span>            hellGate = LobbyDirector.Camp.Map.EnterGate1;</div>
+<div class="line"><span class="lineno">   29</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aee6cf931d6c0ad1c84f2c852c0ee5db1" name="aee6cf931d6c0ad1c84f2c852c0ee5db1"></a>
@@ -244,7 +268,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html#l00065">65</a> of file <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html">WeaponSelectionGroup.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            panelList.ForEach(panel =&gt; panel.Open());</div>
+<div class="line"><span class="lineno">   68</span>            NeutralizeInput();</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7ee81164c5c5fdfeeb5b542decaa309d" name="a7ee81164c5c5fdfeeb5b542decaa309d"></a>
@@ -263,7 +291,19 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html#l00051">51</a> of file <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html">WeaponSelectionGroup.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (firstWeapon == targetWeapon)</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                firstWeapon = WeaponType.None;</div>
+<div class="line"><span class="lineno">   56</span>            }</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (secondWeapon == targetWeapon)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                secondWeapon = WeaponType.None;</div>
+<div class="line"><span class="lineno">   60</span>            }</div>
+<div class="line"><span class="lineno">   61</span>            </div>
+<div class="line"><span class="lineno">   62</span>            SetButtonInteractable();</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af2ace5067073ec85e19e47117bd4f6a1" name="af2ace5067073ec85e19e47117bd4f6a1"></a>
@@ -282,7 +322,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html#l00031">31</a> of file <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html">WeaponSelectionGroup.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (firstWeapon != WeaponType.None &amp;&amp; secondWeapon != WeaponType.None)</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span>            </div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (firstWeapon == WeaponType.None)</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                firstWeapon = targetWeapon;</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (secondWeapon == WeaponType.None)</div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                secondWeapon = targetWeapon;</div>
+<div class="line"><span class="lineno">   45</span>            }</div>
+<div class="line"><span class="lineno">   46</span>            </div>
+<div class="line"><span class="lineno">   47</span>            SetButtonInteractable();</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aae31f9d08ff9043db9765feebef85580" name="aae31f9d08ff9043db9765feebef85580"></a>
@@ -301,7 +359,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html#l00079">79</a> of file <a class="el" href="../../dc/d21/_weapon_selection_group_8cs_source.html">WeaponSelectionGroup.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            Debug.Log(<span class="stringliteral">&quot;Let&#39;s Go to Hell!&quot;</span>);</div>
+<div class="line"><span class="lineno">   82</span>            </div>
+<div class="line"><span class="lineno">   83</span>            <a class="code hl_function" href="../../d1/dc6/class_common_1_1_u_i_element.html#ab9d9ec0ed7314202889fe21be760b35d">Close</a>();</div>
+<div class="line"><span class="lineno">   84</span>            hellGate.ToHell();</div>
+<div class="line"><span class="lineno">   85</span>            </div>
+<div class="line"><span class="lineno">   86</span>            dredSpawnEvent.MainWeapon = firstWeapon;</div>
+<div class="line"><span class="lineno">   87</span>            dredSpawnEvent.SubWeapon = secondWeapon;</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_u_i_element_html_ab9d9ec0ed7314202889fe21be760b35d"><div class="ttname"><a href="../../d1/dc6/class_common_1_1_u_i_element.html#ab9d9ec0ed7314202889fe21be760b35d">Common.UIElement.Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">Called by the EventSystem when closed the element associated with this EventTrigger.</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

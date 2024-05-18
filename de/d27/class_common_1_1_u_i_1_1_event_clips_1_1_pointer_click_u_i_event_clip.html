@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,17 @@ $(function(){initNavTree('de/d27/class_common_1_1_u_i_1_1_event_clips_1_1_pointe
   <div class="headertitle"><div class="title">Common.UI.EventClips.PointerClickUIEventClip Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UI.EventClips.PointerClickUIEventClip:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/d27/class_common_1_1_u_i_1_1_event_clips_1_1_pointer_click_u_i_event_clip.png" usemap="#Common.UI.EventClips.PointerClickUIEventClip_map" alt=""/>
+  <map id="Common.UI.EventClips.PointerClickUIEventClip_map" name="Common.UI.EventClips.PointerClickUIEventClip_map">
+<area href="../../da/d46/class_common_1_1_u_i_event_clip.html" alt="Common.UIEventClip" shape="rect" coords="286,56,562,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="286,0,562,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="572,0,848,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -183,7 +195,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td>
 <p>Reimplemented from <a class="el" href="../../da/d46/class_common_1_1_u_i_event_clip.html">Common.UIEventClip</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dd7/_pointer_click_u_i_event_clip_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d3/dd7/_pointer_click_u_i_event_clip_8cs_source.html">PointerClickUIEventClip.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordflow">if</span> (syncWithSubmitEventClip)</div>
+<div class="line"><span class="lineno">   16</span>            {</div>
+<div class="line"><span class="lineno">   17</span>                submitClip.Active();</div>
+<div class="line"><span class="lineno">   18</span>            }</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   20</span>            {</div>
+<div class="line"><span class="lineno">   21</span>                <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>                Invoker.Active();   </div>
+<div class="line"><span class="lineno">   24</span>            }</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af7a65cb4980148543a6cdcf051b98e2e" name="af7a65cb4980148543a6cdcf051b98e2e"></a>
@@ -212,7 +236,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td>
 <p>Reimplemented from <a class="el" href="../../da/d46/class_common_1_1_u_i_event_clip.html">Common.UIEventClip</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dd7/_pointer_click_u_i_event_clip_8cs_source.html#l00027">27</a> of file <a class="el" href="../../d3/dd7/_pointer_click_u_i_event_clip_8cs_source.html">PointerClickUIEventClip.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (syncWithSubmitEventClip)</div>
+<div class="line"><span class="lineno">   30</span>            {</div>
+<div class="line"><span class="lineno">   31</span>                submitClip.Cancel();</div>
+<div class="line"><span class="lineno">   32</span>            }</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                Invoker.Cancel(); </div>
+<div class="line"><span class="lineno">   36</span>            }</div>
+<div class="line"><span class="lineno">   37</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

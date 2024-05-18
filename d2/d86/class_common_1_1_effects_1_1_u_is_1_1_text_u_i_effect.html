@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,16 @@ $(function(){initNavTree('d2/d86/class_common_1_1_effects_1_1_u_is_1_1_text_u_i_
   <div class="headertitle"><div class="title">Common.Effects.UIs.TextUIEffect Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Effects.UIs.TextUIEffect:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/d86/class_common_1_1_effects_1_1_u_is_1_1_text_u_i_effect.png" usemap="#Common.Effects.UIs.TextUIEffect_map" alt=""/>
+  <map id="Common.Effects.UIs.TextUIEffect_map" name="Common.Effects.UIs.TextUIEffect_map">
+<area href="../../dd/d81/class_common_1_1_effects_1_1_u_is_1_1_u_i_effect_behaviour.html" title="EffectBehaviour에서 몇 가지 변수를 인스펙터에서 숨기거나 사용하지 않는다." alt="Common.Effects.UIs.UIEffectBehaviour" shape="rect" coords="0,112,230,136"/>
+<area href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html" alt="Common.Effects.EffectBehaviour" shape="rect" coords="0,56,230,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -201,7 +212,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html">Common.Effects.EffectBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/daa/_text_u_i_effect_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d6/daa/_text_u_i_effect_8cs_source.html">TextUIEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (sequencer is not UIEventClip)</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                Debug.LogWarning($<span class="stringliteral">&quot;{nameof(TextUIEffect)} of {gameObject.name} require UIEventClip.&quot;</span>);</div>
+<div class="line"><span class="lineno">   36</span>                gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   37</span>                </div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>            </div>
+<div class="line"><span class="lineno">   41</span>            base.Initialize(sequencer);</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8d8cf8985ed0129aa26322030137bce2" name="a8d8cf8985ed0129aa26322030137bce2"></a>
@@ -228,7 +250,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/daa/_text_u_i_effect_8cs_source.html#l00044">44</a> of file <a class="el" href="../../d6/daa/_text_u_i_effect_8cs_source.html">TextUIEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            startSize = targetText.fontSize;</div>
+<div class="line"><span class="lineno">   47</span>            </div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (doSizeTween) SizeTween();</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (doColorTween) ColorTween();</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1926f1ec8301c7f8b5cd8d21d232c3c0" name="a1926f1ec8301c7f8b5cd8d21d232c3c0"></a>
@@ -255,7 +283,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/daa/_text_u_i_effect_8cs_source.html#l00052">52</a> of file <a class="el" href="../../d6/daa/_text_u_i_effect_8cs_source.html">TextUIEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            targetText.enabled = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   55</span>            </div>
+<div class="line"><span class="lineno">   56</span>            CancelAlphaTween();</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

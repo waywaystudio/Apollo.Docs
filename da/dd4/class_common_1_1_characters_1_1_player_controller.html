@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('da/dd4/class_common_1_1_characters_1_1_player_controll
   <div class="headertitle"><div class="title">Common.Characters.PlayerController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.PlayerController:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/dd4/class_common_1_1_characters_1_1_player_controller.png" usemap="#Common.Characters.PlayerController_map" alt=""/>
+  <map id="Common.Characters.PlayerController_map" name="Common.Characters.PlayerController_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="234,0,458,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -145,7 +155,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            this.player = player;</div>
+<div class="line"><span class="lineno">   31</span>            var simpleRunBehaviour = player.Behaviours.Run;</div>
+<div class="line"><span class="lineno">   32</span>            </div>
+<div class="line"><span class="lineno">   33</span>            MoveCondition.Add(<span class="stringliteral">&quot;CanMove&quot;</span>, () =&gt; player.Pathfinding.CanMove)</div>
+<div class="line"><span class="lineno">   34</span>                         .Add(<span class="stringliteral">&quot;HasRequestFromMoveInput&quot;</span>, () =&gt; !IsNeutral)</div>
+<div class="line"><span class="lineno">   35</span>                         ;</div>
+<div class="line"><span class="lineno">   36</span>            </div>
+<div class="line"><span class="lineno">   37</span>            RotateCondition.Add(<span class="stringliteral">&quot;CanMove&quot;</span>, () =&gt; player.Pathfinding.CanMove)</div>
+<div class="line"><span class="lineno">   38</span>                           .Add(<span class="stringliteral">&quot;HasRequestFromMoveInput&quot;</span>, () =&gt; !IsNeutral)</div>
+<div class="line"><span class="lineno">   39</span>                           .Add(<span class="stringliteral">&quot;DifferentBetweenInputAndForward&quot;</span>, () =&gt; DirectValue3.normalized != player.Forward.normalized)</div>
+<div class="line"><span class="lineno">   40</span>                           .Add(<span class="stringliteral">&quot;NotInCinematicRun&quot;</span>, () =&gt; simpleRunBehaviour.Invoker.IsEnd)</div>
+<div class="line"><span class="lineno">   41</span>                           ;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aed4aa8e49e6007b72e3935cc49f57ff6" name="aed4aa8e49e6007b72e3935cc49f57ff6"></a>
@@ -164,7 +188,14 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00049">49</a> of file <a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (RotateCondition.HasFalse) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   52</span>            </div>
+<div class="line"><span class="lineno">   53</span>            var target = player.transform.position + DirectValue3;</div>
+<div class="line"><span class="lineno">   54</span>                </div>
+<div class="line"><span class="lineno">   55</span>            player.RotateInstant(target);</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a627fab2a47c9a139b2d8e9a60a6f09cb" name="a627fab2a47c9a139b2d8e9a60a6f09cb"></a>
@@ -183,7 +214,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00044">44</a> of file <a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            player.Pathfinding.Teleport(warpPosition);</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af9fa9518bc3aaae837f12852d9c7af57" name="af9fa9518bc3aaae837f12852d9c7af57"></a>
@@ -202,7 +236,10 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00058">58</a> of file <a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            DirectValue = context.ReadValue&lt;Vector2&gt;();</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -227,7 +264,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = Vector2.zero;</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a30c7bb0f20655525fc5891030d826107" name="a30c7bb0f20655525fc5891030d826107"></a>
@@ -299,7 +337,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a783ca0c489ba56b33cbdaeda7d884527" name="a783ca0c489ba56b33cbdaeda7d884527"></a>
@@ -323,7 +362,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,20 @@ $(function(){initNavTree('d2/dde/class_common_1_1_skills_1_1_silk_strings_1_1_si
   <div class="headertitle"><div class="title">Common.Skills.SilkStrings.SilkTwisters.SilkTwisterProjectile Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.SilkStrings.SilkTwisters.SilkTwisterProjectile:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/dde/class_common_1_1_skills_1_1_silk_strings_1_1_silk_twisters_1_1_silk_twister_projectile.png" usemap="#Common.Skills.SilkStrings.SilkTwisters.SilkTwisterProjectile_map" alt=""/>
+  <map id="Common.Skills.SilkStrings.SilkTwisters.SilkTwisterProjectile_map" name="Common.Skills.SilkStrings.SilkTwisters.SilkTwisterProjectile_map">
+<area href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html" alt="Common.Projectiles.Projectile" shape="rect" coords="529,112,872,136"/>
+<area href="../../d8/d8b/interface_common_1_1_i_unit.html" title="Character, Trap, Projectile, StatusEffect, Snare." alt="Common.IUnit" shape="rect" coords="353,56,696,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="706,56,1049,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="1059,56,1402,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="353,0,696,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="706,0,1049,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -199,7 +214,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d73/_silk_twister_projectile_8cs_source.html#l00036">36</a> of file <a class="el" href="../../d5/d73/_silk_twister_projectile_8cs_source.html">SilkTwisterProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            shreddedSilkProperty.Fire();</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1bf1f68114f96b690aeaa445a704ca0d" name="a1bf1f68114f96b690aeaa445a704ca0d"></a>
@@ -230,7 +248,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d2/d06/class_common_1_1_projectiles_1_1_projectile.html#aae9763c6158d5d9b3b5ad983f3f325eb">Common.Projectiles.Projectile</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d73/_silk_twister_projectile_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d5/d73/_silk_twister_projectile_8cs_source.html">SilkTwisterProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            base.Initialize(provider);</div>
+<div class="line"><span class="lineno">   19</span> </div>
+<div class="line"><span class="lineno">   20</span>            Detector = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">DetectModel</a>(transform);</div>
+<div class="line"><span class="lineno">   21</span>            </div>
+<div class="line"><span class="lineno">   22</span>            trigger.AddFilter(<span class="stringliteral">&quot;ProperLayer&quot;</span>, obj =&gt; obj.IsInLayerMask(DetectProperty.TargetLayer))</div>
+<div class="line"><span class="lineno">   23</span>                   .AddOnEnter(<span class="stringliteral">&quot;CollideSilkTwisterProjectile&quot;</span>, OnCollided)</div>
+<div class="line"><span class="lineno">   24</span>                   .Register(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   25</span>            </div>
+<div class="line"><span class="lineno">   26</span>            shreddedSilkProperty.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_systems_1_1_detect_model_html"><div class="ttname"><a href="../../d6/d1b/class_common_1_1_systems_1_1_detect_model.html">Common.Systems.DetectModel</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/ded/_detect_model_8cs_source.html#l00008">DetectModel.cs:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8bc6040ef09ced5c9224d5941e1e52c0" name="a8bc6040ef09ced5c9224d5941e1e52c0"></a>
@@ -249,7 +279,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d73/_silk_twister_projectile_8cs_source.html#l00029">29</a> of file <a class="el" href="../../d5/d73/_silk_twister_projectile_8cs_source.html">SilkTwisterProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (trajectory is not <a class="code hl_class" href="../../d8/d4d/class_common_1_1_projectiles_1_1_trajectories_1_1_revolve_trajectory.html">RevolveTrajectory</a> revolveTrajectory) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>            revolveTrajectory.InitialAngle = angle;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_projectiles_1_1_trajectories_1_1_revolve_trajectory_html"><div class="ttname"><a href="../../d8/d4d/class_common_1_1_projectiles_1_1_trajectories_1_1_revolve_trajectory.html">Common.Projectiles.Trajectories.RevolveTrajectory</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d59/_revolve_trajectory_8cs_source.html#l00007">RevolveTrajectory.cs:8</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -274,7 +310,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d73/_silk_twister_projectile_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d5/d73/_silk_twister_projectile_8cs_source.html">SilkTwisterProjectile.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

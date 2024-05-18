@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('dc/da6/class_common_1_1_characters_1_1_a_i_1_1_non_pla
   <div class="headertitle"><div class="title">Common.Characters.AI.NonPlayerMeleePositioning Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.AI.NonPlayerMeleePositioning:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/da6/class_common_1_1_characters_1_1_a_i_1_1_non_player_melee_positioning.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,7 +134,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d81/_non_player_melee_positioning_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d4/d81/_non_player_melee_positioning_8cs_source.html">NonPlayerMeleePositioning.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            nonPlayer     = gameObject.GetComponentInParent&lt;<a class="code hl_class" href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html">NonPlayer</a>&gt;();</div>
+<div class="line"><span class="lineno">   19</span>            obstacleLayer = LayerMask.GetMask(<span class="stringliteral">&quot;Obstacle&quot;</span>);</div>
+<div class="line"><span class="lineno">   20</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_non_players_1_1_non_player_html"><div class="ttname"><a href="../../d4/d87/class_common_1_1_characters_1_1_non_players_1_1_non_player.html">Common.Characters.NonPlayers.NonPlayer</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/d46/_non_player_8cs_source.html#l00007">NonPlayer.cs:8</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a592367e5a9a3cac51ede1ce59f42eb34" name="a592367e5a9a3cac51ede1ce59f42eb34"></a>
@@ -146,7 +158,20 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d81/_non_player_melee_positioning_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d4/d81/_non_player_melee_positioning_8cs_source.html">NonPlayerMeleePositioning.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">if</span> (PrioritySkill is <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">return</span> TaskStatus.Failure;</div>
+<div class="line"><span class="lineno">   26</span>            </div>
+<div class="line"><span class="lineno">   27</span>            var isValidPosition = IsValidCombatPosition(nonPlayer, PrioritySkill.<a class="code hl_property" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">SkillTarget</a>, PrioritySkill.AwareRange, out var dest);</div>
+<div class="line"><span class="lineno">   28</span>            </div>
+<div class="line"><span class="lineno">   29</span>            nonPlayer.Run(dest);</div>
+<div class="line"><span class="lineno">   30</span>            </div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">return</span> isValidPosition </div>
+<div class="line"><span class="lineno">   32</span>                ? TaskStatus.Success </div>
+<div class="line"><span class="lineno">   33</span>                : TaskStatus.Failure;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_html_af6e247ddcbea38bf346b41eb48018d05"><div class="ttname"><a href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">Common.Skills.NonPlayers.NonPlayerSkillBehaviour.SkillTarget</a></div><div class="ttdeci">virtual Character SkillTarget</div><div class="ttdoc">Designed For Enemy AI.</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_non_player_skill_behaviour_8cs_source.html#l00021">NonPlayerSkillBehaviour.cs:22</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

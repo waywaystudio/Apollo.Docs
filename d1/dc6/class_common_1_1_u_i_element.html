@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,32 @@ $(function(){initNavTree('d1/dc6/class_common_1_1_u_i_element.html','../../'); i
   <div class="headertitle"><div class="title">Common.UIElement Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.UIElement:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/dc6/class_common_1_1_u_i_element.png" usemap="#Common.UIElement_map" alt=""/>
+  <map id="Common.UIElement_map" name="Common.UIElement_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="280,0,550,24"/>
+<area href="../../df/d29/class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_health_indicator.html" alt="Challenge.UI.Huds.Bottoms.HealthIndicator" shape="rect" coords="420,112,690,136"/>
+<area href="../../dd/de9/class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_mastery_slot.html" alt="Challenge.UI.Huds.Bottoms.MasterySlot" shape="rect" coords="420,168,690,192"/>
+<area href="../../d4/daa/class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_player_collections.html" alt="Challenge.UI.Huds.Bottoms.PlayerCollections" shape="rect" coords="420,224,690,248"/>
+<area href="../../d3/d76/class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_player_resource_u_i.html" alt="Challenge.UI.Huds.Bottoms.PlayerResourceUI" shape="rect" coords="420,280,690,304"/>
+<area href="../../d0/dca/class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_skill_slot.html" alt="Challenge.UI.Huds.Bottoms.SkillSlot" shape="rect" coords="420,336,690,360"/>
+<area href="../../d1/dab/class_challenge_1_1_u_i_1_1_huds_1_1_bottoms_1_1_spell_slot.html" alt="Challenge.UI.Huds.Bottoms.SpellSlot" shape="rect" coords="420,392,690,416"/>
+<area href="../../df/d47/class_challenge_1_1_u_i_1_1_huds_1_1_tops_1_1_boss_health.html" alt="Challenge.UI.Huds.Tops.BossHealth" shape="rect" coords="420,448,690,472"/>
+<area href="../../dc/d43/class_common_1_1_u_i_1_1_panel.html" alt="Common.UI.Panel" shape="rect" coords="420,504,690,528"/>
+<area href="../../d5/dd6/class_common_1_1_u_i_1_1_settings_1_1_audio_panel.html" alt="Common.UI.Settings.AudioPanel" shape="rect" coords="420,560,690,584"/>
+<area href="../../db/da0/class_common_1_1_u_i_1_1_settings_1_1_keybinding_panel.html" alt="Common.UI.Settings.KeybindingPanel" shape="rect" coords="420,616,690,640"/>
+<area href="../../de/d64/class_common_1_1_u_i_1_1_settings_1_1_language_panel.html" alt="Common.UI.Settings.LanguagePanel" shape="rect" coords="420,672,690,696"/>
+<area href="../../d7/dc0/class_common_1_1_u_i_1_1_settings_1_1_main_panel.html" alt="Common.UI.Settings.MainPanel" shape="rect" coords="420,728,690,752"/>
+<area href="../../d7/d1e/class_title_1_1_u_i_1_1_menus_1_1_continue_selection.html" alt="Title.UI.Menus.ContinueSelection" shape="rect" coords="420,784,690,808"/>
+<area href="../../db/d0b/class_title_1_1_u_i_1_1_menus_1_1_quit_selection.html" alt="Title.UI.Menus.QuitSelection" shape="rect" coords="420,840,690,864"/>
+<area href="../../d9/db0/class_title_1_1_u_i_1_1_menus_1_1_setting_selection.html" alt="Title.UI.Menus.SettingSelection" shape="rect" coords="420,896,690,920"/>
+<area href="../../d1/d36/class_title_1_1_u_i_1_1_menus_1_1_start_game_selection.html" alt="Title.UI.Menus.StartGameSelection" shape="rect" coords="420,952,690,976"/>
+<area href="../../d4/d17/class_title_1_1_u_i_1_1_pop_ups_1_1_start_games_1_1_save_slot_pop_up.html" alt="Title.UI.PopUps.StartGames.SaveSlotPopUp" shape="rect" coords="420,1008,690,1032"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -193,7 +220,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d33/_u_i_element_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d0/d33/_u_i_element_8cs_source.html">UIElement.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">if</span> (initialized) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   18</span>            </div>
+<div class="line"><span class="lineno">   19</span>            clipTable.ValueList.ForEach(cb =&gt; cb.Initialize(<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">   20</span>            initialized = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

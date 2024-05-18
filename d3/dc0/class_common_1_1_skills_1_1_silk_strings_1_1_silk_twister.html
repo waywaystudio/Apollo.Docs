@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,25 @@ $(function(){initNavTree('d3/dc0/class_common_1_1_skills_1_1_silk_strings_1_1_si
   <div class="headertitle"><div class="title">Common.Skills.SilkStrings.SilkTwister Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.SilkStrings.SilkTwister:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d3/dc0/class_common_1_1_skills_1_1_silk_strings_1_1_silk_twister.png" usemap="#Common.Skills.SilkStrings.SilkTwister_map" alt=""/>
+  <map id="Common.Skills.SilkStrings.SilkTwister_map" name="Common.Skills.SilkStrings.SilkTwister_map">
+<area href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html" alt="Common.Skills.SkillBehaviour" shape="rect" coords="606,224,852,248"/>
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="384,168,630,192"/>
+<area href="../../de/de8/interface_common_1_1_i_skill_behaviour.html" alt="Common.ISkillBehaviour" shape="rect" coords="832,168,1078,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="384,112,630,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="640,112,886,136"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1024,112,1270,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="256,56,502,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="512,56,758,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="768,56,1014,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1024,56,1270,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="512,0,758,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -232,7 +252,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html#l00033">33</a> of file <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html">SilkTwister.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (!isActivated)</div>
+<div class="line"><span class="lineno">   37</span>            {</div>
+<div class="line"><span class="lineno">   38</span>                Invoker.Active();</div>
+<div class="line"><span class="lineno">   39</span>                isActivated = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                RemoveAllProjectile();</div>
+<div class="line"><span class="lineno">   44</span>                isActivated = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   45</span>            }</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9cd7159ac8034e2f85eba51f89b81825" name="a9cd7159ac8034e2f85eba51f89b81825"></a>
@@ -251,7 +284,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html#l00058">58</a> of file <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html">SilkTwister.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   59</span>        {</div>
+<div class="line"><span class="lineno">   60</span>            RemoveAllProjectile();</div>
+<div class="line"><span class="lineno">   61</span>            </div>
+<div class="line"><span class="lineno">   62</span>            ProjectileCount++;</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>            SpawnProjectiles();</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5d60757ebef9cc22e2b1f80a26879468" name="a5d60757ebef9cc22e2b1f80a26879468"></a>
@@ -280,7 +320,15 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html#l00048">48</a> of file <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html">SilkTwister.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            var takers = Character.Detector.GetObjects(detectProperty);</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>            executor.Executes(takers);</div>
+<div class="line"><span class="lineno">   53</span>            effector.Play(takers);</div>
+<div class="line"><span class="lineno">   54</span>            </div>
+<div class="line"><span class="lineno">   55</span>            SpawnProjectiles();</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad9ee3f4c4a3849c0ba89bb0dbc58b6a9" name="ad9ee3f4c4a3849c0ba89bb0dbc58b6a9"></a>
@@ -309,7 +357,13 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html">Common.Characters.CharacterBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html#l00024">24</a> of file <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html">SilkTwister.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>            projectileCount = initialProjectileCount;</div>
+<div class="line"><span class="lineno">   29</span>            pool.Initialize(CreateProjectile, behaver.transform, transform);</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a56729814447b50750a100bf75f914930" name="a56729814447b50750a100bf75f914930"></a>
@@ -328,7 +382,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html#l00076">76</a> of file <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html">SilkTwister.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   77</span>        {</div>
+<div class="line"><span class="lineno">   78</span>            ActivatedProjectiles.ForEach(projectile =&gt; projectile.Cancel());</div>
+<div class="line"><span class="lineno">   79</span>            ActivatedProjectiles.Clear();</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7e7c312d0f0b3f8df11494c1de9698bf" name="a7e7c312d0f0b3f8df11494c1de9698bf"></a>
@@ -347,7 +405,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html#l00067">67</a> of file <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html">SilkTwister.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            RemoveAllProjectile();</div>
+<div class="line"><span class="lineno">   70</span>            </div>
+<div class="line"><span class="lineno">   71</span>            ProjectileCount--;</div>
+<div class="line"><span class="lineno">   72</span>            </div>
+<div class="line"><span class="lineno">   73</span>            SpawnProjectiles();</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -372,7 +437,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d6/da6/_silk_twister_8cs_source.html">SilkTwister.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span> ();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

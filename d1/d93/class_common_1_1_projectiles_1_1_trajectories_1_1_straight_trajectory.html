@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d1/d93/class_common_1_1_projectiles_1_1_trajectories_1
   <div class="headertitle"><div class="title">Common.Projectiles.Trajectories.StraightTrajectory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Projectiles.Trajectories.StraightTrajectory:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/d93/class_common_1_1_projectiles_1_1_trajectories_1_1_straight_trajectory.png" usemap="#Common.Projectiles.Trajectories.StraightTrajectory_map" alt=""/>
+  <map id="Common.Projectiles.Trajectories.StraightTrajectory_map" name="Common.Projectiles.Trajectories.StraightTrajectory_map">
+<area href="../../da/d29/class_common_1_1_projectiles_1_1_trajectory.html" alt="Common.Projectiles.Trajectory" shape="rect" coords="0,56,299,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -157,7 +167,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d8e/_straight_trajectory_8cs_source.html#l00019">19</a> of file <a class="el" href="../../df/d8e/_straight_trajectory_8cs_source.html">StraightTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   20</span>        {</div>
+<div class="line"><span class="lineno">   21</span>            flyingCanceller?.Cancel();</div>
+<div class="line"><span class="lineno">   22</span>            flyingCanceller = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1d50c68bc2d117ed19e754362b03b16c" name="a1d50c68bc2d117ed19e754362b03b16c"></a>
@@ -176,7 +190,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d8e/_straight_trajectory_8cs_source.html#l00012">12</a> of file <a class="el" href="../../df/d8e/_straight_trajectory_8cs_source.html">StraightTrajectory.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            flyingCanceller = <span class="keyword">new</span> CancellationTokenSource();</div>
+<div class="line"><span class="lineno">   15</span>            </div>
+<div class="line"><span class="lineno">   16</span>            Straight(flyingCanceller).Forget();</div>
+<div class="line"><span class="lineno">   17</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

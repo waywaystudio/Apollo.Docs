@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -101,6 +102,16 @@ $(function(){initNavTree('da/db2/class_common_1_1_effects_1_1_u_is_1_1_rect_tran
   <div class="headertitle"><div class="title">Common.Effects.UIs.RectTransformEffect Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Effects.UIs.RectTransformEffect:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/db2/class_common_1_1_effects_1_1_u_is_1_1_rect_transform_effect.png" usemap="#Common.Effects.UIs.RectTransformEffect_map" alt=""/>
+  <map id="Common.Effects.UIs.RectTransformEffect_map" name="Common.Effects.UIs.RectTransformEffect_map">
+<area href="../../dd/d81/class_common_1_1_effects_1_1_u_is_1_1_u_i_effect_behaviour.html" title="EffectBehaviour에서 몇 가지 변수를 인스펙터에서 숨기거나 사용하지 않는다." alt="Common.Effects.UIs.UIEffectBehaviour" shape="rect" coords="0,112,243,136"/>
+<area href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html" alt="Common.Effects.EffectBehaviour" shape="rect" coords="0,56,243,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -207,7 +218,18 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d6/dcb/class_common_1_1_effects_1_1_effect_behaviour.html">Common.Effects.EffectBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/db3/_rect_transform_effect_8cs_source.html#l00051">51</a> of file <a class="el" href="../../df/db3/_rect_transform_effect_8cs_source.html">RectTransformEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (sequencer is not UIEventClip)</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                Debug.LogWarning($<span class="stringliteral">&quot;Alpha Effect of {gameObject.name} require UIEventClip.&quot;</span>);</div>
+<div class="line"><span class="lineno">   56</span>                gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   57</span>                </div>
+<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>            </div>
+<div class="line"><span class="lineno">   61</span>            base.Initialize(sequencer);</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a112d48ea080c3681f14ceb299f1cf6bf" name="a112d48ea080c3681f14ceb299f1cf6bf"></a>
@@ -234,7 +256,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/db3/_rect_transform_effect_8cs_source.html#l00064">64</a> of file <a class="el" href="../../df/db3/_rect_transform_effect_8cs_source.html">RectTransformEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (doTranslateTween) TranslateTween();</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (doScaleTween) ScaleTween();</div>
+<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">if</span> (doReSizeTween) ResizeTween();</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac703acfe48effce50cd173640a426024" name="ac703acfe48effce50cd173640a426024"></a>
@@ -261,7 +288,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/db3/_rect_transform_effect_8cs_source.html#l00071">71</a> of file <a class="el" href="../../df/db3/_rect_transform_effect_8cs_source.html">RectTransformEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            CancelTween();</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -286,7 +316,20 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/db3/_rect_transform_effect_8cs_source.html#l00035">35</a> of file <a class="el" href="../../df/db3/_rect_transform_effect_8cs_source.html">RectTransformEffect.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keyword">get</span> =&gt; translatePosition;</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">if</span> (translateType != TranslateType.Dynamic)</div>
+<div class="line"><span class="lineno">   41</span>                {</div>
+<div class="line"><span class="lineno">   42</span>                    Debug.LogWarning($<span class="stringliteral">&quot;Can&#39;t Set TargetPosition in {translateType}. Choose Dynamic for set targetPosition&quot;</span>);</div>
+<div class="line"><span class="lineno">   43</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   44</span>                }</div>
+<div class="line"><span class="lineno">   45</span>                </div>
+<div class="line"><span class="lineno">   46</span>                translatePosition = value;</div>
+<div class="line"><span class="lineno">   47</span>            }</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

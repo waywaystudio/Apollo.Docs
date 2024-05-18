@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,17 @@ $(function(){initNavTree('dd/d5e/class_common_1_1_characters_1_1_actions_1_1_har
   <div class="headertitle"><div class="title">Common.Characters.Actions.HarvestSpirits Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Actions.HarvestSpirits:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/d5e/class_common_1_1_characters_1_1_actions_1_1_harvest_spirits.png" usemap="#Common.Characters.Actions.HarvestSpirits_map" alt=""/>
+  <map id="Common.Characters.Actions.HarvestSpirits_map" name="Common.Characters.Actions.HarvestSpirits_map">
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="266,56,522,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="532,56,788,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="266,0,522,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -162,7 +174,31 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d82/_harvest_spirits_8cs_source.html#l00032">32</a> of file <a class="el" href="../../db/d82/_harvest_spirits_8cs_source.html">HarvestSpirits.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   33</span>        {</div>
+<div class="line"><span class="lineno">   34</span>            Invoker      = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/db3/class_section_invoker.html">SectionInvoker</a>(Sections);</div>
+<div class="line"><span class="lineno">   35</span>            <a class="code hl_class" href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Dred</a>         = dred;</div>
+<div class="line"><span class="lineno">   36</span>            SpiritPoints = dred.SpiritPoints;</div>
+<div class="line"><span class="lineno">   37</span>            </div>
+<div class="line"><span class="lineno">   38</span>            Sections</div>
+<div class="line"><span class="lineno">   39</span>                .AddCondition(<span class="stringliteral">&quot;CoolTimeReady&quot;</span>, () =&gt; !coolTimer.IsRunning)</div>
+<div class="line"><span class="lineno">   40</span>                .AddCondition(<span class="stringliteral">&quot;HasSpirits&quot;</span>, TryGetSpirits)</div>
+<div class="line"><span class="lineno">   41</span>                .Add(Section.Active, <span class="stringliteral">&quot;PlayCoolTimer&quot;</span>, coolTimer.Play)</div>
+<div class="line"><span class="lineno">   42</span>                .Add(Section.Active, <span class="stringliteral">&quot;Absorbing&quot;</span>, () =&gt; Absorbing().Forget())</div>
+<div class="line"><span class="lineno">   43</span>                .Add(Section.Cancel, <span class="stringliteral">&quot;CancelAbsorbing&quot;</span>, CancelAbsorbing)</div>
+<div class="line"><span class="lineno">   44</span>                .Add(Section.End, <span class="stringliteral">&quot;ClearSpiritList&quot;</span>, AbsorbedSpirits.Clear)</div>
+<div class="line"><span class="lineno">   45</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;CancelAbsorbing&quot;</span>, CancelAbsorbing)</div>
+<div class="line"><span class="lineno">   46</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;CoolTimerDispose&quot;</span>, coolTimer.Dispose)</div>
+<div class="line"><span class="lineno">   47</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;DestroySpirits&quot;</span>, DestroySpirits)</div>
+<div class="line"><span class="lineno">   48</span>                ;</div>
+<div class="line"><span class="lineno">   49</span>            </div>
+<div class="line"><span class="lineno">   50</span>            effector.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   51</span>            SpiritPoints.AddEvent(<span class="stringliteral">&quot;GourdEffector&quot;</span>, GourdEffector);</div>
+<div class="line"><span class="lineno">   52</span>            </div>
+<div class="line"><span class="lineno">   53</span>            GourdEffector(SpiritPoints.Value);</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_characters_1_1_dreds_1_1_dred_html"><div class="ttname"><a href="../../d0/da4/class_common_1_1_characters_1_1_dreds_1_1_dred.html">Common.Characters.Dreds.Dred</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/dc8/_dred_8cs_source.html#l00005">Dred.cs:6</a></div></div>
+<div class="ttc" id="aclass_section_invoker_html"><div class="ttname"><a href="../../d5/db3/class_section_invoker.html">SectionInvoker</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d14/_section_invoker_8cs_source.html#l00001">SectionInvoker.cs:2</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a31e0aa6732d2b252c5182e6696e53bef" name="a31e0aa6732d2b252c5182e6696e53bef"></a>
@@ -181,7 +217,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d82/_harvest_spirits_8cs_source.html#l00056">56</a> of file <a class="el" href="../../db/d82/_harvest_spirits_8cs_source.html">HarvestSpirits.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   59</span>            </div>
+<div class="line"><span class="lineno">   60</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   61</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -206,7 +247,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../db/d82/_harvest_spirits_8cs_source.html#l00024">24</a> of file <a class="el" href="../../db/d82/_harvest_spirits_8cs_source.html">HarvestSpirits.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a59e75624f5ac7501ad3cef8b2398483f" name="a59e75624f5ac7501ad3cef8b2398483f"></a>
@@ -232,7 +274,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d82/_harvest_spirits_8cs_source.html#l00023">23</a> of file <a class="el" href="../../db/d82/_harvest_spirits_8cs_source.html">HarvestSpirits.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a35e9b08e45943ec40b19f76da3caade5" name="a35e9b08e45943ec40b19f76da3caade5"></a>
@@ -258,7 +301,8 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d6/de9/interface_i_sequencer.html">ISequencer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d82/_harvest_spirits_8cs_source.html#l00022">22</a> of file <a class="el" href="../../db/d82/_harvest_spirits_8cs_source.html">HarvestSpirits.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab7382d89a31c6b2fb8b9e82afb8b3a15" name="ab7382d89a31c6b2fb8b9e82afb8b3a15"></a>

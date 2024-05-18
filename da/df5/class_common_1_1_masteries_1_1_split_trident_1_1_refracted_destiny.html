@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,17 @@ $(function(){initNavTree('da/df5/class_common_1_1_masteries_1_1_split_trident_1_
   <div class="headertitle"><div class="title">Common.Masteries.SplitTrident.RefractedDestiny Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Masteries.SplitTrident.RefractedDestiny:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/df5/class_common_1_1_masteries_1_1_split_trident_1_1_refracted_destiny.png" usemap="#Common.Masteries.SplitTrident.RefractedDestiny_map" alt=""/>
+  <map id="Common.Masteries.SplitTrident.RefractedDestiny_map" name="Common.Masteries.SplitTrident.RefractedDestiny_map">
+<area href="../../d3/d97/class_common_1_1_masteries_1_1_mastery.html" alt="Common.Masteries.Mastery" shape="rect" coords="297,56,584,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="297,0,584,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="594,0,881,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -206,7 +218,11 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d0e/_refracted_destiny_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d0/d0e/_refracted_destiny_8cs_source.html">RefractedDestiny.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            projectileSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a9949ebd2ab1adcb67a2e7b3b53c93cca">Remove</a>(tridentCode, <span class="stringliteral">&quot;AddBounceMechanic&quot;</span>, RemoveBounceMechanic);</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_spawn_event_table_html_a9949ebd2ab1adcb67a2e7b3b53c93cca"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#a9949ebd2ab1adcb67a2e7b3b53c93cca">Common.SpawnEventTable.Remove</a></div><div class="ttdeci">void Remove(DataIndex dataIndex, string spawnActionKey, Action&lt; T &gt; callback=null)</div><div class="ttdoc">Remove Specific Target Spawn Event.</div><div class="ttdef"><b>Definition</b> <a href="../../d5/da4/_spawn_event_table_8cs_source.html#l00081">SpawnEventTable.cs:81</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab51bdd4ffd33002d74e228a539e3574a" name="ab51bdd4ffd33002d74e228a539e3574a"></a>
@@ -233,7 +249,13 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d0e/_refracted_destiny_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d0/d0e/_refracted_destiny_8cs_source.html">RefractedDestiny.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            criticalGuarantee = <span class="keyword">new</span> StatEntity(StatType.CriticalChance, <span class="stringliteral">&quot;RefractedDestiny.CriticalGuarantee&quot;</span>, 0f);</div>
+<div class="line"><span class="lineno">   24</span>            </div>
+<div class="line"><span class="lineno">   25</span>            projectileSpawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Add</a>(tridentCode, <span class="stringliteral">&quot;AddBounceMechanic&quot;</span>, AddBounceMechanic);</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_spawn_event_table_html_ac8c1e472bcbad1c5493cff1ec02b1a98"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Common.SpawnEventTable.Add</a></div><div class="ttdeci">void Add(DataIndex dataIndex, string spawnActionKey, Action action)</div><div class="ttdoc">Add Specific Target Spawn event.</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9ab3489a34d2fd71825cbc9a49ab9e68" name="a9ab3489a34d2fd71825cbc9a49ab9e68"></a>
@@ -260,7 +282,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSilkStri
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d0e/_refracted_destiny_8cs_source.html#l00033">33</a> of file <a class="el" href="../../d0/d0e/_refracted_destiny_8cs_source.html">RefractedDestiny.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            projectileSpawnEvent.SpawnedList.ForEach(AddBounceMechanic);</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

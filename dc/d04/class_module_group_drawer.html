@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,12 @@ $(function(){initNavTree('dc/d04/class_module_group_drawer.html','../../'); init
   <div class="headertitle"><div class="title">ModuleGroupDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for ModuleGroupDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/d04/class_module_group_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -151,7 +158,25 @@ Protected Member Functions</h2></td></tr>
 <p>. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d52/_module_group_drawer_8cs_source.html#l00079">79</a> of file <a class="el" href="../../d4/d52/_module_group_drawer_8cs_source.html">ModuleGroupDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>        GUILayout.Space(-3f);</div>
+<div class="line"><span class="lineno">   82</span>        </div>
+<div class="line"><span class="lineno">   83</span>        var rect = EditorGUILayout.BeginHorizontal(SirenixGUIStyles.BoxHeaderStyle, GUILayoutOptions.ExpandWidth());</div>
+<div class="line"><span class="lineno">   84</span>        </div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">if</span> (Event.current.type == EventType.Repaint)</div>
+<div class="line"><span class="lineno">   86</span>        {</div>
+<div class="line"><span class="lineno">   87</span>            rect.x     -= 3f;</div>
+<div class="line"><span class="lineno">   88</span>            rect.width += 6f;</div>
+<div class="line"><span class="lineno">   89</span>            GUIHelper.PushColor(<span class="keyword">new</span> Color(0.15f, 0.15f, 0.15f));</div>
+<div class="line"><span class="lineno">   90</span>            GUI.DrawTexture(rect, Texture2D.whiteTexture);</div>
+<div class="line"><span class="lineno">   91</span>            GUIHelper.PopColor();</div>
+<div class="line"><span class="lineno">   92</span>            SirenixEditorGUI.DrawBorders(rect, 0, 0, 0, 1, <span class="keyword">new</span> Color(0.0f, 0.0f, 0.0f, 0.4f));</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+<div class="line"><span class="lineno">   94</span>        </div>
+<div class="line"><span class="lineno">   95</span>        GUIHelper.PushLabelWidth(GUIHelper.BetterLabelWidth - 4f);</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> rect;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3ac3ab83ce8d81a87c680746e2f4e4b4" name="a3ac3ab83ce8d81a87c680746e2f4e4b4"></a>
@@ -180,7 +205,57 @@ Protected Member Functions</h2></td></tr>
 <p>Draws the property. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d52/_module_group_drawer_8cs_source.html#l00025">25</a> of file <a class="el" href="../../d4/d52/_module_group_drawer_8cs_source.html">ModuleGroupDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        var <span class="keyword">property</span> = Property;</div>
+<div class="line"><span class="lineno">   28</span>        var attribute = Attribute;</div>
+<div class="line"><span class="lineno">   29</span>        </div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (titleGetter.HasError)</div>
+<div class="line"><span class="lineno">   31</span>            SirenixEditorGUI.ErrorMessageBox(titleGetter.ErrorMessage);</div>
+<div class="line"><span class="lineno">   32</span>        </div>
+<div class="line"><span class="lineno">   33</span>        SirenixEditorGUI.BeginBox();</div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_function" href="#a4378735e57d7a83b5b762dc528bec0ab">BeginBoxHeader</a>();</div>
+<div class="line"><span class="lineno">   35</span>        </div>
+<div class="line"><span class="lineno">   36</span>        Property.State.Expanded = SirenixEditorGUI.Foldout(Property.State.Expanded, </div>
+<div class="line"><span class="lineno">   37</span>                                                           GUIHelper.TempContent(titleGetter.HasError </div>
+<div class="line"><span class="lineno">   38</span>                                                                                     ? property.Label.text </div>
+<div class="line"><span class="lineno">   39</span>                                                                                     : titleGetter.GetValue()));</div>
+<div class="line"><span class="lineno">   40</span>        </div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(attribute.DocumentLink))</div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            var buttonRect = GUILayoutUtility.GetRect(22, 22, GUILayout.ExpandWidth(<span class="keyword">false</span>));</div>
+<div class="line"><span class="lineno">   44</span>            </div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">if</span> (GUI.Button(buttonRect, GUIContent.none, SirenixGUIStyles.Label))</div>
+<div class="line"><span class="lineno">   46</span>            {</div>
+<div class="line"><span class="lineno">   47</span>                Application.OpenURL(attribute.DocumentLink);</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>            </div>
+<div class="line"><span class="lineno">   50</span>            var iconRect = <span class="keyword">new</span> Rect(buttonRect.x + (buttonRect.width - 16) / 2, buttonRect.y + (buttonRect.height - 16) / 2, 14, 14);</div>
+<div class="line"><span class="lineno">   51</span>            </div>
+<div class="line"><span class="lineno">   52</span>            GUI.DrawTexture(iconRect, EditorIcons.Link.Active);</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        </div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_function" href="#addf0853e287bf4d4b9ae9cdffb0cb2e0">EndBoxHeader</a>();</div>
+<div class="line"><span class="lineno">   56</span>        </div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (SirenixEditorGUI.BeginFadeGroup(<span class="keyword">this</span>, Property.State.Expanded))</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            EditorGUI.indentLevel++;</div>
+<div class="line"><span class="lineno">   60</span>            </div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">for</span> (var index = 0; index &lt; <span class="keyword">property</span>.Children.Count; ++index)</div>
+<div class="line"><span class="lineno">   62</span>            {</div>
+<div class="line"><span class="lineno">   63</span>                var child = <span class="keyword">property</span>.Children[index];</div>
+<div class="line"><span class="lineno">   64</span>                </div>
+<div class="line"><span class="lineno">   65</span>                child.Draw(child.Label);</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span>            </div>
+<div class="line"><span class="lineno">   68</span>            EditorGUI.indentLevel--;</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span>        </div>
+<div class="line"><span class="lineno">   71</span>        SirenixEditorGUI.EndFadeGroup();</div>
+<div class="line"><span class="lineno">   72</span>        SirenixEditorGUI.EndBox();</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aclass_module_group_drawer_html_a4378735e57d7a83b5b762dc528bec0ab"><div class="ttname"><a href="#a4378735e57d7a83b5b762dc528bec0ab">ModuleGroupDrawer.BeginBoxHeader</a></div><div class="ttdeci">static Rect BeginBoxHeader()</div><div class="ttdoc">Begins drawing a box header. Remember to end with M:Sirenix.Utilities.Editor.SirenixEditorGUI....</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d52/_module_group_drawer_8cs_source.html#l00079">ModuleGroupDrawer.cs:79</a></div></div>
+<div class="ttc" id="aclass_module_group_drawer_html_addf0853e287bf4d4b9ae9cdffb0cb2e0"><div class="ttname"><a href="#addf0853e287bf4d4b9ae9cdffb0cb2e0">ModuleGroupDrawer.EndBoxHeader</a></div><div class="ttdeci">static void EndBoxHeader()</div><div class="ttdoc">Ends drawing a box header started by M:Sirenix.Utilities.Editor.SirenixEditorGUI.BeginToolbarBoxHeade...</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d52/_module_group_drawer_8cs_source.html#l00102">ModuleGroupDrawer.cs:102</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="addf0853e287bf4d4b9ae9cdffb0cb2e0" name="addf0853e287bf4d4b9ae9cdffb0cb2e0"></a>
@@ -209,7 +284,11 @@ Protected Member Functions</h2></td></tr>
 <p>Ends drawing a box header started by M:Sirenix.Utilities.Editor.SirenixEditorGUI.BeginToolbarBoxHeader(System.Single),. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d52/_module_group_drawer_8cs_source.html#l00102">102</a> of file <a class="el" href="../../d4/d52/_module_group_drawer_8cs_source.html">ModuleGroupDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>        GUIHelper.PopLabelWidth();</div>
+<div class="line"><span class="lineno">  105</span>        EditorGUILayout.EndHorizontal();</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3667fbcea2a6b8f56f1a3394856553d2" name="a3667fbcea2a6b8f56f1a3394856553d2"></a>
@@ -238,7 +317,15 @@ Protected Member Functions</h2></td></tr>
 <p>Initializes this instance. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d52/_module_group_drawer_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d4/d52/_module_group_drawer_8cs_source.html">ModuleGroupDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        titleGetter = ValueResolver.GetForString(Property, $<span class="stringliteral">&quot; {Attribute.GroupName}&quot;</span>);</div>
+<div class="line"><span class="lineno">   17</span>        </div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">if</span> (!Attribute.HasDefinedExpanded)</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   20</span>        </div>
+<div class="line"><span class="lineno">   21</span>        Property.State.Expanded = Attribute.Expanded;</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

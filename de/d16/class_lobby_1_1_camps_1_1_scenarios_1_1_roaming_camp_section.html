@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,16 @@ $(function(){initNavTree('de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming
   <div class="headertitle"><div class="title">Lobby.Camps.Scenarios.RoamingCampSection Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Lobby.Camps.Scenarios.RoamingCampSection:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/d16/class_lobby_1_1_camps_1_1_scenarios_1_1_roaming_camp_section.png" usemap="#Lobby.Camps.Scenarios.RoamingCampSection_map" alt=""/>
+  <map id="Lobby.Camps.Scenarios.RoamingCampSection_map" name="Lobby.Camps.Scenarios.RoamingCampSection_map">
+<area href="../../de/d3c/class_lobby_1_1_camps_1_1_camp_section.html" alt="Lobby.Camps.CampSection" shape="rect" coords="143,56,419,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="286,0,562,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -158,7 +169,26 @@ Properties</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../de/d3c/class_lobby_1_1_camps_1_1_camp_section.html">Lobby.Camps.CampSection</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d1e/_roaming_camp_section_8cs_source.html#l00015">15</a> of file <a class="el" href="../../d5/d1e/_roaming_camp_section_8cs_source.html">RoamingCampSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            base.Initialize(scenario);</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>            path1 = Map.EnterGate1;</div>
+<div class="line"><span class="lineno">   20</span>            </div>
+<div class="line"><span class="lineno">   21</span>            Sections</div>
+<div class="line"><span class="lineno">   22</span>                .Add(Section.Active, <span class="stringliteral">&quot;ShowCombatGate&quot;</span>, () =&gt; path1.TryActiveInteraction())</div>
+<div class="line"><span class="lineno">   23</span>                .Add(Section.Complete, <span class="stringliteral">&quot;NeutralizeInput&quot;</span>, NeutralizeInput)</div>
+<div class="line"><span class="lineno">   24</span>                .Add(Section.Complete, <span class="stringliteral">&quot;CancelDredBehaviour&quot;</span>, CancelDredBehaviour)</div>
+<div class="line"><span class="lineno">   25</span>                .Add(Section.Complete, <span class="stringliteral">&quot;ExitDred&quot;</span>, dredExitDelayTimer.Play)</div>
+<div class="line"><span class="lineno">   26</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;DisposeDredExitDelayTimer&quot;</span>, dredExitDelayTimer.Dispose)</div>
+<div class="line"><span class="lineno">   27</span>                ;</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>            dredExitDelayTimer</div>
+<div class="line"><span class="lineno">   30</span>                .SetDuration(0.5f)</div>
+<div class="line"><span class="lineno">   31</span>                .AddCallBack(<span class="stringliteral">&quot;ExitDred&quot;</span>, ExitDred);</div>
+<div class="line"><span class="lineno">   32</span>            </div>
+<div class="line"><span class="lineno">   33</span>            path1.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -183,7 +213,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d1e/_roaming_camp_section_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d5/d1e/_roaming_camp_section_8cs_source.html">RoamingCampSection.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9c10aceb51f42f4f196bca64e970cdf9" name="a9c10aceb51f42f4f196bca64e970cdf9"></a>

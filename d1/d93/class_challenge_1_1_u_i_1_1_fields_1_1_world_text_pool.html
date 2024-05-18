@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d1/d93/class_challenge_1_1_u_i_1_1_fields_1_1_world_te
   <div class="headertitle"><div class="title">Challenge.UI.Fields.WorldTextPool Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Challenge.UI.Fields.WorldTextPool:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/d93/class_challenge_1_1_u_i_1_1_fields_1_1_world_text_pool.png" usemap="#Challenge.UI.Fields.WorldTextPool_map" alt=""/>
+  <map id="Challenge.UI.Fields.WorldTextPool_map" name="Challenge.UI.Fields.WorldTextPool_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="217,0,424,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -125,7 +135,18 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d3f/_world_text_pool_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d5/d3f/_world_text_pool_8cs_source.html">WorldTextPool.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            var wordTextPoolTransform = transform;</div>
+<div class="line"><span class="lineno">   15</span> </div>
+<div class="line"><span class="lineno">   16</span>            pool.Initialize(<span class="keyword">null</span>, wordTextPoolTransform, wordTextPoolTransform)</div>
+<div class="line"><span class="lineno">   17</span>                <span class="comment">// .AddOnGet(&quot;SetPlatePosition&quot;, plate =&gt; plate.SetPlatePosition())</span></div>
+<div class="line"><span class="lineno">   18</span>                .AddOnRelease(<span class="stringliteral">&quot;DeActive&quot;</span>, plate =&gt; plate.DeActive())</div>
+<div class="line"><span class="lineno">   19</span>                ;</div>
+<div class="line"><span class="lineno">   20</span>            </div>
+<div class="line"><span class="lineno">   21</span>            spawnEvent.<a class="code hl_function" href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Add</a>(<span class="stringliteral">&quot;ShowCostPlate&quot;</span>, SetGoodsCost);</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_spawn_event_table_html_ac8c1e472bcbad1c5493cff1ec02b1a98"><div class="ttname"><a href="../../d6/d4f/class_common_1_1_spawn_event_table.html#ac8c1e472bcbad1c5493cff1ec02b1a98">Common.SpawnEventTable.Add</a></div><div class="ttdeci">void Add(DataIndex dataIndex, string spawnActionKey, Action action)</div><div class="ttdoc">Add Specific Target Spawn event.</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

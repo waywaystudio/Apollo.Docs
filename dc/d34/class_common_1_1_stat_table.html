@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -170,7 +171,23 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dee/_stat_table_8cs_source.html#l00030">30</a> of file <a class="el" href="../../de/dee/_stat_table_8cs_source.html">StatTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (!Stats.ContainsKey(stat.StatType))</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                var newSpecSet = <span class="keyword">new</span> StatSet();</div>
+<div class="line"><span class="lineno">   35</span>                </div>
+<div class="line"><span class="lineno">   36</span>                newSpecSet.OnValueChanged.Add(statTableKey, _ =&gt; CalculateValue(stat.StatType));</div>
+<div class="line"><span class="lineno">   37</span>                </div>
+<div class="line"><span class="lineno">   38</span>                Stats.Add(stat.StatType, newSpecSet);</div>
+<div class="line"><span class="lineno">   39</span>                ValueTable.TryAdd(stat.StatType, <span class="keyword">new</span> <a class="code hl_class" href="../../d9/dba/class_observable.html">Observable&lt;float&gt;</a>());</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>            </div>
+<div class="line"><span class="lineno">   42</span>            Stats[stat.StatType].Add(stat);</div>
+<div class="line"><span class="lineno">   43</span>            </div>
+<div class="line"><span class="lineno">   44</span>            CalculateValue(stat.StatType);</div>
+<div class="line"><span class="lineno">   45</span>        }</div>
+<div class="ttc" id="aclass_observable_html"><div class="ttname"><a href="../../d9/dba/class_observable.html">Observable</a></div><div class="ttdef"><b>Definition</b> <a href="../../de/d11/_observable_8cs_source.html#l00005">Observable.cs:6</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a909941f026fa2bb83328d3ed2423baea" name="a909941f026fa2bb83328d3ed2423baea"></a>
@@ -198,7 +215,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dee/_stat_table_8cs_source.html#l00066">66</a> of file <a class="el" href="../../de/dee/_stat_table_8cs_source.html">StatTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            ValueTable.TryAdd(type, <span class="keyword">new</span> <a class="code hl_class" href="../../d9/dba/class_observable.html">Observable&lt;float&gt;</a>());</div>
+<div class="line"><span class="lineno">   69</span>            ValueTable[type].AddEvent(eventKey, action);</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab9eaf30d6e210757cb320e5f7e3ea7a9" name="ab9eaf30d6e210757cb320e5f7e3ea7a9"></a>
@@ -226,7 +247,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dee/_stat_table_8cs_source.html#l00059">59</a> of file <a class="el" href="../../de/dee/_stat_table_8cs_source.html">StatTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">if</span> (!Stats.ContainsKey(statType) || !Stats[statType].ContainsKey(statKey)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>            Stats[statType][statKey].Value = newValue;</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="adc07c5f8dd8108612e89d887baf40385" name="adc07c5f8dd8108612e89d887baf40385"></a>
@@ -245,7 +271,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dee/_stat_table_8cs_source.html#l00089">89</a> of file <a class="el" href="../../de/dee/_stat_table_8cs_source.html">StatTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            Stats.Clear();</div>
+<div class="line"><span class="lineno">   92</span>            ValueTable.Clear();</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a33188ddd5fddae006052af5c65215785" name="a33188ddd5fddae006052af5c65215785"></a>
@@ -268,7 +298,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dee/_stat_table_8cs_source.html#l00049">49</a> of file <a class="el" href="../../de/dee/_stat_table_8cs_source.html">StatTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   50</span>        {</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (!Stats.ContainsKey(statType)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   52</span>            </div>
+<div class="line"><span class="lineno">   53</span>            Stats[statType].Remove(key);</div>
+<div class="line"><span class="lineno">   54</span>            Stats[statType].OnValueChanged.Remove(statTableKey);</div>
+<div class="line"><span class="lineno">   55</span>            </div>
+<div class="line"><span class="lineno">   56</span>            CalculateValue(statType);</div>
+<div class="line"><span class="lineno">   57</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae7f62a42522dda3fb67abf0d402fde1d" name="ae7f62a42522dda3fb67abf0d402fde1d"></a>
@@ -291,7 +329,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dee/_stat_table_8cs_source.html#l00072">72</a> of file <a class="el" href="../../de/dee/_stat_table_8cs_source.html">StatTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   73</span>        {</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (!ValueTable.ContainsKey(type)) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   75</span>            </div>
+<div class="line"><span class="lineno">   76</span>            ValueTable[type].RemoveEvent(eventKey);</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2bdf1dd64ffedc52d624dffebc5412b0" name="a2bdf1dd64ffedc52d624dffebc5412b0"></a>
@@ -319,7 +362,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dee/_stat_table_8cs_source.html#l00079">79</a> of file <a class="el" href="../../de/dee/_stat_table_8cs_source.html">StatTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            result = <span class="keyword">this</span>[statType, statKey];</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">return</span> result is not <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   84</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -368,7 +416,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/dee/_stat_table_8cs_source.html#l00013">13</a> of file <a class="el" href="../../de/dee/_stat_table_8cs_source.html">StatTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keyword">get</span> =&gt; statTableKey; <span class="keyword">set</span> =&gt; statTableKey = value; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac45ed133e2cf438a20154893d21b5a31" name="ac45ed133e2cf438a20154893d21b5a31"></a>

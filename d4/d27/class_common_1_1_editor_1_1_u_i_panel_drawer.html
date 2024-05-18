@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d4/d27/class_common_1_1_editor_1_1_u_i_panel_drawer.ht
   <div class="headertitle"><div class="title">Common.Editor.UIPanelDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Editor.UIPanelDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/d27/class_common_1_1_editor_1_1_u_i_panel_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -134,7 +141,20 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/dc8/_u_i_event_clip_drawer_8cs_source.html#l00053">53</a> of file <a class="el" href="../../d6/dc8/_u_i_event_clip_drawer_8cs_source.html">UIEventClipDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;CreateDefaultPanel&quot;</span>)</div>
+<div class="line"><span class="lineno">   56</span>            {</div>
+<div class="line"><span class="lineno">   57</span>                attributes.Add(<span class="keyword">new</span> PropertyOrderAttribute(250));</div>
+<div class="line"><span class="lineno">   58</span>                attributes.Add(<span class="keyword">new</span> ShowIfAttribute(<span class="stringliteral">&quot;@this.ShowCreatePanel&quot;</span>));</div>
+<div class="line"><span class="lineno">   59</span>                attributes.Add(<span class="keyword">new</span> ButtonAttribute</div>
+<div class="line"><span class="lineno">   60</span>                {</div>
+<div class="line"><span class="lineno">   61</span>                    Name         = <span class="stringliteral">&quot;    Create Default Panel    &quot;</span>,</div>
+<div class="line"><span class="lineno">   62</span>                    ButtonHeight = 32,</div>
+<div class="line"><span class="lineno">   63</span>                    Stretch      = <span class="keyword">false</span>,</div>
+<div class="line"><span class="lineno">   64</span>                });</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

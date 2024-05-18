@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,18 @@ $(function(){initNavTree('d9/def/class_common_1_1_traps_1_1_behaviour_combinatio
   <div class="headertitle"><div class="title">Common.Traps.BehaviourCombination.TrapSelfSkewerBehaviour Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Traps.BehaviourCombination.TrapSelfSkewerBehaviour:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/def/class_common_1_1_traps_1_1_behaviour_combination_1_1_trap_self_skewer_behaviour.png" usemap="#Common.Traps.BehaviourCombination.TrapSelfSkewerBehaviour_map" alt=""/>
+  <map id="Common.Traps.BehaviourCombination.TrapSelfSkewerBehaviour_map" name="Common.Traps.BehaviourCombination.TrapSelfSkewerBehaviour_map">
+<area href="../../d5/de8/class_common_1_1_units_1_1_unit_behaviour_combinator.html" alt="Common.Units.UnitBehaviourCombinator" shape="rect" coords="583,56,962,80"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="389,0,768,24"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="778,0,1157,24"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="1167,0,1546,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -149,7 +162,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d43/_trap_self_skewer_behaviour_8cs_source.html#l00044">44</a> of file <a class="el" href="../../d6/d43/_trap_self_skewer_behaviour_8cs_source.html">TrapSelfSkewerBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>        {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   47</span>            </div>
+<div class="line"><span class="lineno">   48</span>            Invoker.Active();</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="accb27875ffa076a822222dc356da1d19" name="accb27875ffa076a822222dc356da1d19"></a>
@@ -178,7 +196,29 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d5/de8/class_common_1_1_units_1_1_unit_behaviour_combinator.html">Common.Units.UnitBehaviourCombinator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d6/d43/_trap_self_skewer_behaviour_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d6/d43/_trap_self_skewer_behaviour_8cs_source.html">TrapSelfSkewerBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            base.Initialize(table);</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>            behaviourTable = table;</div>
+<div class="line"><span class="lineno">   26</span>            delayAttack    = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d49/class_sequencer.html">Sequencer</a>();</div>
+<div class="line"><span class="lineno">   27</span>            </div>
+<div class="line"><span class="lineno">   28</span>            Sections</div>
+<div class="line"><span class="lineno">   29</span>                .Add(Section.Active, <span class="stringliteral">&quot;DelayAttack&quot;</span>, DelayAttack)</div>
+<div class="line"><span class="lineno">   30</span>                .Add(Section.End, <span class="stringliteral">&quot;CancelDelayAttack&quot;</span>, () =&gt; delayAttack.Cancel())</div>
+<div class="line"><span class="lineno">   31</span>                .Add(Section.Dispose, <span class="stringliteral">&quot;CancelDelayAttack&quot;</span>, () =&gt; delayAttack.Cancel())</div>
+<div class="line"><span class="lineno">   32</span>                ;</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>            trigger</div>
+<div class="line"><span class="lineno">   35</span>                .AddFilter(<span class="stringliteral">&quot;AliveCharacter&quot;</span>, obj =&gt; obj.TryGetComponent(out Character character) &amp;&amp; character.IsAlive)</div>
+<div class="line"><span class="lineno">   36</span>                .AddOnEnter(<span class="stringliteral">&quot;ActiveSkewer&quot;</span>, OnCollided)</div>
+<div class="line"><span class="lineno">   37</span>                .Register(<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   38</span>                ;</div>
+<div class="line"><span class="lineno">   39</span>            </div>
+<div class="line"><span class="lineno">   40</span>            coolTimer.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   41</span>            coolTimer.TimeTrigger.AddCallBack(<span class="stringliteral">&quot;Complete&quot;</span>, Invoker.Complete);</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="ttc" id="aclass_sequencer_html"><div class="ttname"><a href="../../d6/d49/class_sequencer.html">Sequencer</a></div><div class="ttdoc">Serial Action Invoker Which use UniTask and DOTween Combination.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/dc0/_sequencer_8cs_source.html#l00012">Sequencer.cs:13</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

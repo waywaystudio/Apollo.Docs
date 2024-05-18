@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,15 @@ $(function(){initNavTree('d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_
   <div class="headertitle"><div class="title">Common.Characters.Dreds.DredWeaponTable Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Characters.Dreds.DredWeaponTable:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/d00/class_common_1_1_characters_1_1_dreds_1_1_dred_weapon_table.png" usemap="#Common.Characters.Dreds.DredWeaponTable_map" alt=""/>
+  <map id="Common.Characters.Dreds.DredWeaponTable_map" name="Common.Characters.Dreds.DredWeaponTable_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="284,0,558,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -143,7 +153,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d99/_dred_weapon_table_8cs_source.html#l00017">17</a> of file <a class="el" href="../../d5/d99/_dred_weapon_table_8cs_source.html">DredWeaponTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">foreach</span> (var dredWeapon <span class="keywordflow">in</span> WeaponList)</div>
+<div class="line"><span class="lineno">   20</span>            {</div>
+<div class="line"><span class="lineno">   21</span>                dredWeapon.Initialize(dred);</div>
+<div class="line"><span class="lineno">   22</span>                dredWeapon.AddOnWeaponModelHidden(<span class="stringliteral">&quot;ResetPreviousWeaponType&quot;</span>, ResetPreviousWeaponType);</div>
+<div class="line"><span class="lineno">   23</span>                dredWeapon.AllSkillBehaviour.ForEach(sb =&gt;</div>
+<div class="line"><span class="lineno">   24</span>                {</div>
+<div class="line"><span class="lineno">   25</span>                    sb.Sections</div>
+<div class="line"><span class="lineno">   26</span>                      .Add(Section.Active, <span class="stringliteral">&quot;TryShowWeapon&quot;</span>, () =&gt; TryShowWeapon(dredWeapon))</div>
+<div class="line"><span class="lineno">   27</span>                      .Add(Section.End, <span class="stringliteral">&quot;ReserveHideWeapon&quot;</span>, () =&gt; ReserveHideWeapon(dredWeapon))</div>
+<div class="line"><span class="lineno">   28</span>                      ;</div>
+<div class="line"><span class="lineno">   29</span>                });</div>
+<div class="line"><span class="lineno">   30</span>            }</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a22e62421721b4fd896d3f5f21a469377" name="a22e62421721b4fd896d3f5f21a469377"></a>
@@ -162,7 +186,24 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d99/_dred_weapon_table_8cs_source.html#l00036">36</a> of file <a class="el" href="../../d5/d99/_dred_weapon_table_8cs_source.html">DredWeaponTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (prevWeaponType != weapon.WeaponType)</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">if</span> (prevWeaponType != WeaponType.None)</div>
+<div class="line"><span class="lineno">   41</span>                {</div>
+<div class="line"><span class="lineno">   42</span>                    weaponTable[prevWeaponType].HideWeaponsInstantly();</div>
+<div class="line"><span class="lineno">   43</span>                }</div>
+<div class="line"><span class="lineno">   44</span>                </div>
+<div class="line"><span class="lineno">   45</span>                prevWeaponType = weapon.WeaponType;</div>
+<div class="line"><span class="lineno">   46</span>                </div>
+<div class="line"><span class="lineno">   47</span>                weapon.ShowWeapons();</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                weapon.ProlongHideDelay();</div>
+<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
@@ -187,7 +228,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d5/d99/_dred_weapon_table_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d5/d99/_dred_weapon_table_8cs_source.html">DredWeaponTable.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   14</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a1ec587f2b747cbc148ca66fade38f13b" name="a1ec587f2b747cbc148ca66fade38f13b"></a>

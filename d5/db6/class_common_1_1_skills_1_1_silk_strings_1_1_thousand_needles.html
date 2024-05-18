@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,25 @@ $(function(){initNavTree('d5/db6/class_common_1_1_skills_1_1_silk_strings_1_1_th
   <div class="headertitle"><div class="title">Common.Skills.SilkStrings.ThousandNeedles Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.SilkStrings.ThousandNeedles:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/db6/class_common_1_1_skills_1_1_silk_strings_1_1_thousand_needles.png" usemap="#Common.Skills.SilkStrings.ThousandNeedles_map" alt=""/>
+  <map id="Common.Skills.SilkStrings.ThousandNeedles_map" name="Common.Skills.SilkStrings.ThousandNeedles_map">
+<area href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html" alt="Common.Skills.SkillBehaviour" shape="rect" coords="642,224,903,248"/>
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="406,168,667,192"/>
+<area href="../../de/de8/interface_common_1_1_i_skill_behaviour.html" alt="Common.ISkillBehaviour" shape="rect" coords="880,168,1141,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="406,112,667,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="677,112,938,136"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1084,112,1345,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="271,56,532,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="542,56,803,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="813,56,1074,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1084,56,1345,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="542,0,803,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -218,7 +238,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d77/_thousand_needles_8cs_source.html#l00041">41</a> of file <a class="el" href="../../d0/d77/_thousand_needles_8cs_source.html">ThousandNeedles.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   44</span>            </div>
+<div class="line"><span class="lineno">   45</span>            <span class="comment">// 끊고 내려오기</span></div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span> (Invoker.IsActive)</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                Invoker.Complete();</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   51</span>            {</div>
+<div class="line"><span class="lineno">   52</span>                Invoker.Active();</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a130e88f1d3c7a20ea51d1b910e2930e7" name="a130e88f1d3c7a20ea51d1b910e2930e7"></a>
@@ -247,7 +280,24 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d77/_thousand_needles_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d0/d77/_thousand_needles_8cs_source.html">ThousandNeedles.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   25</span>            </div>
+<div class="line"><span class="lineno">   26</span>            characterDamageSections = Character.TakeDamageAction.Sections;</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>            Sections</div>
+<div class="line"><span class="lineno">   29</span>                .AddCondition(<span class="stringliteral">&quot;IsNotPreserved&quot;</span>, () =&gt; isPreserved == <span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   30</span>                .Add(Section.Active, <span class="stringliteral">&quot;DamageImmune&quot;</span>, DamageImmune)</div>
+<div class="line"><span class="lineno">   31</span>                .Add(Section.Active, <span class="stringliteral">&quot;Preservation&quot;</span>, Preservation)</div>
+<div class="line"><span class="lineno">   32</span>                .Add(Section.Complete, <span class="stringliteral">&quot;Execution&quot;</span>, Invoker.Execute)</div>
+<div class="line"><span class="lineno">   33</span>                .Add(Section.End, <span class="stringliteral">&quot;ReleaseImmune&quot;</span>, ReleaseImmune)</div>
+<div class="line"><span class="lineno">   34</span>                .Cancellation(<span class="stringliteral">&quot;CancelPreserveTask&quot;</span>, preserveTask)</div>
+<div class="line"><span class="lineno">   35</span>                ;</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>            invincibleTimer.AddCallBack(<span class="stringliteral">&quot;Complete&quot;</span>, Invoker.Complete);</div>
+<div class="line"><span class="lineno">   38</span>            chargingModel.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

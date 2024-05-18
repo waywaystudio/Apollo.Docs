@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,17 @@ $(function(){initNavTree('dc/d96/class_inputs_1_1_input_director.html','../../')
   <div class="headertitle"><div class="title">Inputs.InputDirector Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Inputs.InputDirector:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/d96/class_inputs_1_1_input_director.png" usemap="#Inputs.InputDirector_map" alt=""/>
+  <map id="Inputs.InputDirector_map" name="Inputs.InputDirector_map">
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="213,0,416,24"/>
+<area href="../../d8/df8/class_challenge_1_1_challenge_input_director.html" alt="Challenge.ChallengeInputDirector" shape="rect" coords="0,112,203,136"/>
+<area href="../../d9/dcf/class_lobby_1_1_lobby_input_director.html" alt="Lobby.LobbyInputDirector" shape="rect" coords="213,112,416,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -157,7 +169,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d52/_input_director_8cs_source.html#l00043">43</a> of file <a class="el" href="../../d4/d52/_input_director_8cs_source.html">InputDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            playerInput.onControlsChanged -= OnControllerChanged.Invoke;</div>
+<div class="line"><span class="lineno">   46</span>            OnControllerChanged.Clear();</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2cc52b5b4ce513aef3a22cada5cca8ac" name="a2cc52b5b4ce513aef3a22cada5cca8ac"></a>
@@ -176,7 +192,11 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d52/_input_director_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d4/d52/_input_director_8cs_source.html">InputDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
+<div class="line"><span class="lineno">   22</span>            inputManager.Director         =  <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   23</span>            playerInput.onControlsChanged += OnControllerChanged.Invoke;</div>
+<div class="line"><span class="lineno">   24</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aed82d039cb981a13e322bfbc817c5f90" name="aed82d039cb981a13e322bfbc817c5f90"></a>
@@ -199,7 +219,21 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d52/_input_director_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d4/d52/_input_director_8cs_source.html">InputDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            inputManager[ActionType.Weapon1Attack].SetActive(activity);</div>
+<div class="line"><span class="lineno">   29</span>            inputManager[ActionType.Weapon1Special].SetActive(activity);</div>
+<div class="line"><span class="lineno">   30</span>            inputManager[ActionType.Weapon2Attack].SetActive(activity);</div>
+<div class="line"><span class="lineno">   31</span>            inputManager[ActionType.Weapon2Special].SetActive(activity);</div>
+<div class="line"><span class="lineno">   32</span>            inputManager[ActionType.Ultimate].SetActive(activity);</div>
+<div class="line"><span class="lineno">   33</span>            inputManager[ActionType.Dash].SetActive(activity);</div>
+<div class="line"><span class="lineno">   34</span>            inputManager[ActionType.Mastery].SetActive(activity);</div>
+<div class="line"><span class="lineno">   35</span>            inputManager[ActionType.Move].SetActive(activity);</div>
+<div class="line"><span class="lineno">   36</span>            inputManager[ActionType.Spell].SetActive(activity);</div>
+<div class="line"><span class="lineno">   37</span>            </div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (includeInteraction)</div>
+<div class="line"><span class="lineno">   39</span>                inputManager[ActionType.Interact].SetActive(activity);</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -281,7 +315,8 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d52/_input_director_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d4/d52/_input_director_8cs_source.html">InputDirector.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keyword">get</span>; } = <span class="keyword">new</span>();</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

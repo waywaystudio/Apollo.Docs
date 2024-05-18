@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,22 @@ $(function(){initNavTree('dc/d07/class_common_1_1_traps_1_1_trap_behaviour.html'
   <div class="headertitle"><div class="title">Common.Traps.TrapBehaviour Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Traps.TrapBehaviour:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dc/d07/class_common_1_1_traps_1_1_trap_behaviour.png" usemap="#Common.Traps.TrapBehaviour_map" alt=""/>
+  <map id="Common.Traps.TrapBehaviour_map" name="Common.Traps.TrapBehaviour_map">
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="463,112,762,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="309,56,608,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="618,56,917,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="927,56,1226,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="618,0,917,24"/>
+<area href="../../d6/df8/class_common_1_1_traps_1_1_behaviours_1_1_trap_idle_behaviour.html" alt="Common.Traps.Behaviours.TrapIdleBehaviour" shape="rect" coords="154,224,453,248"/>
+<area href="../../d8/dea/class_common_1_1_traps_1_1_behaviours_1_1_trap_impale_behaviour.html" alt="Common.Traps.Behaviours.TrapImpaleBehaviour" shape="rect" coords="463,224,762,248"/>
+<area href="../../dd/d52/class_common_1_1_traps_1_1_behaviours_1_1_trap_retrieve_behaviour.html" alt="Common.Traps.Behaviours.TrapRetrieveBehaviour" shape="rect" coords="772,224,1071,248"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -199,7 +216,23 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html">Common.Units.UnitBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d15/_trap_behaviour_8cs_source.html#l00010">10</a> of file <a class="el" href="../../d9/d15/_trap_behaviour_8cs_source.html">TrapBehaviour.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   11</span>        {</div>
+<div class="line"><span class="lineno">   12</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   13</span> </div>
+<div class="line"><span class="lineno">   14</span>            Trap = ConvertUnitTo&lt;Trap&gt;();</div>
+<div class="line"><span class="lineno">   15</span>            </div>
+<div class="line"><span class="lineno">   16</span>            Sections</div>
+<div class="line"><span class="lineno">   17</span>                .Add(Section.Complete, <span class="stringliteral">&quot;StopBehaviour&quot;</span>, StopBehaviour)</div>
+<div class="line"><span class="lineno">   18</span>                ;</div>
+<div class="line"><span class="lineno">   19</span>            </div>
+<div class="line"><span class="lineno">   20</span>            animationPlayer.Initialize(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">if</span> (applyHaste)</div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                animationPlayer.RegisterHaste(Trap.StatTable);</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>

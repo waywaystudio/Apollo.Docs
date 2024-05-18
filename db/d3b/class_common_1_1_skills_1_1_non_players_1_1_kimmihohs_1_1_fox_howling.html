@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,29 @@ $(function(){initNavTree('db/d3b/class_common_1_1_skills_1_1_non_players_1_1_kim
   <div class="headertitle"><div class="title">Common.Skills.NonPlayers.Kimmihohs.FoxHowling Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Skills.NonPlayers.Kimmihohs.FoxHowling:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../db/d3b/class_common_1_1_skills_1_1_non_players_1_1_kimmihohs_1_1_fox_howling.png" usemap="#Common.Skills.NonPlayers.Kimmihohs.FoxHowling_map" alt=""/>
+  <map id="Common.Skills.NonPlayers.Kimmihohs.FoxHowling_map" name="Common.Skills.NonPlayers.Kimmihohs.FoxHowling_map">
+<area href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html" alt="Common.Skills.NonPlayers.NonPlayerSkillBehaviour" shape="rect" coords="753,280,1061,304"/>
+<area href="../../db/de5/interface_common_1_1_i_projectable_sequencer.html" alt="Common.IProjectableSequencer" shape="rect" coords="1351,280,1659,304"/>
+<area href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html" alt="Common.Skills.SkillBehaviour" shape="rect" coords="753,224,1061,248"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1351,224,1659,248"/>
+<area href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html" alt="Common.Characters.CharacterBehaviour" shape="rect" coords="477,168,785,192"/>
+<area href="../../de/de8/interface_common_1_1_i_skill_behaviour.html" alt="Common.ISkillBehaviour" shape="rect" coords="1033,168,1341,192"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1351,168,1659,192"/>
+<area href="../../df/db5/class_common_1_1_units_1_1_unit_behaviour.html" alt="Common.Units.UnitBehaviour" shape="rect" coords="477,112,785,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="795,112,1103,136"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="1272,112,1580,136"/>
+<area href="../../d9/dc1/interface_i_data_indexer.html" alt="IDataIndexer" shape="rect" coords="318,56,626,80"/>
+<area href="../../d7/dea/interface_common_1_1_i_unit_sequencer.html" alt="Common.IUnitSequencer" shape="rect" coords="636,56,944,80"/>
+<area href="../../d3/de8/interface_i_editable.html" alt="IEditable" shape="rect" coords="954,56,1262,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="1272,56,1580,80"/>
+<area href="../../d6/de9/interface_i_sequencer.html" alt="ISequencer" shape="rect" coords="636,0,944,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -251,7 +275,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d49/_fox_howling_8cs_source.html#l00029">29</a> of file <a class="el" href="../../d1/d49/_fox_howling_8cs_source.html">FoxHowling.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (!Invoker.IsAbleToActive) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keywordflow">if</span> (!PathfindingUtility.IsValidCombatRotation(Character, <a class="code hl_property" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">SkillTarget</a>, 5f))</div>
+<div class="line"><span class="lineno">   33</span>            {</div>
+<div class="line"><span class="lineno">   34</span>                Character.Rotate(<a class="code hl_property" href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">SkillTarget</a>.Position, rotatePerFrame, Invoker.Active);</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   37</span>            {</div>
+<div class="line"><span class="lineno">   38</span>                Invoker.Active();</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour_html_af6e247ddcbea38bf346b41eb48018d05"><div class="ttname"><a href="../../d8/d8d/class_common_1_1_skills_1_1_non_players_1_1_non_player_skill_behaviour.html#af6e247ddcbea38bf346b41eb48018d05">Common.Skills.NonPlayers.NonPlayerSkillBehaviour.SkillTarget</a></div><div class="ttdeci">virtual Character SkillTarget</div><div class="ttdoc">Designed For Enemy AI.</div><div class="ttdef"><b>Definition</b> <a href="../../da/df3/_non_player_skill_behaviour_8cs_source.html#l00021">NonPlayerSkillBehaviour.cs:22</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac8ec4567deecdf07f1ff585a56368fce" name="ac8ec4567deecdf07f1ff585a56368fce"></a>
@@ -280,7 +316,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../db/d7e/class_common_1_1_skills_1_1_skill_behaviour.html">Common.Skills.SkillBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d49/_fox_howling_8cs_source.html#l00042">42</a> of file <a class="el" href="../../d1/d49/_fox_howling_8cs_source.html">FoxHowling.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            var targetList = Character.Detector.GetObjects(detectProperty);</div>
+<div class="line"><span class="lineno">   45</span>            </div>
+<div class="line"><span class="lineno">   46</span>            executor.Executes(targetList);</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3484ccb57887eae3345c50d6bfd25693" name="a3484ccb57887eae3345c50d6bfd25693"></a>
@@ -309,7 +350,21 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../d7/d81/class_common_1_1_characters_1_1_character_behaviour.html">Common.Characters.CharacterBehaviour</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/d49/_fox_howling_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d1/d49/_fox_howling_8cs_source.html">FoxHowling.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            base.Initialize(behaver);</div>
+<div class="line"><span class="lineno">   17</span>            </div>
+<div class="line"><span class="lineno">   18</span>            Sections</div>
+<div class="line"><span class="lineno">   19</span>                .Add(Section.Cancel, <span class="stringliteral">&quot;StopTween&quot;</span>, Character.Pathfinding.Cancel)</div>
+<div class="line"><span class="lineno">   20</span>                <span class="comment">// .Add(Section.Complete, &quot;CompleteExecution&quot;, CompleteExecution)                </span></div>
+<div class="line"><span class="lineno">   21</span>                ;</div>
+<div class="line"><span class="lineno">   22</span> </div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (!projection.IsNullOrDestroyed())</div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                projection.<a class="code hl_function" href="../../da/dfb/class_common_1_1_projections_1_1_arc_projection.html#a550c5a961b0f563785e499b3a07e948c">Initialize</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   26</span>            }</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
+<div class="ttc" id="aclass_common_1_1_projections_1_1_arc_projection_html_a550c5a961b0f563785e499b3a07e948c"><div class="ttname"><a href="../../da/dfb/class_common_1_1_projections_1_1_arc_projection.html#a550c5a961b0f563785e499b3a07e948c">Common.Projections.ArcProjection.Initialize</a></div><div class="ttdeci">void Initialize(IProjectableSequencer masterSequence)</div><div class="ttdoc">Require ISequence, DetectProperty, CastingTime.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d88/_arc_projection_8cs_source.html#l00012">ArcProjection.cs:12</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>

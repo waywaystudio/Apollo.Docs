@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,15 @@ $(function(){initNavTree('d8/d1a/class_common_1_1_resource_value.html','../../')
   <div class="headertitle"><div class="title">Common.ResourceValue Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.ResourceValue:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/d1a/class_common_1_1_resource_value.png" usemap="#Common.ResourceValue_map" alt=""/>
+  <map id="Common.ResourceValue_map" name="Common.ResourceValue_map">
+<area href="../../d9/dba/class_observable.html" alt="Observable&lt; int &gt;" shape="rect" coords="0,0,151,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
@@ -157,7 +167,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearEvent</b> ()</td
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d86/_resource_value_8cs_source.html#l00009">9</a> of file <a class="el" href="../../d0/d86/_resource_value_8cs_source.html">ResourceValue.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keyword">get</span> =&gt; value;</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keyword">set</span></div>
+<div class="line"><span class="lineno">   13</span>            {</div>
+<div class="line"><span class="lineno">   14</span>                <span class="keywordflow">if</span> (this.value == value) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   15</span>                </div>
+<div class="line"><span class="lineno">   16</span>                this.value = Mathf.Max (value, 0);</div>
+<div class="line"><span class="lineno">   17</span>                OnValueChanged.Invoke(this.value);</div>
+<div class="line"><span class="lineno">   18</span>            }</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

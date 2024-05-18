@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,12 @@ $(function(){initNavTree('dd/d69/class_core_editor_1_1_main_drawer.html','../../
 
 <p>Project 안에서 사용되는 모든 프로퍼티에 공통으로 부여하는 OdinAttributeProcessor 클래스.  
  <a href="#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for CoreEditor.MainDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/d69/class_core_editor_1_1_main_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -138,7 +145,41 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d3e/_main_drawer_8cs_source.html#l00014">14</a> of file <a class="el" href="../../da/d3e/_main_drawer_8cs_source.html">MainDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;EditorSetUp&quot;</span>)</div>
+<div class="line"><span class="lineno">   17</span>            {</div>
+<div class="line"><span class="lineno">   18</span>                attributes.Add(<span class="keyword">new</span> PropertyOrderAttribute(100f));</div>
+<div class="line"><span class="lineno">   19</span>                attributes.Add(<span class="keyword">new</span> PropertySpaceAttribute(10, 0));</div>
+<div class="line"><span class="lineno">   20</span>                attributes.Add(<span class="keyword">new</span> ButtonAttribute</div>
+<div class="line"><span class="lineno">   21</span>                {</div>
+<div class="line"><span class="lineno">   22</span>                    Icon = SdfIconType.BootstrapReboot,</div>
+<div class="line"><span class="lineno">   23</span>                    Stretch = <span class="keyword">false</span>,</div>
+<div class="line"><span class="lineno">   24</span>                    Name = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">   25</span>                    ButtonHeight = 24,</div>
+<div class="line"><span class="lineno">   26</span>                    IconAlignment = IconAlignment.LeftOfText,</div>
+<div class="line"><span class="lineno">   27</span>                    ButtonAlignment = 1f,</div>
+<div class="line"><span class="lineno">   28</span>                });</div>
+<div class="line"><span class="lineno">   29</span>            }</div>
+<div class="line"><span class="lineno">   30</span>            </div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;EditorOpenDataBase&quot;</span>)</div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>                attributes.Add(<span class="keyword">new</span> PropertyOrderAttribute(100f));</div>
+<div class="line"><span class="lineno">   34</span>                attributes.Add(<span class="keyword">new</span> ButtonAttribute(ButtonSizes.Large)</div>
+<div class="line"><span class="lineno">   35</span>                {</div>
+<div class="line"><span class="lineno">   36</span>                    Icon = SdfIconType.ClipboardData,</div>
+<div class="line"><span class="lineno">   37</span>                });</div>
+<div class="line"><span class="lineno">   38</span>            }</div>
+<div class="line"><span class="lineno">   39</span>            </div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;Test&quot;</span>)</div>
+<div class="line"><span class="lineno">   41</span>            {</div>
+<div class="line"><span class="lineno">   42</span>                attributes.Add(<span class="keyword">new</span> PropertySpaceAttribute(15f, 5f));</div>
+<div class="line"><span class="lineno">   43</span>                attributes.Add(<span class="keyword">new</span> ButtonAttribute(ButtonSizes.Large)</div>
+<div class="line"><span class="lineno">   44</span>                {</div>
+<div class="line"><span class="lineno">   45</span>                    Icon = SdfIconType.QuestionCircle,</div>
+<div class="line"><span class="lineno">   46</span>                });</div>
+<div class="line"><span class="lineno">   47</span>            }</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('d9/d4f/class_common_1_1_editor_1_1_detect_property_dra
   <div class="headertitle"><div class="title">Common.Editor.DetectPropertyDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Common.Editor.DetectPropertyDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/d4f/class_common_1_1_editor_1_1_detect_property_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -136,7 +143,23 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dbc/_detect_property_drawer_8cs_source.html#l00017">17</a> of file <a class="el" href="../../d3/dbc/_detect_property_drawer_8cs_source.html">DetectPropertyDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   18</span>        {</div>
+<div class="line"><span class="lineno">   19</span>            var foldoutGroup = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/d68/class_module_group_attribute.html">ModuleGroupAttribute</a>(<span class="stringliteral">&quot;Detector Property&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   20</span>            </div>
+<div class="line"><span class="lineno">   21</span>            attributes.Add(foldoutGroup);</div>
+<div class="line"><span class="lineno">   22</span>            </div>
+<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;invokeSection&quot;</span>)</div>
+<div class="line"><span class="lineno">   24</span>            {</div>
+<div class="line"><span class="lineno">   25</span>                attributes.Add(<span class="keyword">new</span> EnumPagingAttribute());</div>
+<div class="line"><span class="lineno">   26</span>            }</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;sizeEntity&quot;</span>)</div>
+<div class="line"><span class="lineno">   29</span>            {</div>
+<div class="line"><span class="lineno">   30</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   31</span>            }</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="ttc" id="aclass_module_group_attribute_html"><div class="ttname"><a href="../../d6/d68/class_module_group_attribute.html">ModuleGroupAttribute</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/dc7/_module_group_attribute_8cs_source.html#l00008">ModuleGroupAttribute.cs:9</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae56eafbfbee4d804a098dd663a524f27" name="ae56eafbfbee4d804a098dd663a524f27"></a>
@@ -159,7 +182,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d3/dbc/_detect_property_drawer_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d3/dbc/_detect_property_drawer_8cs_source.html">DetectPropertyDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   15</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

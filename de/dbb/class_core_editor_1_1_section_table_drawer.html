@@ -20,6 +20,7 @@
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,12 @@ $(function(){initNavTree('de/dbb/class_core_editor_1_1_section_table_drawer.html
   <div class="headertitle"><div class="title">CoreEditor.SectionTableDrawer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for CoreEditor.SectionTableDrawer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/dbb/class_core_editor_1_1_section_table_drawer.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -136,7 +143,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/df5/_section_table_drawer_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d0/df5/_section_table_drawer_8cs_source.html">SectionTableDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;Condition&quot;</span>)</div>
+<div class="line"><span class="lineno">   21</span>            {</div>
+<div class="line"><span class="lineno">   22</span>                attributes.Add(<span class="keyword">new</span> FoldoutGroupAttribute(<span class="stringliteral">&quot;Section Tables&quot;</span>, <span class="keyword">true</span>));</div>
+<div class="line"><span class="lineno">   23</span>                attributes.Add(<span class="keyword">new</span> ShowInInspectorAttribute());</div>
+<div class="line"><span class="lineno">   24</span>                attributes.Add(<span class="keyword">new</span> PropertyOrderAttribute(10f));</div>
+<div class="line"><span class="lineno">   25</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   26</span>            }</div>
+<div class="line"><span class="lineno">   27</span>            </div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (member.Name == <span class="stringliteral">&quot;Table&quot;</span>)</div>
+<div class="line"><span class="lineno">   29</span>            {</div>
+<div class="line"><span class="lineno">   30</span>                attributes.Add(<span class="keyword">new</span> FoldoutGroupAttribute(<span class="stringliteral">&quot;Section Tables&quot;</span>));</div>
+<div class="line"><span class="lineno">   31</span>                attributes.Add(<span class="keyword">new</span> ShowInInspectorAttribute());</div>
+<div class="line"><span class="lineno">   32</span>                attributes.Add(<span class="keyword">new</span> HideReferenceObjectPickerAttribute());</div>
+<div class="line"><span class="lineno">   33</span>                attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   34</span>                attributes.Add(<span class="keyword">new</span> PropertyOrderAttribute(13f));</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa9e22ab3ec673e522e84fef321274350" name="aa9e22ab3ec673e522e84fef321274350"></a>
@@ -159,7 +184,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/df5/_section_table_drawer_8cs_source.html#l00011">11</a> of file <a class="el" href="../../d0/df5/_section_table_drawer_8cs_source.html">SectionTableDrawer.cs</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   12</span>        {</div>
+<div class="line"><span class="lineno">   13</span>            attributes.Add(<span class="keyword">new</span> HideInEditorModeAttribute());</div>
+<div class="line"><span class="lineno">   14</span>            attributes.Add(<span class="keyword">new</span> HideLabelAttribute());</div>
+<div class="line"><span class="lineno">   15</span>            attributes.Add(<span class="keyword">new</span> HideReferenceObjectPickerAttribute());</div>
+<div class="line"><span class="lineno">   16</span>        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
